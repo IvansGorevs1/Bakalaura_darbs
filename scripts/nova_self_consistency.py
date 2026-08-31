@@ -7,35 +7,6 @@ import statistics
 from collections import defaultdict
 from pathlib import Path
 
-
-# =============================================================================
-# Nova self-consistency analysis
-# =============================================================================
-#
-# Purpose:
-#   Compare the same 72 summaries evaluated by Nova 2 Lite three times:
-#     Run 1, Run 2, Run 3.
-#
-# Default input folder:
-#   data/judge_validation/consistency_crossjudge_72/
-#
-# Expected files:
-#   nova_run1_scores_72.csv
-#   nova_run2_scores_72.csv
-#   nova_run3_scores_72.csv
-#
-# Outputs:
-#   self_consistency_analysis/
-#       nova_self_consistency_summary.csv
-#       nova_self_consistency_pairwise.csv
-#       nova_self_consistency_per_item.csv
-#       nova_self_consistency_breakdown.csv
-#       nova_self_consistency_report.txt
-#
-# No third-party packages are required.
-# =============================================================================
-
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_INPUT_DIR = (
     PROJECT_DIR
@@ -92,24 +63,17 @@ RUN_PAIRS = [
 
 FLOAT_TOLERANCE = 1e-9
 
-# For ratio metrics, this reports how often all three scores are no more
-# than 0.05 apart. It does NOT replace exact agreement.
 RATIO_TOLERANCE = 0.05
 
-# For ordinal 0-4 metrics, this reports how often all three ratings differ
-# by no more than one scale point.
 ORDINAL_TOLERANCE = 1.0
 
-# For claim-count decomposition, this reports how often all three runs
-# differ by no more than one identified claim.
 COUNT_TOLERANCE = 1.0
 
 
 def parse_args():
     parser = argparse.ArgumentParser(
         description=(
-            "Calculate self-consistency statistics for three Nova Judge runs "
-            "on the fixed 72-answer validation subset."
+
         )
     )
 
@@ -117,19 +81,12 @@ def parse_args():
         "--input-dir",
         type=Path,
         default=DEFAULT_INPUT_DIR,
-        help=(
-            "Folder containing nova_run1_scores_72.csv, "
-            "nova_run2_scores_72.csv and nova_run3_scores_72.csv."
-        ),
     )
 
     parser.add_argument(
         "--output-dir",
         type=Path,
         default=None,
-        help=(
-            "Output folder. Default: <input-dir>/self_consistency_analysis"
-        ),
     )
 
     return parser.parse_args()
@@ -157,15 +114,6 @@ def normalize_run_rows(
     rows: list[dict],
     run_number: int,
 ) -> dict[str, dict]:
-    """
-    Normalize small schema differences between Run 1 and repeat-run CSVs.
-
-    Run 1:
-        model_key
-
-    Run 2 / Run 3:
-        generator_key
-    """
     if len(rows) != 72:
         raise RuntimeError(
             f"Run {run_number}: expected 72 rows, found {len(rows)}."
@@ -224,8 +172,6 @@ def normalize_run_rows(
             ).strip(),
         }
 
-        # Run 1 contains report_number directly.
-        # Run 2/3 normally contain report_annual_N.md/report_quarterly_N.md.
         report_number = row.get(
             "report_number"
         )
@@ -321,7 +267,6 @@ def validate_alignment(
         == ids3
     ):
         raise RuntimeError(
-            "The three runs do not contain exactly the same selection_id set."
         )
 
     metadata_fields = [
@@ -391,7 +336,6 @@ def pearson_r(
         ys
     ):
         raise ValueError(
-            "Pearson inputs have different lengths."
         )
 
     if len(
@@ -447,18 +391,7 @@ def pearson_r(
 def icc_absolute_agreement_single(
     matrix: list[list[float]],
 ):
-    """
-    ICC(A,1), equivalent to the common two-way random-effects,
-    absolute-agreement, single-measure ICC.
-
-    Rows = evaluated summaries (targets)
-    Columns = Nova Run 1, Run 2, Run 3
-
-    Important:
-    ICC can be misleading under strong ceiling/floor effects because ICC
-    depends on between-item variance. Therefore the script also reports
-    direct agreement percentages and MAE.
-    """
+  
     n = len(
         matrix
     )
@@ -599,10 +532,7 @@ def quadratic_weighted_kappa(
     xs: list[float],
     ys: list[float],
 ):
-    """
-    Pairwise quadratic weighted Cohen's kappa for the fixed 0-4 ordinal scale.
-    Used only for Completeness and Coherence.
-    """
+
     categories = [
         0,
         1,
@@ -1230,16 +1160,6 @@ def summary_for_metric(
             for value in all_values
         )
 
-        if ceiling_share >= 80.0:
-            note = (
-                f"Strong ceiling effect: {ceiling_share:.1f}% of all "
-                f"run-level values equal the maximum score. "
-                "ICC may be uninformative; direct agreement and MAE "
-                "should be emphasized."
-            )
-    else:
-        ceiling_share = None
-
     return {
         "metric": METRIC_LABELS[
             metric
@@ -1574,15 +1494,6 @@ def build_text_report(
     )
     lines.append(
         "-" * 72
-    )
-
-    lines.append(
-        "Direct agreement percentages and MAE are the most transparent "
-        "self-consistency measures for this experiment. ICC is also reported "
-        "as an absolute-agreement reliability statistic, but it should not be "
-        "interpreted alone when a metric has a strong ceiling effect. "
-        "Completeness and Coherence are ordinal 0-4 ratings, therefore "
-        "pairwise quadratic weighted Cohen's kappa is additionally reported."
     )
 
     return "\n".join(

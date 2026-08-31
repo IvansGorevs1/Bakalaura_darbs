@@ -24,12 +24,10 @@ encoding = tiktoken.get_encoding("o200k_base")
 
 
 def count_tokens(text: str) -> int:
-    """Count tokens in text."""
     return len(encoding.encode(text))
 
 
 def analyze_file(file_path: Path, report_type: str) -> dict:
-    """Calculate statistics for one Markdown report."""
 
     text = file_path.read_text(
         encoding="utf-8",
@@ -57,7 +55,6 @@ def analyze_file(file_path: Path, report_type: str) -> dict:
 
 
 def analyze_folder(folder: Path, report_type: str) -> list:
-    """Analyze all Markdown files in a folder."""
 
     if not folder.exists():
         raise FileNotFoundError(
@@ -92,7 +89,6 @@ def analyze_folder(folder: Path, report_type: str) -> list:
 
 
 def create_summary(df: pd.DataFrame) -> pd.DataFrame:
-    """Create summary statistics."""
 
     rows = []
 

@@ -1,0 +1,81 @@
+## SaaS metrics and financial highlights on 31 December 2025 
+
+- ARR increased by 19% to DKK 46.2M at the end of 2025 
+
+- Revenue for the year increased to DKK 42.0M, 
+
+- corresponding to an annual growth rate of 19% 
+
+- Cash burn to net new ARR ratio was 0.9 at the end of 2025, 
+
+- which is the same level as year-end 2024 
+
+- Churn rate of 1%, compared to 2% for the 12-month period ending 31 December 2024 
+
+- Net uplift of 7%, compared to 10% for the 12-month period ending 31 December 2024 
+
+- Net Revenue Retention Rate NRR) of 106%, compared to 108% in 2024 
+
+- Average ARR per customer ARPA) increased to DKK 228T 
+
+- from DKK 212T at the end of 2024 
+
+- EBITDA for the year amounted to DKK 3.1M, compared to 
+
+- DKK 8.7M in 2024 
+
+- In Q4 2025, net new ARR grew DKK 3.1M, compared to DKK 
+
+- 1.8M in Q4 2024 
+
+## A strong finish in a year of turbulence 
+
+We regained momentum in the second half of the year and ended 
+
+- - the full year 2025 with an ARR growth rate of 19% year over year, following a difficult start to the year due to heightened 
+
+Impero A/S releases Annual Report 2025: Impero realizes 19% growth in Annual Recurring Revenue, significantly improves E… geopolitical and macroeconomic uncertainty. As market conditions improved in the second half, we delivered our best second half ever in terms of net new ARR. In 2025, we balanced our cost level, resulting in a significantly improved EBITDA of DKK 3.1M, compared to EBITDA of DKK 8.7M in 2024. 
+
+“We closed2025on a strong note despite a volatile market environment throughout theyear, delivering solidARRgrowthand a markedly improvedEBITDAcomparedto lastyear. As we enter 2026, we are investing in our commercialfoundation to capitalize on ourprovenproduct-market fit, withthe aim ofaccelerating our growthin theyears ahead,ˮsays Imperoʼs CEO Rikke Stampe Skov. 
+
+## 200 customer milestone reached 
+
+By the end of 2025, we reached a significant milestone as our customer base surpassed 200 customers. During the year, we welcomed 26 new customers, 13 from the Danish market, 11 from the DACH region, and 2 from other markets. 
+
+We continued to diversify our customer base across industries and increased our share of customers being listed in the Danish C25 index and the German DAX index. Our total customer coverage is 40% of the C25 index and 22.5% of the DAX index, measured by the number of listed securities in the respective indices. 
+
+## Exceptionally low churn rate 
+
+In 2025, we reached an exceptionally low churn rate of only 1%, including no churn across our customer base in the DACH region. - We consider this as a testament to the value creation, product market fit, and stickiness of our platform as well as our focus on customer service, leading to a Customer Satisfaction CSAT) score of 92 in 2025. Generally, we see a churn rate below 5% as a healthy level. 
+
+## Product milestones in 2025 
+
+Throughout 2025, our product initiatives have continued to be shaped by a focus on expanding platform capabilities, improving delivery efficiency, and bringing meaningful value to our customers. 
+
+Impero A/S releases Annual Report 2025: Impero realizes 19% growth in Annual Recurring Revenue, significantly improves 
+
+Our development cycles and processes have matured and 
+
+- included the adoption of AI augmented engineering practices 
+
+across our development teams. This has shown significant gains in output speed, while preserving quality, allowing us to deliver more impactful features more consistently than in any previous year. 
+
+- We will continue to evolve with these AI augmented engineering tools and processes, with a disciplined focus on maintaining the integrity and reliability of our codebase as we do so. 
+
+True to previous commitments, we have delivered on launching the Control Testing module, advancing our AI agenda from exploration to live implementation, and laying the foundations for Entity Management, while also releasing many new features into the platform. 
+
+## Building a foundation for higher future growth with a solid capital position 
+
+In alignment with our strategy Increasing the Impact, we balanced our investments throughout 2025 to set the company up for being cash flow positive on a recurring basis before the end of 2026. Our efforts have been proven by a significant improvement in EBITDA and lowered cash burn. 
+
+With the improved capital position following the private placement of DKK 15M in December 2025 and continued solid SaaS metrics, the Board of Directors believes that growth - investments will create more long term value than pursuing a strategy of being cash flow positive on a recurring basis before the end of 2026. As a result, Impero has deferred its ambition of achieving positive cash flow on a recurring basis before the end of 2026, as announced in Company Announcement No. 32026. 
+
+New investments are expected to take place in 2026 and are centered around the commercial organization, securing a foundation for future higher growth. New planned hires across the commercial organization will increase the cost base, while - having a limited short term impact on ARR growth in 2026 due to onboarding ramp-up time and enterprise SaaS sales cycles. 
+
+## Guidance for 2026 
+
+As announced in Company Announcement No. 32026, Impero expects Annual Recurring Revenue ARR) to reach between DKK Impero A/S releases Annual Report 2025: Impero realizes 19% growth in Annual Recurring Revenue, significantly improves 53M and 57M by the end of 2026, corresponding to an ARR growth rate of approx. 15% to 23%. 
+
+For 2026, EBITDA is expected to be in the range of DKK 2M to 1M due to our planned acceleration of commercial investments. 
+
+Imperoʼs guidance for 2026 includes risk considerations and key assumptions which are described at page 12 in the Annual Report 2025. 

@@ -9,41 +9,19 @@ import time
 import re
 
 
-
-# =========================================================
-# API KEYS
-# =========================================================
-
-GEMINI_API_KEY = "AIzaSyAR7DDbIftxLACeb8QiENSeJ2kLm_3qVSU"
-OPENAI_API_KEY = "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"
-AWS_BEDROCK_API_KEY = "ABSKQmVkcm9ja0FQSUtleS1jOHZ4LWF0LTM3ODk4ODE4ODY1Njpudlc2VmthYTJVREFkcUxpYllmZW5oRUpoM0kvelZ6eGVUM0dvQWZTV3pIVndiUVJtWDgzOUZ2MXBicz0="
-
-## =========================================================
-# MODELS
-# =========================================================
-
 GEMINI_MODEL = "gemini-3.5-flash-lite"
 OPENAI_MODEL = "gpt-5.6-luna"
 NOVA_MODEL = "eu.amazon.nova-2-lite-v1:0"
 AWS_REGION = "eu-central-1"
 
 
-# =========================================================
-# MODEL SELECTION
-# =========================================================
 
-# Choose which model to run:
-#
 # "gemini"
 # "openai"
 # "nova"
 
 SELECTED_MODEL = "openai"
 
-
-# =========================================================
-# PROJECT PATHS
-# =========================================================
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
@@ -54,10 +32,7 @@ OUTPUTS_DIR = DATA_DIR / "outputs"
 
 OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
-
-# =========================================================
-# EXPERIMENT SETTINGS
-# =========================================================
+#SETTINGS
 
 MAX_OUTPUT_TOKENS = 1000
 
@@ -73,59 +48,30 @@ REPORT_CATEGORIES = [
 ]
 
 
-# =========================================================
-# RUN MODE
-# =========================================================
 
-# "full"   -> normal experiment run
-# "single" -> rerun one specific category/report/prompt
+
+# "full" 
+# "single"
 RUN_MODE = "single"
 
-# Settings used only when RUN_MODE = "single".
-# The selected result is regenerated even if the output file already exists,
-# and the existing file is overwritten with the new response.
+# Settings RUN_MODE = "single"
+
 MANUAL_CATEGORY = "annual_report"
 MANUAL_REPORT_FILENAME = "report_annual_8.md"
 MANUAL_PROMPT = "few_shot"
 
 
-# =========================================================
-# TEMPORARY TEST LIMIT
-# =========================================================
-
-# Number of reports processed from EACH category.
-#
-# 2 means:
-# 2 annual reports
-# 2 quarterly reports
-#
-# Set to None later to process all reports.
-
 REPORT_LIMIT = None
 
 
-# =========================================================
-# DELAYS
-# =========================================================
-
-# Pause after each API request.
 REQUEST_DELAY_SECONDS = 15
 
-# Additional pause before processing the next report.
 REPORT_DELAY_SECONDS = 25
 
 
-# =========================================================
-# RETRY SETTINGS
-# =========================================================
 
 MAX_RETRIES = 3
 RETRY_BASE_DELAY_SECONDS = 30
-
-
-# =========================================================
-# FILE FUNCTIONS
-# =========================================================
 
 def load_prompt(prompt_name: str) -> str:
 
@@ -160,7 +106,6 @@ def get_reports_in_category(category: str) -> list[str]:
         key=natural_sort_key
     )
 
-    # Temporary limitation for testing
     if REPORT_LIMIT is not None:
         report_files = report_files[:REPORT_LIMIT]
 
@@ -178,10 +123,6 @@ def build_full_prompt(
         f"{report_text}"
     )
 
-
-# =========================================================
-# OUTPUT
-# =========================================================
 
 def save_result(
     model_name: str,
@@ -216,9 +157,6 @@ def save_result(
     print(f"Saved result to: {output_path}")
 
 
-# =========================================================
-# API CLIENTS
-# =========================================================
 
 gemini_client = genai.Client(
     api_key=GEMINI_API_KEY
@@ -228,9 +166,6 @@ openai_client = OpenAI(
     api_key=OPENAI_API_KEY
 )
 
-# Amazon Bedrock long-term API key authentication.
-# If AWS_BEARER_TOKEN_BEDROCK is already configured in the OS,
-# leave AWS_BEDROCK_API_KEY empty.
 if AWS_BEDROCK_API_KEY:
     os.environ["AWS_BEARER_TOKEN_BEDROCK"] = AWS_BEDROCK_API_KEY
 
@@ -244,9 +179,7 @@ bedrock_client = boto3.client(
 )
 
 
-# =========================================================
 # GEMINI
-# =========================================================
 
 def generate_with_gemini(
     prompt_text: str
@@ -272,7 +205,6 @@ def generate_with_gemini(
         )
     )
 
-    # Token statistics
     usage = response.usage_metadata
 
     if usage:
@@ -289,7 +221,6 @@ def generate_with_gemini(
             f"{getattr(usage, 'total_token_count', None)}"
         )
 
-    # Finish reason
     if response.candidates:
 
         finish_reason = (
@@ -301,34 +232,25 @@ def generate_with_gemini(
             f"Gemini finish reason: {finish_reason}"
         )
 
-        # Do not save truncated or otherwise incomplete Gemini responses.
-        # This is especially important for manual reruns of responses that
-        # previously ended because MAX_OUTPUT_TOKENS was reached.
         finish_reason_text = str(finish_reason).upper()
 
         if "MAX_TOKENS" in finish_reason_text:
             raise RuntimeError(
-                "Gemini response reached MAX_OUTPUT_TOKENS "
-                "and was truncated."
             )
 
         if "STOP" not in finish_reason_text:
             raise RuntimeError(
-                "Gemini response did not finish normally. "
                 f"Finish reason: {finish_reason}"
             )
 
     if not response.text:
         raise RuntimeError(
-            "Gemini returned an empty response."
         )
 
     return response.text
 
 
-# =========================================================
 # OPENAI
-# =========================================================
 
 def generate_with_openai(
     prompt_text: str
@@ -347,7 +269,6 @@ def generate_with_openai(
         max_output_tokens=MAX_OUTPUT_TOKENS,
     )
 
-    # Token statistics
     if response.usage:
 
         reasoning_tokens = None
@@ -368,7 +289,6 @@ def generate_with_openai(
             f"total: {response.usage.total_tokens}"
         )
 
-    # Check if generation was truncated
     if response.status == "incomplete":
 
         reason = None
@@ -388,15 +308,13 @@ def generate_with_openai(
     if not response.output_text:
 
         raise RuntimeError(
-            "OpenAI returned an empty response."
         )
 
     return response.output_text
 
 
-# =========================================================
+
 # AMAZON NOVA 2 LITE
-# =========================================================
 
 def generate_with_nova(
     prompt_text: str
@@ -417,13 +335,11 @@ def generate_with_nova(
 
         inferenceConfig={
             "maxTokens": MAX_OUTPUT_TOKENS,
-            # Nova 2 Lite documents 0.00001 as the minimum
-            # temperature value, so this is effectively deterministic.
+
             "temperature": 0.00001,
         },
 
-        # Extended thinking is disabled explicitly for reproducibility
-        # and to keep the experiment comparable with the other models.
+
         additionalModelRequestFields={
             "reasoningConfig": {
                 "type": "disabled"
@@ -431,7 +347,6 @@ def generate_with_nova(
         },
     )
 
-    # Token statistics
     usage = response.get("usage", {})
 
     print(
@@ -450,7 +365,6 @@ def generate_with_nova(
             f"{metrics.get('latencyMs')} ms"
         )
 
-    # Finish reason
     stop_reason = response.get("stopReason")
 
     print(
@@ -459,12 +373,10 @@ def generate_with_nova(
 
     if stop_reason != "end_turn":
         raise RuntimeError(
-            "Amazon Nova response did not finish normally. "
             f"Stop reason: {stop_reason}"
         )
 
-    # Extract only final text blocks. This also keeps the code safe if
-    # reasoning content is ever enabled later.
+
     content_blocks = (
         response
         .get("output", {})
@@ -482,15 +394,10 @@ def generate_with_nova(
 
     if not summary_text:
         raise RuntimeError(
-            "Amazon Nova returned an empty response."
         )
 
     return summary_text
 
-
-# =========================================================
-# MODEL ROUTER
-# =========================================================
 
 def generate_summary(
     model_name: str,
@@ -522,9 +429,7 @@ def generate_summary(
         )
 
 
-# =========================================================
 # RETRY LOGIC
-# =========================================================
 
 def generate_with_retry(
     model_name: str,
@@ -568,9 +473,6 @@ def generate_with_retry(
             time.sleep(wait_time)
 
 
-# =========================================================
-# REPORT PROCESSING
-# =========================================================
 
 def process_report(
     category: str,
@@ -688,9 +590,6 @@ def result_exists(
     output_path = category_output_dir / output_filename
 
     return output_path.exists()
-# =========================================================
-# MAIN EXPERIMENT
-# =========================================================
 
 def main():
 
@@ -701,8 +600,6 @@ def main():
     ]:
 
         raise ValueError(
-            "SELECTED_MODEL must be "
-            "'gemini', 'openai' or 'nova'"
         )
 
     if RUN_MODE not in [
@@ -710,7 +607,6 @@ def main():
         "single"
     ]:
         raise ValueError(
-            "RUN_MODE must be 'full' or 'single'"
         )
 
     print("\n" + "=" * 70)
@@ -744,9 +640,6 @@ def main():
 
     print("=" * 70)
 
-    # -----------------------------------------------------
-    # MANUAL SINGLE-RERUN MODE
-    # -----------------------------------------------------
     if RUN_MODE == "single":
 
         if MANUAL_CATEGORY not in REPORT_CATEGORIES:

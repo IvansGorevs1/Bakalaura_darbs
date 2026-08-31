@@ -7,32 +7,6 @@ import statistics
 from pathlib import Path
 
 
-# =============================================================================
-# Nova Run 1 vs Grok 4.3 cross-judge agreement analysis
-# =============================================================================
-#
-# Primary comparison:
-#   Nova Run 1 = the exact Nova judgments used in the main 900-result experiment
-#   Grok 4.3   = one independent cross-judge evaluation of the same 72 summaries
-#
-# Default input folder:
-#   data/judge_validation/consistency_crossjudge_72/
-#
-# Expected files:
-#   nova_run1_scores_72.csv
-#   grok43_run1_scores_72.csv
-#
-# Outputs:
-#   cross_judge_analysis/
-#       nova1_grok43_summary.csv
-#       nova1_grok43_per_item.csv
-#       nova1_grok43_breakdown.csv
-#       nova1_grok43_report.txt
-#
-# No third-party packages are required.
-# =============================================================================
-
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 DEFAULT_INPUT_DIR = (
@@ -87,7 +61,7 @@ MAX_SCORE = {
 
 FLOAT_TOLERANCE = 1e-9
 
-# Transparent practical-agreement thresholds.
+
 RATIO_TOLERANCE = 0.05
 ORDINAL_TOLERANCE = 1.0
 COUNT_TOLERANCE = 1.0
@@ -95,29 +69,18 @@ COUNT_TOLERANCE = 1.0
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description=(
-            "Compare Nova Run 1 with Grok 4.3 on the same fixed 72-answer "
-            "cross-judge validation subset."
-        )
     )
 
     parser.add_argument(
         "--input-dir",
         type=Path,
         default=DEFAULT_INPUT_DIR,
-        help=(
-            "Folder containing nova_run1_scores_72.csv and "
-            "grok43_run1_scores_72.csv."
-        ),
     )
 
     parser.add_argument(
         "--output-dir",
         type=Path,
         default=None,
-        help=(
-            "Output folder. Default: <input-dir>/cross_judge_analysis"
-        ),
     )
 
     return parser.parse_args()
@@ -877,9 +840,7 @@ def metric_summary(
             or grok_ceiling >= 80.0
         ):
             note = (
-                "Strong ceiling effect in at least one judge. "
-                "Interpret ICC/correlation together with direct agreement "
-                "and MAE."
+                "MAE."
             )
 
     return {
@@ -1340,24 +1301,6 @@ def build_text_report(
     )
     lines.append(
         "-" * 78
-    )
-
-    lines.append(
-        "For Faithfulness and Numerical Accuracy, exact agreement is a strict "
-        "criterion because the scores are ratios derived from judge-specific "
-        "claim decompositions. Therefore MAE and agreement within ±0.05 should "
-        "be reported alongside exact agreement."
-    )
-
-    lines.append(
-        "For Completeness and Coherence, which use an ordinal 0-4 scale, "
-        "quadratic weighted Cohen's kappa is additionally reported."
-    )
-
-    lines.append(
-        "Claim-count agreement is reported separately because disagreement in "
-        "atomic claim decomposition can change Faithfulness/Numerical Accuracy "
-        "even when the two judges broadly agree on the underlying summary."
     )
 
     return "\n".join(

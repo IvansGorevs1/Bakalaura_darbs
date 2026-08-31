@@ -3,10 +3,6 @@ import re
 import pandas as pd
 
 
-# ============================================================
-# SETTINGS
-# ============================================================
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
 
@@ -21,12 +17,10 @@ RESULTS_DIR = DATA_DIR / "report_statistics"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# Desired answer length from the prompt
 TARGET_MIN_WORDS = 350
 TARGET_MAX_WORDS = 450
 
 
-# Prompts used in the experiment
 PROMPTS = [
     "zero_shot",
     "few_shot",
@@ -34,9 +28,6 @@ PROMPTS = [
 ]
 
 
-# ============================================================
-# WORD COUNT
-# ============================================================
 
 def count_words(text: str) -> int:
     """
@@ -50,10 +41,6 @@ def count_words(text: str) -> int:
     words = re.findall(r"\b[\w’'-]+\b", text, flags=re.UNICODE)
     return len(words)
 
-
-# ============================================================
-# FILE NAME PARSING
-# ============================================================
 
 def parse_filename(filename: str):
     """
@@ -82,9 +69,6 @@ def parse_filename(filename: str):
     return stem, "unknown", "unknown"
 
 
-# ============================================================
-# RANGE STATUS
-# ============================================================
 
 def get_status(word_count: int) -> str:
     if word_count < TARGET_MIN_WORDS:
@@ -95,9 +79,6 @@ def get_status(word_count: int) -> str:
         return "within_range"
 
 
-# ============================================================
-# PROCESS FILES
-# ============================================================
 
 rows = []
 
@@ -144,9 +125,6 @@ for category, folder in CATEGORIES.items():
             print(f"ERROR reading {file_path.name}: {e}")
 
 
-# ============================================================
-# DATAFRAME
-# ============================================================
 
 if not rows:
     print("\nNo response files found.")
@@ -160,9 +138,6 @@ df = df.sort_values(
 ).reset_index(drop=True)
 
 
-# ============================================================
-# DETAILED RESULTS
-# ============================================================
 
 detailed_file = RESULTS_DIR / "model_response_word_statistics.csv"
 
@@ -173,9 +148,6 @@ df.to_csv(
 )
 
 
-# ============================================================
-# SUMMARY BY MODEL / PROMPT / CATEGORY
-# ============================================================
 
 summary = (
     df.groupby(
@@ -225,7 +197,6 @@ summary["above_range_percent"] = (
 )
 
 
-# Round numeric columns
 for column in [
     "mean_words",
     "median_words",
@@ -246,9 +217,6 @@ summary.to_csv(
 )
 
 
-# ============================================================
-# OVERALL SUMMARY BY MODEL
-# ============================================================
 
 model_summary = (
     df.groupby("model")
@@ -302,9 +270,6 @@ model_summary.to_csv(
 )
 
 
-# ============================================================
-# CONSOLE OUTPUT
-# ============================================================
 
 print("\n" + "=" * 80)
 print("WORD COUNT ANALYSIS")

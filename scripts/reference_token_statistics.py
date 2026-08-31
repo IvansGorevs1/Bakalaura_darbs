@@ -3,55 +3,36 @@ import pandas as pd
 import tiktoken
 
 
-# =========================================================
-# PATHS
-# =========================================================
-
-# Bakalaura_darbs/
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# Bakalaura_darbs/data/references_txt/
+
 REFERENCES_DIR = PROJECT_ROOT / "data" / "references_txt"
 
 # Annual references
 ANNUAL_DIR = REFERENCES_DIR / "annual_report_reference"
 
-# Quarterly references
-# Поддерживаются оба варианта названия папки:
+
 QUARTERLY_DIR_VARIANTS = [
-    REFERENCES_DIR / "quartely_report_reference",
     REFERENCES_DIR / "quarterly_report_reference",
 ]
 
-# Output
+
 OUTPUT_DIR = PROJECT_ROOT / "data" / "report_statistics"
 
 DETAILED_OUTPUT = OUTPUT_DIR / "reference_token_statistics.csv"
 SUMMARY_OUTPUT = OUTPUT_DIR / "reference_token_summary.csv"
 
 
-# =========================================================
-# TOKENIZER
-# =========================================================
-
 encoding = tiktoken.get_encoding("o200k_base")
 
 
 def count_tokens(text: str) -> int:
-    """Подсчитывает количество токенов в тексте."""
     return len(encoding.encode(text))
 
 
-# =========================================================
-# FIND QUARTERLY DIRECTORY
-# =========================================================
 
 def find_quarterly_dir() -> Path:
-    """
-    Находит папку квартальных эталонов.
-    Поддерживает quartely_report_reference
-    и quarterly_report_reference.
-    """
+
 
     for folder in QUARTERLY_DIR_VARIANTS:
         if folder.exists():
@@ -64,12 +45,8 @@ def find_quarterly_dir() -> Path:
     )
 
 
-# =========================================================
-# FILE ANALYSIS
-# =========================================================
 
 def analyze_file(file_path: Path, reference_type: str) -> dict:
-    """Подсчитывает статистику для одного TXT-файла."""
 
     text = file_path.read_text(
         encoding="utf-8",
@@ -105,7 +82,6 @@ def analyze_file(file_path: Path, reference_type: str) -> dict:
 
 
 def analyze_folder(folder: Path, reference_type: str) -> list:
-    """Анализирует все TXT-файлы в указанной папке."""
 
     if not folder.exists():
         raise FileNotFoundError(
@@ -139,12 +115,7 @@ def analyze_folder(folder: Path, reference_type: str) -> list:
     return results
 
 
-# =========================================================
-# SUMMARY
-# =========================================================
-
 def create_summary(df: pd.DataFrame) -> pd.DataFrame:
-    """Создает итоговую статистику."""
 
     rows = []
 
@@ -207,9 +178,6 @@ def create_summary(df: pd.DataFrame) -> pd.DataFrame:
         })
 
 
-    # -----------------------------------------------------
-    # ALL REFERENCES
-    # -----------------------------------------------------
 
     total_words = df["words"].sum()
     total_tokens = df["tokens"].sum()
@@ -263,10 +231,6 @@ def create_summary(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-# =========================================================
-# MAIN
-# =========================================================
-
 def main():
 
     print("=" * 70)
@@ -279,10 +243,6 @@ def main():
     print("\nReferences directory:")
     print(REFERENCES_DIR)
 
-
-    # -----------------------------------------------------
-    # CHECK DIRECTORIES
-    # -----------------------------------------------------
 
     if not REFERENCES_DIR.exists():
         raise FileNotFoundError(
@@ -304,9 +264,6 @@ def main():
     print(quarterly_dir)
 
 
-    # -----------------------------------------------------
-    # ANALYZE
-    # -----------------------------------------------------
 
     print("\n" + "=" * 70)
     print("ANALYZING REFERENCES")
@@ -340,10 +297,6 @@ def main():
         return
 
 
-    # -----------------------------------------------------
-    # DATAFRAME
-    # -----------------------------------------------------
-
     df = pd.DataFrame(results)
 
     df = df.sort_values(
@@ -351,9 +304,6 @@ def main():
     ).reset_index(drop=True)
 
 
-    # -----------------------------------------------------
-    # DATASET CHECK
-    # -----------------------------------------------------
 
     annual_count = len(
         df[df["type"] == "Annual"]
@@ -394,16 +344,8 @@ def main():
         )
 
 
-    # -----------------------------------------------------
-    # SUMMARY
-    # -----------------------------------------------------
-
     summary = create_summary(df)
 
-
-    # -----------------------------------------------------
-    # SAVE
-    # -----------------------------------------------------
 
     OUTPUT_DIR.mkdir(
         parents=True,
@@ -424,10 +366,6 @@ def main():
         encoding="utf-8-sig"
     )
 
-
-    # -----------------------------------------------------
-    # PRINT SUMMARY
-    # -----------------------------------------------------
 
     print("\n" + "=" * 70)
     print("SUMMARY")
@@ -503,11 +441,6 @@ def main():
             f"Tokens per word:       "
             f"{row['mean_tokens_per_word']:.3f}"
         )
-
-
-    # -----------------------------------------------------
-    # OUTPUT FILES
-    # -----------------------------------------------------
 
     print("\n" + "=" * 70)
     print("FILES SAVED")

@@ -12,80 +12,9 @@ from collections import defaultdict
 from pathlib import Path
 
 
-# =============================================================================
-# CONTROLLED PERTURBATION VALIDATION — FINAL EXPERIMENT V5
-# =============================================================================
-#
-# Dataset:
-#   data/judge_validation/perturbation_48/
-#       modified_answers/          <- 48 manually corrupted summaries
-#       original/                  <- 12 untouched source summaries
-#       perturbation_manifest_48.csv
-#
-# Design:
-#   12 original summaries × 4 isolated corruption types = 48 modified summaries
-#
-# Corruption types:
-#   factual_corruption
-#   numerical_corruption
-#   completeness_corruption
-#   coherence_corruption
-#
-# Default mode is TARGET-ONLY to save time/cost:
-#
-#   factual corruption
-#       -> run Factual/Numerical request
-#       -> target = Faithfulness
-#       -> Numerical Accuracy is retained as a secondary cross-check
-#
-#   numerical corruption
-#       -> run Factual/Numerical request
-#       -> target = Numerical Accuracy
-#       -> Faithfulness is retained as a secondary cross-check
-#
-#   completeness corruption
-#       -> run Completeness only
-#
-#   coherence corruption
-#       -> run Coherence only
-#
-# Therefore the default experiment requires only:
-#   12 + 12 + 12 + 12 = 48 logical Judge requests
-#
-# instead of 48 × 3 = 144 requests.
-#
-# Optional:
-#   --all-metrics
-# evaluates all three Judge requests for every corrupted summary.
-#
-# Baseline:
-#   The untouched score is NOT regenerated. The script loads the exact
-#   Nova merged result from the original main experiment:
-#
-#       normal          -> data/judge_results/
-#       reasoning_high  -> data/judge_results_reasoning_high/
-#
-# Completeness:
-#   Reuses the exact original verified report-level key-information rubric from:
-#       data/judge_shared/nova_2_lite/...
-#
-# This keeps the validity test controlled:
-#   original score vs manually corrupted version,
-#   same Judge methodology / same Completeness rubric.
-#
-# =============================================================================
-
-
-# -----------------------------------------------------------------------------
-# CLI
-# -----------------------------------------------------------------------------
-
 def parse_args():
     parser = argparse.ArgumentParser(
-        description=(
-            "Run the final controlled-corruption validity test with Nova 2 Lite "
-            "on the 48 manually modified summaries."
-        )
+
     )
 
     parser.add_argument(
@@ -105,36 +34,25 @@ def parse_args():
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help=(
-            "No API calls. Validate the 48 filenames, 12 originals, baseline "
-            "Judge results and 12×4 perturbation structure."
-        ),
+
     )
 
     parser.add_argument(
         "--collect",
         action="store_true",
-        help=(
-            "No API calls. Collect all successful saved perturbation results "
-            "and calculate the final sensitivity tables."
-        ),
+
     )
 
     parser.add_argument(
         "--all-metrics",
         action="store_true",
-        help=(
-            "Evaluate Factual/Numerical + Completeness + Coherence for every "
-            "modified answer. Default is target-only (48 logical requests)."
-        ),
+
     )
 
     parser.add_argument(
         "--force",
         action="store_true",
-        help=(
-            "Rerun already successful paid results. Normally DO NOT use this."
-        ),
+
     )
 
     return parser.parse_args()
@@ -152,9 +70,6 @@ if ARGS.worker > ARGS.workers:
     raise SystemExit("--worker cannot exceed --workers")
 
 
-# -----------------------------------------------------------------------------
-# Paths
-# -----------------------------------------------------------------------------
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
@@ -236,9 +151,6 @@ TEXT_REPORT = (
 )
 
 
-# -----------------------------------------------------------------------------
-# Naming / metadata
-# -----------------------------------------------------------------------------
 
 GENERATOR_NAMES = {
     "openai": "GPT-5.6 Luna",
@@ -306,11 +218,6 @@ MODIFIED_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
-# `original/` contains untouched paired copies that intentionally keep the
-# corruption suffix in the filename, e.g.
-#   ...qwen36__coherence_corruption.txt
-# These are not corrupted files: they are the pre-edit originals paired with
-# each modified answer.
 ORIGINAL_RE = re.compile(
     r"^(?P<mode>normal|reasoning_high)_+"
     r"report_(?P<rtype>annual|quarterly)_(?P<number>\d+)_"
@@ -321,7 +228,7 @@ ORIGINAL_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
-# Also support a true 12-file original layout if such files are later used.
+
 ORIGINAL_BASE_RE = re.compile(
     r"^(?P<mode>normal|reasoning_high)_+"
     r"report_(?P<rtype>annual|quarterly)_(?P<number>\d+)_"
@@ -462,10 +369,6 @@ def parse_original(
         ),
     }
 
-
-# -----------------------------------------------------------------------------
-# Basic helpers
-# -----------------------------------------------------------------------------
 
 def log(
     message="",
@@ -628,9 +531,6 @@ def build_original_index():
             f"No parseable originals found in:\n{ORIGINAL_DIR}"
         )
 
-    # Two supported layouts:
-    #   A) 48 paired untouched originals, each retaining its corruption suffix.
-    #   B) 12 base originals, one per selected model summary.
     paired_count = sum(
         1
         for item in parsed_files
@@ -837,10 +737,6 @@ def validate_structure(
             )
 
 
-# -----------------------------------------------------------------------------
-# Existing main-experiment baseline
-# -----------------------------------------------------------------------------
-
 def baseline_root(
     generation_mode: str,
 ) -> Path:
@@ -1014,10 +910,6 @@ def load_baseline(
     )
 
 
-# -----------------------------------------------------------------------------
-# Dry-run checks that do not import / call the Judge core
-# -----------------------------------------------------------------------------
-
 def dry_run():
     modified_rows = discover_modified()
     originals = build_original_index()
@@ -1145,10 +1037,6 @@ def dry_run():
     )
 
 
-# -----------------------------------------------------------------------------
-# Judge core import (only needed for paid run)
-# -----------------------------------------------------------------------------
-
 core = None
 
 
@@ -1168,7 +1056,7 @@ def ensure_core():
         )
 
     try:
-        import nova_judge_core_v5_2 as imported_core
+        import scripts.nova_judge_v5_2 as imported_core
     except ImportError as exc:
         raise RuntimeError(
             "Could not import nova_judge_core_v5_2.py. "
@@ -1177,7 +1065,6 @@ def ensure_core():
 
     core = imported_core
 
-    # Explicitly preserve the final production policy.
     core.SERVICE_TIER = "flex"
     core.CANDIDATE_TEMPERATURE = 0.0
 
@@ -1215,10 +1102,6 @@ def ensure_core():
 
     return core
 
-
-# -----------------------------------------------------------------------------
-# Source / fixed completeness rubric
-# -----------------------------------------------------------------------------
 
 def find_source_with_core(
     row: dict,
@@ -1295,10 +1178,6 @@ def load_original_shared_rubric(
     )
 
 
-# -----------------------------------------------------------------------------
-# Modified score extraction
-# -----------------------------------------------------------------------------
-
 def _claim_trace_ids_are_valid(
     claim: dict,
     sentence_map: dict[str, str],
@@ -1331,14 +1210,7 @@ def _selective_faithfulness_score(
     evaluation: dict,
     sentence_map: dict[str, str],
 ):
-    """
-    Compute Faithfulness independently of the numerical layer.
-
-    This is intentionally used only for the target-only perturbation test.
-    The combined Factual/Numerical core validator can reject the whole JSON
-    because of an invalid NUMERICAL label or a numerical coverage warning.
-    Those failures do not invalidate a fully well-formed factual layer.
-    """
+   
     claims = evaluation.get(
         "factual_claims"
     )
@@ -1400,18 +1272,7 @@ def _selective_numerical_score(
     evaluation: dict,
     sentence_map: dict[str, str],
 ):
-    """
-    Compute Numerical Accuracy independently of the factual layer.
-
-    Numerical score is accepted only if:
-      - all numerical claims use CORRECT/INCORRECT;
-      - trace IDs are valid;
-      - the production numerical sentence-coverage guard passes.
-
-    Therefore a factual taxonomy error such as PARTIALLY_SUPPORTED cannot
-    invalidate an otherwise complete numerical target result, while a true
-    numerical_coverage_failed result is still rejected for Numerical Accuracy.
-    """
+   
     c = ensure_core()
 
     claims = evaluation.get(
@@ -1545,7 +1406,6 @@ def extract_scores_from_raw(
                 ] = "full_core_success"
 
             else:
-                # Target-specific local salvage. No new Judge request.
                 factual_score = (
                     _selective_faithfulness_score(
                         evaluation,
@@ -1643,10 +1503,6 @@ def extract_scores_from_raw(
         recovery,
     )
 
-
-# -----------------------------------------------------------------------------
-# One perturbation
-# -----------------------------------------------------------------------------
 
 def result_json_path(
     row: dict,
@@ -1953,15 +1809,6 @@ def process_one(
     )
 
     result = {
-        # In target-only mode the experiment is successful when the TARGET
-        # metric is valid, even if the shared Factual/Numerical request was
-        # rejected because only the irrelevant secondary layer failed.
-        #
-        # Example:
-        #   factual_corruption target = Faithfulness
-        #   numerical coverage failure != invalid Faithfulness result
-        #
-        # In --all-metrics mode we retain the original strict behavior.
         "status": (
             "success"
             if (
@@ -2113,11 +1960,6 @@ def process_one(
     )
 
     return result
-
-
-# -----------------------------------------------------------------------------
-# Compact result row
-# -----------------------------------------------------------------------------
 
 RESULT_FIELDS = [
     "modified_file",
@@ -2300,10 +2142,6 @@ def result_to_row(
         ),
     }
 
-
-# -----------------------------------------------------------------------------
-# Collect / summary
-# -----------------------------------------------------------------------------
 
 def load_all_saved_results(
     modified_rows: list[dict],
@@ -2878,17 +2716,6 @@ def build_text_report(
             "",
             "INTERPRETATION",
             "-" * 84,
-            (
-                "This experiment is a controlled sensitivity/validity check, not another "
-                "self-consistency test. A high detection rate means the Judge metric "
-                "changes in the expected direction when a known criterion-specific "
-                "defect is deliberately introduced."
-            ),
-            (
-                "Failure to decrease in an individual case should be inspected manually: "
-                "the corruption may be too small for a 0-4 rubric step, the baseline may "
-                "already be low, or the Judge may have failed to detect the introduced defect."
-            ),
         ]
     )
 
@@ -2896,10 +2723,6 @@ def build_text_report(
         lines
     )
 
-
-# -----------------------------------------------------------------------------
-# Main
-# -----------------------------------------------------------------------------
 
 def main():
     if ARGS.dry_run:
@@ -3035,7 +2858,6 @@ def main():
 
         return
 
-    # Paid run starts only here.
     ensure_core()
 
     selected = []

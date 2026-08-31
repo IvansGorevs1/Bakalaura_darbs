@@ -7,35 +7,6 @@ import time
 from pathlib import Path
 
 
-# =============================================================================
-# Nova self-consistency runner for the fixed 72-answer validation subset
-# =============================================================================
-#
-# Put this file in:
-#   Bakalaura_darbs/scripts/run_nova_validation_repeat.py
-#
-# It expects in the same scripts/ folder:
-#   nova_judge_core_v5_2.py
-#
-# It expects:
-#   data/judge_validation/consistency_crossjudge_72/
-#       validation_subset_72.csv
-#       answers/
-#
-# Shared completeness criteria are NOT regenerated. Existing files from
-# data/judge_shared/nova_2_lite/... are reused exactly.
-#
-# Output roots are isolated from the main 900-result experiment:
-#   data/judge_validation/consistency_crossjudge_72/nova_run2/
-#   data/judge_validation/consistency_crossjudge_72/nova_run3/
-#
-# Same Judge configuration as the main experiment:
-#   Factual/Numerical -> LOW reasoning
-#   Completeness      -> OFF
-#   Coherence         -> OFF
-#   service tier      -> Flex
-# =============================================================================
-
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -99,10 +70,6 @@ if ARGS.worker > ARGS.workers:
     raise SystemExit("--worker cannot be greater than --workers")
 
 
-# =============================================================================
-# Project paths / core import
-# =============================================================================
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
 
@@ -158,16 +125,13 @@ FINAL_CSV = (
     / f"nova_run{ARGS.run_number}_scores_72.csv"
 )
 
-
-# The production core resolves paths during import. Start from a valid mode;
-# core.RUN_MODE is then changed per selected candidate.
 os.environ.setdefault(
     "NOVA_JUDGE_RUN_MODE",
     "normal",
 )
 
 try:
-    import nova_judge_core_v5_2 as core
+    import scripts.nova_judge_v5_2 as core
 except ImportError as exc:
     raise SystemExit(
         "\nCould not import nova_judge_core_v5_2.py.\n"
@@ -182,23 +146,13 @@ GENERATOR_NAMES = {
     "qwen36": "Qwen3.6-35B-A3B",
 }
 
-# Same Flex rates used by the production runner, for a local estimate only.
 FLEX_INPUT_PER_M = 0.15
 FLEX_OUTPUT_PER_M = 1.25
 
-
-# =============================================================================
-# Safety
-# =============================================================================
-
-# Never regenerate report-level shared criteria in self-consistency repeats.
 core.FORCE_RERUN_SHARED = False
 
-# Repeat results are isolated from data/judge_results and
-# data/judge_results_reasoning_high.
 core.JUDGE_RESULTS_ROOT = RUN_ROOT
 
-# Resume-safe by default.
 core.FORCE_RERUN_ALL = ARGS.force
 
 
@@ -231,10 +185,6 @@ def estimated_flex_cost(
         * FLEX_OUTPUT_PER_M
     )
 
-
-# =============================================================================
-# Manifest / sharding
-# =============================================================================
 
 def load_manifest() -> list[dict]:
     if not MANIFEST.exists():
@@ -321,10 +271,6 @@ def rows_for_this_worker(
 
     return result
 
-
-# =============================================================================
-# Candidate / shared files
-# =============================================================================
 
 def answer_path_from_manifest(
     row: dict,
@@ -443,10 +389,6 @@ def load_shared_results(
         verified_path,
     )
 
-
-# =============================================================================
-# Output metadata / score table
-# =============================================================================
 
 def patch_repeat_metadata(
     merged: dict,

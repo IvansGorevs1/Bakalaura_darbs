@@ -7,70 +7,6 @@ import time
 from pathlib import Path
 
 
-# =============================================================================
-# Grok 4.3 cross-judge runner for the fixed 72-answer validation subset
-# =============================================================================
-#
-# Purpose:
-#   Evaluate the SAME 72 summaries once with xAI Grok 4.3 in Amazon Bedrock.
-#
-# Input:
-#   data/judge_validation/consistency_crossjudge_72/
-#       validation_subset_72.csv
-#       answers/
-#
-# Reused without regeneration:
-#   data/judge_shared/nova_2_lite/...
-#
-# This means Grok uses the EXACT SAME verified completeness criteria that
-# Nova Run 1 / Run 2 / Run 3 used.
-#
-# Output:
-#   data/judge_validation/consistency_crossjudge_72/
-#       grok43_run1/
-#       grok43_run1_scores_72.csv
-#
-# The script imports the existing nova_judge_core_v5_2.py only for:
-#   - prompt loading/building
-#   - sentence segmentation
-#   - validation / numerical coverage guard
-#   - bounded repair logic
-#   - merging / score calculation
-#
-# The actual model call is monkey-patched from Nova Converse to:
-#   Amazon Bedrock Mantle Responses API
-#   model = xai.grok-4.3
-#
-# Judge reasoning configuration is intentionally kept parallel to the final
-# Nova setup:
-#   Factual/Numerical -> LOW
-#   Completeness      -> OFF (mapped to Grok effort="none")
-#   Coherence         -> OFF (mapped to Grok effort="none")
-#   temperature       -> 0.0
-#   service tier      -> FLEX
-#
-# Requirements:
-#   pip install -U openai
-#
-# Authentication:
-#   Preferred:
-#       $env:OPENAI_API_KEY="your Bedrock API key"
-#
-#   The script also accepts the already-used variable:
-#       $env:AWS_BEARER_TOKEN_BEDROCK="your Bedrock API key"
-#
-# Run with four terminals:
-#   python scripts\run_grok43_validation.py --worker 1 --workers 4
-#   python scripts\run_grok43_validation.py --worker 2 --workers 4
-#   python scripts\run_grok43_validation.py --worker 3 --workers 4
-#   python scripts\run_grok43_validation.py --worker 4 --workers 4
-#
-# After all workers:
-#   python scripts\run_grok43_validation.py --collect
-#
-# =============================================================================
-
-
 def parse_args():
     parser = argparse.ArgumentParser(
         description=(
@@ -112,21 +48,6 @@ def parse_args():
     return parser.parse_args()
 
 
-ARGS = parse_args()
-
-if ARGS.worker < 1:
-    raise SystemExit("--worker must be >= 1")
-
-if ARGS.workers < 1:
-    raise SystemExit("--workers must be >= 1")
-
-if ARGS.worker > ARGS.workers:
-    raise SystemExit("--worker cannot be greater than --workers")
-
-
-# =============================================================================
-# Project paths
-# =============================================================================
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
@@ -184,18 +105,13 @@ FINAL_CSV = (
 )
 
 
-# =============================================================================
-# Existing Judge core
-# =============================================================================
-
-# Start the production core from a valid generation mode.
 os.environ.setdefault(
     "NOVA_JUDGE_RUN_MODE",
     "normal",
 )
 
 try:
-    import nova_judge_core_v5_2 as core
+    import scripts.nova_judge_v5_2 as core
 except ImportError as exc:
     raise SystemExit(
         "\nCould not import nova_judge_core_v5_2.py.\n"
@@ -204,9 +120,6 @@ except ImportError as exc:
     ) from exc
 
 
-# =============================================================================
-# OpenAI-compatible Bedrock Mantle client
-# =============================================================================
 
 try:
     from openai import OpenAI
@@ -229,10 +142,6 @@ GROK_BASE_URL = (
 SERVICE_TIER = "flex"
 TEMPERATURE = 0.0
 
-# Grok 4.3 standard pricing on Bedrock:
-#   input  = $1.25 / 1M
-#   output = $2.50 / 1M
-# Flex = 0.5 × Standard.
 FLEX_INPUT_PER_M = 0.625
 FLEX_OUTPUT_PER_M = 1.25
 
@@ -265,7 +174,7 @@ client = OpenAI(
     api_key=api_key,
     base_url=GROK_BASE_URL,
     timeout=900.0,
-    max_retries=0,  # We perform explicit retries below.
+    max_retries=0, 
 )
 
 
@@ -275,10 +184,6 @@ GENERATOR_NAMES = {
     "qwen36": "Qwen3.6-35B-A3B",
 }
 
-
-# =============================================================================
-# Grok call adapter
-# =============================================================================
 
 def get_attr(
     obj,
