@@ -1,0 +1,186 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:08:38.550221",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_17_few_shot_gemini.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "fa785c86e8d990d1",
+    "sentence_map_hash": "a90aacccb046b530",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "716944dcabea0c7d",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_17.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Novaturas AB reported weaker financial results for the year ended December 31, 2024, driven by an increased competitive environment, oversupply of travel options in the Baltic States, and intense price competition in key destinations such as Turkey and the Greek islands.",
+    "S2": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023.",
+    "S3": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers.",
+    "S4": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%.",
+    "S5": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit.",
+    "S6": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros.",
+    "S7": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023.",
+    "S8": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros.",
+    "S9": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023.",
+    "S10": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros.",
+    "S11": "Despite the weaker overall annual performance, the company’s operating results demonstrated a material improvement starting in September 2024 following effective optimization of its travel program and reduction of unprofitable last-minute sales.",
+    "S12": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period.",
+    "S13": "Financial position and liquidity management remained key areas of focus, with the group failing to comply with certain financial and non-financial loan covenants at year-end, though necessary waivers were subsequently secured from lenders.",
+    "S14": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned.",
+    "S15": "Additionally, the company secured supplementary credit lines and loan facilities from financial partners and the new investor to support ongoing operations and liquidity requirements moving forward.",
+    "S16": "Financial statements for the prior comparative period were restated to correct historical errors involving overstated prepayments and understated operating expenses."
+  },
+  "usage": {
+    "input_tokens": 1993,
+    "output_tokens_including_reasoning": 397,
+    "total_tokens": 2390
+  },
+  "latency_seconds": 2.14,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S7\", \"S8\", \"S9\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S3\", \"S5\", \"S7\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\", \"S15\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\", \"S12\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S13\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K4\", \"K7\"],\n  \"justification\": \"K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING as there is no mention of travel demand trends to Spain, long-haul destinations, or load factors for Q4 2024. K7 is MISSING as there is no segment performance data on flight packages, passenger numbers, or other segments like sightseeing tours. The overall coverage is strong for most HIGH criteria, but the absence of K4 and K7 leads to a 'Generally yes' score.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S7",
+          "S8",
+          "S9"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S5",
+          "S7"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K4",
+      "K7"
+    ],
+    "justification": "K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING as there is no mention of travel demand trends to Spain, long-haul destinations, or load factors for Q4 2024. K7 is MISSING as there is no segment performance data on flight packages, passenger numbers, or other segments like sightseeing tours. The overall coverage is strong for most HIGH criteria, but the absence of K4 and K7 leads to a 'Generally yes' score."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

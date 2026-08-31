@@ -1,0 +1,173 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:55:42.170058",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\normal__report_quarterly_2_chain_of_event_qwen36__coherence_corruption.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "5f88e572a254c693",
+    "sentence_map_hash": "d7dfe6d18a99239c",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AB Amber Grid reported a significant improvement in financial performance for the three-month period ended 31 March 2026, an improvement, for the three-month period, in financial performance.",
+    "S2": "Revenue increased by 58% to EUR 32,821 thousand, compared to EUR 20,763 thousand in the same period of 2025.",
+    "S3": "Revenue increased by 58% to EUR 32,821 thousand, compared to EUR 20,763 thousand in the same period of 2025.",
+    "S4": "This growth was primarily driven by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.",
+    "S5": "Conversely, revenue from system balancing products decreased by 99% to EUR 24 thousand, a change attributed to a new transit agreement with Kaliningrad that significantly reduced the need for balancing gas, which was the need, and it reduced it.",
+    "S6": "Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 9,570 thousand, largely due to a 68% drop in natural gas costs.",
+    "S7": "Purchases of natural gas and related services fell to EUR 1,477 thousand from EUR 4,622 thousand in the prior year period.",
+    "S8": "Consequently.",
+    "S9": "EBITDA surged to EUR 23,304 thousand, up from EUR 8,918 thousand in 2025, consequently.",
+    "S10": "Operating profit (EBIT) also improved substantially, reaching EUR 19,627 thousand compared to EUR 5,185 thousand in the previous year.",
+    "S11": "Net profit for the quarter was EUR 15,763 thousand, a marked increase from EUR 4,239 thousand in 2025.",
+    "S12": "Net profit for the quarter was EUR 15,763 thousand, a marked increase from EUR 4,239 thousand in 2025.",
+    "S13": "Earnings per share rose to EUR 0.09 from EUR 0.02.",
+    "S14": "The company’s adjusted EBITDA was EUR 8,285 thousand, reflecting temporary regulatory differences.",
+    "S15": "On the balance sheet, total assets stood at EUR 324,064 thousand, while total equity increased to EUR 182,039 thousand from EUR 166,276 thousand at the end of 2025, on the balance sheet, the assets and the equity, while.",
+    "S16": "Net debt increased to EUR 106,610 thousand from EUR 76,052 thousand in the prior year period, influenced by changes in borrowings.",
+    "S17": "The company reclassified certain long-term borrowings to current liabilities in late 2025 due to covenant issues, but these were reclassified back to non-current in February 2026 following a loan transfer agreement with EPSO-G.",
+    "S18": "Cash and cash equivalents decreased to EUR 832 thousand from EUR 1,942 thousand at year-end 2025.",
+    "S19": "The company continues to manage a legal dispute regarding guarantee funds for the GIPL pipeline, with a provision of EUR 5,815 thousand recognized for potential repayment.",
+    "S20": "In April 2026, the General Meeting of Shareholders approved a dividend distribution of EUR 9,989 thousand."
+  },
+  "usage": {
+    "input_tokens": 1278,
+    "output_tokens_including_reasoning": 271,
+    "total_tokens": 1549
+  },
+  "latency_seconds": 1.99,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S3\", \"S12\"],\n      \"description\": \"Unnecessary repetition of revenue increase and net profit figures.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S8\", \"S9\"],\n      \"description\": \"Sentence S8 is a fragment that lacks a clear connection to the following sentence, weakening logical flow.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"description\": \"Sentence S15 contains redundant phrasing ('on the balance sheet') and an incomplete clause at the end, reducing clarity.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with logical relationships between revenue growth drivers, expense reductions, and profitability improvements. However, there are minor issues: S3 repeats S2 verbatim, S12 repeats S11, S8 is a fragment that disrupts flow, and S15 contains redundant/incomplete phrasing. There are no self-contradictions or major logical gaps. The repetition and organizational issues are limited in scope and do not materially undermine overall coherence.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S3",
+          "S12"
+        ],
+        "description": "Unnecessary repetition of revenue increase and net profit figures."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "description": "Sentence S8 is a fragment that lacks a clear connection to the following sentence, weakening logical flow."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "description": "Sentence S15 contains redundant phrasing ('on the balance sheet') and an incomplete clause at the end, reducing clarity."
+      }
+    ],
+    "justification": "The summary is generally coherent with logical relationships between revenue growth drivers, expense reductions, and profitability improvements. However, there are minor issues: S3 repeats S2 verbatim, S12 repeats S11, S8 is a fragment that disrupts flow, and S15 contains redundant/incomplete phrasing. There are no self-contradictions or major logical gaps. The repetition and organizational issues are limited in scope and do not materially undermine overall coherence."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,172 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:11:16.311639",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_25_chain_of_event_gemini.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "2250a933fd900716",
+    "sentence_map_hash": "269ae7affd8304a0",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "df925e7e4daa63dd",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_25.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "For the financial year ended December 31, 2025, WindowMaster International A/S reported consolidated revenue of DKK 268,588,654, representing an 8 percent decrease compared to DKK 294,481,472 in 2024.",
+    "S2": "Gross profit decreased to DKK 131,055,764 from DKK 137,949,145, although the gross margin improved to 48.8 percent from 46.9 percent due to a favorable business mix with reduced revenue from key accounts and higher direct project revenue.",
+    "S3": "Operating profit, or EBITDA, declined to DKK 27,969,050 compared to DKK 37,305,475 in the previous year, resulting in an EBITDA margin of 10.4 percent versus 12.7 percent for 2024.",
+    "S4": "Profit before tax dropped to DKK 2,907,507 from DKK 12,183,769, and profit after tax fell to DKK 869,196 compared to DKK 10,601,388 in 2024.",
+    "S5": "Basic and diluted earnings per share both stood at DKK 5.90, down from DKK 78.45 in the prior year.",
+    "S6": "Total equity at the end of 2025 was DKK 32,472,860, compared to DKK 36,634,652 at the end of 2024, yielding an equity ratio of 23.5 percent.",
+    "S7": "Net interest-bearing debt closed at DKK 38,700,000, and the financial gearing measured as NIBD to EBITDA was 1.7.",
+    "S8": "The financial performance was influenced by a slow start to the year and lower sales in the Climatic Nordic segment and North America, alongside reduced sales to a major key customer in the Nordic region, whose revenue dropped to DKK 30 million from DKK 43 million.",
+    "S9": "Market activity was characterized by subdued demand in the residential sector due to low consumer confidence, while the non-residential segment experienced accelerated project execution in the second half of the year as interest rates stabilized.",
+    "S10": "Fixed costs remained at elevated levels to support future growth and were negatively impacted by DKK 2.5 million in extraordinary one-off costs incurred from a ransomware attack in May and June 2025, which required IT infrastructure rebuilding and enhanced security measures without any ransom payments.",
+    "S11": "Cash flow from operating activities remained strong at DKK 28,460,663 compared to DKK 29,430,925 in 2024, supported by improvements in net working capital on inventories and work in progress, while cash flows from investing activities totaled DKK -9,374,141, driven by investments in digitalization, software development, and IT network updates."
+  },
+  "usage": {
+    "input_tokens": 1785,
+    "output_tokens_including_reasoning": 460,
+    "total_tokens": 2245
+  },
+  "latency_seconds": 2.2,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S8\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\", \"S10\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S6\", \"S7\"]\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K5\", \"K7\", \"K9\"],\n  \"justification\": \"K1, K2, K3, K4, K6, and K8 are PRESENT with supporting evidence in the candidate summary. K5 (2026 outlook targets) is MISSING - no forward-looking guidance or targets are mentioned. K7 (North America market attractiveness) is MISSING - while North America is referenced in S8, there's no discussion of market attractiveness, tariffs, or competitive positioning. K9 ('Accelerate Core' strategy) is MISSING - no mention of strategic initiatives, production scaling, or product streamlining. The summary captures most HIGH importance items but misses all MEDIUM/strategic elements, resulting in a Generally yes score.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S8"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S10"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S7"
+        ]
+      },
+      {
+        "id": "K9",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K5",
+      "K7",
+      "K9"
+    ],
+    "justification": "K1, K2, K3, K4, K6, and K8 are PRESENT with supporting evidence in the candidate summary. K5 (2026 outlook targets) is MISSING - no forward-looking guidance or targets are mentioned. K7 (North America market attractiveness) is MISSING - while North America is referenced in S8, there's no discussion of market attractiveness, tariffs, or competitive positioning. K9 ('Accelerate Core' strategy) is MISSING - no mention of strategic initiatives, production scaling, or product streamlining. The summary captures most HIGH importance items but misses all MEDIUM/strategic elements, resulting in a Generally yes score."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

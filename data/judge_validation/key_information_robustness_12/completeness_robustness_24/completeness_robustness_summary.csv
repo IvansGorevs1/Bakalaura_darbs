@@ -1,0 +1,14 @@
+﻿section,comparison,n,mean_a,mean_b,exact_agreement_pct,within_1_pct,mae,mean_difference_b_minus_a,note
+condition_mean,nova_k_run1_baseline,24,3.0,,,,,,
+condition_mean,nova_k_run2_by_nova,24,3.125,,,,,,
+condition_mean,nova_k_run3_by_nova,24,3.166667,,,,,,
+condition_mean,grok_k_run1_by_nova,24,3.541667,,,,,,
+condition_mean,grok_k_run1_by_grok,24,3.041667,,,,,,
+pairwise,Nova K1 vs Nova K2 — same evaluator,24,3.0,3.125,54.167,100.0,0.458333,0.125,
+pairwise,Nova K1 vs Nova K3 — same evaluator,24,3.0,3.166667,70.833,95.833,0.333333,0.166667,
+pairwise,Nova K2 vs Nova K3 — same evaluator,24,3.125,3.166667,62.5,100.0,0.375,0.041667,
+pairwise,Nova K1 vs Grok K1 — same Nova evaluator,24,3.0,3.541667,45.833,91.667,0.625,0.541667,
+pairwise,Grok K1: Nova evaluator vs Grok evaluator,24,3.541667,3.041667,41.667,100.0,0.583333,-0.5,
+pairwise,End-to-end: original Nova vs independent Grok,24,3.0,3.041667,66.667,95.833,0.375,0.041667,
+rubric_robustness,Nova evaluator across 3 independently generated Nova rubrics,24,,,45.833,95.833,,,Exact = all three K1/K2/K3 completeness scores identical.
+rubric_robustness,Nova evaluator across all 4 independently generated rubrics (Nova K1/K2/K3 + Grok K1),24,,,16.667,91.667,,,Same evaluator; only independently generated rubric changes.

@@ -1,0 +1,139 @@
+You are an expert evaluator assessing factual faithfulness and numerical accuracy of a financial-report summary.
+
+You are given:
+1. SOURCE FINANCIAL REPORT — the only evidence source.
+2. CANDIDATE SUMMARY split into immutable Python-generated trace sentences [S1], [S2], ...
+
+Evaluate only this candidate. Do not compare it with other summaries.
+
+IMPORTANT:
+- Use only SOURCE as evidence.
+- Do not use external knowledge.
+- Do not evaluate completeness, style or coherence.
+- Do not calculate final scores. Python calculates them from your labels.
+
+TRACEABILITY:
+Do NOT copy or generate candidate quotations.
+Instead, for every claim return candidate_sentence_ids using only the provided IDs.
+
+Example:
+If a claim comes from [S3], return:
+"candidate_sentence_ids": ["S3"]
+
+If it genuinely requires two sentences:
+"candidate_sentence_ids": ["S3", "S4"]
+
+Never invent an ID.
+
+STEP 1 — ATOMIC CLAIMS
+
+Decompose the candidate into independently verifiable claims.
+
+Separate non-numerical factual claims from numerical claims whenever reasonable.
+
+Do not invent claims that are not stated or clearly implied by the candidate.
+
+STEP 2 — NON-NUMERICAL FACTUAL CLAIMS
+
+Labels:
+
+SUPPORTED
+Directly supported by, or unambiguously inferable from, SOURCE.
+
+CONTRADICTED
+SOURCE contains information that contradicts the claim.
+
+NOT_FOUND
+The claim cannot be verified from SOURCE.
+
+Provide concise source_evidence. For NOT_FOUND it may be null.
+
+STEP 3 — NUMERICAL CLAIMS
+
+NUMERICAL SENTENCE COVERAGE:
+- Every candidate sentence that contains one or more explicit numerical propositions should be represented by at least one item in numerical_claims.
+- One sentence may produce one numerical claim or several numerical claims depending on how many independently verifiable propositions it contains.
+- There is NO required fixed number of numerical claims per sentence and no requirement to create one claim per number token.
+- Do not create artificial duplicate claims merely to increase the claim count.
+- A sentence containing only a calendar year, model/product identifier, or other non-quantitative number does not need a numerical claim unless that number is itself part of a factual numerical proposition.
+
+Identify independently verifiable numerical propositions involving:
+- financial values;
+- percentages;
+- ratios;
+- quantities;
+- dates/periods when factual;
+- absolute or relative changes;
+- comparisons.
+
+Verify:
+- value;
+- sign/direction;
+- unit/currency;
+- indicator/object;
+- reporting period;
+- comparison basis.
+
+Labels:
+
+CORRECT
+The complete numerical proposition is consistent with SOURCE.
+
+INCORRECT
+At least one material component is inconsistent with or unsupported by SOURCE.
+
+Equivalent unit conversions and conventional rounding are CORRECT when mathematically valid.
+
+For INCORRECT choose exactly one primary error_type:
+
+INCORRECT_VALUE
+INCORRECT_UNIT_OR_CURRENCY
+INCORRECT_PERIOD
+INCORRECT_DIRECTION_OR_COMPARISON
+UNSUPPORTED_NUMBER
+OTHER
+
+Return only valid JSON.
+
+Use exactly:
+
+{
+  "factual_claims": [
+    {
+      "id": "F1",
+      "candidate_sentence_ids": ["S1"],
+      "claim": "...",
+      "label": "SUPPORTED",
+      "source_evidence": "..."
+    }
+  ],
+  "numerical_claims": [
+    {
+      "id": "N1",
+      "candidate_sentence_ids": ["S2"],
+      "claim": "...",
+      "candidate_value": "...",
+      "label": "CORRECT",
+      "error_type": null,
+      "source_value": "...",
+      "source_evidence": "...",
+      "error_explanation": null
+    }
+  ]
+}
+
+If there are no claims of a given type, return [].
+Use sequential F1... and N1....
+
+
+ADDITIONAL TRACEABILITY CLARIFICATION:
+- Labels such as "Phase 1", "Stage 2", "Version 3", section/page numbers, model identifiers, and similar ordinal or identifier uses are not numerical propositions by themselves.
+- Do not create a numerical_claim solely because such an identifier contains a number.
+
+
+V5.2 COVERAGE NOTE:
+A downstream Python safety check may inspect whether clearly quantitative
+sentences received numerical_claims. Do not satisfy that check by inventing
+claims for identifiers. "Phase 1", "Stage 2", "Sedna-1", "Sedna-2",
+section/page/note numbers and similar labels remain non-numerical unless the
+number itself expresses a quantitative proposition.

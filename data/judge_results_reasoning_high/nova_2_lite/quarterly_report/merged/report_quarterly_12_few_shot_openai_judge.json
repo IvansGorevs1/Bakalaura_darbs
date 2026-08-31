@@ -1,0 +1,963 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_12_few_shot_openai.txt",
+    "report": "report_quarterly_12.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS LHV Group’s Q2 2026 performance improved significantly from the previous quarter but remained weaker than a year earlier.",
+    "S2": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06.",
+    "S3": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09.",
+    "S4": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier.",
+    "S5": "Revenue performance strengthened during the quarter.",
+    "S6": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year.",
+    "S7": "Net interest income was the main contributor, rising 5% quarter on quarter to EUR 62.5 million and 8% from Q2 2025, supported by loan growth and a higher interest-rate environment.",
+    "S8": "Net fee and commission income was broadly unchanged at EUR 14.6 million sequentially but declined 6% year on year, reflecting lower client activity.",
+    "S9": "Other financial income also improved, partly because of the revaluation of the bond portfolio.",
+    "S10": "Operating expenses fell 4% from Q1 to EUR 43.6 million, but were 8% higher year on year.",
+    "S11": "As a result, operating profit increased to EUR 35.4 million from EUR 28.1 million in Q1.",
+    "S12": "Credit-related charges were the main factor limiting profitability.",
+    "S13": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025.",
+    "S14": "Management attributed the charges to forward-looking, model-based provisions for specific clients, while stating that overall loan portfolio quality remained strong.",
+    "S15": "The loan-loss reserve reached EUR 47.4 million at the end of June.",
+    "S16": "Lower income-tax expense of EUR 5.0 million partly offset the higher impairment cost.",
+    "S17": "Business volumes continued to expand despite a reduction in funding.",
+    "S18": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025.",
+    "S19": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased.",
+    "S20": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million.",
+    "S21": "Insurance returned to profit as major losses and loss frequency decreased.",
+    "S22": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%.",
+    "S23": "The quarter also included strategic initiatives, notably the migration of LHV Pank’s core systems to Amazon Web Services, adoption of a product-based management model, and receipt of Estonia’s first MiCA crypto-assets service-provider licence."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_12.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_12.json",
+    "key_information_hash": "3819b6a045877867",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 23,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 23
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 15,
+      "incorrect": 0,
+      "total": 15
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 7,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS LHV Group’s Q2 2026 performance improved significantly from the previous quarter but remained weaker than a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s consolidated net profit in Q2 2026 was EUR 24.7 million, having grown by EUR 5 million compared to Q1 2026 and decreased by EUR 6.1 million compared to Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group’s Q2 2026 performance improved significantly from the previous quarter but remained weaker than a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net profit EUR 24.7 m (EUR 19.7 m), of which EUR 24.1 m (EUR 19.8 m) is attributable to owners of the parent. Earnings per share EUR 0.07 (EUR 0.06).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net profit EUR 24.7 m (EUR 30.8 m), Earnings per share EUR 0.07 (EUR 0.09).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net profit for the reporting period 24,687 (44,375 for 6M 2026) vs 30,765 (59,925 for 6M 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Revenue performance strengthened during the quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total net operating income 79.03 (73.60 in Q1 2026) and 73.90 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Revenue performance strengthened during the quarter."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total net operating income 79.03 (73.60 in Q1 2026) and 73.90 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net interest income was the main contributor, rising 5% quarter on quarter to EUR 62.5 million and 8% from Q2 2025, supported by loan growth and a higher interest-rate environment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net interest income 62.48 (59.28 in Q1 2026) and 57.64 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net interest income was the main contributor, rising 5% quarter on quarter to EUR 62.5 million and 8% from Q2 2025, supported by loan growth and a higher interest-rate environment."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net fee and commission income was broadly unchanged at EUR 14.6 million sequentially but declined 6% year on year, reflecting lower client activity.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net fee and commission income 14.64 (14.70 in Q1 2026) and 15.58 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net fee and commission income was broadly unchanged at EUR 14.6 million sequentially but declined 6% year on year, reflecting lower client activity."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Other financial income also improved, partly because of the revaluation of the bond portfolio.",
+        "label": "SUPPORTED",
+        "source_evidence": "Other financial income 1.17 (0.31 in Q1 2026). Analysis mentions revaluation of bond portfolio.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Other financial income also improved, partly because of the revaluation of the bond portfolio."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Operating expenses fell 4% from Q1 to EUR 43.6 million, but were 8% higher year on year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating expenses 43.59 (45.57 in Q1 2026) and 40.51 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Operating expenses fell 4% from Q1 to EUR 43.6 million, but were 8% higher year on year."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "As a result, operating profit increased to EUR 35.4 million from EUR 28.1 million in Q1.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s Q2 operating profit was EUR 35.4 million (EUR 28.1 million in Q1 2026).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "As a result, operating profit increased to EUR 35.4 million from EUR 28.1 million in Q1."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Credit-related charges were the main factor limiting profitability.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loan and bond provisions increased to EUR 5.8 m (EUR 1.3 m in Q1 2026).",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Credit-related charges were the main factor limiting profitability."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loan and bond provisions EUR 5.8 m (EUR 1.3 m) and EUR -4.2 m in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Management attributed the charges to forward-looking, model-based provisions for specific clients, while stating that overall loan portfolio quality remained strong.",
+        "label": "SUPPORTED",
+        "source_evidence": "We applied model-based, forward-looking impairment charges... loan portfolio quality remains strong.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Management attributed the charges to forward-looking, model-based provisions for specific clients, while stating that overall loan portfolio quality remained strong."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The loan-loss reserve reached EUR 47.4 million at the end of June.",
+        "label": "SUPPORTED",
+        "source_evidence": "A loan discount reserve of 47.4 million euros was formed...",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The loan-loss reserve reached EUR 47.4 million at the end of June."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Lower income-tax expense of EUR 5.0 million partly offset the higher impairment cost.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income tax expenses EUR 5.0 m (EUR 7.1 m in Q1 2026).",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Lower income-tax expense of EUR 5.0 million partly offset the higher impairment cost."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Business volumes continued to expand despite a reduction in funding.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s loan volume grew to EUR 5,768 million by the end of Q2 (EUR 5,585 million in Q1 2026). Deposits decreased by EUR 245 million in a quarter.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Business volumes continued to expand despite a reduction in funding."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loan portfolio 5,767.9 (5,585.2 in Q1 2026) and 4,998.6 in Q2 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased.",
+        "label": "SUPPORTED",
+        "source_evidence": "Deposits of customers 7,557.3 (7,802.7 in Q1 2026). Volume of deposits of clients who are financial intermediaries decreased by EUR 74 million. Ordinary clients increased by EUR 105 million.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased."
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "By business units, AS LHV Pank’s consolidated net profit amounted to EUR 24.3 million... LHV Bank was EUR 1.4 million... LHV Varahaldus EUR 0.4 million... LHV Kindlustus EUR 0.8 million.",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Insurance returned to profit as major losses and loss frequency decreased.",
+        "label": "SUPPORTED",
+        "source_evidence": "Q2 sales results exceeded goals... small number of major losses and decreased loss frequency... profit in Q2 was EUR 789 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Insurance returned to profit as major losses and loss frequency decreased."
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Return on equity 13.1% (10.7% in Q1 2026) and 17.4% in Q2 2025. Capital adequacy 20.8% (target 20.0%).",
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%."
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "candidate_sentence_ids": [
+          "S23"
+        ],
+        "claim": "The quarter also included strategic initiatives, notably the migration of LHV Pank’s core systems to Amazon Web Services, adoption of a product-based management model, and receipt of Estonia’s first MiCA crypto-assets service-provider licence.",
+        "label": "SUPPORTED",
+        "source_evidence": "The most important technological event... transition of the Bank’s core systems to the Amazon Web Services cloud... product-based management model... crypto-assets service provider license under the MiCA Regulation.",
+        "candidate_sentences": [
+          {
+            "id": "S23",
+            "text": "The quarter also included strategic initiatives, notably the migration of LHV Pank’s core systems to Amazon Web Services, adoption of a product-based management model, and receipt of Estonia’s first MiCA crypto-assets service-provider licence."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06.",
+        "candidate_value": "24.7 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24.7 million EUR",
+        "source_evidence": "Net profit EUR 24.7 m (EUR 19.7 m), of which EUR 24.1 m (EUR 19.8 m) is attributable to owners of the parent. Earnings per share EUR 0.07 (EUR 0.06).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09.",
+        "candidate_value": "30.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "30.8 million EUR",
+        "source_evidence": "Net profit EUR 24.7 m (EUR 30.8 m), Earnings per share EUR 0.07 (EUR 0.09).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier.",
+        "candidate_value": "44.4 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "44.4 million EUR",
+        "source_evidence": "Net profit for the reporting period 24,687 (44,375 for 6M 2026) vs 30,765 (59,925 for 6M 2025).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year.",
+        "candidate_value": "79.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "79.0 million EUR",
+        "source_evidence": "Total net operating income 79.03 (73.60 in Q1 2026) and 73.90 in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net interest income was the main contributor, rising 5% quarter on quarter to EUR 62.5 million and 8% from Q2 2025, supported by loan growth and a higher interest-rate environment.",
+        "candidate_value": "62.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "62.5 million EUR",
+        "source_evidence": "Net interest income 62.48 (59.28 in Q1 2026) and 57.64 in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net interest income was the main contributor, rising 5% quarter on quarter to EUR 62.5 million and 8% from Q2 2025, supported by loan growth and a higher interest-rate environment."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net fee and commission income was broadly unchanged at EUR 14.6 million sequentially but declined 6% year on year, reflecting lower client activity.",
+        "candidate_value": "14.6 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14.6 million EUR",
+        "source_evidence": "Net fee and commission income 14.64 (14.70 in Q1 2026) and 15.58 in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net fee and commission income was broadly unchanged at EUR 14.6 million sequentially but declined 6% year on year, reflecting lower client activity."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Operating expenses fell 4% from Q1 to EUR 43.6 million, but were 8% higher year on year.",
+        "candidate_value": "43.6 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "43.6 million EUR",
+        "source_evidence": "Operating expenses 43.59 (45.57 in Q1 2026) and 40.51 in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Operating expenses fell 4% from Q1 to EUR 43.6 million, but were 8% higher year on year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "As a result, operating profit increased to EUR 35.4 million from EUR 28.1 million in Q1.",
+        "candidate_value": "35.4 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "35.4 million EUR",
+        "source_evidence": "The Group’s Q2 operating profit was EUR 35.4 million (EUR 28.1 million in Q1 2026).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "As a result, operating profit increased to EUR 35.4 million from EUR 28.1 million in Q1."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025.",
+        "candidate_value": "5.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.8 million EUR",
+        "source_evidence": "Loan and bond provisions EUR 5.8 m (EUR 1.3 m) and EUR -4.2 m in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The loan-loss reserve reached EUR 47.4 million at the end of June.",
+        "candidate_value": "47.4 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "47.4 million EUR",
+        "source_evidence": "A loan discount reserve of 47.4 million euros was formed...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The loan-loss reserve reached EUR 47.4 million at the end of June."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Lower income-tax expense of EUR 5.0 million partly offset the higher impairment cost.",
+        "candidate_value": "5.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.0 million EUR",
+        "source_evidence": "Income tax expenses EUR 5.0 m (EUR 7.1 m in Q1 2026).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Lower income-tax expense of EUR 5.0 million partly offset the higher impairment cost."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025.",
+        "candidate_value": "5.77 billion EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.77 billion EUR",
+        "source_evidence": "Loan portfolio 5,767.9 (5,585.2 in Q1 2026) and 4,998.6 in Q2 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased.",
+        "candidate_value": "7.56 billion EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7.56 billion EUR",
+        "source_evidence": "Deposits of customers 7,557.3 (7,802.7 in Q1 2026).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million.",
+        "candidate_value": "24.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24.3 million EUR",
+        "source_evidence": "AS LHV Pank’s consolidated net profit amounted to EUR 24.3 million... LHV Bank was EUR 1.4 million... LHV Varahaldus EUR 0.4 million... LHV Kindlustus EUR 0.8 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%.",
+        "candidate_value": "13.1%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13.1%",
+        "source_evidence": "Return on equity 13.1% (10.7% in Q1 2026) and 17.4% in Q2 2025. Capital adequacy 20.8% (target 20.0%).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q2 2026 headline financial performance: net profit EUR 24.7 million (+25% QoQ, -20% YoY), net income EUR 79.0 million (+7% QoQ, +7% YoY), return on equity 13.1% (vs 10.7% QoQ, 17.4% YoY).",
+        "importance": "HIGH",
+        "source_evidence": "Financial Summary section: Net profit, net income, ROE figures and comparisons with Q1 2026 and Q2 2025.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group’s Q2 2026 performance improved significantly from the previous quarter but remained weaker than a year earlier."
+          },
+          {
+            "id": "S2",
+            "text": "Consolidated net profit rose 25% quarter on quarter to EUR 24.7 million, including EUR 24.1 million attributable to the parent’s shareholders, while earnings per share increased to EUR 0.07 from EUR 0.06."
+          },
+          {
+            "id": "S3",
+            "text": "Compared with Q2 2025, however, net profit declined 20% from EUR 30.8 million and earnings per share fell from EUR 0.09."
+          },
+          {
+            "id": "S6",
+            "text": "Net operating income increased 7% from Q1 to EUR 79.0 million and was also 7% higher year on year."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Loan portfolio grew to EUR 5,768 million (+3% QoQ, +15% YoY) while deposits decreased by EUR 245 million QoQ (ordinary client deposits +EUR 105 million, financial intermediaries -EUR 74 million, platform deposits -EUR 276 million).",
+        "importance": "HIGH",
+        "source_evidence": "Financial Summary and Note 12: Loan portfolio growth, deposit breakdown by client type, and quarterly changes.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Group’s loan portfolio grew 3% during the quarter to EUR 5.77 billion and was 15% above Q2 2025."
+          },
+          {
+            "id": "S19",
+            "text": "Customer deposits declined 3% sequentially to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, although ordinary customer deposits increased."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Subsidiary Q2 net profits: LHV Pank EUR 24.3 million, LHV Bank Limited EUR 1.4 million, AS LHV Varahaldus EUR 0.4 million, AS LHV Kindlustus EUR 0.8 million (LHV Paytech reported a net loss of EUR 0.3 million).",
+        "importance": "HIGH",
+        "source_evidence": "Overviews of AS LHV Pank, LHV Bank Limited, AS LHV Varahaldus, and AS LHV Kindlustus sections.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "LHV Pank generated EUR 24.3 million of Q2 profit, while LHV Bank earned EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Strategic operational developments: migration of LHV Pank's core systems to Amazon Web Services cloud environment, receipt of MiCA crypto-asset service provider licence, and planned rebranding to LHV Bank AS to support international growth.",
+        "importance": "HIGH",
+        "source_evidence": "Overview of AS LHV Pank section: details on cloud migration, MiCA licence, and name change plans.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S23"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S23",
+            "text": "The quarter also included strategic initiatives, notably the migration of LHV Pank’s core systems to Amazon Web Services, adoption of a product-based management model, and receipt of Estonia’s first MiCA crypto-assets service-provider licence."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Capital adequacy ratio of 20.8% (vs 22.4% at end-2025) and liquidity coverage ratio of 171.5% (vs 185.0% at end-2025), with core Tier 1 ratio at 15.81% and Tier 1 ratio at 17.49%.",
+        "importance": "HIGH",
+        "source_evidence": "The Group's Liquidity, Capitalisation and Asset Quality section and Note 16.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "The Group’s headline return on equity was 13.1%, below the 17.4% reported a year earlier, while capital adequacy remained above the internal target at 20.8%."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Operating environment impacted by Middle East conflict de-escalation and energy price volatility, with OECD forecasting 2.8% global growth for 2026 contingent on Strait of Hormuz stability.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Environment section: geopolitical tensions, energy prices, and OECD economic outlook.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "First half 2026 consolidated results: net profit EUR 44.4 million (-26% YoY), net income EUR 152.7 million (approximately flat YoY), and loan impairment charges EUR 7.1 million (vs EUR 1.5 million in H1 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Financial Summary tables for 6M 2026: net profit, net income, and impairment charges compared to 6M 2025.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "For the first half of 2026, net profit was EUR 44.4 million, down 26% from EUR 59.9 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Loan and bond portfolio impairment charges increased to EUR 5.8 million in Q2 2026 (from EUR 1.3 million in Q1 2026 and EUR -4.2 million in Q2 2025), driven by model-based forward-looking provisions.",
+        "importance": "HIGH",
+        "source_evidence": "Financial Summary and Note 20: impairment charges for Q2 2026 and comparisons with prior periods.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Loan and bond portfolio losses increased to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million gain in Q2 2025."
+          },
+          {
+            "id": "S14",
+            "text": "Management attributed the charges to forward-looking, model-based provisions for specific clients, while stating that overall loan portfolio quality remained strong."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Managed funds increased to EUR 1,790 million (+4% QoQ, +15% YoY) with LHV Varahaldus reporting strong Q2 performance in index funds, while actively managed pension funds showed mixed results.",
+        "importance": "MEDIUM",
+        "source_evidence": "Overview of AS LHV Varahaldus section: fund volumes, active clients, and performance of pension funds.",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "Performance against financial plan: Q2 net income slightly below plan due to higher expenses, loan portfolio growth according to plan, but deposits remained below plan.",
+        "importance": "HIGH",
+        "source_evidence": "Financial Summary section: Management Board commentary on plan variances.",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K9",
+      "K10"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (Q2 2026 headline financial performance), K2 (loan portfolio and deposits movement), K3 (subsidiary Q2 net profits), K4 (strategic operational developments), K5 (capital adequacy and liquidity ratios), K7 (first half 2026 consolidated results), and K8 (loan and bond portfolio impairment charges). However, it omits the core material meaning of K6 (operating environment context), K9 (managed funds performance), and K10 (performance against financial plan), resulting in important omissions that affect the overall completeness assessment. The score reflects that most material information is represented, but key contextual and comparative elements are missing.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. It presents a consistent narrative about LHV Group's Q2 2026 performance, with logical relationships between financial metrics (profit, revenue, expenses, asset growth) and explanatory factors (interest rates, client activity, provisions). There are no self-contradictions, and the structure progresses logically from consolidated results to segment performance and strategic initiatives. While some comparisons show mixed results (e.g., QoQ improvement vs YoY decline), these are clearly presented without contradiction. The arithmetic differences between segment and consolidated figures are not treated as contradictions because the summary does not claim they are exhaustive additive components of the same total. No unnecessary repetition materially reduces clarity."
+  },
+  "usage": {
+    "input_tokens_total": 45084,
+    "output_tokens_total_including_reasoning": 7261,
+    "total_tokens": 52345,
+    "latency_seconds_total": 35.77
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 83166,
+    "output_tokens_total_including_reasoning": 53085,
+    "total_tokens": 136251,
+    "latency_seconds_total": 155.07
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_12.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_12_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_12.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_12.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_12_few_shot_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_12_few_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_12_few_shot_openai.json"
+    }
+  }
+}

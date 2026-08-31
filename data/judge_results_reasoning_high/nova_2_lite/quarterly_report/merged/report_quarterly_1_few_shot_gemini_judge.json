@@ -1,0 +1,966 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_1_few_shot_gemini.txt",
+    "report": "report_quarterly_1.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the three months ended 31 March 2026, AB KN Energies and its subsidiaries reported significant improvements in overall financial performance compared with the same period of 2025.",
+    "S2": "The group achieved revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year.",
+    "S3": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros, while operating profit increased to 9,608 thousand euros from 7,141 thousand euros.",
+    "S4": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros, resulting in basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year.",
+    "S5": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros.",
+    "S6": "Conversely, revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros.",
+    "S7": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros, influenced by higher taxes on environmental pollution, emission allowances, and increased wages and salaries.",
+    "S8": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros.",
+    "S9": "However, net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros, largely due to lower interest expenses on borrowings.",
+    "S10": "The financial position remained robust, supported by strong operating cash flows.",
+    "S11": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period.",
+    "S12": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025, and short-term deposits stood at 69,520 thousand euros.",
+    "S13": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end, while total equity reached 179,866 thousand euros.",
+    "S14": "In corporate developments subsequent to the reporting period, the term of the previous board expired on 25 April 2026, and a new board was elected on 30 April 2026 for a four-year term, replacing the former two-tier governance structure that included an independent supervisory council and a separate board."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_1.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_1.json",
+    "key_information_hash": "76343cbc8664a831",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 8,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 8
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 29,
+      "incorrect": 0,
+      "total": 29
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AB KN Energies and its subsidiaries reported significant improvements in overall financial performance compared with the same period of 2025",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income show increases in revenue (29,823 vs 25,326), gross profit (12,907 vs 9,793), operating profit (9,608 vs 7,141), and net profit (7,247 vs 4,426) for the three months ended 31 March 2026 compared to 2025",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the three months ended 31 March 2026, AB KN Energies and its subsidiaries reported significant improvements in overall financial performance compared with the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 4 Operating Segments table shows LNGT revenues of 18,687 (2026) vs 14,989 (2025) and comLNG revenues of 3,357 (2026) vs 2,473 (2025)",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 4 Operating Segments table shows LET revenues of 7,779 (2026) vs 7,864 (2025)",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros, influenced by higher taxes on environmental pollution, emission allowances, and increased wages and salaries",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 14 Cost of Sales shows total cost of sales of (16,916) for 2026 vs (15,533) for 2025, with specific line items including Tax on environmental pollution and Emission allowances of (2,225) vs (1,783) and Wages, salaries and social security of (2,852) vs (2,535)",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros, influenced by higher taxes on environmental pollution, emission allowances, and increased wages and salaries."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 15 Distribution costs and administrative expenses show total of (3,316) for 2026 vs (3,002) for 2025",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros, largely due to lower interest expenses on borrowings",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 16 Finance Income and Finance Costs shows Finance cost - net of (784) for 2026 vs (1,777) for 2025, with Interest expenses on borrowings of (1,729) vs (2,160)",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros, largely due to lower interest expenses on borrowings."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The financial position remained robust, supported by strong operating cash flows",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash Flow Statement shows Net cash flows from operating activities of 27,917 for 2026 vs 13,758 for 2025",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The financial position remained robust, supported by strong operating cash flows."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "In corporate developments subsequent to the reporting period, the term of the previous board expired on 25 April 2026, and a new board was elected on 30 April 2026 for a four-year term, replacing the former two-tier governance structure that included an independent supervisory council and a separate board",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 19 Subsequent Events states: 'On 25 April 25, 2026 the term of office of the Board of AB “KN Energies” expired and the new Board was elected on April 30, 2026... The Board is elected for a four-year term... The newly elected Board will replace a previously had two-tier governance structure with an independent Supervisory Council and an independent Board'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In corporate developments subsequent to the reporting period, the term of the previous board expired on 25 April 2026, and a new board was elected on 30 April 2026 for a four-year term, replacing the former two-tier governance structure that included an independent supervisory council and a separate board."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year",
+        "candidate_value": "29,823",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "29,823",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - Revenue from contracts with customers: GROUP 29,823 (2026) vs 25,326 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group achieved revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year",
+        "candidate_value": "25,326",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25,326",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - Revenue from contracts with customers: GROUP 25,326 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group achieved revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros",
+        "candidate_value": "12,907",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12,907",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - GROSS PROFIT: GROUP 12,907 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros, while operating profit increased to 9,608 thousand euros from 7,141 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros",
+        "candidate_value": "9,793",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9,793",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - GROSS PROFIT: GROUP 9,793 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros, while operating profit increased to 9,608 thousand euros from 7,141 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit increased to 9,608 thousand euros from 7,141 thousand euros",
+        "candidate_value": "9,608",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9,608",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - OPERATING PROFIT: GROUP 9,608 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros, while operating profit increased to 9,608 thousand euros from 7,141 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit increased to 9,608 thousand euros from 7,141 thousand euros",
+        "candidate_value": "7,141",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,141",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - OPERATING PROFIT: GROUP 7,141 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross profit rose to 12,907 thousand euros compared with 9,793 thousand euros, while operating profit increased to 9,608 thousand euros from 7,141 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros",
+        "candidate_value": "7,247",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,247",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - PROFIT FOR THE PERIOD: GROUP 7,247 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros, resulting in basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros",
+        "candidate_value": "4,426",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4,426",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income - PROFIT FOR THE PERIOD: GROUP 4,426 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros, resulting in basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year",
+        "candidate_value": "0.02",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.02",
+        "source_evidence": "Note 17 Earnings per share, basic and diluted: GROUP EPS 0.02 (2026) vs 0.01 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros, resulting in basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "LNG terminal segment generated revenues of 18,687 thousand euros compared with 14,989 thousand euros",
+        "candidate_value": "18,687",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "18,687",
+        "source_evidence": "Note 4 Operating Segments - GROUP LNGT Revenues from contracts with customers: 18,687 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "LNG terminal segment generated revenues of 18,687 thousand euros compared with 14,989 thousand euros",
+        "candidate_value": "14,989",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14,989",
+        "source_evidence": "Note 4 Operating Segments - GROUP LNGT Revenues from contracts with customers: 14,989 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Commercial liquefied natural gas activities contributed 3,357 thousand euros compared with 2,473 thousand euros",
+        "candidate_value": "3,357",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,357",
+        "source_evidence": "Note 4 Operating Segments - GROUP comLNG Revenues from contracts with customers: 3,357 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Commercial liquefied natural gas activities contributed 3,357 thousand euros compared with 2,473 thousand euros",
+        "candidate_value": "2,473",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,473",
+        "source_evidence": "Note 4 Operating Segments - GROUP comLNG Revenues from contracts with customers: 2,473 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros",
+        "candidate_value": "7,779",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,779",
+        "source_evidence": "Note 4 Operating Segments - GROUP LET Revenues from contracts with customers: 7,779 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros",
+        "candidate_value": "7,864",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,864",
+        "source_evidence": "Note 4 Operating Segments - GROUP LET Revenues from contracts with customers: 7,864 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros",
+        "candidate_value": "16,916",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16,916",
+        "source_evidence": "Note 14 Cost of Sales - TOTAL GROUP: (16,916) (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros, influenced by higher taxes on environmental pollution, emission allowances, and increased wages and salaries."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros",
+        "candidate_value": "15,533",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15,533",
+        "source_evidence": "Note 14 Cost of Sales - TOTAL GROUP: (15,533) (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Cost of sales increased to 16,916 thousand euros from 15,533 thousand euros, influenced by higher taxes on environmental pollution, emission allowances, and increased wages and salaries."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros",
+        "candidate_value": "3,316",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,316",
+        "source_evidence": "Note 15 Distribution costs and administrative expenses - TOTAL GROUP: (3,316) (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros",
+        "candidate_value": "3,002",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,002",
+        "source_evidence": "Note 15 Distribution costs and administrative expenses - TOTAL GROUP: (3,002) (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Distribution costs and administrative expenses also rose to 3,316 thousand euros from 3,002 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N20",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros",
+        "candidate_value": "784",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "784",
+        "source_evidence": "Note 16 Finance Income and Finance Costs - Finance cost - net: GROUP (784) (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros, largely due to lower interest expenses on borrowings."
+          }
+        ]
+      },
+      {
+        "id": "N21",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros",
+        "candidate_value": "1,777",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,777",
+        "source_evidence": "Note 16 Finance Income and Finance Costs - Finance cost - net: GROUP (1,777) (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, net finance costs improved significantly, decreasing to a net expense of 784 thousand euros from 1,777 thousand euros, largely due to lower interest expenses on borrowings."
+          }
+        ]
+      },
+      {
+        "id": "N22",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period",
+        "candidate_value": "27,917",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "27,917",
+        "source_evidence": "Cash Flow Statement - Net cash flows from operating activities: GROUP 27,917 (2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period."
+          }
+        ]
+      },
+      {
+        "id": "N23",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period",
+        "candidate_value": "13,758",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13,758",
+        "source_evidence": "Cash Flow Statement - Net cash flows from operating activities: GROUP 13,758 (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period."
+          }
+        ]
+      },
+      {
+        "id": "N24",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025",
+        "candidate_value": "17,986",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17,986",
+        "source_evidence": "Note 8 Cash and cash equivalents - GROUP TOTAL: 17,986 (31-03-2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025, and short-term deposits stood at 69,520 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N25",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025",
+        "candidate_value": "12,361",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12,361",
+        "source_evidence": "Note 8 Cash and cash equivalents - GROUP TOTAL: 12,361 (31-12-2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025, and short-term deposits stood at 69,520 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N26",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Short-term deposits stood at 69,520 thousand euros",
+        "candidate_value": "69,520",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "69,520",
+        "source_evidence": "Note 7 Other financial assets - GROUP Short-term deposits: 69,520 (31-03-2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025, and short-term deposits stood at 69,520 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N27",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end",
+        "candidate_value": "302,069",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "302,069",
+        "source_evidence": "Note 9 Borrowings - GROUP and COMPANY TOTAL: 302,069 (31-03-2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end, while total equity reached 179,866 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N28",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end",
+        "candidate_value": "311,194",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "311,194",
+        "source_evidence": "Note 9 Borrowings - GROUP and COMPANY TOTAL: 311,194 (31-12-2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end, while total equity reached 179,866 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N29",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total equity reached 179,866 thousand euros",
+        "candidate_value": "179,866",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "179,866",
+        "source_evidence": "Statement of Changes in Equity - GROUP TOTAL EQUITY: 179,866 (31-03-2026)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end, while total equity reached 179,866 thousand euros."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "The Group reported revenue of EUR 29.8 million for the three months ended 31 March 2026, increasing from EUR 25.3 million in the same period of 2025. The Company reported revenue of EUR 28.7 million, up from EUR 24.3 million. Group net profit rose to EUR 7.2 million from EUR 4.4 million; Company net profit increased to EUR 6.8 million from EUR 4.0 million.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated and Separate Statements of Comprehensive Income (page 4)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group achieved revenue from contracts with customers of 29,823 thousand euros, representing an increase from 25,326 thousand euros reported in the previous year."
+          },
+          {
+            "id": "S4",
+            "text": "Net profit for the period grew to 7,247 thousand euros, up from 4,426 thousand euros, resulting in basic and diluted earnings per share of 0.02 euros compared to 0.01 euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The LNG terminal (LNGT) segment generated revenue of EUR 18.7 million in Q1 2026, a 25% increase compared with EUR 14.9 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Segments analysis, Note 4 (page 8)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "The liquid energy terminals (LET) segment revenue decreased to EUR 7.8 million for the period ended 31 March 2026 from EUR 7.9 million in the comparable period of 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Operating Segments analysis, Note 4 (page 8)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, revenues from liquid energy terminals declined slightly to 7,779 thousand euros from 7,864 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Commercial LNG (comLNG) segment revenue grew to EUR 3.4 million for Q1 2026 from EUR 2.5 million in Q1 2025, supported by activities of subsidiaries in Brazil and Germany.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Segments analysis, Note 4 (page 8) and General Information, Note 1.2 (page 7)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The performance expansion was primarily driven by the liquefied natural gas terminal segment, which generated revenues of 18,687 thousand euros compared with 14,989 thousand euros in the prior period, and commercial liquefied natural gas activities, which contributed 3,357 thousand euros compared with 2,473 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Operating activities generated cash flows of EUR 27.9 million in Q1 2026, more than double the EUR 13.5 million recorded in the prior-year period.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statements of Cash Flow (page 6)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Net cash flows from operating activities reached 27,917 thousand euros for the three months of 2026, marking a substantial increase from 13,758 thousand euros in the comparative period."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Cash and cash equivalents increased to EUR 17.99 million as at 31 March 2026 from EUR 12.36 million as at 31 December 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statements of Cash Flow (page 6) and Statements of Financial Position (page 3)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Cash and cash equivalents increased to 17,986 thousand euros as at 31 March 2026 from 12,361 thousand euros at the end of 2025, and short-term deposits stood at 69,520 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Total borrowings stood at EUR 302.1 million as at 31 March 2026, down slightly from EUR 311.2 million as at 31 December 2025; lease liabilities were EUR 24.6 million.",
+        "importance": "MEDIUM",
+        "source_evidence": "Borrowings and Lease Liabilities note, Note 9 (page 11)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total borrowings decreased to 302,069 thousand euros from 311,194 thousand euros at year-end, while total equity reached 179,866 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Subsequent to the reporting period, on 30 April 2026 the Company elected a new independent Board, replacing the previous two-tier governance structure with a unitary Board governance model.",
+        "importance": "HIGH",
+        "source_evidence": "Subsequent Events note, Note 19 (page 15)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In corporate developments subsequent to the reporting period, the term of the previous board expired on 25 April 2026, and a new board was elected on 30 April 2026 for a four-year term, replacing the former two-tier governance structure that included an independent supervisory council and a separate board."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Group EBITDA increased to EUR 16.2 million for Q1 2026 from EUR 13.6 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Segments analysis, Note 4 (page 8)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All key information units except K9 are adequately represented in the candidate summary. K9 (Group EBITDA) is missing entirely. The summary covers revenue growth for the Group and Company, segment performance (LNGT, LET, comLNG), cash flow generation, changes in cash and borrowings, and corporate governance changes. The absence of EBITDA does not materially alter the overall financial picture presented, as other profitability metrics (net profit, operating profit) are included. Therefore, the summary achieves complete coverage of the core material meaning for all but one criterion, resulting in a 'Yes' overall score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support the overall narrative of improved financial performance. There are no self-contradictions, logical gaps, or organizational issues. The summary progresses from revenue and profit figures to segment performance, cost analysis, financial position, and corporate governance changes in a clear, structured manner. While there is a minor numerical relationship between segment revenues and total revenue (S2 vs S5-S6), the candidate does not claim these are exhaustive additive components of the same total, so this does not constitute a contradiction under the specified evaluation criteria."
+  },
+  "usage": {
+    "input_tokens_total": 20299,
+    "output_tokens_total_including_reasoning": 5856,
+    "total_tokens": 26155,
+    "latency_seconds_total": 28.97
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 34257,
+    "output_tokens_total_including_reasoning": 60950,
+    "total_tokens": 95207,
+    "latency_seconds_total": 185.14
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_1.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_1_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_1.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_1.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_1_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_1_few_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_1_few_shot_gemini.json"
+    }
+  }
+}

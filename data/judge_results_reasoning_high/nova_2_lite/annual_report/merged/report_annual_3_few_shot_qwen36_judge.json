@@ -1,0 +1,615 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_3_few_shot_qwen36.txt",
+    "report": "report_annual_3.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Coop Pank reported a net profit of €28.7 million for 2025, an 11% decline compared to the previous year.",
+    "S2": "The reduction was primarily attributable to a challenging interest rate environment that compressed net interest income to €73.3 million, partially offsetting strong volume expansion.",
+    "S3": "Total net operating income decreased modestly to €79.4 million, while net fee and commission income rose slightly to €4.5 million.",
+    "S4": "Return on equity fell to 12.9% from 16.2% in 2024, and the cost-to-income ratio increased to 52.3%.",
+    "S5": "Despite these profitability pressures, the bank executed its growth strategy vigorously, expanding its loan portfolio by €340 million, or 19%, to €2.11 billion.",
+    "S6": "Corporate lending drove the majority of this growth at 27%, followed by a 17% increase in mortgage financing.",
+    "S7": "Customer deposits also grew steadily by 9% to €2.05 billion, supported by a 11% rise in demand deposits as the bank added 19,000 new clients to reach a total of 227,000.",
+    "S8": "The financial outcome was shaped by macroeconomic tailwinds and deliberate strategic investments.",
+    "S9": "Estonia’s economy recorded 0.7% real GDP growth in 2025 after years of contraction, while ECB policy rate cuts and falling EURIBOR rates gradually restored borrowing confidence across the market.",
+    "S10": "To sustain expansion and optimize funding costs, Coop Pank issued €250 million in four-year covered bonds on the Irish stock exchange, securing its first tranche of international debt under a €750 million program.",
+    "S11": "Simultaneously, the bank concluded a synthetic securitization agreement with the European Investment Bank Group, transferring credit risk on a designated loan portfolio to unlock capital relief and enable up to €249 million in targeted lending for environmental and social projects.",
+    "S12": "Leadership transitions included the appointment of Arko Kurtmann as chairman of the management board, while product innovation expanded through a sector-first monthly cashback loyalty program, fully virtual card offerings, and physical branch network enhancements.",
+    "S13": "Cooperating closely with its domestic cooperative ownership, the bank maintained a strong capital buffer with a total capital adequacy ratio of 18.54% and distributed €7.2 million in dividends aligned with its historical payout policy.",
+    "S14": "Overall, the reporting period characterized a deliberate trade-off between aggressive market penetration and near-term margin compression, positioning the bank to capture improved earnings once interest rates stabilize and funded asset growth matures into recurring income streams."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_3.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_3.json",
+    "key_information_hash": "f5e8439eae22c0f8",
+    "key_information_units_total": 12
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 4,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 4
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 12
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The financial outcome was shaped by macroeconomic tailwinds and deliberate strategic investments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'In 2025, many macroeconomic indicators improved... Coop Pank followed its existing dividend policy... issued covered bonds... entered into a guarantee agreement with the European Investment Bank Group'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The financial outcome was shaped by macroeconomic tailwinds and deliberate strategic investments."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "ECB policy rate cuts and falling EURIBOR rates gradually restored borrowing confidence across the market.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating environment: 'Since June 2024, the ECB has lowered the deposit facility rate eight times from 4.0% to 2.0%. For example, the 6-month Euribor... fell to 2.1% by the end of 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Estonia’s economy recorded 0.7% real GDP growth in 2025 after years of contraction, while ECB policy rate cuts and falling EURIBOR rates gradually restored borrowing confidence across the market."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Leadership transitions included the appointment of Arko Kurtmann as chairman of the management board, while product innovation expanded through a sector-first monthly cashback loyalty program, fully virtual card offerings, and physical branch network enhancements.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Board: 'In the second quarter of 2025, Margus Rink stepped down as Chairman... Arko Kurtmann as the new Chairman... Coop Pank also implemented several product changes... introduced a group account feature... launched a service enabling merchants to accept payments using an Android smart device... elevated its cooperation with Coop retail... became one of the first banks in Estonia to offer customers full access to virtual cards... opened a branch in the center of Valga... larger and more modern branch was opened in Viljandi'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Leadership transitions included the appointment of Arko Kurtmann as chairman of the management board, while product innovation expanded through a sector-first monthly cashback loyalty program, fully virtual card offerings, and physical branch network enhancements."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Overall, the reporting period characterized a deliberate trade-off between aggressive market penetration and near-term margin compression, positioning the bank to capture improved earnings once interest rates stabilize and funded asset growth matures into recurring income streams.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'Coop Pank’s net profit amounted to €28.7 million in 2025, decreasing by 11% year-on-year... While we anticipated net profit decline in 2024 and 2025, our goal is to return to net profit growth in 2026.' Financial results show strong volume growth (loan portfolio +19%, deposits +9%) offset by lower interest income due to rate environment.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Overall, the reporting period characterized a deliberate trade-off between aggressive market penetration and near-term margin compression, positioning the bank to capture improved earnings once interest rates stabilize and funded asset growth matures into recurring income streams."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Coop Pank reported a net profit of €28.7 million for 2025, an 11% decline compared to the previous year.",
+        "candidate_value": "€28.7 million (11% decline)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€28.7 million (2025) vs €32.2 million (2024)",
+        "source_evidence": "Financial results table: 'Net profit 28.7 || ||32.2'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Coop Pank reported a net profit of €28.7 million for 2025, an 11% decline compared to the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net interest income compressed to €73.3 million",
+        "candidate_value": "€73.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€73.3 million",
+        "source_evidence": "Financial results table: 'Net interest income 73.3 || ||77.6'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The reduction was primarily attributable to a challenging interest rate environment that compressed net interest income to €73.3 million, partially offsetting strong volume expansion."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total net operating income decreased to €79.4 million, net fee and commission income rose to €4.5 million",
+        "candidate_value": "€79.4 million (operating), €4.5 million (fees)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€79.4 million (2025 operating) vs €81.9 million (2024); €4.5 million (2025 fees) vs €4.3 million (2024)",
+        "source_evidence": "Financial results table: 'Total net operating income 79.4 || ||81.9'; 'Net fee and commission income 4.5 || ||4.3'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Total net operating income decreased modestly to €79.4 million, while net fee and commission income rose slightly to €4.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Return on equity fell to 12.9% from 16.2% in 2024, cost-to-income ratio increased to 52.3%",
+        "candidate_value": "12.9% (ROE), 52.3% (C/I)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12.9% (2025 ROE) vs 16.2% (2024); 52.3% (2025 C/I) vs 49.6% (2024)",
+        "source_evidence": "Ratios table: 'Return on equity(ROE) % 12.9 || || <br>16.2'; 'Cost to income ratio, % 52.3 || || <br>49.6'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Return on equity fell to 12.9% from 16.2% in 2024, and the cost-to-income ratio increased to 52.3%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Loan portfolio expanded by €340 million, or 19%, to €2.11 billion",
+        "candidate_value": "€340 million (+19%) to €2.11 billion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€340 million (+19%) to €2,114 million",
+        "source_evidence": "Managing Director´s Statement: 'The bank’s loan portfolio grew by €340 million (+19%). For the first time in Coop Pank’s history, our loan portfolio exceeded €2 billion.' Financial results table: 'Net loan portfolio 2,114 || ||1,774'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite these profitability pressures, the bank executed its growth strategy vigorously, expanding its loan portfolio by €340 million, or 19%, to €2.11 billion."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Corporate lending drove growth at 27%, mortgage financing increased by 17%",
+        "candidate_value": "27% (corporate), 17% (mortgage)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Business loan portfolio +27% (€207 million), home loan portfolio +17% (€125 million)",
+        "source_evidence": "Managing Director´s Statement: 'The business loan portfolio grew the fastest, increasing by €207 million (+27%). This was followed by growth in the home loan portfolio by €125 million (+17%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Corporate lending drove the majority of this growth at 27%, followed by a 17% increase in mortgage financing."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Customer deposits grew by 9% to €2.05 billion, with demand deposits up 11%, adding 19,000 new clients to reach 227,000 total",
+        "candidate_value": "9% to €2.05 billion, 11% demand deposit growth, +19,000 clients to 227,000",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Deposits +9% to €2.05 billion, demand deposits +11%, customer growth +19,000 to 227,000",
+        "source_evidence": "Financial results: 'Customer deposits and loans received 2,125 || ||1,886'; 'Term deposits increased by 8% over the year, while demand deposits increased by 11%.' Increase in the number of customers: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Customer deposits also grew steadily by 9% to €2.05 billion, supported by a 11% rise in demand deposits as the bank added 19,000 new clients to reach a total of 227,000."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Estonia’s economy recorded 0.7% real GDP growth in 2025",
+        "candidate_value": "0.7%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.7%",
+        "source_evidence": "Operating environment: 'Estonia’s real GDP growth in 2025 was 0.7%, according to the Bank of Estonia.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Estonia’s economy recorded 0.7% real GDP growth in 2025 after years of contraction, while ECB policy rate cuts and falling EURIBOR rates gradually restored borrowing confidence across the market."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Coop Pank issued €250 million in four-year covered bonds on the Irish stock exchange as the first tranche of a €750 million program",
+        "candidate_value": "€250 million, 4-year, €750 million program",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€250 million, 4-year, €750 million program",
+        "source_evidence": "Managing Director´s Statement: 'In the first quarter of 2025, Coop Pank issued covered bonds on the Irish stock exchange for the first time, amounting to €250 million with a four-year maturity. This was the first tranche of a €750 million covered bond program.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "To sustain expansion and optimize funding costs, Coop Pank issued €250 million in four-year covered bonds on the Irish stock exchange, securing its first tranche of international debt under a €750 million program."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The bank concluded a synthetic securitization agreement enabling up to €249 million in targeted lending",
+        "candidate_value": "€249 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€249 million",
+        "source_evidence": "Managing Director´s Statement: 'At the end of the year, Coop Pank entered into a guarantee agreement with the European Investment Bank Group... enabling the bank to issue up to €249 million in new loans.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Simultaneously, the bank concluded a synthetic securitization agreement with the European Investment Bank Group, transferring credit risk on a designated loan portfolio to unlock capital relief and enable up to €249 million in targeted lending for environmental and social projects."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The bank maintained a total capital adequacy ratio of 18.54% and distributed €7.2 million in dividends",
+        "candidate_value": "18.54% (CAR), €7.2 million (dividends)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "18.54% (CAR), €7.2 million (dividends)",
+        "source_evidence": "Capitalisation and risk positions table: 'Capital adequacy ratio % 18.54%'; Dividend policy: 'Coop Pank paid out €0.07 per share, transferring a total of €7.2 million in dividends to shareholders.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cooperating closely with its domestic cooperative ownership, the bank maintained a strong capital buffer with a total capital adequacy ratio of 18.54% and distributed €7.2 million in dividends aligned with its historical payout policy."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Net profit decreased by 11% to €28.7 million; return on equity (ROE) declined to 12.9%; cost-to-income ratio increased to 52.3%.",
+        "importance": "HIGH",
+        "source_evidence": "Financial results table (page 16) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Coop Pank reported a net profit of €28.7 million for 2025, an 11% decline compared to the previous year."
+          },
+          {
+            "id": "S4",
+            "text": "Return on equity fell to 12.9% from 16.2% in 2024, and the cost-to-income ratio increased to 52.3%."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Loan portfolio grew by 19% to €2.11 billion, driven by a 27% increase in business loans and a 17% increase in home loans.",
+        "importance": "HIGH",
+        "source_evidence": "Managing Director's Statement (page 10) and Financial results table (page 16)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite these profitability pressures, the bank executed its growth strategy vigorously, expanding its loan portfolio by €340 million, or 19%, to €2.11 billion."
+          },
+          {
+            "id": "S6",
+            "text": "Corporate lending drove the majority of this growth at 27%, followed by a 17% increase in mortgage financing."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Customer deposits increased by 9% to €2.05 billion, with demand deposits rising by 11% and term deposits by 8%.",
+        "importance": "HIGH",
+        "source_evidence": "Financial results table (page 16) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Customer deposits also grew steadily by 9% to €2.05 billion, supported by a 11% rise in demand deposits as the bank added 19,000 new clients to reach a total of 227,000."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Total customer base grew by 9% to 227,000 clients (including 19,000 new customers) over the year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Customer deposits also grew steadily by 9% to €2.05 billion, supported by a 11% rise in demand deposits as the bank added 19,000 new clients to reach a total of 227,000."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strategic targets include increasing loan market share to 10% by 2030, doubling net profit to at least €60 million by 2030, achieving ROE of at least 15%, and maintaining a cost-to-income ratio below 45%.",
+        "importance": "HIGH",
+        "source_evidence": "Targets section (page 7) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Secured €250 million in covered bonds and a €249 million European Investment Bank Group guarantee for new loans, while reducing reliance on more expensive term and foreign deposits.",
+        "importance": "HIGH",
+        "source_evidence": "Managing Director's Statement (page 10) and Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "To sustain expansion and optimize funding costs, Coop Pank issued €250 million in four-year covered bonds on the Irish stock exchange, securing its first tranche of international debt under a €750 million program."
+          },
+          {
+            "id": "S11",
+            "text": "Simultaneously, the bank concluded a synthetic securitization agreement with the European Investment Bank Group, transferring credit risk on a designated loan portfolio to unlock capital relief and enable up to €249 million in targeted lending for environmental and social projects."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Common Equity Tier 1 (CET1) ratio stands at 14.15%, Tier 1 capital ratio at 16.11%, and total capital ratio at 18.54%, meeting all regulatory requirements; designated as systemically important with an additional buffer requirement.",
+        "importance": "HIGH",
+        "source_evidence": "Capitalisation and risk positions (page 17)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cooperating closely with its domestic cooperative ownership, the bank maintained a strong capital buffer with a total capital adequacy ratio of 18.54% and distributed €7.2 million in dividends aligned with its historical payout policy."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Implemented LEED Platinum-certified headquarters, paperless operations, IT equipment recycling, and financing of solar/wind parks (81.3 MW); secured European Investment Bank funding for gender equality and climate action projects.",
+        "importance": "MEDIUM",
+        "source_evidence": "Sustainability Report (pages 34-38)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Launched virtual card services, expanded branch network (including Valga and Viljandi), introduced a cashback program, and rolled out new loan products for small businesses and specific professions (e.g., Teacher's Home Loan, Home Defender Home Loan).",
+        "importance": "MEDIUM",
+        "source_evidence": "Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Leadership transitions included the appointment of Arko Kurtmann as chairman of the management board, while product innovation expanded through a sector-first monthly cashback loyalty program, fully virtual card offerings, and physical branch network enhancements."
+          }
+        ]
+      },
+      {
+        "id": "K10",
+        "information": "Distributed €7.2 million in dividends (25% of 2024 pre-tax profit) at €0.07 per share; proposed €6.7 million in dividends (0.065€ per share) from 2025 profit, taxed at 22/78 rate.",
+        "importance": "MEDIUM",
+        "source_evidence": "Dividend policy (page 24) and Proposal for profit allocation (page 134)",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cooperating closely with its domestic cooperative ownership, the bank maintained a strong capital buffer with a total capital adequacy ratio of 18.54% and distributed €7.2 million in dividends aligned with its historical payout policy."
+          }
+        ]
+      },
+      {
+        "id": "K11",
+        "information": "In February 2026, drew a €5 million subordinated loan from the European Energy Efficiency Fund (EEEF), classified as Tier 2 capital, to finance energy efficiency and renewable energy projects.",
+        "importance": "HIGH",
+        "source_evidence": "Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D11"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K12",
+        "information": "On 21 January 2026, Alvar Pihlapuu was appointed as a new Member of the Management Board.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D11"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K8",
+      "K11",
+      "K12"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (profitability metrics), K2 (loan portfolio growth), K3 (deposit growth), K4 (customer base expansion), K6 (funding initiatives), K7 (capital ratios), K9 (product/service launches), and K10 (dividend distribution). However, it omits the strategic targets outlined in K5, sustainability initiatives described in K8, the EEEF loan drawdown in K11, and the management board appointment in K12. These omissions are material for K5, K8, and K11 due to their HIGH importance designation, while K12 is MEDIUM importance. The overall coverage is strong but missing several important elements, justifying a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements logically support each other without contradictions. The narrative flows from profitability impacts (S1-S4) to growth initiatives (S5-S7), contextual factors (S8-S9), financing activities (S10-S11), operational developments (S12), and strategic positioning (S13-S14). Explanations connect causes (interest rate environment) to effects (profit decline), and growth metrics are consistently presented without logical gaps. No material repetitions or organizational issues are present. The summary forms a clear, logical whole describing both challenges and strategic responses."
+  },
+  "usage": {
+    "input_tokens_total": 104601,
+    "output_tokens_total_including_reasoning": 6382,
+    "total_tokens": 110983,
+    "latency_seconds_total": 43.89
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 203003,
+    "output_tokens_total_including_reasoning": 68888,
+    "total_tokens": 271891,
+    "latency_seconds_total": 232.98
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_3.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_3_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_3.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_3.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_3_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_3_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_3_few_shot_qwen36.json"
+    }
+  }
+}

@@ -1,0 +1,929 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:52:24.665404",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_23_few_shot_openai.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "8078c694f9eee2ce",
+    "sentence_map_hash": "1ff99ecfd6eca4cb",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_23.md",
+    "source_hash": "76cc0cd41248afdb",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "TKM Grupp AS reported weaker financial performance in 2025 amid a challenging economic environment.",
+    "S2": "Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.",
+    "S3": "Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.",
+    "S4": "Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.",
+    "S5": "The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.",
+    "S6": "Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.",
+    "S7": "The main pressure came from the car trade segment.",
+    "S8": "Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.",
+    "S9": "The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.",
+    "S10": "More stable markets in Latvia and Lithuania only partially offset the weakness.",
+    "S11": "The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.",
+    "S12": "Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.",
+    "S13": "Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.",
+    "S14": "Cost control partly mitigated the decline in sales.",
+    "S15": "Staff costs increased 3.7%, while other operating expenses rose only 0.2%.",
+    "S16": "Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.",
+    "S17": "Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.",
+    "S18": "Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.",
+    "S19": "Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.",
+    "S20": "Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.",
+    "S21": "Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.",
+    "S22": "The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.",
+    "S23": "In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.",
+    "S24": "PwC issued an unqualified audit opinion on the consolidated financial statements."
+  },
+  "usage": {
+    "input_tokens": 129245,
+    "output_tokens_including_reasoning": 14014,
+    "total_tokens": 143259
+  },
+  "latency_seconds": 136.37,
+  "logical_requests": 3,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 1,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": true,
+      "context": "dedicated numerical-only recovery",
+      "original_parse_error": "JSONDecodeError: Expecting ',' delimiter: line 222 column 6 (char 20076)",
+      "repaired_model_output_text": "```json\n{\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.\",\n      \"candidate_value\": \"Revenue decline: 2.6%, Revenue 2025: €919.6 million, Revenue 2024: €944.6 million, Profit before tax decline: 31.4%, Profit before tax 2025: €24.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Revenue 2025: €919.6 million (2.6% decrease from €944.6 million in 2024); Profit before tax 2025: €24.3 million (31.4% decrease from 2024)\",\n      \"source_evidence\": \"Management Report: 'The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024... The Group’s profit before tax for 2025 was 24.3 million euros, declining by 31.4% year on year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.\",\n      \"candidate_value\": \"Net profit decline: 36.1%, Net profit 2025: €17.5 million, EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Net profit 2025: €17.5 million (36.1% decrease from €27.5 million in 2024); EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"source_evidence\": \"Management Report: 'Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year... 43 Cents Net profit per share (2024: 67 cents)'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.\",\n      \"candidate_value\": \"Operating profit 2024: €47.6 million, Operating profit 2025: €34.9 million, EBITDA decline: 14.7%, EBITDA 2025: €77.4 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Operating profit 2025: €35 million (approx. €34.9 million); EBITDA 2025: €77.4 million (14.7% decrease from €90.7 million in 2024)\",\n      \"source_evidence\": \"Financial Ratios Table: Operating profit 2025: 35 million EUR, 2024: 48 million EUR; EBITDA 2025: 77 million EUR, 2024: 91 million EUR. Management Report: 'Operating profit amounted to 35 million euros... EBITDA amounted to 77.4 million euros, representing a decrease of 14.7% compared to 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.\",\n      \"candidate_value\": \"EBITDA margin 2025: 8.4%, EBITDA margin 2024: 9.6%, Net margin 2025: 2%, Net margin 2024: 3%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EBITDA margin 2025: 8.4% (77.4/919.6), 2024: 9.6% (90.7/944.6); Net margin 2025: 2% (17.5/919.6), 2024: 3% (27.5/944.6)\",\n      \"source_evidence\": \"Financial Ratios Table: EBITDA margin and Net margin for 2024 and 2025. Management Report: 'EBITDA margin decreased to 8.4% from 9.6%... net margin fell to 2% from 3%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.\",\n      \"candidate_value\": \"Gross profit 2025: €254.6 million, Gross margin 2025: 27.7%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Gross profit 2025: €254.6 million (27.7% margin), compared to €259.8 million (27.5% margin) in 2024\",\n      \"source_evidence\": \"Financial Ratios Table: Gross profit and Gross margin for 2024 and 2025. Management Report: 'Gross profit declined to 254.6 million euros, although the gross margin improved slightly to 27.7%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.\",\n      \"candidate_value\": \"Car trade revenue decline: 11.9%, Car trade revenue 2025: €176.9 million, Car trade EBITDA decline: 40.3%, Car trade EBITDA 2025: €8.1 million, Car trade net profit decline: 54.4%, Car trade net profit 2025: €4.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Car trade revenue 2025: €176.9 million (11.9% decrease from €200.8 million in 2024); Car trade EBITDA 2025: €8.1 million (40.3% decrease from €13.6 million in 2024); Car trade net profit 2025: €4.3 million (54.4% decrease from €9.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Car trade revenue, EBITDA and net profit for 2024 and 2025. Management Report: 'Despite the difficult market situation, the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year... EBITDA declined 40.3% to €8.1 million... net profit dropped 54.4% to €4.3 million.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.\",\n      \"candidate_value\": \"New passenger car sales decline in Estonia: 48.6%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"New passenger car sales in Estonia declined by 48.6% in 2025 compared to 2024\",\n      \"source_evidence\": \"Management Report: 'According to AMTEL data, 13,055 new passenger cars were sold in Estonia in 2025, which was 48.6% below the level of 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.\",\n      \"candidate_value\": \"Supermarket revenue 2025: €611.9 million (+0.3% from 2024), Supermarket net profit decline: 38.6%, Supermarket net profit 2025: €9.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Supermarket revenue 2025: €611.9 million (0.3% increase from €610.4 million in 2024); Supermarket net profit 2025: €9.5 million (38.6% decrease from €15.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Supermarket revenue and net profit for 2024 and 2025. Management Report: 'The consolidated revenue of the supermarket business segment in 2025 was 611.9 million euros, increasing by 0.3% year on year... Net profit for 2025 totalled 9.5 million euros, declining by 38.6% compared to the previous year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.\",\n      \"candidate_value\": \"Department stores net loss: €0.5 million, Security services net loss: €0.04 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Department stores net loss: €0.5 million; Security services net loss: €0.04 million\",\n      \"source_evidence\": \"Segment Reporting Table: Department stores net profit/(loss) 2025: -0.5 million EUR; Security segment net profit/(loss) 2025: 0.0 million EUR (with loss before tax of €0.04 million as stated in Management Report). Management Report: 'Only the department stores segment recorded a small loss... The security segment’s... recorded a loss before tax of 0.04 million euros in 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.\",\n      \"candidate_value\": \"Real estate revenue increase: 5.1%, Real estate revenue 2025: €7.7 million, Real estate net profit increase: 20.5%, Real estate net profit 2025: €6.3 million, One-off gains in 2024: €4.0 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Real estate revenue 2025: €7.7 million (5.1% increase from €7.3 million in 2024); Real estate net profit 2025: €6.3 million (20.5% increase from €5.2 million in 2024); One-off gains in 2024: €4.0 million (comprising €2.1 million from revaluation and €1.9 million from disposals)\",\n      \"source_evidence\": \"Segment Reporting Table: Real estate revenue and net profit for 2024 and 2025. Management Report: 'Real estate revenue increased 5.1% to €7.7 million... net profit rose 20.5% to €6.3 million... The comparative base year included one-off profit of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Staff costs increased 3.7%, while other operating expenses rose only 0.2%.\",\n      \"candidate_value\": \"Staff cost increase: 3.7%, Other operating expense increase: 0.2%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Staff costs increased by 3.7% (from €112.2 million in 2024 to €116.4 million in 2025); Other operating expenses increased by 0.2% (from €61.5 million in 2024 to €61.7 million in 2025)\",\n      \"source_evidence\": \"Note 21 and Note 22: Staff costs and other operating expenses for 2024 and 2025. Management Report: 'Labour costs increased by 3.7% for the year as a whole... The Group has also kept other operating expenses stable, with annual growth of 0.2%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.\",\n      \"candidate_value\": \"Finance cost reduction: €1.5 million, Income tax expense reduction: €1.2 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Finance costs decreased by €1.5 million (from €12.9 million in 2024 to €11.3 million in 2025); Income tax expense decreased by €1.2 million (from €8.0 million in 2024 to €6.8 million in 2025)\",\n      \"source_evidence\": \"Note 23: Finance costs and income tax expense for 2024 and 2025. Management Report: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year... The company’s income tax expense decreased by 1.2 million euros in 2025... due to the recalculation of deferred income tax.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.\",\n      \"candidate_value\": \"Operating cash flow 2025: €65.6 million, Operating cash flow 2024: €73.1 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash flows from operating activities 2025: €65.6 million, 2024: €73.1 million\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Cash flows from operating activities for 2024 and 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.\",\n      \"candidate_value\": \"Total investments 2025: €25.5 million, Total investments 2024: €36.6 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Total investments 2025: €25.5 million, 2024: €36.6 million\",\n      \"source_evidence\": \"Management Report: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024)... Of this amount, 23.5 million euros were invested in tangible fixed assets... investments of 4.1 million euros were made in 2025 [supermarkets], 1.5 million euros [department stores], 2.6 million euros [car segment], 0.4 million euros [security segment], and 14.8 million euros [real estate segment].'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.\",\n      \"candidate_value\": \"Cash decline: €15.9 million, Cash at year-end 2025: €29.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash and cash equivalents decreased by €15.9 million (from €45.5 million at end of 2024 to €29.5 million at end of 2025)\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Net change in cash and cash equivalents and cash and cash equivalents at end of period for 2024 and 2025. Management Report: 'A total of 1,540,805 shares were traded during the year, with a total transaction value of 14,664,134.18 euros... At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group paid €26.5 million in dividends... Financing outflows... resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.\",\n      \"candidate_value\": \"Net debt 2025: €291.0 million, Net debt 2024: €278.9 million, Equity 2025: €263.8 million, Property revaluation: €11.2 million\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"Net debt is negative (cash exceeds debt): Net debt 2025: -€290.96 million, Net debt 2024: -€278.94 million; Equity 2025: €263.75 million; Property revaluation reserve increase: €11.17 million\",\n      \"source_evidence\": \"Consolidated Statement of Changes in Equity and Net Debt Reconciliation: Net debt is calculated as total borrowings minus cash and cash equivalents, resulting in negative values. Equity increased to €263.75 million in 2025 from €261.53 million in 2024, with €11.17 million of this increase coming from property revaluation reserve. Management Report: 'At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group’s liquidity ratio... stood at 0.31 in 2025... Coverage of short-term liabilities has temporarily decreased due to the increase in current liabilities... In management’s assessment, there are no obstacles to extending the short-term loan agreements.'\",\n      \"error_explanation\": \"The candidate incorrectly states that net debt increased to a positive €291.0 million. The source shows net debt is negative (cash exceeds debt) at -€290.96 million in 2025 (compared to -€278.94 million in 2024). The increase in the absolute value of negative net debt does not equate to an increase in positive net debt. Equity did rise to €263.75 million, supported by the €11.17 million property revaluation, but the net debt figure is fundamentally wrong.\"\n    },\n    {\n      \"id\": \"N17\",\n      \"candidate_sentence_ids\": [\"S21\"],\n      \"claim\": \"Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.\",\n      \"candidate_value\": \"Current liabilities increase due to €32.1 million reclassification of loans maturing in 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Current liabilities increased by €13.06 million due to reclassification of €32.13 million of long-term loans maturing in 2026 to current liabilities\",\n      \"source_evidence\": \"Note 15 and Note 17: Current liabilities increased from €155.43 million in 2024 to €168.49 million in 2025. Management Report: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end... The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N18\",\n      \"candidate_sentence_ids\": [\"S22\"],\n      \"claim\": \"The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.\",\n      \"candidate_value\": \"Dividends paid 2025: €26.5 million (€0.65 per share), Proposed dividend 2025: €24.4 million (€0.60 per share)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Dividends paid in 2025: €26.473 million (€0.65 per share); Proposed dividend for 2025: €24.438 million (€0.60 per share)\",\n      \"source_evidence\": \"Note 19: Dividends paid in 2025 were €26,473 thousand (€0.65 per share). The Chairman of the Management Board proposed a dividend of €24,438 thousand (€0.60 per share) for approval at the General Meeting. Management Report: 'The general meeting of shareholders was held on 17 March 2025, and the amount of the dividend payment of 0.65 euros per share from the net profit was approved... The Chairman of the Management Board of TKM Grupp AS proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N19\",\n      \"candidate_sentence_ids\": [\"S23\"],\n      \"claim\": \"In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.\",\n      \"candidate_value\": \"Acquisition agreement date: January 2026, Target companies: three Škoda retail and servicing companies, Completion period: February to June 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Acquisition agreement signed on 7 January 2026 for three companies (Rohe Auto AS, SKO Motors OÜ, and a real estate holding company); Completion expected between February and June 2026 subject to conditions\",\n      \"source_evidence\": \"Note 31: 'On 7 January 2026, TKM Auto OÜ... entered into a share and quota purchase agreement... Completion of the transaction is subject to several conditions precedent... In the management’s assessment, the transfer of control will take place on the date of completion of the transaction, which is expected to fall between 20 February 2026 and 30 June 2026.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N20\",\n      \"candidate_sentence_ids\": [\"S24\"],\n      \"claim\": \"PwC issued an unqualified audit opinion on the consolidated financial statements.\",\n      \"candidate_value\": \"Unqualified audit opinion by PwC\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Independent Auditor's Report: 'In our opinion, the consolidated financial statements present fairly... in accordance with International Financial Reporting Standards as adopted by the European Union.' The report is unqualified.\",\n      \"source_evidence\": \"Independent Auditor's Report: States an unqualified opinion on the consolidated financial statements as of 31 December 2025.\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```"
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "numerical_only_full_pass",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"TKM Grupp AS reported weaker financial performance in 2025 amid a challenging economic environment.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Management Report and Financial Performance sections describe 2025 as a 'challenging economic environment' with declining revenue and profit.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Ratios table and Financial Performance section state revenue was €919.6 million (2025) vs €944.6 million (2024), a 2.6% decrease. Profit before tax was €24.3 million (2025) vs €35.5 million (2024), a 31.4% decrease.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Ratios table shows net profit of €17.5 million (2025) vs €27.5 million (2024), a 36.1% decrease. Basic earnings per share were €0.43 (2025) vs €0.67 (2024).\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Ratios table reports operating profit of €35 million (2025) vs €48 million (2024). EBITDA was €77.4 million (2025) vs €91 million (2024), a 14.7% decrease.\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Ratios table shows EBITDA margin of 8.4% (2025) vs 9.6% (2024) and net margin of 2% (2025) vs 3% (2024).\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Ratios table reports gross profit of €254.6 million (2025) vs €259.8 million (2024). Gross margin was 27.7% (2025) vs 27.5% (2024).\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"The main pressure came from the car trade segment.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Management Report states: 'The motor vehicle tax introduced in Estonia during the reporting year... led to a significant contraction in new passenger car sales... The Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year.'\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Business Segments table shows Car Trade revenue of €176.9 million (2025) vs €200.8 million (2024), an 11.9% decrease. EBITDA was €8.1 million (2025) vs €13.6 million (2024), a 40.3% decrease. Net profit was €4.3 million (2025) vs €9.5 million (2024), a 54.4% decrease.\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Economic Environment section states: 'The motor vehicle tax introduced in Estonia during the reporting year... led to a significant contraction in new passenger car sales, with total car sales in Estonia declining by 48.6% for the year... Consumers postponed larger purchases in anticipation of improved economic conditions and greater confidence.'\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"More stable markets in Latvia and Lithuania only partially offset the weakness.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Car Segment section notes: 'Weakness in the Estonian market was partially offset by more stable sales results of the subsidiaries in Latvia and Lithuania.'\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Supermarkets section states revenue was €611.9 million (2025) vs €610.4 million (2024), a 0.3% increase. Net profit was €9.5 million (2025) vs €15.5 million (2024), a 38.6% decrease, attributed to 'lower sales volumes, promotional pricing, wage pressure and refurbishment costs.'\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Business Segments table shows Department stores net profit/-loss of -€0.5 million (2025). The Security Services section states: 'The security segment’s... segment recorded a loss before tax of 0.04 million euros in 2025.'\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Real Estate section states revenue was €7.7 million (2025) vs €7.3 million (2024), a 5.1% increase. Net profit was €6.3 million (2025) vs €5.2 million (2024), a 20.5% increase. The prior year included 'one-off gains of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Cost control partly mitigated the decline in sales.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Performance section states: 'Through effective cost control, accurate inventory planning and the dedication of its employees, the Group was able to ensure a stable result even in volatile conditions.'\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Staff costs increased 3.7%, while other operating expenses rose only 0.2%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Performance section states: 'Labour costs increased by 3.7% for the year as a whole. The Group has also kept other operating expenses stable, with annual growth of 0.2%.'\"\n    },\n    {\n      \"id\": \"F16\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Financial Performance section states: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year. The company’s income tax expense decreased by 1.2 million euros in 2025 due to the recalculation of deferred income tax...'\"\n    },\n    {\n      \"id\": \"F17\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Consolidated Cash Flow Statement shows cash flows from operating activities of €65,613 thousand (2025) vs €73,064 thousand (2024).\"\n    },\n    {\n      \"id\": \"F18\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Investments section states: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024). Of this amount, 23.5 million euros were invested in tangible fixed assets... In the real estate business segment, investments amounted to 14.8 million euros... In the car segment... investments totalled 2.6 million euros... In the supermarkets business segment, investments of 4.1 million euros were made... In the department stores business segment, investments amounted to 1.5 million euros... The Group continued to develop its information systems...'\"\n    },\n    {\n      \"id\": \"F19\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Consolidated Cash Flow Statement shows cash and cash equivalents decreased by €15,938 thousand (2025). The statement also shows cash and cash equivalents at year-end of €29,516 thousand.\"\n    },\n    {\n      \"id\": \"F20\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Net Debt Reconciliation in Note 15 and the Statement of Changes in Equity show net debt of €290,962 thousand (2025) vs €278,940 thousand (2024). Equity increased to €263,753 thousand (2025) vs €261,528 thousand (2024). The revaluation reserve increased by €11,172 thousand due to property revaluations.\"\n    },\n    {\n      \"id\": \"F21\",\n      \"candidate_sentence_ids\": [\"S21\"],\n      \"claim\": \"Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 15 states: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end. The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'\"\n    },\n    {\n      \"id\": \"F22\",\n      \"candidate_sentence_ids\": [\"S22\"],\n      \"claim\": \"The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 19 states: 'In 2025, dividends were paid to the shareholders in the amount of 26,473 thousand euros, or 0.65 euros per share... The Chairman of the Management Board... proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'\"\n    },\n    {\n      \"id\": \"F23\",\n      \"candidate_sentence_ids\": [\"S23\"],\n      \"claim\": \"In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Event after the Reporting Period section states: 'Group’s subsidiary TKM Auto OÜ will, subject to the fulfilment of the conditions precedent to final completion of the transaction, acquire a 100% interest in three companies engaged in the retail sale and servicing of vehicles... The transaction is in line with the Group’s long-term strategy... and the transfer of control will take place once these requirements have been met. In the management’s assessment, the transaction will contribute to the Group’s long-term development... In the management’s assessment, the transaction will contribute to the Group’s long-term development and strengthen the Group’s position in one of its core strategic business areas.' The agreement was signed in January 2026, with completion expected between February and June 2026.\"\n    },\n    {\n      \"id\": \"F24\",\n      \"candidate_sentence_ids\": [\"S24\"],\n      \"claim\": \"PwC issued an unqualified audit opinion on the consolidated financial statements.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The Independent Auditor’s Report states: 'In our opinion, the consolidated financial statements present fairly, in all material respects, the consolidated financial position of TKM Grupp AS... as at 31 December 2025... Our opinion is consistent with our additional report to the Audit Committee dated 18 February 2026.'\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue declined 2.6% to €919.6 million from €944.6 million\",\n      \"candidate_value\": \"€919.6 million (2025) vs €944.6 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€919.6 million (2025) vs €944.6 million (2024)\",\n      \"source_evidence\": \"Financial Ratios table and Financial Performance section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Profit before tax fell 31.4% to €24.3 million\",\n      \"candidate_value\": \"€24.3 million (2025) vs €35.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€24.3 million (2025) vs €35.5 million (2024)\",\n      \"source_evidence\": \"Financial Ratios table and Financial Performance section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Net profit decreased 36.1% to €17.5 million from €27.5 million\",\n      \"candidate_value\": \"€17.5 million (2025) vs €27.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€17.5 million (2025) vs €27.5 million (2024)\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit declined from €47.6 million to €34.9 million\",\n      \"candidate_value\": \"€34.9 million (2025) vs €47.6 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€35 million (2025) vs €48 million (2024)\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": \"Minor rounding difference (34.9 vs 35.0) is acceptable\"\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"EBITDA fell 14.7% to €77.4 million\",\n      \"candidate_value\": \"€77.4 million (2025) vs €90.7 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€77.4 million (2025) vs €90.7 million (2024)\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"EBITDA margin decreased to 8.4% from 9.6%\",\n      \"candidate_value\": \"8.4% (2025) vs 9.6% (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"8.4% (2025) vs 9.6% (2024)\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Net margin fell to 2% from 3%\",\n      \"candidate_value\": \"2% (2025) vs 3% (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"2% (2025) vs 3% (2024)\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Gross profit declined to €254.6 million with gross margin of 27.7%\",\n      \"candidate_value\": \"€254.6 million (2025) vs €259.8 million (2024), 27.7% margin\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€254.6 million (2025) vs €259.8 million (2024), 27.7% margin\",\n      \"source_evidence\": \"Financial Ratios table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Car trade revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, net profit dropped 54.4% to €4.3 million\",\n      \"candidate_value\": \"€176.9 million (2025) vs €200.8 million (2024), €8.1 million EBITDA (2025) vs €13.6 million (2024), €4.3 million net profit (2025) vs €9.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€176.9 million (2025) vs €200.8 million (2024), €8.1 million EBITDA (2025) vs €13.6 million (2024), €4.3 million net profit (2025) vs €9.5 million (2024)\",\n      \"source_evidence\": \"Business Segments table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"New passenger car sales in Estonia declined by 48.6%\",\n      \"candidate_value\": \"48.6% decline\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"48.6% decline\",\n      \"source_evidence\": \"Economic Environment section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Supermarket segment revenue of €611.9 million (0.3% increase), net profit of €9.5 million (38.6% decrease)\",\n      \"candidate_value\": \"€611.9 million (2025) vs €610.4 million (2024), €9.5 million net profit (2025) vs €15.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€611.9 million (2025) vs €610.4 million (2024), €9.5 million net profit (2025) vs €15.5 million (2024)\",\n      \"source_evidence\": \"Business Segments table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Security services loss of €0.04 million\",\n      \"candidate_value\": \"€0.04 million loss\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€0.04 million loss\",\n      \"source_evidence\": \"Security Services section and Business Segments table\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Real estate revenue increased 5.1% to €7.7 million, net profit rose 20.5% to €6.3 million\",\n      \"candidate_value\": \"€7.7 million (2025) vs €7.3 million (2024), €6.3 million net profit (2025) vs €5.2 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€7.7 million (2025) vs €7.3 million (2024), €6.3 million net profit (2025) vs €5.2 million (2024)\",\n      \"source_evidence\": \"Business Segments table and Real Estate section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Staff costs increased 3.7%, other operating expenses rose 0.2%\",\n      \"candidate_value\": \"3.7% staff cost increase, 0.2% other operating expense increase\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"3.7% staff cost increase, 0.2% other operating expense increase\",\n      \"source_evidence\": \"Financial Performance section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Finance costs reduced by €1.5 million, income tax expense fell by €1.2 million\",\n      \"candidate_value\": \"€1.5 million finance cost reduction, €1.2 million income tax reduction\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€1.5 million finance cost reduction, €1.2 million income tax reduction\",\n      \"source_evidence\": \"Financial Performance section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Operating cash flow of €65.6 million vs €73.1 million\",\n      \"candidate_value\": \"€65.6 million (2025) vs €73.1 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€65,613 thousand (2025) vs €73,064 thousand (2024)\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N17\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Total investments decreased to €25.5 million from €36.6 million\",\n      \"candidate_value\": \"€25.5 million (2025) vs €36.6 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€25.5 million (2025) vs €36.6 million (2024)\",\n      \"source_evidence\": \"Investments section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N18\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"Cash decline of €15.9 million to €29.5 million\",\n      \"candidate_value\": \"€29.5 million (2025) vs €45.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€29,516 thousand (2025) vs €45,454 thousand (2024)\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement and Cash and Cash Equivalents note\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N19\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Net debt increased to €291.0 million from €278.9 million, equity rose to €263.8 million from €261.5 million\",\n      \"candidate_value\": \"€291.0 million net debt (2025) vs €278.9 million (2024), €263.8 million equity (2025) vs €261.5 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€290,962 thousand net debt (2025) vs €278,940 thousand (2024), €263,753 thousand equity (2025) vs €261,528 thousand (2024)\",\n      \"source_evidence\": \"Net Debt Reconciliation and Statement of Changes in Equity\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N20\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Property revaluation added €11.2 million to equity\",\n      \"candidate_value\": \"€11.2 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€11,172 thousand\",\n      \"source_evidence\": \"Statement of Changes in Equity and Property, Plant and Equipment note\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N21\",\n      \"candidate_sentence_ids\": [\"S21\"],\n      \"claim\": \"€32.1 million of loans maturing in 2026 reclassified as current\",\n      \"candidate_value\": \"€32.1 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€32,129 thousand\",\n      \"source_evidence\": \"Note 15\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N22\",\n      \"candidate_sentence_ids\": [\"S22\"],\n      \"claim\": \"Dividends of €26.5 million (€0.65/share) paid, proposed dividend of €24.4 million (€0.60/share)\",\n      \"candidate_value\": \"€26.5 million paid (2025), €24.4 million proposed\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€26,473 thousand paid (2025), €24,438 thousand proposed\",\n      \"source_evidence\": \"Note 19\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N23\",\n      \"candidate_sentence_ids\": [\"S23\"],\n      \"claim\": \"Acquisition agreement signed for three Škoda companies in January 2026\",\n      \"candidate_value\": \"January 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"January 2026\",\n      \"source_evidence\": \"Event after the Reporting Period section\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N24\",\n      \"candidate_sentence_ids\": [\"S24\"],\n      \"claim\": \"Unqualified audit opinion issued by PwC\",\n      \"candidate_value\": \"Unqualified opinion\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Unqualified opinion\",\n      \"source_evidence\": \"Independent Auditor's Report\",\n      \"error_explanation\": null\n    }\n  ],\n  \"numerical_claims\": []\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "TKM Grupp AS reported weaker financial performance in 2025 amid a challenging economic environment.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Management Report and Financial Performance sections describe 2025 as a 'challenging economic environment' with declining revenue and profit."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Ratios table and Financial Performance section state revenue was €919.6 million (2025) vs €944.6 million (2024), a 2.6% decrease. Profit before tax was €24.3 million (2025) vs €35.5 million (2024), a 31.4% decrease."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Ratios table shows net profit of €17.5 million (2025) vs €27.5 million (2024), a 36.1% decrease. Basic earnings per share were €0.43 (2025) vs €0.67 (2024)."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Ratios table reports operating profit of €35 million (2025) vs €48 million (2024). EBITDA was €77.4 million (2025) vs €91 million (2024), a 14.7% decrease."
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Ratios table shows EBITDA margin of 8.4% (2025) vs 9.6% (2024) and net margin of 2% (2025) vs 3% (2024)."
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Ratios table reports gross profit of €254.6 million (2025) vs €259.8 million (2024). Gross margin was 27.7% (2025) vs 27.5% (2024)."
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The main pressure came from the car trade segment.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Management Report states: 'The motor vehicle tax introduced in Estonia during the reporting year... led to a significant contraction in new passenger car sales... The Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year.'"
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Business Segments table shows Car Trade revenue of €176.9 million (2025) vs €200.8 million (2024), an 11.9% decrease. EBITDA was €8.1 million (2025) vs €13.6 million (2024), a 40.3% decrease. Net profit was €4.3 million (2025) vs €9.5 million (2024), a 54.4% decrease."
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Economic Environment section states: 'The motor vehicle tax introduced in Estonia during the reporting year... led to a significant contraction in new passenger car sales, with total car sales in Estonia declining by 48.6% for the year... Consumers postponed larger purchases in anticipation of improved economic conditions and greater confidence.'"
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "More stable markets in Latvia and Lithuania only partially offset the weakness.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Car Segment section notes: 'Weakness in the Estonian market was partially offset by more stable sales results of the subsidiaries in Latvia and Lithuania.'"
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Supermarkets section states revenue was €611.9 million (2025) vs €610.4 million (2024), a 0.3% increase. Net profit was €9.5 million (2025) vs €15.5 million (2024), a 38.6% decrease, attributed to 'lower sales volumes, promotional pricing, wage pressure and refurbishment costs.'"
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Business Segments table shows Department stores net profit/-loss of -€0.5 million (2025). The Security Services section states: 'The security segment’s... segment recorded a loss before tax of 0.04 million euros in 2025.'"
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Real Estate section states revenue was €7.7 million (2025) vs €7.3 million (2024), a 5.1% increase. Net profit was €6.3 million (2025) vs €5.2 million (2024), a 20.5% increase. The prior year included 'one-off gains of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'"
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Cost control partly mitigated the decline in sales.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Performance section states: 'Through effective cost control, accurate inventory planning and the dedication of its employees, the Group was able to ensure a stable result even in volatile conditions.'"
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Staff costs increased 3.7%, while other operating expenses rose only 0.2%.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Performance section states: 'Labour costs increased by 3.7% for the year as a whole. The Group has also kept other operating expenses stable, with annual growth of 0.2%.'"
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Financial Performance section states: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year. The company’s income tax expense decreased by 1.2 million euros in 2025 due to the recalculation of deferred income tax...'"
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Consolidated Cash Flow Statement shows cash flows from operating activities of €65,613 thousand (2025) vs €73,064 thousand (2024)."
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Investments section states: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024). Of this amount, 23.5 million euros were invested in tangible fixed assets... In the real estate business segment, investments amounted to 14.8 million euros... In the car segment... investments totalled 2.6 million euros... In the supermarkets business segment, investments of 4.1 million euros were made... In the department stores business segment, investments amounted to 1.5 million euros... The Group continued to develop its information systems...'"
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Consolidated Cash Flow Statement shows cash and cash equivalents decreased by €15,938 thousand (2025). The statement also shows cash and cash equivalents at year-end of €29,516 thousand."
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Net Debt Reconciliation in Note 15 and the Statement of Changes in Equity show net debt of €290,962 thousand (2025) vs €278,940 thousand (2024). Equity increased to €263,753 thousand (2025) vs €261,528 thousand (2024). The revaluation reserve increased by €11,172 thousand due to property revaluations."
+      },
+      {
+        "id": "F21",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 15 states: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end. The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'"
+      },
+      {
+        "id": "F22",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 19 states: 'In 2025, dividends were paid to the shareholders in the amount of 26,473 thousand euros, or 0.65 euros per share... The Chairman of the Management Board... proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'"
+      },
+      {
+        "id": "F23",
+        "candidate_sentence_ids": [
+          "S23"
+        ],
+        "claim": "In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Event after the Reporting Period section states: 'Group’s subsidiary TKM Auto OÜ will, subject to the fulfilment of the conditions precedent to final completion of the transaction, acquire a 100% interest in three companies engaged in the retail sale and servicing of vehicles... The transaction is in line with the Group’s long-term strategy... and the transfer of control will take place once these requirements have been met. In the management’s assessment, the transaction will contribute to the Group’s long-term development... In the management’s assessment, the transaction will contribute to the Group’s long-term development and strengthen the Group’s position in one of its core strategic business areas.' The agreement was signed in January 2026, with completion expected between February and June 2026."
+      },
+      {
+        "id": "F24",
+        "candidate_sentence_ids": [
+          "S24"
+        ],
+        "claim": "PwC issued an unqualified audit opinion on the consolidated financial statements.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Independent Auditor’s Report states: 'In our opinion, the consolidated financial statements present fairly, in all material respects, the consolidated financial position of TKM Grupp AS... as at 31 December 2025... Our opinion is consistent with our additional report to the Audit Committee dated 18 February 2026.'"
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.",
+        "candidate_value": "Revenue decline: 2.6%, Revenue 2025: €919.6 million, Revenue 2024: €944.6 million, Profit before tax decline: 31.4%, Profit before tax 2025: €24.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Revenue 2025: €919.6 million (2.6% decrease from €944.6 million in 2024); Profit before tax 2025: €24.3 million (31.4% decrease from 2024)",
+        "source_evidence": "Management Report: 'The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024... The Group’s profit before tax for 2025 was 24.3 million euros, declining by 31.4% year on year.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.",
+        "candidate_value": "Net profit decline: 36.1%, Net profit 2025: €17.5 million, EPS 2024: €0.67, EPS 2025: €0.43",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net profit 2025: €17.5 million (36.1% decrease from €27.5 million in 2024); EPS 2024: €0.67, EPS 2025: €0.43",
+        "source_evidence": "Management Report: 'Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year... 43 Cents Net profit per share (2024: 67 cents)'",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.",
+        "candidate_value": "Operating profit 2024: €47.6 million, Operating profit 2025: €34.9 million, EBITDA decline: 14.7%, EBITDA 2025: €77.4 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating profit 2025: €35 million (approx. €34.9 million); EBITDA 2025: €77.4 million (14.7% decrease from €90.7 million in 2024)",
+        "source_evidence": "Financial Ratios Table: Operating profit 2025: 35 million EUR, 2024: 48 million EUR; EBITDA 2025: 77 million EUR, 2024: 91 million EUR. Management Report: 'Operating profit amounted to 35 million euros... EBITDA amounted to 77.4 million euros, representing a decrease of 14.7% compared to 2024.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.",
+        "candidate_value": "EBITDA margin 2025: 8.4%, EBITDA margin 2024: 9.6%, Net margin 2025: 2%, Net margin 2024: 3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA margin 2025: 8.4% (77.4/919.6), 2024: 9.6% (90.7/944.6); Net margin 2025: 2% (17.5/919.6), 2024: 3% (27.5/944.6)",
+        "source_evidence": "Financial Ratios Table: EBITDA margin and Net margin for 2024 and 2025. Management Report: 'EBITDA margin decreased to 8.4% from 9.6%... net margin fell to 2% from 3%.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.",
+        "candidate_value": "Gross profit 2025: €254.6 million, Gross margin 2025: 27.7%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Gross profit 2025: €254.6 million (27.7% margin), compared to €259.8 million (27.5% margin) in 2024",
+        "source_evidence": "Financial Ratios Table: Gross profit and Gross margin for 2024 and 2025. Management Report: 'Gross profit declined to 254.6 million euros, although the gross margin improved slightly to 27.7%.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.",
+        "candidate_value": "Car trade revenue decline: 11.9%, Car trade revenue 2025: €176.9 million, Car trade EBITDA decline: 40.3%, Car trade EBITDA 2025: €8.1 million, Car trade net profit decline: 54.4%, Car trade net profit 2025: €4.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Car trade revenue 2025: €176.9 million (11.9% decrease from €200.8 million in 2024); Car trade EBITDA 2025: €8.1 million (40.3% decrease from €13.6 million in 2024); Car trade net profit 2025: €4.3 million (54.4% decrease from €9.5 million in 2024)",
+        "source_evidence": "Segment Reporting Table: Car trade revenue, EBITDA and net profit for 2024 and 2025. Management Report: 'Despite the difficult market situation, the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year... EBITDA declined 40.3% to €8.1 million... net profit dropped 54.4% to €4.3 million.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.",
+        "candidate_value": "New passenger car sales decline in Estonia: 48.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "New passenger car sales in Estonia declined by 48.6% in 2025 compared to 2024",
+        "source_evidence": "Management Report: 'According to AMTEL data, 13,055 new passenger cars were sold in Estonia in 2025, which was 48.6% below the level of 2024.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.",
+        "candidate_value": "Supermarket revenue 2025: €611.9 million (+0.3% from 2024), Supermarket net profit decline: 38.6%, Supermarket net profit 2025: €9.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Supermarket revenue 2025: €611.9 million (0.3% increase from €610.4 million in 2024); Supermarket net profit 2025: €9.5 million (38.6% decrease from €15.5 million in 2024)",
+        "source_evidence": "Segment Reporting Table: Supermarket revenue and net profit for 2024 and 2025. Management Report: 'The consolidated revenue of the supermarket business segment in 2025 was 611.9 million euros, increasing by 0.3% year on year... Net profit for 2025 totalled 9.5 million euros, declining by 38.6% compared to the previous year.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.",
+        "candidate_value": "Department stores net loss: €0.5 million, Security services net loss: €0.04 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Department stores net loss: €0.5 million; Security services net loss: €0.04 million",
+        "source_evidence": "Segment Reporting Table: Department stores net profit/(loss) 2025: -0.5 million EUR; Security segment net profit/(loss) 2025: 0.0 million EUR (with loss before tax of €0.04 million as stated in Management Report). Management Report: 'Only the department stores segment recorded a small loss... The security segment’s... recorded a loss before tax of 0.04 million euros in 2025.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.",
+        "candidate_value": "Real estate revenue increase: 5.1%, Real estate revenue 2025: €7.7 million, Real estate net profit increase: 20.5%, Real estate net profit 2025: €6.3 million, One-off gains in 2024: €4.0 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Real estate revenue 2025: €7.7 million (5.1% increase from €7.3 million in 2024); Real estate net profit 2025: €6.3 million (20.5% increase from €5.2 million in 2024); One-off gains in 2024: €4.0 million (comprising €2.1 million from revaluation and €1.9 million from disposals)",
+        "source_evidence": "Segment Reporting Table: Real estate revenue and net profit for 2024 and 2025. Management Report: 'Real estate revenue increased 5.1% to €7.7 million... net profit rose 20.5% to €6.3 million... The comparative base year included one-off profit of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Staff costs increased 3.7%, while other operating expenses rose only 0.2%.",
+        "candidate_value": "Staff cost increase: 3.7%, Other operating expense increase: 0.2%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Staff costs increased by 3.7% (from €112.2 million in 2024 to €116.4 million in 2025); Other operating expenses increased by 0.2% (from €61.5 million in 2024 to €61.7 million in 2025)",
+        "source_evidence": "Note 21 and Note 22: Staff costs and other operating expenses for 2024 and 2025. Management Report: 'Labour costs increased by 3.7% for the year as a whole... The Group has also kept other operating expenses stable, with annual growth of 0.2%.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.",
+        "candidate_value": "Finance cost reduction: €1.5 million, Income tax expense reduction: €1.2 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Finance costs decreased by €1.5 million (from €12.9 million in 2024 to €11.3 million in 2025); Income tax expense decreased by €1.2 million (from €8.0 million in 2024 to €6.8 million in 2025)",
+        "source_evidence": "Note 23: Finance costs and income tax expense for 2024 and 2025. Management Report: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year... The company’s income tax expense decreased by 1.2 million euros in 2025... due to the recalculation of deferred income tax.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.",
+        "candidate_value": "Operating cash flow 2025: €65.6 million, Operating cash flow 2024: €73.1 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cash flows from operating activities 2025: €65.6 million, 2024: €73.1 million",
+        "source_evidence": "Consolidated Cash Flow Statement: Cash flows from operating activities for 2024 and 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.",
+        "candidate_value": "Total investments 2025: €25.5 million, Total investments 2024: €36.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total investments 2025: €25.5 million, 2024: €36.6 million",
+        "source_evidence": "Management Report: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024)... Of this amount, 23.5 million euros were invested in tangible fixed assets... investments of 4.1 million euros were made in 2025 [supermarkets], 1.5 million euros [department stores], 2.6 million euros [car segment], 0.4 million euros [security segment], and 14.8 million euros [real estate segment].'",
+        "error_explanation": null
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.",
+        "candidate_value": "Cash decline: €15.9 million, Cash at year-end 2025: €29.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cash and cash equivalents decreased by €15.9 million (from €45.5 million at end of 2024 to €29.5 million at end of 2025)",
+        "source_evidence": "Consolidated Cash Flow Statement: Net change in cash and cash equivalents and cash and cash equivalents at end of period for 2024 and 2025. Management Report: 'A total of 1,540,805 shares were traded during the year, with a total transaction value of 14,664,134.18 euros... At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group paid €26.5 million in dividends... Financing outflows... resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.",
+        "candidate_value": "Net debt 2025: €291.0 million, Net debt 2024: €278.9 million, Equity 2025: €263.8 million, Property revaluation: €11.2 million",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "Net debt is negative (cash exceeds debt): Net debt 2025: -€290.96 million, Net debt 2024: -€278.94 million; Equity 2025: €263.75 million; Property revaluation reserve increase: €11.17 million",
+        "source_evidence": "Consolidated Statement of Changes in Equity and Net Debt Reconciliation: Net debt is calculated as total borrowings minus cash and cash equivalents, resulting in negative values. Equity increased to €263.75 million in 2025 from €261.53 million in 2024, with €11.17 million of this increase coming from property revaluation reserve. Management Report: 'At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group’s liquidity ratio... stood at 0.31 in 2025... Coverage of short-term liabilities has temporarily decreased due to the increase in current liabilities... In management’s assessment, there are no obstacles to extending the short-term loan agreements.'",
+        "error_explanation": "The candidate incorrectly states that net debt increased to a positive €291.0 million. The source shows net debt is negative (cash exceeds debt) at -€290.96 million in 2025 (compared to -€278.94 million in 2024). The increase in the absolute value of negative net debt does not equate to an increase in positive net debt. Equity did rise to €263.75 million, supported by the €11.17 million property revaluation, but the net debt figure is fundamentally wrong."
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.",
+        "candidate_value": "Current liabilities increase due to €32.1 million reclassification of loans maturing in 2026",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Current liabilities increased by €13.06 million due to reclassification of €32.13 million of long-term loans maturing in 2026 to current liabilities",
+        "source_evidence": "Note 15 and Note 17: Current liabilities increased from €155.43 million in 2024 to €168.49 million in 2025. Management Report: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end... The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.",
+        "candidate_value": "Dividends paid 2025: €26.5 million (€0.65 per share), Proposed dividend 2025: €24.4 million (€0.60 per share)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Dividends paid in 2025: €26.473 million (€0.65 per share); Proposed dividend for 2025: €24.438 million (€0.60 per share)",
+        "source_evidence": "Note 19: Dividends paid in 2025 were €26,473 thousand (€0.65 per share). The Chairman of the Management Board proposed a dividend of €24,438 thousand (€0.60 per share) for approval at the General Meeting. Management Report: 'The general meeting of shareholders was held on 17 March 2025, and the amount of the dividend payment of 0.65 euros per share from the net profit was approved... The Chairman of the Management Board of TKM Grupp AS proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S23"
+        ],
+        "claim": "In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.",
+        "candidate_value": "Acquisition agreement date: January 2026, Target companies: three Škoda retail and servicing companies, Completion period: February to June 2026",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Acquisition agreement signed on 7 January 2026 for three companies (Rohe Auto AS, SKO Motors OÜ, and a real estate holding company); Completion expected between February and June 2026 subject to conditions",
+        "source_evidence": "Note 31: 'On 7 January 2026, TKM Auto OÜ... entered into a share and quota purchase agreement... Completion of the transaction is subject to several conditions precedent... In the management’s assessment, the transfer of control will take place on the date of completion of the transaction, which is expected to fall between 20 February 2026 and 30 June 2026.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N20",
+        "candidate_sentence_ids": [
+          "S24"
+        ],
+        "claim": "PwC issued an unqualified audit opinion on the consolidated financial statements.",
+        "candidate_value": "Unqualified audit opinion by PwC",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Independent Auditor's Report: 'In our opinion, the consolidated financial statements present fairly... in accordance with International Financial Reporting Standards as adopted by the European Union.' The report is unqualified.",
+        "source_evidence": "Independent Auditor's Report: States an unqualified opinion on the consolidated financial statements as of 31 December 2025.",
+        "error_explanation": null
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S8",
+      "S9",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S8",
+      "S9",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": true,
+    "model_output_text": "{\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.\",\n      \"candidate_value\": \"Revenue decline: 2.6%, Revenue 2025: €919.6 million, Revenue 2024: €944.6 million, Profit before tax decline: 31.4%, Profit before tax 2025: €24.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Revenue 2025: €919.6 million (2.6% decrease from €944.6 million in 2024); Profit before tax 2025: €24.3 million (31.4% decrease from 2024)\",\n      \"source_evidence\": \"Management Report: 'The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024... The Group’s profit before tax for 2025 was 24.3 million euros, declining by 31.4% year on year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.\",\n      \"candidate_value\": \"Net profit decline: 36.1%, Net profit 2025: €17.5 million, EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Net profit 2025: €17.5 million (36.1% decrease from €27.5 million in 2024); EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"source_evidence\": \"Management Report: 'Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year... 43 Cents Net profit per share (2024: 67 cents)'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.\",\n      \"candidate_value\": \"Operating profit 2024: €47.6 million, Operating profit 2025: €34.9 million, EBITDA decline: 14.7%, EBITDA 2025: €77.4 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Operating profit 2025: €35 million (approx. €34.9 million); EBITDA 2025: €77.4 million (14.7% decrease from €90.7 million in 2024)\",\n      \"source_evidence\": \"Financial Ratios Table: Operating profit 2025: 35 million EUR, 2024: 48 million EUR; EBITDA 2025: 77 million EUR, 2024: 91 million EUR. Management Report: 'Operating profit amounted to 35 million euros... EBITDA amounted to 77.4 million euros, representing a decrease of 14.7% compared to 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.\",\n      \"candidate_value\": \"EBITDA margin 2025: 8.4%, EBITDA margin 2024: 9.6%, Net margin 2025: 2%, Net margin 2024: 3%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EBITDA margin 2025: 8.4% (77.4/919.6), 2024: 9.6% (90.7/944.6); Net margin 2025: 2% (17.5/919.6), 2024: 3% (27.5/944.6)\",\n      \"source_evidence\": \"Financial Ratios Table: EBITDA margin and Net margin for 2024 and 2025. Management Report: 'EBITDA margin decreased to 8.4% from 9.6%... net margin fell to 2% from 3%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.\",\n      \"candidate_value\": \"Gross profit 2025: €254.6 million, Gross margin 2025: 27.7%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Gross profit 2025: €254.6 million (27.7% margin), compared to €259.8 million (27.5% margin) in 2024\",\n      \"source_evidence\": \"Financial Ratios Table: Gross profit and Gross margin for 2024 and 2025. Management Report: 'Gross profit declined to 254.6 million euros, although the gross margin improved slightly to 27.7%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.\",\n      \"candidate_value\": \"Car trade revenue decline: 11.9%, Car trade revenue 2025: €176.9 million, Car trade EBITDA decline: 40.3%, Car trade EBITDA 2025: €8.1 million, Car trade net profit decline: 54.4%, Car trade net profit 2025: €4.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Car trade revenue 2025: €176.9 million (11.9% decrease from €200.8 million in 2024); Car trade EBITDA 2025: €8.1 million (40.3% decrease from €13.6 million in 2024); Car trade net profit 2025: €4.3 million (54.4% decrease from €9.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Car trade revenue, EBITDA and net profit for 2024 and 2025. Management Report: 'Despite the difficult market situation, the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year... EBITDA declined 40.3% to €8.1 million... net profit dropped 54.4% to €4.3 million.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.\",\n      \"candidate_value\": \"New passenger car sales decline in Estonia: 48.6%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"New passenger car sales in Estonia declined by 48.6% in 2025 compared to 2024\",\n      \"source_evidence\": \"Management Report: 'According to AMTEL data, 13,055 new passenger cars were sold in Estonia in 2025, which was 48.6% below the level of 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.\",\n      \"candidate_value\": \"Supermarket revenue 2025: €611.9 million (+0.3% from 2024), Supermarket net profit decline: 38.6%, Supermarket net profit 2025: €9.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Supermarket revenue 2025: €611.9 million (0.3% increase from €610.4 million in 2024); Supermarket net profit 2025: €9.5 million (38.6% decrease from €15.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Supermarket revenue and net profit for 2024 and 2025. Management Report: 'The consolidated revenue of the supermarket business segment in 2025 was 611.9 million euros, increasing by 0.3% year on year... Net profit for 2025 totalled 9.5 million euros, declining by 38.6% compared to the previous year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.\",\n      \"candidate_value\": \"Department stores net loss: €0.5 million, Security services net loss: €0.04 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Department stores net loss: €0.5 million; Security services net loss: €0.04 million\",\n      \"source_evidence\": \"Segment Reporting Table: Department stores net profit/(loss) 2025: -0.5 million EUR; Security segment net profit/(loss) 2025: 0.0 million EUR (with loss before tax of €0.04 million as stated in Management Report). Management Report: 'Only the department stores segment recorded a small loss... The security segment’s... recorded a loss before tax of 0.04 million euros in 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.\",\n      \"candidate_value\": \"Real estate revenue increase: 5.1%, Real estate revenue 2025: €7.7 million, Real estate net profit increase: 20.5%, Real estate net profit 2025: €6.3 million, One-off gains in 2024: €4.0 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Real estate revenue 2025: €7.7 million (5.1% increase from €7.3 million in 2024); Real estate net profit 2025: €6.3 million (20.5% increase from €5.2 million in 2024); One-off gains in 2024: €4.0 million (comprising €2.1 million from revaluation and €1.9 million from disposals)\",\n      \"source_evidence\": \"Segment Reporting Table: Real estate revenue and net profit for 2024 and 2025. Management Report: 'Real estate revenue increased 5.1% to €7.7 million... net profit rose 20.5% to €6.3 million... The comparative base year included one-off profit of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Staff costs increased 3.7%, while other operating expenses rose only 0.2%.\",\n      \"candidate_value\": \"Staff cost increase: 3.7%, Other operating expense increase: 0.2%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Staff costs increased by 3.7% (from €112.2 million in 2024 to €116.4 million in 2025); Other operating expenses increased by 0.2% (from €61.5 million in 2024 to €61.7 million in 2025)\",\n      \"source_evidence\": \"Note 21 and Note 22: Staff costs and other operating expenses for 2024 and 2025. Management Report: 'Labour costs increased by 3.7% for the year as a whole... The Group has also kept other operating expenses stable, with annual growth of 0.2%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.\",\n      \"candidate_value\": \"Finance cost reduction: €1.5 million, Income tax expense reduction: €1.2 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Finance costs decreased by €1.5 million (from €12.9 million in 2024 to €11.3 million in 2025); Income tax expense decreased by €1.2 million (from €8.0 million in 2024 to €6.8 million in 2025)\",\n      \"source_evidence\": \"Note 23: Finance costs and income tax expense for 2024 and 2025. Management Report: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year... The company’s income tax expense decreased by 1.2 million euros in 2025... due to the recalculation of deferred income tax.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.\",\n      \"candidate_value\": \"Operating cash flow 2025: €65.6 million, Operating cash flow 2024: €73.1 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash flows from operating activities 2025: €65.6 million, 2024: €73.1 million\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Cash flows from operating activities for 2024 and 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.\",\n      \"candidate_value\": \"Total investments 2025: €25.5 million, Total investments 2024: €36.6 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Total investments 2025: €25.5 million, 2024: €36.6 million\",\n      \"source_evidence\": \"Management Report: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024)... Of this amount, 23.5 million euros were invested in tangible fixed assets... investments of 4.1 million euros were made in 2025 [supermarkets], 1.5 million euros [department stores], 2.6 million euros [car segment], 0.4 million euros [security segment], and 14.8 million euros [real estate segment].'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.\",\n      \"candidate_value\": \"Cash decline: €15.9 million, Cash at year-end 2025: €29.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash and cash equivalents decreased by €15.9 million (from €45.5 million at end of 2024 to €29.5 million at end of 2025)\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Net change in cash and cash equivalents and cash and cash equivalents at end of period for 2024 and 2025. Management Report: 'A total of 1,540,805 shares were traded during the year, with a total transaction value of 14,664,134.18 euros... At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group paid €26.5 million in dividends... Financing outflows... resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.\",\n      \"candidate_value\": \"Net debt 2025: €291.0 million, Net debt 2024: €278.9 million, Equity 2025: €263.8 million, Property revaluation: €11.2 million\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"Net debt is negative (cash exceeds debt): Net debt 2025: -€290.96 million, Net debt 2024: -€278.94 million; Equity 2025: €263.75 million; Property revaluation reserve increase: €11.17 million\",\n      \"source_evidence\": \"Consolidated Statement of Changes in Equity and Net Debt Reconciliation: Net debt is calculated as total borrowings minus cash and cash equivalents, resulting in negative values. Equity increased to €263.75 million in 2025 from €261.53 million in 2024, with €11.17 million of this increase coming from property revaluation reserve. Management Report: 'At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group’s liquidity ratio... stood at 0.31 in 2025... Coverage of short-term liabilities has temporarily decreased due to the increase in current liabilities... In management’s assessment, there are no obstacles to extending the short-term loan agreements.'\",\n      \"error_explanation\": \"The candidate incorrectly states that net debt increased to a positive €291.0 million. The source shows net debt is negative (cash exceeds debt) at -€290.96 million in 2025 (compared to -€278.94 million in 2024). The increase in the absolute value of negative net debt does not equate to an increase in positive net debt. Equity did rise to €263.75 million, supported by the €11.17 million property revaluation, but the net debt figure is fundamentally wrong.\"\n    },\n    {\n      \"id\": \"N17\",\n      \"candidate_sentence_ids\": [\"S21\"],\n      \"claim\": \"Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.\",\n      \"candidate_value\": \"Current liabilities increase due to €32.1 million reclassification of loans maturing in 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Current liabilities increased by €13.06 million due to reclassification of €32.13 million of long-term loans maturing in 2026 to current liabilities\",\n      \"source_evidence\": \"Note 15 and Note 17: Current liabilities increased from €155.43 million in 2024 to €168.49 million in 2025. Management Report: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end... The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N18\",\n      \"candidate_sentence_ids\": [\"S22\"],\n      \"claim\": \"The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.\",\n      \"candidate_value\": \"Dividends paid 2025: €26.5 million (€0.65 per share), Proposed dividend 2025: €24.4 million (€0.60 per share)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Dividends paid in 2025: €26.473 million (€0.65 per share); Proposed dividend for 2025: €24.438 million (€0.60 per share)\",\n      \"source_evidence\": \"Note 19: Dividends paid in 2025 were €26,473 thousand (€0.65 per share). The Chairman of the Management Board proposed a dividend of €24,438 thousand (€0.60 per share) for approval at the General Meeting. Management Report: 'The general meeting of shareholders was held on 17 March 2025, and the amount of the dividend payment of 0.65 euros per share from the net profit was approved... The Chairman of the Management Board of TKM Grupp AS proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N19\",\n      \"candidate_sentence_ids\": [\"S23\"],\n      \"claim\": \"In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.\",\n      \"candidate_value\": \"Acquisition agreement date: January 2026, Target companies: three Škoda retail and servicing companies, Completion period: February to June 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Acquisition agreement signed on 7 January 2026 for three companies (Rohe Auto AS, SKO Motors OÜ, and a real estate holding company); Completion expected between February and June 2026 subject to conditions\",\n      \"source_evidence\": \"Note 31: 'On 7 January 2026, TKM Auto OÜ... entered into a share and quota purchase agreement... Completion of the transaction is subject to several conditions precedent... In the management’s assessment, the transfer of control will take place on the date of completion of the transaction, which is expected to fall between 20 February 2026 and 30 June 2026.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N20\",\n      \"candidate_sentence_ids\": [\"S24\"],\n      \"claim\": \"PwC issued an unqualified audit opinion on the consolidated financial statements.\",\n      \"candidate_value\": \"Unqualified audit opinion by PwC\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Independent Auditor's Report: 'In our opinion, the consolidated financial statements present fairly... in accordance with International Financial Reporting Standards as adopted by the European Union.' The report is unqualified.\",\n      \"source_evidence\": \"Independent Auditor's Report: States an unqualified opinion on the consolidated financial statements as of 31 December 2025.\",\n      \"error_explanation\": null\n    }",
+    "evaluation": {
+      "numerical_claims": [
+        {
+          "id": "N1",
+          "candidate_sentence_ids": [
+            "S2"
+          ],
+          "claim": "Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.",
+          "candidate_value": "Revenue decline: 2.6%, Revenue 2025: €919.6 million, Revenue 2024: €944.6 million, Profit before tax decline: 31.4%, Profit before tax 2025: €24.3 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Revenue 2025: €919.6 million (2.6% decrease from €944.6 million in 2024); Profit before tax 2025: €24.3 million (31.4% decrease from 2024)",
+          "source_evidence": "Management Report: 'The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024... The Group’s profit before tax for 2025 was 24.3 million euros, declining by 31.4% year on year.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N2",
+          "candidate_sentence_ids": [
+            "S3"
+          ],
+          "claim": "Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.",
+          "candidate_value": "Net profit decline: 36.1%, Net profit 2025: €17.5 million, EPS 2024: €0.67, EPS 2025: €0.43",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Net profit 2025: €17.5 million (36.1% decrease from €27.5 million in 2024); EPS 2024: €0.67, EPS 2025: €0.43",
+          "source_evidence": "Management Report: 'Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year... 43 Cents Net profit per share (2024: 67 cents)'",
+          "error_explanation": null
+        },
+        {
+          "id": "N3",
+          "candidate_sentence_ids": [
+            "S4"
+          ],
+          "claim": "Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.",
+          "candidate_value": "Operating profit 2024: €47.6 million, Operating profit 2025: €34.9 million, EBITDA decline: 14.7%, EBITDA 2025: €77.4 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Operating profit 2025: €35 million (approx. €34.9 million); EBITDA 2025: €77.4 million (14.7% decrease from €90.7 million in 2024)",
+          "source_evidence": "Financial Ratios Table: Operating profit 2025: 35 million EUR, 2024: 48 million EUR; EBITDA 2025: 77 million EUR, 2024: 91 million EUR. Management Report: 'Operating profit amounted to 35 million euros... EBITDA amounted to 77.4 million euros, representing a decrease of 14.7% compared to 2024.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N4",
+          "candidate_sentence_ids": [
+            "S5"
+          ],
+          "claim": "The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.",
+          "candidate_value": "EBITDA margin 2025: 8.4%, EBITDA margin 2024: 9.6%, Net margin 2025: 2%, Net margin 2024: 3%",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "EBITDA margin 2025: 8.4% (77.4/919.6), 2024: 9.6% (90.7/944.6); Net margin 2025: 2% (17.5/919.6), 2024: 3% (27.5/944.6)",
+          "source_evidence": "Financial Ratios Table: EBITDA margin and Net margin for 2024 and 2025. Management Report: 'EBITDA margin decreased to 8.4% from 9.6%... net margin fell to 2% from 3%.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N5",
+          "candidate_sentence_ids": [
+            "S6"
+          ],
+          "claim": "Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.",
+          "candidate_value": "Gross profit 2025: €254.6 million, Gross margin 2025: 27.7%",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Gross profit 2025: €254.6 million (27.7% margin), compared to €259.8 million (27.5% margin) in 2024",
+          "source_evidence": "Financial Ratios Table: Gross profit and Gross margin for 2024 and 2025. Management Report: 'Gross profit declined to 254.6 million euros, although the gross margin improved slightly to 27.7%.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N6",
+          "candidate_sentence_ids": [
+            "S8"
+          ],
+          "claim": "Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.",
+          "candidate_value": "Car trade revenue decline: 11.9%, Car trade revenue 2025: €176.9 million, Car trade EBITDA decline: 40.3%, Car trade EBITDA 2025: €8.1 million, Car trade net profit decline: 54.4%, Car trade net profit 2025: €4.3 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Car trade revenue 2025: €176.9 million (11.9% decrease from €200.8 million in 2024); Car trade EBITDA 2025: €8.1 million (40.3% decrease from €13.6 million in 2024); Car trade net profit 2025: €4.3 million (54.4% decrease from €9.5 million in 2024)",
+          "source_evidence": "Segment Reporting Table: Car trade revenue, EBITDA and net profit for 2024 and 2025. Management Report: 'Despite the difficult market situation, the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year... EBITDA declined 40.3% to €8.1 million... net profit dropped 54.4% to €4.3 million.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N7",
+          "candidate_sentence_ids": [
+            "S9"
+          ],
+          "claim": "The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.",
+          "candidate_value": "New passenger car sales decline in Estonia: 48.6%",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "New passenger car sales in Estonia declined by 48.6% in 2025 compared to 2024",
+          "source_evidence": "Management Report: 'According to AMTEL data, 13,055 new passenger cars were sold in Estonia in 2025, which was 48.6% below the level of 2024.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N8",
+          "candidate_sentence_ids": [
+            "S11"
+          ],
+          "claim": "The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.",
+          "candidate_value": "Supermarket revenue 2025: €611.9 million (+0.3% from 2024), Supermarket net profit decline: 38.6%, Supermarket net profit 2025: €9.5 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Supermarket revenue 2025: €611.9 million (0.3% increase from €610.4 million in 2024); Supermarket net profit 2025: €9.5 million (38.6% decrease from €15.5 million in 2024)",
+          "source_evidence": "Segment Reporting Table: Supermarket revenue and net profit for 2024 and 2025. Management Report: 'The consolidated revenue of the supermarket business segment in 2025 was 611.9 million euros, increasing by 0.3% year on year... Net profit for 2025 totalled 9.5 million euros, declining by 38.6% compared to the previous year.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N9",
+          "candidate_sentence_ids": [
+            "S12"
+          ],
+          "claim": "Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.",
+          "candidate_value": "Department stores net loss: €0.5 million, Security services net loss: €0.04 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Department stores net loss: €0.5 million; Security services net loss: €0.04 million",
+          "source_evidence": "Segment Reporting Table: Department stores net profit/(loss) 2025: -0.5 million EUR; Security segment net profit/(loss) 2025: 0.0 million EUR (with loss before tax of €0.04 million as stated in Management Report). Management Report: 'Only the department stores segment recorded a small loss... The security segment’s... recorded a loss before tax of 0.04 million euros in 2025.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N10",
+          "candidate_sentence_ids": [
+            "S13"
+          ],
+          "claim": "Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.",
+          "candidate_value": "Real estate revenue increase: 5.1%, Real estate revenue 2025: €7.7 million, Real estate net profit increase: 20.5%, Real estate net profit 2025: €6.3 million, One-off gains in 2024: €4.0 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Real estate revenue 2025: €7.7 million (5.1% increase from €7.3 million in 2024); Real estate net profit 2025: €6.3 million (20.5% increase from €5.2 million in 2024); One-off gains in 2024: €4.0 million (comprising €2.1 million from revaluation and €1.9 million from disposals)",
+          "source_evidence": "Segment Reporting Table: Real estate revenue and net profit for 2024 and 2025. Management Report: 'Real estate revenue increased 5.1% to €7.7 million... net profit rose 20.5% to €6.3 million... The comparative base year included one-off profit of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N11",
+          "candidate_sentence_ids": [
+            "S15"
+          ],
+          "claim": "Staff costs increased 3.7%, while other operating expenses rose only 0.2%.",
+          "candidate_value": "Staff cost increase: 3.7%, Other operating expense increase: 0.2%",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Staff costs increased by 3.7% (from €112.2 million in 2024 to €116.4 million in 2025); Other operating expenses increased by 0.2% (from €61.5 million in 2024 to €61.7 million in 2025)",
+          "source_evidence": "Note 21 and Note 22: Staff costs and other operating expenses for 2024 and 2025. Management Report: 'Labour costs increased by 3.7% for the year as a whole... The Group has also kept other operating expenses stable, with annual growth of 0.2%.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N12",
+          "candidate_sentence_ids": [
+            "S16"
+          ],
+          "claim": "Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.",
+          "candidate_value": "Finance cost reduction: €1.5 million, Income tax expense reduction: €1.2 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Finance costs decreased by €1.5 million (from €12.9 million in 2024 to €11.3 million in 2025); Income tax expense decreased by €1.2 million (from €8.0 million in 2024 to €6.8 million in 2025)",
+          "source_evidence": "Note 23: Finance costs and income tax expense for 2024 and 2025. Management Report: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year... The company’s income tax expense decreased by 1.2 million euros in 2025... due to the recalculation of deferred income tax.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N13",
+          "candidate_sentence_ids": [
+            "S17"
+          ],
+          "claim": "Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.",
+          "candidate_value": "Operating cash flow 2025: €65.6 million, Operating cash flow 2024: €73.1 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Cash flows from operating activities 2025: €65.6 million, 2024: €73.1 million",
+          "source_evidence": "Consolidated Cash Flow Statement: Cash flows from operating activities for 2024 and 2025.",
+          "error_explanation": null
+        },
+        {
+          "id": "N14",
+          "candidate_sentence_ids": [
+            "S18"
+          ],
+          "claim": "Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.",
+          "candidate_value": "Total investments 2025: €25.5 million, Total investments 2024: €36.6 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Total investments 2025: €25.5 million, 2024: €36.6 million",
+          "source_evidence": "Management Report: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024)... Of this amount, 23.5 million euros were invested in tangible fixed assets... investments of 4.1 million euros were made in 2025 [supermarkets], 1.5 million euros [department stores], 2.6 million euros [car segment], 0.4 million euros [security segment], and 14.8 million euros [real estate segment].'",
+          "error_explanation": null
+        },
+        {
+          "id": "N15",
+          "candidate_sentence_ids": [
+            "S19"
+          ],
+          "claim": "Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.",
+          "candidate_value": "Cash decline: €15.9 million, Cash at year-end 2025: €29.5 million",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Cash and cash equivalents decreased by €15.9 million (from €45.5 million at end of 2024 to €29.5 million at end of 2025)",
+          "source_evidence": "Consolidated Cash Flow Statement: Net change in cash and cash equivalents and cash and cash equivalents at end of period for 2024 and 2025. Management Report: 'A total of 1,540,805 shares were traded during the year, with a total transaction value of 14,664,134.18 euros... At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group paid €26.5 million in dividends... Financing outflows... resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N16",
+          "candidate_sentence_ids": [
+            "S20"
+          ],
+          "claim": "Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.",
+          "candidate_value": "Net debt 2025: €291.0 million, Net debt 2024: €278.9 million, Equity 2025: €263.8 million, Property revaluation: €11.2 million",
+          "label": "INCORRECT",
+          "error_type": "INCORRECT_VALUE",
+          "source_value": "Net debt is negative (cash exceeds debt): Net debt 2025: -€290.96 million, Net debt 2024: -€278.94 million; Equity 2025: €263.75 million; Property revaluation reserve increase: €11.17 million",
+          "source_evidence": "Consolidated Statement of Changes in Equity and Net Debt Reconciliation: Net debt is calculated as total borrowings minus cash and cash equivalents, resulting in negative values. Equity increased to €263.75 million in 2025 from €261.53 million in 2024, with €11.17 million of this increase coming from property revaluation reserve. Management Report: 'At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group’s liquidity ratio... stood at 0.31 in 2025... Coverage of short-term liabilities has temporarily decreased due to the increase in current liabilities... In management’s assessment, there are no obstacles to extending the short-term loan agreements.'",
+          "error_explanation": "The candidate incorrectly states that net debt increased to a positive €291.0 million. The source shows net debt is negative (cash exceeds debt) at -€290.96 million in 2025 (compared to -€278.94 million in 2024). The increase in the absolute value of negative net debt does not equate to an increase in positive net debt. Equity did rise to €263.75 million, supported by the €11.17 million property revaluation, but the net debt figure is fundamentally wrong."
+        },
+        {
+          "id": "N17",
+          "candidate_sentence_ids": [
+            "S21"
+          ],
+          "claim": "Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.",
+          "candidate_value": "Current liabilities increase due to €32.1 million reclassification of loans maturing in 2026",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Current liabilities increased by €13.06 million due to reclassification of €32.13 million of long-term loans maturing in 2026 to current liabilities",
+          "source_evidence": "Note 15 and Note 17: Current liabilities increased from €155.43 million in 2024 to €168.49 million in 2025. Management Report: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end... The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N18",
+          "candidate_sentence_ids": [
+            "S22"
+          ],
+          "claim": "The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.",
+          "candidate_value": "Dividends paid 2025: €26.5 million (€0.65 per share), Proposed dividend 2025: €24.4 million (€0.60 per share)",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Dividends paid in 2025: €26.473 million (€0.65 per share); Proposed dividend for 2025: €24.438 million (€0.60 per share)",
+          "source_evidence": "Note 19: Dividends paid in 2025 were €26,473 thousand (€0.65 per share). The Chairman of the Management Board proposed a dividend of €24,438 thousand (€0.60 per share) for approval at the General Meeting. Management Report: 'The general meeting of shareholders was held on 17 March 2025, and the amount of the dividend payment of 0.65 euros per share from the net profit was approved... The Chairman of the Management Board of TKM Grupp AS proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N19",
+          "candidate_sentence_ids": [
+            "S23"
+          ],
+          "claim": "In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.",
+          "candidate_value": "Acquisition agreement date: January 2026, Target companies: three Škoda retail and servicing companies, Completion period: February to June 2026",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Acquisition agreement signed on 7 January 2026 for three companies (Rohe Auto AS, SKO Motors OÜ, and a real estate holding company); Completion expected between February and June 2026 subject to conditions",
+          "source_evidence": "Note 31: 'On 7 January 2026, TKM Auto OÜ... entered into a share and quota purchase agreement... Completion of the transaction is subject to several conditions precedent... In the management’s assessment, the transfer of control will take place on the date of completion of the transaction, which is expected to fall between 20 February 2026 and 30 June 2026.'",
+          "error_explanation": null
+        },
+        {
+          "id": "N20",
+          "candidate_sentence_ids": [
+            "S24"
+          ],
+          "claim": "PwC issued an unqualified audit opinion on the consolidated financial statements.",
+          "candidate_value": "Unqualified audit opinion by PwC",
+          "label": "CORRECT",
+          "error_type": null,
+          "source_value": "Independent Auditor's Report: 'In our opinion, the consolidated financial statements present fairly... in accordance with International Financial Reporting Standards as adopted by the European Union.' The report is unqualified.",
+          "source_evidence": "Independent Auditor's Report: States an unqualified opinion on the consolidated financial statements as of 31 December 2025.",
+          "error_explanation": null
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": true,
+      "context": "dedicated numerical-only recovery",
+      "original_parse_error": "JSONDecodeError: Expecting ',' delimiter: line 222 column 6 (char 20076)",
+      "repaired_model_output_text": "```json\n{\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue declined 2.6% to €919.6 million from €944.6 million, while profit before tax fell 31.4% to €24.3 million.\",\n      \"candidate_value\": \"Revenue decline: 2.6%, Revenue 2025: €919.6 million, Revenue 2024: €944.6 million, Profit before tax decline: 31.4%, Profit before tax 2025: €24.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Revenue 2025: €919.6 million (2.6% decrease from €944.6 million in 2024); Profit before tax 2025: €24.3 million (31.4% decrease from 2024)\",\n      \"source_evidence\": \"Management Report: 'The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024... The Group’s profit before tax for 2025 was 24.3 million euros, declining by 31.4% year on year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Net profit decreased 36.1% to €17.5 million, reducing earnings per share from €0.67 to €0.43.\",\n      \"candidate_value\": \"Net profit decline: 36.1%, Net profit 2025: €17.5 million, EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Net profit 2025: €17.5 million (36.1% decrease from €27.5 million in 2024); EPS 2024: €0.67, EPS 2025: €0.43\",\n      \"source_evidence\": \"Management Report: 'Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year... 43 Cents Net profit per share (2024: 67 cents)'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit declined from €47.6 million to €34.9 million, and EBITDA fell 14.7% to €77.4 million.\",\n      \"candidate_value\": \"Operating profit 2024: €47.6 million, Operating profit 2025: €34.9 million, EBITDA decline: 14.7%, EBITDA 2025: €77.4 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Operating profit 2025: €35 million (approx. €34.9 million); EBITDA 2025: €77.4 million (14.7% decrease from €90.7 million in 2024)\",\n      \"source_evidence\": \"Financial Ratios Table: Operating profit 2025: 35 million EUR, 2024: 48 million EUR; EBITDA 2025: 77 million EUR, 2024: 91 million EUR. Management Report: 'Operating profit amounted to 35 million euros... EBITDA amounted to 77.4 million euros, representing a decrease of 14.7% compared to 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"The EBITDA margin decreased to 8.4% from 9.6%, while the net margin fell to 2% from 3%.\",\n      \"candidate_value\": \"EBITDA margin 2025: 8.4%, EBITDA margin 2024: 9.6%, Net margin 2025: 2%, Net margin 2024: 3%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EBITDA margin 2025: 8.4% (77.4/919.6), 2024: 9.6% (90.7/944.6); Net margin 2025: 2% (17.5/919.6), 2024: 3% (27.5/944.6)\",\n      \"source_evidence\": \"Financial Ratios Table: EBITDA margin and Net margin for 2024 and 2025. Management Report: 'EBITDA margin decreased to 8.4% from 9.6%... net margin fell to 2% from 3%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Gross profit declined to €254.6 million, although the gross margin improved slightly to 27.7%.\",\n      \"candidate_value\": \"Gross profit 2025: €254.6 million, Gross margin 2025: 27.7%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Gross profit 2025: €254.6 million (27.7% margin), compared to €259.8 million (27.5% margin) in 2024\",\n      \"source_evidence\": \"Financial Ratios Table: Gross profit and Gross margin for 2024 and 2025. Management Report: 'Gross profit declined to 254.6 million euros, although the gross margin improved slightly to 27.7%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Revenue fell 11.9% to €176.9 million, EBITDA declined 40.3% to €8.1 million, and net profit dropped 54.4% to €4.3 million.\",\n      \"candidate_value\": \"Car trade revenue decline: 11.9%, Car trade revenue 2025: €176.9 million, Car trade EBITDA decline: 40.3%, Car trade EBITDA 2025: €8.1 million, Car trade net profit decline: 54.4%, Car trade net profit 2025: €4.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Car trade revenue 2025: €176.9 million (11.9% decrease from €200.8 million in 2024); Car trade EBITDA 2025: €8.1 million (40.3% decrease from €13.6 million in 2024); Car trade net profit 2025: €4.3 million (54.4% decrease from €9.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Car trade revenue, EBITDA and net profit for 2024 and 2025. Management Report: 'Despite the difficult market situation, the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year... EBITDA declined 40.3% to €8.1 million... net profit dropped 54.4% to €4.3 million.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"The introduction of Estonia’s motor vehicle tax, weaker consumer confidence and demand brought forward into late 2024 contributed to a 48.6% decline in new passenger car sales in Estonia.\",\n      \"candidate_value\": \"New passenger car sales decline in Estonia: 48.6%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"New passenger car sales in Estonia declined by 48.6% in 2025 compared to 2024\",\n      \"source_evidence\": \"Management Report: 'According to AMTEL data, 13,055 new passenger cars were sold in Estonia in 2025, which was 48.6% below the level of 2024.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The supermarket segment delivered broadly stable revenue of €611.9 million, up 0.3%, but its net profit declined 38.6% to €9.5 million as lower sales volumes, promotional pricing, wage pressure and refurbishment costs affected margins.\",\n      \"candidate_value\": \"Supermarket revenue 2025: €611.9 million (+0.3% from 2024), Supermarket net profit decline: 38.6%, Supermarket net profit 2025: €9.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Supermarket revenue 2025: €611.9 million (0.3% increase from €610.4 million in 2024); Supermarket net profit 2025: €9.5 million (38.6% decrease from €15.5 million in 2024)\",\n      \"source_evidence\": \"Segment Reporting Table: Supermarket revenue and net profit for 2024 and 2025. Management Report: 'The consolidated revenue of the supermarket business segment in 2025 was 611.9 million euros, increasing by 0.3% year on year... Net profit for 2025 totalled 9.5 million euros, declining by 38.6% compared to the previous year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Department stores recorded a €0.5 million net loss, while security services recorded a €0.04 million loss.\",\n      \"candidate_value\": \"Department stores net loss: €0.5 million, Security services net loss: €0.04 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Department stores net loss: €0.5 million; Security services net loss: €0.04 million\",\n      \"source_evidence\": \"Segment Reporting Table: Department stores net profit/(loss) 2025: -0.5 million EUR; Security segment net profit/(loss) 2025: 0.0 million EUR (with loss before tax of €0.04 million as stated in Management Report). Management Report: 'Only the department stores segment recorded a small loss... The security segment’s... recorded a loss before tax of 0.04 million euros in 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Real estate revenue increased 5.1% to €7.7 million and net profit rose 20.5% to €6.3 million, although the prior year benefited from €4.0 million of one-off gains from property revaluations and disposals.\",\n      \"candidate_value\": \"Real estate revenue increase: 5.1%, Real estate revenue 2025: €7.7 million, Real estate net profit increase: 20.5%, Real estate net profit 2025: €6.3 million, One-off gains in 2024: €4.0 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Real estate revenue 2025: €7.7 million (5.1% increase from €7.3 million in 2024); Real estate net profit 2025: €6.3 million (20.5% increase from €5.2 million in 2024); One-off gains in 2024: €4.0 million (comprising €2.1 million from revaluation and €1.9 million from disposals)\",\n      \"source_evidence\": \"Segment Reporting Table: Real estate revenue and net profit for 2024 and 2025. Management Report: 'Real estate revenue increased 5.1% to €7.7 million... net profit rose 20.5% to €6.3 million... The comparative base year included one-off profit of 4.0 million euros, of which 2.1 million euros resulted from the revaluation of investment properties and 1.9 million euros from extraordinary profit arising from the sale of two non-core properties.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Staff costs increased 3.7%, while other operating expenses rose only 0.2%.\",\n      \"candidate_value\": \"Staff cost increase: 3.7%, Other operating expense increase: 0.2%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Staff costs increased by 3.7% (from €112.2 million in 2024 to €116.4 million in 2025); Other operating expenses increased by 0.2% (from €61.5 million in 2024 to €61.7 million in 2025)\",\n      \"source_evidence\": \"Note 21 and Note 22: Staff costs and other operating expenses for 2024 and 2025. Management Report: 'Labour costs increased by 3.7% for the year as a whole... The Group has also kept other operating expenses stable, with annual growth of 0.2%.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Lower borrowing interest reduced finance costs by €1.5 million, and income tax expense fell by €1.2 million.\",\n      \"candidate_value\": \"Finance cost reduction: €1.5 million, Income tax expense reduction: €1.2 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Finance costs decreased by €1.5 million (from €12.9 million in 2024 to €11.3 million in 2025); Income tax expense decreased by €1.2 million (from €8.0 million in 2024 to €6.8 million in 2025)\",\n      \"source_evidence\": \"Note 23: Finance costs and income tax expense for 2024 and 2025. Management Report: 'Net profit was positively affected by a decline in interest on the Group’s borrowings, providing relief of 1.5 million euros for the year compared to the previous year... The company’s income tax expense decreased by 1.2 million euros in 2025... due to the recalculation of deferred income tax.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Operating cash flow remained strong at €65.6 million, compared with €73.1 million in 2024.\",\n      \"candidate_value\": \"Operating cash flow 2025: €65.6 million, Operating cash flow 2024: €73.1 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash flows from operating activities 2025: €65.6 million, 2024: €73.1 million\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Cash flows from operating activities for 2024 and 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Total investments decreased to €25.5 million from €36.6 million, mainly funding real estate projects, new car facilities, store refurbishments and digital systems.\",\n      \"candidate_value\": \"Total investments 2025: €25.5 million, Total investments 2024: €36.6 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Total investments 2025: €25.5 million, 2024: €36.6 million\",\n      \"source_evidence\": \"Management Report: 'Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024)... Of this amount, 23.5 million euros were invested in tangible fixed assets... investments of 4.1 million euros were made in 2025 [supermarkets], 1.5 million euros [department stores], 2.6 million euros [car segment], 0.4 million euros [security segment], and 14.8 million euros [real estate segment].'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"Financing outflows, including dividends, debt repayments and lease payments, resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.\",\n      \"candidate_value\": \"Cash decline: €15.9 million, Cash at year-end 2025: €29.5 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Cash and cash equivalents decreased by €15.9 million (from €45.5 million at end of 2024 to €29.5 million at end of 2025)\",\n      \"source_evidence\": \"Consolidated Cash Flow Statement: Net change in cash and cash equivalents and cash and cash equivalents at end of period for 2024 and 2025. Management Report: 'A total of 1,540,805 shares were traded during the year, with a total transaction value of 14,664,134.18 euros... At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group paid €26.5 million in dividends... Financing outflows... resulted in a €15.9 million decline in cash, leaving €29.5 million at year-end.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S20\"],\n      \"claim\": \"Net debt increased to €291.0 million from €278.9 million, while equity rose modestly to €263.8 million, supported partly by an €11.2 million property revaluation.\",\n      \"candidate_value\": \"Net debt 2025: €291.0 million, Net debt 2024: €278.9 million, Equity 2025: €263.8 million, Property revaluation: €11.2 million\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"Net debt is negative (cash exceeds debt): Net debt 2025: -€290.96 million, Net debt 2024: -€278.94 million; Equity 2025: €263.75 million; Property revaluation reserve increase: €11.17 million\",\n      \"source_evidence\": \"Consolidated Statement of Changes in Equity and Net Debt Reconciliation: Net debt is calculated as total borrowings minus cash and cash equivalents, resulting in negative values. Equity increased to €263.75 million in 2025 from €261.53 million in 2024, with €11.17 million of this increase coming from property revaluation reserve. Management Report: 'At the end of the reporting period, the number of loyal customers exceeded 750 thousand... The Group’s liquidity ratio... stood at 0.31 in 2025... Coverage of short-term liabilities has temporarily decreased due to the increase in current liabilities... In management’s assessment, there are no obstacles to extending the short-term loan agreements.'\",\n      \"error_explanation\": \"The candidate incorrectly states that net debt increased to a positive €291.0 million. The source shows net debt is negative (cash exceeds debt) at -€290.96 million in 2025 (compared to -€278.94 million in 2024). The increase in the absolute value of negative net debt does not equate to an increase in positive net debt. Equity did rise to €263.75 million, supported by the €11.17 million property revaluation, but the net debt figure is fundamentally wrong.\"\n    },\n    {\n      \"id\": \"N17\",\n      \"candidate_sentence_ids\": [\"S21\"],\n      \"claim\": \"Current liabilities increased because €32.1 million of loans maturing in 2026 were reclassified as current; refinancing had begun, and management reported no liquidity issues.\",\n      \"candidate_value\": \"Current liabilities increase due to €32.1 million reclassification of loans maturing in 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Current liabilities increased by €13.06 million due to reclassification of €32.13 million of long-term loans maturing in 2026 to current liabilities\",\n      \"source_evidence\": \"Note 15 and Note 17: Current liabilities increased from €155.43 million in 2024 to €168.49 million in 2025. Management Report: 'At the end of 2025, the volume of short-term loan liabilities increased significantly due to the final instalments of several long-term loans maturing in 2026, amounting to 32,129 thousand euros, which are classified as current liabilities as at year-end... The loans maturing in 2026 are planned to be refinanced during 2026... In the management’s assessment, the company does not face liquidity issues.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N18\",\n      \"candidate_sentence_ids\": [\"S22\"],\n      \"claim\": \"The Group paid €26.5 million in dividends, or €0.65 per share, and proposed a 2025 dividend of €24.4 million, or €0.60 per share.\",\n      \"candidate_value\": \"Dividends paid 2025: €26.5 million (€0.65 per share), Proposed dividend 2025: €24.4 million (€0.60 per share)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Dividends paid in 2025: €26.473 million (€0.65 per share); Proposed dividend for 2025: €24.438 million (€0.60 per share)\",\n      \"source_evidence\": \"Note 19: Dividends paid in 2025 were €26,473 thousand (€0.65 per share). The Chairman of the Management Board proposed a dividend of €24,438 thousand (€0.60 per share) for approval at the General Meeting. Management Report: 'The general meeting of shareholders was held on 17 March 2025, and the amount of the dividend payment of 0.65 euros per share from the net profit was approved... The Chairman of the Management Board of TKM Grupp AS proposes to the General Meeting of Shareholders to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N19\",\n      \"candidate_sentence_ids\": [\"S23\"],\n      \"claim\": \"In January 2026, it agreed to acquire three companies involved in Škoda retail and servicing, subject to conditions, with completion expected between February and June 2026.\",\n      \"candidate_value\": \"Acquisition agreement date: January 2026, Target companies: three Škoda retail and servicing companies, Completion period: February to June 2026\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Acquisition agreement signed on 7 January 2026 for three companies (Rohe Auto AS, SKO Motors OÜ, and a real estate holding company); Completion expected between February and June 2026 subject to conditions\",\n      \"source_evidence\": \"Note 31: 'On 7 January 2026, TKM Auto OÜ... entered into a share and quota purchase agreement... Completion of the transaction is subject to several conditions precedent... In the management’s assessment, the transfer of control will take place on the date of completion of the transaction, which is expected to fall between 20 February 2026 and 30 June 2026.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N20\",\n      \"candidate_sentence_ids\": [\"S24\"],\n      \"claim\": \"PwC issued an unqualified audit opinion on the consolidated financial statements.\",\n      \"candidate_value\": \"Unqualified audit opinion by PwC\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Independent Auditor's Report: 'In our opinion, the consolidated financial statements present fairly... in accordance with International Financial Reporting Standards as adopted by the European Union.' The report is unqualified.\",\n      \"source_evidence\": \"Independent Auditor's Report: States an unqualified opinion on the consolidated financial statements as of 31 December 2025.\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```"
+    },
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens_including_reasoning": 0,
+      "total_tokens": 0
+    }
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

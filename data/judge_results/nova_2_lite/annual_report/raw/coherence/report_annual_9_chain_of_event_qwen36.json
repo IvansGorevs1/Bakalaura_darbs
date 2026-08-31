@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T22:22:35.434223",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_9_chain_of_event_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "5986eeccc2a6b44b",
+    "sentence_map_hash": "eb06cae0053470ce",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Impero A/S reported resilient financial performance for the fiscal year 2025, characterized by strong revenue growth and significant improvement in profitability metrics, despite macroeconomic headwinds.",
+    "S2": "The company achieved Annual Recurring Revenue of DKK 46.2 million, representing a 19% year-on-year increase from DKK 38.7 million in 2024.",
+    "S3": "This growth placed the company at the upper end of its revised guidance range and was driven by robust performance in its core markets, with the Danish market growing by 22% and the DACH region by 26%.",
+    "S4": "The company also reached a milestone of surpassing 200 customers, with the top ten customer concentration decreasing to 20% from 37% in 2020, thereby reducing revenue concentration risk.",
+    "S5": "Revenue recognized in the income statement increased by 19% to DKK 42.0 million, up from DKK 35.4 million in the prior year.",
+    "S6": "This top-line growth was supported by a record-high Average ARR per Account of DKK 228,000, reflecting a successful land-and-expand strategy that yielded a gross uplift of 12%.",
+    "S7": "The company maintained exceptionally low churn at just 1%, and Net Revenue Retention stood at 106%, indicating strong customer retention and expansion within the existing base.",
+    "S8": "Profitability improved markedly compared to the previous period.",
+    "S9": "EBITDA improved by DKK 5.6 million to a loss of DKK 3.1 million, compared to a loss of DKK 8.7 million in 2024.",
+    "S10": "This improvement was primarily attributed to the 19% revenue increase outpacing the 6% rise in staff costs and the 6% increase in other external expenses.",
+    "S11": "Operating profit also improved significantly, narrowing the loss to DKK 6.7 million from DKK 11.7 million in 2024.",
+    "S12": "The company capitalized DKK 5.2 million in development costs, an increase from DKK 3.6 million in 2024, which positively impacted the EBITDA figure.",
+    "S13": "The financial results were influenced by strategic shifts in capital allocation and market conditions.",
+    "S14": "Following a difficult start to the year due to geopolitical uncertainty, the company regained momentum in the second half, delivering its best second-half net new ARR ever.",
+    "S15": "To support future growth, Impero raised DKK 15 million through a directed issue in December 2025, strengthening its equity position to DKK 15.4 million and ending the year with DKK 18.9 million in cash.",
+    "S16": "Consequently, the Board of Directors deferred the ambition of achieving positive recurring cash flow before the end of 2026 to prioritize commercial investments aimed at higher long-term value creation.",
+    "S17": "Looking ahead, the company guides for 2026 ARR between DKK 53 million and 57 million, reflecting expected growth of 15% to 23%, with EBITDA projected to range from a loss of DKK 2 million to a profit of DKK 1 million."
+  },
+  "usage": {
+    "input_tokens": 1245,
+    "output_tokens_including_reasoning": 294,
+    "total_tokens": 1539
+  },
+  "latency_seconds": 2.35,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S8\", \"S9\", \"S11\"],\n      \"description\": \"While profitability improvement is stated (S8), the specific metrics (EBITDA and operating profit losses in S9 and S11) create a logical gap. The summary does not explain how these losses reconcile with the claim of 'marked' profitability improvement, leaving the reader to infer the nature of this improvement without explicit clarification.\"\n    }\n  ],\n  \"justification\": \"The candidate summary is generally coherent with a clear narrative structure covering revenue growth, customer metrics, profitability, and future guidance. However, there is a notable logical gap in the profitability section where the summary states profitability improved markedly (S8) but then details continued losses in EBITDA (S9) and operating profit (S11) without explaining how these losses align with the improvement claim. While the context of outpacing cost increases is provided (S10), the juxtaposition of 'improved profitability' with ongoing losses creates an unresolved tension. All other sections flow logically, with no self-contradictions, excessive repetition, or organizational issues. The arithmetic differences between segment totals and consolidated figures are not claimed to be directly additive, so they do not constitute contradictions under the evaluation constraints.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9",
+          "S11"
+        ],
+        "description": "While profitability improvement is stated (S8), the specific metrics (EBITDA and operating profit losses in S9 and S11) create a logical gap. The summary does not explain how these losses reconcile with the claim of 'marked' profitability improvement, leaving the reader to infer the nature of this improvement without explicit clarification."
+      }
+    ],
+    "justification": "The candidate summary is generally coherent with a clear narrative structure covering revenue growth, customer metrics, profitability, and future guidance. However, there is a notable logical gap in the profitability section where the summary states profitability improved markedly (S8) but then details continued losses in EBITDA (S9) and operating profit (S11) without explaining how these losses align with the improvement claim. While the context of outpacing cost increases is provided (S10), the juxtaposition of 'improved profitability' with ongoing losses creates an unresolved tension. All other sections flow logically, with no self-contradictions, excessive repetition, or organizational issues. The arithmetic differences between segment totals and consolidated figures are not claimed to be directly additive, so they do not constitute contradictions under the evaluation constraints."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

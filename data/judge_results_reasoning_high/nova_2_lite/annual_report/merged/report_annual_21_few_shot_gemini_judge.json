@@ -1,0 +1,719 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_21_few_shot_gemini.txt",
+    "report": "report_annual_21.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the financial year ended December 31, 2025, AS Tallinna Sadam Group demonstrated stable overall financial performance, characterized by improved profitability despite a minor decrease in total revenue.",
+    "S2": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million, primarily driven by lower charter fees for the icebreaker Botnica resulting from fewer operating days.",
+    "S3": "This decrease was partially offset by growth across other revenue streams, including higher vessel dues supported by larger vessel capacities and fee indexing, increased operating lease income, passenger fees, cargo charges, and ferry service revenue.",
+    "S4": "Despite the slight contraction in revenue, profitability indicators showed significant improvement.",
+    "S5": "Adjusted EBITDA grew by 6.4 percent to EUR 56.5 million, raising the adjusted EBITDA margin to 47.6 percent from 44.4 percent in the prior year.",
+    "S6": "Operating profit increased by 12.2 percent to EUR 32.7 million, benefiting from a 10 percent reduction in operating expenses down to EUR 36.4 million, largely due to lower non-current asset repair costs and the receipt of an insurance indemnity.",
+    "S7": "Furthermore, net profit rose by 17.3 percent to EUR 22.5 million, supported by a 30 percent decrease in finance costs resulting from lower market interest rates and reduced loan liabilities, which outweighed an increase in income tax expense on dividends due to a higher tax rate.",
+    "S8": "Operational results reflected positive developments across core business segments.",
+    "S9": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes, supported by a significant recovery in liquid bulk volumes as well as robust shipments of steel and grain.",
+    "S10": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million, driven by growth on the Tallinn to Helsinki route and a 25 percent increase in cruise passengers.",
+    "S11": "In domestic ferry services, TS Laevad served 2.5 million passengers and 1.2 million vehicles across 23,050 trips, achieving higher vehicle transport volumes despite a slight decrease in total voyages.",
+    "S12": "Conversely, the utilization rate of the icebreaker Botnica fell to 49 percent due to fewer active project charter days, though the vessel successfully participated in a notable rescue operation in northern Canada.",
+    "S13": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year.",
+    "S14": "Major capital allocations included the completion of a new multifunctional quay and back-up area at Paldiski South Harbour, ongoing infrastructure improvements, and preparations for future shore power installations.",
+    "S15": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million.",
+    "S16": "Continuing its commitment to shareholder value, the company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit.",
+    "S17": "Overall, the reporting period reflected successful strategic execution, solid cost discipline, and resilient operational performance across the Group's diversified business portfolio."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_21.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_21.json",
+    "key_information_hash": "3fc96d4b91b972e6",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 14,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 14
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallinna Sadam Group demonstrated stable overall financial performance, characterized by improved profitability despite a minor decrease in total revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "The CEO letter states '2025 was a meaningful and results-driven year... strengthened the company’s economic position' and financial results show profit increased by 17.3% despite revenue decline.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended December 31, 2025, AS Tallinna Sadam Group demonstrated stable overall financial performance, characterized by improved profitability despite a minor decrease in total revenue."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million, primarily driven by lower charter fees for the icebreaker Botnica resulting from fewer operating days.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20 shows revenue decreased from EUR 119,587k to EUR 118,687k (-0.8%). Note 20 and 5.7 explain the decline in charter fees (Botnica) due to fewer charter days.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million, primarily driven by lower charter fees for the icebreaker Botnica resulting from fewer operating days."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This decrease was partially offset by growth across other revenue streams, including higher vessel dues supported by larger vessel capacities and fee indexing, increased operating lease income, passenger fees, cargo charges, and ferry service revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20 details increases in vessel dues (+8%), lease income (+3%), passenger fees (+3%), cargo charges (+3%), and ferry service revenue (+1%).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This decrease was partially offset by growth across other revenue streams, including higher vessel dues supported by larger vessel capacities and fee indexing, increased operating lease income, passenger fees, cargo charges, and ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Despite the slight contraction in revenue, profitability indicators showed significant improvement.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results show operating profit +12.2%, adjusted EBITDA +6.4%, and net profit +17.3% despite revenue decline.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the slight contraction in revenue, profitability indicators showed significant improvement."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operational results reflected positive developments across core business segments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Sections 5.6.1-5.6.4 detail growth in passengers, cargo, ferry services, and icebreaker operations.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operational results reflected positive developments across core business segments."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes, supported by a significant recovery in liquid bulk volumes as well as robust shipments of steel and grain.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20 shows cargo volume increased from 13,134k t to 13,799k t (+5.1%). CEO letter mentions 'liquid bulk volumes recovered... record shipments of steel and grain.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes, supported by a significant recovery in liquid bulk volumes as well as robust shipments of steel and grain."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million, driven by growth on the Tallinn to Helsinki route and a 25 percent increase in cruise passengers.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20 shows passengers increased from 8,201k to 8,284k (+1.0%). Section 5.6.1 details Tallinn-Helsinki route growth and 25% cruise passenger increase.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million, driven by growth on the Tallinn to Helsinki route and a 25 percent increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "In domestic ferry services, TS Laevad served 2.5 million passengers and 1.2 million vehicles across 23,050 trips, achieving higher vehicle transport volumes despite a slight decrease in total voyages.",
+        "label": "SUPPORTED",
+        "source_evidence": "Section 5.6.3 states TS Laevad served 2.5M passengers (+1.2%), 1.2M vehicles (+3.5%), and 23,050 trips (-0.6%).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "In domestic ferry services, TS Laevad served 2.5 million passengers and 1.2 million vehicles across 23,050 trips, achieving higher vehicle transport volumes despite a slight decrease in total voyages."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Conversely, the utilization rate of the icebreaker Botnica fell to 49 percent due to fewer active project charter days, though the vessel successfully participated in a notable rescue operation in northern Canada.",
+        "label": "SUPPORTED",
+        "source_evidence": "Section 5.6.4 reports Botnica utilization at 49% (vs. 60% in 2024) and mentions participation in the Thamesborg rescue operation.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Conversely, the utilization rate of the icebreaker Botnica fell to 49 percent due to fewer active project charter days, though the vessel successfully participated in a notable rescue operation in northern Canada."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 26 shows investments of EUR 33,245k (2025) vs. EUR 38,831k (2024), a decrease of 14.4%.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Major capital allocations included the completion of a new multifunctional quay and back-up area at Paldiski South Harbour, ongoing infrastructure improvements, and preparations for future shore power installations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Section 5.10 details completion of the Paldiski South Harbour quay, infrastructure investments, and shore power capacity planning.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Major capital allocations included the completion of a new multifunctional quay and back-up area at Paldiski South Harbour, ongoing infrastructure improvements, and preparations for future shore power installations."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of financial position shows total assets of EUR 622,063k, equity of EUR 380,877k, and net debt of EUR 141,708k.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Continuing its commitment to shareholder value, the company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 19 states dividends of EUR 19,199k (100% of 2024 profit) at EUR 0.073 per share.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Continuing its commitment to shareholder value, the company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Overall, the reporting period reflected successful strategic execution, solid cost discipline, and resilient operational performance across the Group's diversified business portfolio.",
+        "label": "SUPPORTED",
+        "source_evidence": "Supported by the financial and operational results detailed throughout the report, including profit growth, cost reductions, and segment performance.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Overall, the reporting period reflected successful strategic execution, solid cost discipline, and resilient operational performance across the Group's diversified business portfolio."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million",
+        "candidate_value": "0.8% decline to EUR 118.7 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Revenue decreased from EUR 119,587k to EUR 118,687k (0.8% decline)",
+        "source_evidence": "Note 20: Revenue 2025 = EUR 118,687k; 2024 = EUR 119,587k",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million, primarily driven by lower charter fees for the icebreaker Botnica resulting from fewer operating days."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Adjusted EBITDA grew by 6.4 percent to EUR 56.5 million, raising the adjusted EBITDA margin to 47.6 percent from 44.4 percent in the prior year",
+        "candidate_value": "6.4% growth to EUR 56.5 million (47.6% margin)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Adjusted EBITDA increased from EUR 53,134k to EUR 56,510k (6.4% growth); margin increased from 44.4% to 47.6%",
+        "source_evidence": "Note 20: Adjusted EBITDA 2025 = EUR 56,510k; 2024 = EUR 53,134k; margin calculation confirmed",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Adjusted EBITDA grew by 6.4 percent to EUR 56.5 million, raising the adjusted EBITDA margin to 47.6 percent from 44.4 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating profit increased by 12.2 percent to EUR 32.7 million, benefiting from a 10 percent reduction in operating expenses down to EUR 36.4 million",
+        "candidate_value": "12.2% increase to EUR 32.7 million; 10% reduction to EUR 36.4 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating profit increased from EUR 29,148k to EUR 32,704k (12.2% increase); operating expenses decreased from EUR 40,427k to EUR 36,412k (10% reduction)",
+        "source_evidence": "Note 20 & Note 21: Operating profit and operating expenses figures match",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Operating profit increased by 12.2 percent to EUR 32.7 million, benefiting from a 10 percent reduction in operating expenses down to EUR 36.4 million, largely due to lower non-current asset repair costs and the receipt of an insurance indemnity."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net profit rose by 17.3 percent to EUR 22.5 million, supported by a 30 percent decrease in finance costs resulting from lower market interest rates and reduced loan liabilities",
+        "candidate_value": "17.3% increase to EUR 22.5 million; 30% decrease in finance costs",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net profit increased from EUR 19,153k to EUR 22,463k (17.3% increase); finance costs decreased from EUR 8,257k to EUR 5,773k (30% decrease)",
+        "source_evidence": "Note 20 & Note 23: Profit and finance costs figures match",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Furthermore, net profit rose by 17.3 percent to EUR 22.5 million, supported by a 30 percent decrease in finance costs resulting from lower market interest rates and reduced loan liabilities, which outweighed an increase in income tax expense on dividends due to a higher tax rate."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes",
+        "candidate_value": "5.1% growth to 13.8 million tonnes",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cargo volume increased from 13,134k t to 13,799k t (5.1% growth)",
+        "source_evidence": "Note 20: Cargo volume 2025 = EUR 13,799k t; 2024 = EUR 13,134k t",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes, supported by a significant recovery in liquid bulk volumes as well as robust shipments of steel and grain."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million",
+        "candidate_value": "1.0% increase to 8.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Passengers increased from 8,201k to 8,284k (1.0% increase)",
+        "source_evidence": "Note 20: Passenger numbers 2025 = 8,284k; 2024 = 8,201k",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million, driven by growth on the Tallinn to Helsinki route and a 25 percent increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "TS Laevad served 2.5 million passengers and 1.2 million vehicles across 23,050 trips",
+        "candidate_value": "2.5 million passengers, 1.2 million vehicles, 23,050 trips",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "TS Laevad served 2.5M passengers, 1.2M vehicles, and 23,050 trips",
+        "source_evidence": "Section 5.6.3: Passenger and vehicle numbers and trip count match",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "In domestic ferry services, TS Laevad served 2.5 million passengers and 1.2 million vehicles across 23,050 trips, achieving higher vehicle transport volumes despite a slight decrease in total voyages."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The utilization rate of the icebreaker Botnica fell to 49 percent",
+        "candidate_value": "49% utilization",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Botnica utilization rate was 49% in 2025",
+        "source_evidence": "Section 5.6.4: Utilisation rate for icebreaker Botnica was 49% in 2025",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Conversely, the utilization rate of the icebreaker Botnica fell to 49 percent due to fewer active project charter days, though the vessel successfully participated in a notable rescue operation in northern Canada."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year",
+        "candidate_value": "EUR 33.2 million; 14.4% decrease",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Investments were EUR 33,245k in 2025 vs. EUR 38,831k in 2024 (14.4% decrease)",
+        "source_evidence": "Note 26: Investment amounts match",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million",
+        "candidate_value": "EUR 622.1 million assets, EUR 380.9 million equity, EUR 141.7 million net debt",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total assets: EUR 622,063k; equity: EUR 380,877k; net debt: EUR 141,708k",
+        "source_evidence": "Consolidated statement of financial position: Assets = EUR 622,063k; Equity = EUR 380,877k; Net debt calculation matches",
+        "error_explanation": "Rounding differences are within acceptable limits (e.g., EUR 622.1M vs. EUR 622.063M)",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit",
+        "candidate_value": "EUR 19.2 million; EUR 0.073 per share; 100% payout",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Dividends paid were EUR 19,199k (EUR 19.2M) at EUR 0.073 per share, equal to 100% of 2024 profit",
+        "source_evidence": "Note 19: Dividend amount, per-share amount, and payout ratio match",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Continuing its commitment to shareholder value, the company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance showing revenue of EUR 118.7 million (-0.8%), adjusted EBITDA of EUR 56.5 million (+6%), profit of EUR 22.5 million (+17%), and investments of EUR 33.2 million (-14%), with improved equity position and reduced net debt.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Section 5.1 Key performance indicators table and surrounding text; Consolidated Financial Statements",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S5",
+          "S7",
+          "S13",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended December 31, 2025, AS Tallinna Sadam Group demonstrated stable overall financial performance, characterized by improved profitability despite a minor decrease in total revenue."
+          },
+          {
+            "id": "S2",
+            "text": "Consolidated revenue declined by 0.8 percent compared with the previous year to EUR 118.7 million, primarily driven by lower charter fees for the icebreaker Botnica resulting from fewer operating days."
+          },
+          {
+            "id": "S4",
+            "text": "Despite the slight contraction in revenue, profitability indicators showed significant improvement."
+          },
+          {
+            "id": "S5",
+            "text": "Adjusted EBITDA grew by 6.4 percent to EUR 56.5 million, raising the adjusted EBITDA margin to 47.6 percent from 44.4 percent in the prior year."
+          },
+          {
+            "id": "S7",
+            "text": "Furthermore, net profit rose by 17.3 percent to EUR 22.5 million, supported by a 30 percent decrease in finance costs resulting from lower market interest rates and reduced loan liabilities, which outweighed an increase in income tax expense on dividends due to a higher tax rate."
+          },
+          {
+            "id": "S13",
+            "text": "Capital investments totaled EUR 33.2 million during the reporting period, representing a 14.4 percent decrease compared with the previous year."
+          },
+          {
+            "id": "S15",
+            "text": "The Group maintained a strong financial position, closing the year with total assets of EUR 622.1 million, total equity of EUR 380.9 million, and a reduced net debt of EUR 141.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Passenger business growth with 8.3 million passengers (+1.0% YoY), dominated by Tallinn-Helsinki route (+1% passengers), and cruise tourism recovery featuring 190 thousand cruise passengers (+25%) and 118 calls (+18), offset by Tallinn-Stockholm decline.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.4 Market overview: passengers and 5.6.1 Number of passengers",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The number of passengers served across the Group increased by 1.0 percent to 8.3 million, driven by growth on the Tallinn to Helsinki route and a 25 percent increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Cargo volume recovery to 13.8 million tonnes (+5.1% YoY) driven by liquid bulk surge (+47%, led by ligroin and gasoline), transit goods growth (+75%), and dry bulk increase, partially offset by ro-ro and container declines.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.5 Market overview: cargo and 5.6.2 Cargo volume",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total cargo volume grew by 5.1 percent to 13.8 million tonnes, supported by a significant recovery in liquid bulk volumes as well as robust shipments of steel and grain."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Major strategic infrastructure investments including completion of multifunctional quay at Paldiski South Harbour, Muuga Harbour quay reinforcement for large vessels, and ongoing design work for Old City Harbour Terminal A and shore power capacity.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Section 5.10 Investments and development prospects",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Major capital allocations included the completion of a new multifunctional quay and back-up area at Paldiski South Harbour, ongoing infrastructure improvements, and preparations for future shore power installations."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Dividend distribution of EUR 19.199 million (EUR 0.073 per share) representing 100% of prior year profit, aligned with policy, accompanied by share price appreciation to EUR 1.296 (+22.7%).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.11 Dividends and 5.12 Share and shareholders",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Continuing its commitment to shareholder value, the company paid out EUR 19.2 million in dividends, representing EUR 0.073 per share and 100 percent of the prior year profit."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Adverse impact of Russia-Ukraine war reducing liquid bulk volumes and eliminating St. Petersburg cruise calls, partially mitigated by winter cruise season extension, regional marketing, and economic recovery in Estonia and Nordic partners.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.2 Economic environment and 5.3 Impact of Russia-Ukraine war",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Icebreaker Botnica operated at reduced utilization rate (49%) with lower charter revenue, but participated in international rescue operations for cargo ship MV Thamesborg in Canadian Arctic waters.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Section 5.6.4 Icebreaker Botnica",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Conversely, the utilization rate of the icebreaker Botnica fell to 49 percent due to fewer active project charter days, though the vessel successfully participated in a notable rescue operation in northern Canada."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Environmental sustainability progress including 77% renewable energy usage in operations, GHG emissions reduction of 11% YoY to 19,261 tonnes CO2e, and initiatives for shore power and waste circularity at Old City Harbour.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Section 3 Environment and CEO letter (Section 1.4)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K5, and K7 are PRESENT with supporting sentences identified. K6 and K8 are MISSING as the candidate does not address war impacts or environmental sustainability metrics. The summary captures most core financial and operational themes but omits two HIGH/MEDIUM importance criteria, resulting in a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon each other without contradiction: revenue decline is explained by Botnica icebreaker factors while being offset by other streams (S2-S3); profitability improvements are supported by specific margin and profit growth figures (S4-S7); operational metrics show consistent growth across cargo, passengers, and routes (S9-S11); capital investments and financial position metrics are presented without conflict (S13-S15); and the conclusion ties together strategic execution and performance (S17). The structure flows logically from revenue to profitability to operations to capital and financials, with each section providing clear supporting details. No material repetitions or organizational issues are present."
+  },
+  "usage": {
+    "input_tokens_total": 85151,
+    "output_tokens_total_including_reasoning": 6995,
+    "total_tokens": 92146,
+    "latency_seconds_total": 39.74
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 163514,
+    "output_tokens_total_including_reasoning": 53159,
+    "total_tokens": 216673,
+    "latency_seconds_total": 185.3
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_21.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_21_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_21.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_21.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_21_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_21_few_shot_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_21_few_shot_gemini.json"
+    }
+  }
+}

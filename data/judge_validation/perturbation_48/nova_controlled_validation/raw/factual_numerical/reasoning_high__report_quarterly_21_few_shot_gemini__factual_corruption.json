@@ -1,0 +1,517 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T22:06:17.620548",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_quarterly_21_few_shot_gemini__factual_corruption.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "e4d289c22ea472ef",
+    "sentence_map_hash": "927c3ac111b75512",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_21.md",
+    "source_hash": "307f85badf7277ea",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first six months of 2026, AS Tallinna Sadam reported a slight decline in revenue alongside a notable improvement in profitability compared to the same period of the previous year.",
+    "S2": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, despite fewer charter days for the multifunctional icebreaker Botnica, lower electricity sales, and lower ferry service revenue.",
+    "S3": "In contrast, operating profit rose by EUR 4.7 million, or 25.7%, to EUR 13.6 million.",
+    "S4": "Adjusted EBITDA increased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period grew by EUR 4.3 million, or 41.7%, to EUR 6.0 million.",
+    "S5": "The operating profit margin increased from 31.6% to 22.9%.",
+    "S6": "The improvement in profitability was largely driven by lower operating expenses, which rose by EUR 3.9 million, or 24.0%.",
+    "S7": "Significant decreases were recorded in fuel costs because of lower diesel prices and mild ice conditions, as well as in maintenance and electricity costs.",
+    "S8": "The comparative period contained no one-off gains or insurance indemnities.",
+    "S9": "Operating volumes expanded across every category, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes.",
+    "S10": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.",
+    "S11": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial increase of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs.",
+    "S12": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million.",
+    "S13": "Net debt ended the period at EUR 145.8 million.",
+    "S14": "In May 2026, the company cancelled the proposed dividends totaling EUR 19.2 million.",
+    "S15": "Significant corporate developments included the rejection of municipal plans for terminal expansion, termination of negotiations with OP Corporate Bank, and withdrawal of all civil damage claims against former management board members.",
+    "S16": "The port also began operating a new passenger route to Stockholm that immediately became profitable."
+  },
+  "usage": {
+    "input_tokens": 23346,
+    "output_tokens_including_reasoning": 6374,
+    "total_tokens": 29720
+  },
+  "latency_seconds": 33.66,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"AS Tallinna Sadam reported a slight decline in revenue alongside a notable improvement in profitability compared to the same period of the previous year.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Revenue grew by EUR 1.4 million, or 2.4%, to EUR 59.3 million (source: Management Report and Note 11). Profitability improved but operating profit and profit for the period decreased compared to 2025 (source: Management Report and Note 18).\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, despite fewer charter days for the multifunctional icebreaker Botnica, lower electricity sales, and lower ferry service revenue.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Revenue grew due to higher charter days of Botnica, higher electricity sales, and higher ferry service revenue (source: Management Report and Note 11). The claim about 'fewer charter days', 'lower electricity sales', and 'lower ferry service revenue' contradicts the source.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Operating profit rose by EUR 4.7 million, or 25.7%, to EUR 13.6 million.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Operating profit decreased by EUR 4.7 million (25.7%) to EUR 13.6 million (source: Management Report and Note 18).\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Adjusted EBITDA increased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period grew by EUR 4.3 million, or 41.7%, to EUR 6.0 million.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Adjusted EBITDA decreased by EUR 4.0 million (13.5%) to EUR 25.8 million and profit for the period decreased by EUR 4.3 million (41.7%) to EUR 6.0 million (source: Management Report and Note 18).\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"The operating profit margin increased from 31.6% to 22.9%.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"The operating profit margin decreased from 31.6% to 22.9% (source: Management Report).\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"The improvement in profitability was largely driven by lower operating expenses, which rose by EUR 3.9 million, or 24.0%.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Operating expenses increased by EUR 3.9 million (24.0%), but this increase contributed to the decline in profitability, not improvement (source: Note 12 and Management Report).\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Significant decreases were recorded in fuel costs because of lower diesel prices and mild ice conditions, as well as in maintenance and electricity costs.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Fuel costs increased by EUR 1.4 million (47.6%) due to higher diesel prices and more severe ice conditions (source: Note 12). Maintenance and electricity costs also increased (source: Note 12).\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"The comparative period contained no one-off gains or insurance indemnities.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"The comparative period was positively affected by the profit from the disposal of land for the Rail Baltica project and the insurance indemnity received (source: Management Report).\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Operating volumes expanded across every category, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"The statement that 'operating volumes expanded across every category' is false; cargo volumes decreased by 5.0% to 6.5 million tonnes (source: Management Report and Operating Volumes section). The cargo volume figure itself is correct, but the overall claim about volume expansion is contradicted.\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Passenger numbers decreased by 2.0% to 3.586 million, vessel calls decreased by 4.8% to 3,376, and cruise passenger numbers grew by 47.8% (source: Key Performance Indicators table and Management Report).\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Group investments during the six-month period totaled EUR 3.5 million, representing a substantial increase of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Investments totaled EUR 3.5 million, which was EUR 8.5 million less than in the same period of the previous year (source: Investments section). The direction of the change ('increase') is incorrect.\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Total assets were EUR 615,034 thousand (615.0 million), a decrease of 1.1% from EUR 622,079 thousand at 31 December 2025. Equity was EUR 367,677 thousand (367.7 million) (source: Statement of Financial Position).\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Net debt ended the period at EUR 145.8 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Net debt at period-end was EUR 145,764 thousand (145.8 million) (source: Key Performance Indicators table).\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"In May 2026, the company cancelled the proposed dividends totaling EUR 19.2 million.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"A dividend of EUR 19.2 million was approved and paid out to shareholders on 20 May 2026 (source: Dividends section).\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Significant corporate developments included the rejection of municipal plans for terminal expansion, termination of negotiations with OP Corporate Bank, and withdrawal of all civil damage claims against former management board members.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Tallinn City Council adopted detailed plans for terminal expansion (source: Significant Events). The company entered into a loan agreement with OP Corporate Bank (source: Significant Events). Civil damage claims against former management board members were filed, not withdrawn (source: Investigations Concerning the Group section).\"\n    },\n    {\n      \"id\": \"F16\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"The port also began operating a new passenger route to Stockholm that immediately became profitable.\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": \"The source report discusses existing routes (Tallinn–Helsinki and Tallinn–Stockholm) but does not mention the launch of a new passenger route to Stockholm or its profitability.\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million\",\n      \"candidate_value\": \"59,262\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"59,262\",\n      \"source_evidence\": \"Revenue for the 6 months ended 30 June 2026 was EUR 59,262 thousand (source: Note 11 and Statement of Comprehensive Income).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Operating profit rose by EUR 4.7 million, or 25.7%, to EUR 13.6 million\",\n      \"candidate_value\": \"13,578\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"-4,708\",\n      \"source_evidence\": \"Operating profit decreased by EUR 4,708 thousand (25.7%) to EUR 13,578 thousand (source: Note 3 and Statement of Comprehensive Income).\",\n      \"error_explanation\": \"The direction of the change is inverted: the profit decreased, not increased.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Adjusted EBITDA increased by EUR 4.0 million, or 13.5%, to EUR 25.8 million\",\n      \"candidate_value\": \"25,769\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"-4,036\",\n      \"source_evidence\": \"Adjusted EBITDA decreased by EUR 4,036 thousand (13.5%) to EUR 25,769 thousand (source: Note 3 and Statement of Comprehensive Income).\",\n      \"error_explanation\": \"The direction of the change is inverted: Adjusted EBITDA decreased, not increased.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Profit for the period grew by EUR 4.3 million, or 41.7%, to EUR 6.0 million\",\n      \"candidate_value\": \"5,999\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"-4,287\",\n      \"source_evidence\": \"Profit for the period decreased by EUR 4,287 thousand (41.7%) to EUR 5,999 thousand (source: Note 3 and Statement of Comprehensive Income).\",\n      \"error_explanation\": \"The direction of the change is inverted: profit decreased, not increased.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Operating profit margin increased from 31.6% to 22.9%\",\n      \"candidate_value\": \"22.9%\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"-8.7%\",\n      \"source_evidence\": \"Operating profit margin decreased from 31.6% to 22.9% (source: Key Performance Indicators table).\",\n      \"error_explanation\": \"The margin decreased; the claim of an increase is incorrect.\"\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operating expenses rose by EUR 3.9 million, or 24.0%\",\n      \"candidate_value\": \"20,184\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"20,184\",\n      \"source_evidence\": \"Operating expenses increased by EUR 3,907 thousand (24.0%) from EUR 16,277 thousand to EUR 20,184 thousand (source: Note 12).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Fuel costs decreased\",\n      \"candidate_value\": \"decreased\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"increased\",\n      \"source_evidence\": \"Fuel costs increased by EUR 1,413 thousand (47.6%) from EUR 2,969 thousand to EUR 4,382 thousand (source: Note 12).\",\n      \"error_explanation\": \"Fuel costs increased, not decreased.\"\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes\",\n      \"candidate_value\": \"6,481\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"6,481\",\n      \"source_evidence\": \"Cargo volume decreased by 5.0% to 6,481 thousand tonnes (source: Operating Volumes section and Key Performance Indicators table).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"The total number of passengers fell by 2.0% to 3.6 million\",\n      \"candidate_value\": \"3,586\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"3,586\",\n      \"source_evidence\": \"Passenger numbers decreased by 2.0% to 3,586 thousand (source: Key Performance Indicators table and Operating Volumes section).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Vessel calls decreased by 4.8% to 3,376\",\n      \"candidate_value\": \"3,376\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"3,376\",\n      \"source_evidence\": \"Number of vessel calls decreased by 4.8% to 3,376 (source: Key Performance Indicators table).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Group investments during the six-month period totaled EUR 3.5 million, representing a substantial increase of EUR 8.5 million compared to the previous year\",\n      \"candidate_value\": \"increase\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"decrease\",\n      \"source_evidence\": \"Investments were EUR 3,529 thousand, which was EUR 8,491 thousand less than in the same period of the previous year (source: Investments section).\",\n      \"error_explanation\": \"The direction of the change is inverted: investments decreased, not increased.\"\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%\",\n      \"candidate_value\": \"615,034\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"615,034\",\n      \"source_evidence\": \"Total assets at 30 June 2026 were EUR 615,034 thousand (615.0 million), a decrease of 1.1% from EUR 622,079 thousand at 31 December 2025 (source: Statement of Financial Position).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Equity was recorded at EUR 367.7 million\",\n      \"candidate_value\": \"367,677\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"367,677\",\n      \"source_evidence\": \"Equity at 30 June 2026 was EUR 367,677 thousand (367.7 million) (source: Statement of Changes in Equity).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Net debt ended the period at EUR 145.8 million\",\n      \"candidate_value\": \"145,764\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"145,764\",\n      \"source_evidence\": \"Net debt at period-end was EUR 145,764 thousand (145.8 million) (source: Key Performance Indicators table).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"The company cancelled the proposed dividends totaling EUR 19.2 million\",\n      \"candidate_value\": \"cancelled\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"paid\",\n      \"source_evidence\": \"A dividend of EUR 19.2 million was approved and paid out to shareholders on 20 May 2026 (source: Dividends section).\",\n      \"error_explanation\": \"The dividend was paid, not cancelled.\"\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallinna Sadam reported a slight decline in revenue alongside a notable improvement in profitability compared to the same period of the previous year.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Revenue grew by EUR 1.4 million, or 2.4%, to EUR 59.3 million (source: Management Report and Note 11). Profitability improved but operating profit and profit for the period decreased compared to 2025 (source: Management Report and Note 18)."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, despite fewer charter days for the multifunctional icebreaker Botnica, lower electricity sales, and lower ferry service revenue.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Revenue grew due to higher charter days of Botnica, higher electricity sales, and higher ferry service revenue (source: Management Report and Note 11). The claim about 'fewer charter days', 'lower electricity sales', and 'lower ferry service revenue' contradicts the source."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit rose by EUR 4.7 million, or 25.7%, to EUR 13.6 million.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Operating profit decreased by EUR 4.7 million (25.7%) to EUR 13.6 million (source: Management Report and Note 18)."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Adjusted EBITDA increased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period grew by EUR 4.3 million, or 41.7%, to EUR 6.0 million.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Adjusted EBITDA decreased by EUR 4.0 million (13.5%) to EUR 25.8 million and profit for the period decreased by EUR 4.3 million (41.7%) to EUR 6.0 million (source: Management Report and Note 18)."
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The operating profit margin increased from 31.6% to 22.9%.",
+        "label": "CONTRADICTED",
+        "source_evidence": "The operating profit margin decreased from 31.6% to 22.9% (source: Management Report)."
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The improvement in profitability was largely driven by lower operating expenses, which rose by EUR 3.9 million, or 24.0%.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Operating expenses increased by EUR 3.9 million (24.0%), but this increase contributed to the decline in profitability, not improvement (source: Note 12 and Management Report)."
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Significant decreases were recorded in fuel costs because of lower diesel prices and mild ice conditions, as well as in maintenance and electricity costs.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Fuel costs increased by EUR 1.4 million (47.6%) due to higher diesel prices and more severe ice conditions (source: Note 12). Maintenance and electricity costs also increased (source: Note 12)."
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The comparative period contained no one-off gains or insurance indemnities.",
+        "label": "CONTRADICTED",
+        "source_evidence": "The comparative period was positively affected by the profit from the disposal of land for the Rail Baltica project and the insurance indemnity received (source: Management Report)."
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operating volumes expanded across every category, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes.",
+        "label": "CONTRADICTED",
+        "source_evidence": "The statement that 'operating volumes expanded across every category' is false; cargo volumes decreased by 5.0% to 6.5 million tonnes (source: Management Report and Operating Volumes section). The cargo volume figure itself is correct, but the overall claim about volume expansion is contradicted."
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Passenger numbers decreased by 2.0% to 3.586 million, vessel calls decreased by 4.8% to 3,376, and cruise passenger numbers grew by 47.8% (source: Key Performance Indicators table and Management Report)."
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial increase of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Investments totaled EUR 3.5 million, which was EUR 8.5 million less than in the same period of the previous year (source: Investments section). The direction of the change ('increase') is incorrect."
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total assets were EUR 615,034 thousand (615.0 million), a decrease of 1.1% from EUR 622,079 thousand at 31 December 2025. Equity was EUR 367,677 thousand (367.7 million) (source: Statement of Financial Position)."
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt ended the period at EUR 145.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net debt at period-end was EUR 145,764 thousand (145.8 million) (source: Key Performance Indicators table)."
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "In May 2026, the company cancelled the proposed dividends totaling EUR 19.2 million.",
+        "label": "CONTRADICTED",
+        "source_evidence": "A dividend of EUR 19.2 million was approved and paid out to shareholders on 20 May 2026 (source: Dividends section)."
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Significant corporate developments included the rejection of municipal plans for terminal expansion, termination of negotiations with OP Corporate Bank, and withdrawal of all civil damage claims against former management board members.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Tallinn City Council adopted detailed plans for terminal expansion (source: Significant Events). The company entered into a loan agreement with OP Corporate Bank (source: Significant Events). Civil damage claims against former management board members were filed, not withdrawn (source: Investigations Concerning the Group section)."
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The port also began operating a new passenger route to Stockholm that immediately became profitable.",
+        "label": "NOT_FOUND",
+        "source_evidence": "The source report discusses existing routes (Tallinn–Helsinki and Tallinn–Stockholm) but does not mention the launch of a new passenger route to Stockholm or its profitability."
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million",
+        "candidate_value": "59,262",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "59,262",
+        "source_evidence": "Revenue for the 6 months ended 30 June 2026 was EUR 59,262 thousand (source: Note 11 and Statement of Comprehensive Income).",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit rose by EUR 4.7 million, or 25.7%, to EUR 13.6 million",
+        "candidate_value": "13,578",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "-4,708",
+        "source_evidence": "Operating profit decreased by EUR 4,708 thousand (25.7%) to EUR 13,578 thousand (source: Note 3 and Statement of Comprehensive Income).",
+        "error_explanation": "The direction of the change is inverted: the profit decreased, not increased."
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Adjusted EBITDA increased by EUR 4.0 million, or 13.5%, to EUR 25.8 million",
+        "candidate_value": "25,769",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "-4,036",
+        "source_evidence": "Adjusted EBITDA decreased by EUR 4,036 thousand (13.5%) to EUR 25,769 thousand (source: Note 3 and Statement of Comprehensive Income).",
+        "error_explanation": "The direction of the change is inverted: Adjusted EBITDA decreased, not increased."
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Profit for the period grew by EUR 4.3 million, or 41.7%, to EUR 6.0 million",
+        "candidate_value": "5,999",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "-4,287",
+        "source_evidence": "Profit for the period decreased by EUR 4,287 thousand (41.7%) to EUR 5,999 thousand (source: Note 3 and Statement of Comprehensive Income).",
+        "error_explanation": "The direction of the change is inverted: profit decreased, not increased."
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating profit margin increased from 31.6% to 22.9%",
+        "candidate_value": "22.9%",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "-8.7%",
+        "source_evidence": "Operating profit margin decreased from 31.6% to 22.9% (source: Key Performance Indicators table).",
+        "error_explanation": "The margin decreased; the claim of an increase is incorrect."
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating expenses rose by EUR 3.9 million, or 24.0%",
+        "candidate_value": "20,184",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20,184",
+        "source_evidence": "Operating expenses increased by EUR 3,907 thousand (24.0%) from EUR 16,277 thousand to EUR 20,184 thousand (source: Note 12).",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Fuel costs decreased",
+        "candidate_value": "decreased",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "increased",
+        "source_evidence": "Fuel costs increased by EUR 1,413 thousand (47.6%) from EUR 2,969 thousand to EUR 4,382 thousand (source: Note 12).",
+        "error_explanation": "Fuel costs increased, not decreased."
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes",
+        "candidate_value": "6,481",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6,481",
+        "source_evidence": "Cargo volume decreased by 5.0% to 6,481 thousand tonnes (source: Operating Volumes section and Key Performance Indicators table).",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The total number of passengers fell by 2.0% to 3.6 million",
+        "candidate_value": "3,586",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,586",
+        "source_evidence": "Passenger numbers decreased by 2.0% to 3,586 thousand (source: Key Performance Indicators table and Operating Volumes section).",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Vessel calls decreased by 4.8% to 3,376",
+        "candidate_value": "3,376",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,376",
+        "source_evidence": "Number of vessel calls decreased by 4.8% to 3,376 (source: Key Performance Indicators table).",
+        "error_explanation": null
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial increase of EUR 8.5 million compared to the previous year",
+        "candidate_value": "increase",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "decrease",
+        "source_evidence": "Investments were EUR 3,529 thousand, which was EUR 8,491 thousand less than in the same period of the previous year (source: Investments section).",
+        "error_explanation": "The direction of the change is inverted: investments decreased, not increased."
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%",
+        "candidate_value": "615,034",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "615,034",
+        "source_evidence": "Total assets at 30 June 2026 were EUR 615,034 thousand (615.0 million), a decrease of 1.1% from EUR 622,079 thousand at 31 December 2025 (source: Statement of Financial Position).",
+        "error_explanation": null
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Equity was recorded at EUR 367.7 million",
+        "candidate_value": "367,677",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "367,677",
+        "source_evidence": "Equity at 30 June 2026 was EUR 367,677 thousand (367.7 million) (source: Statement of Changes in Equity).",
+        "error_explanation": null
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt ended the period at EUR 145.8 million",
+        "candidate_value": "145,764",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "145,764",
+        "source_evidence": "Net debt at period-end was EUR 145,764 thousand (145.8 million) (source: Key Performance Indicators table).",
+        "error_explanation": null
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The company cancelled the proposed dividends totaling EUR 19.2 million",
+        "candidate_value": "cancelled",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "paid",
+        "source_evidence": "A dividend of EUR 19.2 million was approved and paid out to shareholders on 20 May 2026 (source: Dividends section).",
+        "error_explanation": "The dividend was paid, not cancelled."
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

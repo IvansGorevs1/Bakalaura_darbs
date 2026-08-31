@@ -1,0 +1,151 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:57:23.021209",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_9_chain_of_event_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "31e81bb0fabdd359",
+    "sentence_map_hash": "908c5e985db731e4",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Impero delivered resilient growth in 2025 despite geopolitical and macroeconomic uncertainty that weakened customer decision-making and sales activity in the first half.",
+    "S2": "Revenue increased 19% to DKK 42.0M from DKK 35.4M, in line with ARR growth.",
+    "S3": "Cost of sales declined 16%, raising the contribution margin to 98% from 97%.",
+    "S4": "Other external expenses and staff costs each increased 6%, reflecting continued investment in commercial activities, lead generation, new hires, salary adjustments, and commercial organizational changes.",
+    "S5": "Profitability improved materially.",
+    "S6": "EBITDA was a loss of DKK 3.1M, compared with a loss of DKK 8.7M in 2024, while EBIT improved to a loss of DKK 6.7M from DKK 11.7M.",
+    "S7": "The net loss was DKK 6.8M, compared with DKK 11.4M the previous year.",
+    "S8": "The improvement was supported by revenue growth outpacing increases in staff and external expenses, as well as DKK 5.2M of capitalized development costs, up from DKK 3.6M.",
+    "S9": "Development investment remained substantial as the company expanded its platform and launched the Control Testing module and initial AI capabilities.",
+    "S10": "Year-end ARR reached DKK 46.2M, up 19% from DKK 38.7M and at the upper end of the revised guidance range.",
+    "S11": "Momentum recovered in the second half, with fourth-quarter net new ARR of DKK 3.1M versus DKK 1.8M in the fourth quarter of 2024.",
+    "S12": "However, full-year net new ARR declined to DKK 7.5M from DKK 8.3M, reflecting the difficult first half and delayed customer decisions through partners.",
+    "S13": "Existing-customer performance remained strong: gross uplift was 12%, churn fell to 1% from 2%, and ARPA increased 8% to DKK 228T.",
+    "S14": "NRR decreased modestly to 106% from 108%, partly because DKK 1.8M of customer contraction included approximately DKK 1.0M from recurring service agreements.",
+    "S15": "Growth was led by the DACH region, where ARR grew 26%, and Denmark, where net new ARR grew 22%.",
+    "S16": "The customer base exceeded 200 customers after 26 additions, while top-10 customer concentration declined to 20% from 24%, strengthening revenue diversification.",
+    "S17": "Other-market ARR declined 6%, primarily because of UK contraction.",
+    "S18": "Cash flow also improved, with operating cash flow of negative DKK 1.4M versus negative DKK 4.0M in 2024.",
+    "S19": "Cash ended at DKK 18.9M after a DKK 15M directed issue in December.",
+    "S20": "With the stronger capital position, Impero decided to accelerate commercial investment and defer its ambition of recurring positive cash flow before the end of 2026.",
+    "S21": "It guides for 2026 ARR of DKK 53–57M and EBITDA between negative DKK 2M and positive DKK 1M."
+  },
+  "usage": {
+    "input_tokens": 1283,
+    "output_tokens_including_reasoning": 332,
+    "total_tokens": 1615
+  },
+  "latency_seconds": 2.38,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S5\", \"S6\", \"S7\"],\n      \"description\": \"Sentence S5 states 'Profitability improved materially,' but S6 and S7 show continued losses (EBITDA and net loss), creating a logical gap. The summary does not explain how 'material' profitability improvement is reconciled with ongoing losses.\"\n    },\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S14\", \"S17\"],\n      \"description\": \"S14 mentions 'customer contraction' affecting NRR, while S17 attributes Other-market ARR decline to 'UK contraction.' The summary does not clarify whether these contractions are related or distinct phenomena, creating a logical gap in the explanation of performance drivers.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative structure covering revenue, margins, profitability, ARR growth, regional performance, and cash flow. However, there are two notable logical gaps: 1) The claim of 'material' profitability improvement (S5) conflicts with continued losses in EBITDA and net profit (S6-S7) without explanation, creating an unresolved tension. 2) The contraction references in S14 (customer) and S17 (UK market) are presented without clarifying their relationship, leaving an ambiguity in performance attribution. These gaps prevent full internal logical coherence despite strong overall organization and absence of self-contradictions.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6",
+          "S7"
+        ],
+        "description": "Sentence S5 states 'Profitability improved materially,' but S6 and S7 show continued losses (EBITDA and net loss), creating a logical gap. The summary does not explain how 'material' profitability improvement is reconciled with ongoing losses."
+      },
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S14",
+          "S17"
+        ],
+        "description": "S14 mentions 'customer contraction' affecting NRR, while S17 attributes Other-market ARR decline to 'UK contraction.' The summary does not clarify whether these contractions are related or distinct phenomena, creating a logical gap in the explanation of performance drivers."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative structure covering revenue, margins, profitability, ARR growth, regional performance, and cash flow. However, there are two notable logical gaps: 1) The claim of 'material' profitability improvement (S5) conflicts with continued losses in EBITDA and net profit (S6-S7) without explanation, creating an unresolved tension. 2) The contraction references in S14 (customer) and S17 (UK market) are presented without clarifying their relationship, leaving an ambiguity in performance attribution. These gaps prevent full internal logical coherence despite strong overall organization and absence of self-contradictions."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

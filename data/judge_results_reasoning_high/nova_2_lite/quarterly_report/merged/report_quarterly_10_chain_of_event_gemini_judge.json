@@ -1,0 +1,611 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_10_chain_of_event_gemini.txt",
+    "report": "report_quarterly_10.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Aktsiaselts Infortar released its consolidated unaudited financial report for the fourth quarter and full year of 2025, demonstrating overall growth in revenue and operational earnings alongside a decrease in net profit compared to the previous year.",
+    "S2": "For the twelve months ended December 31, 2025, the group reported total revenue of EUR 1,837.0 million, marking an increase from EUR 1,371.8 million recorded in the twelve months of 2024.",
+    "S3": "Operating profit for 2025 reached EUR 111.1 million compared to EUR 77.0 million in 2024.",
+    "S4": "Earnings before interest, taxes, depreciation, and amortization rose to EUR 232.6 million in 2025 from EUR 145.4 million in 2024.",
+    "S5": "The document explicitly links the higher 2025 EBITDA to the inclusion of AS Tallink Grupp results for the full twelve-month period, whereas Tallink Grupp results were only consolidated from August onwards in 2024, alongside an approximate EUR 12 million EBITDA improvement in Elenger and contributions from Estonia Farmid and Halinga.",
+    "S6": "Conversely, net profit for the 2025 financial year declined to EUR 72.0 million from EUR 193.7 million in 2024, with profit attributable to owners of the parent dropping to EUR 72.7 million from EUR 191.3 million.",
+    "S7": "The document attributes this decrease in net profit mainly to one-off effects related to the initial consolidation of Tallink Group recognized in 2024.",
+    "S8": "Basic earnings per share for 2025 decreased to EUR 3.54 from EUR 9.36 in the prior year.",
+    "S9": "Total assets stood at EUR 2,587.8 million at the end of December 2025, down from EUR 2,715.2 million at the end of 2024, while total equity increased slightly to EUR 1,177.5 million from EUR 1,166.2 million.",
+    "S10": "Interest-bearing liabilities decreased to EUR 1,060.5 million from EUR 1,223.3 million, a reduction that the report reflects as the result of loan repayments across several group entities, including the Tallink Group level, and financial adjustments aligned with market conditions.",
+    "S11": "During the 2025 financial year, the maritime transport segment under Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year, while generating revenue of EUR 765.3 million and a net profit of EUR 17.3 million.",
+    "S12": "In the energy segment, Elenger Grupp increased its gas and electricity sales volumes by 7% in the fourth quarter of 2025 to total 4.8 TWh, despite a regional decline in natural gas consumption.",
+    "S13": "Strategic developments during the period included continued infrastructure construction such as the Rail Baltica mainline by INF Infra, further expansion into agriculture through the acquisition of OÜ Oisu Biogaas in November 2025, and portfolio diversification aimed at securing stable cash flows amidst geopolitical tensions and uncertain economic cycles."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_10.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_10.json",
+    "key_information_hash": "e46c1d229d7d4b2d",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 5,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 5
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 2,
+      "scale_max": 4,
+      "label": "Neutral/Mixed",
+      "present": 3,
+      "partially_present": 1,
+      "missing": 4,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Aktsiaselts Infortar released its consolidated unaudited financial report for the fourth quarter and full year of 2025, demonstrating overall growth in revenue and operational earnings alongside a decrease in net profit compared to the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show revenue increased from EUR 1,371.8 million in 2024 to EUR 1,837.0 million in 2025, operating profit rose from EUR 77.0 million to EUR 111.1 million, while net profit decreased from EUR 193.7 million to EUR 72.0 million.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Aktsiaselts Infortar released its consolidated unaudited financial report for the fourth quarter and full year of 2025, demonstrating overall growth in revenue and operational earnings alongside a decrease in net profit compared to the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The higher 2025 EBITDA results from Tallink Grupp being consolidated for the full year (vs. August onwards in 2024), Elenger's EUR 12 million EBITDA improvement, and contributions from Estonia Farmid and Halinga.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures note (I12) states: 'Compared to 2024, the EBITDA for 2025 reflects the results of Tallink Grupp for the full twelvemonth period, whereas in 2024 Tallink Grupp’s results were consolidated from August onwards. In addition, Elenger’s EBITDA improved by approximately EUR 12 million, and Infortar consolidated EBITDA also includes the contribution from Estonia Farmid and Halinga.'",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The document explicitly links the higher 2025 EBITDA to the inclusion of AS Tallink Grupp results for the full twelve-month period, whereas Tallink Grupp results were only consolidated from August onwards in 2024, alongside an approximate EUR 12 million EBITDA improvement in Elenger and contributions from Estonia Farmid and Halinga."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The net profit decrease is mainly attributable to one-off effects from the initial consolidation of Tallink Group in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures note (I12) states: 'The decrease in net profit compared to the previous year is mainly attributable to one-off effects related to the initial consolidation of Tallink Group recognised in 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The document attributes this decrease in net profit mainly to one-off effects related to the initial consolidation of Tallink Group recognized in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The reduction in interest-bearing liabilities reflects loan repayments across Group entities and financial adjustments aligned with market conditions.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures note (I12) states: 'The decrease in loan liabilities reflects loan repayments across several Group entities, including at the Tallink Group level, as well as adjustments to the Group’s financial position in line with market conditions.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Interest-bearing liabilities decreased to EUR 1,060.5 million from EUR 1,223.3 million, a reduction that the report reflects as the result of loan repayments across several group entities, including the Tallink Group level, and financial adjustments aligned with market conditions."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Strategic developments included Rail Baltica construction, acquisition of OÜ Oisu Biogaas in November 2025, and portfolio diversification for stable cash flows.",
+        "label": "SUPPORTED",
+        "source_evidence": "Events in Q4 2025 (I10) confirms INF Infra's Rail Baltica construction (EUR 67.2 million contract) and Infortar's November 2025 acquisition of OÜ Oisu Biogaas. Management Report (I8) emphasizes diversification into agriculture/infrastructure for stable cash flows amid geopolitical/economic uncertainty.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Strategic developments during the period included continued infrastructure construction such as the Rail Baltica mainline by INF Infra, further expansion into agriculture through the acquisition of OÜ Oisu Biogaas in November 2025, and portfolio diversification aimed at securing stable cash flows amidst geopolitical tensions and uncertain economic cycles."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue for the twelve months ended December 31, 2025 was EUR 1,837.0 million, up from EUR 1,371.8 million in 2024.",
+        "candidate_value": "1,837.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,837,000 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show 12-month revenue for 2025: EUR 1,837,000 thousand vs. 2024: EUR 1,371,775 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the twelve months ended December 31, 2025, the group reported total revenue of EUR 1,837.0 million, marking an increase from EUR 1,371.8 million recorded in the twelve months of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit for 2025 reached EUR 111.1 million compared to EUR 77.0 million in 2024.",
+        "candidate_value": "111.1 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111,061 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show 12-month operating profit for 2025: EUR 111,061 thousand vs. 2024: EUR 77,024 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Operating profit for 2025 reached EUR 111.1 million compared to EUR 77.0 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "EBITDA rose to EUR 232.6 million in 2025 from EUR 145.4 million in 2024.",
+        "candidate_value": "232.6 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "232,581 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show 12-month EBITDA for 2025: EUR 232,581 thousand vs. 2024: EUR 145,415 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Earnings before interest, taxes, depreciation, and amortization rose to EUR 232.6 million in 2025 from EUR 145.4 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit for 2025 declined to EUR 72.0 million from EUR 193.7 million in 2024.",
+        "candidate_value": "72.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "71,969 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show 12-month net profit for 2025: EUR 71,969 thousand vs. 2024: EUR 193,670 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, net profit for the 2025 financial year declined to EUR 72.0 million from EUR 193.7 million in 2024, with profit attributable to owners of the parent dropping to EUR 72.7 million from EUR 191.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Profit attributable to owners of the parent dropped to EUR 72.7 million from EUR 191.3 million.",
+        "candidate_value": "72.7 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "72,662 thousand EUR (I16)",
+        "source_evidence": "Consolidated Income Statement (I16) shows profit attributable to owners of the parent for 2025: EUR 72,662 thousand vs. 2024: EUR 191,253 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, net profit for the 2025 financial year declined to EUR 72.0 million from EUR 193.7 million in 2024, with profit attributable to owners of the parent dropping to EUR 72.7 million from EUR 191.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Basic earnings per share for 2025 decreased to EUR 3.54 from EUR 9.36 in 2024.",
+        "candidate_value": "3.54 EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,54 EUR (I36)",
+        "source_evidence": "Note 8.8 (I36) shows ordinary earnings per share for 2025: EUR 3,54 vs. 2024: EUR 9,36.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Basic earnings per share for 2025 decreased to EUR 3.54 from EUR 9.36 in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets stood at EUR 2,587.8 million at December 31, 2025, down from EUR 2,715.2 million at December 31, 2024.",
+        "candidate_value": "2,587.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,587,818 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show total assets for 2025: EUR 2,587,818 thousand vs. 2024: EUR 2,715,234 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets stood at EUR 2,587.8 million at the end of December 2025, down from EUR 2,715.2 million at the end of 2024, while total equity increased slightly to EUR 1,177.5 million from EUR 1,166.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total equity increased to EUR 1,177.5 million from EUR 1,166.2 million.",
+        "candidate_value": "1,177.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,177,516 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show total equity for 2025: EUR 1,177,516 thousand vs. 2024: EUR 1,166,221 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets stood at EUR 2,587.8 million at the end of December 2025, down from EUR 2,715.2 million at the end of 2024, while total equity increased slightly to EUR 1,177.5 million from EUR 1,166.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Interest-bearing liabilities decreased to EUR 1,060.5 million from EUR 1,223.3 million.",
+        "candidate_value": "1,060.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,060,453 thousand EUR (I12)",
+        "source_evidence": "Key Figures of Q4 2025 (I12) show interest-bearing liabilities for 2025: EUR 1,060,453 thousand vs. 2024: EUR 1,223,287 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Interest-bearing liabilities decreased to EUR 1,060.5 million from EUR 1,223.3 million, a reduction that the report reflects as the result of loan repayments across several group entities, including the Tallink Group level, and financial adjustments aligned with market conditions."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Tallink carried 5,531,132 passengers in 2025, a 0.9% decrease year-on-year.",
+        "candidate_value": "5,531,132 passengers",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,531,132 passengers (I4)",
+        "source_evidence": "Management Report (I4) states: 'In the financial year 2025 (1 January–31 December), Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "During the 2025 financial year, the maritime transport segment under Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year, while generating revenue of EUR 765.3 million and a net profit of EUR 17.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Tallink's 2025 revenue was EUR 765.3 million and net profit was EUR 17.3 million.",
+        "candidate_value": "765.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "765.3 million EUR (I4)",
+        "source_evidence": "Management Report (I4) states: 'Tallink’s unaudited consolidated revenue amounted to EUR 765.3 million... unaudited net profit for the period was EUR 17.3 million.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "During the 2025 financial year, the maritime transport segment under Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year, while generating revenue of EUR 765.3 million and a net profit of EUR 17.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Tallink's 2024 net profit was EUR 40.3 million.",
+        "candidate_value": "40.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "40.3 million EUR (I4)",
+        "source_evidence": "Management Report (I4) states: 'unaudited net profit for the period was EUR 17.3 million (EUR 40.3 million in the financial year 2024).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "During the 2025 financial year, the maritime transport segment under Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year, while generating revenue of EUR 765.3 million and a net profit of EUR 17.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Elenger Grupp increased gas and electricity sales volumes to 4.8 TWh in Q4 2025, up 7% from 4.5 TWh in Q4 2024.",
+        "candidate_value": "4.8 TWh",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.8 TWh (I9)",
+        "source_evidence": "Events in Q4 2025 (I9) states: 'Elenger Grupp gas and electricity sales volumes in the fourth quarter increased by 7% compared to a year earlier, totalling 4.8 TWh (compared to 4.5 TWh in Q4 2024).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "In the energy segment, Elenger Grupp increased its gas and electricity sales volumes by 7% in the fourth quarter of 2025 to total 4.8 TWh, despite a regional decline in natural gas consumption."
+          }
+        ]
+      },
+      {
+        "claim": "Elenger’s EBITDA improved by approximately EUR 12 million",
+        "candidate_value": "approximately EUR 12 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "approximately EUR 12 million",
+        "source_evidence": "Key Figures of Q4 2025 section: 'In addition, Elenger’s EBITDA improved by approximately EUR 12 million...'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The document explicitly links the higher 2025 EBITDA to the inclusion of AS Tallink Grupp results for the full twelve-month period, whereas Tallink Grupp results were only consolidated from August onwards in 2024, alongside an approximate EUR 12 million EBITDA improvement in Elenger and contributions from Estonia Farmid and Halinga."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "FY 2025 delivered strong financial performance with revenue increasing 33.9% to EUR 1.837 billion, EBITDA rising 60% to EUR 232.6 million, though net profit decreased to EUR 71.9 million due to one-off consolidation effects from Tallink Grupp.",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures of Q4 2025 table showing revenue, EBITDA, and net profit for 12 months 2025 vs 2024; accompanying note explains net profit decrease attributable to one-off effects from Tallink Grupp consolidation in 2024.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the twelve months ended December 31, 2025, the group reported total revenue of EUR 1,837.0 million, marking an increase from EUR 1,371.8 million recorded in the twelve months of 2024."
+          },
+          {
+            "id": "S4",
+            "text": "Earnings before interest, taxes, depreciation, and amortization rose to EUR 232.6 million in 2025 from EUR 145.4 million in 2024."
+          },
+          {
+            "id": "S6",
+            "text": "Conversely, net profit for the 2025 financial year declined to EUR 72.0 million from EUR 193.7 million in 2024, with profit attributable to owners of the parent dropping to EUR 72.7 million from EUR 191.3 million."
+          },
+          {
+            "id": "S7",
+            "text": "The document attributes this decrease in net profit mainly to one-off effects related to the initial consolidation of Tallink Group recognized in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Q4 2025 revenue was EUR 417.4 million and EBITDA EUR 42.6 million, with net profit turning positive at EUR 14.1 million compared to a loss of EUR 11.9 million in Q4 2024.",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures of Q4 2025 table (Q4 2025 vs Q4 2024 columns for revenue, EBITDA, and net profit); Events in Q4 2025 section lists factors impacting Q4 financial results.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K3",
+        "information": "Maritime transport segment saw passenger volumes fall 0.9% annually but Q4 EBITDA improved to EUR 27.6 million; Tallink sold the cargo vessel Sailor and extended the Silja Europa charter until January 2027.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report section on Maritime Transport (passenger and cargo unit volumes); Events in Q4 2025 section details Q4 maritime results and specific events (vessel sale, charter extension).",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "During the 2025 financial year, the maritime transport segment under Tallink carried 5,531,132 passengers, representing a 0.9% decrease year-on-year, while generating revenue of EUR 765.3 million and a net profit of EUR 17.3 million."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Energy segment increased sales volumes by 7% to 4.8 TWh in Q4 despite lower regional consumption; Elenger secured a multi-year LNG supply agreement for 12 cargoes and expanded battery storage capacity in Latvia while planning further developments in Estonia.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q4 2025 section details Elenger sales volume increase, LNG agreement, and battery storage commissions/construction; Management Report describes regional consumption decline and seasonality.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "In the energy segment, Elenger Grupp increased its gas and electricity sales volumes by 7% in the fourth quarter of 2025 to total 4.8 TWh, despite a regional decline in natural gas consumption."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Real estate segment advanced major infrastructure projects including Rail Baltica mainline construction (EUR 67.2 million contract ongoing until March 2028) and a 40,000 m² Depo commercial space development in Lasnamäe scheduled for completion in fall 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Real Estate Developments section in Events in Q4 2025 details Rail Baltica contract and Depo project timeline; Real estate portfolio overview table confirms project status.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Strategic expansion into agriculture accelerated with November 2025 acquisition of 100% stake in OÜ Oisu Biogaas, complementing existing biomethane production operations under OÜ Infortar Agro.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q4 2025 section states 'In November, Infortar announced the acquisition of a 100% stake in OÜ Oisu Biogaas.'; Supporting Sectors section describes agriculture consolidation under OÜ Infortar Agro.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Strategic developments during the period included continued infrastructure construction such as the Rail Baltica mainline by INF Infra, further expansion into agriculture through the acquisition of OÜ Oisu Biogaas in November 2025, and portfolio diversification aimed at securing stable cash flows amidst geopolitical tensions and uncertain economic cycles."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Liquidity strengthened with cash rising to EUR 219.8 million and net debt/EBITDA improving to 3.6x from 4.0x, driven by debt repayments and stable operating cash flows.",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures table shows cash at end of period (219,771 thousand EUR vs 167,579 thousand EUR) and net debt/EBITDA ratios; Cash Flow Statement highlights operating cash flow generation and debt repayment activities.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Post-reporting events include extension of EUR 27 million loans maturing in 2026 to 2031 and Elenger Grupp's February 2026 acquisition of subsidiary SIA Mood Deco.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 14 (Events after the Reporting Date) details loan extension and Elenger acquisition announced on February 2, 2026.",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K3",
+      "K5",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1 is PRESENT as the summary covers FY 2025 revenue growth (EUR 1.837B, +33.9%), EBITDA increase (EUR 232.6M, +60%), and net profit decline attributed to Tallink Grupp consolidation effects. K2 is MISSING as Q4 2025 revenue/EBITDA/net profit figures are absent. K3 is PARTIALLY_PRESENT: passenger volume decline (-0.9%) and Q4 EBITDA improvement are noted, but vessel sale and charter extension details are missing. K4 is PRESENT with Q4 sales volume increase (7% to 4.8 TWh) noted. K5 is MISSING as no real estate project details appear. K6 is PRESENT via explicit mention of OÜ Oisu Biogaas acquisition in November 2025. K7 is MISSING as liquidity and net debt/EBITDA metrics are not covered. K8 is MISSING with no post-reporting event details included. The coverage is mixed: several HIGH criteria are either missing or partially covered, resulting in a Neutral/Mixed assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support the overall narrative of growth in revenue and operational metrics contrasted with a decline in net profit. Explanations for the net profit decrease (S7) and EBITDA increase (S5) are consistent and provide clear rationale. The structure progresses logically from consolidated results to segment performance and strategic developments without contradictions or unnecessary repetition. All figures and their relationships are presented without internal arithmetic contradictions, and the summary forms a clear, unified narrative."
+  },
+  "usage": {
+    "input_tokens_total": 52482,
+    "output_tokens_total_including_reasoning": 6002,
+    "total_tokens": 58484,
+    "latency_seconds_total": 39.2
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 50363,
+    "output_tokens_total_including_reasoning": 56538,
+    "total_tokens": 106901,
+    "latency_seconds_total": 139.53
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_10.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_10_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_10.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_10.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_10_chain_of_event_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_10_chain_of_event_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_10_chain_of_event_gemini.json"
+    }
+  }
+}

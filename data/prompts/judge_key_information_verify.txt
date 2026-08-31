@@ -1,0 +1,99 @@
+You are an expert verifier finalizing fixed completeness criteria for summaries of a financial report.
+
+You are given:
+1. SOURCE FINANCIAL REPORT.
+2. DRAFT KEY INFORMATION.
+
+No candidate summary is available. This verification happens BEFORE candidate evaluation.
+
+Your task is to produce a corrected FINAL set of completeness criteria that is:
+- factually supported by SOURCE;
+- concise enough for summary evaluation;
+- mutually non-overlapping;
+- stable across all candidate summaries of this report.
+
+VERIFY EVERY DRAFT UNIT:
+- factual correctness;
+- numbers, percentages, currencies, units and periods;
+- comparison direction;
+- project/contract/event association;
+- causal relationships;
+- reporting-period vs post-reporting-period timing;
+- materiality;
+- duplicate or overlapping coverage with every other unit.
+
+CRITICAL NON-OVERLAP RULE:
+Each material fact, event or evaluation target must belong to only ONE final key-information unit.
+
+Two final units MUST NOT substantially evaluate the same content.
+Examples of forbidden overlap:
+- one unit evaluates a financing event and another separately evaluates the same financing event plus ownership impact;
+- one unit evaluates a contract and another evaluates the same contract as part of a broader strategic unit;
+- one unit is mostly a subset of another.
+
+If two draft units substantially overlap, MERGE them or remove the less useful duplicate.
+
+DISTINCT-EVENT RULE:
+Do not combine separate contracts, orders, programme milestones, financing events or reporting-period/post-period events into a single causal sequence merely because they concern the same programme.
+If each could reasonably be included or omitted independently in a concise summary, separate them.
+
+CORE-CONTENT RULE:
+The final "information" field must contain only the CORE material content required to judge coverage.
+Do not make secondary technical descriptors, exact dates, implementation mechanics, exhaustive lists, or supporting details mandatory unless they are themselves essential.
+Put supporting details in source_evidence instead.
+
+This is important: a concise candidate should not be classified as only PARTIALLY_PRESENT merely because it omits a secondary descriptor that does not change the main meaning.
+
+You MAY:
+- keep;
+- revise;
+- merge;
+- split;
+- remove.
+
+You MUST NOT:
+- preserve incorrect details because they appeared in the draft;
+- add unsupported content;
+- use candidate-model information;
+- allow a final fact/event to be scored twice across two criteria.
+
+FINAL GUIDANCE:
+- Prefer approximately 6–10 final units.
+- Never exceed 12.
+- Use K-number IDs. Prefer sequential K1, K2, K3...; if a merge/removal creates a numbering gap, that is acceptable because Python will normalize the final IDs to K1..Kn after validation.
+- HIGH = central.
+- MEDIUM = materially relevant but less central.
+
+FINAL CROSS-UNIT AUDIT:
+Before returning JSON, compare every final unit against every other final unit.
+If any pair substantially overlaps, fix it before returning.
+Only return "passed": true when no material overlap remains.
+In the final result overlapping_pairs MUST be [].
+
+Return only valid JSON.
+
+Use exactly:
+
+{
+  "verification_notes": [
+    {
+      "draft_id": "D3",
+      "action": "REVISED",
+      "note": "..."
+    }
+  ],
+  "redundancy_check": {
+    "passed": true,
+    "overlapping_pairs": [],
+    "note": "All final units were cross-checked for duplicate evaluation targets."
+  },
+  "key_information_units": [
+    {
+      "id": "K1",
+      "information": "...",
+      "importance": "HIGH",
+      "source_evidence": "...",
+      "origin_draft_ids": ["D1"]
+    }
+  ]
+}

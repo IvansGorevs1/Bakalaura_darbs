@@ -1,0 +1,184 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:11:12.661051",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_4_zero_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "a8e73cbfad610c1d",
+    "sentence_map_hash": "229744fbe4065592",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "47e4e08c607ebab5",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_4.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Eleving Group S.A. reported record financial results for the year ended 31 December 2024, driven by sustained portfolio expansion and improved operational efficiency.",
+    "S2": "Consolidated revenue grew nearly fifteen percent to EUR 216.6 million, up from EUR 189.3 million in 2023.",
+    "S3": "Adjusted EBITDA increased sixteen percent to EUR 89.8 million from EUR 77.5 million.",
+    "S4": "Total net profit reached EUR 29.6 million, a twenty-one percent rise compared to EUR 24.5 million the previous year.",
+    "S5": "Excluding a one-off Romanian VAT liability of EUR 3.0 million, adjusted net profit stood at EUR 32.2 million.",
+    "S6": "The net loan and rental fleet portfolio expanded sixteen percent to EUR 371.2 million, while active customers numbered 326,862.",
+    "S7": "Significant changes versus the prior period include a markedly stronger capital position and improved credit metrics.",
+    "S8": "Total equity more than doubled to EUR 108.1 million from EUR 65.4 million, supported by retained earnings and a public equity raise.",
+    "S9": "The capitalization ratio improved to twenty-nine point three percent from twenty-six point one percent, and net leverage decreased to 3.3 from 3.7.",
+    "S10": "Portfolio quality strengthened as well, with non-performing loan rates falling to six point one percent for vehicle finance and four point three percent for consumer finance.",
+    "S11": "These improvements occurred alongside a two percentage point decrease in the ratio of impairment expenses to interest revenue, reflecting tighter underwriting standards and effective debt recovery practices despite macroeconomic headwinds.",
+    "S12": "Key business developments that shaped these results include the successful initial public offering in October 2024 on the Nasdaq Riga and Frankfurt Stock Exchange, which raised EUR 29.0 million.",
+    "S13": "Proceeds were primarily used to redeem expensive subordinated bonds and reduce peer-to-peer marketplace liabilities, thereby optimizing the overall funding mix.",
+    "S14": "Operationally, the group fully integrated its Sub-Saharan acquisitions, tripling the combined portfolio across Kenya, Uganda, and Namibia, while launching a next-generation digital self-service platform across European markets to streamline onboarding and collections.",
+    "S15": "The company also executed its planned exit from Belarus and the Balkans, recognizing a net profit of EUR 0.77 million from discontinued operations.",
+    "S16": "Overall, 2024 demonstrated a decisive shift toward mature, publicly listed governance, fortified by consistent profitability, streamlined cost structures, and a resilient funding framework that supports the group’s strategy to scale operations and expand its product portfolio over the medium term."
+  },
+  "usage": {
+    "input_tokens": 1732,
+    "output_tokens_including_reasoning": 399,
+    "total_tokens": 2131
+  },
+  "latency_seconds": 2.08,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\", \"S4\", \"S6\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PARTIALLY_PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\", \"S15\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\", \"S13\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K4\", \"K6\", \"K7\"],\n  \"justification\": \"K1, K2, K3, and K5 are fully represented with clear coverage of financial performance, key ratios, performance drivers, and capital structure changes. K4 is partially present as it covers Sub-Saharan integration and exits but lacks specific segment breakdowns (vehicle vs consumer finance) and growth details in East Africa, Romania, Uganda, and Albania. K6 and K7 are missing entirely, as there is no mention of strategic priorities or post-reporting period events. The overall coverage captures the main picture but lacks two high-importance items and one medium-importance item.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S4",
+          "S6"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S13"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K4",
+      "K6",
+      "K7"
+    ],
+    "justification": "K1, K2, K3, and K5 are fully represented with clear coverage of financial performance, key ratios, performance drivers, and capital structure changes. K4 is partially present as it covers Sub-Saharan integration and exits but lacks specific segment breakdowns (vehicle vs consumer finance) and growth details in East Africa, Romania, Uganda, and Albania. K6 and K7 are missing entirely, as there is no mention of strategic priorities or post-reporting period events. The overall coverage captures the main picture but lacks two high-importance items and one medium-importance item."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

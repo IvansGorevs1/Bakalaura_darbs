@@ -1,0 +1,769 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_13_zero_shot_qwen36.txt",
+    "report": "report_annual_13.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the 2024 financial year, AS LHV Group delivered record business volumes and operating profit, driven by robust balance sheet expansion, sustained credit quality, and disciplined operational execution.",
+    "S2": "Total consolidated assets grew 23 percent year-over-year to reach EUR 8.7 billion.",
+    "S3": "The net loan portfolio expanded by EUR 990 million, or 28 percent, to EUR 4.6 billion, while customer deposits increased 21 percent to EUR 6.9 billion.",
+    "S4": "Consolidated net income rose 11 percent to EUR 338.3 million, comprising net interest income of EUR 273.3 million (up 8 percent) and net fee and commission income of EUR 60.3 million (up 24 percent).",
+    "S5": "Operating expenses amounted to EUR 146.9 million, reflecting a 14 percent increase primarily linked to a larger workforce and higher personnel costs.",
+    "S6": "Consequently, pre-tax profit reached EUR 175.1 million, yielding a net profit of EUR 150.3 million, a 7 percent year-over-year increase.",
+    "S7": "Return on equity stood at 24.5 percent, with a cost-to-income ratio of 43.4 percent and return on assets of 1.9 percent.",
+    "S8": "The Group’s strong financial performance was underpinned by a restrictive interest rate environment that temporarily boosted net interest margins, alongside aggressive lending and deposit acquisition strategies across all customer segments.",
+    "S9": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent.",
+    "S10": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million.",
+    "S11": "Late in the year, the UK subsidiary launched its retail banking offering, including mobile application services.",
+    "S12": "The Group also acquired a small but highly profitable loan portfolio from AS TBB Pank and successfully issued EUR 20 million of Tier 2 subordinated bonds in November, following the timely redemption of EUR 20 million in Additional Tier 1 instruments earlier in the year.",
+    "S13": "Macroeconomic conditions presented mixed signals, with Estonian GDP contracting slightly throughout 2024 before stabilization cues emerged heading into 2025.",
+    "S14": "The European Central Bank responded to moderating inflation by implementing four consecutive 25-basis-point rate cuts during the second half of the year, lowering the deposit facility rate to 3 percent by December.",
+    "S15": "This shifting monetary policy prompted LHV to revise its internal financial plan in September, raising profitability targets by 25 percent while acknowledging that declining rates will likely compress net interest margins in the near term.",
+    "S16": "Despite this headwind, the Group maintained strict cost controls, executed targeted organizational restructuring, and preserved an excellent asset quality profile with historically low non-performing loan ratios.",
+    "S17": "All regulatory capital, MREL, and liquidity requirements were comfortably met, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a liquidity coverage ratio of 187.5 percent.",
+    "S18": "Entering 2025, LHV Group remains strategically positioned for continued expansion, planning to offset transitional margin pressure through accelerated loan growth, deeper cross-subsidiary integration, and ongoing technological efficiency improvements."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_13.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_13.json",
+    "key_information_hash": "f84a7c621909204b",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 11,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 11
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 15,
+      "incorrect": 0,
+      "total": 15
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 3,
+      "partially_present": 4,
+      "missing": 2,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS LHV Group delivered record business volumes and operating profit in 2024 driven by robust balance sheet expansion, sustained credit quality, and disciplined operational execution.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Following a supervisory transition, we managed to restore historically ambitious business growth... we achieved the highest business volumes and operating profit in our history'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the 2024 financial year, AS LHV Group delivered record business volumes and operating profit, driven by robust balance sheet expansion, sustained credit quality, and disciplined operational execution."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "A restrictive interest rate environment temporarily boosted net interest margins, alongside aggressive lending and deposit acquisition strategies across all customer segments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'With a strong EUR 1 billion (28%) growth in the loan portfolio and a high base interest rate, we achieved the highest business volumes and operating profit in our history'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The Group’s strong financial performance was underpinned by a restrictive interest rate environment that temporarily boosted net interest margins, alongside aggressive lending and deposit acquisition strategies across all customer segments."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "'The number of LHV Pank customers increased by 38,000 (+9% YoY) and the number of customers actively using LHV Pank for everyday payments increased by 22,800 (+12% YoY)'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "LHV Bank Ltd section: 'Loans grew by 267 million over the year, reaching 348 million... Deposit volumes for financial intermediaries fluctuated... however, deposit levels were higher at year-end... LHV Bank has increased its collection of deposits from deposit platforms, with an increase of EUR 416 million (+388% YoY)'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Late in the year, the UK subsidiary launched its retail banking offering, including mobile application services.",
+        "label": "SUPPORTED",
+        "source_evidence": "LHV Bank Ltd section: 'Late in the year, LHV Bank started offering retail banking solutions to private individuals, accounts, deposits and payments... At the end of the year, the bank launched its retail banking offering, including a mobile banking app'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Late in the year, the UK subsidiary launched its retail banking offering, including mobile application services."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The Group also acquired a small but highly profitable loan portfolio from AS TBB Pank and successfully issued EUR 20 million of Tier 2 subordinated bonds in November, following the timely redemption of EUR 20 million in Additional Tier 1 instruments earlier in the year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Strategy and Financial Plan: 'During the year, we acquired a small but highly profitable loan portfolio'... 'LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The Group also acquired a small but highly profitable loan portfolio from AS TBB Pank and successfully issued EUR 20 million of Tier 2 subordinated bonds in November, following the timely redemption of EUR 20 million in Additional Tier 1 instruments earlier in the year."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Macroeconomic conditions presented mixed signals, with Estonian GDP contracting slightly throughout 2024 before stabilization cues emerged heading into 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business Environment: 'In Q4 2024, Estonia’s GDP decreased by 0.1% year-over-year and remained unchanged from Q3... Estonia’s economic continues to face challenges... However, conditions for recovery are improving... GDP is expected to increase by 1.6% in 2025'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Macroeconomic conditions presented mixed signals, with Estonian GDP contracting slightly throughout 2024 before stabilization cues emerged heading into 2025."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The European Central Bank responded to moderating inflation by implementing four consecutive 25-basis-point rate cuts during the second half of the year, lowering the deposit facility rate to 3 percent by December.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business Environment: 'The ECB Governing Council shifted to a more accommodative stance, implementing four 25-basis-point rate cuts in June, September, October, and December 2024. By year-end, the deposit facility rate... stood at 3%'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The European Central Bank responded to moderating inflation by implementing four consecutive 25-basis-point rate cuts during the second half of the year, lowering the deposit facility rate to 3 percent by December."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "This shifting monetary policy prompted LHV to revise its internal financial plan in September, raising profitability targets by 25 percent while acknowledging that declining rates will likely compress net interest margins in the near term.",
+        "label": "SUPPORTED",
+        "source_evidence": "Strategy and Financial Plan: 'During the last couple of years, assets have been the limiting factor for growth, but this year the liabilities were... We updated our financial plan only in September... we saw that the environment changes quickly... In 2024, LHV updated financial plan in September and hiked up the profitability targets by 25%'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This shifting monetary policy prompted LHV to revise its internal financial plan in September, raising profitability targets by 25 percent while acknowledging that declining rates will likely compress net interest margins in the near term."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Despite this headwind, the Group maintained strict cost controls, executed targeted organizational restructuring, and preserved an excellent asset quality profile with historically low non-performing loan ratios.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'To mitigate risks, we have implemented strategic actions, including cost control, redundancies at the end of the year, and restructuring several departments'... 'The quality of the loan portfolio stayed strong, with some individual customers showing signs of weakening'... 'Overdue loans remained at historically low levels throughout 2024'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Despite this headwind, the Group maintained strict cost controls, executed targeted organizational restructuring, and preserved an excellent asset quality profile with historically low non-performing loan ratios."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Entering 2025, LHV Group remains strategically positioned for continued expansion, planning to offset transitional margin pressure through accelerated loan growth, deeper cross-subsidiary integration, and ongoing technological efficiency improvements.",
+        "label": "SUPPORTED",
+        "source_evidence": "Strategy and Financial Plan: 'Our goal for 2025 and beyond is to continue growing but to do so even more efficiently'... 'LHV is already one of the most efficient banking groups in Europe... We strive to maintain a mindset closer to that of a tech company'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Entering 2025, LHV Group remains strategically positioned for continued expansion, planning to offset transitional margin pressure through accelerated loan growth, deeper cross-subsidiary integration, and ongoing technological efficiency improvements."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total consolidated assets grew 23 percent year-over-year to reach EUR 8.7 billion.",
+        "candidate_value": "EUR 8.7 billion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 8.7 billion",
+        "source_evidence": "'Total consolidated assets reached EUR 8.7 billion (+23% YoY)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total consolidated assets grew 23 percent year-over-year to reach EUR 8.7 billion."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The net loan portfolio expanded by EUR 990 million, or 28 percent, to EUR 4.6 billion, while customer deposits increased 21 percent to EUR 6.9 billion.",
+        "candidate_value": "EUR 990 million (28%) to EUR 4.6 billion; EUR 6.9 billion (+21%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 990 million to EUR 4.6 billion (+28% YoY); EUR 6.9 billion (+21% YoY)",
+        "source_evidence": "'The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY)... The volume of deposits increased to EUR 6.9 billion (+21% YoY)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The net loan portfolio expanded by EUR 990 million, or 28 percent, to EUR 4.6 billion, while customer deposits increased 21 percent to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Consolidated net income rose 11 percent to EUR 338.3 million, comprising net interest income of EUR 273.3 million (up 8 percent) and net fee and commission income of EUR 60.3 million (up 24 percent).",
+        "candidate_value": "EUR 338.3 million (+11%); EUR 273.3 million (+8%); EUR 60.3 million (+24%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 338.3 million (+11% YoY); Net interest income EUR 273.3 million (+8% YoY); Net fee income EUR 60.3 million (+24% YoY)",
+        "source_evidence": "Financial results table for 2024 and 'Net interest income grew 8% and net fee income increased 24%'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Consolidated net income rose 11 percent to EUR 338.3 million, comprising net interest income of EUR 273.3 million (up 8 percent) and net fee and commission income of EUR 60.3 million (up 24 percent)."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses amounted to EUR 146.9 million, reflecting a 14 percent increase primarily linked to a larger workforce and higher personnel costs.",
+        "candidate_value": "EUR 146.9 million (+14%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 146.9 million (+14% YoY)",
+        "source_evidence": "'Operating expenses amounted to EUR 146.9 million (+14% YoY). Most of the increase in expenses has been related to the increased numbers of employees'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating expenses amounted to EUR 146.9 million, reflecting a 14 percent increase primarily linked to a larger workforce and higher personnel costs."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Consequently, pre-tax profit reached EUR 175.1 million, yielding a net profit of EUR 150.3 million, a 7 percent year-over-year increase.",
+        "candidate_value": "EUR 175.1 million (pre-tax); EUR 150.3 million (+7% YoY) net profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 175.1 million pre-tax profit; EUR 150.3 million net profit (+7% YoY)",
+        "source_evidence": "Financial results table: 'Proft before credit losses... Impairments... Tax expense... Net proft' showing EUR 175.1 million pre-tax and EUR 150.3 million net profit (+7% YoY)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Consequently, pre-tax profit reached EUR 175.1 million, yielding a net profit of EUR 150.3 million, a 7 percent year-over-year increase."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Return on equity stood at 24.5 percent, with a cost-to-income ratio of 43.4 percent and return on assets of 1.9 percent.",
+        "candidate_value": "ROE 24.5%; C/I 43.4%; ROA 1.9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ROE 24.5%; Cost to income ratio 43.4%; ROA 1.9%",
+        "source_evidence": "Financial ratios table for 2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Return on equity stood at 24.5 percent, with a cost-to-income ratio of 43.4 percent and return on assets of 1.9 percent."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million.",
+        "candidate_value": "EUR 348 million (+338%); EUR 416 million (+388%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 348 million loan portfolio; EUR 416 million deposit platform growth (+388% YoY)",
+        "source_evidence": "LHV Bank Ltd section: 'Loans grew by 267 million over the year, reaching 348 million... LHV Bank has increased its collection of deposits from deposit platforms, with an increase of EUR 416 million (+388% YoY)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The European Central Bank responded to moderating inflation by implementing four consecutive 25-basis-point rate cuts during the second half of the year, lowering the deposit facility rate to 3 percent by December.",
+        "candidate_value": "Four 25 bps cuts; deposit rate 3% by Dec",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Four 25-basis-point cuts in Jun/Sep/Oct/Dec 2024; deposit facility rate at 3% by year-end",
+        "source_evidence": "Business Environment: 'implementing four 25-basis-point rate cuts in June, September, October, and December 2024. By year-end, the deposit facility rate... stood at 3%'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The European Central Bank responded to moderating inflation by implementing four consecutive 25-basis-point rate cuts during the second half of the year, lowering the deposit facility rate to 3 percent by December."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "This shifting monetary policy prompted LHV to revise its internal financial plan in September, raising profitability targets by 25 percent while acknowledging that declining rates will likely compress net interest margins in the near term.",
+        "candidate_value": "Revised plan in Sep; targets +25%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Financial plan updated in September with profitability targets hiked by 25%",
+        "source_evidence": "Strategy and Financial Plan: 'In 2024, LHV updated financial plan in September and hiked up the profitability targets by 25%'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This shifting monetary policy prompted LHV to revise its internal financial plan in September, raising profitability targets by 25 percent while acknowledging that declining rates will likely compress net interest margins in the near term."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "All regulatory capital, MREL, and liquidity requirements were comfortably met, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a liquidity coverage ratio of 187.5 percent.",
+        "candidate_value": "CET1 16.89%; LCR 187.5%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "CET1 16.89%; LCR 187.5%",
+        "source_evidence": "Regulatory ratios table for 2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "All regulatory capital, MREL, and liquidity requirements were comfortably met, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a liquidity coverage ratio of 187.5 percent."
+          }
+        ]
+      },
+      {
+        "claim": "The number of Estonian bank customers increased by 38,000",
+        "candidate_value": "38,000",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "38,000",
+        "source_evidence": "LHV Pank customers increased by 38,000 to 456,000 (9% YoY) as stated in 'Summary of the year 2024' section",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N11",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent."
+          }
+        ]
+      },
+      {
+        "claim": "representing a 9 percent increase",
+        "candidate_value": "9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9%",
+        "source_evidence": "Explicitly stated as 'by 9% YoY' in the same customer growth context",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N12",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent."
+          }
+        ]
+      },
+      {
+        "claim": "actively using digital payment users rising 12 percent",
+        "candidate_value": "12%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12%",
+        "source_evidence": "Stated as 'the number of customers actively using LHV Pank for everyday payments increased by 22,800 (+12% YoY)' in '2024 in numbers' section",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent."
+          }
+        ]
+      },
+      {
+        "claim": "issued EUR 20 million of Tier 2 subordinated bonds in November",
+        "candidate_value": "EUR 20 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 20 million",
+        "source_evidence": "Explicitly stated in 'Shares and bonds issued by LHV' section: 'issued EUR 20 million of new Tier 2 bonds'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The Group also acquired a small but highly profitable loan portfolio from AS TBB Pank and successfully issued EUR 20 million of Tier 2 subordinated bonds in November, following the timely redemption of EUR 20 million in Additional Tier 1 instruments earlier in the year."
+          }
+        ]
+      },
+      {
+        "claim": "redemption of EUR 20 million in Additional Tier 1 instruments",
+        "candidate_value": "EUR 20 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 20 million",
+        "source_evidence": "Same section states: 'LHV redeemed EUR 20 million of Additional Tier 1 bonds'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "id": "N15",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The Group also acquired a small but highly profitable loan portfolio from AS TBB Pank and successfully issued EUR 20 million of Tier 2 subordinated bonds in November, following the timely redemption of EUR 20 million in Additional Tier 1 instruments earlier in the year."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated revenue increased by 11% to EUR 338.3 million in 2024, driven by net interest income growth of 8% to EUR 273.3 million and net fee and commission income growth of 24% to EUR 60.3 million; net profit rose 7% to EUR 150.3 million, resulting in a cost-to-income ratio of 43.4% and return on equity of 24.5%.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (pages 10-11); Consolidated statement of profit or loss (page 189)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Consolidated net income rose 11 percent to EUR 338.3 million, comprising net interest income of EUR 273.3 million (up 8 percent) and net fee and commission income of EUR 60.3 million (up 24 percent)."
+          },
+          {
+            "id": "S6",
+            "text": "Consequently, pre-tax profit reached EUR 175.1 million, yielding a net profit of EUR 150.3 million, a 7 percent year-over-year increase."
+          },
+          {
+            "id": "S7",
+            "text": "Return on equity stood at 24.5 percent, with a cost-to-income ratio of 43.4 percent and return on assets of 1.9 percent."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The loan portfolio expanded by EUR 990 million (28% YoY) to EUR 4.6 billion, comprising Estonian corporate loans up 21% to EUR 2.3 billion, Estonian retail loans up 21% to EUR 1.9 billion, and UK SME loans up 338% to EUR 0.3 billion.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Note 12, Loans and advances to customers (page 223)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The net loan portfolio expanded by EUR 990 million, or 28 percent, to EUR 4.6 billion, while customer deposits increased 21 percent to EUR 6.9 billion."
+          },
+          {
+            "id": "S10",
+            "text": "In the United Kingdom, LHV Bank Ltd capitalized on its full-year licensed operations, achieving exceptional growth with the SME and retail loan portfolio expanding 338 percent to EUR 348 million and platform deposits surging 388 percent to EUR 416 million."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Deposits grew by EUR 1,179 million (21% YoY) to EUR 6.9 billion, with regular customer deposits in LHV Pank rising EUR 554 million (14% YoY to EUR 4.6 billion) and deposits from financial intermediaries increasing significantly (LHV Bank collections up EUR 416 million, +388% YoY), partly offset by LHV Pank reducing platform deposits by one-third.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Note 17, Deposits from customers (page 226)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The net loan portfolio expanded by EUR 990 million, or 28 percent, to EUR 4.6 billion, while customer deposits increased 21 percent to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Assets under management increased to EUR 1.56 billion (3% YoY), primarily due to positive market returns, with LHV Varahaldus maintaining a ~25% market share in Estonia's II pillar pension system managing savings for 22.3% of participants.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Overview of LHV Varahaldus (page 24)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Customer base grew with LHV Pank reaching 456,000 clients (+9% YoY, including 38,000 new customers), and LHV Kindlustus insuring 170,000 customers (+6% YoY).",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Overview of LHV Kindlustus (page 24)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The number of Estonian bank customers increased by 38,000, or 9 percent, with actively using digital payment users rising 12 percent."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Strategic initiatives included launching retail banking operations in the UK, introducing a mobile banking app, and implementing cost-control measures involving redundancies and departmental restructuring to enhance operational efficiency.",
+        "importance": "HIGH",
+        "source_evidence": "Letter from the CEO (page 8); Overview of LHV Bank Ltd (page 25); Management report, Development activities (page 22)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Late in the year, the UK subsidiary launched its retail banking offering, including mobile application services."
+          },
+          {
+            "id": "S16",
+            "text": "Despite this headwind, the Group maintained strict cost controls, executed targeted organizational restructuring, and preserved an excellent asset quality profile with historically low non-performing loan ratios."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The dividend proposal recommends paying EUR 0.09 per share (total EUR 29.2 million) with related income tax of EUR 8.2 million, and transferring EUR 123.2 million of parent-company attributable profit to retained earnings.",
+        "importance": "HIGH",
+        "source_evidence": "Proposal for profit distribution (page 245)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "The Group maintained strong regulatory capital positions with a CET1 ratio of 16.89% (above minimum 12.41%), complying with all capital adequacy (including MREL of 33.24% and 12.41%), leverage ratio (6.71%), and liquidity requirements (LCR 187.5%, NSFR 154.4%).",
+        "importance": "HIGH",
+        "source_evidence": "Regulatory and financial ratios (page 13); Note 21, Shareholders' equity (page 230)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "All regulatory capital, MREL, and liquidity requirements were comfortably met, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a liquidity coverage ratio of 187.5 percent."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Operations occurred amid a contracting Estonian economy (GDP -0.7% YoY) and stabilized UK economy, with LHV Pank maintaining tight credit quality (loans overdue >60 days at 0.3% of portfolio) and benefiting from rising corporate loan demand late in the year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Business environment (page 18); Market average share of overdue loans (page 20); Overview of LHV Pank (page 21)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Macroeconomic conditions presented mixed signals, with Estonian GDP contracting slightly throughout 2024 before stabilization cues emerged heading into 2025."
+          },
+          {
+            "id": "S16",
+            "text": "Despite this headwind, the Group maintained strict cost controls, executed targeted organizational restructuring, and preserved an excellent asset quality profile with historically low non-performing loan ratios."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K3",
+      "K4",
+      "K5",
+      "K6",
+      "K7",
+      "K9"
+    ],
+    "completeness_justification": "K1, K2, and K8 are fully present with clear coverage of revenue growth, loan/deposit expansion, and regulatory capital positions. K3 is partially present as deposit growth is mentioned but lacks specific breakdown details (regular customer deposits, financial intermediaries, platform deposits). K4 is missing entirely (AUM details). K5 is partially present (customer base growth mentioned but insurance customer numbers missing). K6 is partially present (UK retail banking and mobile app mentioned, but cost-control measures like redundancies/restructuring are only hinted at). K7 is missing entirely (dividend proposal details). K9 is partially present (macro conditions and credit quality mentioned but lacks specific GDP contraction figure and corporate loan demand timing). The overall coverage is mixed with major HIGH items covered but several MEDIUM items incomplete or missing, leading to a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon one another without contradiction. The narrative flows logically from overall performance highlights (S1) through detailed financial metrics (S2-S7), geographic expansion (S9-S11), strategic actions (S12, S15-S16), and forward-looking statements (S18). Explanations for performance drivers (S8) and challenges (S15) are consistent with reported outcomes. While S8 mentions a 'restrictive interest rate environment' that boosted margins, this is later clarified in S15 as a temporary phenomenon that will reverse, creating a coherent cause-effect relationship rather than contradiction. The summary maintains clear organization with each sentence contributing to a unified narrative about the Group's 2024 performance and 2025 outlook. There is no unnecessary repetition, and all numerical relationships are presented without implying they should arithmetically reconcile to form a single total."
+  },
+  "usage": {
+    "input_tokens_total": 483438,
+    "output_tokens_total_including_reasoning": 7963,
+    "total_tokens": 491401,
+    "latency_seconds_total": 64.4
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 481493,
+    "output_tokens_total_including_reasoning": 37383,
+    "total_tokens": 518876,
+    "latency_seconds_total": 354.84
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_13.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_13_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_13.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_13.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_13_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_13_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_13_zero_shot_qwen36.json"
+    }
+  }
+}

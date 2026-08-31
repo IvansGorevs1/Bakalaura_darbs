@@ -1,0 +1,724 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_1_few_shot_qwen36.txt",
+    "report": "report_annual_1.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AAC Clyde Space reported a decline in financial performance during the 2025 fiscal year, driven by project delays that impacted revenue recognition and cash flow.",
+    "S2": "Net sales decreased by 16% to SEK 295.3 million, compared with SEK 352.9 million in the previous year.",
+    "S3": "This contraction was primarily attributable to the Products & Missions segment, where sales fell by 29% to SEK 245.0 million due to postponed project initiations and milestone delays.",
+    "S4": "Conversely, the Data & Services segment demonstrated strong growth, with net sales increasing by 78% to SEK 80.1 million, reflecting the company’s strategic shift toward recurring revenue streams from its satellite constellations.",
+    "S5": "Profitability metrics weakened significantly.",
+    "S6": "The operating result after depreciation and impairment, or EBIT, deteriorated to a loss of SEK 40.0 million, a sharp decline from the SEK 4.0 million loss recorded in 2024.",
+    "S7": "EBITDA also fell to SEK 17.5 million from SEK 46.7 million, although the company maintained positive EBITDA for the third consecutive year.",
+    "S8": "The loss for the period amounted to SEK 46.6 million, resulting in earnings per share of SEK -7.63, compared to SEK -1.00 in the prior year.",
+    "S9": "Operating cash flow turned negative at SEK 72.6 million, largely due to timing differences in customer payments and increased working capital requirements, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million.",
+    "S10": "The financial results were materially affected by operational delays in key programs.",
+    "S11": "In one instance, technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026.",
+    "S12": "Additionally, the EPS-Sterna program faced political and procurement hurdles that postponed its initiation.",
+    "S13": "These delays were partially offset by significant strategic developments.",
+    "S14": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history.",
+    "S15": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability.",
+    "S16": "Strategic initiatives continued to advance despite the financial headwinds.",
+    "S17": "The Sedna-1 and Sedna-2 satellites became fully operational, strengthening the maritime data network and supporting multi-year customer agreements.",
+    "S18": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services.",
+    "S19": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%.",
+    "S20": "The Board proposed no dividend, recommending that retained earnings be carried forward to support continued development of satellite constellations and data services."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_1.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_1.json",
+    "key_information_hash": "9cc2849e6febccc0",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 1,
+      "missing": 1,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AAC Clyde Space reported a decline in financial performance during the 2025 fiscal year, driven by project delays that impacted revenue recognition and cash flow.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report states: 'Two programme-related delays materially affected revenue, cash flow and order intake in 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AAC Clyde Space reported a decline in financial performance during the 2025 fiscal year, driven by project delays that impacted revenue recognition and cash flow."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Profitability metrics weakened significantly.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated financial statements show EBIT deteriorated to SEK -40.0 M (2025) from SEK -4.0 M (2024)",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Profitability metrics weakened significantly."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The financial results were materially affected by operational delays in key programs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'Two programme-related delays materially affected revenue, cash flow and order intake in 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The financial results were materially affected by operational delays in key programs."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "In one instance, technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "In one instance, technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Additionally, the EPS-Sterna program faced political and procurement hurdles that postponed its initiation.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'In the EPS-Sterna programme, political and procurement developments postponed project initiation.'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Additionally, the EPS-Sterna program faced political and procurement hurdles that postponed its initiation."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "These delays were partially offset by significant strategic developments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report details multiple strategic achievements including new contracts, operational satellites, and share issues",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "These delays were partially offset by significant strategic developments."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'AAC Clyde Space has received an order from OHB Sweden valued at EUR 76.3 M... for the delivery of 20 microwave radiometers... the largest single order in the company’s history.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'In addition to increasing our order backlog to approximately SEK 1.1 billion as of end of March... it provides a new level of financial stability.'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Strategic initiatives continued to advance despite the financial headwinds.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report details progress on INFLECION, VIREON, and CubeCAT programs",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Strategic initiatives continued to advance despite the financial headwinds."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The Sedna-1 and Sedna-2 satellites became fully operational, strengthening the maritime data network and supporting multi-year customer agreements.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'In November 2025, AAC Clyde Space’s Sedna-1 and Sedna-2 satellites were fully operational... strengthening our space-based AIS maritime network... multi-year customer agreements support continued growth in recurring maritime data revenues.'",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Sedna-1 and Sedna-2 satellites became fully operational, strengthening the maritime data network and supporting multi-year customer agreements."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'AAC Clyde Space begun assembly of the first two satellites in its VIREON™ Earth Observation constellation... an important step towards a constellation generating recurring revenues from agriculture, forestry and environmental data services.'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'Institutional ownership strengthened... Bonnier Capital will become the largest shareholder... The transactions broadened institutional ownership and strengthened the long-term shareholder base. Now... equity ratio [was] 80% (71%).'",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The Board proposed no dividend, recommending that retained earnings be carried forward to support continued development of satellite constellations and data services.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report: 'The Board of Directors proposes that no dividend will be paid and that the retained earnings of SEK 628,192,029 be carried forward.'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Board proposed no dividend, recommending that retained earnings be carried forward to support continued development of satellite constellations and data services."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales decreased by 16% to SEK 295.3 million, compared with SEK 352.9 million in the previous year",
+        "candidate_value": "295.3 million SEK (2025), 352.9 million SEK (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "295.3 million SEK (2025), 352.9 million SEK (2024)",
+        "source_evidence": "Board of Directors' Report: 'Net sales decreased by 16% to SEK 295.3 M (352.9)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales decreased by 16% to SEK 295.3 million, compared with SEK 352.9 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Products & Missions segment sales fell by 29% to SEK 245.0 million",
+        "candidate_value": "245.0 million SEK (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "245.0 million SEK (2025)",
+        "source_evidence": "Note 5 Segment Information: Products & Missions income 2025: 245,000 SEK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This contraction was primarily attributable to the Products & Missions segment, where sales fell by 29% to SEK 245.0 million due to postponed project initiations and milestone delays."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Data & Services segment net sales increasing by 78% to SEK 80.1 million",
+        "candidate_value": "80.1 million SEK (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "80.1 million SEK (2025)",
+        "source_evidence": "Note 5 Segment Information: Data & Services income 2025: 80,142 SEK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Conversely, the Data & Services segment demonstrated strong growth, with net sales increasing by 78% to SEK 80.1 million, reflecting the company’s strategic shift toward recurring revenue streams from its satellite constellations."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBIT deteriorated to a loss of SEK 40.0 million, a sharp decline from the SEK 4.0 million loss recorded in 2024",
+        "candidate_value": "-40.0 million SEK (2025), -4.0 million SEK (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-40.0 million SEK (2025), -4.0 million SEK (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income: EBIT 2025: -39,985 SEK, 2024: -4,022 SEK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The operating result after depreciation and impairment, or EBIT, deteriorated to a loss of SEK 40.0 million, a sharp decline from the SEK 4.0 million loss recorded in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "EBITDA fell to SEK 17.5 million from SEK 46.7 million",
+        "candidate_value": "17.5 million SEK (2025), 46.7 million SEK (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17.5 million SEK (2025), 46.7 million SEK (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income: EBITDA 2025: 17,463 SEK, 2024: 46,694 SEK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "EBITDA also fell to SEK 17.5 million from SEK 46.7 million, although the company maintained positive EBITDA for the third consecutive year."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Loss for the period amounted to SEK 46.6 million, resulting in earnings per share of SEK -7.63, compared to SEK -1.00 in the prior year",
+        "candidate_value": "46.6 million SEK loss (2025), -7.63 SEK EPS (2025), -1.00 SEK EPS (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "46.6 million SEK loss (2025), -7.63 SEK EPS (2025), -1.00 SEK EPS (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income: Loss 2025: -46,556 SEK; Note 31: EPS 2025: -7.63, 2024: -1.00",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The loss for the period amounted to SEK 46.6 million, resulting in earnings per share of SEK -7.63, compared to SEK -1.00 in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operating cash flow turned negative at SEK 72.6 million, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million",
+        "candidate_value": "-72.6 million SEK operating cash flow (2025), 30.1 million SEK cash (2025), 49.7 million SEK cash (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-72.6 million SEK operating cash flow (2025), 30.1 million SEK cash (2025), 49.7 million SEK cash (2024)",
+        "source_evidence": "Consolidated Statement of Cash Flows: Operating cash flow 2025: -72,600 SEK; Note 23: Cash and cash equivalents 2025: 30,117 SEK, 2024: 49,676 SEK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating cash flow turned negative at SEK 72.6 million, largely due to timing differences in customer payments and increased working capital requirements, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026",
+        "candidate_value": "32 million SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "32 million SEK",
+        "source_evidence": "Board of Directors' Report: '...shifting approximately SEK 32 M into 2026.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "In one instance, technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Signed a EUR 76.3 million contract with OHB Sweden for microwave radiometers",
+        "candidate_value": "EUR 76.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 76.3 million",
+        "source_evidence": "Board of Directors' Report: 'received an order from OHB Sweden valued at EUR 76.3 M'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Order backlog increased to approximately SEK 1.1 billion as of March 2026",
+        "candidate_value": "1.1 billion SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1.1 billion SEK",
+        "source_evidence": "Board of Directors' Report: 'increasing our order backlog to approximately SEK 1.1 billion as of end of March'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Equity ratio increased to 80% from 71%",
+        "candidate_value": "80% (2025), 71% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "80% (2025), 71% (2024)",
+        "source_evidence": "Board of Directors' Report: 'As of 31 December 2025, the equity to assets ratio was 80% (71)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance showing net sales decreased to SEK 295M (from SEK 352M in 2024) with EBITDA of SEK 17M (third consecutive positive year but down from SEK 47M), EBIT loss of SEK 40M (compared to SEK 4M loss in 2024), and operating cash flow turning negative at SEK -73M (from SEK 57M in 2024), while cash reserves declined to SEK 30M.",
+        "importance": "HIGH",
+        "source_evidence": "Financial highlights table (page 5), Consolidated Statement of Comprehensive Income (page 33), Consolidated Balance Sheet (page 34), Consolidated Statement of Cash Flows (page 36)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6",
+          "S7",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales decreased by 16% to SEK 295.3 million, compared with SEK 352.9 million in the previous year."
+          },
+          {
+            "id": "S6",
+            "text": "The operating result after depreciation and impairment, or EBIT, deteriorated to a loss of SEK 40.0 million, a sharp decline from the SEK 4.0 million loss recorded in 2024."
+          },
+          {
+            "id": "S7",
+            "text": "EBITDA also fell to SEK 17.5 million from SEK 46.7 million, although the company maintained positive EBITDA for the third consecutive year."
+          },
+          {
+            "id": "S9",
+            "text": "Operating cash flow turned negative at SEK 72.6 million, largely due to timing differences in customer payments and increased working capital requirements, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Business restructuring into two segments (Products & Missions and Data & Services) to enhance operational efficiency, with Data & Services segment growing net sales by approximately 80% to SEK 80M (from SEK 45M in 2024) driven by recurring maritime data revenues from operational Sedna satellites.",
+        "importance": "HIGH",
+        "source_evidence": "Operations section (page 9-11), CEO Review (page 6), Business segments highlights (page 11)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Conversely, the Data & Services segment demonstrated strong growth, with net sales increasing by 78% to SEK 80.1 million, reflecting the company’s strategic shift toward recurring revenue streams from its satellite constellations."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Major contract acquisitions including ESA's INFLECION Phase 1 agreement (part of a SEK 350M co-funded program with 50% UK Space Agency contribution) and SEK 11.8M order for EPS-Sterna weather constellation components, significantly boosting order backlog and providing multi-year revenue visibility.",
+        "importance": "HIGH",
+        "source_evidence": "2025 in brief (page 5), Board of Directors' Report (page 32), Significant events during the year (page 32)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history."
+          },
+          {
+            "id": "S15",
+            "text": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Key operational milestones: Sedna-1 and Sedna-2 satellites became fully operational strengthening maritime AIS network capacity; first CubeCAT laser communication terminals delivered enabling high-speed optical links; assembly commenced on first two VIREON™ Earth Observation satellites for 2026 launch.",
+        "importance": "HIGH",
+        "source_evidence": "2025 in brief (page 5), Weather technology praised by ESA section (page 5), Operations structured in two segments (page 5), Board of Directors' Report (page 32)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17",
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Sedna-1 and Sedna-2 satellites became fully operational, strengthening the maritime data network and supporting multi-year customer agreements."
+          },
+          {
+            "id": "S18",
+            "text": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strategic institutional investment by Bonnier Capital of up to SEK 140M (with SEK 50.3M initial tranche completed in December 2025) strengthening ownership base and securing funding for satellite constellation development and data services expansion.",
+        "importance": "HIGH",
+        "source_evidence": "Institutional ownership strengthened section (page 5), Board of Directors' Report (page 32), Top 10 shareholders table (page 18)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Market positioning leveraged through AI-enhanced space-based data services and vertical integration in satellite manufacturing, with focus shifting toward recurring revenue streams from operational constellations rather than project-based hardware sales.",
+        "importance": "HIGH",
+        "source_evidence": "CEO Review (page 6), Invest in AAC Clyde Space section (page 8), Business model description (page 9-10)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S18",
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Conversely, the Data & Services segment demonstrated strong growth, with net sales increasing by 78% to SEK 80.1 million, reflecting the company’s strategic shift toward recurring revenue streams from its satellite constellations."
+          },
+          {
+            "id": "S18",
+            "text": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services."
+          },
+          {
+            "id": "S20",
+            "text": "The Board proposed no dividend, recommending that retained earnings be carried forward to support continued development of satellite constellations and data services."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Liquidity management via expanded overdraft facility to SEK 50M (from SEK 30M) and maintained equity ratio of 80% (up from 71% in 2024), ensuring financial stability despite cash flow pressures from program delays and investment requirements.",
+        "importance": "HIGH",
+        "source_evidence": "Cash flow, liquidity and financial position section (page 33), Consolidated Balance Sheet (page 34), Significant events during the year (page 32)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating cash flow turned negative at SEK 72.6 million, largely due to timing differences in customer payments and increased working capital requirements, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million."
+          },
+          {
+            "id": "S19",
+            "text": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Material post-reporting-period events: successful launch and commissioning of VIREON™-1 and VIREON™-2 Earth Observation satellites; initiation of Sedna-3 and Sedna-4 maritime satellite construction; receipt of EUR 76.3M order from OHB Sweden for 20 EPS-Sterna microwave radiometers.",
+        "importance": "HIGH",
+        "source_evidence": "Significant events after the end of the year (page 32, 36), Board of Directors' Report (page 32)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K3",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K4, K5, K6, and K7 are PRESENT with clear coverage in the candidate summary. K3 is PARTIALLY_PRESENT because while the candidate mentions the EUR 76.3M OHB Sweden contract and increased backlog, it does not specify the ESA INFLECION Phase 1 agreement or the SEK 11.8M EPS-Sterna order. K8 is MISSING entirely as there is no mention of post-reporting-period events such as the launch/commissioning of VIREON™-1/-2 or initiation of Sedna-3/-4 construction. The overall coverage is strong but missing one HIGH criterion (K8) and partially covering another (K3), resulting in a Generally yes assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. It presents a clear narrative of declining financial performance due to project delays, supported by specific numerical data (sales, EBIT, EBITDA, EPS, cash flow). The summary logically connects causes (delays, timing differences) to effects (revenue shifts, losses). Strategic developments (new contracts, operational satellites) are presented as offsets to financial challenges. There are no self-contradictions, logical gaps, or organizational problems. While the summary covers both negative financial results and positive strategic developments, these elements are presented as complementary aspects of the company's overall situation rather than contradictory statements. The progression from financial challenges to strategic initiatives creates a coherent whole without unnecessary repetition."
+  },
+  "usage": {
+    "input_tokens_total": 66101,
+    "output_tokens_total_including_reasoning": 6191,
+    "total_tokens": 72292,
+    "latency_seconds_total": 40.65
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 125433,
+    "output_tokens_total_including_reasoning": 49174,
+    "total_tokens": 174607,
+    "latency_seconds_total": 166.46
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_1.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_1_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_1.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_1.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_1_few_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_1_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_1_few_shot_qwen36.json"
+    }
+  }
+}

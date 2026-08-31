@@ -1,0 +1,669 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_14_few_shot_gemini.txt",
+    "report": "report_annual_14.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Lyko Group AB reported continued top-line growth during the 2025 financial year, alongside a decline in profitability due to major strategic investments and restructuring costs.",
+    "S2": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024.",
+    "S3": "Growth was primarily driven by the Nordic segment, where net sales rose by 12.0 percent to SEK 3,699.8 million, supported by market share gains and physical store expansion.",
+    "S4": "Notably, annual revenue in Norway surpassed SEK 1 billion for the first time.",
+    "S5": "Conversely, net sales in the European segment decreased by 1.3 percent to SEK 130.7 million, prompting a late-year reorganization that included closing local offices in Germany and the Netherlands to centralize operations at the Nordic headquarters.",
+    "S6": "Despite the revenue expansion, profitability metrics weakened across the board.",
+    "S7": "Gross profit increased moderately to SEK 1,658.7 million, but the gross profit margin contracted from 44.0 percent in the previous year to 41.9 percent.",
+    "S8": "Operating profit fell to SEK 78.2 million, down from SEK 117.4 million in 2024, resulting in an operating margin of 2.0 percent compared to 3.3 percent previously.",
+    "S9": "The company recorded a net loss of SEK 3.0 million for the year, a decline from a net profit of SEK 21.0 million in 2024, corresponding to earnings per share of SEK -0.20 compared to SEK 1.37 in the prior period.",
+    "S10": "The financial results were significantly influenced by heavy capital expenditures and strategic infrastructure projects, most notably the commissioning of the new automated warehouse expansion in Vansbro.",
+    "S11": "This largest project in company history required substantial investments in property, plant, and equipment, lifting total investing cash flow outflows to SEK 351.2 million.",
+    "S12": "Consequently, cash flow from operating activities strengthened markedly to SEK 527.5 million, up from SEK 209.7 million in 2024.",
+    "S13": "Cash and cash equivalents rose to SEK 452.5 million at year-end, while net debt excluding IFRS 16 decreased slightly to SEK 292.5 million.",
+    "S14": "Total assets expanded to SEK 3,086.4 million, and equity stood at SEK 456.6 million, lowering the equity ratio to 14.8 percent from 20.3 percent.",
+    "S15": "During the year, the store network expanded to 34 locations, highlighted by the launch of the first scalable Fab Store concept in Täby Centrum.",
+    "S16": "To prioritize long-term expansion, the Board of Directors proposed no dividend for the 2025 fiscal year.",
+    "S17": "Furthermore, following the reporting period, Lyko announced a cost-savings program in January 2026 expected to generate annual savings of approximately SEK 100 million through workforce reductions affecting around 70 full-time positions, accompanied by SEK 22 million in restructuring costs recorded in the first quarter of 2026."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_14.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_14.json",
+    "key_information_hash": "66aa7d05a7b21c7b",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Lyko Group AB reported continued top-line growth during the 2025 financial year, alongside a decline in profitability due to major strategic investments and restructuring costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report (page 62) states net sales grew 11.3% to SEK 3,962.6m while EBIT fell to SEK 78.2m (2.0% margin) from SEK 117.4m (3.3% margin). The Sustainability Report (page 24) and Risk Management section (page 52) reference major infrastructure investments and restructuring impacts.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Lyko Group AB reported continued top-line growth during the 2025 financial year, alongside a decline in profitability due to major strategic investments and restructuring costs."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (page 62) explicitly shows net sales of SEK 3,962.6m (2025) vs SEK 3,561.7m (2024), representing 11.3% growth.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Growth was primarily driven by the Nordic segment, where net sales rose by 12.0 percent to SEK 3,699.8 million, supported by market share gains and physical store expansion.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net Sales per Segment table (page 63) shows Nordics net sales of SEK 3,699.8m (2025) vs SEK 3,304.3m (2024), a 12.0% increase. Management Report (page 62) attributes growth to Nordic market share gains and store expansion.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Growth was primarily driven by the Nordic segment, where net sales rose by 12.0 percent to SEK 3,699.8 million, supported by market share gains and physical store expansion."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Notably, annual revenue in Norway surpassed SEK 1 billion for the first time.",
+        "label": "SUPPORTED",
+        "source_evidence": "History section (page 11) states: 'In 2025, the Norwe- gian market surpassed SEK 1 billion in annual sales'.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Notably, annual revenue in Norway surpassed SEK 1 billion for the first time."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Conversely, net sales in the European segment decreased by 1.3 percent to SEK 130.7 million, prompting a late-year reorganization that included closing local offices in Germany and the Netherlands to centralize operations at the Nordic headquarters.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net Sales per Segment table (page 63) shows Europe net sales of SEK 130.7m (2025) vs SEK 132.4m (2024), a 1.3% decrease. Management Report (page 62) details December reorganization closing Netherlands/Germany offices.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Conversely, net sales in the European segment decreased by 1.3 percent to SEK 130.7 million, prompting a late-year reorganization that included closing local offices in Germany and the Netherlands to centralize operations at the Nordic headquarters."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Despite the revenue expansion, profitability metrics weakened across the board.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures (page 62) show EBIT margin contracting from 3.3% to 2.0%, gross margin from 44.0% to 41.9%, and net profit turning to loss. Management Report (page 62) confirms profitability decline.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite the revenue expansion, profitability metrics weakened across the board."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "During the year, the store network expanded to 34 locations, highlighted by the launch of the first scalable Fab Store concept in Täby Centrum.",
+        "label": "SUPPORTED",
+        "source_evidence": "Selected Events (page 47) details October 2025 Fab Store opening in Täby Centrum. Group operations section (page 62) states 34 stores as of December 31, 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "During the year, the store network expanded to 34 locations, highlighted by the launch of the first scalable Fab Store concept in Täby Centrum."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024.",
+        "candidate_value": "SEK 3,962.6 million (2025) vs SEK 3,561.7 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 3,962.6 million (2025) vs SEK 3,561.7 million (2024)",
+        "source_evidence": "Key Figures table (page 62) confirms exact figures and growth rate.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Nordic segment net sales rose by 12.0 percent to SEK 3,699.8 million",
+        "candidate_value": "SEK 3,699.8 million (2025) vs SEK 3,304.3 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 3,699.8 million (2025) vs SEK 3,304.3 million (2024)",
+        "source_evidence": "Net Sales per Segment table (page 63) provides exact values and calculated growth rate.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Growth was primarily driven by the Nordic segment, where net sales rose by 12.0 percent to SEK 3,699.8 million, supported by market share gains and physical store expansion."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Norway annual revenue surpassed SEK 1 billion",
+        "candidate_value": "SEK 1 billion+",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 1 billion+",
+        "source_evidence": "History section (page 11) explicitly states Norway surpassed SEK 1 billion in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Notably, annual revenue in Norway surpassed SEK 1 billion for the first time."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "European segment net sales decreased by 1.3 percent to SEK 130.7 million",
+        "candidate_value": "SEK 130.7 million (2025) vs SEK 132.4 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 130.7 million (2025) vs SEK 132.4 million (2024)",
+        "source_evidence": "Net Sales per Segment table (page 63) shows exact figures and calculated decrease.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Conversely, net sales in the European segment decreased by 1.3 percent to SEK 130.7 million, prompting a late-year reorganization that included closing local offices in Germany and the Netherlands to centralize operations at the Nordic headquarters."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Gross profit increased moderately to SEK 1,658.7 million, but the gross profit margin contracted from 44.0 percent in the previous year to 41.9 percent",
+        "candidate_value": "SEK 1,658.7 million (2025) vs SEK 1,568.8 million (2024); 41.9% (2025) vs 44.0% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 1,658.7 million (2025) vs SEK 1,568.8 million (2024); 41.9% (2025) vs 44.0% (2024)",
+        "source_evidence": "Key Figures table (page 62) provides exact gross profit amounts and margin percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Gross profit increased moderately to SEK 1,658.7 million, but the gross profit margin contracted from 44.0 percent in the previous year to 41.9 percent."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operating profit fell to SEK 78.2 million, down from SEK 117.4 million in 2024, resulting in an operating margin of 2.0 percent compared to 3.3 percent previously",
+        "candidate_value": "SEK 78.2 million (2025) vs SEK 117.4 million (2024); 2.0% (2025) vs 3.3% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 78.2 million (2025) vs SEK 117.4 million (2024); 2.0% (2025) vs 3.3% (2024)",
+        "source_evidence": "Key Figures table (page 62) shows exact operating profit figures and margin percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operating profit fell to SEK 78.2 million, down from SEK 117.4 million in 2024, resulting in an operating margin of 2.0 percent compared to 3.3 percent previously."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The company recorded a net loss of SEK 3.0 million for the year, a decline from a net profit of SEK 21.0 million in 2024, corresponding to earnings per share of SEK -0.20 compared to SEK 1.37 in the prior period",
+        "candidate_value": "SEK -3.0 million (2025) vs SEK 21.0 million (2024); SEK -0.20 (2025) vs SEK 1.37 (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -3.0 million (2025) vs SEK 21.0 million (2024); SEK -0.20 (2025) vs SEK 1.37 (2024)",
+        "source_evidence": "Income Statement (page 65) shows profit/loss figures. Note 14 (page 88) provides exact EPS figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The company recorded a net loss of SEK 3.0 million for the year, a decline from a net profit of SEK 21.0 million in 2024, corresponding to earnings per share of SEK -0.20 compared to SEK 1.37 in the prior period."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Heavy capital expenditures and strategic infrastructure projects... new automated warehouse expansion in Vansbro",
+        "candidate_value": "Major infrastructure investment referenced",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Major infrastructure investment referenced",
+        "source_evidence": "Management Report (page 62) and Selected Events (page 47) detail the SEK 500m automated warehouse expansion as the largest project in company history.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The financial results were significantly influenced by heavy capital expenditures and strategic infrastructure projects, most notably the commissioning of the new automated warehouse expansion in Vansbro."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total investing cash flow outflows to SEK 351.2 million",
+        "candidate_value": "SEK 351.2 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 351.2 million",
+        "source_evidence": "Cash Flow Statement (page 68) shows investing activities of -SEK 351.2m for 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "This largest project in company history required substantial investments in property, plant, and equipment, lifting total investing cash flow outflows to SEK 351.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Cash flow from operating activities strengthened markedly to SEK 527.5 million, up from SEK 209.7 million in 2024",
+        "candidate_value": "SEK 527.5 million (2025) vs SEK 209.7 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 527.5 million (2025) vs SEK 209.7 million (2024)",
+        "source_evidence": "Cash Flow Statement (page 68) provides exact operating cash flow figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Consequently, cash flow from operating activities strengthened markedly to SEK 527.5 million, up from SEK 209.7 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Cash and cash equivalents rose to SEK 452.5 million at year-end, while net debt excluding IFRS 16 decreased slightly to SEK 292.5 million",
+        "candidate_value": "SEK 452.5 million (cash); SEK 292.5 million (net debt)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 452.5 million (cash); SEK 292.5 million (net debt)",
+        "source_evidence": "Key Figures table (page 62) and Financial Position section (page 63) confirm exact cash and net debt figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cash and cash equivalents rose to SEK 452.5 million at year-end, while net debt excluding IFRS 16 decreased slightly to SEK 292.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Total assets expanded to SEK 3,086.4 million, and equity stood at SEK 456.6 million, lowering the equity ratio to 14.8 percent from 20.3 percent",
+        "candidate_value": "SEK 3,086.4m assets; SEK 456.6m equity; 14.8% ratio (2025) vs 20.3% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 3,086.4m assets; SEK 456.6m equity; 14.8% ratio (2025) vs 20.3% (2024)",
+        "source_evidence": "Balance Sheet (page 66) shows total assets of SEK 3,086.4m and equity of SEK 456.6m. Key Figures definitions (page 105) explain equity ratio calculation.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Total assets expanded to SEK 3,086.4 million, and equity stood at SEK 456.6 million, lowering the equity ratio to 14.8 percent from 20.3 percent."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Cost-savings program... expected to generate annual savings of approximately SEK 100 million through workforce reductions affecting around 70 full-time positions, accompanied by SEK 22 million in restructuring costs recorded in the first quarter of 2026",
+        "candidate_value": "SEK 100m savings; 70 FTE reductions; SEK 22m restructuring costs",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 100m savings; 70 FTE reductions; SEK 22m restructuring costs",
+        "source_evidence": "Events after Reporting Period (page 64) states: 'cost savings programme... expected to generate annual cost savings of approximately SEK 100m... affecting approximately 70 full-time positions... SEK 22m restructuring cost... recorded in Q1 2026.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Furthermore, following the reporting period, Lyko announced a cost-savings program in January 2026 expected to generate annual savings of approximately SEK 100 million through workforce reductions affecting around 70 full-time positions, accompanied by SEK 22 million in restructuring costs recorded in the first quarter of 2026."
+          }
+        ]
+      },
+      {
+        "claim": "store network expanded to 34 locations",
+        "candidate_value": "34",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "34",
+        "source_evidence": "Management Report > Significant events: 'As of the balance sheet date, the total number of stores in the group is 34 (32), distributed as follows: 26 (26) in Sweden, 5 (4) in Norway, and 3 (2) in Finland.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "During the year, the store network expanded to 34 locations, highlighted by the launch of the first scalable Fab Store concept in Täby Centrum."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance: Net revenue increased by 11.3% to SEK 3,962.6M (2025 vs 2024), with EBIT declining to SEK 78.2M (2.0% margin) due to warehouse automation costs, resulting in a net loss of SEK 3.0M versus profit of SEK 21.0M in 2024.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT pages 62-63 (Key Figures table)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total net revenue increased by 11.3 percent to SEK 3,962.6 million, compared to SEK 3,561.7 million in 2024."
+          },
+          {
+            "id": "S8",
+            "text": "Operating profit fell to SEK 78.2 million, down from SEK 117.4 million in 2024, resulting in an operating margin of 2.0 percent compared to 3.3 percent previously."
+          },
+          {
+            "id": "S9",
+            "text": "The company recorded a net loss of SEK 3.0 million for the year, a decline from a net profit of SEK 21.0 million in 2024, corresponding to earnings per share of SEK -0.20 compared to SEK 1.37 in the prior period."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Nordics segment (Sweden, Norway, Finland, Denmark) accounted for 93.4% of sales (SEK 3,699.8M) with 12.0% growth, while Europe segment (Germany, Austria, Poland, Netherlands) declined 1.3% to SEK 130.7M following operational reorganization.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT page 63 (Net sales and results per segment)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Growth was primarily driven by the Nordic segment, where net sales rose by 12.0 percent to SEK 3,699.8 million, supported by market share gains and physical store expansion."
+          },
+          {
+            "id": "S5",
+            "text": "Conversely, net sales in the European segment decreased by 1.3 percent to SEK 130.7 million, prompting a late-year reorganization that included closing local offices in Germany and the Netherlands to centralize operations at the Nordic headquarters."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Commissioning of a new SEK 500M automated warehouse in Vansbro, increasing total order capacity to approximately 100,000 orders per day, with full operation expected in early 2026.",
+        "importance": "HIGH",
+        "source_evidence": "THE VANSBRO WAREHOUSE pages 24-25",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The financial results were significantly influenced by heavy capital expenditures and strategic infrastructure projects, most notably the commissioning of the new automated warehouse expansion in Vansbro."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Retail expansion included the launch of Lyko's first Fab Store (500 sqm) in Täby Centrum, opening of a third store in Finland and a fifth store in Norway, bringing total stores to 34.",
+        "importance": "HIGH",
+        "source_evidence": "SELECTED EVENTS page 47 (Fab Store facts) and MANAGEMENT REPORT page 62 (Significant events); city names and exact dates in source_evidence",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "During the year, the store network expanded to 34 locations, highlighted by the launch of the first scalable Fab Store concept in Täby Centrum."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strategic development of own brands included the relaunch of Make Up Store and launch of Scandinavian Soap Factory, strengthening margins and assortment uniqueness.",
+        "importance": "HIGH",
+        "source_evidence": "OWN BRANDS page 19 and CEO'S STATEMENT page 7",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Liquidity position strengthened with net debt (excl. IFRS 16) at SEK 292.5M versus SEK 333.1M, cash and cash equivalents at SEK 452.5M, supported by ongoing banking agreements.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT page 63 (Financial position)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cash and cash equivalents rose to SEK 452.5 million at year-end, while net debt excluding IFRS 16 decreased slightly to SEK 292.5 million."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Brand awareness improved significantly, with spontaneous awareness reaching 51% in Sweden, 46% in Norway, and 30% in Finland.",
+        "importance": "HIGH",
+        "source_evidence": "STRATEGY page 16 (Brand awareness chart); demographic scope (women 16-60) in source_evidence",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Strategic focus areas include growth in existing markets, broadening assortment, geographic expansion via 'online first' model, store network development, own brand growth, brand awareness enhancement, platform development, and strategic acquisitions.",
+        "importance": "HIGH",
+        "source_evidence": "STRATEGY page 15 (Focus areas list)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Material post-reporting events include a cost savings program targeting SEK 100M annual savings, lease of a new store in Charlottenberg, launch of Gleeze own brand, and extension of RCFs with banks until 2028.",
+        "importance": "MEDIUM",
+        "source_evidence": "EVENTS AFTER THE END OF THE YEAR page 65; specific dates (Q1 2026, April 1 2026) in source_evidence",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Furthermore, following the reporting period, Lyko announced a cost-savings program in January 2026 expected to generate annual savings of approximately SEK 100 million through workforce reductions affecting around 70 full-time positions, accompanied by SEK 22 million in restructuring costs recorded in the first quarter of 2026."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K6, and K9 are fully represented with clear core coverage in the candidate summary. K5 (strategic development of own brands) and K7 (brand awareness metrics) are entirely missing. K8 (strategic focus areas) is also missing, as there is no mention of the outlined strategic priorities. While financials and operational changes are well-covered, these three HIGH-importance items are absent, resulting in a Generally yes rating.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent with no material contradictions or logical gaps. All statements are consistent with each other and follow logical relationships. The summary progresses logically from revenue performance to profitability metrics, capital expenditures, cash flow, balance sheet changes, and strategic initiatives. There are no self-contradictions, logical gaps, organizational issues, or unnecessary repetition. The financial metrics and strategic explanations are presented in a clear, sequential manner that forms a coherent whole without internal inconsistencies."
+  },
+  "usage": {
+    "input_tokens_total": 151455,
+    "output_tokens_total_including_reasoning": 5403,
+    "total_tokens": 156858,
+    "latency_seconds_total": 36.78
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 149395,
+    "output_tokens_total_including_reasoning": 48817,
+    "total_tokens": 198212,
+    "latency_seconds_total": 152.78
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_14.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_14_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_14.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_14.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_14_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_14_few_shot_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_14_few_shot_gemini.json"
+    }
+  }
+}

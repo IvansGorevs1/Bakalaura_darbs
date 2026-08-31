@@ -1,0 +1,116 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:35:11.294278",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_5_chain_of_event_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "9c5c72d838d4a952",
+    "sentence_map_hash": "b7db0e885b974c1c",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Eleving Group S.A. reported its financial results for the twelve-month period ending December 31, 2025, demonstrating strong performance across its core business operations.",
+    "S2": "Total revenue reached 250.0 million euros, representing a 15.4% increase compared to the previous year.",
+    "S3": "The revenue stream was supported by traditional vehicle financing products contributing 67.0 million euros, flexible vehicle financing products generating 60.3 million euros, device financing products introduced in 2025 contributing 7.9 million euros, and consumer lending products providing 114.8 million euros, which marked an 18.0% increase year-on-year.",
+    "S4": "The Group achieved an all-time best in twelve-month loan issuances at 458.0 million euros, up 24.3% from 368.6 million euros in 2024.",
+    "S5": "The net portfolio expanded by 20.2% to 446.3 million euros at the end of 2025 compared to 371.2 million euros in the prior period.",
+    "S6": "Adjusted EBITDA reached a record high of 101.9 million euros, showing a 13.5% increase compared to 89.8 million euros in 2024.",
+    "S7": "Net profit from continuing operations was 29.2 million euros, compared to 28.8 million euros in the previous year, while total net profit for the period stood at 29.2 million euros compared to 29.6 million euros in 2024.",
+    "S8": "Net profit before foreign exchange results and discontinued operations reached 40.8 million euros, marking a 25.6% increase compared to 32.5 million euros in 2024.",
+    "S9": "The financial performance was driven by strategic initiatives, including the expansion of product offerings such as installment loans in European markets, the launch of smartphone financing in Kenya and Uganda which reached a portfolio of 13.5 million euros, and market entry into Tanzania with motorcycle financing.",
+    "S10": "Capital management activities during 2025 included a 40 million euro bond tap in March and a major refinancing in October where the Group issued new senior secured bonds raising 275 million euros at an annual interest rate of 9.5% maturing in October 2030, successfully refinancing its previous 150 million euro bonds.",
+    "S11": "Fulfilling IPO commitments, the Group distributed 19.65 million euros in dividends during 2025, representing a 10% cash yield based on the IPO price.",
+    "S12": "Total assets increased to 577.8 million euros as of December 31, 2025, compared to 476.3 million euros at the end of 2024, while total equity stood at 105.8 million euros compared to 108.1 million euros in the previous period.",
+    "S13": "Total borrowings decreased from 472.0 million euros to 368.2 million euros over the same timeframe."
+  },
+  "usage": {
+    "input_tokens": 1228,
+    "output_tokens_including_reasoning": 282,
+    "total_tokens": 1510
+  },
+  "latency_seconds": 1.88,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"description\": \"Sentence S7 presents conflicting information about net profit comparisons. It states that net profit from continuing operations was 29.2 million euros compared to 28.8 million euros in the previous year (implying growth), but then states that total net profit for the period stood at 29.2 million euros compared to 29.6 million euros in 2024 (implying a decline). This creates an internal logical inconsistency because the summary does not clarify why these two different comparisons exist or how they relate to each other.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear structure covering revenue, loan performance, profitability, capital management, and balance sheet items. Most sections logically connect and support the overall narrative of strong performance. The primary issue is in S7 where two different net profit comparisons are presented without sufficient explanation for the discrepancy, creating a logical gap. There are no self-contradictions, organizational problems, or significant repetition. The arithmetic differences between segment figures and consolidated totals are not contradictions because the summary does not claim they are exhaustive additive components of the same total.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "description": "Sentence S7 presents conflicting information about net profit comparisons. It states that net profit from continuing operations was 29.2 million euros compared to 28.8 million euros in the previous year (implying growth), but then states that total net profit for the period stood at 29.2 million euros compared to 29.6 million euros in 2024 (implying a decline). This creates an internal logical inconsistency because the summary does not clarify why these two different comparisons exist or how they relate to each other."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear structure covering revenue, loan performance, profitability, capital management, and balance sheet items. Most sections logically connect and support the overall narrative of strong performance. The primary issue is in S7 where two different net profit comparisons are presented without sufficient explanation for the discrepancy, creating a logical gap. There are no self-contradictions, organizational problems, or significant repetition. The arithmetic differences between segment figures and consolidated totals are not contradictions because the summary does not claim they are exhaustive additive components of the same total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

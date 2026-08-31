@@ -1,0 +1,490 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:43:18.837221",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_6_chain_of_event_gemini.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "1450cef39e3eceb4",
+    "sentence_map_hash": "e0100186fbcd3550",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_6.md",
+    "source_hash": "c335022731308445",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Infortar Group presented its consolidated unaudited financial report for the first six months of 2026, ending on June 30, 2026.",
+    "S2": "During the reporting period, the group reported total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025.",
+    "S3": "Despite the stable revenue, profitability improved significantly.",
+    "S4": "Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year.",
+    "S5": "Earnings before interest, taxes, depreciation, and amortization reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025, supported by stronger performance in the energy segment and turnaround results in supporting businesses.",
+    "S6": "Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period.",
+    "S7": "Net profit for the six-month period turned positive at 7 million euros, recovering from a net loss of 14 million euros in the first half of 2025, with net profit attributable to the owners of the parent reaching 15 million euros compared to a net loss of 2 million euros a year earlier.",
+    "S8": "Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025.",
+    "S9": "Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025.",
+    "S10": "Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros.",
+    "S11": "Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period.",
+    "S12": "For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025.",
+    "S13": "Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025.",
+    "S14": "The financial performance changes were driven by a decline in wholesale sales volume in the energy segment alongside increased profitability across segments, including the addition of new agricultural units and the closure of unprofitable operations.",
+    "S15": "Market conditions during the period were influenced by heightened geopolitical tensions in the Middle East, volatility in global energy markets, higher fuel prices, and increased emission surrender requirements under the European Union Emissions Trading System."
+  },
+  "usage": {
+    "input_tokens": 50510,
+    "output_tokens_including_reasoning": 10278,
+    "total_tokens": 60788
+  },
+  "latency_seconds": 59.08,
+  "logical_requests": 3,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 1,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": true,
+      "context": "targeted numerical repair",
+      "original_parse_error": "JSONDecodeError: Expecting ',' delimiter: line 34 column 10 (char 1741)",
+      "repaired_model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S7\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Sentence contains four verifiable numerical propositions regarding net profit/loss figures for the group and parent company for the six-month periods of 2026 and 2025.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"Net profit for the six-month period turned positive at 7 million euros\",\n          \"candidate_value\": \"7 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_VALUE\",\n          \"source_value\": \"-14,411 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: -14 411'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"recovering from a net loss of 14 million euros in the first half of 2025\",\n          \"candidate_value\": \"14 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n          \"source_value\": \"2,695 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2025: 2 695'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"net profit attributable to the owners of the parent reaching 15 million euros\",\n          \"candidate_value\": \"15 million euros\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"15,163 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Profit attributable to the owners of the parent company (in thousands of EUR) 6 months 2026: 15 163'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"net profit for the parent company improved to 10 million euros\"\n        }\n      ]\n    }\n  ]\n}\n```"
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"Infortar Group presented its consolidated unaudited financial report for the first six months of 2026, ending on June 30, 2026.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Report title: INFORTAR GROUP Q2 2026 CONSOLIDATED UNAUDITED REPORT; Key Figures section covers period ended 30 June 2026.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"During the reporting period, the group reported total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Revenue for 6 months 2026 = 945,917 thousand EUR (945.917m); 6 months 2025 = 951,869 thousand EUR (951.869m).\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Despite the stable revenue, profitability improved significantly.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Management Report states: 'EBITDA increased by 31% and EBIT by 94%'; Key Figures show EBITDA margin rose from 8.9% to 11.8%.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Gross profit 6 months 2026 = 114,132 thousand EUR; 6 months 2025 = 81,736 thousand EUR.\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Earnings before interest, taxes, depreciation, and amortization reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025, supported by stronger performance in the energy segment and turnaround results in supporting businesses.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: EBITDA 6 months 2026 = 111,228 thousand EUR; 6 months 2025 = 85,051 thousand EUR (31% increase). Management Report attributes improvement to energy segment and supporting businesses.\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Operating profit (EBIT) 6 months 2026 = 51,068 thousand EUR; 6 months 2025 = 26,383 thousand EUR. Profit before tax 6 months 2026 = 27,195 thousand EUR; 6 months 2025 = 2,695 thousand EUR.\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Net profit for the six-month period turned positive at 7 million euros, recovering from a net loss of 14 million euros in the first half of 2025, with net profit attributable to the owners of the parent reaching 15 million euros compared to a net loss of 2 million euros a year earlier.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Key Figures table shows consolidated net profit for 6 months 2026 = -14,411 thousand EUR (loss), contrary to claimed 'positive 7 million'. However, net profit attributable to parent was +15,163 thousand EUR vs -2,549 thousand EUR in 2025. The claim incorrectly states consolidated net profit as positive.\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 8.7: Basic EPS 6 months 2026 = 0.74 EUR; 6 months 2025 = -0.12 EUR.\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Total assets 30.06.26 = 2,714,309 thousand EUR; 31.12.25 = 2,596,607 thousand EUR.\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Total equity 30.06.26 = 1,200,533 thousand EUR; 31.12.25 = 1,175,404 thousand EUR. Interest-bearing liabilities 30.06.26 = 1,083,091 thousand EUR; 31.12.25 = 1,071,353 thousand EUR.\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Cash and cash equivalents 30.06.26 = 253,187 thousand EUR; 31.12.25 = 146,368 thousand EUR.\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: Revenue Q2 2026 = 440,921 thousand EUR; Q2 2025 = 504,512 thousand EUR.\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Key Figures table: EBITDA Q2 2026 = 64,158 thousand EUR; Q2 2025 = 57,390 thousand EUR. Net profit attributable to parent Q2 2026 = 2,342 thousand EUR; Q2 2025 = 1,930 thousand EUR.\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"The financial performance changes were driven by a decline in wholesale sales volume in the energy segment alongside increased profitability across segments, including the addition of new agricultural units and the closure of unprofitable operations.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Management Report: 'improvement in the Group’s profitability was supported by stronger performance in the energy segment, the addition of new agricultural units and the closure of unprofitable operations.' Events in Q2 2026 notes decline in energy wholesale sales volumes.\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Market conditions during the period were influenced by heightened geopolitical tensions in the Middle East, volatility in global energy markets, higher fuel prices, and increased emission surrender requirements under the European Union Emissions Trading System.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Events in Q2 2026 section details: geopolitical tensions, higher fuel costs (EUR 8.4m increase), and EU ETS surrender requirement increased to 100% of emitted CO2 equivalent.\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025\",\n      \"candidate_value\": \"945 million vs 951 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"945,917 thousand EUR vs 951,869 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: Revenue for 6 months 2026 = 945,917 thousand EUR; 6 months 2025 = 951,869 thousand EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year\",\n      \"candidate_value\": \"114 million vs 81 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"114,132 thousand EUR vs 81,736 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: Gross profit 6 months 2026 = 114,132 thousand EUR; 6 months 2025 = 81,736 thousand EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"EBITDA reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025\",\n      \"candidate_value\": \"111 million vs 85 million (31% increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"111,228 thousand EUR vs 85,051 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: EBITDA 6 months 2026 = 111,228 thousand EUR; 6 months 2025 = 85,051 thousand EUR. Increase is (111,228-85,051)/85,051 = ~30.7%, rounded to 31%.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Operating profit: 51,068 thousand EUR vs 26,383 thousand EUR; Profit before tax: 27,195 thousand EUR vs 2,695 thousand EUR\",\n      \"source_evidence\": \"Key Figures table confirms these values\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025\",\n      \"candidate_value\": \"0.74 EUR vs -0.12 EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"0.74 EUR vs -0.12 EUR\",\n      \"source_evidence\": \"Note 8.7: Basic EPS 6 months 2026 = 0.74 EUR; 6 months 2025 = -0.12 EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025\",\n      \"candidate_value\": \"2,714 million vs 2,596 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"2,714,309 thousand EUR vs 2,596,607 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: Total assets 30.06.26 = 2,714,309 thousand EUR; 31.12.25 = 2,596,607 thousand EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros\",\n      \"candidate_value\": \"1,200 million vs 1,175 million equity; 1,083 million vs 1,071 million liabilities\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Equity: 1,200,533 thousand EUR vs 1,175,404 thousand EUR; Interest-bearing liabilities: 1,083,091 thousand EUR vs 1,071,353 thousand EUR\",\n      \"source_evidence\": \"Key Figures table provides these figures\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period\",\n      \"candidate_value\": \"253 million vs 146 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"253,187 thousand EUR vs 146,368 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: Cash and cash equivalents 30.06.26 = 253,187 thousand EUR; 31.12.25 = 146,368 thousand EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025\",\n      \"candidate_value\": \"440 million vs 504 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"440,921 thousand EUR vs 504,512 thousand EUR\",\n      \"source_evidence\": \"Key Figures table: Revenue Q2 2026 = 440,921 thousand EUR; Q2 2025 = 504,512 thousand EUR\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025\",\n      \"candidate_value\": \"64 million vs 57 million EBITDA; 2 million vs 1 million net profit attributable to parent\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EBITDA Q2 2026 = 64,158 thousand EUR; Q2 2025 = 57,390 thousand EUR. Net profit attributable to parent Q2 2026 = 2,342 thousand EUR; Q2 2025 = 1,930 thousand EUR\",\n      \"source_evidence\": \"Key Figures table provides these values\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Infortar Group presented its consolidated unaudited financial report for the first six months of 2026, ending on June 30, 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Report title: INFORTAR GROUP Q2 2026 CONSOLIDATED UNAUDITED REPORT; Key Figures section covers period ended 30 June 2026."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "During the reporting period, the group reported total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Revenue for 6 months 2026 = 945,917 thousand EUR (945.917m); 6 months 2025 = 951,869 thousand EUR (951.869m)."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Despite the stable revenue, profitability improved significantly.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states: 'EBITDA increased by 31% and EBIT by 94%'; Key Figures show EBITDA margin rose from 8.9% to 11.8%."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Gross profit 6 months 2026 = 114,132 thousand EUR; 6 months 2025 = 81,736 thousand EUR."
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025, supported by stronger performance in the energy segment and turnaround results in supporting businesses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: EBITDA 6 months 2026 = 111,228 thousand EUR; 6 months 2025 = 85,051 thousand EUR (31% increase). Management Report attributes improvement to energy segment and supporting businesses."
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Operating profit (EBIT) 6 months 2026 = 51,068 thousand EUR; 6 months 2025 = 26,383 thousand EUR. Profit before tax 6 months 2026 = 27,195 thousand EUR; 6 months 2025 = 2,695 thousand EUR."
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net profit for the six-month period turned positive at 7 million euros, recovering from a net loss of 14 million euros in the first half of 2025, with net profit attributable to the owners of the parent reaching 15 million euros compared to a net loss of 2 million euros a year earlier.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Key Figures table shows consolidated net profit for 6 months 2026 = -14,411 thousand EUR (loss), contrary to claimed 'positive 7 million'. However, net profit attributable to parent was +15,163 thousand EUR vs -2,549 thousand EUR in 2025. The claim incorrectly states consolidated net profit as positive."
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 8.7: Basic EPS 6 months 2026 = 0.74 EUR; 6 months 2025 = -0.12 EUR."
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Total assets 30.06.26 = 2,714,309 thousand EUR; 31.12.25 = 2,596,607 thousand EUR."
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Total equity 30.06.26 = 1,200,533 thousand EUR; 31.12.25 = 1,175,404 thousand EUR. Interest-bearing liabilities 30.06.26 = 1,083,091 thousand EUR; 31.12.25 = 1,071,353 thousand EUR."
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Cash and cash equivalents 30.06.26 = 253,187 thousand EUR; 31.12.25 = 146,368 thousand EUR."
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Revenue Q2 2026 = 440,921 thousand EUR; Q2 2025 = 504,512 thousand EUR."
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: EBITDA Q2 2026 = 64,158 thousand EUR; Q2 2025 = 57,390 thousand EUR. Net profit attributable to parent Q2 2026 = 2,342 thousand EUR; Q2 2025 = 1,930 thousand EUR."
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The financial performance changes were driven by a decline in wholesale sales volume in the energy segment alongside increased profitability across segments, including the addition of new agricultural units and the closure of unprofitable operations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'improvement in the Group’s profitability was supported by stronger performance in the energy segment, the addition of new agricultural units and the closure of unprofitable operations.' Events in Q2 2026 notes decline in energy wholesale sales volumes."
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Market conditions during the period were influenced by heightened geopolitical tensions in the Middle East, volatility in global energy markets, higher fuel prices, and increased emission surrender requirements under the European Union Emissions Trading System.",
+        "label": "SUPPORTED",
+        "source_evidence": "Events in Q2 2026 section details: geopolitical tensions, higher fuel costs (EUR 8.4m increase), and EU ETS surrender requirement increased to 100% of emitted CO2 equivalent."
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025",
+        "candidate_value": "945 million vs 951 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "945,917 thousand EUR vs 951,869 thousand EUR",
+        "source_evidence": "Key Figures table: Revenue for 6 months 2026 = 945,917 thousand EUR; 6 months 2025 = 951,869 thousand EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year",
+        "candidate_value": "114 million vs 81 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "114,132 thousand EUR vs 81,736 thousand EUR",
+        "source_evidence": "Key Figures table: Gross profit 6 months 2026 = 114,132 thousand EUR; 6 months 2025 = 81,736 thousand EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025",
+        "candidate_value": "111 million vs 85 million (31% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111,228 thousand EUR vs 85,051 thousand EUR",
+        "source_evidence": "Key Figures table: EBITDA 6 months 2026 = 111,228 thousand EUR; 6 months 2025 = 85,051 thousand EUR. Increase is (111,228-85,051)/85,051 = ~30.7%, rounded to 31%.",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating profit: 51,068 thousand EUR vs 26,383 thousand EUR; Profit before tax: 27,195 thousand EUR vs 2,695 thousand EUR",
+        "source_evidence": "Key Figures table confirms these values",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025",
+        "candidate_value": "0.74 EUR vs -0.12 EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.74 EUR vs -0.12 EUR",
+        "source_evidence": "Note 8.7: Basic EPS 6 months 2026 = 0.74 EUR; 6 months 2025 = -0.12 EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025",
+        "candidate_value": "2,714 million vs 2,596 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,714,309 thousand EUR vs 2,596,607 thousand EUR",
+        "source_evidence": "Key Figures table: Total assets 30.06.26 = 2,714,309 thousand EUR; 31.12.25 = 2,596,607 thousand EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros",
+        "candidate_value": "1,200 million vs 1,175 million equity; 1,083 million vs 1,071 million liabilities",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Equity: 1,200,533 thousand EUR vs 1,175,404 thousand EUR; Interest-bearing liabilities: 1,083,091 thousand EUR vs 1,071,353 thousand EUR",
+        "source_evidence": "Key Figures table provides these figures",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period",
+        "candidate_value": "253 million vs 146 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "253,187 thousand EUR vs 146,368 thousand EUR",
+        "source_evidence": "Key Figures table: Cash and cash equivalents 30.06.26 = 253,187 thousand EUR; 31.12.25 = 146,368 thousand EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025",
+        "candidate_value": "440 million vs 504 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "440,921 thousand EUR vs 504,512 thousand EUR",
+        "source_evidence": "Key Figures table: Revenue Q2 2026 = 440,921 thousand EUR; Q2 2025 = 504,512 thousand EUR",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025",
+        "candidate_value": "64 million vs 57 million EBITDA; 2 million vs 1 million net profit attributable to parent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA Q2 2026 = 64,158 thousand EUR; Q2 2025 = 57,390 thousand EUR. Net profit attributable to parent Q2 2026 = 2,342 thousand EUR; Q2 2025 = 1,930 thousand EUR",
+        "source_evidence": "Key Figures table provides these values",
+        "error_explanation": null
+      },
+      {
+        "claim": "Net profit for the six-month period turned positive at 7 million euros",
+        "candidate_value": "7 million euros",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "-14,411 thousand EUR",
+        "source_evidence": "Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: -14 411'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N11"
+      },
+      {
+        "claim": "recovering from a net loss of 14 million euros in the first half of 2025",
+        "candidate_value": "14 million euros",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "2,695 thousand EUR",
+        "source_evidence": "Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2025: 2 695'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N12"
+      },
+      {
+        "claim": "net profit attributable to the owners of the parent reaching 15 million euros",
+        "candidate_value": "15 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15,163 thousand EUR",
+        "source_evidence": "Key Figures for Q2 2026: 'Profit attributable to the owners of the parent company (in thousands of EUR) 6 months 2026: 15 163'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N13"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S7\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Sentence contains four verifiable numerical propositions regarding net profit/loss figures for the group and parent company for the six-month periods of 2026 and 2025.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"Net profit for the six-month period turned positive at 7 million euros\",\n          \"candidate_value\": \"7 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_VALUE\",\n          \"source_value\": \"-14,411 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: -14 411'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"recovering from a net loss of 14 million euros in the first half of 2025\",\n          \"candidate_value\": \"14 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n          \"source_value\": \"2,695 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2025: 2 695'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"net profit attributable to the owners of the parent reaching 15 million euros\",\n          \"candidate_value\": \"15 million euros\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"15,163 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Profit attributable to the owners of the parent company (in thousands of EUR) 6 months 2026: 15 163'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S7",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Sentence contains four verifiable numerical propositions regarding net profit/loss figures for the group and parent company for the six-month periods of 2026 and 2025.",
+          "numerical_claims": [
+            {
+              "claim": "Net profit for the six-month period turned positive at 7 million euros",
+              "candidate_value": "7 million euros",
+              "label": "INCORRECT",
+              "error_type": "INCORRECT_VALUE",
+              "source_value": "-14,411 thousand EUR",
+              "source_evidence": "Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: -14 411'",
+              "error_explanation": null
+            },
+            {
+              "claim": "recovering from a net loss of 14 million euros in the first half of 2025",
+              "candidate_value": "14 million euros",
+              "label": "INCORRECT",
+              "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+              "source_value": "2,695 thousand EUR",
+              "source_evidence": "Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2025: 2 695'",
+              "error_explanation": null
+            },
+            {
+              "claim": "net profit attributable to the owners of the parent reaching 15 million euros",
+              "candidate_value": "15 million euros",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "15,163 thousand EUR",
+              "source_evidence": "Key Figures for Q2 2026: 'Profit attributable to the owners of the parent company (in thousands of EUR) 6 months 2026: 15 163'",
+              "error_explanation": null
+            },
+            {
+              "claim": "net profit for the parent company improved to 10 million euros"
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": true,
+      "context": "targeted numerical repair",
+      "original_parse_error": "JSONDecodeError: Expecting ',' delimiter: line 34 column 10 (char 1741)",
+      "repaired_model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S7\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Sentence contains four verifiable numerical propositions regarding net profit/loss figures for the group and parent company for the six-month periods of 2026 and 2025.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"Net profit for the six-month period turned positive at 7 million euros\",\n          \"candidate_value\": \"7 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_VALUE\",\n          \"source_value\": \"-14,411 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: -14 411'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"recovering from a net loss of 14 million euros in the first half of 2025\",\n          \"candidate_value\": \"14 million euros\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n          \"source_value\": \"2,695 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Net profit/loss for the period (in thousands of EUR) 6 months 2025: 2 695'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"net profit attributable to the owners of the parent reaching 15 million euros\",\n          \"candidate_value\": \"15 million euros\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"15,163 thousand EUR\",\n          \"source_evidence\": \"Key Figures for Q2 2026: 'Profit attributable to the owners of the parent company (in thousands of EUR) 6 months 2026: 15 163'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"net profit for the parent company improved to 10 million euros\"\n        }\n      ]\n    }\n  ]\n}\n```"
+    },
+    "usage": {
+      "input_tokens": 24383,
+      "output_tokens_including_reasoning": 4000,
+      "total_tokens": 28383
+    }
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

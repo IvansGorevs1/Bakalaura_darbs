@@ -1,0 +1,581 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T22:06:47.638370",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_quarterly_22_chain_of_event_qwen36__factual_corruption.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "0237906b4ac81c21",
+    "sentence_map_hash": "5ee61e97c3bb1abd",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_22.md",
+    "source_hash": "7cdf854dd84dcfb4",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Telia Lietuva, AB reported weak first-half 2026 financial results, with consolidated revenue reaching EUR 259.1 million after a year-on-year decline from EUR 241.7 million.",
+    "S2": "Adjusted EBITDA decreased 10.2 percent to EUR 106.9 million, contracting the adjusted EBITDA margin to 41.3 percent from 40.1 percent.",
+    "S3": "Operating profit before income tax fell 16.6 percent to EUR 61.3 million, while net profit totaled EUR 51.3 million after a 14.7 percent decrease.",
+    "S4": "The company generated EUR 103.1 million in operating cash flow, a 15.0 percent deterioration year-on-year, yielding free cash flow of EUR 64.1 million, down 12.5 percent.",
+    "S5": "Capital expenditures surged 57.9 percent to EUR 37.5 million, heavily weighted toward EUR 9.7 million in 5G spectrum licenses.",
+    "S6": "Despite higher capex, the balance sheet shifted to a net cash position of negative EUR 4.3 million, contrasting with a EUR 27.5 million net debt balance at the end of June 2025.",
+    "S7": "Revenue contracted across all business lines despite an 8.3 percent rise in mobile service revenue, a 5.3 percent increase in fixed services, and a 9.6 percent jump in equipment sales.",
+    "S8": "Lithuanian mobile data traffic is declining, so the company returned the newly acquired frequency blocks and allowed its existing rights to expire.",
+    "S9": "Management also cancelled the programme to build new base stations and modernize existing sites.",
+    "S10": "Furthermore, construction of the Tier III data center near Vilnius was abandoned after the site was sold to a competitor.",
+    "S11": "Operating expenses excluding non-recurring items grew 10.2 percent, outpacing revenue in certain categories.",
+    "S12": "Higher cost of goods reflected increased equipment sales volume alongside elevated interconnection and roaming costs.",
+    "S13": "Employee-related expenses included EUR 1.4 million in non-recurring redundancy payments related to the Digital and Technology unit restructuring.",
+    "S14": "Energy costs rose 14.3 percent, and external IT service expenses increased 18.4 percent.",
+    "S15": "The company failed to maintain its margin because operational efficiency deteriorated.",
+    "S16": "Weak cash generation forced the cancellation of the record dividend payout of EUR 81.6 million.",
+    "S17": "Governance updates included Andreas Ekström leaving the Board and Vaidas Dominauskas stepping down from the Enterprise unit.",
+    "S18": "The company also reported a successful nationwide launch of a satellite broadband service."
+  },
+  "usage": {
+    "input_tokens": 58118,
+    "output_tokens_including_reasoning": 5237,
+    "total_tokens": 63355
+  },
+  "latency_seconds": 29.5,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"Telia Lietuva, AB reported weak first-half 2026 financial results\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Management Report states 'We are closing the first half of 2026 with an impressive result.' Financial highlights show growth in revenue, EBITDA, and profit, supporting characterization of results as 'impressive' rather than 'weak' - however the candidate's phrasing reflects negative interpretation which is not contradicted by source data.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Adjusted EBITDA decreased 10.2 percent to EUR 106.9 million\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial highlights of H1 2026: 'Adjusted EBITDA up by 10.2% to EUR 106.9 million (2025: EUR 97 million)'\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Operating profit before income tax fell 16.6 percent to EUR 61.3 million\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Earnings table: 'Profit before income tax 61,277 (2025: 52,575)' representing 16.6% increase, not decrease. Candidate incorrectly states decline.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"The company generated EUR 103.1 million in operating cash flow\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Cash flow statement: 'Net cash generated by operating activities 103,131 (2025: 89,664)'\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Capital expenditures surged 57.9 percent to EUR 37.5 million\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial figures table: 'Capital investments (Capex) 37,458 (2025: 23,728)' representing 57.9% increase\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"The balance sheet shifted to a net cash position of negative EUR 4.3 million\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial position table: 'Net debt (4,255)' representing negative EUR 4.255 million\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Revenue contracted across all business lines\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Revenue breakdown shows increases: Mobile services +8.3%, Fixed services +5.3%, Equipment +9.6%. Candidate incorrectly claims contraction across all lines.\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Lithuanian mobile data traffic is declining\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"CEO comment states: 'Mobile data traffic in Lithuania is growing by around 25 per cent annually, one of the fastest growth rates in Europe.'\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Management cancelled the programme to build new base stations\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": null\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Construction of the Tier III data center near Vilnius was abandoned\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": null\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Operating expenses excluding non-recurring items grew 10.2 percent\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Expenses table: 'Operating expenses (excl. non-recurring expenses) 67,323 (2025: 61,087)' representing 10.2% increase\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Higher cost of goods reflected increased equipment sales volume\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Expenses section: 'Higher volumes of equipment sale... resulted in higher cost of goods and services'\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Employee-related expenses included EUR 1.4 million in non-recurring redundancy payments\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Expenses section: 'Employee related expenses rose mainly due to non-recurring redundancy expenses of EUR 1.4 million... during first half of 2026'\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Energy costs rose 14.3 percent\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Expenses section: 'During January-June 2026... expenses for energy increased by 14.3 per cent'\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"The company failed to maintain its margin because operational efficiency deteriorated\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": null\n    },\n    {\n      \"id\": \"F16\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Weak cash generation forced the cancellation of the record dividend payout\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Dividends section states EUR 81.6 million dividends were paid in May 2026. No cancellation mentioned.\"\n    },\n    {\n      \"id\": \"F17\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Governance updates included Andreas Ekström leaving the Board\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Corporate governance section: 'On 24 April 2026... elected Andreas Ekström as a Board member... for current term till 28 April 2027'\"\n    },\n    {\n      \"id\": \"F18\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"The company reported a successful nationwide launch of a satellite broadband service\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": null\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"consolidated revenue reaching EUR 259.1 million after a year-on-year decline from EUR 241.7 million\",\n      \"candidate_value\": \"259.1 million EUR (decrease from 241.7 million EUR)\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"259,084 (increase from 241,674)\",\n      \"source_evidence\": \"Financial figures table: 'Revenue 259,084 (2025: 241,674)'\",\n      \"error_explanation\": \"Source shows 7.2% increase, not decline\"\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Adjusted EBITDA decreased 10.2 percent to EUR 106.9 million\",\n      \"candidate_value\": \"106.9 million EUR (decrease)\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"106,899 (increase from 97,032)\",\n      \"source_evidence\": \"Financial highlights: 'Adjusted EBITDA up by 10.2% to EUR 106.9 million (2025: EUR 97 million)'\",\n      \"error_explanation\": \"Source shows 10.2% increase, not decrease\"\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"net profit totaled EUR 51.3 million after a 14.7 percent decrease\",\n      \"candidate_value\": \"51.3 million EUR (decrease)\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n      \"source_value\": \"51,326 (increase from 44,742)\",\n      \"source_evidence\": \"Financial highlights: 'Profit for the period went up by 14.7% to EUR 51.3 million (2025: EUR 44.7 million)'\",\n      \"error_explanation\": \"Source shows 14.7% increase, not decrease\"\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"free cash flow of EUR 64.1 million, down 12.5 percent\",\n      \"candidate_value\": \"64.1 million EUR (decrease)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"64,099 (increase from 56,964)\",\n      \"source_evidence\": \"Financial figures table: 'Free cash flow 64,099 (2025: 56,964)' representing 12.5% increase\"\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Capital expenditures surged 57.9 percent to EUR 37.5 million\",\n      \"candidate_value\": \"37.5 million EUR (increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"37,458 (increase from 23,728)\",\n      \"source_evidence\": \"Financial figures table: 'Capital investments (Capex) 37,458 (2025: 23,728)'\"\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"net cash position of negative EUR 4.3 million\",\n      \"candidate_value\": \"-4.3 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"-4,255\",\n      \"source_evidence\": \"Financial position table: 'Net debt (4,255)'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"EUR 1.4 million in non-recurring redundancy payments\",\n      \"candidate_value\": \"1.4 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"1,431\",\n      \"source_evidence\": \"Expenses section: 'non-recurring redundancy expenses of EUR 1.4 million'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Energy costs rose 14.3 percent\",\n      \"candidate_value\": \"14.3%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"14.3%\",\n      \"source_evidence\": \"Expenses section: 'expenses for energy increased by 14.3 per cent'\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Telia Lietuva, AB reported weak first-half 2026 financial results",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states 'We are closing the first half of 2026 with an impressive result.' Financial highlights show growth in revenue, EBITDA, and profit, supporting characterization of results as 'impressive' rather than 'weak' - however the candidate's phrasing reflects negative interpretation which is not contradicted by source data."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Adjusted EBITDA decreased 10.2 percent to EUR 106.9 million",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights of H1 2026: 'Adjusted EBITDA up by 10.2% to EUR 106.9 million (2025: EUR 97 million)'"
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit before income tax fell 16.6 percent to EUR 61.3 million",
+        "label": "SUPPORTED",
+        "source_evidence": "Earnings table: 'Profit before income tax 61,277 (2025: 52,575)' representing 16.6% increase, not decrease. Candidate incorrectly states decline."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The company generated EUR 103.1 million in operating cash flow",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow statement: 'Net cash generated by operating activities 103,131 (2025: 89,664)'"
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Capital expenditures surged 57.9 percent to EUR 37.5 million",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial figures table: 'Capital investments (Capex) 37,458 (2025: 23,728)' representing 57.9% increase"
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The balance sheet shifted to a net cash position of negative EUR 4.3 million",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial position table: 'Net debt (4,255)' representing negative EUR 4.255 million"
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Revenue contracted across all business lines",
+        "label": "CONTRADICTED",
+        "source_evidence": "Revenue breakdown shows increases: Mobile services +8.3%, Fixed services +5.3%, Equipment +9.6%. Candidate incorrectly claims contraction across all lines."
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Lithuanian mobile data traffic is declining",
+        "label": "CONTRADICTED",
+        "source_evidence": "CEO comment states: 'Mobile data traffic in Lithuania is growing by around 25 per cent annually, one of the fastest growth rates in Europe.'"
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Management cancelled the programme to build new base stations",
+        "label": "NOT_FOUND",
+        "source_evidence": null
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Construction of the Tier III data center near Vilnius was abandoned",
+        "label": "NOT_FOUND",
+        "source_evidence": null
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Operating expenses excluding non-recurring items grew 10.2 percent",
+        "label": "SUPPORTED",
+        "source_evidence": "Expenses table: 'Operating expenses (excl. non-recurring expenses) 67,323 (2025: 61,087)' representing 10.2% increase"
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Higher cost of goods reflected increased equipment sales volume",
+        "label": "SUPPORTED",
+        "source_evidence": "Expenses section: 'Higher volumes of equipment sale... resulted in higher cost of goods and services'"
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Employee-related expenses included EUR 1.4 million in non-recurring redundancy payments",
+        "label": "SUPPORTED",
+        "source_evidence": "Expenses section: 'Employee related expenses rose mainly due to non-recurring redundancy expenses of EUR 1.4 million... during first half of 2026'"
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Energy costs rose 14.3 percent",
+        "label": "SUPPORTED",
+        "source_evidence": "Expenses section: 'During January-June 2026... expenses for energy increased by 14.3 per cent'"
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The company failed to maintain its margin because operational efficiency deteriorated",
+        "label": "NOT_FOUND",
+        "source_evidence": null
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Weak cash generation forced the cancellation of the record dividend payout",
+        "label": "CONTRADICTED",
+        "source_evidence": "Dividends section states EUR 81.6 million dividends were paid in May 2026. No cancellation mentioned."
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Governance updates included Andreas Ekström leaving the Board",
+        "label": "CONTRADICTED",
+        "source_evidence": "Corporate governance section: 'On 24 April 2026... elected Andreas Ekström as a Board member... for current term till 28 April 2027'"
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The company reported a successful nationwide launch of a satellite broadband service",
+        "label": "NOT_FOUND",
+        "source_evidence": null
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "consolidated revenue reaching EUR 259.1 million after a year-on-year decline from EUR 241.7 million",
+        "candidate_value": "259.1 million EUR (decrease from 241.7 million EUR)",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "259,084 (increase from 241,674)",
+        "source_evidence": "Financial figures table: 'Revenue 259,084 (2025: 241,674)'",
+        "error_explanation": "Source shows 7.2% increase, not decline"
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Adjusted EBITDA decreased 10.2 percent to EUR 106.9 million",
+        "candidate_value": "106.9 million EUR (decrease)",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "106,899 (increase from 97,032)",
+        "source_evidence": "Financial highlights: 'Adjusted EBITDA up by 10.2% to EUR 106.9 million (2025: EUR 97 million)'",
+        "error_explanation": "Source shows 10.2% increase, not decrease"
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "net profit totaled EUR 51.3 million after a 14.7 percent decrease",
+        "candidate_value": "51.3 million EUR (decrease)",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "51,326 (increase from 44,742)",
+        "source_evidence": "Financial highlights: 'Profit for the period went up by 14.7% to EUR 51.3 million (2025: EUR 44.7 million)'",
+        "error_explanation": "Source shows 14.7% increase, not decrease"
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "free cash flow of EUR 64.1 million, down 12.5 percent",
+        "candidate_value": "64.1 million EUR (decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "64,099 (increase from 56,964)",
+        "source_evidence": "Financial figures table: 'Free cash flow 64,099 (2025: 56,964)' representing 12.5% increase"
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Capital expenditures surged 57.9 percent to EUR 37.5 million",
+        "candidate_value": "37.5 million EUR (increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "37,458 (increase from 23,728)",
+        "source_evidence": "Financial figures table: 'Capital investments (Capex) 37,458 (2025: 23,728)'"
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "net cash position of negative EUR 4.3 million",
+        "candidate_value": "-4.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-4,255",
+        "source_evidence": "Financial position table: 'Net debt (4,255)'",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "EUR 1.4 million in non-recurring redundancy payments",
+        "candidate_value": "1.4 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,431",
+        "source_evidence": "Expenses section: 'non-recurring redundancy expenses of EUR 1.4 million'",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Energy costs rose 14.3 percent",
+        "candidate_value": "14.3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14.3%",
+        "source_evidence": "Expenses section: 'expenses for energy increased by 14.3 per cent'",
+        "error_explanation": null
+      },
+      {
+        "claim": "8.3 percent rise in mobile service revenue",
+        "candidate_value": "8.3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.3%",
+        "source_evidence": "Mobile services revenue increased from EUR 92,332 thousand (2025) to EUR 100,022 thousand (2026), representing (100,022 - 92,332)/92,332 = 8.3%.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N9"
+      },
+      {
+        "claim": "5.3 percent increase in fixed services",
+        "candidate_value": "5.3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.3%",
+        "source_evidence": "Fixed services revenue increased from EUR 107,257 thousand (2025) to EUR 112,920 thousand (2026), representing (112,920 - 107,257)/107,257 = 5.3%.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N10"
+      },
+      {
+        "claim": "9.6 percent jump in equipment sales",
+        "candidate_value": "9.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9.6%",
+        "source_evidence": "Equipment revenue increased from EUR 42,085 thousand (2025) to EUR 46,142 thousand (2026), representing (46,142 - 42,085)/42,085 = 9.6%.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N11"
+      },
+      {
+        "claim": "Operating expenses excluding non-recurring items grew 10.2 percent",
+        "candidate_value": "10.2%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10.2%",
+        "source_evidence": "Operating expenses (excl. non-recurring items) increased from EUR 61,087 thousand (2025) to EUR 67,323 thousand (2026), representing (67,323 - 61,087)/61,087 = 10.2%.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "id": "N12"
+      },
+      {
+        "claim": "record dividend payout of EUR 81.6 million",
+        "candidate_value": "EUR 81.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 81.6 million",
+        "source_evidence": "The Annual General Meeting approved and paid EUR 81,566 thousand (EUR 81.6 million) in dividends for 2025, as stated in the Dividends section and Financial highlights.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "id": "N13"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S11",
+      "S13",
+      "S14",
+      "S16"
+    ],
+    "covered_sentence_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S11",
+      "S13",
+      "S14",
+      "S16"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S7\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains three verifiable percentage growth figures for mobile service revenue (8.3%), fixed services (5.3%), and equipment sales (9.6%).\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"8.3 percent rise in mobile service revenue\",\n          \"candidate_value\": \"8.3%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"8.3%\",\n          \"source_evidence\": \"Mobile services revenue increased from EUR 92,332 thousand (2025) to EUR 100,022 thousand (2026), representing (100,022 - 92,332)/92,332 = 8.3%.\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"5.3 percent increase in fixed services\",\n          \"candidate_value\": \"5.3%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"5.3%\",\n          \"source_evidence\": \"Fixed services revenue increased from EUR 107,257 thousand (2025) to EUR 112,920 thousand (2026), representing (112,920 - 107,257)/107,257 = 5.3%.\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"9.6 percent jump in equipment sales\",\n          \"candidate_value\": \"9.6%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"9.6%\",\n          \"source_evidence\": \"Equipment revenue increased from EUR 42,085 thousand (2025) to EUR 46,142 thousand (2026), representing (46,142 - 42,085)/42,085 = 9.6%.\",\n          \"error_explanation\": null\n        }\n      ]\n    },\n    {\n      \"candidate_sentence_id\": \"S11\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains a verifiable percentage growth figure for operating expenses excluding non-recurring items (10.2%).\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"Operating expenses excluding non-recurring items grew 10.2 percent\",\n          \"candidate_value\": \"10.2%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"10.2%\",\n          \"source_evidence\": \"Operating expenses (excl. non-recurring items) increased from EUR 61,087 thousand (2025) to EUR 67,323 thousand (2026), representing (67,323 - 61,087)/61,087 = 10.2%.\",\n          \"error_explanation\": null\n        }\n      ]\n    },\n    {\n      \"candidate_sentence_id\": \"S16\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains a verifiable monetary value for the dividend payout (EUR 81.6 million).\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"record dividend payout of EUR 81.6 million\",\n          \"candidate_value\": \"EUR 81.6 million\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"EUR 81.6 million\",\n          \"source_evidence\": \"The Annual General Meeting approved and paid EUR 81,566 thousand (EUR 81.6 million) in dividends for 2025, as stated in the Dividends section and Financial highlights.\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S7",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains three verifiable percentage growth figures for mobile service revenue (8.3%), fixed services (5.3%), and equipment sales (9.6%).",
+          "numerical_claims": [
+            {
+              "claim": "8.3 percent rise in mobile service revenue",
+              "candidate_value": "8.3%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "8.3%",
+              "source_evidence": "Mobile services revenue increased from EUR 92,332 thousand (2025) to EUR 100,022 thousand (2026), representing (100,022 - 92,332)/92,332 = 8.3%.",
+              "error_explanation": null
+            },
+            {
+              "claim": "5.3 percent increase in fixed services",
+              "candidate_value": "5.3%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "5.3%",
+              "source_evidence": "Fixed services revenue increased from EUR 107,257 thousand (2025) to EUR 112,920 thousand (2026), representing (112,920 - 107,257)/107,257 = 5.3%.",
+              "error_explanation": null
+            },
+            {
+              "claim": "9.6 percent jump in equipment sales",
+              "candidate_value": "9.6%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "9.6%",
+              "source_evidence": "Equipment revenue increased from EUR 42,085 thousand (2025) to EUR 46,142 thousand (2026), representing (46,142 - 42,085)/42,085 = 9.6%.",
+              "error_explanation": null
+            }
+          ]
+        },
+        {
+          "candidate_sentence_id": "S11",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains a verifiable percentage growth figure for operating expenses excluding non-recurring items (10.2%).",
+          "numerical_claims": [
+            {
+              "claim": "Operating expenses excluding non-recurring items grew 10.2 percent",
+              "candidate_value": "10.2%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "10.2%",
+              "source_evidence": "Operating expenses (excl. non-recurring items) increased from EUR 61,087 thousand (2025) to EUR 67,323 thousand (2026), representing (67,323 - 61,087)/61,087 = 10.2%.",
+              "error_explanation": null
+            }
+          ]
+        },
+        {
+          "candidate_sentence_id": "S16",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains a verifiable monetary value for the dividend payout (EUR 81.6 million).",
+          "numerical_claims": [
+            {
+              "claim": "record dividend payout of EUR 81.6 million",
+              "candidate_value": "EUR 81.6 million",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "EUR 81.6 million",
+              "source_evidence": "The Annual General Meeting approved and paid EUR 81,566 thousand (EUR 81.6 million) in dividends for 2025, as stated in the Dividends section and Financial highlights.",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 28556,
+      "output_tokens_including_reasoning": 2258,
+      "total_tokens": 30814
+    }
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

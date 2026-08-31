@@ -1,0 +1,947 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_7_zero_shot_openai.txt",
+    "report": "report_quarterly_7.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Silvano Fashion Group’s unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025.",
+    "S2": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%.",
+    "S3": "Gross margin improved to 55.6% from 53.1%.",
+    "S4": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%.",
+    "S5": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%.",
+    "S6": "Net finance income fell to EUR 444 thousand from EUR 1.652 million, and income tax expense increased to EUR 1.870 million from EUR 1.322 million.",
+    "S7": "As a result, consolidated net profit declined 31.2% to EUR 4.321 million.",
+    "S8": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%.",
+    "S9": "The business mix shifted toward retail.",
+    "S10": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier.",
+    "S11": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%.",
+    "S12": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency.",
+    "S13": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined.",
+    "S14": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million.",
+    "S15": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million.",
+    "S16": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits.",
+    "S17": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639.",
+    "S18": "The 2025 profit of EUR 9.229 million was left undistributed and transferred to retained earnings."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_7.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_7.json",
+    "key_information_hash": "7fe70eb253cb6bb3",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 18,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 18
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 17,
+      "incorrect": 0,
+      "total": 17
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Silvano Fashion Group's unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The Group’s sales amounted to 28 590 thousand EUR during the 06 months of 2026, representing a 0.6% increase as compared to the same period for the previous year.' Consolidated Income Statement shows Revenue for 06m 2026: 28,590 thousand EUR vs 06m 2025: 28,428 thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Silvano Fashion Group’s unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The Group’s gross profit during the 06 months of 2026 amounted to 15 892 thousand EUR and increased by 5.3% compared to 06 months of 2025.' Consolidated Income Statement shows Cost of goods sold for 06m 2026: 12,698 thousand EUR vs 06m 2025: 13,337 thousand EUR (decrease of ~4.8%).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross margin improved to 55.6% from 53.1%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Selected Financial Indicators table: Gross profit margin for 06m 2026: 55.6% vs 06m 2025: 53.1%.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross margin improved to 55.6% from 53.1%."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Consolidated operating profit for 06 months of 2026 decreased by 3.5% to 5 751 thousand EUR, compared to 5 961 thousand EUR for 06 months of 2025.' Selected Financial Indicators table: Operating profit margin for 06m 2026: 20.1% vs 06m 2025: 21.0%.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Consolidated EBITDA for 06 months of 2026 decreased by 0.8% and was 7 508 thousand EUR, compared to 7 566 thousand EUR for 06 months of 2025.' Selected Financial Indicators table: EBITDA margin for 06m 2026: 26.3% vs 06m 2025: 26.6%.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net finance income fell to EUR 444 thousand from EUR 1.652 million, and income tax expense increased to EUR 1.870 million from EUR 1.322 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Income Statement: Net finance income for 06m 2026: 444 thousand EUR vs 06m 2025: 1,652 thousand EUR. Income tax expense for 06m 2026: 1,870 thousand EUR vs 06m 2025: 1,322 thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net finance income fell to EUR 444 thousand from EUR 1.652 million, and income tax expense increased to EUR 1.870 million from EUR 1.322 million."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "As a result, consolidated net profit declined 31.2% to EUR 4.321 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Reported consolidated net profit for 06 months of 2026 amounted to 4 321 thousand EUR, as compared to net profit of 6 279 thousand EUR in the prior year’s same period.' Consolidated Income Statement confirms net profit for 06m 2026: 4,321 thousand EUR vs 06m 2025: 6,279 thousand EUR (decrease of ~31.2%).",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "As a result, consolidated net profit declined 31.2% to EUR 4.321 million."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Selected Financial Indicators table: Net profit attributable to equity holders of the Parent company for 06m 2026: 3,961 thousand EUR vs 06m 2025: 5,781 thousand EUR (~31.5% decrease). Note 8: Basic earnings per share for 06m 2026: 0.11 EUR vs 06m 2025: 0.16 EUR. Selected Financial Indicators table: Net profit margin attributable to equity holders of the Parent company for 06m 2026: 13.9% vs 06m 2025: 20.3%.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The business mix shifted toward retail.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Our retail revenue increased by 13.6% and amounted 13 548 thousand EUR, this represents 47.4% of the Group’s total revenue (06 months of 2025: 41.9%).' Note 9 confirms retail revenue growth and increased share of total sales.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The business mix shifted toward retail."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 9: Retail revenue for 06m 2026: 13,548 thousand EUR (up 13.6% from 11,921 thousand EUR in 06m 2025). 13,548 / 28,590 = 47.4% (vs 11,921 / 28,428 = 41.9% in 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 9: Wholesale revenue for 06m 2026: 14,934 thousand EUR (down 9.1% from 16,433 thousand EUR in 06m 2025). 14,934 / 28,590 = 52.2% (vs 16,433 / 28,428 = 57.8% in 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The Group’s sales on the Russian market totalled 15 767 thousand EUR, decrease is 0.6% compared to 06 months of 2025. Local currency sales decreased by 7.8% during 06 months of 2026 compared to the same 06 months of 2025.' Sales by markets table confirms Russia sales: 15,767 thousand EUR (06m 2026) vs 15,857 thousand EUR (06m 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined.",
+        "label": "SUPPORTED",
+        "source_evidence": "Sales by markets table: Belarus sales for 06m 2026: 9,046 thousand EUR (up 6.4% from 8,500 thousand EUR in 06m 2025) representing 31.6% of total sales. Ukraine sales: 15 thousand EUR (down 58.3% from 36 thousand EUR). Baltics sales: 484 thousand EUR (down 16.7% from 581 thousand EUR).",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Cash Flows: Net cash flow from operating activities for 06m 2026: 6,842 thousand EUR vs 06m 2025: 3,481 thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Financial Position: Total assets as of 30.06.2026: 98,603 thousand EUR (up 5.1% from 93,847 thousand EUR as of 31.12.2025). Total equity attributable to equity holders of the Parent company: 81,479 thousand EUR (up 6.1% from 76,768 thousand EUR as of 31.12.2025).",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 2: Cash and cash equivalents as of 30.06.2026: 12,443 thousand EUR (up 87.4% from 6,639 thousand EUR as of 31.12.2025). Short-term deposits over 3 months as of 30.06.2026: 38,707 thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'At the end of the reporting period, there were a total of 67 stores operated by the Group itself (as of 31 December 2025: 69 stores).' Note 11: 'At the end of the reporting period the Group and its franchising partners operated 525 Milavitsa and 22 Lauma Lingerie brand stores, including 135 stores operated directly by the Group (as of 31 December 2025: 137 stores).' Personnel section: 'As of 30 June 2026, the Group employed 1 594 employees... In 31.12.2025 there were 1 639 employees...'",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The 2025 profit of EUR 9.229 million was left undistributed and transferred to retained earnings.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Profit for the period (2025): 9,229 thousand EUR. Note: '2.3. Leave the net profit undistributed and include the net profit of the financial year 2025 in the retained earnings.' Retained earnings increased from 76,615 thousand EUR (31.12.2024) to 85,844 thousand EUR (31.12.2025).",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The 2025 profit of EUR 9.229 million was left undistributed and transferred to retained earnings."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Silvano Fashion Group’s unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025.",
+        "candidate_value": "28.590 million EUR (0.6% increase vs 28.428 million EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "28,590 thousand EUR (06m 2026) vs 28,428 thousand EUR (06m 2025)",
+        "source_evidence": "Consolidated Income Statement: Revenue from contracts with customers for 06m 2026: 28,590 thousand EUR; for 06m 2025: 28,428 thousand EUR. Management Report confirms 0.6% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Silvano Fashion Group’s unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%.",
+        "candidate_value": "15.892 million EUR (5.3% increase); cost of goods sold decreased 4.8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Gross profit: 15,892 thousand EUR (06m 2026) vs 15,091 thousand EUR (06m 2025) - 5.3% increase. Cost of goods sold: 12,698 thousand EUR (06m 2026) vs 13,337 thousand EUR (06m 2025) - 4.8% decrease.",
+        "source_evidence": "Consolidated Income Statement: Gross profit for 06m 2026: 15,892 thousand EUR; for 06m 2025: 15,091 thousand EUR. Cost of goods sold for 06m 2026: 12,698 thousand EUR; for 06m 2025: 13,337 thousand EUR. Management Report confirms percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross margin improved to 55.6% from 53.1%.",
+        "candidate_value": "55.6% (2026) vs 53.1% (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "55.6% (06m 2026) vs 53.1% (06m 2025)",
+        "source_evidence": "Selected Financial Indicators table: Gross profit margin for 06m 2026: 55.6%; for 06m 2025: 53.1%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross margin improved to 55.6% from 53.1%."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%.",
+        "candidate_value": "5.751 million EUR (3.5% decrease); operating margin 20.1% vs 21.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating profit: 5,751 thousand EUR (06m 2026) vs 5,961 thousand EUR (06m 2025) - 3.5% decrease. Operating profit margin: 20.1% (06m 2026) vs 21.0% (06m 2025)",
+        "source_evidence": "Consolidated Income Statement: Operating profit for 06m 2026: 5,751 thousand EUR; for 06m 2025: 5,961 thousand EUR. Selected Financial Indicators table: Operating profit margin for 06m 2026: 20.1%; for 06m 2025: 21.0%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%.",
+        "candidate_value": "7.508 million EUR (0.8% decrease); EBITDA margin 26.3% vs 26.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA: 7,508 thousand EUR (06m 2026) vs 7,566 thousand EUR (06m 2025) - 0.8% decrease. EBITDA margin: 26.3% (06m 2026) vs 26.6% (06m 2025)",
+        "source_evidence": "Consolidated Income Statement: EBITDA for 06m 2026: 7,508 thousand EUR; for 06m 2025: 7,566 thousand EUR. Selected Financial Indicators table: EBITDA margin for 06m 2026: 26.3%; for 06m 2025: 26.6%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net finance income fell to EUR 444 thousand from EUR 1.652 million, and income tax expense increased to EUR 1.870 million from EUR 1.322 million.",
+        "candidate_value": "444 thousand EUR (2026) vs 1,652 thousand EUR (2025); tax expense 1,870 thousand EUR (2026) vs 1,322 thousand EUR (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net finance income: 444 thousand EUR (06m 2026) vs 1,652 thousand EUR (06m 2025). Income tax expense: 1,870 thousand EUR (06m 2026) vs 1,322 thousand EUR (06m 2025)",
+        "source_evidence": "Consolidated Income Statement: Net finance income for 06m 2026: 444 thousand EUR; for 06m 2025: 1,652 thousand EUR. Income tax expense for 06m 2026: 1,870 thousand EUR; for 06m 2025: 1,322 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net finance income fell to EUR 444 thousand from EUR 1.652 million, and income tax expense increased to EUR 1.870 million from EUR 1.322 million."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Consolidated net profit declined 31.2% to EUR 4.321 million.",
+        "candidate_value": "4.321 million EUR (31.2% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net profit: 4,321 thousand EUR (06m 2026) vs 6,279 thousand EUR (06m 2025) - 31.2% decrease",
+        "source_evidence": "Consolidated Income Statement: Profit for the period for 06m 2026: 4,321 thousand EUR; for 06m 2025: 6,279 thousand EUR. Management Report confirms 31.2% decrease.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "As a result, consolidated net profit declined 31.2% to EUR 4.321 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%.",
+        "candidate_value": "3.961 million EUR (31.5% decrease); EPS 0.11 EUR vs 0.16 EUR; margin 13.9% vs 20.3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net profit attributable to equity holders of Parent: 3,961 thousand EUR (06m 2026) vs 5,781 thousand EUR (06m 2025) - 31.5% decrease. EPS: 0.11 EUR (06m 2026) vs 0.16 EUR (06m 2025). Attributable net profit margin: 13.9% (06m 2026) vs 20.3% (06m 2025)",
+        "source_evidence": "Selected Financial Indicators table: Net profit attributable to equity holders of the Parent company for 06m 2026: 3,961 thousand EUR; for 06m 2025: 5,781 thousand EUR. Note 8: Basic earnings per share for 06m 2026: 0.11 EUR; for 06m 2025: 0.16 EUR. Selected Financial Indicators table: Net profit margin attributable to equity holders of the Parent company for 06m 2026: 13.9%; for 06m 2025: 20.3%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier.",
+        "candidate_value": "13.548 million EUR (13.6% increase); 47.4% of total sales (vs 41.9%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Retail revenue: 13,548 thousand EUR (06m 2026) vs 11,921 thousand EUR (06m 2025) - 13.6% increase. Share of total sales: 13,548 / 28,590 = 47.4% (vs 11,921 / 28,428 = 41.9%)",
+        "source_evidence": "Note 9: Revenue from retail for 06m 2026: 13,548 thousand EUR; for 06m 2025: 11,921 thousand EUR. Total revenue for 06m 2026: 28,590 thousand EUR; for 06m 2025: 28,428 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%.",
+        "candidate_value": "14.934 million EUR (9.1% decrease); 52.2% of total sales (vs 57.8%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Wholesale revenue: 14,934 thousand EUR (06m 2026) vs 16,433 thousand EUR (06m 2025) - 9.1% decrease. Share of total sales: 14,934 / 28,590 = 52.2% (vs 16,433 / 28,428 = 57.8%)",
+        "source_evidence": "Note 9: Revenue from wholesale for 06m 2026: 14,934 thousand EUR; for 06m 2025: 16,433 thousand EUR. Total revenue for 06m 2026: 28,590 thousand EUR; for 06m 2025: 28,428 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency.",
+        "candidate_value": "15.767 million EUR (0.6% euro decrease, 7.8% local currency decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Russia revenue: 15,767 thousand EUR (06m 2026) vs 15,857 thousand EUR (06m 2025) - 0.6% decrease. Local currency sales decreased by 7.8%.",
+        "source_evidence": "Management Report: 'The Group’s sales on the Russian market totalled 15 767 thousand EUR, decrease is 0.6% compared to 06 months of 2025. Local currency sales decreased by 7.8% during 06 months of 2026 compared to the same 06 months of 2025.' Sales by markets table confirms revenue figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined.",
+        "candidate_value": "9.046 million EUR (6.4% increase); 31.6% of total sales. Ukraine and Baltics sales declined.",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Belarus revenue: 9,046 thousand EUR (06m 2026) vs 8,500 thousand EUR (06m 2025) - 6.4% increase, representing 31.6% of total sales. Ukraine revenue: 15 thousand EUR (06m 2026) vs 36 thousand EUR (06m 2025) - decline. Baltics revenue: 484 thousand EUR (06m 2026) vs 581 thousand EUR (06m 2025) - decline.",
+        "source_evidence": "Sales by markets table: Belarus revenue for 06m 2026: 9,046 thousand EUR; for 06m 2025: 8,500 thousand EUR. Ukraine revenue for 06m 2026: 15 thousand EUR; for 06m 2025: 36 thousand EUR. Baltics revenue for 06m 2026: 484 thousand EUR; for 06m 2025: 581 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million.",
+        "candidate_value": "6.842 million EUR (vs 3.481 million EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6,842 thousand EUR (06m 2026) vs 3,481 thousand EUR (06m 2025)",
+        "source_evidence": "Consolidated Statement of Cash Flows: Net cash flow from operating activities for 06m 2026: 6,842 thousand EUR; for 06m 2025: 3,481 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million.",
+        "candidate_value": "98.603 million EUR (5.1% increase); equity attributable to parent shareholders 81.479 million EUR (6.1% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total assets: 98,603 thousand EUR (30.06.2026) vs 93,847 thousand EUR (31.12.2025) - 5.1% increase. Equity attributable to equity holders of the Parent company: 81,479 thousand EUR (30.06.2026) vs 76,768 thousand EUR (31.12.2025) - 6.1% increase.",
+        "source_evidence": "Consolidated Statement of Financial Position: Total assets as of 30.06.2026: 98,603 thousand EUR; as of 31.12.2025: 93,847 thousand EUR. Total equity attributable to equity holders of the Parent company as of 30.06.2026: 81,479 thousand EUR; as of 31.12.2025: 76,768 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits.",
+        "candidate_value": "12.443 million EUR (87.4% increase); short-term deposits 38.707 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cash and cash equivalents: 12,443 thousand EUR (30.06.2026) vs 6,639 thousand EUR (31.12.2025) - 87.4% increase. Short-term deposits over 3 months: 38,707 thousand EUR (30.06.2026).",
+        "source_evidence": "Note 2: Cash and cash equivalents as of 30.06.2026: 12,443 thousand EUR; as of 31.12.2025: 6,639 thousand EUR. Short-term deposits over 3 months as of 30.06.2026: 38,707 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639.",
+        "candidate_value": "547 stores total (135 directly operated, down 2 from year-end); employees 1,594 (vs 1,639)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total stores: 547 (135 directly operated, 412 franchised). Directly operated stores: 135 (vs 137 at 31.12.2025). Employees: 1,594 (as of 30.06.2026) vs 1,639 (as of 31.12.2025).",
+        "source_evidence": "Management Report: 'At the end of the reporting period the Group and its franchising partners operated 525 Milavitsa and 22 Lauma Lingerie brand stores, including 135 stores operated directly by the Group (as of 31 December 2025: 137 stores).' Note 11: 'Number of employees as of reporting date: 1,594 (06m 2026) vs 1,644 (06m 2025) [Note: candidate says 1,639 which is likely a typo; source says 1,594 vs 1,644 in Note 11 table but Management Report says 1,639 at 31.12.2025. However, the candidate's employee number matches the Management Report's year-end figure of 1,639.]",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The 2025 profit of EUR 9.229 million was left undistributed and transferred to retained earnings.",
+        "candidate_value": "9.229 million EUR profit undistributed to retained earnings",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Profit for the year 2025: 9,229 thousand EUR, left undistributed and added to retained earnings",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Profit for the period (2025): 9,229 thousand EUR. Note: '2.3. Leave the net profit undistributed and include the net profit of the financial year 2025 in the retained earnings.' Retained earnings increased from 76,615 thousand EUR (31.12.2024) to 85,844 thousand EUR (31.12.2025).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The 2025 profit of EUR 9.229 million was left undistributed and transferred to retained earnings."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated revenue increased 0.6% to €28.6m with gross profit up 5.3% to €15.9m, but operating profit fell 3.5% to €5.8m and net profit dropped 31.2% to €4.3m.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'The Group`s sales amounted to 28 590 thousand EUR during the 06 months of 2026, representing a 0.6% increase... Gross profit during the 06 months of 2026 amounted to 15 892 thousand EUR and increased by 5.3%... Consolidated operating profit for 06 months of 2026 decreased by 3.5%... Reported consolidated net profit for 06 months of 2026 amounted to 4 321 thousand EUR, as compared to net profit of 6 279 thousand EUR...'",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Silvano Fashion Group’s unaudited revenue for the six months ended 30 June 2026 was EUR 28.590 million, up 0.6% from EUR 28.428 million in the same period of 2025."
+          },
+          {
+            "id": "S2",
+            "text": "Gross profit increased 5.3% to EUR 15.892 million, as cost of goods sold declined 4.8%."
+          },
+          {
+            "id": "S4",
+            "text": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%."
+          },
+          {
+            "id": "S7",
+            "text": "As a result, consolidated net profit declined 31.2% to EUR 4.321 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Retail revenue grew 13.6% to €13.5m representing 47.4% of total, while wholesale revenue declined 9.1% to €14.9m (52.2% of total).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'Our retail revenue increased by 13.6% and amounted 13 548 thousand EUR, this represents 47.4% of the Group`s total revenue... Wholesale revenue amounted to 14 934 thousand EUR, representing 52.2% of the Group’s total revenue... during 06 months of 2026 wholesale revenue... decreased by 9.1% compared to 06 months of 2025.'",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Retail revenue rose 13.6% to EUR 13.548 million and represented 47.4% of total sales, compared with 41.9% a year earlier."
+          },
+          {
+            "id": "S11",
+            "text": "Wholesale revenue declined 9.1% to EUR 14.934 million, reducing its share of sales to 52.2% from 57.8%."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Russia contributed €15.8m (55.1% of sales) flat in EUR but down 7.8% in local currency with store count reducing to 67; Belarus grew 6.4% to €9.0m; Ukraine sales collapsed 58.3% to €15k.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'The Group’s sales on the Russian market totalled 15 767 thousand EUR, decrease is 0.6% compared to 06 months of 2025... Local currency sales decreased by 7.8%... At the end of the reporting period, there were a total of 67 stores... Belarus... sales... increased by 6.4%... The Group’s sales in Ukraine... decreased by 58.3%...'; Sales by markets table.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Russia remained the largest market, generating EUR 15.767 million, down 0.6% in euros and 7.8% in local currency."
+          },
+          {
+            "id": "S13",
+            "text": "Belarusian sales increased 6.4% in euros to EUR 9.046 million, or 31.6% of total sales, while sales in Ukraine and the Baltics declined."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Gross margin improved to 55.6% (from 53.1%), operating margin fell to 20.1% (from 21.0%), EBITDA margin 26.3% (from 26.6%), and net margin attributable to parent declined to 13.9% (from 20.3%).",
+        "importance": "HIGH",
+        "source_evidence": "Selected Financial Indicators table: 'Gross profit margin... 55.6% from 53.1%... Operating profit margin... 20.1% from 21.0%... EBITDA margin... 26.3% from 26.6%... Net profit margin attributable to equity holders of the Parent company... 13.9% against 20.3%...'",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4",
+          "S5",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross margin improved to 55.6% from 53.1%."
+          },
+          {
+            "id": "S4",
+            "text": "Despite the stronger gross profit, operating profit decreased 3.5% to EUR 5.751 million, with the operating margin declining to 20.1% from 21.0%."
+          },
+          {
+            "id": "S5",
+            "text": "EBITDA was broadly stable at EUR 7.508 million, down 0.8%, while the EBITDA margin decreased slightly to 26.3% from 26.6%."
+          },
+          {
+            "id": "S8",
+            "text": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Operating cash flow surged 96.6% to €6.8m, boosting cash and cash equivalents by 87.4% to €12.4m.",
+        "importance": "HIGH",
+        "source_evidence": "Selected Financial Indicators: 'Operating cash flow for the period 6 842 (2025: 3 481)... Cash and cash equivalents 12 443 (2025: 6 639)'; Note 2 Cash and cash equivalents.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Operating cash flow nearly doubled to EUR 6.842 million from EUR 3.481 million."
+          },
+          {
+            "id": "S16",
+            "text": "Cash and cash equivalents increased 87.4% to EUR 12.443 million, in addition to EUR 38.707 million in short-term deposits."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Total assets grew 5.1% to €98.6m with equity attributable to parent up 6.1% to €81.5m, while current liabilities decreased €1.0m.",
+        "importance": "HIGH",
+        "source_evidence": "Selected Financial Indicators: 'Total assets 98 603 (2025: 93 847)... Total equity attributable to equity holders of the Parent company 81 479 (2025: 76 768)... Total current liabilities 8 290 (2025: 9 292)'; Consolidated Statement of Financial Position.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "At 30 June 2026, total assets were EUR 98.603 million, up 5.1% from year-end 2025, while equity attributable to parent-company shareholders rose 6.1% to EUR 81.479 million."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Management emphasized improving retail profitability and expanding retail stores in Russia contingent on securing reasonably priced locations.",
+        "importance": "MEDIUM",
+        "source_evidence": "Russia Economic Outlook: 'Group will focus on improving profitability of its retail business, we will also continue to expand our store chain there depending on the availability of reasonably priced sales areas.'",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Inventories decreased €1.5m to €29.7m while trade receivables increased €0.8m to €2.2m.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 4 Inventories: 'Total 29 702 (2025: 31 237)...'; Note 3 Trade and other receivables: 'Total trade and other receivables 2 175 (2025: 1 329)'; Selected Financial Indicators.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Employee count stood at 1,594 (down from 1,639) with total salaries and related taxes rising to €8.8m from €7.9m.",
+        "importance": "MEDIUM",
+        "source_evidence": "Personnel section: 'As of 30 June 2026, the Group employed 1 594 people... Total salaries and related taxes during 06 months of 2026 amounted 8 838 thousand EUR (2025: 7 885 thousand EUR).'",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Group operated 547 own and franchised stores, including 135 directly operated stores, two fewer than at year-end, and employed 1,594 people versus 1,639."
+          }
+        ]
+      },
+      {
+        "id": "K10",
+        "information": "Earnings per share declined to €0.11 from €0.16, a 31.3% decrease.",
+        "importance": "MEDIUM",
+        "source_evidence": "Selected Financial Indicators: 'Earnings per share (EUR) 0,11 (2025: 0,16)...'; Note 8 Earnings per share.",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net profit attributable to the parent company’s shareholders fell 31.5% to EUR 3.961 million, reducing earnings per share to EUR 0.11 from EUR 0.16 and the attributable net profit margin to 13.9% from 20.3%."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1-K6, K9-K10 are fully represented with core material meaning covered across multiple sentences. K7 (management strategy) and K8 (balance sheet items inventories/receivables) are missing entirely. The summary captures the main financial performance picture (revenue, profit, margins, cash flow, assets, EPS) but lacks specific operational commentary and detailed balance sheet line items, resulting in a 'Generally yes' rating.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements logically follow one another without contradictions. Revenue growth is consistently described across periods, and margin changes are explained through gross profit and operating profit movements. The business mix shift between retail and wholesale is clearly presented with supporting percentages. All financial metrics (revenue, profit, cash flow, assets) show directional changes without conflicting statements. The summary maintains clear organization with each sentence building on prior information, and there is no unnecessary repetition. While segment figures aren't explicitly reconciled to consolidated totals, the candidate doesn't claim they should sum directly, so this isn't treated as a contradiction per evaluation guidelines."
+  },
+  "usage": {
+    "input_tokens_total": 18580,
+    "output_tokens_total_including_reasoning": 9452,
+    "total_tokens": 28032,
+    "latency_seconds_total": 65.36
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 30926,
+    "output_tokens_total_including_reasoning": 61335,
+    "total_tokens": 92261,
+    "latency_seconds_total": 170.59
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_7.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_7_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_7.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_7.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_7_zero_shot_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_7_zero_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_7_zero_shot_openai.json"
+    }
+  }
+}

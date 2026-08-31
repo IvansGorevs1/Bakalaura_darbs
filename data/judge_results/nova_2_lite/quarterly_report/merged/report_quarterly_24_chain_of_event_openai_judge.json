@@ -1,0 +1,811 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_24_chain_of_event_openai.txt",
+    "report": "report_quarterly_24.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Trigon Property Development reported a significant deterioration in 2025, moving from a net profit of €167,409 in 2024 to a net loss of €99,507.",
+    "S2": "Fourth-quarter performance also weakened, with a net loss of €23,333 compared with a profit of €154,215 in the fourth quarter of 2024.",
+    "S3": "Earnings per share consequently declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter.",
+    "S4": "The main factor behind the decline was the absence of real estate sales during 2025.",
+    "S5": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter.",
+    "S6": "As a result, gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss.",
+    "S7": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%.",
+    "S8": "The report identifies €41,452 of remuneration paid to management and supervisory board members in 2025, compared with no such payments in 2024, contributing to the higher expense level.",
+    "S9": "Financial income increased to €8,513 from €5,760 but was insufficient to offset the operating loss.",
+    "S10": "The company continued to own a single 13.2-hectare development project in Pärnu, intended for a commercial, industrial and logistics park, and stated that it planned to continue selling land plots without changing its business activity.",
+    "S11": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million.",
+    "S12": "No inventory write-downs were recorded.",
+    "S13": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025, reflecting the operating loss, investment in inventories and the lack of property-sale proceeds.",
+    "S14": "Cash declined to €227,911 from €370,856.",
+    "S15": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million as a result of the annual loss.",
+    "S16": "Liabilities rose to €49,389 from €18,906, although the company remained lightly leveraged, with a debt ratio of 2.74% compared with 1.01%.",
+    "S17": "The share price increased modestly from €0.620 to €0.634, raising market capitalization from €2.79 million to €2.85 million, despite the decline in profitability and book value per share from €0.41 to €0.39."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_24.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_24.json",
+    "key_information_hash": "c4c37597b85bb625",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 17,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 17
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Trigon Property Development reported a significant deterioration in 2025, moving from a net profit of €167,409 in 2024 to a net loss of €99,507.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of comprehensive income (page 9) shows net profit for 12M 2024: €167,409; net loss for 12M 2025: €-99,507.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Trigon Property Development reported a significant deterioration in 2025, moving from a net profit of €167,409 in 2024 to a net loss of €99,507."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Fourth-quarter performance also weakened, with a net loss of €23,333 compared with a profit of €154,215 in the fourth quarter of 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of comprehensive income (page 9) shows net profit/loss for IV Q 2024: €154,215; net loss for IV Q 2025: €-23,333.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Fourth-quarter performance also weakened, with a net loss of €23,333 compared with a profit of €154,215 in the fourth quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Earnings per share consequently declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 7 (page 13) shows basic earnings per share for 12M 2024: €0.03721; 12M 2025: €-0.02212; IV Q 2024: €0.03428; IV Q 2025: €-0.00519.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Earnings per share consequently declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The main factor behind the decline was the absence of real estate sales during 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report (page 3) details real estate sales in Q3 2024 (€31,920) and Q4 2024 (€300,000). Condensed income statement (page 9) shows gain on sales for 12M 2025: €0; 12M 2024: €331,920.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The main factor behind the decline was the absence of real estate sales during 2025."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of comprehensive income (page 9) shows gain on sales for 12M 2024: €331,920; IV Q 2024: €300,000. Management report (page 3) confirms Q3 2024 land sale of €31,920.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "As a result, gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of comprehensive income (page 9) shows gross profit for 12M 2024: €220,299; 12M 2025: €0; operating loss for 12M 2024: €161,649; operating loss for 12M 2025: €-108,021.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "As a result, gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 6 (page 13) shows administrative and general expenses for 12M 2025: €108,021; 12M 2024: €63,650. The increase is (108,021 - 63,650)/63,650 ≈ 69.7%.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The report identifies €41,452 of remuneration paid to management and supervisory board members in 2025, compared with no such payments in 2024, contributing to the higher expense level.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 9 (page 14) states remuneration to management/supervisory board was €41,452 in 2025 (2024: €0).",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The report identifies €41,452 of remuneration paid to management and supervisory board members in 2025, compared with no such payments in 2024, contributing to the higher expense level."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Financial income increased to €8,513 from €5,760 but was insufficient to offset the operating loss.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of comprehensive income (page 9) shows financial income for 12M 2025: €8,513; 12M 2024: €5,760.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Financial income increased to €8,513 from €5,760 but was insufficient to offset the operating loss."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The company continued to own a single 13.2-hectare development project in Pärnu, intended for a commercial, industrial and logistics park, and stated that it planned to continue selling land plots without changing its business activity.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report (page 3) confirms ownership of one 13.2-hectare project in Pärnu and states intention to continue selling land plots without changing business activity.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The company continued to own a single 13.2-hectare development project in Pärnu, intended for a commercial, industrial and logistics park, and stated that it planned to continue selling land plots without changing its business activity."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3 (page 12) shows inventories increased by €91,262 from €1,471,238 (31.12.2024) to €1,562,500 (31.12.2025).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "No inventory write-downs were recorded.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3 (page 12) explicitly states: 'No inventories were written down in 2025 and 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "No inventory write-downs were recorded."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025, reflecting the operating loss, investment in inventories and the lack of property-sale proceeds.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed cash flow statement (page 9) shows cash flows from operating activities for 12M 2024: €194,723; 12M 2025: €-142,945.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025, reflecting the operating loss, investment in inventories and the lack of property-sale proceeds."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Cash declined to €227,911 from €370,856.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of financial position (page 7) shows cash at 31.12.2025: €227,911; 31.12.2024: €370,856.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Cash declined to €227,911 from €370,856."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million as a result of the annual loss.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of financial position (page 7) shows total assets: €1,804,656 (2025), €1,873,680 (2024); total equity: €1,755,267 (2025), €1,854,774 (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million as a result of the annual loss."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Liabilities rose to €49,389 from €18,906, although the company remained lightly leveraged, with a debt ratio of 2.74% compared with 1.01%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Condensed statement of financial position (page 7) shows total liabilities: €49,389 (2025), €18,906 (2024). Financial ratios section (page 4) confirms debt ratio: 2.74% (2025), 1.01% (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Liabilities rose to €49,389 from €18,906, although the company remained lightly leveraged, with a debt ratio of 2.74% compared with 1.01%."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The share price increased modestly from €0.620 to €0.634, raising market capitalization from €2.79 million to €2.85 million, despite the decline in profitability and book value per share from €0.41 to €0.39.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 7 (page 13) shows closing share price: €0.620 (2024), €0.634 (2025). Market capitalisation calculated as price * shares (4,499,061) matches values in financial ratios table (page 4). Book value per share: €0.41 (2024), €0.39 (2025).",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The share price increased modestly from €0.620 to €0.634, raising market capitalization from €2.79 million to €2.85 million, despite the decline in profitability and book value per share from €0.41 to €0.39."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "net profit of €167,409 in 2024 to a net loss of €99,507 in 2025",
+        "candidate_value": "-99,507",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-99,507",
+        "source_evidence": "Condensed statement of comprehensive income (page 9): Net profit/loss for 12M 2025: €-99,507; 12M 2024: €167,409.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Trigon Property Development reported a significant deterioration in 2025, moving from a net profit of €167,409 in 2024 to a net loss of €99,507."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "net loss of €23,333 compared with a profit of €154,215 in the fourth quarter of 2024",
+        "candidate_value": "-23,333",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-23,333",
+        "source_evidence": "Condensed statement of comprehensive income (page 9): Net profit/loss for IV Q 2025: €-23,333; IV Q 2024: €154,215.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Fourth-quarter performance also weakened, with a net loss of €23,333 compared with a profit of €154,215 in the fourth quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Earnings per share declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter",
+        "candidate_value": "-0.02212",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-0.02212",
+        "source_evidence": "Note 7 (page 13): Basic earnings per share for 12M 2025: €-0.02212; 12M 2024: €0.03721; IV Q 2025: €-0.00519; IV Q 2024: €0.03428.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Earnings per share consequently declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter",
+        "candidate_value": "0",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0",
+        "source_evidence": "Condensed statement of comprehensive income (page 9): Gain on sales for 12M 2025: €0; 12M 2024: €331,920; IV Q 2024: €300,000. Management report (page 3) confirms Q3 2024 land sale of €31,920.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss",
+        "candidate_value": "-108,021",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-108,021",
+        "source_evidence": "Condensed statement of comprehensive income (page 9): Gross profit for 12M 2024: €220,299; 12M 2025: €0; Operating loss for 12M 2024: €161,649; Operating loss for 12M 2025: €-108,021.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "As a result, gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%",
+        "candidate_value": "108,021",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "108,021",
+        "source_evidence": "Note 6 (page 13): Administrative and general expenses for 12M 2025: €108,021; 12M 2024: €63,650.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "€41,452 of remuneration paid to management and supervisory board members in 2025, compared with no such payments in 2024",
+        "candidate_value": "41,452",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "41,452",
+        "source_evidence": "Note 9 (page 14): Remuneration to management/supervisory board was €41,452 in 2025 (2024: €0).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The report identifies €41,452 of remuneration paid to management and supervisory board members in 2025, compared with no such payments in 2024, contributing to the higher expense level."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Financial income increased to €8,513 from €5,760",
+        "candidate_value": "8,513",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8,513",
+        "source_evidence": "Condensed statement of comprehensive income (page 9): Financial income for 12M 2025: €8,513; 12M 2024: €5,760.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Financial income increased to €8,513 from €5,760 but was insufficient to offset the operating loss."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million",
+        "candidate_value": "91,262",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "91,262",
+        "source_evidence": "Note 3 (page 12): Inventories increased by €91,262 from €1,471,238 (31.12.2024) to €1,562,500 (31.12.2025).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025",
+        "candidate_value": "-142,945",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-142,945",
+        "source_evidence": "Condensed cash flow statement (page 9): Cash flows from operating activities for 12M 2024: €194,723; 12M 2025: €-142,945.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025, reflecting the operating loss, investment in inventories and the lack of property-sale proceeds."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Cash declined to €227,911 from €370,856",
+        "candidate_value": "227,911",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "227,911",
+        "source_evidence": "Condensed statement of financial position (page 7): Cash at 31.12.2025: €227,911; 31.12.2024: €370,856.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Cash declined to €227,911 from €370,856."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million",
+        "candidate_value": "1755267",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1755267",
+        "source_evidence": "Condensed statement of financial position (page 7): Total assets: €1,804,656 (2025), €1,873,680 (2024); Total equity: €1,755,267 (2025), €1,854,774 (2024).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million as a result of the annual loss."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Liabilities rose to €49,389 from €18,906, although the company remained lightly leveraged, with a debt ratio of 2.74% compared with 1.01%",
+        "candidate_value": "49389",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "49389",
+        "source_evidence": "Condensed statement of financial position (page 7): Total liabilities: €49,389 (2025), €18,906 (2024). Financial ratios section (page 4): Debt ratio 2025: 2.74%; 2024: 1.01%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Liabilities rose to €49,389 from €18,906, although the company remained lightly leveraged, with a debt ratio of 2.74% compared with 1.01%."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The share price increased modestly from €0.620 to €0.634, raising market capitalization from €2.79 million to €2.85 million, despite the decline in profitability and book value per share from €0.41 to €0.39",
+        "candidate_value": "0.634",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.634",
+        "source_evidence": "Note 7 (page 13): Closing price of share: €0.620 (2024), €0.634 (2025). Market capitalisation values match financial ratios table (page 4): €2,789,418 (2024), €2,852,405 (2025). Book value per share: €0.41 (2024), €0.39 (2025).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The share price increased modestly from €0.620 to €0.634, raising market capitalization from €2.79 million to €2.85 million, despite the decline in profitability and book value per share from €0.41 to €0.39."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "The company reported a net loss of EUR 99,507 for 2025 compared to a net profit of EUR 167,409 in 2024, with basic earnings per share declining to EUR -0.02212 from EUR 0.03721.",
+        "importance": "HIGH",
+        "source_evidence": "Condensed statement of comprehensive income (12M columns) and Note 7",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Trigon Property Development reported a significant deterioration in 2025, moving from a net profit of €167,409 in 2024 to a net loss of €99,507."
+          },
+          {
+            "id": "S3",
+            "text": "Earnings per share consequently declined from €0.03721 to negative €0.02212 for the full year and from €0.03428 to negative €0.00519 in the fourth quarter."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Cash balance decreased significantly from EUR 370,856 at end-2024 to EUR 227,911 at end-2025, primarily due to operating cash outflows of EUR 142,945 in 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Condensed cash flow statement (Cash flows from operating activities) and condensed statement of financial position (Cash line)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow changed from an inflow of €194,723 in 2024 to an outflow of €142,945 in 2025, reflecting the operating loss, investment in inventories and the lack of property-sale proceeds."
+          },
+          {
+            "id": "S14",
+            "text": "Cash declined to €227,911 from €370,856."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Inventories (land plots for development) increased by EUR 91,262 to EUR 1,562,500 in 2025, reflecting continued investments in the Pärnu real estate project.",
+        "importance": "HIGH",
+        "source_evidence": "Note 3 Inventories and condensed statement of financial position (Inventories line)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The company invested €91,262 in the development project during 2025, increasing inventories to €1.56 million from €1.47 million."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Operating performance deteriorated from a profit of EUR 161,649 in 2024 to a loss of EUR 108,021 in 2025, driven mainly by a surge in administrative and general expenses to EUR 108,021 from EUR 63,650.",
+        "importance": "HIGH",
+        "source_evidence": "Condensed statement of comprehensive income (Operating loss/loss and Administrative and general expenses lines) and Note 6",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "As a result, gross profit fell from €220,299 to zero and operating performance changed from a €161,649 profit to a €108,021 operating loss."
+          },
+          {
+            "id": "S7",
+            "text": "Administrative and general expenses increased to €108,021 from €63,650, a rise of approximately 70%."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "In 2024, the company completed material land sales (0.09-hectare for EUR 31,920 and 0.70-hectare for EUR 300,000 excluding VAT), contributing to EUR 331,920 in gain on sales that year; no comparable sales occurred in 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management report (Overview of business areas)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The main factor behind the decline was the absence of real estate sales during 2025."
+          },
+          {
+            "id": "S5",
+            "text": "Gain on sales was €0, compared with €331,920 in 2024, including a €300,000 property sale in the fourth quarter of 2024 and a €31,920 land sale in the third quarter."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "A new detailed planning amendment approved on 29 April 2024 merged previously designated transport land with commercial and production plots, increasing flexibility for partial land sales.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report (Overview of business areas)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Shareholder structure shifted in 2025 with Väätsa Agro AS emerging as a significant shareholder holding 17.88% of shares, while OÜ Pärnu Holdings retained 39.22%.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 5 Equity (List of shareholders with over 1% holdings)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Equity decreased to EUR 1,755,267 (97.24% of total assets) at end-2025 from EUR 1,854,774 (99.13% of total assets) at end-2024, reflecting the impact of the annual net loss.",
+        "importance": "HIGH",
+        "source_evidence": "Condensed statement of financial position (Equity and Total assets lines)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total assets decreased to €1.80 million from €1.87 million, while equity fell to €1.76 million from €1.85 million as a result of the annual loss."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K5, and K8 are all PRESENT with supporting sentences identified. K6 and K7 are MISSING entirely – there is no mention of the planning amendment or shareholder structure changes. Despite two HIGH importance items missing, the majority of HIGH importance criteria are covered, justifying a 'Generally yes' score (3). The absence of MEDIUM items does not significantly alter the overall financial picture presented.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements logically follow one another without contradictions. The narrative progresses from overall performance deterioration to specific causes (loss of real estate sales), financial impacts (profit/loss changes, EPS, operating results), expense increases, cash flow effects, balance sheet changes, and market reaction. The relationships between causes and effects are clearly articulated (e.g., S4 explains S1, S5 explains S6, S7-S8 explain operating loss magnitude). No arithmetic contradictions are present because the summary does not claim exhaustive additivity of segment figures. Organization is logical and progressive. There is no unnecessary repetition. All elements form a coherent whole describing the company's 2025 financial deterioration."
+  },
+  "usage": {
+    "input_tokens_total": 10824,
+    "output_tokens_total_including_reasoning": 6386,
+    "total_tokens": 17210,
+    "latency_seconds_total": 31.84
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 15346,
+    "output_tokens_total_including_reasoning": 66537,
+    "total_tokens": 81883,
+    "latency_seconds_total": 257.03
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_24.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_24_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_24.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_24.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_24_chain_of_event_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_24_chain_of_event_openai.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_24_chain_of_event_openai.json"
+    }
+  }
+}

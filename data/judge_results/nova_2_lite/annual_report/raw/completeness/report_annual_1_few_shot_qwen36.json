@@ -1,0 +1,147 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T19:59:57.857029",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_1_few_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "e856c25df49fbaa6",
+    "sentence_map_hash": "d4f8e13035e3b14a",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "9cc2849e6febccc0",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_1.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "AAC Clyde Space reported a decline in financial performance during the 2025 fiscal year, driven by project delays that impacted revenue recognition and cash flow.",
+    "S2": "Net sales decreased by 16% to SEK 295.3 million, compared with SEK 352.9 million in the previous year.",
+    "S3": "This contraction was primarily attributable to the Products & Missions segment, where sales fell by 29% to SEK 245.0 million due to postponed project initiations and milestone delays.",
+    "S4": "Conversely, the Data & Services segment demonstrated strong growth, with net sales increasing by 78% to SEK 80.1 million, reflecting the company’s strategic shift toward recurring revenue streams from its satellite constellations.",
+    "S5": "Profitability metrics weakened significantly.",
+    "S6": "The operating result after depreciation and impairment, or EBIT, deteriorated to a loss of SEK 40.0 million, a sharp decline from the SEK 4.0 million loss recorded in 2024.",
+    "S7": "EBITDA also fell to SEK 17.5 million from SEK 46.7 million, although the company maintained positive EBITDA for the third consecutive year.",
+    "S8": "The loss for the period amounted to SEK 46.6 million, resulting in earnings per share of SEK -7.63, compared to SEK -1.00 in the prior year.",
+    "S9": "Operating cash flow turned negative at SEK 72.6 million, largely due to timing differences in customer payments and increased working capital requirements, while cash and cash equivalents decreased to SEK 30.1 million from SEK 49.7 million.",
+    "S10": "The financial results were materially affected by operational delays in key programs.",
+    "S11": "In one instance, technical discussions with a subcontractor delayed milestone recognition, shifting approximately SEK 32 million of revenue into 2026.",
+    "S12": "Additionally, the EPS-Sterna program faced political and procurement hurdles that postponed its initiation.",
+    "S13": "These delays were partially offset by significant strategic developments.",
+    "S14": "The company signed a EUR 76.3 million contract with OHB Sweden to deliver microwave radiometers for the EPS-Sterna weather constellation, marking the largest single order in the company’s history.",
+    "S15": "This order, along with other recent awards, increased the order backlog to approximately SEK 1.1 billion as of March 2026, providing a foundation for future revenue stability.",
+    "S16": "Strategic initiatives continued to advance despite the financial headwinds.",
+    "S17": "The Sedna-1 and Sedna-2 satellites became fully operational, strengthening the maritime data network and supporting multi-year customer agreements.",
+    "S18": "Assembly of the first VIREON™ Earth Observation satellites began, aiming to generate recurring revenues from environmental data services.",
+    "S19": "To support these investments and strengthen its capital base, the company completed two directed share issues, including a significant investment from Bonnier Capital, which increased the equity ratio to 80% from 71%.",
+    "S20": "The Board proposed no dividend, recommending that retained earnings be carried forward to support continued development of satellite constellations and data services."
+  },
+  "usage": {
+    "input_tokens": 1935,
+    "output_tokens_including_reasoning": 480,
+    "total_tokens": 2415
+  },
+  "latency_seconds": 4.32,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S6\", \"S7\", \"S9\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PARTIALLY_PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\", \"S15\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S17\", \"S18\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S19\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S18\", \"S20\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\", \"S19\"]\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K3\", \"K8\"],\n  \"justification\": \"K1, K2, K4, K5, K6, and K7 are PRESENT with clear coverage in the candidate summary. K3 is PARTIALLY_PRESENT because while the candidate mentions the EUR 76.3M OHB Sweden contract and increased backlog, it does not specify the ESA INFLECION Phase 1 agreement or the SEK 11.8M EPS-Sterna order. K8 is MISSING entirely as there is no mention of post-reporting-period events such as the launch/commissioning of VIREON™-1/-2 or initiation of Sedna-3/-4 construction. The overall coverage is strong but missing one HIGH criterion (K8) and partially covering another (K3), resulting in a Generally yes assessment.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6",
+          "S7",
+          "S9"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17",
+          "S18"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S18",
+          "S20"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S19"
+        ]
+      },
+      {
+        "id": "K8",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K3",
+      "K8"
+    ],
+    "justification": "K1, K2, K4, K5, K6, and K7 are PRESENT with clear coverage in the candidate summary. K3 is PARTIALLY_PRESENT because while the candidate mentions the EUR 76.3M OHB Sweden contract and increased backlog, it does not specify the ESA INFLECION Phase 1 agreement or the SEK 11.8M EPS-Sterna order. K8 is MISSING entirely as there is no mention of post-reporting-period events such as the launch/commissioning of VIREON™-1/-2 or initiation of Sedna-3/-4 construction. The overall coverage is strong but missing one HIGH criterion (K8) and partially covering another (K3), resulting in a Generally yes assessment."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,145 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:57:21.109829",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_2_chain_of_event_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "142e7d3da216303d",
+    "sentence_map_hash": "aa10daf8e5fa1552",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Amber Grid AB reported significant improvements in its financial performance for the three months ended 31 March 2026.",
+    "S2": "Revenue rose 58 percent to EUR 32,821 thousand from EUR 20,763 thousand in the first quarter of 2025.",
+    "S3": "This growth stemmed from a 35 percent increase in transmitted gas volume and higher 2026 transmission tariffs.",
+    "S4": "Transmission revenue reached EUR 32,700 thousand, whereas balancing revenue collapsed by 99 percent to EUR 24 thousand.",
+    "S5": "A new transit agreement signed in 2026 drastically reduced balancing requirements.",
+    "S6": "Natural gas purchases correspondingly fell 68 percent to EUR 1,477 thousand, although costs for technological needs rose 118 percent.",
+    "S7": "EBITDA expanded to EUR 23,304 thousand from EUR 8,918 thousand.",
+    "S8": "Operating profit grew to EUR 19,627 thousand from EUR 5,185 thousand.",
+    "S9": "Net profit surged to EUR 15,763 thousand, or EUR 0.09 per share, compared to EUR 4,239 thousand and EUR 0.02 per share previously.",
+    "S10": "Income tax expense increased to EUR 3,238 thousand.",
+    "S11": "Other expenses included wages and salaries rising to EUR 4,367 thousand from EUR 3,659 thousand.",
+    "S12": "Finance costs net were EUR 626 thousand versus EUR 408 thousand.",
+    "S13": "Adjusted EBITDA remained stable at EUR 8,285 thousand versus EUR 8,260 thousand last year, despite negative management adjustments for temporary regulatory differences totaling EUR 15,019 thousand.",
+    "S14": "Total assets were EUR 324,064 thousand.",
+    "S15": "Equity rose to EUR 182,039 thousand, supported by retained earnings of EUR 122,439 thousand.",
+    "S16": "Trade receivables climbed 39 percent to EUR 14,146 thousand due to unpaid realized contract assets.",
+    "S17": "Inventories grew 16 percent to EUR 4,794 thousand reflecting higher gas volumes and prices.",
+    "S18": "Operating cash flow improved to EUR 22,927 thousand from EUR 8,264 thousand.",
+    "S19": "Net debt increased to EUR 106,610 thousand from EUR 76,052 thousand at year-end 2025.",
+    "S20": "Non-current borrowings totaled EUR 97,707 thousand, including EUR 40,098 thousand from financial institutions.",
+    "S21": "Prior to this period, failure to comply with financial covenants as of December 2025 had required reclassifying long-term borrowings to current liabilities.",
+    "S22": "A February 2026 agreement transferred EUR 9,783 thousand of debt to parent company EPSO-G, enabling reclassification to non-current liabilities and resolving the covenant breaches.",
+    "S23": "An ongoing legal dispute concerning the Gas Pipeline Interconnection between Poland and Lithuania persists, with a EUR 5,815 thousand provision maintained for potential repayment of received guarantee funds.",
+    "S24": "Subsequent to the reporting date, the General Meeting approved dividends of EUR 9,989 thousand, or EUR 0.0560 per share."
+  },
+  "usage": {
+    "input_tokens": 1256,
+    "output_tokens_including_reasoning": 246,
+    "total_tokens": 1502
+  },
+  "latency_seconds": 2.03,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S4\", \"S5\"],\n      \"description\": \"The candidate states that balancing revenue collapsed by 99 percent to EUR 24 thousand and attributes this to a new transit agreement that 'drastically reduced balancing requirements.' However, there is no explicit logical link explaining how the agreement directly caused the near-total revenue collapse, leaving a gap in the causal explanation.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear structure covering revenue, cost, profit, balance sheet, and cash flow developments. Most statements logically follow one another, with consistent terminology and progression. The primary issue is a logical gap between the new transit agreement (S5) and the near-total collapse in balancing revenue (S4), as the connection is asserted but not explained. No self-contradictions, severe organizational problems, or unnecessary repetition are present. Arithmetic differences (e.g., between segment and total figures) are not contradictions because the candidate does not claim exhaustive additivity.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ],
+        "description": "The candidate states that balancing revenue collapsed by 99 percent to EUR 24 thousand and attributes this to a new transit agreement that 'drastically reduced balancing requirements.' However, there is no explicit logical link explaining how the agreement directly caused the near-total revenue collapse, leaving a gap in the causal explanation."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear structure covering revenue, cost, profit, balance sheet, and cash flow developments. Most statements logically follow one another, with consistent terminology and progression. The primary issue is a logical gap between the new transit agreement (S5) and the near-total collapse in balancing revenue (S4), as the connection is asserted but not explained. No self-contradictions, severe organizational problems, or unnecessary repetition are present. Arithmetic differences (e.g., between segment and total figures) are not contradictions because the candidate does not claim exhaustive additivity."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

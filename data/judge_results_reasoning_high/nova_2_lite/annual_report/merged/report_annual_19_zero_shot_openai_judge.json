@@ -1,0 +1,675 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_19_zero_shot_openai.txt",
+    "report": "report_annual_19.md",
+    "report_type": "annual_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Talkpool delivered improved financial performance in 2025 as it completed its restructuring phase and returned to organic growth.",
+    "S2": "Net sales increased 12.5% to EUR 17.756 million from EUR 15.782 million in 2024, marking the first year of double-digit growth since the consolidation phase began.",
+    "S3": "Gross margin was 26.4%.",
+    "S4": "EBITDA rose to EUR 1.828 million from EUR 1.702 million, although the EBITDA margin decreased to 10.3% from 10.8%.",
+    "S5": "EBIT increased to EUR 1.620 million from EUR 1.527 million, with the EBIT margin declining to 9.1% from 9.7%.",
+    "S6": "Net earnings after tax improved more strongly, reaching EUR 862 thousand compared with EUR 605 thousand in 2024, an increase of 42%; the EAT margin rose to 4.8% from 3.8%.",
+    "S7": "Margins remained relatively stable despite investments in personnel, technology, and future growth.",
+    "S8": "The company reported that all revenue growth was organic.",
+    "S9": "However, currency movements reduced reported revenue in euros, particularly during the first half of the year, as the US dollar weakened by 11% and the Pakistani rupee by 14%.",
+    "S10": "Talkpool also reported continued balance-sheet improvement: equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021.",
+    "S11": "The Americas remained the largest market and continued to grow despite currency weakness and global uncertainty.",
+    "S12": "The Caribbean performed well, supported by the long-term Digicel relationship, while Talkpool also supported the restoration of Jamaica’s communications infrastructure after Hurricane Melissa.",
+    "S13": "The company re-entered the US market through a MasTec contract, but the US ramp-up was slower than planned and order volumes remained low after the company discontinued fiber rollout work to focus on remote wireless services.",
+    "S14": "Germany remained a solid contributor, supported by strong fiber-investment activity and Talkpool’s planning work for Deutsche Telekom, although a shift toward homes passed rather than connected temporarily flattened assignment volumes.",
+    "S15": "Pakistan achieved its highest-ever revenue in local currency, improved gross profitability after renegotiating customer terms, and expanded activity across several telecom service areas.",
+    "S16": "Talkpool shifted from cost reduction toward growth, focusing on technology-enabled remote services, lower-cost delivery hubs, and AI-powered solutions.",
+    "S17": "Initial AI trials and proof-of-concept work were completed during 2025, while management expects temporary pressure on cash flow and margins as investments take effect.",
+    "S18": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_19.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_19.json",
+    "key_information_hash": "7a8728279a8a5b2d",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 9,
+      "incorrect": 0,
+      "total": 9
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Talkpool delivered improved financial performance in 2025 as it completed its restructuring phase and returned to organic growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Comments: 'In 2025, Talkpool ended its multi-year “reduce to the MAX” focus and started to grow... After years of minimizing all kinds of costs and risks, the company hired personnel and made first investments in line with a new Vision 2030.'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Talkpool delivered improved financial performance in 2025 as it completed its restructuring phase and returned to organic growth."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Margins remained relatively stable despite investments in personnel, technology, and future growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information section: 'Profit Margins have remained stable, with a positive trend over the past 4 years. Profit margins were only slightly lower in 2025 compared to 2024 despite substantial investments in future growth.'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Margins remained relatively stable despite investments in personnel, technology, and future growth."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The company reported that all revenue growth was organic.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Comments: 'Organic growth accelerated throughout the year, reaching the 16.8% long-term growth target by year-end — ahead of expectations. This is particularly encouraging given that all growth was organic...'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The company reported that all revenue growth was organic."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Currency movements reduced reported revenue in euros, particularly during the first half of the year, as the US dollar weakened by 11% and the Pakistani rupee by 14%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Comments: 'Currency headwinds in the first half of 2025 - with the US dollar weakening by 11% and the PKR (Pakistani Rupees) by 14% - reduced Talkpool’s EUR-reported revenues.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, currency movements reduced reported revenue in euros, particularly during the first half of the year, as the US dollar weakened by 11% and the Pakistani rupee by 14%."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Talkpool also reported continued balance-sheet improvement: equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information: 'Equity has improved by EUR 4.6 million from -EUR 2.5 million in 2021 to EUR 2.1 million in 2025... Net Cash has improved by EUR 6.0 million, from -EUR 5.7 million in 2021 to reaching a positive position of EUR 0.3 million (Net Cash = Cash - interest-bearing liabilities) by the end of 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Talkpool also reported continued balance-sheet improvement: equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The Americas remained the largest market and continued to grow despite currency weakness and global uncertainty.",
+        "label": "SUPPORTED",
+        "source_evidence": "Markets 2025 section: 'Americas remained Talkpool’s largest market, with strong business momentum continuing throughout the year despite US dollar weakness and broader global uncertainty.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The Americas remained the largest market and continued to grow despite currency weakness and global uncertainty."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The Caribbean performed well, supported by the long-term Digicel relationship, while Talkpool also supported the restoration of Jamaica’s communications infrastructure after Hurricane Melissa.",
+        "label": "SUPPORTED",
+        "source_evidence": "Important events: 'Talkpool supported Digicel in restoring Jamaica’s communications infrastructure following Hurricane Melissa.' Markets section: 'The Caribbean, with its many islands, remains one of Talkpool’s most longstanding and most important markets... In 2025, the Caribbean maintained its position as Talkpool’s single largest revenue market... This performance reflects the strength of the long-term Digicel relationship...'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The Caribbean performed well, supported by the long-term Digicel relationship, while Talkpool also supported the restoration of Jamaica’s communications infrastructure after Hurricane Melissa."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company re-entered the US market through a MasTec contract, but the US ramp-up was slower than planned and order volumes remained low after the company discontinued fiber rollout work to focus on remote wireless services.",
+        "label": "SUPPORTED",
+        "source_evidence": "Important events: 'Re-entry into the U.S. market through a new service contract with MasTec in May.' Markets section: 'The US ramp-up in 2025 was slower than planned. After discontinuing fibre rollout work to focus on remote wireless services, order volumes remained low... Building the relationships and track record required to scale in the US is a multi-year effort...'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company re-entered the US market through a MasTec contract, but the US ramp-up was slower than planned and order volumes remained low after the company discontinued fiber rollout work to focus on remote wireless services."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Germany remained a solid contributor, supported by strong fiber-investment activity and Talkpool’s planning work for Deutsche Telekom, although a shift toward homes passed rather than connected temporarily flattened assignment volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Germany section: 'Talkpool Deutschland AG is firmly established as a key planning partner... During 2025, however, a shift in the operator’s rollout priorities — with greater emphasis on homes “passed” rather than connected — led to a temporary flattening of planning assignment volumes... German operations maintained a high and steady contribution to the group...'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Germany remained a solid contributor, supported by strong fiber-investment activity and Talkpool’s planning work for Deutsche Telekom, although a shift toward homes passed rather than connected temporarily flattened assignment volumes."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Pakistan achieved its highest-ever revenue in local currency, improved gross profitability after renegotiating customer terms, and expanded activity across several telecom service areas.",
+        "label": "SUPPORTED",
+        "source_evidence": "Pakistan section: 'Talkpool Pakistan continues on a stabilisation and growth trajectory, achieving its budgeted targets and recording its highest-ever revenue in local PKR currency... In the second half of 2025, it successfully renegotiated commercial terms with all major customers, resulting in a meaningful improvement in gross profitability... The services portfolio recorded notable growth across RF Performance Management, First Line Maintenance (FLM), and Telecom Infrastructure (TI)...'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Pakistan achieved its highest-ever revenue in local currency, improved gross profitability after renegotiating customer terms, and expanded activity across several telecom service areas."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Talkpool shifted from cost reduction toward growth, focusing on technology-enabled remote services, lower-cost delivery hubs, and AI-powered solutions.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Comments: 'In 2025, Talkpool ended its multi-year “reduce to the MAX” focus and started to grow... Talkpool has accelerated the ramp-up of its remote services... Building on the home-office model... integration of AI-powered tools in the remote hub further improves efficiency... The first AI-powered technology solutions underwent trials and proof-of-concept testing during 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Talkpool shifted from cost reduction toward growth, focusing on technology-enabled remote services, lower-cost delivery hubs, and AI-powered solutions."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Initial AI trials and proof-of-concept work were completed during 2025, while management expects temporary pressure on cash flow and margins as investments take effect.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Comments: 'The first AI-powered technology solutions underwent trials and proof-of-concept testing during 2025... Nearterm pressure on cash flow and margins is anticipated, but new business activity is expected to drive both to new levels within the next 12 months.'",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Initial AI trials and proof-of-concept work were completed during 2025, while management expects temporary pressure on cash flow and margins as investments take effect."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030.",
+        "label": "SUPPORTED",
+        "source_evidence": "Important events: 'Launch of ”Vision 2030” Strategic Growth Plan in April, setting long-term financial targets including 16.8% CAGR (average annual revenue growth), 14.0% EBITDA margin, and zero net debt by 2030.' Financial Information: 'Long-term 2030 targets of EUR 40 million in revenues and 14% EBITDA margin were published in April 2025...'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales increased 12.5% to EUR 17.756 million from EUR 15.782 million in 2024",
+        "candidate_value": "EUR 17.756 million (2025) vs EUR 15.782 million (2024), 12.5% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 17,756 thousand (2025) vs EUR 15,782 thousand (2024), 12.5% increase",
+        "source_evidence": "Jan 1st – Dec 31st 2025 section: '- Net sales amounted to EUR 17 756 thousand (EUR 15 782 thousand in 2024), representing an increase of 12.5 percent'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales increased 12.5% to EUR 17.756 million from EUR 15.782 million in 2024, marking the first year of double-digit growth since the consolidation phase began."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross margin was 26.4%.",
+        "candidate_value": "26.4%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "26.4%",
+        "source_evidence": "The Year in Brief section shows '26.4% GROSS MARGIN'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Gross margin was 26.4%."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "EBITDA rose to EUR 1.828 million from EUR 1.702 million, although the EBITDA margin decreased to 10.3% from 10.8%.",
+        "candidate_value": "EUR 1.828 million (2025) vs EUR 1.702 million (2024); margin 10.3% (2025) vs 10.8% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,828 thousand (2025) vs EUR 1,702 thousand (2024); margin 10.3% (2025) vs 10.8% (2024)",
+        "source_evidence": "Jan 1st – Dec 31st 2025 section: '- EBITDA of EUR 1 828 thousand (EUR 1 702) and EBITDA margin of 10.3 percent (10.8)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "EBITDA rose to EUR 1.828 million from EUR 1.702 million, although the EBITDA margin decreased to 10.3% from 10.8%."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBIT increased to EUR 1.620 million from EUR 1.527 million, with the EBIT margin declining to 9.1% from 9.7%.",
+        "candidate_value": "EUR 1.620 million (2025) vs EUR 1.527 million (2024); margin 9.1% (2025) vs 9.7% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,620 thousand (2025) vs EUR 1,527 thousand (2024); margin 9.1% (2025) vs 9.7% (2024)",
+        "source_evidence": "Jan 1st – Dec 31st 2025 section: '- EBIT of EUR 1 620 thousand (EUR 1 527) and EBIT margin of 9.1 percent (9.7)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBIT increased to EUR 1.620 million from EUR 1.527 million, with the EBIT margin declining to 9.1% from 9.7%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net earnings after tax improved more strongly, reaching EUR 862 thousand compared with EUR 605 thousand in 2024, an increase of 42%; the EAT margin rose to 4.8% from 3.8%.",
+        "candidate_value": "EUR 862 thousand (2025) vs EUR 605 thousand (2024), 42% increase; margin 4.8% (2025) vs 3.8% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 862 thousand (2025) vs EUR 605 thousand (2024), 42% increase; margin 4.8% (2025) vs 3.8% (2024)",
+        "source_evidence": "Jan 1st – Dec 31st 2025 section: '- Net earnings after tax of EUR 862 thousand (EUR 605), an increase of 42% and EAT margin of 4.8 percent (3.8)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net earnings after tax improved more strongly, reaching EUR 862 thousand compared with EUR 605 thousand in 2024, an increase of 42%; the EAT margin rose to 4.8% from 3.8%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021.",
+        "candidate_value": "Equity: EUR 2.1 million (2025) vs -EUR 2.5 million (2021); Net Cash: EUR 0.3 million (2025) vs -EUR 5.7 million (2021)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Equity: EUR 2.1 million (2025) vs -EUR 2.5 million (2021); Net Cash: EUR 0.3 million (2025) vs -EUR 5.7 million (2021)",
+        "source_evidence": "Financial Information: 'Equity has improved by EUR 4.6 million from -EUR 2.5 million in 2021 to EUR 2.1 million in 2025... Net Cash has improved by EUR 6.0 million, from -EUR 5.7 million in 2021 to reaching a positive position of EUR 0.3 million (Net Cash = Cash - interest-bearing liabilities) by the end of 2025.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Talkpool also reported continued balance-sheet improvement: equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030.",
+        "candidate_value": "EUR 40 million revenue target, 14% EBITDA margin target, zero net debt target by 2030",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 40 million revenue target, 14% EBITDA margin target, zero net debt target by 2030",
+        "source_evidence": "Important events: 'Launch of ”Vision 2030” Strategic Growth Plan in April, setting long-term financial targets including 16.8% CAGR (average annual revenue growth), 14.0% EBITDA margin, and zero net debt by 2030.' Financial Information: 'Long-term 2030 targets of EUR 40 million in revenues and 14% EBITDA margin were published in April 2025...'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030."
+          }
+        ]
+      },
+      {
+        "claim": "US dollar weakened by 11%",
+        "candidate_value": "11%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11%",
+        "source_evidence": "Currency headwinds in the first half of 2025 - with the US dollar weakening by 11% and the PKR (Pakistani Rupees) by 14% - reduced Talkpool’s EUR-reported revenues.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N8",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, currency movements reduced reported revenue in euros, particularly during the first half of the year, as the US dollar weakened by 11% and the Pakistani rupee by 14%."
+          }
+        ]
+      },
+      {
+        "claim": "Pakistani rupee (PKR) weakened by 14%",
+        "candidate_value": "14%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14%",
+        "source_evidence": "Currency headwinds in the first half of 2025 - with the US dollar weakening by 11% and the PKR (Pakistani Rupees) by 14% - reduced Talkpool’s EUR-reported revenues.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N9",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, currency movements reduced reported revenue in euros, particularly during the first half of the year, as the US dollar weakened by 11% and the Pakistani rupee by 14%."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Strong financial performance with 12.5% revenue growth to EUR 17.8 million, EBITDA of EUR 1.83 million (10.3% margin), EBIT of EUR 1.62 million (9.1% margin), and net earnings after tax rising 42% to EUR 0.86 million.",
+        "importance": "HIGH",
+        "source_evidence": "Net sales amounted to EUR 17 756 thousand (EUR 15 782 thousand in 2024), representing an increase of 12.5 percent... EBITDA of EUR 1 828 thousand... EBIT of EUR 1 620 thousand... Net earnings after tax of EUR 862 thousand (EUR 605), an increase of 42%",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales increased 12.5% to EUR 17.756 million from EUR 15.782 million in 2024, marking the first year of double-digit growth since the consolidation phase began."
+          },
+          {
+            "id": "S4",
+            "text": "EBITDA rose to EUR 1.828 million from EUR 1.702 million, although the EBITDA margin decreased to 10.3% from 10.8%."
+          },
+          {
+            "id": "S5",
+            "text": "EBIT increased to EUR 1.620 million from EUR 1.527 million, with the EBIT margin declining to 9.1% from 9.7%."
+          },
+          {
+            "id": "S6",
+            "text": "Net earnings after tax improved more strongly, reaching EUR 862 thousand compared with EUR 605 thousand in 2024, an increase of 42%; the EAT margin rose to 4.8% from 3.8%."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Completion of multi-year restructuring and launch of the Vision 2030 Strategic Growth Plan targeting EUR 40 million revenue, 16.8% CAGR, 14.0% EBITDA margin, and zero net debt by 2030.",
+        "importance": "HIGH",
+        "source_evidence": "Launch of \"Vision 2030\" Strategic Growth Plan in April, setting long-term financial targets including 16.8% CAGR, 14.0% EBITDA margin, and zero net debt by 2030... ending restructuring phase and starting organic growth.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The company launched its Vision 2030 plan, targeting EUR 40 million in revenue, a 14% EBITDA margin, and zero net debt by 2030."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Improved liquidity and capital position with equity rising to EUR 2.1 million and net cash turning positive at EUR 0.3 million (from -EUR 5.7 million in 2021).",
+        "importance": "HIGH",
+        "source_evidence": "Equity has improved by EUR 4.6 million from -EUR 2.5 million in 2021 to EUR 2.1 million in 2025... Net Cash has improved by EUR 6.0 million, from -EUR 5.7 million in 2021 to reaching a positive position of EUR 0.3 million by the end of 2025.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Talkpool also reported continued balance-sheet improvement: equity reached EUR 2.1 million at year-end, compared with negative EUR 2.5 million in 2021, while net cash improved to EUR 0.3 million from net debt of EUR 5.7 million in 2021."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Strategic shift toward developed markets (primarily western Europe) with Pakistan established as the main production base, delivering cost-efficient engineering capacity to European and American projects.",
+        "importance": "HIGH",
+        "source_evidence": "Historically, Talkpool’s Telecom Network Services business was oriented toward developing markets. The company has shifted its geographic focus towards developed markets, currently concentrating primarily on western Europe... Pakistan established as the Group’s main production base, delivering cost-efficient engineering capacity.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Robust performance in the Americas region, particularly the Caribbean (led by Digicel) and Haiti operations, maintaining market leadership despite currency headwinds and security challenges.",
+        "importance": "HIGH",
+        "source_evidence": "Americas remained Talkpool’s largest market, with strong business momentum continuing throughout the year despite US dollar weakness... Talkpool supported Digicel in restoring Jamaica’s communications infrastructure following Hurricane Melissa... operation in Haiti continued to deliver services throughout 2025.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The Americas remained the largest market and continued to grow despite currency weakness and global uncertainty."
+          },
+          {
+            "id": "S12",
+            "text": "The Caribbean performed well, supported by the long-term Digicel relationship, while Talkpool also supported the restoration of Jamaica’s communications infrastructure after Hurricane Melissa."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Re-entry into the U.S. market through a service contract with MasTec and announcement of a partnership with Nokia USA on a 5G EME/MEP testing project.",
+        "importance": "HIGH",
+        "source_evidence": "Re-entry into the U.S. market through a new service contract with MasTec in May... Partnership with Nokia USA on a 5G EME/MEP testing project announced in November.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company re-entered the US market through a MasTec contract, but the US ramp-up was slower than planned and order volumes remained low after the company discontinued fiber rollout work to focus on remote wireless services."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Acceleration of AI-powered remote services and technology solutions, with trials completed in 2025 and commercialization planned for 2027–2028, followed by mass deployment from 2029.",
+        "importance": "HIGH",
+        "source_evidence": "The first AI-powered technology solutions underwent trials and proof-of-concept testing during 2025... Further trials are planned for 2026, with the most promising solutions moving towards commercialization in 2027–2028 and mass deployment from 2029.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Talkpool shifted from cost reduction toward growth, focusing on technology-enabled remote services, lower-cost delivery hubs, and AI-powered solutions."
+          },
+          {
+            "id": "S17",
+            "text": "Initial AI trials and proof-of-concept work were completed during 2025, while management expects temporary pressure on cash flow and margins as investments take effect."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Material post-reporting-period events: April 2026 Memorandum of Understanding to acquire Netcom Global Partners (expected EUR 1 million revenue, 20% EBITDA margin) and March 2026 investor funding of EUR 1.65 million moving the company to a net cash position of approximately EUR 2 million.",
+        "importance": "HIGH",
+        "source_evidence": "In April 2026, Talkpool signed a Memorandum of Understanding to acquire Netcom Global Partners... expected to contribute approximately EUR 1 million in revenue and a 20% EBITDA margin... In March 2026, a group of ten investors committed EUR 1.65 million to Talkpool... moving to a net cash position of approximately EUR 2 million.",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Launch of Swedish affiliate Talkpool AB in June 2025 to deliver advanced communication solutions for the defence sector.",
+        "importance": "MEDIUM",
+        "source_evidence": "New Swedish Affiliated Company Talkpool AB launched in June to deliver advanced communication solutions for the defence sector... Talkpool AB, a consulting firm specialising in secure communications technology for the Swedish military.",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4",
+      "K8",
+      "K9"
+    ],
+    "completeness_justification": "K1, K2, K3, K5, K6, and K7 are PRESENT with supporting sentences identified. K4 is MISSING as there is no mention of the strategic shift toward developed markets or Pakistan as the main production base. K8 is MISSING as there is no reference to the post-reporting-period events (MOU with Netcom Global Partners or investor funding). K9 is MISSING as there is no mention of the Swedish affiliate Talkpool AB or its launch in June 2025. The overall coverage is strong for most HIGH criteria but missing several key elements, resulting in a 'Generally yes' score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support the overall narrative of improved financial performance and strategic shifts. There are no self-contradictions: growth metrics (S2, S4-S6) align with the stated restructuring completion (S1). Margin explanations (S4-S5, S7) logically account for investment impacts. Regional performances (S11-S15) consistently show market-specific dynamics without conflict. Strategic shifts (S16-S17) are clearly explained with anticipated near-term trade-offs. The Vision 2030 targets (S18) provide a forward-looking conclusion that complements past achievements. Organization flows naturally from financial results to regional contributions to strategic direction, with no unnecessary repetition or logical gaps."
+  },
+  "usage": {
+    "input_tokens_total": 21433,
+    "output_tokens_total_including_reasoning": 6097,
+    "total_tokens": 27530,
+    "latency_seconds_total": 34.57
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 19586,
+    "output_tokens_total_including_reasoning": 73177,
+    "total_tokens": 92763,
+    "latency_seconds_total": 296.06
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_19.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_19_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_19.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_19.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_19_zero_shot_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_19_zero_shot_openai.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_19_zero_shot_openai.json"
+    }
+  }
+}

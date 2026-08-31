@@ -1,0 +1,129 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:41:42.741386",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_20_zero_shot_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "3da38e1ac31d24a7",
+    "sentence_map_hash": "1ee22603b42ace81",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "SAF Tehnika reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, representing a 4% decline from the previous financial year.",
+    "S2": "The fourth quarter of the 2024/2025 financial year saw a sharper contraction, with net sales dropping 13% to EUR 5.18 million compared to EUR 5.98 million in the same period last year.",
+    "S3": "This quarterly decrease was primarily driven by a 40% drop in turnover from the North and Latin American regions, which fell to EUR 2.5 million.",
+    "S4": "Conversely, the European region demonstrated resilience and growth, with turnover increasing by 24% to EUR 1.9 million.",
+    "S5": "The Asia, Africa, and Middle East region also performed well, doubling its quarterly turnover to EUR 846 thousand.",
+    "S6": "Over the full year, the Americas accounted for 55% of total revenue but declined by 14%, while Europe contributed 38% of revenue with a 17% increase.",
+    "S7": "The Asia, Africa, and Middle East region saw a modest 5% decline in annual revenue.",
+    "S8": "Profitability deteriorated significantly during the reporting period.",
+    "S9": "The Group recorded a net loss of EUR 820 thousand for the full year, a substantial improvement from the EUR 2.37 million loss in the prior year, largely due to lower direct costs of goods sold.",
+    "S10": "However, the fourth quarter alone resulted in a net loss of EUR 913 thousand, worsening from the EUR 498 thousand loss in Q4 of the previous year.",
+    "S11": "Earnings before interest, taxes, and depreciation (EBITDA) for the quarter were negative EUR 459 thousand, compared to negative EUR 96 thousand in the prior year period.",
+    "S12": "The loss before interest and taxes (EBIT) for the full year was EUR 754 thousand, significantly better than the EUR 2.26 million loss recorded previously.",
+    "S13": "Operating expenses remained relatively stable, with salaries and social expenses increasing by 8% to EUR 10.58 million, while bonuses and social expenses more than doubled to EUR 1.82 million.",
+    "S14": "The company faced challenges related to the global shortage of electronic components, which previously impacted production.",
+    "S15": "To mitigate this, SAF Tehnika accumulated material reserves, ensuring short delivery times.",
+    "S16": "By the end of the reporting period, delivery times had continued to improve.",
+    "S17": "The company’s balance sheet shows a strong liquidity position, with cash and bank balances rising to EUR 4.81 million from EUR 2.21 million the previous year.",
+    "S18": "Total current assets increased to EUR 20.93 million, supported by a significant rise in customer prepayments, which jumped to EUR 3.92 million from EUR 759 thousand.",
+    "S19": "Inventories also increased by 8% to EUR 13.94 million.",
+    "S20": "The Group maintained a EUR 4.95 million credit line with Luminor Bank AS, which remained entirely unused.",
+    "S21": "The number of employees increased slightly to 273 from 265 in the previous year.",
+    "S22": "Management remains cautious regarding future forecasts, citing ongoing uncertainty in the business environment, although no direct impact from armed conflicts in neighboring regions was observed."
+  },
+  "usage": {
+    "input_tokens": 1314,
+    "output_tokens_including_reasoning": 304,
+    "total_tokens": 1618
+  },
+  "latency_seconds": 2.12,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S8\", \"S9\", \"S10\", \"S11\", \"S12\"],\n      \"description\": \"The summary states that profitability deteriorated significantly (S8), but then presents figures showing a net loss improvement over the full year (S9) and a better EBIT (S12). There is a logical gap because the summary does not explain how these seemingly contradictory statements can both be true—i.e., it does not clarify that while full-year profitability improved compared to the prior year, it still represents a deterioration relative to some internal target or industry benchmark, or that the quarterly deterioration contributed to an overall negative trend.\"\n    }\n  ],\n  \"justification\": \"The candidate summary is generally coherent with a clear structure and logical flow. Most statements are consistent with each other, and regional performance, profitability trends, and balance sheet items are well-organized. The primary issue is a logical gap in the profitability discussion: while S8 claims a significant deterioration, S9 and S12 show year-over-year improvements in net loss and EBIT. The summary fails to reconcile these statements, leaving the reader without clarification on how both can be true. There are no self-contradictions, and repetition is minimal. Organization is clear, with each sentence building on the previous ones.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9",
+          "S10",
+          "S11",
+          "S12"
+        ],
+        "description": "The summary states that profitability deteriorated significantly (S8), but then presents figures showing a net loss improvement over the full year (S9) and a better EBIT (S12). There is a logical gap because the summary does not explain how these seemingly contradictory statements can both be true—i.e., it does not clarify that while full-year profitability improved compared to the prior year, it still represents a deterioration relative to some internal target or industry benchmark, or that the quarterly deterioration contributed to an overall negative trend."
+      }
+    ],
+    "justification": "The candidate summary is generally coherent with a clear structure and logical flow. Most statements are consistent with each other, and regional performance, profitability trends, and balance sheet items are well-organized. The primary issue is a logical gap in the profitability discussion: while S8 claims a significant deterioration, S9 and S12 show year-over-year improvements in net loss and EBIT. The summary fails to reconcile these statements, leaving the reader without clarification on how both can be true. There are no self-contradictions, and repetition is minimal. Organization is clear, with each sentence building on the previous ones."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

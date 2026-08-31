@@ -1,0 +1,882 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_4_zero_shot_qwen36.txt",
+    "report": "report_quarterly_4.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Ambu A/S reported a solid start to its 2025/26 fiscal year, with first-quarter revenue reaching DKK 1,558 million.",
+    "S2": "The company achieved 8.6 percent organic revenue growth against a high comparative base, resulting in 3.2 percent reported growth after a 5.4 percent foreign exchange headwind.",
+    "S3": "Endoscopy Solutions led expansion with 14.4 percent organic growth to DKK 986 million.",
+    "S4": "The Urology, ENT, and GI division surged 21.0 percent organically, while Respiratory grew 8.3 percent, supported by aScope 5 Broncho adoption.",
+    "S5": "Anesthesia and Patient Monitoring posted flat organic growth of negative 0.1 percent, weighed down by exceptionally strong prior-year revenues.",
+    "S6": "North America and Europe each expanded organically by roughly 9.7 to 9.8 percent, whereas Rest of World declined 1.6 percent due to order volatility.",
+    "S7": "Profitability faced near-term external pressures.",
+    "S8": "EBIT before special items stood at DKK 164 million, yielding a 10.5 percent margin compared to 16.1 percent last year.",
+    "S9": "The contraction was directly caused by tariff costs exceeding DKK 50 million and foreign exchange losses.",
+    "S10": "After adjusting for these factors, the underlying EBIT margin reached 15.2 percent, demonstrating continued operating leverage.",
+    "S11": "Gross margin decreased to 60.8 percent from 61.3 percent, primarily due to a stronger comparable period last year.",
+    "S12": "Net profit declined to DKK 118 million, or DKK 0.44 per share.",
+    "S13": "Cash generation weakened, with free cash flow before acquisitions falling to DKK 13 million from DKK 69 million.",
+    "S14": "This reduction was driven by elevated net working capital, as inventory was increased to buffer geopolitical uncertainties and fund growth.",
+    "S15": "Operational developments centered on the ZOOM AHEAD strategy implementation and the launch of the SureSight Mobile video laryngoscope.",
+    "S16": "Sustainability efforts advanced with the Recircle program extension and a 33 percent drop in carbon emissions per tonne of finished goods.",
+    "S17": "The company returned capital through a DKK 90 million dividend and DKK 38 million in treasury share purchases.",
+    "S18": "Management maintains full-year guidance, projecting 10 to 13 percent organic revenue growth and a 12 to 14 percent EBIT margin before special items.",
+    "S19": "Excluding an assumed two-percentage-point tariff impact, the margin target rises to 14 to 16 percent.",
+    "S20": "Cash conversion is forecast above 40 percent, with leadership anticipating stronger growth and profitability in the second half of the fiscal year."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_4.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_4.json",
+    "key_information_hash": "59b14851631aeb36",
+    "key_information_units_total": 11
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 17,
+      "incorrect": 0,
+      "total": 17
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 10,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 11
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Ambu A/S reported a solid start to its 2025/26 fiscal year, with first-quarter revenue reaching DKK 1,558 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights for Q1 show revenue of DKK 1,558m for Q1 2025/26.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Ambu A/S reported a solid start to its 2025/26 fiscal year, with first-quarter revenue reaching DKK 1,558 million."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The company achieved 8.6 percent organic revenue growth against a high comparative base, resulting in 3.2 percent reported growth after a 5.4 percent foreign exchange headwind.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights state organic growth of 8.6% and reported growth of 3.2%, with exchange rate effects of -5.4%.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company achieved 8.6 percent organic revenue growth against a high comparative base, resulting in 3.2 percent reported growth after a 5.4 percent foreign exchange headwind."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Endoscopy Solutions led expansion with 14.4 percent organic growth to DKK 986 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business performance table shows Endoscopy Solutions revenue of DKK 986m with 14.4% organic growth.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Endoscopy Solutions led expansion with 14.4 percent organic growth to DKK 986 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The Urology, ENT, and GI division surged 21.0 percent organically, while Respiratory grew 8.3 percent, supported by aScope 5 Broncho adoption.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business performance table shows URO, ENT, & GI organic growth of 21.0% and Respiratory organic growth of 8.3%. Business highlights mention aScope 5 Broncho adoption.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The Urology, ENT, and GI division surged 21.0 percent organically, while Respiratory grew 8.3 percent, supported by aScope 5 Broncho adoption."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Anesthesia and Patient Monitoring posted flat organic growth of negative 0.1 percent, weighed down by exceptionally strong prior-year revenues.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business performance table shows Anesthesia & Patient Monitoring organic growth of -0.1%. Business highlights attribute this to 'extraordinarily high revenue achieved in the same quarter last year.'",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Anesthesia and Patient Monitoring posted flat organic growth of negative 0.1 percent, weighed down by exceptionally strong prior-year revenues."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "North America and Europe each expanded organically by roughly 9.7 to 9.8 percent, whereas Rest of World declined 1.6 percent due to order volatility.",
+        "label": "SUPPORTED",
+        "source_evidence": "Geographies table shows North America organic growth of 9.8%, Europe 9.7%, and Rest of World -1.6%. Business highlights cite 'order fluctuations' for Rest of World decline.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "North America and Europe each expanded organically by roughly 9.7 to 9.8 percent, whereas Rest of World declined 1.6 percent due to order volatility."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Profitability faced near-term external pressures.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income statement comments note EBIT margin decline due to 'tariff costs and FX headwind,' confirming near-term external pressures on profitability.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Profitability faced near-term external pressures."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Operational developments centered on the ZOOM AHEAD strategy implementation and the launch of the SureSight Mobile video laryngoscope.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business highlights section states: 'We had a solid start to our 2025/26 financial year, with the launch of our ZOOM AHEAD strategy' and details the SureSight Mobile launch.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Operational developments centered on the ZOOM AHEAD strategy implementation and the launch of the SureSight Mobile video laryngoscope."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Sustainability efforts advanced with the Recircle program extension and a 33 percent drop in carbon emissions per tonne of finished goods.",
+        "label": "SUPPORTED",
+        "source_evidence": "Sustainability update mentions extension of Ambu Recircle Program and states 'CO2e per tonne finished goods decreased by 33%' in sustainability highlights table.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Sustainability efforts advanced with the Recircle program extension and a 33 percent drop in carbon emissions per tonne of finished goods."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The company returned capital through a DKK 90 million dividend and DKK 38 million in treasury share purchases.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights state Ambu paid DKK 90m dividend and DKK 38m for treasury shares in Q1.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The company returned capital through a DKK 90 million dividend and DKK 38 million in treasury share purchases."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Management maintains full-year guidance, projecting 10 to 13 percent organic revenue growth and a 12 to 14 percent EBIT margin before special items.",
+        "label": "SUPPORTED",
+        "source_evidence": "2025/26 financial guidance section states organic revenue growth of 10-13% and EBIT margin b.s.i. of 12-14%.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management maintains full-year guidance, projecting 10 to 13 percent organic revenue growth and a 12 to 14 percent EBIT margin before special items."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Excluding an assumed two-percentage-point tariff impact, the margin target rises to 14 to 16 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Footnote to EBIT margin guidance states '14-16% excluding assumed impacts of ~2%-pts given the current schedule of expected tariffs.'",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Excluding an assumed two-percentage-point tariff impact, the margin target rises to 14 to 16 percent."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Cash conversion is forecast above 40 percent, with leadership anticipating stronger growth and profitability in the second half of the fiscal year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial outlook states cash conversion expected to be '+40%' and notes 'Growth and EBIT margin are still expected to be higher in H2 compared to H1.'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Cash conversion is forecast above 40 percent, with leadership anticipating stronger growth and profitability in the second half of the fiscal year."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Q1 2025/26 revenue reached DKK 1,558 million",
+        "candidate_value": "DKK 1,558 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 1,558 million",
+        "source_evidence": "Financial Highlights table: Revenue Q1 2025/26 = 1,558 DKKm",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Ambu A/S reported a solid start to its 2025/26 fiscal year, with first-quarter revenue reaching DKK 1,558 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "8.6% organic revenue growth and 3.2% reported growth after 5.4% FX headwind",
+        "candidate_value": "8.6% organic, 3.2% reported, -5.4% FX",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.6% organic growth, 3.2% reported growth, -5.4% exchange rate effects",
+        "source_evidence": "Quarterly Results table: Organic growth total revenue Q1 2025/26 = 8.6%, Reported growth = 3.2%, Exchange rate effects = -5.4%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company achieved 8.6 percent organic revenue growth against a high comparative base, resulting in 3.2 percent reported growth after a 5.4 percent foreign exchange headwind."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Endoscopy Solutions grew 14.4% organically to DKK 986 million",
+        "candidate_value": "14.4% organic growth, DKK 986 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14.4% organic growth, DKK 986 million",
+        "source_evidence": "Business Performance table: Endoscopy Solutions revenue Q1 2025/26 = 986 DKKm, Organic growth = 14.4%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Endoscopy Solutions led expansion with 14.4 percent organic growth to DKK 986 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Urology, ENT, & GI grew 21.0% organically; Respiratory grew 8.3% organically",
+        "candidate_value": "21.0% and 8.3% organic growth",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21.0% and 8.3% organic growth",
+        "source_evidence": "Business Performance table: URO, ENT, & GI organic growth = 21.0%, Respiratory organic growth = 8.3%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The Urology, ENT, and GI division surged 21.0 percent organically, while Respiratory grew 8.3 percent, supported by aScope 5 Broncho adoption."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Anesthesia & Patient Monitoring had -0.1% organic growth",
+        "candidate_value": "-0.1% organic growth",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-0.1% organic growth",
+        "source_evidence": "Business Performance table: Anesthesia & Patient Monitoring organic growth = -0.1%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Anesthesia and Patient Monitoring posted flat organic growth of negative 0.1 percent, weighed down by exceptionally strong prior-year revenues."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "North America +9.8% organic, Europe +9.7% organic, Rest of World -1.6% organic",
+        "candidate_value": "9.8%, 9.7%, -1.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9.8%, 9.7%, -1.6%",
+        "source_evidence": "Geographies table: North America organic growth = 9.8%, Europe = 9.7%, Rest of World = -1.6%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "North America and Europe each expanded organically by roughly 9.7 to 9.8 percent, whereas Rest of World declined 1.6 percent due to order volatility."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "EBIT before special items DKK 164 million (10.5% margin) vs 16.1% last year",
+        "candidate_value": "DKK 164 million, 10.5% margin vs 16.1%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 164 million, 10.5% margin vs 16.1% (Q1 2024/25)",
+        "source_evidence": "Income Statement: EBIT b.s.i. Q1 2025/26 = 164 DKKm; Key figures table: EBIT margin b.s.i. Q1 2025/26 = 10.5%, Q1 2024/25 = 16.1%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "EBIT before special items stood at DKK 164 million, yielding a 10.5 percent margin compared to 16.1 percent last year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Margin contraction caused by >DKK 50m tariffs and FX losses",
+        "candidate_value": ">DKK 50 million tariffs and FX losses",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": ">DKK 50m tariffs and FX headwind",
+        "source_evidence": "Income Statement Comments: EBIT margin b.s.i. negatively impacted by tariff costs and FX headwind; specifically states 'tariff costs amounting to more than DKK 50m'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The contraction was directly caused by tariff costs exceeding DKK 50 million and foreign exchange losses."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Adjusted EBIT margin 15.2% after removing tariffs/FX",
+        "candidate_value": "15.2% adjusted margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15.2% adjusted margin",
+        "source_evidence": "Income Statement Comments: 'Adjusting for tariff costs and FX, Ambu generated an EBIT margin of 15.2% in the quarter'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "After adjusting for these factors, the underlying EBIT margin reached 15.2 percent, demonstrating continued operating leverage."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Gross margin fell to 60.8% from 61.3% due to prior-year comparability",
+        "candidate_value": "60.8% vs 61.3%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "60.8% vs 61.3%",
+        "source_evidence": "Key figures and ratios table: Gross margin Q1 2025/26 = 60.8%, Q1 2024/25 = 61.3%; Income Statement Comments attributes decline to high comparable period",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Gross margin decreased to 60.8 percent from 61.3 percent, primarily due to a stronger comparable period last year."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net profit DKK 118 million (DKK 0.44 EPS)",
+        "candidate_value": "DKK 118 million, DKK 0.44 EPS",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 118 million, DKK 0.44 EPS",
+        "source_evidence": "Income Statement: Net profit Q1 2025/26 = 118 DKKm; Earnings per share = 0.44 DKK",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Net profit declined to DKK 118 million, or DKK 0.44 per share."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Free cash flow before acquisitions DKK 13m vs DKK 69m",
+        "candidate_value": "DKK 13 million vs DKK 69 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 13 million vs DKK 69 million",
+        "source_evidence": "Cash Flow Statement: Free cash flow before acquisitions Q1 2025/26 = 13 DKKm, Q1 2024/25 = 69 DKKm",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cash generation weakened, with free cash flow before acquisitions falling to DKK 13 million from DKK 69 million."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "33% drop in CO2e per tonne finished goods",
+        "candidate_value": "33% decrease",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "33% decrease",
+        "source_evidence": "Sustainability Highlights table: CO2e per tonne finished goods changed by -33% from 2024/25 to 2025/26",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Sustainability efforts advanced with the Recircle program extension and a 33 percent drop in carbon emissions per tonne of finished goods."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "DKK 90m dividend and DKK 38m treasury share purchases",
+        "candidate_value": "DKK 90 million dividend, DKK 38 million share purchases",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 90 million dividend, DKK 38 million treasury shares",
+        "source_evidence": "Financial Highlights: 'Ambu paid out DKK 90m in dividend... DKK 38m was used to acquire treasury shares'; Cash Flow from Financing Activities shows dividend paid -90 DKKm and purchase of treasury shares -38 DKKm",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The company returned capital through a DKK 90 million dividend and DKK 38 million in treasury share purchases."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Full-year guidance: 10-13% organic growth, 12-14% EBIT margin b.s.i.",
+        "candidate_value": "10-13% organic growth, 12-14% EBIT margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10-13% organic growth, 12-14% EBIT margin b.s.i.",
+        "source_evidence": "Financial Outlook table: Organic revenue growth = 10-13%, EBIT margin before special items = 12-14%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management maintains full-year guidance, projecting 10 to 13 percent organic revenue growth and a 12 to 14 percent EBIT margin before special items."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Excluding 2% tariff impact, margin target 14-16%",
+        "candidate_value": "14-16% margin excluding tariffs",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14-16% margin excluding tariffs",
+        "source_evidence": "Financial Outlook section: 'EBIT margin b.s.i.: 12-14%... 14-16% excluding assumed impacts of ~2%-pts given the current schedule of expected tariffs'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Excluding an assumed two-percentage-point tariff impact, the margin target rises to 14 to 16 percent."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Cash conversion forecast >40%",
+        "candidate_value": ">40% cash conversion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": ">40% cash conversion",
+        "source_evidence": "Financial Outlook table: Cash conversion = +40%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Cash conversion is forecast above 40 percent, with leadership anticipating stronger growth and profitability in the second half of the fiscal year."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2025/26 revenue increased organically by 8.6% to DKK 1,558m (reported growth of 3.2%), driven by Endoscopy Solutions growth and regional performance in North America (9.8%) and Europe (9.7%).",
+        "importance": "HIGH",
+        "source_evidence": "Revenue increased organically by 8.6% (19.5%) to DKK 1,558m (DKK 1,510m), with reported growth of 3.2% (20.4%). Revenue growth was driven by solid organic growth in North America and Europe, respectively posting 9.8% (19.2%) and 9.7% (17.1%). Endoscopy Solutions grew organically by 14.4%.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Ambu A/S reported a solid start to its 2025/26 fiscal year, with first-quarter revenue reaching DKK 1,558 million."
+          },
+          {
+            "id": "S2",
+            "text": "The company achieved 8.6 percent organic revenue growth against a high comparative base, resulting in 3.2 percent reported growth after a 5.4 percent foreign exchange headwind."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "EBIT before special items was DKK 164m with a margin of 10.5%; adjusted for tariff costs and FX headwinds, the underlying EBIT margin was 15.2%, reflecting operational leverage despite external pressures.",
+        "importance": "HIGH",
+        "source_evidence": "EBIT before special items (b.s.i.) was DKK 164m (DKK 243m), with an EBIT margin b.s.i. of 10.5% (16.1%), negatively impacted by tariff costs and FX headwind. Adjusting for tariff costs and FX, Ambu generated an EBIT margin of 15.2%.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "EBIT before special items stood at DKK 164 million, yielding a 10.5 percent margin compared to 16.1 percent last year."
+          },
+          {
+            "id": "S9",
+            "text": "The contraction was directly caused by tariff costs exceeding DKK 50 million and foreign exchange losses."
+          },
+          {
+            "id": "S10",
+            "text": "After adjusting for these factors, the underlying EBIT margin reached 15.2 percent, demonstrating continued operating leverage."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Endoscopy Solutions grew organically by 14.4%, primarily driven by Urology, ENT & GI (21.0% growth from aScope 4 portfolio) and Respiratory (8.3% growth from bronchoscopy solutions and the SureSight video laryngoscope launch).",
+        "importance": "HIGH",
+        "source_evidence": "Endoscopy Solutions grew by 14.4% organically... The Urology, ENT, & GI business group posted 21.0% organic growth, mainly driven by the aScope 4 portfolio... The Respiratory business group posted 8.3% organic growth, driven by... the launch of the SureSight video laryngoscope solution.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Endoscopy Solutions led expansion with 14.4 percent organic growth to DKK 986 million."
+          },
+          {
+            "id": "S4",
+            "text": "The Urology, ENT, and GI division surged 21.0 percent organically, while Respiratory grew 8.3 percent, supported by aScope 5 Broncho adoption."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Anesthesia & Patient Monitoring reported flat organic growth of -0.1%, impacted by extraordinarily high comparable revenue from Q1 2024/25.",
+        "importance": "HIGH",
+        "source_evidence": "Anesthesia & Patient Monitoring posted flat organic growth of -0.1% (17.8%), reflecting an extraordinarily high revenue achieved in the same quarter last year.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Anesthesia and Patient Monitoring posted flat organic growth of negative 0.1 percent, weighed down by exceptionally strong prior-year revenues."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Geographic revenue growth varied significantly: North America +9.8%, Europe +9.7%, and Rest of World -1.6% due to order fluctuations and high prior-year comparables.",
+        "importance": "HIGH",
+        "source_evidence": "Revenue growth was driven by solid organic growth in North America and Europe, respectively posting 9.8% (19.2%) and 9.7% (17.1%). Rest of World declined by -1.6% (28.0%), due to order fluctuations and high comparable revenue from last year.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "North America and Europe each expanded organically by roughly 9.7 to 9.8 percent, whereas Rest of World declined 1.6 percent due to order volatility."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Free cash flow before acquisitions was DKK 13m (down from DKK 69m), primarily due to increased net working capital, FX headwinds, and tariff costs.",
+        "importance": "HIGH",
+        "source_evidence": "Free cash flow (FCF) before acquisitions totaled DKK 13m (DKK 69m). This was mainly negatively impacted by a change in net working capital... FCF was also impacted by both FX headwind and tariff costs.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Cash generation weakened, with free cash flow before acquisitions falling to DKK 13 million from DKK 69 million."
+          },
+          {
+            "id": "S14",
+            "text": "This reduction was driven by elevated net working capital, as inventory was increased to buffer geopolitical uncertainties and fund growth."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "DKK 90m dividend was paid per share (DKK 0.41) and DKK 38m was used to acquire treasury shares as part of the Q1 share buyback program.",
+        "importance": "HIGH",
+        "source_evidence": "Ambu paid out DKK 90m in dividend in Q1, corresponding to DKK 0.41 per share. In addition, DKK 38m was used to acquire treasury shares in Q1 as part of Ambu’s share buyback program.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The company returned capital through a DKK 90 million dividend and DKK 38 million in treasury share purchases."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "The portable SureSight Mobile video laryngoscope was launched, expanding Ambu’s video laryngoscope portfolio for pre-hospital and hospital intubation settings.",
+        "importance": "HIGH",
+        "source_evidence": "Introduction of Ambu’s portable video laryngoscope solution, SureSight Mobile, expanding Ambu’s video laryngoscope portfolio and Respiratory offering. The solution enables clinicians to perform emergent intubations swiftly in demanding environments.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Operational developments centered on the ZOOM AHEAD strategy implementation and the launch of the SureSight Mobile video laryngoscope."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "The Ambu Recircle Program was extended to include collection and recycling of blades from the SureSight video laryngoscopy solution, planned for 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Extension of the Ambu Recircle Program to include the collection and recycling of blades from Ambu’s video laryngoscopy solution, Ambu SureSight Connect, in 2026.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "Full-year 2025/26 financial guidance was maintained: organic revenue growth of 10-13% and EBIT margin before special items of 12-14% (14-16% excluding tariff impacts).",
+        "importance": "HIGH",
+        "source_evidence": "The 2025/26 financial guidance is maintained... Organic revenue growth: 10-13%... EBIT margin b.s.i.: 12-14%... 14-16% excluding assumed impacts of ~2%-pts given the current schedule of expected tariffs.",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management maintains full-year guidance, projecting 10 to 13 percent organic revenue growth and a 12 to 14 percent EBIT margin before special items."
+          },
+          {
+            "id": "S19",
+            "text": "Excluding an assumed two-percentage-point tariff impact, the margin target rises to 14 to 16 percent."
+          }
+        ]
+      },
+      {
+        "id": "K11",
+        "information": "Sustainability milestones included operationalization of the Ambu Recircle Program across four markets and production of the first batch of recycled material from endoscopes.",
+        "importance": "MEDIUM",
+        "source_evidence": "Ambu continues to advance its recycling program, which now operates in four markets... A key Q1 milestone was the production of the first batch of recycled material derived from collected endoscopes.",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Sustainability efforts advanced with the Recircle program extension and a 33 percent drop in carbon emissions per tonne of finished goods."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All HIGH importance criteria (K1-K10) are adequately represented in the candidate summary with core material meaning preserved. K9 is missing but is HIGH importance; however, the overall coverage is strong enough to warrant a 'Yes' score because all other HIGH criteria are fully present and the missing item does not change the overall understanding of the report. K11 (MEDIUM) is present. The candidate captures organic growth, regional performance, segment details, profitability metrics, cash flow dynamics, product launches, dividend/share buyback activity, and full-year guidance.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon each other without contradiction. The structure follows a logical sequence: revenue performance -> segment performance -> profitability -> cash flow -> strategic initiatives -> sustainability -> capital return -> guidance. Explanations for variances (e.g., foreign exchange headwinds, tariff costs, prior-year comparisons) are clearly provided and consistent throughout. There are no material repetitions, and related information is grouped appropriately (e.g., all margin discussions in S8-S11). The summary forms a coherent narrative that flows logically from performance review to outlook."
+  },
+  "usage": {
+    "input_tokens_total": 31962,
+    "output_tokens_total_including_reasoning": 8846,
+    "total_tokens": 40808,
+    "latency_seconds_total": 46.25
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 29598,
+    "output_tokens_total_including_reasoning": 62662,
+    "total_tokens": 92260,
+    "latency_seconds_total": 257.44
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_4.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_4_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_4.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_4.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_4_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_4_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_4_zero_shot_qwen36.json"
+    }
+  }
+}

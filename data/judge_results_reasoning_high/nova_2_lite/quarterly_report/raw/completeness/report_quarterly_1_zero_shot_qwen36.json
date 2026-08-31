@@ -1,0 +1,187 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:45:48.050815",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_1_zero_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "732129a8f7aaa22f",
+    "sentence_map_hash": "fee736537adf12f6",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "76343cbc8664a831",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_1.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "AB KN Energies reported strong financial results for the first quarter of 2026, with consolidated revenue rising to 29,823 thousand euros from 25,326 thousand euros in the comparable period, representing a 17.8 percent increase.",
+    "S2": "This top-line growth was primarily driven by higher revenues from liquefied natural gas terminal regasification and commercial activities, which advanced to 18,687 thousand euros, alongside expanded services in liquid energy terminal transshipment and global liquefied natural gas project development.",
+    "S3": "Gross profit consequently expanded to 12,907 thousand euros, up 31.8 percent from 9,793 thousand euros, while operating profit grew by 34.5 percent to 9,608 thousand euros.",
+    "S4": "The substantial improvement in bottom-line performance was largely supported by a 55.9 percent reduction in net finance costs, which fell to negative 784 thousand euros from negative 1,777 thousand euros.",
+    "S5": "This favorable shift stemmed from lower interest expenses on borrowings, decreasing to 1,729 thousand euros from 2,160 thousand euros, alongside the recognition of a 458 thousand euro net gain on derivatives, replacing a prior period loss.",
+    "S6": "On the expense side, cost of sales increased to 16,916 thousand euros, principally due to higher environmental taxes and emission allowances reaching 2,225 thousand euros, elevated depreciation charges, and increased repair and maintenance outlays.",
+    "S7": "Furthermore, reported revenue was tempered by a 905 thousand euro reduction in liquefied natural gas security supplement income, reflecting regulatory repayments of excess returns generated during 2022 and 2023.",
+    "S8": "Following an income tax charge of 1,577 thousand euros against 938 thousand euros previously, the Group delivered a net profit of 7,247 thousand euros, marking a 63.7 percent year-over-year increase.",
+    "S9": "Basic earnings per share improved to 0.02 euros.",
+    "S10": "Operational stability was maintained, as management confirmed no impairment indicators for the Klaipėda liquid energy terminal assets.",
+    "S11": "The workforce expanded modestly to an average of 412 employees.",
+    "S12": "Corporate governance arrangements were updated subsequent to the reporting date, with a newly elected board transitioning the company to a single-tier structure in late April 2026.",
+    "S13": "Overall, the quarter demonstrated resilient revenue generation and enhanced financial efficiency, successfully translating higher throughput into significant profit expansion despite elevated compliance and regulatory cost pressures."
+  },
+  "usage": {
+    "input_tokens": 1788,
+    "output_tokens_including_reasoning": 434,
+    "total_tokens": 2222
+  },
+  "latency_seconds": 2.25,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S8\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\"]\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 2,\n  \"label\": \"Neutral/Mixed\",\n  \"missing_or_partial_key_information\": [\"K3\", \"K5\", \"K6\", \"K7\", \"K9\"],\n  \"justification\": \"The candidate summary adequately covers K1 (revenue figures for Group and Company), K2 (LNGT segment revenue growth), K4 (comLNG segment revenue growth), and K8 (change to unitary Board governance). However, it omits core material for K3 (LET segment revenue decrease), K5 (cash flow from operating activities), K6 (cash and cash equivalents), K7 (total borrowings and lease liabilities), and K9 (Group EBITDA increase). These omissions include several HIGH importance items, resulting in a Neutral/Mixed coverage score.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S8"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ]
+      },
+      {
+        "id": "K9",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 2,
+    "label": "Neutral/Mixed",
+    "missing_or_partial_key_information": [
+      "K3",
+      "K5",
+      "K6",
+      "K7",
+      "K9"
+    ],
+    "justification": "The candidate summary adequately covers K1 (revenue figures for Group and Company), K2 (LNGT segment revenue growth), K4 (comLNG segment revenue growth), and K8 (change to unitary Board governance). However, it omits core material for K3 (LET segment revenue decrease), K5 (cash flow from operating activities), K6 (cash and cash equivalents), K7 (total borrowings and lease liabilities), and K9 (Group EBITDA increase). These omissions include several HIGH importance items, resulting in a Neutral/Mixed coverage score."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

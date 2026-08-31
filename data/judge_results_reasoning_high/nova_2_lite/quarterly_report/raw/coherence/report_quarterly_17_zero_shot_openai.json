@@ -1,0 +1,138 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:05:42.599456",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_17_zero_shot_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "c8c3bbc470c2d061",
+    "sentence_map_hash": "c1a80b5f81c84081",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AB Novaturas reported improved profitability in 2025 despite a significant decline in business volumes.",
+    "S2": "The Group served 190.9 thousand travellers, down 20.3% from 239.5 thousand in 2024, while revenue decreased 16.1% to EUR 168.5 million.",
+    "S3": "The reduction reflected an intentional cut in volumes, including lower activity on loss-making routes, and optimisation of the travel programme in an intensely competitive market with excess travel supply.",
+    "S4": "Gross profit declined only 5.3% to EUR 19.65 million, as the gross profit margin improved to 11.66% from 10.33%, an increase of 1.3 percentage points.",
+    "S5": "Selling expenses fell 11.3% to EUR 15.17 million and general and administrative expenses decreased 53.1% to EUR 4.87 million.",
+    "S6": "As a result, the operating loss narrowed substantially to EUR 274 thousand from EUR 6.56 million in 2024.",
+    "S7": "EBITDA was positive at EUR 420 thousand, compared with negative EUR 6.13 million in 2024, while adjusted EBITDA improved from negative EUR 449 thousand to positive EUR 420 thousand.",
+    "S8": "The Group’s net loss was EUR 1.17 million, compared with EUR 7.60 million in 2024, and the loss per share narrowed to EUR 0.15 from EUR 0.97.",
+    "S9": "On a comparable basis excluding the EUR 5.7 million one-off, non-cash goodwill impairment recorded in 2024, the annual net loss decreased by 39%, from EUR 1.92 million.",
+    "S10": "Profitability also improved in the second half: operating profit was EUR 76 thousand compared with a EUR 4.92 million loss in the corresponding period, although adjusted EBITDA declined to EUR 674 thousand from EUR 1.12 million.",
+    "S11": "Flight package tours remained the core business.",
+    "S12": "Annual sales fell 15.0% to EUR 145.1 million, but segment sales profit increased 18.0% to EUR 12.16 million and its margin rose to 8% from 1%.",
+    "S13": "Coach sightseeing tours also improved, while plane sightseeing tour profit fell 84.4% to EUR 135 thousand.",
+    "S14": "Other sales remained loss-making, with the segment loss widening to EUR 2.52 million from EUR 2.24 million.",
+    "S15": "Operational efficiency improved, with aircraft load factor rising 1.5 percentage points to 97.2%.",
+    "S16": "However, increased market-wide supply in autumn pressured prices, and disruptions at Vilnius Airport linked to illegal cross-border unmanned-balloon activity reduced last-minute demand.",
+    "S17": "Early bookings for summer 2026 were 59% higher by December 2025.",
+    "S18": "At year-end, borrowings rose to EUR 12.87 million, equity fell to EUR 6.86 million, and the debt-to-equity ratio increased to 191.42% from 121.16%; the Group also reported breaches of certain financial covenants."
+  },
+  "usage": {
+    "input_tokens": 1277,
+    "output_tokens_including_reasoning": 239,
+    "total_tokens": 1516
+  },
+  "latency_seconds": 1.74,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"description\": \"Sentence S10 states that adjusted EBITDA declined in the second half while also stating operating profit improved. The relationship between these two metrics isn't explained, creating a logical gap. The summary doesn't clarify why improved operating profit coincided with a decline in adjusted EBITDA.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative about improved profitability despite lower volumes. Most relationships between causes and effects are logically presented (e.g., lower loss-making routes leading to improved margins). The structure follows a logical flow from overall performance to segment details and then to financial position. The only notable issue is in S10 where the relationship between improved operating profit and declined adjusted EBITDA isn't explained, creating a small logical gap. There are no self-contradictions, and repetition is minimal. The arithmetic differences between segment and consolidated figures are not contradictions because the summary doesn't present them as exhaustive additive components of the same total.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "description": "Sentence S10 states that adjusted EBITDA declined in the second half while also stating operating profit improved. The relationship between these two metrics isn't explained, creating a logical gap. The summary doesn't clarify why improved operating profit coincided with a decline in adjusted EBITDA."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative about improved profitability despite lower volumes. Most relationships between causes and effects are logically presented (e.g., lower loss-making routes leading to improved margins). The structure follows a logical flow from overall performance to segment details and then to financial position. The only notable issue is in S10 where the relationship between improved operating profit and declined adjusted EBITDA isn't explained, creating a small logical gap. There are no self-contradictions, and repetition is minimal. The arithmetic differences between segment and consolidated figures are not contradictions because the summary doesn't present them as exhaustive additive components of the same total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

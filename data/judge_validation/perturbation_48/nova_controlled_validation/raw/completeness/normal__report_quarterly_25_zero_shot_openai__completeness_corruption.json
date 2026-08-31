@@ -1,0 +1,209 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:56:08.068463",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\normal__report_quarterly_25_zero_shot_openai__completeness_corruption.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "381ddde51a117b00",
+    "sentence_map_hash": "75d899069e93f805",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "b009eaa3953c4f07",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_25.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "VILVI Group reported strong revenue growth but significantly lower operating profitability in the first quarter of 2026.",
+    "S2": "Consolidated revenue increased 22.4% year on year to EUR 86.97 million, supported by higher sales in Lithuania and other countries and the consolidation of Marijampolės pieno konservai UAB from 1 January 2026.",
+    "S3": "Revenue from Lithuania rose 72.9% to EUR 14.63 million, while revenue from other countries increased 46.6% to EUR 29.82 million.",
+    "S4": "European Union revenue was broadly stable at EUR 42.52 million, representing 49% of total sales compared with 59% a year earlier.",
+    "S5": "The sales mix changed substantially.",
+    "S6": "Dry milk product revenue more than doubled to EUR 24.66 million, while fresh milk product revenue increased to EUR 12.75 million.",
+    "S7": "EBITDA fell 50.2% to EUR 3.00 million, and the EBITDA margin decreased to 3.5%.",
+    "S8": "Despite the lower EBITDA, net profit increased 25.7% to EUR 5.09 million.",
+    "S9": "Milk purchases increased during the quarter.",
+    "S10": "The Group completed the acquisition of Marijampolės pieno konservai and began commercial cheese production at its new factory in Latvia.",
+    "S11": "Net financial debt increased to EUR 83.43 million, while total assets rose to EUR 220.31 million."
+  },
+  "usage": {
+    "input_tokens": 1532,
+    "output_tokens_including_reasoning": 473,
+    "total_tokens": 2005
+  },
+  "latency_seconds": 2.16,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S8\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S7\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S10\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S10\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PARTIALLY_PRESENT\",\n      \"candidate_sentence_ids\": [\"S5\", \"S6\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\", \"S4\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\"]\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\"]\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K5\", \"K8\"],\n  \"justification\": \"K1, K2, K3, K4, K6, K7, and K9 are PRESENT with supporting evidence in the candidate summary. K5 is PARTIALLY_PRESENT as the summary indicates a changed sales mix and provides data for dry milk and fresh milk products, but does not present the full segment breakdown (cheese/dairy, dry milk, fresh milk, canned milk) required by the criterion. K8 is MISSING as there is no mention of operating cash flow, financing activities, or investing outflows. The overall coverage is strong with most HIGH importance criteria covered, but the missing K8 and partial K5 reduce the score to 3 (Generally yes).\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S8"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ]
+      },
+      {
+        "id": "K8",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K9",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ]
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K5",
+      "K8"
+    ],
+    "justification": "K1, K2, K3, K4, K6, K7, and K9 are PRESENT with supporting evidence in the candidate summary. K5 is PARTIALLY_PRESENT as the summary indicates a changed sales mix and provides data for dry milk and fresh milk products, but does not present the full segment breakdown (cheese/dairy, dry milk, fresh milk, canned milk) required by the criterion. K8 is MISSING as there is no mention of operating cash flow, financing activities, or investing outflows. The overall coverage is strong with most HIGH importance criteria covered, but the missing K8 and partial K5 reduce the score to 3 (Generally yes)."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

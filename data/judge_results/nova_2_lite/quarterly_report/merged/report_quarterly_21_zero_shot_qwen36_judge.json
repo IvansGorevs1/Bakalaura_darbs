@@ -1,0 +1,928 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_21_zero_shot_qwen36.txt",
+    "report": "report_quarterly_21.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Tallinna Sadam reported a decline in profitability for the six-month period ended 30 June 2026, despite a modest increase in revenue.",
+    "S2": "Total revenue rose by 2.4% to EUR 59.3 million, driven primarily by higher charter fees from the icebreaker Botnica, increased electricity sales, and growth in ferry service revenue.",
+    "S3": "However, operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million.",
+    "S4": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million.",
+    "S5": "Key cost drivers included higher fuel prices, which boosted fuel expenses by 47.6%, and increased electricity costs due to new regulatory fees and higher market prices.",
+    "S6": "Additionally, technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica.",
+    "S7": "Depreciation, amortisation, and impairment charges also rose by 6.0% to EUR 12.9 million, reflecting new assets such as the Paldiski South Harbour quay and capitalised ferry dry-docking projects.",
+    "S8": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million, with margins contracting from 51.5% to 43.5%.",
+    "S9": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes.",
+    "S10": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers.",
+    "S11": "The number of vessel calls dropped by 4.8%.",
+    "S12": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million.",
+    "S13": "Equity remained stable at EUR 367.7 million.",
+    "S14": "The Group invested EUR 3.5 million in capital expenditures, a significant decrease from EUR 12.0 million in the prior year period.",
+    "S15": "Net finance costs decreased by 11.2% due to lower debt levels.",
+    "S16": "The company paid a dividend of EUR 19.2 million in the second quarter, consistent with the previous year.",
+    "S17": "Management noted that global economic instability and geopolitical conflicts pose risks, particularly regarding fuel costs and cargo flows, although the Group remains compliant with all sanctions and financial covenants."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_21.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_21.json",
+    "key_information_hash": "ff5d773670fd25a9",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 17,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 17
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 19,
+      "incorrect": 0,
+      "total": 19
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallinna Sadam reported a decline in profitability for the six-month period ended 30 June 2026, despite a modest increase in revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states: 'The Group of AS Tallinna Sadam generated higher revenue in the first 6 months of 2026. However, the increase in operating expenses... had a negative impact on the Group’s financial performance.'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Tallinna Sadam reported a decline in profitability for the six-month period ended 30 June 2026, despite a modest increase in revenue."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue rose by 2.4% to EUR 59.3 million, driven primarily by higher charter fees from the icebreaker Botnica, increased electricity sales, and growth in ferry service revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators table shows revenue for 6 months 2026: EUR 59,262k (59.262 million) vs 57,862k (57.862 million) in 2025, a 2.4% increase. Management Report: 'Revenue for the first 6 months of 2026 increased by EUR 1.4 million, i.e. 2.4%, to EUR 59.3 million. The increase in revenue was mainly driven by a higher number of charter days of the multifunctional icebreaker Botnica and higher revenue from the sale of electricity and ferry services.'",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue rose by 2.4% to EUR 59.3 million, driven primarily by higher charter fees from the icebreaker Botnica, increased electricity sales, and growth in ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators table: Operating profit 6 months 2026: EUR 13,578k (13.578 million) vs 18,286k (18.286 million) in 2025 (-25.7%). Profit for the period 2026: EUR 5,999k (5.999 million) vs 10,286k (10.286 million) in 2025 (-41.7%).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "However, operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 12: Operating expenses increased by EUR 3.9 million (+24.0%) to EUR 20,184k (20.184 million) in the first 6 months of 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Key cost drivers included higher fuel prices, which boosted fuel expenses by 47.6%, and increased electricity costs due to new regulatory fees and higher market prices.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 12: 'Fuel costs recorded the largest increase, rising by EUR 1.4 million (+47.6%) due to higher diesel prices... Electricity costs increased by EUR 0.7 million (+28.8%). The increase was driven by the new security of supply fee, higher electricity and network service prices...'",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Key cost drivers included higher fuel prices, which boosted fuel expenses by 47.6%, and increased electricity costs due to new regulatory fees and higher market prices."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 12: 'Expenses related to technical maintenance and repair of non-current assets increased by EUR 1.2 million (+80.0%), as in the previous year the subsidiary OÜ TS Shipping received an insurance indemnity of EUR 0.9 million for repair works carried out following the technical incident involving the icebreaker Botnica in the summer of 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Additionally, technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Depreciation, amortisation, and impairment charges also rose by 6.0% to EUR 12.9 million, reflecting new assets such as the Paldiski South Harbour quay and capitalised ferry dry-docking projects.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators table: Depreciation, amortisation and impairment for 6 months 2026: EUR 12,867k (12.867 million) vs 12,140k (12.140 million) in 2025 (+6.0%). Management Report: 'The increase was mainly attributable to the commissioning of the new quay at Paldiski South Harbour and the capitalisation of several ferry dry-docking projects.'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Depreciation, amortisation, and impairment charges also rose by 6.0% to EUR 12.9 million, reflecting new assets such as the Paldiski South Harbour quay and capitalised ferry dry-docking projects."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million, with margins contracting from 51.5% to 43.5%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators table: Adjusted EBITDA for 6 months 2026: EUR 25,769k (25.769 million) vs 29,805k (29.805 million) in 2025 (-13.5%). Adjusted EBITDA margin decreased from 51.5% to 43.5%.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million, with margins contracting from 51.5% to 43.5%."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating Volumes section: 'In the first 6 months of 2026, the Group’s harbours handled a total of 6.5 million tonnes of cargo, a decrease of 0.3 million tonnes (−5.0%). The decline was mainly attributable to a decrease in liquid bulk volumes, which fell by 0.3 million tonnes (−33.8%).'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating Volumes section: 'In the first 6 months of 2026, the number of passengers decreased by 73 thousand to 3.6 million (−2.0%). By contrast, the number of cruise passengers increased by 32 thousand (+47.8%) as the number of cruise ship calls increased by 12 and the visiting ships had a higher combined passenger capacity.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The number of vessel calls dropped by 4.8%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators table: Number of vessel calls for 6 months 2026: 3,376 vs 3,546 in 2025 (−4.8%).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The number of vessel calls dropped by 4.8%."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Interim Condensed Consolidated Statement of Financial Position: Total assets at 30 June 2026: EUR 615,034k (615.034 million) vs 622,079k (622.079 million) at 31 December 2025 (−1.1%). Net debt at period-end: EUR 145,764k (145.764 million) vs 143,664k (143.664 million) (±1.5%).",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Equity remained stable at EUR 367.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Interim Condensed Consolidated Statement of Changes in Equity: Total equity at 30 June 2026: EUR 367,677k (367.677 million) vs 368,700k (368.700 million) at 31 December 2025 (−0.3%). The minor decrease is framed as 'stable' in context.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Equity remained stable at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The Group invested EUR 3.5 million in capital expenditures, a significant decrease from EUR 12.0 million in the prior year period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Investments section: 'In the first 6 months of 2026, the Group invested EUR 3.5 million, which is EUR 8.5 million less than in the same period last year.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The Group invested EUR 3.5 million in capital expenditures, a significant decrease from EUR 12.0 million in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Net finance costs decreased by 11.2% due to lower debt levels.",
+        "label": "SUPPORTED",
+        "source_evidence": "Interim Condensed Consolidated Statement of Comprehensive Income: Net finance costs decreased by EUR 0.3 million (−11.2%) in the first 6 months of the year due to lower interest expense on loans and borrowings resulting from the lower level of debt.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Net finance costs decreased by 11.2% due to lower debt levels."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company paid a dividend of EUR 19.2 million in the second quarter, consistent with the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Dividends section: 'On 28 April 2026, the annual general meeting of shareholders approved the proposal of the management board to distribute a dividend of EUR 0.073 per share and EUR 19.2 million in total... In 2025, we also paid a dividend of EUR 0.073 per share, i.e. EUR 19.2 million in total.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company paid a dividend of EUR 19.2 million in the second quarter, consistent with the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Management noted that global economic instability and geopolitical conflicts pose risks, particularly regarding fuel costs and cargo flows, although the Group remains compliant with all sanctions and financial covenants.",
+        "label": "SUPPORTED",
+        "source_evidence": "Main Economic Risks section: Discusses instability from US-Iran conflict, Russia-Ukraine war, and sanctions compliance. Management Report confirms compliance with EU sanctions and covenant adherence.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Management noted that global economic instability and geopolitical conflicts pose risks, particularly regarding fuel costs and cargo flows, although the Group remains compliant with all sanctions and financial covenants."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue rose by 2.4% to EUR 59.3 million",
+        "candidate_value": "59.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "59,262 thousand EUR",
+        "source_evidence": "Key Performance Indicators table: Revenue for 6 months 2026: EUR 59,262k (59.262 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue rose by 2.4% to EUR 59.3 million, driven primarily by higher charter fees from the icebreaker Botnica, increased electricity sales, and growth in ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit fell sharply by 25.7% to EUR 13.6 million",
+        "candidate_value": "13.6 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13,578 thousand EUR",
+        "source_evidence": "Key Performance Indicators table: Operating profit for 6 months 2026: EUR 13,578k (13.578 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "However, operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Profit for the period decreased by 41.7% to EUR 6.0 million",
+        "candidate_value": "6.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,999 thousand EUR",
+        "source_evidence": "Key Performance Indicators table: Profit for the period for 6 months 2026: EUR 5,999k (5.999 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "However, operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating expenses increased by 24.0% to EUR 20.2 million",
+        "candidate_value": "20.2 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20,184 thousand EUR",
+        "source_evidence": "Note 12: Operating expenses for 6 months 2026: EUR 20,184k (20.184 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Fuel costs increased by 47.6%",
+        "candidate_value": "47.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "47.6%",
+        "source_evidence": "Note 12: 'Fuel costs recorded the largest increase, rising by EUR 1.4 million (+47.6%) due to higher diesel prices.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Key cost drivers included higher fuel prices, which boosted fuel expenses by 47.6%, and increased electricity costs due to new regulatory fees and higher market prices."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Technical maintenance and repair expenses surged by 80.0%",
+        "candidate_value": "80.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "80.0%",
+        "source_evidence": "Note 12: 'Expenses related to technical maintenance and repair of non-current assets increased by EUR 1.2 million (+80.0%)...'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Additionally, technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Depreciation, amortisation, and impairment charges rose by 6.0% to EUR 12.9 million",
+        "candidate_value": "12.9 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12,867 thousand EUR",
+        "source_evidence": "Key Performance Indicators table: Depreciation, amortisation and impairment for 6 months 2026: EUR 12,867k (12.867 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Depreciation, amortisation, and impairment charges also rose by 6.0% to EUR 12.9 million, reflecting new assets such as the Paldiski South Harbour quay and capitalised ferry dry-docking projects."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million",
+        "candidate_value": "25.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25,769 thousand EUR",
+        "source_evidence": "Key Performance Indicators table: Adjusted EBITDA for 6 months 2026: EUR 25,769k (25.769 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million, with margins contracting from 51.5% to 43.5%."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Cargo throughput decreased by 5.0% to 6.5 million tonnes",
+        "candidate_value": "6.5 million tonnes",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6,481 thousand tonnes",
+        "source_evidence": "Operating Volumes section: 'In the first 6 months of 2026, the Group’s harbours handled a total of 6.5 million tonnes of cargo... a decrease of 0.3 million tonnes (−5.0%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Liquid bulk volumes fell by 33.8%",
+        "candidate_value": "33.8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "33.8%",
+        "source_evidence": "Operating Volumes section: 'The decline was mainly attributable to a decrease in liquid bulk volumes, which fell by 0.3 million tonnes (−33.8%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Passenger numbers fell by 2.0% to 3.6 million",
+        "candidate_value": "3.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,586 thousand",
+        "source_evidence": "Operating Volumes section: 'In the first 6 months of 2026, the number of passengers decreased by 73 thousand to 3.6 million (−2.0%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Cruise passengers increased by 47.8%",
+        "candidate_value": "47.8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "47.8%",
+        "source_evidence": "Operating Volumes section: 'By contrast, the number of cruise passengers increased by 32 thousand (+47.8%)...'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Number of vessel calls dropped by 4.8%",
+        "candidate_value": "4.8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.8%",
+        "source_evidence": "Key Performance Indicators table: Number of vessel calls for 6 months 2026: 3,376 vs 3,546 in 2025 (−4.8%).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The number of vessel calls dropped by 4.8%."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets decreased by 1.1% to EUR 615.0 million",
+        "candidate_value": "615.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "615,034 thousand EUR",
+        "source_evidence": "Interim Condensed Consolidated Statement of Financial Position: Total assets at 30 June 2026: EUR 615,034k (615.034 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net debt increased by 1.5% to EUR 145.8 million",
+        "candidate_value": "145.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "145,764 thousand EUR",
+        "source_evidence": "Interim Condensed Consolidated Statement of Financial Position: Net debt at period-end: EUR 145,764k (145.764 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Equity remained stable at EUR 367.7 million",
+        "candidate_value": "367.7 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "367,677 thousand EUR",
+        "source_evidence": "Interim Condensed Consolidated Statement of Changes in Equity: Total equity at 30 June 2026: EUR 367,677k (367.677 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Equity remained stable at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Group invested EUR 3.5 million in capital expenditures",
+        "candidate_value": "3.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,500 thousand EUR",
+        "source_evidence": "Investments section: 'In the first 6 months of 2026, the Group invested EUR 3.5 million...'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The Group invested EUR 3.5 million in capital expenditures, a significant decrease from EUR 12.0 million in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Net finance costs decreased by 11.2%",
+        "candidate_value": "11.2%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11.2%",
+        "source_evidence": "Interim Condensed Consolidated Statement of Comprehensive Income: 'Net finance costs decreased by EUR 0.3 million (−11.2%)...'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Net finance costs decreased by 11.2% due to lower debt levels."
+          }
+        ]
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Company paid a dividend of EUR 19.2 million",
+        "candidate_value": "19.2 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,199 thousand EUR",
+        "source_evidence": "Dividends section: 'The Group paid a dividend of EUR 19.2 million in total... In 2025, we also paid a dividend of EUR 19.2 million in total.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company paid a dividend of EUR 19.2 million in the second quarter, consistent with the previous year."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Revenue increased by EUR 1.4 million (2.4%) to EUR 59.3 million in H1 2026, with segment breakdowns of Passenger harbours (+2.9%), Cargo harbours (–2.5%), Ferry (+1.7%), and Other (+19.0%). Key drivers included higher charter fees from the icebreaker Botnica (EUR 0.9 million, +18.2%), increased electricity sales (EUR 0.6 million, +25.0%), and growth in ferry services revenue (EUR 0.3 million, +1.9%).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report pages 4-5, 6; KPI Table page 4; Segment Reporting tables pages 8-9",
+        "origin_draft_ids": [
+          "D1",
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue rose by 2.4% to EUR 59.3 million, driven primarily by higher charter fees from the icebreaker Botnica, increased electricity sales, and growth in ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Operational volumes declined significantly: cargo handling fell 5.0% to 6.5 million tonnes (mainly due to liquid bulk down 33.8%), passengers decreased 2.0% to 3.6 million (with the Tallinn–Helsinki route down 2.6%), and vessel calls dropped 4.8%.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Volumes section pages 4-6; KPI Table page 4",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational volumes showed mixed trends; cargo throughput decreased by 5.0% to 6.5 million tonnes, primarily due to a sharp 33.8% drop in liquid bulk volumes."
+          },
+          {
+            "id": "S10",
+            "text": "Passenger numbers fell by 2.0% to 3.6 million, with declines on the Tallinn-Helsinki and Tallinn-Stockholm routes offset by a 47.8% increase in cruise passengers."
+          },
+          {
+            "id": "S11",
+            "text": "The number of vessel calls dropped by 4.8%."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Operating expenses rose EUR 3.9 million (24.0%) in H1 2026, primarily from fuel costs up EUR 1.4 million (47.6%) due to higher prices and severe ice conditions, electricity costs up EUR 0.7 million (28.8%), and technical maintenance/repair expenses up EUR 1.2 million (80.0%).",
+        "importance": "HIGH",
+        "source_evidence": "Operating Expenses section page 7",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million."
+          },
+          {
+            "id": "S5",
+            "text": "Key cost drivers included higher fuel prices, which boosted fuel expenses by 47.6%, and increased electricity costs due to new regulatory fees and higher market prices."
+          },
+          {
+            "id": "S6",
+            "text": "Additionally, technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Operating profit decreased by EUR 4.7 million (25.7%) to EUR 13.6 million and profit for the period declined by EUR 4.3 million (41.7%) to EUR 6.0 million. Adjusted EBITDA fell EUR 4.0 million (13.5%) to EUR 25.8 million, mainly due to higher operating expenses, lower cargo/passenger volumes, and the absence of prior-year one-off gains (land sale profit and insurance indemnity).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report pages 4-5, 7-8; KPI Table page 4",
+        "origin_draft_ids": [
+          "D1",
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4",
+          "S6",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "However, operating profit fell sharply by 25.7% to EUR 13.6 million, and profit for the period decreased by 41.7% to EUR 6.0 million."
+          },
+          {
+            "id": "S4",
+            "text": "The significant drop in earnings was largely attributable to rising operating expenses, which increased by 24.0% to EUR 20.2 million."
+          },
+          {
+            "id": "S6",
+            "text": "Additionally, technical maintenance and repair expenses surged by 80.0%, partly because the Group did not receive an insurance indemnity in 2026 that had been recorded in the previous year for repairs to the icebreaker Botnica."
+          },
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA declined by 13.5% to EUR 25.8 million, with margins contracting from 51.5% to 43.5%."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Investments totalled EUR 3.5 million in H1 2026 (versus EUR 12.0 million in H1 2025), mainly for ferry engine replacement, upgrades to the quay at Paldiski South Harbour, and IT infrastructure. Q2 investments were EUR 2.3 million (versus EUR 8.4 million in Q2 2025).",
+        "importance": "MEDIUM",
+        "source_evidence": "Investments section page 17",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The Group invested EUR 3.5 million in capital expenditures, a significant decrease from EUR 12.0 million in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "As of 30 June 2026, total assets were EUR 615.0 million (down from EUR 622.1 million), loans and borrowings were EUR 173.4 million (stable), total liabilities were EUR 247.4 million (up from EUR 241.2 million), equity was EUR 367.7 million (down from EUR 380.9 million), and cash and cash equivalents were EUR 27.6 million (down from EUR 32.0 million).",
+        "importance": "HIGH",
+        "source_evidence": "Interim Condensed Consolidated Statement of Financial Position page 18",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "On the balance sheet, total assets decreased slightly by 1.1% to EUR 615.0 million, while net debt increased by 1.5% to EUR 145.8 million."
+          },
+          {
+            "id": "S13",
+            "text": "Equity remained stable at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Significant Q2 2026 events: (a) Tallinn City Council adopted detailed plans for Terminal A and D areas; (b) Icebreaker Botnica completed a 20-day North Sea project; (c) A EUR 32 million unsecured loan agreement was signed with OP Corporate Bank; (d) Up to 485 additional Regula ferry trips were ordered for summer 2026; (e) A EUR 19.2 million dividend was paid (85% of 2025 profit).",
+        "importance": "HIGH",
+        "source_evidence": "Significant Events section pages 15-17; Dividends section page 14",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "At 30 June 2026, market capitalisation was EUR 335.06 million (versus EUR 340.85 million at 31 December 2025). The share price closed at EUR 1.274 (versus EUR 1.296 at the start of 2026), with 22,559 shareholders (67.0% held by the Republic of Estonia).",
+        "importance": "MEDIUM",
+        "source_evidence": "Share and Shareholders section pages 12-14",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (revenue increase and drivers), K2 (operational volume declines), K3 (operating expense increases), K4 (profit declines and adjusted EBITDA), K5 (investment amounts), and K6 (balance sheet figures). However, K7 (significant Q2 2026 events) and K8 (market capitalisation and share price data) are entirely missing. While the summary captures most high-priority material information, the absence of two high-importance items (K7 and K8) prevents it from achieving a 'Yes' rating. The overall coverage is substantial but not complete, justifying a 'Generally yes' (score 3) assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. It presents a logical narrative: revenue increased modestly (S2), but profitability declined sharply (S3) due to rising operating expenses (S4-S6). Cost drivers are clearly explained (fuel, electricity, maintenance), and operational trends are detailed with mixed volume performance (S9-S11). Balance sheet and cash flow items (S12-S16) are presented without contradiction, and risk factors are appropriately noted (S17). There are no self-contradictions, logical gaps, organizational flaws, or unnecessary repetition. All statements build a consistent story of revenue growth being offset by cost inflation."
+  },
+  "usage": {
+    "input_tokens_total": 26768,
+    "output_tokens_total_including_reasoning": 6916,
+    "total_tokens": 33684,
+    "latency_seconds_total": 36.07
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 47201,
+    "output_tokens_total_including_reasoning": 68791,
+    "total_tokens": 115992,
+    "latency_seconds_total": 211.5
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_21.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_21_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_21.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_21.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_21_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_21_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_21_zero_shot_qwen36.json"
+    }
+  }
+}

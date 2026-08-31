@@ -1,0 +1,705 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\consistency_crossjudge_72\\answers\\reasoning_high__report_quarterly_21_few_shot_gemini.txt",
+    "report": "report_quarterly_21.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "xAI Grok 4.3",
+    "model_id": "xai.grok-4.3",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "none",
+      "coherence": "none",
+      "key_information_extract": "reused_from_nova_run1",
+      "key_information_verify": "reused_from_nova_run1"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first six months of 2026, AS Tallinna Sadam reported a slight increase in revenue alongside a notable decline in profitability compared to the same period of the previous year.",
+    "S2": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, supported primarily by a higher number of charter days for the multifunctional icebreaker Botnica, increased electricity sales, and higher ferry service revenue.",
+    "S3": "In contrast, operating profit fell by EUR 4.7 million, or 25.7%, to EUR 13.6 million.",
+    "S4": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million.",
+    "S5": "The operating profit margin declined from 31.6% to 22.9%.",
+    "S6": "The contraction in profitability was largely driven by higher operating expenses, which rose by EUR 3.9 million, or 24.0%.",
+    "S7": "Significant increases were recorded in fuel costs due to higher diesel prices and severe ice conditions, technical maintenance and repair expenses, and electricity costs.",
+    "S8": "Furthermore, financial results for the comparative period in 2025 had been positively affected by a one-off profit from the disposal of land for the Rail Baltica project and an insurance indemnity.",
+    "S9": "Operating volumes also saw overall declines, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes, primarily due to lower liquid bulk volumes.",
+    "S10": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.",
+    "S11": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial decrease of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs.",
+    "S12": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million.",
+    "S13": "Net debt ended the period at EUR 145.8 million.",
+    "S14": "In May 2026, the company paid out dividends totaling EUR 19.2 million, corresponding to EUR 0.073 per share.",
+    "S15": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_21.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_21.json",
+    "key_information_hash": "ff5d773670fd25a9",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 6,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 6
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 2,
+      "missing": 1,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "During the first six months of 2026, AS Tallinna Sadam reported a slight increase in revenue alongside a notable decline in profitability compared to the same period of the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue increased while operating profit, adjusted EBITDA and profit for the period all declined; the comparative period also benefited from one-off items.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first six months of 2026, AS Tallinna Sadam reported a slight increase in revenue alongside a notable decline in profitability compared to the same period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The contraction in profitability was largely driven by higher operating expenses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating expenses rose EUR 3.9 million (+24.0%) due to higher fuel, maintenance and electricity costs.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The contraction in profitability was largely driven by higher operating expenses, which rose by EUR 3.9 million, or 24.0%."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Significant increases were recorded in fuel costs due to higher diesel prices and severe ice conditions, technical maintenance and repair expenses, and electricity costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Fuel costs +47.6%, technical maintenance and repair +80.0%, electricity costs +28.8%.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Significant increases were recorded in fuel costs due to higher diesel prices and severe ice conditions, technical maintenance and repair expenses, and electricity costs."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Financial results for the comparative period in 2025 had been positively affected by a one-off profit from the disposal of land for the Rail Baltica project and an insurance indemnity.",
+        "label": "SUPPORTED",
+        "source_evidence": "One-off profit of EUR 0.9 million from land disposal and EUR 0.9 million insurance indemnity received in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Furthermore, financial results for the comparative period in 2025 had been positively affected by a one-off profit from the disposal of land for the Rail Baltica project and an insurance indemnity."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Passenger numbers -2.0% to 3.586 million; vessel calls -4.8% to 3,376; cruise passengers +47.8%.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings.",
+        "label": "SUPPORTED",
+        "source_evidence": "Detailed plans adopted 2 April 2026; EUR 32 million loan agreement signed; claims of EUR 4,724,147 filed after Supreme Court decision of 2 February 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million.",
+        "candidate_value": "EUR 1.4 million (+2.4%) to EUR 59.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,399 thousand (+2.4%) to EUR 59,262 thousand",
+        "source_evidence": "Revenue table: 59,262 vs 57,862",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, supported primarily by a higher number of charter days for the multifunctional icebreaker Botnica, increased electricity sales, and higher ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating profit fell by EUR 4.7 million, or 25.7%, to EUR 13.6 million.",
+        "candidate_value": "EUR 4.7 million (-25.7%) to EUR 13.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,708 thousand (-25.7%) to EUR 13,578 thousand",
+        "source_evidence": "Key performance indicators table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, operating profit fell by EUR 4.7 million, or 25.7%, to EUR 13.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million.",
+        "candidate_value": "EUR 4.0 million (-13.5%) to EUR 25.8 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,036 thousand (-13.5%) to EUR 25,769 thousand",
+        "source_evidence": "Key performance indicators table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million.",
+        "candidate_value": "EUR 4.3 million (-41.7%) to EUR 6.0 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,287 thousand (-41.7%) to EUR 5,999 thousand",
+        "source_evidence": "Key performance indicators table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The operating profit margin declined from 31.6% to 22.9%.",
+        "candidate_value": "from 31.6% to 22.9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "from 31.6% to 22.9%",
+        "source_evidence": "Key performance indicators table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The operating profit margin declined from 31.6% to 22.9%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Higher operating expenses, which rose by EUR 3.9 million, or 24.0%.",
+        "candidate_value": "EUR 3.9 million (+24.0%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 3,907 thousand (+24.0%)",
+        "source_evidence": "Operating expenses table: 20,184 vs 16,277",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The contraction in profitability was largely driven by higher operating expenses, which rose by EUR 3.9 million, or 24.0%."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes.",
+        "candidate_value": "-5.0% to 6.5 million tonnes",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-5.0% to 6,481 thousand tonnes",
+        "source_evidence": "Operating volumes and KPI table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating volumes also saw overall declines, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes, primarily due to lower liquid bulk volumes."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial decrease of EUR 8.5 million compared to the previous year.",
+        "candidate_value": "EUR 3.5 million (-EUR 8.5 million)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 3,529 thousand (-EUR 8,491 thousand)",
+        "source_evidence": "Key performance indicators table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial decrease of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%.",
+        "candidate_value": "EUR 615.0 million (-1.1%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 615,034 thousand (-1.1%)",
+        "source_evidence": "KPI table and statement of financial position",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Equity was recorded at EUR 367.7 million.",
+        "candidate_value": "EUR 367.7 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 367,677 thousand",
+        "source_evidence": "KPI table and statement of financial position",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt ended the period at EUR 145.8 million.",
+        "candidate_value": "EUR 145.8 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 145,764 thousand",
+        "source_evidence": "KPI table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net debt ended the period at EUR 145.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "In May 2026, the company paid out dividends totaling EUR 19.2 million, corresponding to EUR 0.073 per share.",
+        "candidate_value": "EUR 19.2 million (EUR 0.073 per share)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 19,199 thousand (EUR 0.073 per share)",
+        "source_evidence": "Dividends section and equity note",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In May 2026, the company paid out dividends totaling EUR 19.2 million, corresponding to EUR 0.073 per share."
+          }
+        ]
+      },
+      {
+        "claim": "total number of passengers fell by 2.0% to 3.6 million",
+        "candidate_value": "2.0% / 3.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "–2.0% / 3,586 ('000)",
+        "source_evidence": "KEY PERFORMANCE INDICATORS table and OPERATING VOLUMES section: Number of passengers ‘000 3,586 (–2.0%)",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth."
+          }
+        ]
+      },
+      {
+        "claim": "vessel calls decreased by 4.8% to 3,376",
+        "candidate_value": "4.8% / 3,376",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "–4.8% / 3,376",
+        "source_evidence": "KEY PERFORMANCE INDICATORS table: Number of vessel calls pcs 3,376 (–4.8%)",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth."
+          }
+        ]
+      },
+      {
+        "claim": "new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank",
+        "candidate_value": "EUR 32 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "up to EUR 32 million",
+        "source_evidence": "SIGNIFICANT EVENTS: AS Tallinna Sadam entered into an unsecured loan agreement with the Estonian branch of OP Corporate Bank plc for an amount of up to EUR 32 million",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "id": "N15",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+          }
+        ]
+      },
+      {
+        "claim": "filing of civil damage claims totaling EUR 4.7 million against former management board members",
+        "candidate_value": "EUR 4.7 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,724,147",
+        "source_evidence": "INVESTIGATIONS CONCERNING THE GROUP: filed claims ... for compensation of EUR 4,724,147",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "id": "N16",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Revenue increased by EUR 1.4 million (2.4%) to EUR 59.3 million in H1 2026, with segment breakdowns of Passenger harbours (+2.9%), Cargo harbours (–2.5%), Ferry (+1.7%), and Other (+19.0%). Key drivers included higher charter fees from the icebreaker Botnica (EUR 0.9 million, +18.2%), increased electricity sales (EUR 0.6 million, +25.0%), and growth in ferry services revenue (EUR 0.3 million, +1.9%).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report pages 4-5, 6; KPI Table page 4; Segment Reporting tables pages 8-9",
+        "origin_draft_ids": [
+          "D1",
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, supported primarily by a higher number of charter days for the multifunctional icebreaker Botnica, increased electricity sales, and higher ferry service revenue."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Operational volumes declined significantly: cargo handling fell 5.0% to 6.5 million tonnes (mainly due to liquid bulk down 33.8%), passengers decreased 2.0% to 3.6 million (with the Tallinn–Helsinki route down 2.6%), and vessel calls dropped 4.8%.",
+        "importance": "HIGH",
+        "source_evidence": "Operating Volumes section pages 4-6; KPI Table page 4",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating volumes also saw overall declines, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes, primarily due to lower liquid bulk volumes."
+          },
+          {
+            "id": "S10",
+            "text": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Operating expenses rose EUR 3.9 million (24.0%) in H1 2026, primarily from fuel costs up EUR 1.4 million (47.6%) due to higher prices and severe ice conditions, electricity costs up EUR 0.7 million (28.8%), and technical maintenance/repair expenses up EUR 1.2 million (80.0%).",
+        "importance": "HIGH",
+        "source_evidence": "Operating Expenses section page 7",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The contraction in profitability was largely driven by higher operating expenses, which rose by EUR 3.9 million, or 24.0%."
+          },
+          {
+            "id": "S7",
+            "text": "Significant increases were recorded in fuel costs due to higher diesel prices and severe ice conditions, technical maintenance and repair expenses, and electricity costs."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Operating profit decreased by EUR 4.7 million (25.7%) to EUR 13.6 million and profit for the period declined by EUR 4.3 million (41.7%) to EUR 6.0 million. Adjusted EBITDA fell EUR 4.0 million (13.5%) to EUR 25.8 million, mainly due to higher operating expenses, lower cargo/passenger volumes, and the absence of prior-year one-off gains (land sale profit and insurance indemnity).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report pages 4-5, 7-8; KPI Table page 4",
+        "origin_draft_ids": [
+          "D1",
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, operating profit fell by EUR 4.7 million, or 25.7%, to EUR 13.6 million."
+          },
+          {
+            "id": "S4",
+            "text": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million."
+          },
+          {
+            "id": "S8",
+            "text": "Furthermore, financial results for the comparative period in 2025 had been positively affected by a one-off profit from the disposal of land for the Rail Baltica project and an insurance indemnity."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Investments totalled EUR 3.5 million in H1 2026 (versus EUR 12.0 million in H1 2025), mainly for ferry engine replacement, upgrades to the quay at Paldiski South Harbour, and IT infrastructure. Q2 investments were EUR 2.3 million (versus EUR 8.4 million in Q2 2025).",
+        "importance": "MEDIUM",
+        "source_evidence": "Investments section page 17",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial decrease of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "As of 30 June 2026, total assets were EUR 615.0 million (down from EUR 622.1 million), loans and borrowings were EUR 173.4 million (stable), total liabilities were EUR 247.4 million (up from EUR 241.2 million), equity was EUR 367.7 million (down from EUR 380.9 million), and cash and cash equivalents were EUR 27.6 million (down from EUR 32.0 million).",
+        "importance": "HIGH",
+        "source_evidence": "Interim Condensed Consolidated Statement of Financial Position page 18",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Significant Q2 2026 events: (a) Tallinn City Council adopted detailed plans for Terminal A and D areas; (b) Icebreaker Botnica completed a 20-day North Sea project; (c) A EUR 32 million unsecured loan agreement was signed with OP Corporate Bank; (d) Up to 485 additional Regula ferry trips were ordered for summer 2026; (e) A EUR 19.2 million dividend was paid (85% of 2025 profit).",
+        "importance": "HIGH",
+        "source_evidence": "Significant Events section pages 15-17; Dividends section page 14",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In May 2026, the company paid out dividends totaling EUR 19.2 million, corresponding to EUR 0.073 per share."
+          },
+          {
+            "id": "S15",
+            "text": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "At 30 June 2026, market capitalisation was EUR 335.06 million (versus EUR 340.85 million at 31 December 2025). The share price closed at EUR 1.274 (versus EUR 1.296 at the start of 2026), with 22,559 shareholders (67.0% held by the Republic of Estonia).",
+        "importance": "MEDIUM",
+        "source_evidence": "Share and Shareholders section pages 12-14",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1–K5 are fully covered. K6 is only partially covered (assets and equity shown, but loans/borrowings, liabilities and cash omitted). K7 is only partially covered (dividend and two events shown, but Terminal A/D plans, Botnica project, loan agreement and ferry trips omitted). K8 is entirely missing.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. Each sentence builds logically on the previous ones: revenue growth is stated first, followed by the contrasting decline in profitability and its drivers, then volume changes, investment and balance-sheet figures, and finally corporate developments. No sentence contradicts another, and the narrative flows without repetition or structural gaps."
+  },
+  "usage": {
+    "input_tokens_total": 47534,
+    "output_tokens_total_including_reasoning": 4640,
+    "total_tokens": 52174,
+    "latency_seconds_total": 30.13
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 47201,
+    "output_tokens_total_including_reasoning": 68791,
+    "total_tokens": 115992,
+    "latency_seconds_total": 211.5
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_21.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_21_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_21.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_21.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\consistency_crossjudge_72\\grok43_run1\\grok_4_3\\quarterly_report\\raw\\coherence\\reasoning_high__report_quarterly_21_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\consistency_crossjudge_72\\grok43_run1\\grok_4_3\\quarterly_report\\raw\\factual_numerical\\reasoning_high__report_quarterly_21_few_shot_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\consistency_crossjudge_72\\grok43_run1\\grok_4_3\\quarterly_report\\raw\\completeness\\reasoning_high__report_quarterly_21_few_shot_gemini.json"
+    }
+  },
+  "validation": {
+    "purpose": "cross_judge_agreement",
+    "selection_id": "V063",
+    "cross_judge": "xAI Grok 4.3",
+    "cross_judge_run_number": 1,
+    "shared_criteria_regenerated": false,
+    "shared_criteria_source": "Nova 2 Lite original verified criteria"
+  }
+}

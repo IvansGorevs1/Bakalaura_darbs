@@ -1,0 +1,170 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:56:05.949056",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_quarterly_22_chain_of_event_qwen36__coherence_corruption.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "c510dba3177ca155",
+    "sentence_map_hash": "947fa057780ca2f0",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Telia Lietuva, AB reported strong first-half 2026 financial results, with consolidated revenue reaching EUR 259.1 million, up 7.2 percent from EUR 241.7 million in the prior year.",
+    "S2": "Telia Lietuva, AB reported strong first-half 2026 financial results.",
+    "S3": "Adjusted EBITDA increased 10.2 percent to EUR 106.9 million, expanding the adjusted EBITDA margin to 41.3 percent from 40.1 percent, the adjusted EBITDA and adjusted margin, increased and expanding.",
+    "S4": "Operating profit before income tax rose 16.6 percent to EUR 61.3 million, while net profit totaled EUR 51.3 million, a 14.7 percent increase.",
+    "S5": "Operating profit before income tax rose 16.6 percent to EUR 61.3 million.",
+    "S6": "The company generated EUR 103.1 million in operating cash flow, a 15.0 percent improvement year-on-year, yielding free cash flow of EUR 64.1 million, up 12.5 percent, which yielded it, the free cash flow.",
+    "S7": "Capital expenditures surged 57.9 percent to EUR 37.5 million, heavily weighted toward EUR 9.7 million in 5G spectrum licenses.",
+    "S8": "Despite higher capex, the balance sheet shifted to a net cash position of negative EUR 4.3 million, contrasting with a EUR 27.5 million net debt balance at the end of June 2025.",
+    "S9": "Revenue growth was broad-based, driven by an 8.3 percent rise in mobile service revenue, a 5.3 percent increase in fixed services, and a 9.6 percent jump in equipment sales, broad-based, driven by these, the rise and increase and jump.",
+    "S10": "Lithuanian mobile data traffic continues to grow at approximately 25 percent annually, creating immediate capacity requirements that justified the company acquiring two 1,500 MHz frequency blocks for nearly EUR 8 million and extending 2,100 MHz rights for EUR 2 million.",
+    "S11": "These licenses will enable enhanced 5G network capabilities and faster data transmission in underserved areas.",
+    "S12": "These licenses will enable enhanced 5G network capabilities and faster data transmission in underserved areas.",
+    "S13": "Management also committed to investing EUR 7.1 million during 2026 to build 50 new base stations and modernize existing sites, management, committed, during 2026.",
+    "S14": "Furthermore, construction began on a new Tier III data center near Vilnius, with a planned EUR 26 million investment targeting completion by mid-2027.",
+    "S15": "Operating expenses excluding non-recurring items grew 10.2 percent, outpacing revenue in certain categories.",
+    "S16": "Higher cost of goods reflected increased equipment sales volume alongside elevated interconnection and roaming costs.",
+    "S17": "Employee-related expenses included EUR 1.4 million in non-recurring redundancy payments related to the Digital and Technology unit restructuring.",
+    "S18": "Energy costs rose 14.3 percent, and external IT service expenses increased 18.4 percent.",
+    "S19": "The company successfully maintained margin expansion through operational efficiency.",
+    "S20": "Robust cash generation supported a record dividend payout of EUR 81.6 million, representing EUR 0.14 per share for 2025.",
+    "S21": "Governance updates included Andreas Ekström joining the Board and Vaidas Dominauskas assuming leadership of the Enterprise unit, supporting ongoing strategic infrastructure and organizational development."
+  },
+  "usage": {
+    "input_tokens": 1343,
+    "output_tokens_including_reasoning": 326,
+    "total_tokens": 1669
+  },
+  "latency_seconds": 2.54,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S2\", \"S5\", \"S12\", \"S13\"],\n      \"description\": \"Sentences S2 and S5 repeat the same core statement about strong financial results and operating profit increase respectively. S12 duplicates S11 verbatim. S13 contains redundant phrasing about management commitment.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S3\", \"S9\", \"S13\"],\n      \"description\": \"Sentences S3, S9, and S13 contain awkward, repetitive phrasing that disrupts flow. S3 repeats 'increased and expanding', S9 repeats 'broad-based, driven by these, the rise and increase and jump', and S13 repeats 'management, committed, during 2026'.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with no self-contradictions. Key financial metrics (revenue, EBITDA, operating profit, cash flow) are presented consistently without internal conflicts. The narrative logically progresses from financial highlights to operational drivers, investment activities, cost factors, and governance updates. However, several sentences contain repetitive structures and redundant phrasing that slightly reduce clarity and flow. There are no material logical gaps or contradictions - all stated relationships (e.g., revenue growth drivers, margin expansion through efficiency) are internally consistent. The repetition issues are limited to phrasing rather than fundamental coherence problems.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S12",
+          "S13"
+        ],
+        "description": "Sentences S2 and S5 repeat the same core statement about strong financial results and operating profit increase respectively. S12 duplicates S11 verbatim. S13 contains redundant phrasing about management commitment."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S3",
+          "S9",
+          "S13"
+        ],
+        "description": "Sentences S3, S9, and S13 contain awkward, repetitive phrasing that disrupts flow. S3 repeats 'increased and expanding', S9 repeats 'broad-based, driven by these, the rise and increase and jump', and S13 repeats 'management, committed, during 2026'."
+      }
+    ],
+    "justification": "The summary is generally coherent with no self-contradictions. Key financial metrics (revenue, EBITDA, operating profit, cash flow) are presented consistently without internal conflicts. The narrative logically progresses from financial highlights to operational drivers, investment activities, cost factors, and governance updates. However, several sentences contain repetitive structures and redundant phrasing that slightly reduce clarity and flow. There are no material logical gaps or contradictions - all stated relationships (e.g., revenue growth drivers, margin expansion through efficiency) are internally consistent. The repetition issues are limited to phrasing rather than fundamental coherence problems."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,130 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:40:58.809213",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_20_zero_shot_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "a6f3f0450bc983b4",
+    "sentence_map_hash": "e04c8520a6a12cc9",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the 2024/2025 financial year, SAF Tehnika Group reported an unaudited consolidated net turnover of EUR 26.11 million, representing a 4% decline compared to EUR 27.09 million in the previous financial year.",
+    "S2": "For the fourth quarter of the financial year, unaudited consolidated net turnover reached EUR 5.18 million, marking a 13% decrease from EUR 5.98 million recorded in the same period of the prior financial year.",
+    "S3": "Geographically, the North America and Latin America region generated EUR 14.28 million over the 12-month period, accounting for 55% of total turnover and showing a 14% decrease compared to the previous financial year.",
+    "S4": "European revenues increased by 17% to EUR 10.04 million, representing 38% of total turnover.",
+    "S5": "Turnover from Asia, Africa, and the Middle East declined by 5% to EUR 1.78 million, representing 7% of the total.",
+    "S6": "In the fourth quarter specifically, the Americas accounted for EUR 2.5 million or 47% of quarterly turnover down 40%, Europe accounted for EUR 1.9 million or 36% up 24%, and Asia, Africa, and the Middle East doubled to EUR 846 thousand or 16% of quarterly turnover.",
+    "S7": "The Group closed the fourth quarter of 2024/2025 with an unaudited net loss of EUR 913 thousand, compared to a net loss of EUR 498 thousand in the corresponding period of the previous year.",
+    "S8": "For the full 12-month reporting period, the Group recorded an unaudited net loss of EUR 820 thousand, which is an improvement compared to the net loss of EUR 2.37 million reported for the 2023/2024 financial year.",
+    "S9": "Earnings per share for the 12-month period were negative at EUR 0.28, compared to negative EUR 0.80 in the previous year.",
+    "S10": "Total assets stood at EUR 25.92 million as of June 30, 2025, compared to EUR 23.02 million at the end of the previous financial year.",
+    "S11": "Total owners equity decreased to EUR 15.58 million from EUR 16.44 million.",
+    "S12": "The net cash flow for the 12-month period was EUR 2.60 million, resulting in a cash and cash equivalents balance of EUR 4.81 million at the end of the reporting period, up from EUR 2.21 million as of June 30, 2024.",
+    "S13": "Customer prepayments for goods and services increased to EUR 3.92 million from EUR 759 thousand.",
+    "S14": "To support liquidity, the Parent Company maintained an unutilized credit line agreement with Luminor Bank AS for a total amount of EUR 4.95 million.",
+    "S15": "Total inventory volumes increased by 8% to EUR 13.94 million compared to EUR 12.86 million in the prior year.",
+    "S16": "The company's results were influenced by project completion timelines and global component availability dynamics.",
+    "S17": "While delivery times improved and material reserves ensured customer-expected delivery schedules, the business environment remained subject to broader uncertainties.",
+    "S18": "The Group continued investments in product development, IoT solutions, and sales promotions across existing and new market segments while maintaining a goal to stabilize turnover for long-term positive results."
+  },
+  "usage": {
+    "input_tokens": 1339,
+    "output_tokens_including_reasoning": 413,
+    "total_tokens": 1752
+  },
+  "latency_seconds": 2.26,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\", \"S4\", \"S5\"],\n      \"description\": \"The regional breakdowns for the full year (S3, S4, S5) do not sum to the total turnover of EUR 26.11 million stated in S1. However, this is not treated as a contradiction because the candidate does not explicitly claim these segments are exhaustive and additive components of the same total. Differences may stem from inter-segment transactions, eliminations, or different scopes.\"\n    },\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"description\": \"The quarterly regional breakdowns in S6 (Americas EUR 2.5M, Europe EUR 1.9M, Asia/Africa/Middle East EUR 0.846M) sum to EUR 5.246M, which exceeds the reported quarterly turnover of EUR 5.18M in S2. As with the annual figures, this is not treated as a contradiction because the candidate does not explicitly state these are exhaustive and additive components of the same total. Differences may arise from inter-segment transactions, eliminations, or different scopes.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a logical structure covering revenue, regional performance, profitability, balance sheet items, and operational context. There are no self-contradictions. However, there are two notable logical gaps: the regional breakdowns for both the full year and the fourth quarter do not sum to the reported totals. These are not treated as contradictions because the candidate does not explicitly state that the regional figures are exhaustive and additive components of the same totals, and such discrepancies are common in financial reporting due to inter-segment transactions, eliminations, or different scopes. The summary maintains clear organization and avoids unnecessary repetition.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "description": "The regional breakdowns for the full year (S3, S4, S5) do not sum to the total turnover of EUR 26.11 million stated in S1. However, this is not treated as a contradiction because the candidate does not explicitly claim these segments are exhaustive and additive components of the same total. Differences may stem from inter-segment transactions, eliminations, or different scopes."
+      },
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "description": "The quarterly regional breakdowns in S6 (Americas EUR 2.5M, Europe EUR 1.9M, Asia/Africa/Middle East EUR 0.846M) sum to EUR 5.246M, which exceeds the reported quarterly turnover of EUR 5.18M in S2. As with the annual figures, this is not treated as a contradiction because the candidate does not explicitly state these are exhaustive and additive components of the same total. Differences may arise from inter-segment transactions, eliminations, or different scopes."
+      }
+    ],
+    "justification": "The summary is generally coherent with a logical structure covering revenue, regional performance, profitability, balance sheet items, and operational context. There are no self-contradictions. However, there are two notable logical gaps: the regional breakdowns for both the full year and the fourth quarter do not sum to the reported totals. These are not treated as contradictions because the candidate does not explicitly state that the regional figures are exhaustive and additive components of the same totals, and such discrepancies are common in financial reporting due to inter-segment transactions, eliminations, or different scopes. The summary maintains clear organization and avoids unnecessary repetition."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

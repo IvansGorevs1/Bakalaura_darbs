@@ -1,0 +1,578 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_22_zero_shot_gemini.txt",
+    "report": "report_annual_22.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the 2025 financial year, AS Tallinna Vesi demonstrated solid overall financial and operational performance, achieving growth across key revenue and profit metrics driven by higher water service volumes, tariff adjustments, and expanded construction activity.",
+    "S2": "The group reported total sales of seventy-two point four eight million euros, representing an 11.4 percent increase compared to sixty-five point zero eight million euros in 2024.",
+    "S3": "Water services sales rose by 6.9 percent to sixty-two point three one million euros, largely supported by an 18.3 percent increase in sales to private customers within the main service area, which reached thirty-one point eight four million euros.",
+    "S4": "Conversely, sales to business customers decreased by 2.7 percent to sixteen point seven six million euros due to statutory price harmonization measures.",
+    "S5": "Construction services sales experienced significant growth, surging 62.0 percent to eight point four six million euros, fueled by recovering market activity and pipe construction projects.",
+    "S6": "Gross profit grew by 10.5 percent to twenty-nine point five two million euros, while operating profit before depreciation and amortisation reached thirty point nine five million euros, up 12.5 percent from twenty-seven point five one million euros.",
+    "S7": "Operating profit increased by 11.8 percent to twenty-one point two two million euros compared to eighteen point nine eight million euros in the previous year.",
+    "S8": "Profit before taxes rose by 18.0 percent to seventeen point four three million euros, and net profit increased by 7.2 percent to fourteen point two four million euros, up from thirteen point two eight million euros.",
+    "S9": "Net profit growth was slightly moderated by an increase in the income tax rate applicable to dividend payments.",
+    "S10": "Cost of goods and services sold increased by 12.0 percent to forty-two point nine six million euros, influenced by higher staff costs, increased pollution charges which rose by 21.4 percent, and higher construction service costs.",
+    "S11": "However, direct production costs remained stable at nine point nine zero million euros, as a 6.9 percent decrease in electricity expenses to four point three seven million euros offset higher chemical costs.",
+    "S12": "The reduction in electricity expenses was primarily achieved through the successful commissioning and operation of the combined heat and power plant at the Paljassaare Wastewater Treatment Plant, which generated all required heat and over half of the electricity needed for treatment processes.",
+    "S13": "Financial expenses decreased due to lower Euribor rates, resulting in net financial expenses of three point seven eight million euros.",
+    "S14": "Capital investments in fixed assets expanded significantly, reaching fifty-five point seven four million euros compared to forty-nine point five three million euros in 2024, focusing on infrastructure renewal, smart water meter installation, and environmental protection.",
+    "S15": "Total borrowings increased to one hundred sixty million euros following additional loan drawdowns, bringing the debt-to-assets ratio to 66.02 percent.",
+    "S16": "Overall, the company reinforced its market position and advanced sustainability initiatives."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_22.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_22.json",
+    "key_information_hash": "1cf7f33b6316149e",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 2,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 2
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 2,
+      "scale_max": 4,
+      "label": "Neutral/Mixed",
+      "present": 4,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallinna Vesi demonstrated solid overall financial and operational performance in 2025 with growth across key revenue and profit metrics driven by higher water service volumes, tariff adjustments, and expanded construction activity.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT section details focus on development, sustainability awards, and strategic investments. FINANCIAL RESULTS section shows growth in sales and profits attributed to tariff changes and construction activity.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the 2025 financial year, AS Tallinna Vesi demonstrated solid overall financial and operational performance, achieving growth across key revenue and profit metrics driven by higher water service volumes, tariff adjustments, and expanded construction activity."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company reinforced its market position and advanced sustainability initiatives.",
+        "label": "SUPPORTED",
+        "source_evidence": "OUTLOOK FOR 2026 section and SUSTAINABILITY STATEMENT emphasize continued market leadership and sustainability focus through infrastructure projects and environmental targets.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Overall, the company reinforced its market position and advanced sustainability initiatives."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total sales were €72.48 million in 2025, representing an 11.4% increase compared to €65.08 million in 2024.",
+        "candidate_value": "72.48 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "72.48 million EUR",
+        "source_evidence": "MAIN FINANCIAL INDICATORS table shows Sales 2025: 72.48, 2024: 65.08 with 11.4% variance.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group reported total sales of seventy-two point four eight million euros, representing an 11.4 percent increase compared to sixty-five point zero eight million euros in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Water services sales rose by 6.9% to €62.31 million, driven by an 18.3% increase in sales to private customers within the main service area to €31.84 million.",
+        "candidate_value": "62.31 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "62.31 million EUR",
+        "source_evidence": "STATEMENT OF COMPREHENSIVE INCOME table shows Water services total from private customers 2025: 31,835 thousand EUR (31.835 million) with 18.3% variance. Total water services revenue 2025: 62,310 thousand EUR (62.31 million) with 6.9% variance.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Water services sales rose by 6.9 percent to sixty-two point three one million euros, largely supported by an 18.3 percent increase in sales to private customers within the main service area, which reached thirty-one point eight four million euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Sales to business customers decreased by 2.7% to €16.76 million due to statutory price harmonization measures.",
+        "candidate_value": "16.76 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16.76 million EUR",
+        "source_evidence": "STATEMENT OF COMPREHENSIVE INCOME table shows Total from business customers 2025: 16,765 thousand EUR (16.765 million) with -2.7% variance.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Conversely, sales to business customers decreased by 2.7 percent to sixteen point seven six million euros due to statutory price harmonization measures."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Construction services sales surged 62.0% to €8.46 million, fueled by recovering market activity and pipe construction projects.",
+        "candidate_value": "8.46 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.46 million EUR",
+        "source_evidence": "STATEMENT OF COMPREHENSIVE INCOME table shows Construction services 2025: 8,457 thousand EUR (8.457 million) with 62.0% variance.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Construction services sales experienced significant growth, surging 62.0 percent to eight point four six million euros, fueled by recovering market activity and pipe construction projects."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Gross profit grew by 10.5% to €29.52 million, while operating profit before depreciation and amortisation reached €30.95 million, up 12.5% from €27.51 million.",
+        "candidate_value": "29.52 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "29.52 million EUR",
+        "source_evidence": "MAIN FINANCIAL INDICATORS table shows Gross profit 2025: 29.52, 2024: 26.71 (10.5% increase). EBITDA 2025: 30.95, 2024: 27.51 (12.5% increase).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Gross profit grew by 10.5 percent to twenty-nine point five two million euros, while operating profit before depreciation and amortisation reached thirty point nine five million euros, up 12.5 percent from twenty-seven point five one million euros."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Operating profit increased by 11.8% to €21.22 million compared to €18.98 million in the previous year.",
+        "candidate_value": "21.22 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21.22 million EUR",
+        "source_evidence": "MAIN FINANCIAL INDICATORS table shows Operating profit 2025: 21.22, 2024: 18.98 (11.8% increase).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operating profit increased by 11.8 percent to twenty-one point two two million euros compared to eighteen point nine eight million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Profit before taxes rose by 18.0% to €17.43 million, and net profit increased by 7.2% to €14.24 million, up from €13.28 million.",
+        "candidate_value": "17.43 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17.43 million EUR",
+        "source_evidence": "MAIN FINANCIAL INDICATORS table shows Profit before taxes 2025: 17.43, 2024: 14.78 (18.0% increase). Net profit 2025: 14.24, 2024: 13.28 (7.2% increase).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Profit before taxes rose by 18.0 percent to seventeen point four three million euros, and net profit increased by 7.2 percent to fourteen point two four million euros, up from thirteen point two eight million euros."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net profit growth was slightly moderated by an increase in the income tax rate on dividend payments.",
+        "candidate_value": null,
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": null,
+        "source_evidence": "PROFIT BEFORE TAXES AND NET PROFIT section states: 'Net profit was affected by an increase in the income tax rate on dividend payments.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Net profit growth was slightly moderated by an increase in the income tax rate applicable to dividend payments."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Cost of goods and services sold increased by 12.0% to €42.96 million, influenced by higher staff costs, increased pollution charges which rose by 21.4%, and higher construction service costs.",
+        "candidate_value": "42.96 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42.96 million EUR",
+        "source_evidence": "COST OF GOODS AND SERVICES SOLD AND GROSS AND OPERATING PROFITS section states: 'In 2025, the cost of goods and services sold amounted to €42.96 million, which was €4.59 million higher than in the same period in 2024... pollution charges... increased by 21.4%... staff costs... increased by 6.8%... construction services costs... increased by 74.5%.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Cost of goods and services sold increased by 12.0 percent to forty-two point nine six million euros, influenced by higher staff costs, increased pollution charges which rose by 21.4 percent, and higher construction service costs."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Direct production costs remained stable at €9.90 million, as a 6.9% decrease in electricity expenses to €4.37 million offset higher chemical costs.",
+        "candidate_value": "9.90 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9.90 million EUR",
+        "source_evidence": "COST OF GOODS AND SERVICES SOLD AND GROSS AND OPERATING PROFITS section states: 'Total direct production costs... amounted to €9.90 million, remaining at the same level as the previous year... costs of electricity... decreased by 6.9% or €0.32 million resulting in costs worth of €4.37 million.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "However, direct production costs remained stable at nine point nine zero million euros, as a 6.9 percent decrease in electricity expenses to four point three seven million euros offset higher chemical costs."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The reduction in electricity expenses was primarily achieved through the successful commissioning and operation of the combined heat and power plant at the Paljassaare Wastewater Treatment Plant, which generated all required heat and over half of the electricity needed for treatment processes.",
+        "candidate_value": null,
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": null,
+        "source_evidence": "INVESTING FOR THE FUTURE section states: 'In 2025, it produced all the heat and more than half of the electricity required for the treatment processes.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The reduction in electricity expenses was primarily achieved through the successful commissioning and operation of the combined heat and power plant at the Paljassaare Wastewater Treatment Plant, which generated all required heat and over half of the electricity needed for treatment processes."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Financial expenses decreased due to lower Euribor rates, resulting in net financial expenses of €3.78 million.",
+        "candidate_value": "3.78 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3.78 million EUR",
+        "source_evidence": "FINANCIAL EXPENSES section states: 'The group’s net financial income and expenses have resulted in a net expense of €3.78 million (2024: €4.20 million). This decrease was mainly due to the lower Euribor rate.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Financial expenses decreased due to lower Euribor rates, resulting in net financial expenses of three point seven eight million euros."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Capital investments in fixed assets expanded significantly, reaching €55.74 million compared to €49.53 million in 2024, focusing on infrastructure renewal, smart water meter installation, and environmental protection.",
+        "candidate_value": "55.74 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "55.74 million EUR",
+        "source_evidence": "STATEMENT OF FINANCIAL POSITION section states: 'In 2025, the group invested into fixed assets €55.74 million.' MANAGEMENT REPORT states: 'In 2025, Tallinna Vesi invested €56 million in its fixed assets... These investments ensure the continuity of water services... improve customer experience and enhance service quality.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Capital investments in fixed assets expanded significantly, reaching fifty-five point seven four million euros compared to forty-nine point five three million euros in 2024, focusing on infrastructure renewal, smart water meter installation, and environmental protection."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Total borrowings increased to €160 million following additional loan drawdowns, bringing the debt-to-assets ratio to 66.02%.",
+        "candidate_value": "160 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "160 million EUR",
+        "source_evidence": "STATEMENT OF FINANCIAL POSITION section states: 'The group’s outstanding loans amount to €160 million (31/12/2024: €118 million)... The group's total debt to assets ratio is 66.02%.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total borrowings increased to one hundred sixty million euros following additional loan drawdowns, bringing the debt-to-assets ratio to 66.02 percent."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "AS Tallinna Vesi reported strong financial performance in 2025 with revenue increasing 11.4% to €72.48 million, operating profit rising 11.8% to €21.22 million, and net profit growing 7.2% to €14.24 million. The company invested €55.74 million in fixed assets.",
+        "importance": "HIGH",
+        "source_evidence": "Main financial indicators table; Statement of comprehensive income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S7",
+          "S8",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group reported total sales of seventy-two point four eight million euros, representing an 11.4 percent increase compared to sixty-five point zero eight million euros in 2024."
+          },
+          {
+            "id": "S7",
+            "text": "Operating profit increased by 11.8 percent to twenty-one point two two million euros compared to eighteen point nine eight million euros in the previous year."
+          },
+          {
+            "id": "S8",
+            "text": "Profit before taxes rose by 18.0 percent to seventeen point four three million euros, and net profit increased by 7.2 percent to fourteen point two four million euros, up from thirteen point two eight million euros."
+          },
+          {
+            "id": "S14",
+            "text": "Capital investments in fixed assets expanded significantly, reaching fifty-five point seven four million euros compared to forty-nine point five three million euros in 2024, focusing on infrastructure renewal, smart water meter installation, and environmental protection."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Customer revenue mix shifted significantly due to regulatory tariff harmonization: private customer sales increased 18.3% to €31.84 million from higher consumption, while business customer sales decreased 2.7% to €16.76 million following reduced tariff rates for businesses.",
+        "importance": "HIGH",
+        "source_evidence": "Sales section breakdown tables and text",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Water services sales rose by 6.9 percent to sixty-two point three one million euros, largely supported by an 18.3 percent increase in sales to private customers within the main service area, which reached thirty-one point eight four million euros."
+          },
+          {
+            "id": "S4",
+            "text": "Conversely, sales to business customers decreased by 2.7 percent to sixteen point seven six million euros due to statutory price harmonization measures."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Cost optimization and energy transition efforts reduced electricity expenses through the new combined heat and power plant at Paljassaare wastewater treatment plant, which supplied 43.8% of site electricity needs and increased renewable energy consumption to 87% of total energy use (from 23% in 2020).",
+        "importance": "HIGH",
+        "source_evidence": "Energy use and energy consumption overview section",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "However, direct production costs remained stable at nine point nine zero million euros, as a 6.9 percent decrease in electricity expenses to four point three seven million euros offset higher chemical costs."
+          },
+          {
+            "id": "S12",
+            "text": "The reduction in electricity expenses was primarily achieved through the successful commissioning and operation of the combined heat and power plant at the Paljassaare Wastewater Treatment Plant, which generated all required heat and over half of the electricity needed for treatment processes."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Infrastructure modernization advanced with smart water meter rollout covering over 80% of customers (targeting 100% by end-2026), construction of 45.1 km of pipes (49% via trenchless methods), and launch of trenchless sewer rehabilitation service by subsidiary Watercom renewing approximately 6 km of pipes.",
+        "importance": "HIGH",
+        "source_evidence": "Investing for the Future; Watercom activities",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "The company achieved 99.5% compliance with drinking water quality standards and was awarded 'Green Company of the Year'. Environmental initiatives included constructing 7.1 km of separate stormwater systems to reduce flooding and setting ambitious climate targets to reduce Scope 1 and 2 GHG emissions by 50% from 2020 levels by 2030 and achieve carbon neutrality by 2040.",
+        "importance": "HIGH",
+        "source_evidence": "Highlights from 2025; Sustainability Statement; Climate change section",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "The group maintained a strong liquidity position with €11.29 million cash balance at year-end and €160 million outstanding loans carrying an average interest rate of 3.24%. In December 2025, €5 million was drawn under a €25 million loan agreement with the Nordic Investment Bank to support future investments.",
+        "importance": "MEDIUM",
+        "source_evidence": "Statement of financial position; Investors section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total borrowings increased to one hundred sixty million euros following additional loan drawdowns, bringing the debt-to-assets ratio to 66.02 percent."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Tallinna Vesi continued its dividend policy of distributing 50-80% of annual profit, paying €0.53 per share (80% of 2024 net profit) to shareholders in June 2025, balancing returns with investment needs.",
+        "importance": "MEDIUM",
+        "source_evidence": "Dividends section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Key 2026 strategic priorities include completing the smart meter rollout, harmonizing water tariffs for residential and commercial customers by summer 2026, advancing the ozonation project at Ülemiste water treatment plant, reconstructing secondary clarifiers at Paljassaare wastewater treatment plant, and executing planned investments of up to €60 million.",
+        "importance": "HIGH",
+        "source_evidence": "Outlook for 2026 section",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4",
+      "K5",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, and K6 are PRESENT with clear evidence in the candidate summary. K4 (infrastructure modernization details), K5 (environmental compliance and awards), K7 (dividend policy), and K8 (2026 strategic priorities) are MISSING - no mention of smart meter rollout progress, stormwater systems, drinking water quality compliance, 'Green Company' award, climate targets, dividend payout, or 2026 strategic priorities. The summary covers most financial metrics and some operational highlights but omits several HIGH-importance strategic and environmental items, resulting in a Neutral/Mixed coverage assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected and support the overall narrative of financial performance improvement. There are no self-contradictions: growth metrics consistently show increases across revenue, profit, and investments. Explanations for changes (e.g., electricity cost reduction due to new plant, tax rate impact on net profit) are clear and logically connected to the surrounding statements. The organization flows logically from revenue breakdown to profitability metrics, cost analysis, and capital investments. There is no unnecessary repetition that would reduce clarity. All numerical relationships are presented as standalone comparisons without implying exhaustive additive relationships where they might not apply."
+  },
+  "usage": {
+    "input_tokens_total": 86856,
+    "output_tokens_total_including_reasoning": 4400,
+    "total_tokens": 91256,
+    "latency_seconds_total": 37.24
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 166987,
+    "output_tokens_total_including_reasoning": 41736,
+    "total_tokens": 208723,
+    "latency_seconds_total": 139.74
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_22.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_22_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_22.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_22.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_22_zero_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_22_zero_shot_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_22_zero_shot_gemini.json"
+    }
+  }
+}

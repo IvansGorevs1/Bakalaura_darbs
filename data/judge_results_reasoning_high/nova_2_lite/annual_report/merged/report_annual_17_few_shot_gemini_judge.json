@@ -1,0 +1,739 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_17_few_shot_gemini.txt",
+    "report": "report_annual_17.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Novaturas AB reported weaker financial results for the year ended December 31, 2024, driven by an increased competitive environment, oversupply of travel options in the Baltic States, and intense price competition in key destinations such as Turkey and the Greek islands.",
+    "S2": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023.",
+    "S3": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers.",
+    "S4": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%.",
+    "S5": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit.",
+    "S6": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros.",
+    "S7": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023.",
+    "S8": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros.",
+    "S9": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023.",
+    "S10": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros.",
+    "S11": "Despite the weaker overall annual performance, the company’s operating results demonstrated a material improvement starting in September 2024 following effective optimization of its travel program and reduction of unprofitable last-minute sales.",
+    "S12": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period.",
+    "S13": "Financial position and liquidity management remained key areas of focus, with the group failing to comply with certain financial and non-financial loan covenants at year-end, though necessary waivers were subsequently secured from lenders.",
+    "S14": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned.",
+    "S15": "Additionally, the company secured supplementary credit lines and loan facilities from financial partners and the new investor to support ongoing operations and liquidity requirements moving forward.",
+    "S16": "Financial statements for the prior comparative period were restated to correct historical errors involving overstated prepayments and understated operating expenses."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_17.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_17.json",
+    "key_information_hash": "716944dcabea0c7d",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 16,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 16
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Novaturas AB reported weaker financial results for the year ended December 31, 2024, driven by an increased competitive environment, oversupply of travel options in the Baltic States, and intense price competition in key destinations such as Turkey and the Greek islands.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword and Financial Information sections cite increased competitive environment, oversupply in Baltic States, and price competition in Turkey/Greek islands as key drivers of weaker results.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Novaturas AB reported weaker financial results for the year ended December 31, 2024, driven by an increased competitive environment, oversupply of travel options in the Baltic States, and intense price competition in key destinations such as Turkey and the Greek islands."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information table shows revenue from contracts with customers of EUR 200,878 thousand (2024) vs EUR 208,331 thousand (2023), a 3.6% decrease.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword states Novaturas served 239 thousand travelers in 2024 vs 259 thousand in 2023, a ~7.6% decrease.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information table shows gross profit of EUR 20,742 thousand (2024) vs EUR 26,227 thousand (2023), a 20.9% decrease. Margins align with reported percentages.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information section states operating expenses were EUR 27.5 million (25% increase) including a EUR 5.7 million goodwill impairment in Estonia CGU.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information notes operating expenses excluding impairment were EUR 21.8 million, a 1% decrease from 2023.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Information table shows EBITDA of EUR (6,132) thousand (2024) vs EUR 5,241 thousand (2023).",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword and Financial Information state adjusted EBITDA was EUR (449) thousand for 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Statements of comprehensive income show net loss of EUR (7,604) thousand (2024) vs profit of EUR 3,372 thousand (2023).",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword states net loss excluding goodwill impairment was EUR (1.9) million.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Despite the weaker overall annual performance, the company’s operating results demonstrated a material improvement starting in September 2024 following effective optimization of its travel program and reduction of unprofitable last-minute sales.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword highlights material improvement from September 2024 after program optimization and reduced last-minute sales.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Despite the weaker overall annual performance, the company’s operating results demonstrated a material improvement starting in September 2024 following effective optimization of its travel program and reduction of unprofitable last-minute sales."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword reports Q4 2024 load factor of 98.9% and profitable Q4 operations.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Financial position and liquidity management remained key areas of focus, with the group failing to comply with certain financial and non-financial loan covenants at year-end, though necessary waivers were subsequently secured from lenders.",
+        "label": "SUPPORTED",
+        "source_evidence": "Liquidity Management section notes non-compliance with covenants as of Dec 31, 2024, with waivers received from lenders.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Financial position and liquidity management remained key areas of focus, with the group failing to comply with certain financial and non-financial loan covenants at year-end, though necessary waivers were subsequently secured from lenders."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Foreword details Neset Kockar's acquisition of 23.2% stake in April 2025 with planned further increases.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Additionally, the company secured supplementary credit lines and loan facilities from financial partners and the new investor to support ongoing operations and liquidity requirements moving forward.",
+        "label": "SUPPORTED",
+        "source_evidence": "Events after reporting period and Liquidity Management sections mention new credit lines and loans from SME Bank, Luminor, and Neset Kockar.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Additionally, the company secured supplementary credit lines and loan facilities from financial partners and the new investor to support ongoing operations and liquidity requirements moving forward."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Financial statements for the prior comparative period were restated to correct historical errors involving overstated prepayments and understated operating expenses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 2.4 details restatements for prepayment overstatement and expense understatement in prior periods.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Financial statements for the prior comparative period were restated to correct historical errors involving overstated prepayments and understated operating expenses."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023.",
+        "candidate_value": "200.9 million euros (2024) vs 208.3 million euros (2023), -3.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 200,878 thousand (2024) vs EUR 208,331 thousand (2023)",
+        "source_evidence": "Financial Information table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers.",
+        "candidate_value": "239 thousand passengers (2024) vs 259 thousand passengers (2023), -7.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "239 thousand travelers (2024) vs 259 thousand travelers (2023)",
+        "source_evidence": "CEO's Foreword",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%.",
+        "candidate_value": "20.7 million euros (2024) vs 26.2 million euros (2023), -20.9%; margin 10.3% (2024) vs 12.6% (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 20,742 thousand (2024) vs EUR 26,227 thousand (2023); margin 10.3% (2024) vs 12.6% (2023)",
+        "source_evidence": "Financial Information table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit fell by 20.9% to 20.7 million euros, with the gross profit margin contracting from 12.6% to 10.3%."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit.",
+        "candidate_value": "27.5 million euros (2024) vs 21.8 million euros (2023), +25%; impairment 5.7 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 27,500 thousand (2024) vs EUR 21,800 thousand (2023) excluding impairment; impairment EUR 5,700 thousand",
+        "source_evidence": "Financial Information section and Note 4",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros.",
+        "candidate_value": "21.8 million euros (2024) vs 21.9 million euros (2023), -1%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 21,800 thousand (2024) vs EUR 21,900 thousand (2023) excluding impairment",
+        "source_evidence": "Financial Information section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Excluding this impairment, operating expenses actually decreased by 1% to 21.8 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023.",
+        "candidate_value": "-6.1 million euros (2024) vs +5.2 million euros (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR (6,132) thousand (2024) vs EUR 5,241 thousand (2023)",
+        "source_evidence": "Financial Information table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros.",
+        "candidate_value": "-449 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR (449) thousand",
+        "source_evidence": "CEO's Foreword and Financial Information",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023.",
+        "candidate_value": "-7.6 million euros (2024) vs +3.4 million euros (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR (7,604) thousand (2024) vs EUR 3,372 thousand (2023)",
+        "source_evidence": "Statements of comprehensive income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros.",
+        "candidate_value": "-1.9 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR (1,900) thousand",
+        "source_evidence": "CEO's Foreword",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Excluding the goodwill impairment, the net loss amounted to 1.9 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period.",
+        "candidate_value": "98.9% load factor in Q4 2024",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "98.9% load factor in Q4 2024",
+        "source_evidence": "CEO's Foreword",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned.",
+        "candidate_value": "23.2% stake acquired in early 2025",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "23.2% stake acquired in April 2025",
+        "source_evidence": "CEO's Foreword",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Novaturas Group reported consolidated revenues of EUR 201 million in 2024, representing a 3.6% decrease from EUR 208 million in 2023. The Group incurred an audited net loss of EUR 7.6 million (compared to a profit of EUR 3.4 million in 2023) with an adjusted EBITDA of EUR -449 thousand (versus EUR 5.2 million in 2023). Earnings per share amounted to EUR -0.97 in 2024.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s Foreword; Financial information section; Statements of comprehensive income; Note 27",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S7",
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue from contracts with customers declined by 3.6% to 200.9 million euros compared with 208.3 million euros in 2023."
+          },
+          {
+            "id": "S7",
+            "text": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023."
+          },
+          {
+            "id": "S8",
+            "text": "Adjusted EBITDA, which excludes the goodwill impairment, stood at a negative 449 thousand euros."
+          },
+          {
+            "id": "S9",
+            "text": "Consequently, the group incurred a net loss of 7.6 million euros for 2024, compared with a net profit of 3.4 million euros reported in 2023."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Key period-over-period changes included an 8% decline in served travelers (239 thousand in 2024 vs 259 thousand in 2023) and a swing from positive to negative EBITDA (€5.2m to -€6.1m). The result was primarily driven by increased competitive pressures in the Baltic travel market, particularly in Turkey and Greek islands, coupled with a one-off EUR 5.7 million goodwill impairment related to the Estonian cash-generating unit.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s Foreword; Note 4; Note 3",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S5",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Novaturas AB reported weaker financial results for the year ended December 31, 2024, driven by an increased competitive environment, oversupply of travel options in the Baltic States, and intense price competition in key destinations such as Turkey and the Greek islands."
+          },
+          {
+            "id": "S3",
+            "text": "The total number of travelers served by the group decreased by 7.6% to 239 thousand passengers."
+          },
+          {
+            "id": "S5",
+            "text": "Operating expenses reached 27.5 million euros, representing a 25% increase from the previous year, primarily due to a one-off, non-cash goodwill impairment loss of 5.7 million euros identified in the Estonian cash-generating unit."
+          },
+          {
+            "id": "S7",
+            "text": "Earnings before interest, taxes, depreciation, and amortization dropped significantly to a negative 6.1 million euros from a positive 5.2 million euros in 2023."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "In early 2025, strategic investor Neset Kockar acquired 23.2% of Novaturas' shares (completed on 30 April 2025), with a planned further acquisition to reach 33.19% by autumn 2025. Kockar, a Turkish tourism businessman, provided the Group with loan facilities totaling EUR 2 million post-reporting-period, and is expected to bring synergies in destinations popular with Baltic travelers, potentially expanding hotel and travel offerings.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s Foreword; Note 29 (Events after the reporting period)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "To strengthen its capital structure and market position, the company engaged in strategic alternative reviews and entered into transactions with a new strategic investor, Neset Kockar, who acquired a 23.2 percent equity stake in early 2025, with further ownership increases planned."
+          },
+          {
+            "id": "S15",
+            "text": "Additionally, the company secured supplementary credit lines and loan facilities from financial partners and the new investor to support ongoing operations and liquidity requirements moving forward."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Travel demand trends showed significant growth to Spain (149% increase in passengers to Malaga, Barcelona, and Mallorca compared to 2022) and an 8% rise in long-haul travel. Popular long-haul destinations included Vietnam (+367%), Phuket (+23%), and Zanzibar (+21%), with long-haul flights achieving a 98.9% load factor in Q4 2024.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s Foreword; Geographical information section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Operational performance improved materially in Q4 2024, with adjusted EBITDA reaching EUR 2.3 million and a load factor of 98.9% (compared to 96.7% in Q4 2023). This improvement followed optimization of the travel program and better destination management, reducing the share of last-minute trips which negatively impact financial results.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s Foreword; Financial information section",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Despite the weaker overall annual performance, the company’s operating results demonstrated a material improvement starting in September 2024 following effective optimization of its travel program and reduction of unprofitable last-minute sales."
+          },
+          {
+            "id": "S12",
+            "text": "This optimization allowed the group to achieve a high seat capacity utilization load factor of 98.9% in the fourth quarter and operate profitably during that period."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Liquidity position weakened with cash and cash equivalents decreasing to EUR 394 thousand at 31 December 2024 from EUR 3,347 thousand in 2023. Borrowings increased to EUR 9,250 thousand (from EUR 8,682 thousand in 2023), and the Group did not comply with all financial covenants as of year-end, requiring waivers from lenders.",
+        "importance": "HIGH",
+        "source_evidence": "Statements of cash flows; Note 14; Liquidity management section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Financial position and liquidity management remained key areas of focus, with the group failing to comply with certain financial and non-financial loan covenants at year-end, though necessary waivers were subsequently secured from lenders."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Segment performance was dominated by flight packages, which accounted for the majority of revenue but saw a 12.3% decline in passenger numbers compared to 2023. Other segments included sightseeing tours by coach (3.7 thousand passengers) and by air (2.1 thousand), with 'other sales' (flight tickets and hotel bookings) growing by 12.8%.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 20 (Segment information); Note 18 (Revenue from contracts)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING as there is no mention of travel demand trends to Spain, long-haul destinations, or load factors for Q4 2024. K7 is MISSING as there is no segment performance data on flight packages, passenger numbers, or other segments like sightseeing tours. The overall coverage is strong for most HIGH criteria, but the absence of K4 and K7 leads to a 'Generally yes' score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The narrative flows from overall performance decline to specific financial metrics, then to operational improvements and strategic actions. Adjustments for the goodwill impairment are clearly explained and consistently applied across metrics (operating expenses, EBITDA, net loss). The summary maintains clear organization with each sentence building upon the previous one. There is no unnecessary repetition, and all relationships between causes and effects are logically presented."
+  },
+  "usage": {
+    "input_tokens_total": 69514,
+    "output_tokens_total_including_reasoning": 4809,
+    "total_tokens": 74323,
+    "latency_seconds_total": 26.96
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 132357,
+    "output_tokens_total_including_reasoning": 54519,
+    "total_tokens": 186876,
+    "latency_seconds_total": 168.98
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_17.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_17_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_17.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_17.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_17_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_17_few_shot_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_17_few_shot_gemini.json"
+    }
+  }
+}

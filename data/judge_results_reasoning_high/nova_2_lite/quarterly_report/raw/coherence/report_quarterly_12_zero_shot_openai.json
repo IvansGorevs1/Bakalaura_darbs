@@ -1,0 +1,141 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:54:11.730849",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_12_zero_shot_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "03be4b561d4ec351",
+    "sentence_map_hash": "1991eadbb1e6a97f",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AS LHV Group reported a consolidated net profit of EUR 24.7 million for Q2 2026, including EUR 24.1 million attributable to the owners of the parent.",
+    "S2": "Profit increased 25% from EUR 19.7 million in Q1 but decreased 20% from EUR 30.8 million in Q2 2025.",
+    "S3": "Earnings per share were EUR 0.07, compared with EUR 0.06 in Q1 and EUR 0.09 a year earlier.",
+    "S4": "For the first six months, net profit was EUR 44.4 million, down 26% from EUR 59.9 million in the first half of 2025, while profit attributable to owners declined 25% to EUR 44.0 million.",
+    "S5": "Net income rose 7% quarter on quarter and year on year to EUR 79.0 million.",
+    "S6": "Net interest income was the main contributor, increasing 5% from Q1 to EUR 62.5 million and 8% from Q2 2025.",
+    "S7": "Net fee and commission income was broadly unchanged from the previous quarter at EUR 14.6 million but fell 6% year on year, reflecting lower client activity.",
+    "S8": "Operating expenses declined 4% quarter on quarter to EUR 43.6 million, although they were 8% higher than a year earlier.",
+    "S9": "The cost increase included higher personnel and IT expenses.",
+    "S10": "Loan and bond impairment charges rose to EUR 5.8 million from EUR 1.3 million in Q1, compared with a EUR 4.2 million reversal in Q2 2025.",
+    "S11": "Management said the charges reflected specific clients and forward-looking model provisions, while overall loan quality remained strong.",
+    "S12": "Income tax expense decreased to EUR 5.0 million from EUR 7.1 million in Q1 and EUR 6.8 million a year earlier.",
+    "S13": "Loan volumes grew 3% during the quarter to EUR 5.77 billion and were 15% above Q2 2025.",
+    "S14": "Customer deposits declined 3% quarter on quarter to EUR 7.56 billion, mainly because of lower platform and financial-intermediary deposits, while ordinary customer deposits increased.",
+    "S15": "Return on equity was reported at 13.1%, below 17.4% a year earlier.",
+    "S16": "Capital adequacy was 20.8%, compared with 23.0% in Q2 2025 and 22.4% at year-end 2025.",
+    "S17": "Own funds stood at EUR 869.6 million, and the loan-loss reserve was EUR 47.4 million.",
+    "S18": "LHV Pank generated EUR 24.3 million of Q2 profit, LHV Bank EUR 1.4 million, LHV Varahaldus EUR 0.4 million and LHV Kindlustus EUR 0.8 million; LHV Paytech reported a EUR 0.3 million loss.",
+    "S19": "The bank completed its migration to AWS cloud infrastructure, adopted a product-based management model and received Estonia’s first MiCA crypto-assets service provider licence.",
+    "S20": "Results were also influenced by geopolitical and energy-market uncertainty, higher market interest rates, strong equity markets and improved insurance performance due to fewer major losses and better weather conditions."
+  },
+  "usage": {
+    "input_tokens": 1325,
+    "output_tokens_including_reasoning": 241,
+    "total_tokens": 1566
+  },
+  "latency_seconds": 1.47,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"SELF_CONTRADICTION\",\n      \"candidate_sentence_ids\": [\"S2\", \"S5\"],\n      \"description\": \"S2 states that profit decreased 20% from Q2 2025 (EUR 30.8 million) to EUR 24.7 million in Q2 2026, while S5 states that net income rose 7% year on year to EUR 79.0 million. These statements appear contradictory because they refer to different metrics (consolidated net profit vs. net income) without clarification, creating ambiguity about the reported performance trend.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with logical relationships between financial metrics, clear organization, and minimal repetition. The primary issue is a potential self-contradiction between S2 (profit decreased YoY) and S5 (net income rose YoY), which refer to different metrics without explicit clarification. Other sections maintain logical flow and internal consistency. There are no severe organizational problems or material contradictions beyond this ambiguity.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "SELF_CONTRADICTION",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5"
+        ],
+        "description": "S2 states that profit decreased 20% from Q2 2025 (EUR 30.8 million) to EUR 24.7 million in Q2 2026, while S5 states that net income rose 7% year on year to EUR 79.0 million. These statements appear contradictory because they refer to different metrics (consolidated net profit vs. net income) without clarification, creating ambiguity about the reported performance trend."
+      }
+    ],
+    "justification": "The summary is generally coherent with logical relationships between financial metrics, clear organization, and minimal repetition. The primary issue is a potential self-contradiction between S2 (profit decreased YoY) and S5 (net income rose YoY), which refer to different metrics without explicit clarification. Other sections maintain logical flow and internal consistency. There are no severe organizational problems or material contradictions beyond this ambiguity."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

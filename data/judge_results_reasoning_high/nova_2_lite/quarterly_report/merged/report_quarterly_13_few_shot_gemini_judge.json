@@ -1,0 +1,801 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_13_few_shot_gemini.txt",
+    "report": "report_quarterly_13.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Liven AS reported a mixed financial performance for the second quarter and first six months of 2026, characterized by robust sales activity and market demand recovery alongside lower quarterly revenue and a net loss due to the cyclical timing of home handovers and one-off expenses.",
+    "S2": "During the second quarter of 2026, the company signed 57 sales contracts under the law of obligations, compared with 31 contracts in the same period of the previous year.",
+    "S3": "For the first six months, sales contracts reached 111, nearly doubling from 56 contracts in the first half of 2025.",
+    "S4": "This momentum expanded the presale portfolio, with the company entering the third quarter with a presale volume of 48.6 million euros and 171 contracts under the law of obligations.",
+    "S5": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier.",
+    "S6": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries.",
+    "S7": "Profitability weakened during the second quarter, resulting in a pre-tax loss of 234 thousand euros and a net loss of 618 thousand euros, compared with a net profit of 974 thousand euros in the second quarter of 2025.",
+    "S8": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends.",
+    "S9": "Total assets grew to 100.2 million euros as of June 30, 2026, up from 86.5 million euros at the end of 2025, driven by ongoing construction across development projects.",
+    "S10": "Total loan liabilities increased to 57.3 million euros by the end of June 2026, including 16.6 million euros in construction loans, while cash and cash equivalents rose by 1.98 million euros during the second quarter to 10.0 million euros.",
+    "S11": "A major corporate milestone during the period was the initial public offering of Liven AS shares conducted between April 23 and May 7, 2026, generating net proceeds of 4.7 million euros and admitting the company's shares to the Baltic Main List of the Nasdaq Tallinn Stock Exchange on May 15, 2026.",
+    "S12": "The company also distributed 1.36 million euros in dividends from 2025 profits and expanded its international and domestic development pipeline through property acquisitions in Berlin and Tallinn.",
+    "S13": "Looking ahead, management expects strong support for the full-year revenue target of 59 million euros, with nearly 90 percent already realized or covered by contracts.",
+    "S14": "Performance in the second half of the year is anticipated to benefit from project completions and home handovers, with the company maintaining its target of achieving a return on equity above 20 percent."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_13.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_13.json",
+    "key_information_hash": "f09756baa1f29db5",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 14,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 14
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 13,
+      "incorrect": 0,
+      "total": 13
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 7,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Liven AS reported a mixed financial performance for the second quarter and first six months of 2026, characterized by robust sales activity and market demand recovery alongside lower quarterly revenue and a net loss due to the cyclical timing of home handovers and one-off expenses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Activity in the residential real estate market remained strong in the second quarter of 2026... During the quarter, we signed 57 sales contracts... Revenue for the second quarter of 2026 was EUR 4,503 thousand... profit before income tax was EUR -234 thousand... The second quarter result was affected by one-off costs related to the public offering of shares.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Liven AS reported a mixed financial performance for the second quarter and first six months of 2026, characterized by robust sales activity and market demand recovery alongside lower quarterly revenue and a net loss due to the cyclical timing of home handovers and one-off expenses."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "During the second quarter of 2026, the company signed 57 sales contracts under the law of obligations, compared with 31 contracts in the same period of the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the quarter, we signed 57 sales contracts (contracts under the law of obligations; Q2 2025: 31; Q1 2026: 54)",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the second quarter of 2026, the company signed 57 sales contracts under the law of obligations, compared with 31 contracts in the same period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "For the first six months, sales contracts reached 111, nearly doubling from 56 contracts in the first half of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Over the first six months, we signed 111 sales contracts, nearly twice as many as a year earlier (6 months 2025: 56)",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "For the first six months, sales contracts reached 111, nearly doubling from 56 contracts in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "This momentum expanded the presale portfolio, with the company entering the third quarter with a presale volume of 48.6 million euros and 171 contracts under the law of obligations.",
+        "label": "SUPPORTED",
+        "source_evidence": "We enter the third quarter of 2026 with 171 contracts under the law of obligations and a presale volume of EUR 48.6 million",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This momentum expanded the presale portfolio, with the company entering the third quarter with a presale volume of 48.6 million euros and 171 contracts under the law of obligations."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue for the second quarter of 2026 was EUR 4,503 thousand (Q2 2025: EUR 7,388 thousand)... There were no new completions in the second quarter and we handed over only 12 previously completed homes (Q2 2025: 35; Q1 2026: 14)",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the first six months of the year, we have handed over a total of 26 homes and commercial units (6 months 2025: 41), earned revenue of EUR 11,439 thousand (6 months 2025: EUR 9,319 thousand)",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Profitability weakened during the second quarter, resulting in a pre-tax loss of 234 thousand euros and a net loss of 618 thousand euros, compared with a net profit of 974 thousand euros in the second quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Profit before income tax was EUR -234 thousand (Q2 2025: EUR 1,002 thousand)... the net loss for the quarter EUR 618 thousand and the net loss for the half-year EUR 198 thousand (Q2 2025: income tax expense of EUR 28 thousand, net profit of EUR 974 thousand)",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Profitability weakened during the second quarter, resulting in a pre-tax loss of 234 thousand euros and a net loss of 618 thousand euros, compared with a net profit of 974 thousand euros in the second quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends.",
+        "label": "SUPPORTED",
+        "source_evidence": "Profit before income tax of EUR 186 thousand (6 months 2025: profit before income tax of EUR 296 thousand)... In connection with the dividends paid during the quarter, the income tax expense for the second quarter was EUR 384 thousand... Distribution costs and administrative expenses include approximately EUR 90 thousand of costs related to the offering",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets grew to 100.2 million euros as of June 30, 2026, up from 86.5 million euros at the end of 2025, driven by ongoing construction across development projects.",
+        "label": "SUPPORTED",
+        "source_evidence": "Assets at end of period 100,186 (2026) vs 86,457 (2025)... Primarily as a result of continued construction in development projects, the volume of assets grew by a total of EUR 8,505 thousand during the quarter to EUR 100,186 thousand",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets grew to 100.2 million euros as of June 30, 2026, up from 86.5 million euros at the end of 2025, driven by ongoing construction across development projects."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total loan liabilities increased to 57.3 million euros by the end of June 2026, including 16.6 million euros in construction loans, while cash and cash equivalents rose by 1.98 million euros during the second quarter to 10.0 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "At the end of the quarter, the total volume of loan liabilities reached EUR 57,341 thousand... New bank construction loans were issued during the quarter in the total amount of EUR 9,335 thousand and the volume of construction loans increased to EUR 16,561 thousand... During the quarter, the balance of cash and cash equivalents increased by EUR 1,979 thousand to EUR 10,033 thousand",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total loan liabilities increased to 57.3 million euros by the end of June 2026, including 16.6 million euros in construction loans, while cash and cash equivalents rose by 1.98 million euros during the second quarter to 10.0 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "A major corporate milestone during the period was the initial public offering of Liven AS shares conducted between April 23 and May 7, 2026, generating net proceeds of 4.7 million euros and admitting the company's shares to the Baltic Main List of the Nasdaq Tallinn Stock Exchange on May 15, 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "In order to acquire new development properties and to strengthen the capital structure, we carried out the initial public offering of Liven AS shares in the period from 23 April to 7 May 2026... net proceeds of EUR 4,687 thousand... Since 15 May 2026 all Liven shares have been trading on the Baltic Main List of the Nasdaq Tallinn Stock Exchange",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "A major corporate milestone during the period was the initial public offering of Liven AS shares conducted between April 23 and May 7, 2026, generating net proceeds of 4.7 million euros and admitting the company's shares to the Baltic Main List of the Nasdaq Tallinn Stock Exchange on May 15, 2026."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The company also distributed 1.36 million euros in dividends from 2025 profits and expanded its international and domestic development pipeline through property acquisitions in Berlin and Tallinn.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Annual General Meeting... resolved to pay dividends of EUR 1,362 thousand... In June, the Supervisory Board extended the authority... In May, Liven P19 GmbH signed a notarial contract for the acquisition... In June, Liven R101 GmbH signed a contract for the acquisition... In July, the group's subsidiary Liven Kodu 25 OÜ signed a notarial contract for the acquisition",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company also distributed 1.36 million euros in dividends from 2025 profits and expanded its international and domestic development pipeline through property acquisitions in Berlin and Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Looking ahead, management expects strong support for the full-year revenue target of 59 million euros, with nearly 90 percent already realized or covered by contracts.",
+        "label": "SUPPORTED",
+        "source_evidence": "Together with the EUR 11.4 million of revenue already earned in the first half of the year and new sales made at the beginning of the third quarter, nearly 90% of the 2026 revenue target of EUR 59 million has now been realised or covered by contracts",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Looking ahead, management expects strong support for the full-year revenue target of 59 million euros, with nearly 90 percent already realized or covered by contracts."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Performance in the second half of the year is anticipated to benefit from project completions and home handovers, with the company maintaining its target of achieving a return on equity above 20 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Together with revenue growth, we also expect net profit to increase and to exceed the 20% return on equity target... Due to our business model... we expect the volume of loan liabilities to decrease at the end of 2026... Our existing land portfolio enables us to grow volumes and profit... and to keep return on equity above 20%",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Performance in the second half of the year is anticipated to benefit from project completions and home handovers, with the company maintaining its target of achieving a return on equity above 20 percent."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "signed 57 sales contracts under the law of obligations in Q2 2026 vs 31 in Q2 2025",
+        "candidate_value": "57 contracts (Q2 2026) vs 31 contracts (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "57 contracts (Q2 2026) vs 31 contracts (Q2 2025)",
+        "source_evidence": "Overview of the second quarter and six months of 2026: 'During the quarter, we signed 57 sales contracts (contracts under the law of obligations; Q2 2025: 31; Q1 2026: 54)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the second quarter of 2026, the company signed 57 sales contracts under the law of obligations, compared with 31 contracts in the same period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "111 sales contracts in first six months of 2026 vs 56 in first six months of 2025",
+        "candidate_value": "111 contracts (H1 2026) vs 56 contracts (H1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111 contracts (H1 2026) vs 56 contracts (H1 2025)",
+        "source_evidence": "Overview of the second quarter and six months of 2026: 'Over the first six months, we signed 111 sales contracts, nearly twice as many as a year earlier (6 months 2025: 56)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "For the first six months, sales contracts reached 111, nearly doubling from 56 contracts in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "presale volume of EUR 48.6 million and 171 contracts under the law of obligations entering Q3 2026",
+        "candidate_value": "EUR 48.6 million presale volume, 171 contracts",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 48.6 million presale volume, 171 contracts",
+        "source_evidence": "Overview of the second quarter and six months of 2026: 'We enter the third quarter of 2026 with 171 contracts under the law of obligations and a presale volume of EUR 48�6 million'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This momentum expanded the presale portfolio, with the company entering the third quarter with a presale volume of 48.6 million euros and 171 contracts under the law of obligations."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Q2 2026 revenue of EUR 4.5 million vs EUR 7.4 million in Q2 2025",
+        "candidate_value": "EUR 4.5 million (Q2 2026) vs EUR 7.4 million (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,503 thousand (Q2 2026) vs EUR 7,388 thousand (Q2 2025)",
+        "source_evidence": "Consolidated statement of comprehensive income: 'Revenue 4,503 (2026 Q2) vs 7,388 (2025 Q2)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "H1 2026 revenue of EUR 11.4 million vs EUR 9.3 million in H1 2025",
+        "candidate_value": "EUR 11.4 million (H1 2026) vs EUR 9.3 million (H1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 11,439 thousand (H1 2026) vs EUR 9,319 thousand (H1 2025)",
+        "source_evidence": "Consolidated statement of comprehensive income: 'Revenue 11,439 (2026 H1) vs 9,319 (2025 H1)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Q2 2026 pre-tax loss of EUR 234 thousand and net loss of EUR 618 thousand vs net profit of EUR 974 thousand in Q2 2025",
+        "candidate_value": "EUR -234k pre-tax, EUR -618k net (Q2 2026) vs EUR 974k net profit (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR -234k pre-tax, EUR -618k net (Q2 2026) vs EUR 974k net profit (Q2 2025)",
+        "source_evidence": "Consolidated statement of comprehensive income: 'Profit before tax -234 (2026 Q2) vs 1,002 (2025 Q2); Net profit -618 (2026 Q2) vs 974 (2025 Q2)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Profitability weakened during the second quarter, resulting in a pre-tax loss of 234 thousand euros and a net loss of 618 thousand euros, compared with a net profit of 974 thousand euros in the second quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "H1 2026 pre-tax profit of EUR 186 thousand and net loss of EUR 198 thousand",
+        "candidate_value": "EUR 186k pre-tax profit, EUR -198k net loss (H1 2026)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 186k pre-tax profit, EUR -198k net loss (H1 2026)",
+        "source_evidence": "Consolidated statement of comprehensive income: 'Profit before tax 186 (2026 H1) vs 296 (2025 H1); Net profit -198 (2026 H1) vs 268 (2025 H1)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets grew to EUR 100.2 million as of June 30, 2026 from EUR 86.5 million at December 31, 2025",
+        "candidate_value": "EUR 100.2m (Jun 2026) vs EUR 86.5m (Dec 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 100,186k (Jun 2026) vs EUR 86,457k (Dec 2025)",
+        "source_evidence": "Consolidated statement of financial position: 'Assets at end of period 100,186 (2026) vs 86,457 (2025)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets grew to 100.2 million euros as of June 30, 2026, up from 86.5 million euros at the end of 2025, driven by ongoing construction across development projects."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total loan liabilities of EUR 57.3 million as of June 30, 2026 including EUR 16.6 million construction loans; cash and cash equivalents increased by EUR 1.98 million to EUR 10.0 million in Q2",
+        "candidate_value": "EUR 57.3m total loans (incl. EUR 16.6m construction), EUR 10.0m cash (up EUR 1.98m in Q2)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 57,341k total borrowings (incl. EUR 16,561k construction loans) as of Jun 2026; cash and cash equivalents increased by EUR 1,979k to EUR 10,033k in Q2",
+        "source_evidence": "Consolidated statement of financial position: 'Total liabilities 73,440 (2026)'; Note 6: 'Total borrowings 57,341 (Jun 2026)'; Cash flow statement: 'Cash and cash equivalents at end of period 10,033 (Jun 2026)' and 'Increase in cash and cash equivalents 1,979 (Q2 2026)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total loan liabilities increased to 57.3 million euros by the end of June 2026, including 16.6 million euros in construction loans, while cash and cash equivalents rose by 1.98 million euros during the second quarter to 10.0 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "IPO generated net proceeds of EUR 4.7 million",
+        "candidate_value": "EUR 4.7 million net proceeds",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,687 thousand net proceeds",
+        "source_evidence": "Management report: 'During the offering... net proceeds of EUR 4,687 thousand'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "A major corporate milestone during the period was the initial public offering of Liven AS shares conducted between April 23 and May 7, 2026, generating net proceeds of 4.7 million euros and admitting the company's shares to the Baltic Main List of the Nasdaq Tallinn Stock Exchange on May 15, 2026."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Distributed EUR 1.36 million in dividends from 2025 profits",
+        "candidate_value": "EUR 1.36 million dividends",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,362 thousand dividends",
+        "source_evidence": "Dividend policy section: 'In 2026, dividends of EUR 1,362 thousand were paid from the 2025 profit'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company also distributed 1.36 million euros in dividends from 2025 profits and expanded its international and domestic development pipeline through property acquisitions in Berlin and Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Nearly 90% of EUR 59 million full-year revenue target already realized or covered by contracts",
+        "candidate_value": "90% of EUR 59m target covered",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Nearly 90% of EUR 59m target covered",
+        "source_evidence": "Outlook for the future: 'Together with the EUR 11.4 million of revenue already earned... nearly 90% of the 2026 revenue target of EUR 59 million has now been realised or covered by contracts'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Looking ahead, management expects strong support for the full-year revenue target of 59 million euros, with nearly 90 percent already realized or covered by contracts."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Company maintains target of achieving return on equity above 20 percent",
+        "candidate_value": "ROE target >20%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ROE target >20%",
+        "source_evidence": "Outlook for the future: 'Together with revenue growth, we also expect net profit to increase and to exceed the 20% return on equity target'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Performance in the second half of the year is anticipated to benefit from project completions and home handovers, with the company maintaining its target of achieving a return on equity above 20 percent."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q2 2026 revenue decreased to EUR 4.5 million from EUR 7.4 million in Q2 2025, with profit before tax of EUR -234 thousand versus EUR 1.0 million in Q2 2025, resulting in a net loss of EUR 618 thousand compared to a net profit of EUR 974 thousand in Q2 2025. The loss was impacted by EUR 384 thousand income tax expense on dividends and approximately EUR 90 thousand offering-related costs.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section; Consolidated statement of comprehensive income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S7",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier."
+          },
+          {
+            "id": "S7",
+            "text": "Profitability weakened during the second quarter, resulting in a pre-tax loss of 234 thousand euros and a net loss of 618 thousand euros, compared with a net profit of 974 thousand euros in the second quarter of 2025."
+          },
+          {
+            "id": "S8",
+            "text": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "For the first six months of 2026, revenue increased to EUR 11.4 million from EUR 9.3 million in the same period of 2025, with profit before tax of EUR 186 thousand versus EUR 296 thousand, and a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section; Consolidated statement of comprehensive income",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries."
+          },
+          {
+            "id": "S8",
+            "text": "For the first six months of 2026, the company posted a pre-tax profit of 186 thousand euros and a net loss of 198 thousand euros, impacted by approximately 90 thousand euros in one-off costs related to a public share offering and 384 thousand euros in income tax expenses on dividends."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "In Q2 2026, Liven signed 57 sales contracts totaling EUR 13.2 million in new sales revenue, with a presale portfolio of EUR 48.6 million across 171 contracts entering Q3 2026, of which EUR 39.8 million related to projects completing in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section (including note that 3 contracts were in Berlin)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the second quarter of 2026, the company signed 57 sales contracts under the law of obligations, compared with 31 contracts in the same period of the previous year."
+          },
+          {
+            "id": "S3",
+            "text": "For the first six months, sales contracts reached 111, nearly doubling from 56 contracts in the first half of 2025."
+          },
+          {
+            "id": "S4",
+            "text": "This momentum expanded the presale portfolio, with the company entering the third quarter with a presale volume of 48.6 million euros and 171 contracts under the law of obligations."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Liven handed over 12 homes in Q2 2026, down from 35 in Q2 2025, with a total of 26 homes and commercial units handed over in the first six months of 2026 compared to 41 in the same period of 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite strong sales, revenue for the second quarter declined to 4.5 million euros from 7.4 million euros in the second quarter of 2025, primarily because only 12 completed homes were handed over compared with 35 homes a year earlier."
+          },
+          {
+            "id": "S6",
+            "text": "Cumulative revenue for the first six months increased to 11.4 million euros from 9.3 million euros in the corresponding period of 2025, supported by 26 total home deliveries."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "As of 30 June 2026, Liven's balance sheet showed cash and cash equivalents of EUR 10.0 million, total assets of EUR 100.2 million, total liabilities of EUR 73.4 million, and equity of EUR 26.7 million, with construction loans amounting to EUR 16.6 million.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated statement of financial position; Note 6 for construction loans",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets grew to 100.2 million euros as of June 30, 2026, up from 86.5 million euros at the end of 2025, driven by ongoing construction across development projects."
+          },
+          {
+            "id": "S10",
+            "text": "Total loan liabilities increased to 57.3 million euros by the end of June 2026, including 16.6 million euros in construction loans, while cash and cash equivalents rose by 1.98 million euros during the second quarter to 10.0 million euros."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Liven completed an initial public offering in April-May 2026, raising EUR 4.9 million through the issuance of new shares and listed its shares on the Nasdaq Tallinn Baltic Main List on 15 May 2026. Additionally, EUR 1.36 million in dividends was paid during the period.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview and Shareholders sections (including details of share price, number of shares, and dividend payment)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "A major corporate milestone during the period was the initial public offering of Liven AS shares conducted between April 23 and May 7, 2026, generating net proceeds of 4.7 million euros and admitting the company's shares to the Baltic Main List of the Nasdaq Tallinn Stock Exchange on May 15, 2026."
+          },
+          {
+            "id": "S12",
+            "text": "The company also distributed 1.36 million euros in dividends from 2025 profits and expanded its international and domestic development pipeline through property acquisitions in Berlin and Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "During Q2 2026, Liven expanded its Berlin portfolio by acquiring two development properties: Plantagenstraße 19 for EUR 1.7 million and Reichstraße 101 for EUR 1.2 million, planning nearly 20 residential units each with construction scheduled to start at the end of 2027 and the beginning of 2028, respectively.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview section (including total project investment amounts over EUR 11 million and approximately EUR 8 million)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Following the reporting period in July 2026, Liven signed a contract to acquire development properties at Pärnu maantee 35, 37, and 41 in Tallinn for EUR 10 million, with plans for over 160 residential and commercial units.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Events after the reporting period section",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Market dynamics in Q2 2026 showed a weekly sales ratio of nearly 3.1%, exceeding the long-term normal range of 1.5–2.0%, with Liven holding over 8% market share in Greater Tallinn during the first six months of 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview and Economic environment sections (including supporting factors such as recovering household purchasing power and unified tax-free minimum wage)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "Liven's outlook for the remainder of 2026 indicates that nearly 90% of its EUR 59 million revenue target has been secured through realized revenue and contracts, with expectations for increasing revenue and net profit in H2 2026, aiming to exceed the 20% return on equity target.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Outlook section",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Looking ahead, management expects strong support for the full-year revenue target of 59 million euros, with nearly 90 percent already realized or covered by contracts."
+          },
+          {
+            "id": "S14",
+            "text": "Performance in the second half of the year is anticipated to benefit from project completions and home handovers, with the company maintaining its target of achieving a return on equity above 20 percent."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K8",
+      "K9"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1, K2, K3, K4, K5, K6, and K10, with all essential financial figures, sales contract data, balance sheet items, IPO details, and forward-looking guidance present. However, K7 (Berlin property acquisitions with specific amounts and construction timelines), K8 (Tallinn property acquisition contract post-reporting period), and K9 (market dynamics including sales ratio and market share metrics) are entirely missing. While the summary mentions international development pipeline expansion, it does not include the specific details required by these criteria. The overall coverage is strong but missing three medium-importance items, resulting in a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. It presents a consistent narrative of mixed financial performance, with clear explanations for revenue declines (timing of home handovers and one-off expenses) and growth drivers (sales contracts, presale portfolio). All statements logically support each other without contradictions. The organization flows logically from performance overview to specific financial metrics, balance sheet changes, corporate milestones, and forward outlook. There is no unnecessary repetition, and all relationships between causes and effects are clearly articulated."
+  },
+  "usage": {
+    "input_tokens_total": 52279,
+    "output_tokens_total_including_reasoning": 10402,
+    "total_tokens": 62681,
+    "latency_seconds_total": 62.18
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 49363,
+    "output_tokens_total_including_reasoning": 60852,
+    "total_tokens": 110215,
+    "latency_seconds_total": 177.19
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_13.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_13_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_13.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_13.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_13_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_13_few_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_13_few_shot_gemini.json"
+    }
+  }
+}

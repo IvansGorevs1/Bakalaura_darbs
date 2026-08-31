@@ -1,0 +1,110 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:00:18.956006",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_16_chain_of_event_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "8b4b547edd07d7f0",
+    "sentence_map_hash": "8097ee38f588f0e6",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordic Fibreboard AS reported a consolidated net loss of 1.15 million euros for the financial year 2025, an increase from the 0.79 million euro loss recorded in 2024.",
+    "S2": "Consolidated net sales decreased by 3.4 percent to 7.33 million euros, down from 7.59 million euros in the previous year.",
+    "S3": "Sales of fibreboards, which constituted the primary revenue stream, fell slightly to 7.33 million euros from 7.57 million euros.",
+    "S4": "Revenue from real estate management dropped significantly to 3 thousand euros from 25 thousand euros due to the termination of rental agreements in 2024.",
+    "S5": "The company’s EBITDA turned negative, recording a loss of 0.42 million euros compared to a minimal loss of 0.03 million euros in 2024.",
+    "S6": "This deterioration in operating performance was primarily driven by a factory shutdown in December 2025, which was a planned transition to a new gas boiler house.",
+    "S7": "During this period, personnel costs, maintenance, and repair expenses continued to accrue without corresponding production revenue.",
+    "S8": "Additionally, underutilized production capacity increased the per-unit cost of goods, further pressuring margins.",
+    "S9": "The operating loss widened to 0.94 million euros from 0.55 million euros in 2024.",
+    "S10": "Depreciation charges remained stable at 0.52 million euros.",
+    "S11": "Net financial costs were 0.21 million euros, slightly lower than the 0.24 million euros incurred in 2024.",
+    "S12": "Total assets increased to 9.3 million euros from 8.3 million euros, largely due to investments in production assets and real estate.",
+    "S13": "Liabilities rose to 4.9 million euros from 4.6 million euros, with borrowings decreasing to 3.2 million euros from 3.7 million euros, while payables increased to 1.3 million euros from 0.4 million euros.",
+    "S14": "Equity grew to 4.46 million euros from 3.62 million euros, supported by a share capital increase of 2 million euros completed in October 2025.",
+    "S15": "This capital raise involved the issuance of 4 million new shares at 0.50 euros each, aimed at facilitating trading on the Nasdaq Tallinn additional list.",
+    "S16": "The economic environment in Estonia remained challenging in 2025, with modest growth of 0.6 percent and weak domestic demand.",
+    "S17": "Inflation reached approximately 6 percent, driven by higher taxes and excise duties, which constrained household purchasing power.",
+    "S18": "Despite a recovery in the wood industry output earlier in the year, conditions deteriorated towards the end of 2025.",
+    "S19": "The company’s main markets in the European Union accounted for 92 percent of sales, which remained relatively flat.",
+    "S20": "Sales to Africa and Asia saw the sharpest declines.",
+    "S21": "The Group employed 60 people at year-end, a reduction from 68 in 2024.",
+    "S22": "Looking forward, the company expects demand for fibreboards to remain stable and anticipates holding sales volumes at current levels.",
+    "S23": "The Admirali Quarter development project has received necessary building permits, and a preliminary sale agreement for ten properties within the project was signed in January 2026 to help liquidate negative working capital."
+  },
+  "usage": {
+    "input_tokens": 1322,
+    "output_tokens_including_reasoning": 320,
+    "total_tokens": 1642
+  },
+  "latency_seconds": 2.57,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\", \"S4\"],\n      \"description\": \"Sentence S3 states that fibreboard sales constituted the primary revenue stream and fell slightly to 7.33 million euros. Sentence S4 then states that real estate management revenue dropped to 3 thousand euros. However, the summary does not clarify how these two figures relate to the consolidated net sales figure of 7.33 million euros mentioned in S2. This creates a logical gap because it is unclear whether the fibreboard sales figure already excludes real estate revenue or if the two figures are additive components of the consolidated sales. The summary does not provide sufficient information to understand the relationship between these revenue streams and the consolidated total.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative structure covering financial performance, operational challenges, and future outlook. Most statements logically follow from one another, with explanations for performance changes (e.g., factory shutdown causing operating loss deterioration). However, there is a notable logical gap in S3 and S4 regarding the relationship between fibreboard sales, real estate revenue, and consolidated net sales. While the summary avoids self-contradictions and maintains clear organization, this gap prevents full coherence. There is no significant repetition, and the arithmetic differences between segment and consolidated figures are not presented as exhaustive additive components, so they do not constitute contradictions.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "description": "Sentence S3 states that fibreboard sales constituted the primary revenue stream and fell slightly to 7.33 million euros. Sentence S4 then states that real estate management revenue dropped to 3 thousand euros. However, the summary does not clarify how these two figures relate to the consolidated net sales figure of 7.33 million euros mentioned in S2. This creates a logical gap because it is unclear whether the fibreboard sales figure already excludes real estate revenue or if the two figures are additive components of the consolidated sales. The summary does not provide sufficient information to understand the relationship between these revenue streams and the consolidated total."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative structure covering financial performance, operational challenges, and future outlook. Most statements logically follow from one another, with explanations for performance changes (e.g., factory shutdown causing operating loss deterioration). However, there is a notable logical gap in S3 and S4 regarding the relationship between fibreboard sales, real estate revenue, and consolidated net sales. While the summary avoids self-contradictions and maintains clear organization, this gap prevents full coherence. There is no significant repetition, and the arithmetic differences between segment and consolidated figures are not presented as exhaustive additive components, so they do not constitute contradictions."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

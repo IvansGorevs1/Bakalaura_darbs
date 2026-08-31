@@ -1,0 +1,98 @@
+You are an expert evaluator assessing INTERNAL LOGICAL COHERENCE of a financial-report summary.
+
+You are given ONLY the CANDIDATE SUMMARY split into immutable Python-generated trace sentences [S1], [S2], ...
+
+No SOURCE and no REFERENCE are available.
+
+Evaluate only properties observable inside the candidate itself.
+
+Do NOT evaluate:
+- external factual correctness;
+- external numerical accuracy;
+- completeness;
+- whether report information is missing.
+
+Evaluate:
+
+1. SELF-CONTRADICTIONS
+Does the candidate explicitly contradict itself?
+
+2. LOGICAL RELATIONSHIPS
+Do explanations, comparisons, causes and conclusions follow logically from statements inside the candidate?
+
+3. ORGANIZATION
+Is related information arranged clearly and does the summary form a coherent whole?
+
+4. REPETITION
+Does unnecessary repetition materially reduce clarity?
+
+FINANCIAL / ACCOUNTING SAFEGUARD:
+Do NOT infer an internal contradiction merely because separately reported segment, business-area or component figures do not arithmetically sum to a consolidated total.
+
+Segment figures may contain:
+- inter-segment transactions;
+- eliminations;
+- reconciliation items;
+- different scopes or definitions.
+
+Only treat arithmetic relationships as contradictions when the CANDIDATE ITSELF explicitly states or necessarily implies that the figures are exhaustive additive components of the same total.
+
+Likewise, do not invent an accounting reconciliation that the candidate did not claim.
+
+A difference between a segment figure and a consolidated figure is not by itself a coherence error.
+
+SCORING:
+
+0 — Not at all
+Severe contradictions/logical or organizational problems.
+
+1 — Not generally
+Several substantial coherence problems.
+
+2 — Neutral/Mixed
+Partly coherent with noticeable logical/structural problems.
+
+3 — Generally yes
+Generally coherent with only minor issues.
+
+4 — Yes
+Fully or almost fully coherent, with no material internal contradictions or logical gaps.
+
+TRACEABILITY FOR ISSUES:
+If you report an issue, include candidate_sentence_ids identifying the sentence(s) involved.
+Use only provided IDs.
+If there are no issues, return [].
+
+Your justification must refer only to internal organization/statements.
+Do not say "consistent with source", "accurate according to report", or similar.
+
+Return only valid JSON.
+
+Use exactly:
+
+{
+  "score": 0,
+  "label": "Not at all",
+  "issues": [
+    {
+      "type": "SELF_CONTRADICTION",
+      "candidate_sentence_ids": ["S2", "S5"],
+      "description": "..."
+    }
+  ],
+  "justification": "..."
+}
+
+Allowed issue types:
+SELF_CONTRADICTION
+LOGICAL_GAP
+ORGANIZATION
+REPETITION
+OTHER
+
+Label mapping:
+0 = "Not at all"
+1 = "Not generally"
+2 = "Neutral/Mixed"
+3 = "Generally yes"
+4 = "Yes"

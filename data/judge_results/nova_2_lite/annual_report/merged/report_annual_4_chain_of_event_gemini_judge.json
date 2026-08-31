@@ -1,0 +1,694 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_4_chain_of_event_gemini.txt",
+    "report": "report_annual_4.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "For the 2024 financial year, Eleving Group S.A. reported a total revenue of EUR 216.6 million, representing an increase compared to the previous period's revenue of EUR 189.3 million.",
+    "S2": "Total interest revenue reached EUR 203.7 million, up from EUR 176.3 million in 2023.",
+    "S3": "Operating expenses included administrative expenses of EUR 74.7 million compared to EUR 63.2 million, and impairment expenses of EUR 42.1 million compared to EUR 39.8 million in the prior year.",
+    "S4": "Profit before tax for continuing operations rose to EUR 37.7 million from EUR 28.5 million.",
+    "S5": "The net profit from continuing operations was EUR 28.8 million compared to EUR 21.9 million, while profit from discontinued operations contributed EUR 0.8 million compared to EUR 2.5 million.",
+    "S6": "The Group achieved an all-time best annual net profit of EUR 29.6 million, representing a 21% increase over the EUR 24.5 million reported in 2023.",
+    "S7": "Total equity increased significantly to EUR 108.1 million as of December 31, 2024, up from EUR 65.4 million at the end of 2023.",
+    "S8": "Total assets grew to EUR 476.3 million from EUR 421.3 million, and total liabilities decreased to EUR 355.9 million from EUR 368.2 million.",
+    "S9": "The vehicle and consumer financing net portfolio expanded to EUR 371.2 million from EUR 320.3 million.",
+    "S10": "Adjusted EBITDA reached EUR 89.8 million, compared to EUR 77.5 million in the prior period.",
+    "S11": "The financial results were influenced by business developments, including the successful execution of an initial public offering in October 2024 on Nasdaq Riga, which secured EUR 29.0 million in equity and contributed to an increase in share premium and share capital.",
+    "S12": "Additional factors affecting the results included the expansion of digital sales channels, the full integration and portfolio scaling of Sub-Saharan operations acquired in 2023, continued scaling of electric vehicle and motorcycle financing, and portfolio quality enhancements demonstrated by reduced non-performing loan rates.",
+    "S13": "Profitability was also affected by a tax audit by the Romanian Tax Authority that resulted in additional VAT liabilities for prior periods, reducing net profit by EUR 2.6 million.",
+    "S14": "Debt management activities during the period included the optimization of funding structures, local currency financing programs, and the premature repayment of subordinated bonds utilizing IPO proceeds."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_4.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_4.json",
+    "key_information_hash": "47e4e08c607ebab5",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 14,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 14
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 12,
+      "incorrect": 0,
+      "total": 12
+    },
+    "completeness": {
+      "score": 2,
+      "scale_max": 4,
+      "label": "Neutral/Mixed",
+      "present": 3,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "For the 2024 financial year, Eleving Group S.A. reported a total revenue of EUR 216.6 million, representing an increase compared to the previous period's revenue of EUR 189.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report section: 'Eleving Group finished 2024 with the historically strongest financial performance, recording revenues of EUR 216.6 mln, up by nearly 15%, compared to the 2023 results.'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "For the 2024 financial year, Eleving Group S.A. reported a total revenue of EUR 216.6 million, representing an increase compared to the previous period's revenue of EUR 189.3 million."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total interest revenue reached EUR 203.7 million, up from EUR 176.3 million in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Profit and Loss: Interest revenue 2024: EUR 203,749,375; 2023: EUR 176,297,775",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total interest revenue reached EUR 203.7 million, up from EUR 176.3 million in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Operating expenses included administrative expenses of EUR 74.7 million compared to EUR 63.2 million, and impairment expenses of EUR 42.1 million compared to EUR 39.8 million in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 13: Administrative expense 2024: EUR 74,700,997; 2023: EUR 63,246,010. Note 7: Impairment expense 2024: EUR 42,102,621; 2023: EUR 39,846,624",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Operating expenses included administrative expenses of EUR 74.7 million compared to EUR 63.2 million, and impairment expenses of EUR 42.1 million compared to EUR 39.8 million in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Profit before tax for continuing operations rose to EUR 37.7 million from EUR 28.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Profit and Loss: Profit before tax from continuing operations 2024: EUR 37,740,465; 2023: EUR 28,482,002",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Profit before tax for continuing operations rose to EUR 37.7 million from EUR 28.5 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The net profit from continuing operations was EUR 28.8 million compared to EUR 21.9 million, while profit from discontinued operations contributed EUR 0.8 million compared to EUR 2.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Profit and Loss: Profit from continuing operations 2024: EUR 28,803,716; 2023: EUR 21,916,100. Profit from discontinued operations 2024: EUR 768,112; 2023: EUR 2,538,954",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The net profit from continuing operations was EUR 28.8 million compared to EUR 21.9 million, while profit from discontinued operations contributed EUR 0.8 million compared to EUR 2.5 million."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The Group achieved an all-time best annual net profit of EUR 29.6 million, representing a 21% increase over the EUR 24.5 million reported in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Profit and Loss: Net profit for the year 2024: EUR 29,571,828; 2023: EUR 24,455,054. Management report: 'All-time best annual net profit - EUR 29.6 mln'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The Group achieved an all-time best annual net profit of EUR 29.6 million, representing a 21% increase over the EUR 24.5 million reported in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total equity increased significantly to EUR 108.1 million as of December 31, 2024, up from EUR 65.4 million at the end of 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Total equity attributable to equity holders of the Parent Company 2024: EUR 108,116,977; 2023: EUR 65,435,225",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Total equity increased significantly to EUR 108.1 million as of December 31, 2024, up from EUR 65.4 million at the end of 2023."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Total assets grew to EUR 476.3 million from EUR 421.3 million, and total liabilities decreased to EUR 355.9 million from EUR 368.2 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Financial Position: Total assets 2024: EUR 476,288,765; 2023: EUR 421,315,533. Total liabilities 2024: EUR 355,880,308; 2023: EUR 368,171,788",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Total assets grew to EUR 476.3 million from EUR 421.3 million, and total liabilities decreased to EUR 355.9 million from EUR 368.2 million."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The vehicle and consumer financing net portfolio expanded to EUR 371.2 million from EUR 320.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'The net portfolio over 2024 increased by EUR 50.9 mln and reached EUR 371.2 mln at the end of Q4 2024, a rise by an impressive 16% compared to the corresponding reporting period a year ago.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The vehicle and consumer financing net portfolio expanded to EUR 371.2 million from EUR 320.3 million."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Adjusted EBITDA reached EUR 89.8 million, compared to EUR 77.5 million in the prior period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Alternative Performance Measures section: Adjusted EBITDA 2024: EUR 89,786,765; 2023: EUR 77,453,444",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Adjusted EBITDA reached EUR 89.8 million, compared to EUR 77.5 million in the prior period."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The financial results were influenced by business developments, including the successful execution of an initial public offering in October 2024 on Nasdaq Riga, which secured EUR 29.0 million in equity and contributed to an increase in share premium and share capital.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'During Q4 2024, Eleving Group accomplished the largest initial public offering (IPO) in Nasdaq Riga’s history... securing EUR 29.0 million in equity.' Note 33: Details of IPO impact on share capital and premium",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The financial results were influenced by business developments, including the successful execution of an initial public offering in October 2024 on Nasdaq Riga, which secured EUR 29.0 million in equity and contributed to an increase in share premium and share capital."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Additional factors affecting the results included the expansion of digital sales channels, the full integration and portfolio scaling of Sub-Saharan operations acquired in 2023, continued scaling of electric vehicle and motorcycle financing, and portfolio quality enhancements demonstrated by reduced non-performing loan rates.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report operational highlights: Digitalization completion, Sub-Saharan operations integration, electric motorcycle financing expansion, and NPL rate reduction from 7.5% to 6.1% in vehicle finance and 4.5% to 4.3% in consumer finance",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Additional factors affecting the results included the expansion of digital sales channels, the full integration and portfolio scaling of Sub-Saharan operations acquired in 2023, continued scaling of electric vehicle and motorcycle financing, and portfolio quality enhancements demonstrated by reduced non-performing loan rates."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Profitability was also affected by a tax audit by the Romanian Tax Authority that resulted in additional VAT liabilities for prior periods, reducing net profit by EUR 2.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 15: 'On 16 December 2024, the Romanian Tax Authority concluded a tax audit... additional VAT liability of EUR 3.0 million (with an impact on the net profit of EUR 2.6 mln)'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Profitability was also affected by a tax audit by the Romanian Tax Authority that resulted in additional VAT liabilities for prior periods, reducing net profit by EUR 2.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Debt management activities during the period included the optimization of funding structures, local currency financing programs, and the premature repayment of subordinated bonds utilizing IPO proceeds.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report financial highlights: IPO proceeds used for subordinated bonds repayment, local currency financing programs in Kenya, Botswana, and Albania discussed in Note 35",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Debt management activities during the period included the optimization of funding structures, local currency financing programs, and the premature repayment of subordinated bonds utilizing IPO proceeds."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Total revenue of EUR 216.6 million in 2024 compared to EUR 189.3 million in 2023",
+        "candidate_value": "EUR 216.6 million (2024) vs EUR 189.3 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 216,573,760 (2024) vs EUR 189,333,028 (2023)",
+        "source_evidence": "Management report revenue figures and Consolidated Statement of Profit and Loss",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "For the 2024 financial year, Eleving Group S.A. reported a total revenue of EUR 216.6 million, representing an increase compared to the previous period's revenue of EUR 189.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total interest revenue of EUR 203.7 million in 2024 compared to EUR 176.3 million in 2023",
+        "candidate_value": "EUR 203.7 million (2024) vs EUR 176.3 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 203,749,375 (2024) vs EUR 176,297,775 (2023)",
+        "source_evidence": "Consolidated Statement of Profit and Loss",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total interest revenue reached EUR 203.7 million, up from EUR 176.3 million in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Administrative expenses of EUR 74.7 million in 2024 compared to EUR 63.2 million in 2023; impairment expenses of EUR 42.1 million compared to EUR 39.8 million in 2023",
+        "candidate_value": "EUR 74.7 million (2024 admin) vs EUR 63.2 million (2023); EUR 42.1 million (2024 impairment) vs EUR 39.8 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 74,700,997 (2024 admin) vs EUR 63,246,010 (2023); EUR 42,102,621 (2024 impairment) vs EUR 39,846,624 (2023)",
+        "source_evidence": "Note 13 (administrative expenses) and Note 7 (impairment expenses)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Operating expenses included administrative expenses of EUR 74.7 million compared to EUR 63.2 million, and impairment expenses of EUR 42.1 million compared to EUR 39.8 million in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Profit before tax for continuing operations of EUR 37.7 million in 2024 compared to EUR 28.5 million in 2023",
+        "candidate_value": "EUR 37.7 million (2024) vs EUR 28.5 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 37,740,465 (2024) vs EUR 28,482,002 (2023)",
+        "source_evidence": "Consolidated Statement of Profit and Loss",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Profit before tax for continuing operations rose to EUR 37.7 million from EUR 28.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit from continuing operations of EUR 28.8 million in 2024 compared to EUR 21.9 million in 2023; profit from discontinued operations of EUR 0.8 million in 2024 compared to EUR 2.5 million in 2023",
+        "candidate_value": "EUR 28.8 million (2024 continuing) vs EUR 21.9 million (2023); EUR 0.8 million (2024 discontinued) vs EUR 2.5 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 28,803,716 (2024 continuing) vs EUR 21,916,100 (2023); EUR 768,112 (2024 discontinued) vs EUR 2,538,954 (2023)",
+        "source_evidence": "Consolidated Statement of Profit and Loss",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The net profit from continuing operations was EUR 28.8 million compared to EUR 21.9 million, while profit from discontinued operations contributed EUR 0.8 million compared to EUR 2.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit of EUR 29.6 million in 2024 compared to EUR 24.5 million in 2023",
+        "candidate_value": "EUR 29.6 million (2024) vs EUR 24.5 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 29,571,828 (2024) vs EUR 24,455,054 (2023)",
+        "source_evidence": "Consolidated Statement of Profit and Loss",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The Group achieved an all-time best annual net profit of EUR 29.6 million, representing a 21% increase over the EUR 24.5 million reported in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total equity of EUR 108.1 million as of December 31, 2024 compared to EUR 65.4 million as of December 31, 2023",
+        "candidate_value": "EUR 108.1 million (2024) vs EUR 65.4 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 108,116,977 (2024) vs EUR 65,435,225 (2023)",
+        "source_evidence": "Consolidated Statement of Changes in Equity",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Total equity increased significantly to EUR 108.1 million as of December 31, 2024, up from EUR 65.4 million at the end of 2023."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Total assets of EUR 476.3 million in 2024 compared to EUR 421.3 million in 2023; total liabilities of EUR 355.9 million in 2024 compared to EUR 368.2 million in 2023",
+        "candidate_value": "EUR 476.3 million (2024 assets) vs EUR 421.3 million (2023); EUR 355.9 million (2024 liabilities) vs EUR 368.2 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 476,288,765 (2024 assets) vs EUR 421,315,533 (2023); EUR 355,880,308 (2024 liabilities) vs EUR 368,171,788 (2023)",
+        "source_evidence": "Consolidated Statement of Financial Position",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Total assets grew to EUR 476.3 million from EUR 421.3 million, and total liabilities decreased to EUR 355.9 million from EUR 368.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Vehicle and consumer financing net portfolio of EUR 371.2 million in 2024 compared to EUR 320.3 million in 2023",
+        "candidate_value": "EUR 371.2 million (2024) vs EUR 320.3 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 371,200,000 (2024) vs EUR 320,300,000 (2023)",
+        "source_evidence": "Management report portfolio figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The vehicle and consumer financing net portfolio expanded to EUR 371.2 million from EUR 320.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Adjusted EBITDA of EUR 89.8 million in 2024 compared to EUR 77.5 million in 2023",
+        "candidate_value": "EUR 89.8 million (2024) vs EUR 77.5 million (2023)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 89,786,765 (2024) vs EUR 77,453,444 (2023)",
+        "source_evidence": "Alternative Performance Measures section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Adjusted EBITDA reached EUR 89.8 million, compared to EUR 77.5 million in the prior period."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "IPO in October 2024 securing EUR 29.0 million in equity",
+        "candidate_value": "EUR 29.0 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 29,000,001",
+        "source_evidence": "Management report and Note 33",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The financial results were influenced by business developments, including the successful execution of an initial public offering in October 2024 on Nasdaq Riga, which secured EUR 29.0 million in equity and contributed to an increase in share premium and share capital."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Romanian VAT liability reducing net profit by EUR 2.6 million",
+        "candidate_value": "EUR 2.6 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 2.6 million impact on net profit",
+        "source_evidence": "Note 15",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Profitability was also affected by a tax audit by the Romanian Tax Authority that resulted in additional VAT liabilities for prior periods, reducing net profit by EUR 2.6 million."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Eleving Group achieved all-time best financial performance in 2024 with EUR 29.6 mln net profit (21% YoY increase), EUR 216.6 mln revenue (+15% YoY), EUR 89.8 mln EBITDA (+10% YoY), and EUR 371.2 mln net loan portfolio (+16% YoY).",
+        "importance": "HIGH",
+        "source_evidence": "Management report '2024 at a glance'; Consolidated statements of profit and loss; CEO keynote",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S6",
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "For the 2024 financial year, Eleving Group S.A. reported a total revenue of EUR 216.6 million, representing an increase compared to the previous period's revenue of EUR 189.3 million."
+          },
+          {
+            "id": "S6",
+            "text": "The Group achieved an all-time best annual net profit of EUR 29.6 million, representing a 21% increase over the EUR 24.5 million reported in 2023."
+          },
+          {
+            "id": "S9",
+            "text": "The vehicle and consumer financing net portfolio expanded to EUR 371.2 million from EUR 320.3 million."
+          },
+          {
+            "id": "S10",
+            "text": "Adjusted EBITDA reached EUR 89.8 million, compared to EUR 77.5 million in the prior period."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Key year-over-year improvements included a 29.3% capitalization ratio (vs 26.1% in 2023), 2.4 interest coverage ratio (vs 2.3), and reduced net leverage to 3.3x (from 3.7x).",
+        "importance": "HIGH",
+        "source_evidence": "Management report financial highlights; Note 48 Alternative Performance Measures",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K3",
+        "information": "Major performance drivers were organic growth in Europe/Africa, successful integration of Sub-Saharan operations (tripling regional portfolio), digital transformation (doubled applications, new self-service platform), and enhanced risk management improving portfolio quality.",
+        "importance": "HIGH",
+        "source_evidence": "CEO keynote; Management report operations section",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Additional factors affecting the results included the expansion of digital sales channels, the full integration and portfolio scaling of Sub-Saharan operations acquired in 2023, continued scaling of electric vehicle and motorcycle financing, and portfolio quality enhancements demonstrated by reduced non-performing loan rates."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Business segments showed vehicle finance (67% of portfolio: 45% traditional, 20% flexible/subscription) and consumer finance (33%: Kredo, Tigo, etc.), with key growth in East Africa (e-motorcycles), Romania, Uganda, and Albania offsetting exits from Balkan/Belarus.",
+        "importance": "HIGH",
+        "source_evidence": "Management report segments; Sustainability statement portfolio balance; Note 19 discontinued operations",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Capital structure transformed via October 2024 IPO raising EUR 29.0 mln equity (largest in Nasdaq Riga history), used to repay subordinated bonds and high-cost Mintos loans, while expanding local currency funding (Kenya +30%, Botswana notes).",
+        "importance": "HIGH",
+        "source_evidence": "Capital management section; Notes 35 borrowings",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The financial results were influenced by business developments, including the successful execution of an initial public offering in October 2024 on Nasdaq Riga, which secured EUR 29.0 million in equity and contributed to an increase in share premium and share capital."
+          },
+          {
+            "id": "S14",
+            "text": "Debt management activities during the period included the optimization of funding structures, local currency financing programs, and the premature repayment of subordinated bonds utilizing IPO proceeds."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Strategic priorities include deepening existing markets, broadening product portfolio (e.g., electric motorcycle financing surpassing 2025 targets), geographic expansion, and developing ESG strategy for 2026-2031 with climate neutrality targets for HQ operations.",
+        "importance": "HIGH",
+        "source_evidence": "Business outlook; Sustainability framework; CEO keynote",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Post-reporting period events include March 2025 senior secured bond tap (EUR 40 mln at reduced yield) and expected North Macedonia tax refund of EUR 1.151 mln from 2023 solidarity tax, both impacting 2025 liquidity.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 47 Events after balance sheet date",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K4",
+      "K6",
+      "K7"
+    ],
+    "completeness_justification": "K1 is PRESENT with core financial metrics (revenue, net profit, EBITDA, loan portfolio) covered in S1, S6, S9, S10. K3 is PRESENT with drivers (Sub-Saharan integration, digital expansion, EV financing) in S12. K5 is PRESENT with IPO details and bond repayment in S11 and S14. However, K2 (capitalization ratios, leverage metrics) is MISSING entirely. K4 (segment breakdown and regional growth details) is MISSING. K6 (strategic priorities and ESG) is MISSING. K7 (post-period events) is MISSING. Coverage is mixed with major HIGH importance items missing, resulting in a Neutral/Mixed score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is generally coherent with no material internal contradictions or logical gaps. All statements are self-consistent and logically connected. The financial metrics show consistent directional changes (increases/decreases) between periods. Explanations for performance variations (IPO proceeds, operational improvements, tax audit impact) are provided and align with the reported financial outcomes. The structure follows a logical flow from revenue through to profit, balance sheet items, and key drivers. There are no contradictions, logical gaps, organizational issues, or unnecessary repetition that would materially impact coherence."
+  },
+  "usage": {
+    "input_tokens_total": 135507,
+    "output_tokens_total_including_reasoning": 5368,
+    "total_tokens": 140875,
+    "latency_seconds_total": 31.61
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 264777,
+    "output_tokens_total_including_reasoning": 24794,
+    "total_tokens": 289571,
+    "latency_seconds_total": 232.27
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_4.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_4_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_4.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_4.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_4_chain_of_event_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_4_chain_of_event_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_4_chain_of_event_gemini.json"
+    }
+  }
+}

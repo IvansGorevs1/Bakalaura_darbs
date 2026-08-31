@@ -1,0 +1,763 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_5_zero_shot_qwen36.txt",
+    "report": "report_quarterly_5.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Arco Vara AS delivered a clear financial turnaround in the first quarter of 2025, transitioning from losses to profitability amid a cautiously recovering Baltic real estate market.",
+    "S2": "Group sales revenue reached 1,706 thousand euros, an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024.",
+    "S3": "This top-line growth stemmed primarily from higher domestic development sales, supplemented by franchise fees totaling 65 thousand euros.",
+    "S4": "Supported by stronger margins and controlled overheads, operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period.",
+    "S5": "Net profit likewise improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros.",
+    "S6": "Despite improved accounting profitability, operational cash consumption rose to 2,838 thousand euros from 2,217 thousand euros, reflecting active investment in ongoing construction and land acquisition.",
+    "S7": "Net financing inflows partially offset this pressure, resulting in a net cash outflow of 607 thousand euros and closing cash reserves at 1,113 thousand euros.",
+    "S8": "To fund pipeline expansion, the groups net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros.",
+    "S9": "Importantly, the weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent, aligning with broader declines in the Euribor.",
+    "S10": "Total assets expanded to 42,728 thousand euros, with shareholders equity settling at 19,842 thousand euros and maintaining a healthy equity ratio of 46.4 percent.",
+    "S11": "Commercially, Arco Vara executed targeted sales and advanced its multi-year project roadmap.",
+    "S12": "Four residential units changed hands in the quarter, while pre-sale commitments strengthened across key developments.",
+    "S13": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold.",
+    "S14": "Strategic land acquisitions included a new buildable plot at Spordi Street in Tallinn, earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026.",
+    "S15": "Broader market conditions remained anchored by stabilizing inflation and gradually improving buyer sentiment, which allowed the company to sustain pricing discipline while prioritizing cash conversion from completed inventory.",
+    "S16": "Management continues to balance near-term liquidity requirements with long-term capacity building, positioning the group for incremental volume recognition as detailed planning approvals finalize and major constructions transition into sales-ready phases."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "key_information_hash": "aabb2f7afff6bfca",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 15,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 15
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 12,
+      "incorrect": 0,
+      "total": 12
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Arco Vara AS delivered a clear financial turnaround in the first quarter of 2025, transitioning from losses to profitability amid a cautiously recovering Baltic real estate market.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states moderate recovery in Estonia’s real estate market; KPI shows operating profit of 259k EUR in Q1 2025 vs loss of 208k EUR in Q1 2024; net profit 103k EUR vs loss 349k EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Arco Vara AS delivered a clear financial turnaround in the first quarter of 2025, transitioning from losses to profitability amid a cautiously recovering Baltic real estate market."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This top-line growth stemmed primarily from higher domestic development sales, supplemented by franchise fees totaling 65 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating report: sales revenue from own real estate was 1,589k EUR (vs 927k EUR Q1 2024); franchise fees were 65k EUR in Q1 2025 (vs 55k EUR Q1 2024).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This top-line growth stemmed primarily from higher domestic development sales, supplemented by franchise fees totaling 65 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Supported by stronger margins and controlled overheads, operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators: operating profit 259k EUR in Q1 2025 vs operating loss 208k EUR in Q1 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Supported by stronger margins and controlled overheads, operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit likewise improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "KPI: net profit 103k EUR in Q1 2025 vs net loss 349k EUR in Q1 2024; EPS table shows basic and diluted EPS of 0.01 EUR in Q1 2025 vs -0.03 EUR in Q1 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit likewise improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Despite improved accounting profitability, operational cash consumption rose to 2,838 thousand euros from 2,217 thousand euros, reflecting active investment in ongoing construction and land acquisition.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow statement: net cash from operating activities was -2,838k EUR in Q1 2025 vs -2,217k EUR in Q1 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite improved accounting profitability, operational cash consumption rose to 2,838 thousand euros from 2,217 thousand euros, reflecting active investment in ongoing construction and land acquisition."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net financing inflows partially offset this pressure, resulting in a net cash outflow of 607 thousand euros and closing cash reserves at 1,113 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow statement: net cash flow was -607k EUR; cash and cash equivalents at end of period were 1,113k EUR as of 31 March 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net financing inflows partially offset this pressure, resulting in a net cash outflow of 607 thousand euros and closing cash reserves at 1,113 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "To fund pipeline expansion, the groups net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "KPI: net loans increased by 1,960k EUR to 15,455k EUR as of 31 March 2025; Note 12 shows total interest-bearing liabilities of 16,568k EUR as of 31 March 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "To fund pipeline expansion, the groups net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Importantly, the weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent, aligning with broader declines in the Euribor.",
+        "label": "SUPPORTED",
+        "source_evidence": "KPI: weighted average annual interest rate of interest-bearing liabilities was 8.2% as of 31 March 2025, a decrease of 0.5 percentage points compared to 31 December 2024; Liquidity and interest rate risks section attributes decline to Euribor.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Importantly, the weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent, aligning with broader declines in the Euribor."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total assets expanded to 42,728 thousand euros, with shareholders equity settling at 19,842 thousand euros and maintaining a healthy equity ratio of 46.4 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Balance sheet: total assets 42,728k EUR as of 31 March 2025; equity 19,842k EUR; Key Ratios table shows equity ratio of 46.4% for Q1 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total assets expanded to 42,728 thousand euros, with shareholders equity settling at 19,842 thousand euros and maintaining a healthy equity ratio of 46.4 percent."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Commercially, Arco Vara executed targeted sales and advanced its multi-year project roadmap.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report details sales execution and project advancements: Rannakalda, Soodi 6, Botanica Lozen, Spordi Street, Arcojärve, Kuldlehe progress.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Commercially, Arco Vara executed targeted sales and advanced its multi-year project roadmap."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Four residential units changed hands in the quarter, while pre-sale commitments strengthened across key developments.",
+        "label": "SUPPORTED",
+        "source_evidence": "KPI: 4 apartments sold in Q1 2025; Management Report: four additional apartments sold in Rannakalda Q1 2025; pre-sales mentioned for Soodi 6 and Botanica Lozen.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Four residential units changed hands in the quarter, while pre-sale commitments strengthened across key developments."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: Rannakalda total units sold reached 91 out of 113 in Q1 2025; Botanica Lozen reached 95% readiness with 9 of 16 houses sold by quarter-end.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Strategic land acquisitions included a new buildable plot at Spordi Street in Tallinn, earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating report: acquired property at Spordi 3a, 3b with plan for 56 apartments; construction to start late Q2 2025 and delivery by end of 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Strategic land acquisitions included a new buildable plot at Spordi Street in Tallinn, earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Broader market conditions remained anchored by stabilizing inflation and gradually improving buyer sentiment, which allowed the company to sustain pricing discipline while prioritizing cash conversion from completed inventory.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: continued decline of Euribor and stabilizing inflation contributed to increased transaction activity; price levels stabilized.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Broader market conditions remained anchored by stabilizing inflation and gradually improving buyer sentiment, which allowed the company to sustain pricing discipline while prioritizing cash conversion from completed inventory."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Management continues to balance near-term liquidity requirements with long-term capacity building, positioning the group for incremental volume recognition as detailed planning approvals finalize and major constructions transition into sales-ready phases.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO's Confirmation and Management Report discuss focus on completed units for cash flow and preparing for new projects; mentions detailed planning processes for Kodulahe, Arcojärve, etc.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Management continues to balance near-term liquidity requirements with long-term capacity building, positioning the group for incremental volume recognition as detailed planning approvals finalize and major constructions transition into sales-ready phases."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Group sales revenue reached 1,706 thousand euros, an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024.",
+        "candidate_value": "1,706 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,706 thousand euros",
+        "source_evidence": "Key Performance Indicators: group sales revenue was 1,706 thousand euros in Q1 2025 vs 990 thousand euros in Q1 2024.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Group sales revenue reached 1,706 thousand euros, an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Franchise fees totaling 65 thousand euros.",
+        "candidate_value": "65 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "65 thousand euros",
+        "source_evidence": "Operating report: franchise fees for Q1 2025 were 65 thousand euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This top-line growth stemmed primarily from higher domestic development sales, supplemented by franchise fees totaling 65 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period.",
+        "candidate_value": "259 thousand euro gain (vs 208 thousand euro loss)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "259 thousand euros (vs -208 thousand euros)",
+        "source_evidence": "Key Performance Indicators: operating profit 259k EUR in Q1 2025 vs operating loss 208k EUR in Q1 2024.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Supported by stronger margins and controlled overheads, operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros.",
+        "candidate_value": "103 thousand euros net profit (vs -349 thousand euros); EPS 0.01 euros (vs -0.03 euros)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "103 thousand euros net profit (vs -349 thousand euros); EPS 0.01 euros (vs -0.03 euros)",
+        "source_evidence": "KPI: net profit 103k EUR in Q1 2025 vs net loss 349k EUR in Q1 2024; EPS table shows 0.01 EUR vs -0.03 EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit likewise improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operational cash consumption rose to 2,838 thousand euros from 2,217 thousand euros.",
+        "candidate_value": "2,838 thousand euros (vs 2,217 thousand euros)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-2,838 thousand euros (vs -2,217 thousand euros)",
+        "source_evidence": "Cash flow statement: net cash from operating activities was -2,838k EUR in Q1 2025 vs -2,217k EUR in Q1 2024.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite improved accounting profitability, operational cash consumption rose to 2,838 thousand euros from 2,217 thousand euros, reflecting active investment in ongoing construction and land acquisition."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net cash outflow of 607 thousand euros and closing cash reserves at 1,113 thousand euros.",
+        "candidate_value": "607 thousand euros outflow; 1,113 thousand euros cash",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-607 thousand euros net cash flow; 1,113 thousand euros cash",
+        "source_evidence": "Cash flow statement: net cash flow -607k EUR; balance sheet shows cash and cash equivalents 1,113k EUR as of 31 March 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net financing inflows partially offset this pressure, resulting in a net cash outflow of 607 thousand euros and closing cash reserves at 1,113 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros.",
+        "candidate_value": "1,960 thousand euros increase to 15,455 thousand euros net loans; 16,568 thousand euros total debt",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,960 thousand euros increase to 15,455 thousand euros net loans; 16,568 thousand euros total interest-bearing liabilities",
+        "source_evidence": "KPI: net loans increased by 1,960k EUR to 15,455k EUR as of 31 March 2025; Note 12 shows total interest-bearing liabilities of 16,568k EUR as of 31 March 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "To fund pipeline expansion, the groups net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent.",
+        "candidate_value": "8.2 percent (down 0.5 percentage points)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.2 percent (down 0.5 percentage points)",
+        "source_evidence": "KPI: weighted average annual interest rate of interest-bearing liabilities was 8.2% as of 31 March 2025, a decrease of 0.5 percentage points compared to 31 December 2024.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Importantly, the weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent, aligning with broader declines in the Euribor."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total assets expanded to 42,728 thousand euros, with shareholders equity settling at 19,842 thousand euros and maintaining a healthy equity ratio of 46.4 percent.",
+        "candidate_value": "42,728 thousand euros assets; 19,842 thousand euros equity; 46.4 percent equity ratio",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42,728 thousand euros assets; 19,842 thousand euros equity; 46.4 percent equity ratio",
+        "source_evidence": "Balance sheet: total assets 42,728k EUR as of 31 March 2025; equity 19,842k EUR; Key Ratios table shows equity ratio of 46.4% for Q1 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total assets expanded to 42,728 thousand euros, with shareholders equity settling at 19,842 thousand euros and maintaining a healthy equity ratio of 46.4 percent."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Four residential units changed hands in the quarter.",
+        "candidate_value": "4",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4",
+        "source_evidence": "KPI: 4 apartments were sold in Q1 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Four residential units changed hands in the quarter, while pre-sale commitments strengthened across key developments."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold.",
+        "candidate_value": "91 of 113 apartments; 95% completion; 9 of 16 homes pre-sold",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "91 of 113 apartments sold; 95% readiness; 9 of 16 houses sold",
+        "source_evidence": "Management Report: Rannakalda total units sold to 91 out of 113 in Q1 2025; Botanica Lozen reached 95% readiness with 9 of 16 houses sold by quarter-end.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026.",
+        "candidate_value": "56 apartments; construction late Q2; delivery 2026",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "56 apartments; construction to start late Q2 2025; delivery by end of 2026",
+        "source_evidence": "Operating report: Spordi 3a, 3b development consists of 56 apartments; pre-sales begin Q2 2025; homeowners receive keys by end of 2026.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Strategic land acquisitions included a new buildable plot at Spordi Street in Tallinn, earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2025 revenue increased to EUR 1,706 thousand (72% YoY growth from EUR 990 thousand in Q1 2024), with operating profit of EUR 259 thousand (vs operating loss of EUR 208 thousand in Q1 2024) and net profit of EUR 103 thousand (vs net loss of EUR 349 thousand in Q1 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators table and Consolidated Statement of Comprehensive Income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Group sales revenue reached 1,706 thousand euros, an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024."
+          },
+          {
+            "id": "S4",
+            "text": "Supported by stronger margins and controlled overheads, operating profit shifted to a 259 thousand euro gain, reversing a 208 thousand euro operating loss in the prior year period."
+          },
+          {
+            "id": "S5",
+            "text": "Net profit likewise improved to 103 thousand euros from a 349 thousand euro loss, lifting basic and diluted earnings per share to 0.01 euros from minus 0.03 euros."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Net loans increased to EUR 15,455 thousand as of 31 March 2025, with the weighted average annual interest rate of interest-bearing liabilities decreasing to 8.2% (a reduction of 0.5 percentage points compared to 31 December 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators section and Note 12 (Interest bearing liabilities)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "To fund pipeline expansion, the groups net loan position grew by 1,960 thousand euros up to 15,455 thousand euros as of March 31, 2025, bringing total interest-bearing debt to 16,568 thousand euros."
+          },
+          {
+            "id": "S9",
+            "text": "Importantly, the weighted average annual borrowing cost declined by 0.5 percentage points to 8.2 percent, aligning with broader declines in the Euribor."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Estonia’s real estate market showed credible signs of revitalization in Q1 2025, with increased transaction activity, stabilized price levels, and declining Euribor rates supporting consumer interest and transaction volumes.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review (first paragraph)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Broader market conditions remained anchored by stabilizing inflation and gradually improving buyer sentiment, which allowed the company to sustain pricing discipline while prioritizing cash conversion from completed inventory."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "In the Rannakalda development (Kodulahe), four additional apartments were sold in Q1 2025, bringing the total units sold to 91 out of 113 (21 units remaining vacant as of the report publication date).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "The Soodi 6 project (Kodulahe VII etapp) has the detail plan issued, with 66 units (62 apartments and 4 commercial premises) planned; construction is expected to commence at the end of Q2 2025 and complete in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Arco Vara's Active Projects table",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Arco Vara acquired a development site at Spordi 3a, 3b in Tallinn during Q1 2025; the project comprises 56 apartments (7,600 m² gross building area) with a total investment of EUR 15 million; pre-sales will begin in Q2 2025, and handover is scheduled for the end of 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Operating report section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Strategic land acquisitions included a new buildable plot at Spordi Street in Tallinn, earmarked for 56 apartments with construction launching late in the second quarter and full delivery projected for 2026."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The Botanica Lozen project in Bulgaria reached 95% readiness for the first phase (16 houses) by the end of Q1 2025; nine of the 16 houses had been sold by quarter-end, with full completion expected by the end of Q2 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Operating report section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The Rannakalda portfolio saw cumulative deliveries reach 91 of 113 planned apartments, and the Botanica Lozen estate in Sofia approached 95 percent physical completion with nine of sixteen homes pre-sold."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Preparatory work for the Arcojärve project is progressing according to plan; the detailed plan approval is targeted in the coming months, with construction scheduled to begin at the end of 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Detailed planning for the Kodulahe development at Lammi 6 advanced significantly in Q1 2025; construction is anticipated to start in approximately two years from the report date.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "The Merivälja Kuldlehe exclusive cluster house development comprises five apartments; two have been sold to date, with three remaining vacant as of 31 March 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K8",
+      "K9",
+      "K10"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (financial performance), K2 (net loans and interest rates), K3 (market revitalization), K4 (Rannakalda sales progress), K6 (Arco Vara development site acquisition), and K7 (Botanica Lozen project progress). However, it omits the core material meaning of K5 (Soodi 6 project details), K8 (Arcojärve project status), K9 (Kodulahe development planning), and K10 (Merivälja Kuldlehe cluster house sales). The summary captures the main picture of financial and operational performance but lacks several important project-specific details, resulting in a 'Generally yes' score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon each other without contradiction: profitability improvements (S1, S4, S5) are logically supported by revenue growth (S2, S3) and margin management. Operational cash flow increases (S6) are clearly explained by investment activity. Balance sheet metrics (S8, S10) align with the profitability narrative without conflicting implications. The commercial execution details (S11-S13, S15) provide contextual support for financial performance. Organizational structure flows logically from financial highlights to operational updates to market context. No material repetitions or logical gaps are present, and all relationships between figures and explanations are internally consistent."
+  },
+  "usage": {
+    "input_tokens_total": 22018,
+    "output_tokens_total_including_reasoning": 6993,
+    "total_tokens": 29011,
+    "latency_seconds_total": 35.16
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 37630,
+    "output_tokens_total_including_reasoning": 49189,
+    "total_tokens": 86819,
+    "latency_seconds_total": 164.67
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_5.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_5_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_5_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_5_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_5_zero_shot_qwen36.json"
+    }
+  }
+}

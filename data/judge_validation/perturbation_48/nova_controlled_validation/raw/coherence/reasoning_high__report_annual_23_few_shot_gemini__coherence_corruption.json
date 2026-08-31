@@ -1,0 +1,178 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:55:58.508132",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_annual_23_few_shot_gemini__coherence_corruption.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "15003e40c91c6d1f",
+    "sentence_map_hash": "95d4e7db6be70a59",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the 2025 financial year, TKM Grupp AS experienced a weakening of financial performance amid a challenging economic environment, an environment characterized by low consumer confidence, high price sensitivity, and domestic tax changes in Estonia, notably the introduction of a motor vehicle tax.",
+    "S2": "Consolidated sales revenue declined by 2.6 percent to 919.6 million euros compared to 944.6 million euros in the previous year.",
+    "S3": "Consolidated sales revenue declined by 2.6 percent to 919.6 million euros compared to 944.6 million euros in the previous year.",
+    "S4": "Profitability contracted.",
+    "S5": "More significantly, with profit before tax falling by 31.4 percent to 24.3 million euros and net profit decreasing by 36.1 percent to 17.5 million euros.",
+    "S6": "Net profit per share dropped to 43 cents from 67 cents, it dropped, the per-share profit.",
+    "S7": "Effective cost control helped mitigate pressures from rising expenses, while net profit also benefited from lower borrowing interest costs.",
+    "S8": "Performance varied across the Group's segments.",
+    "S9": "The supermarkets segment generated revenue of 611.9 million euros, a modest increase of 0.3 percent, while net profit declined by 38.6 percent to 9.5 million euros due to a higher share of promotional products and lower consumer purchasing power.",
+    "S10": "The department stores segment saw revenue decrease by 1.1 percent to 103.0 million euros, resulting in a net loss of 0.5 million euros.",
+    "S11": "The department stores segment saw revenue decrease by 1.1 percent to 103.0 million euros, resulting in a net loss of 0.5 million euros.",
+    "S12": "The car trade segment was severely impacted, with revenue dropping by 11.9 percent to 176.9 million euros and net profit falling by 54.4 percent to 4.3 million euros, driven by a sharp contraction, the car market, following the tax introduction.",
+    "S13": "This domestic weakness was partially cushioned by stable operations in Latvian and Lithuanian subsidiaries, and this weakness, it was cushioned.",
+    "S14": "The security segment reported external revenue of 20.1 million euros, an 8.1 percent decrease, with net profit at zero.",
+    "S15": "Conversely, the real estate segment increased external revenue by 5.1 percent to 7.7 million euros, supported by rental income from a new logistics centre, and net profit rose to 6.3 million euros despite the comparative period including one-off property sale gains and revaluations.",
+    "S16": "Total investments during 2025 amounted to 25.5 million euros, down from 36.6 million euros in 2024, directed toward store refurbishments, digital upgrades, and a new car centre in Vilnius.",
+    "S17": "Cash and cash equivalents decreased from 45.5 million euros to 29.5 million euros at year-end, and working capital was negative at 14.1 million euros due to the classification of long-term loans maturing in 2026, totaling 32.1 million euros, as current liabilities ahead of planned refinancing.",
+    "S18": "In January 2026, the Group agreed to acquire additional vehicle retail companies in Estonia to expand its car segment operations."
+  },
+  "usage": {
+    "input_tokens": 1308,
+    "output_tokens_including_reasoning": 361,
+    "total_tokens": 1669
+  },
+  "latency_seconds": 2.33,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 2,\n  \"label\": \"Neutral/Mixed\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\"],\n      \"description\": \"Sentences S2 and S3 are identical, providing no new information and reducing clarity.\"\n    },\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S10\", \"S11\"],\n      \"description\": \"Sentences S10 and S11 are identical, repeating the same information about the department stores segment.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"description\": \"Sentence S6 contains redundant phrasing ('it dropped, the per-share profit') and awkward structure, weakening clarity.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"description\": \"Sentence S13 contains redundant phrasing ('this weakness, it was cushioned') and awkward structure.\"\n    }\n  ],\n  \"justification\": \"The summary exhibits several issues that reduce its internal coherence. There are clear instances of unnecessary repetition (S2/S3 and S10/S11) that do not add new information and weaken the flow. Sentence S6 contains redundant phrasing and awkward structure, and S13 similarly has repetitive language. While the overall structure follows a logical sequence from consolidated performance to segment details and then to investments and cash positions, these repetitions and structural issues prevent the summary from achieving full coherence. There are no self-contradictions or logical gaps, and the segment figures are presented without implying they should arithmetically sum to the consolidated total.\"\n}\n```",
+  "evaluation": {
+    "score": 2,
+    "label": "Neutral/Mixed",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "description": "Sentences S2 and S3 are identical, providing no new information and reducing clarity."
+      },
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11"
+        ],
+        "description": "Sentences S10 and S11 are identical, repeating the same information about the department stores segment."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "description": "Sentence S6 contains redundant phrasing ('it dropped, the per-share profit') and awkward structure, weakening clarity."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "description": "Sentence S13 contains redundant phrasing ('this weakness, it was cushioned') and awkward structure."
+      }
+    ],
+    "justification": "The summary exhibits several issues that reduce its internal coherence. There are clear instances of unnecessary repetition (S2/S3 and S10/S11) that do not add new information and weaken the flow. Sentence S6 contains redundant phrasing and awkward structure, and S13 similarly has repetitive language. While the overall structure follows a logical sequence from consolidated performance to segment details and then to investments and cash positions, these repetitions and structural issues prevent the summary from achieving full coherence. There are no self-contradictions or logical gaps, and the segment figures are presented without implying they should arithmetically sum to the consolidated total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

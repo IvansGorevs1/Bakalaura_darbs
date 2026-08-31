@@ -1,0 +1,957 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_12_few_shot_openai.txt",
+    "report": "report_annual_12.md",
+    "report_type": "annual_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Konsolidator delivered materially improved financial performance in 2025, combining stronger growth with lower costs and a substantially reduced operating loss.",
+    "S2": "Revenue increased 25% to DKK 25.3m from DKK 20.3m in 2024.",
+    "S3": "Subscription revenue rose to DKK 20.6m from DKK 18.3m, while onboarding and consulting revenue increased 134% to DKK 4.7m, supported by higher onboarding fees introduced for new customers.",
+    "S4": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia.",
+    "S5": "Profitability improved significantly.",
+    "S6": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m, while EBIT loss decreased to DKK 5.1m from DKK 12.1m.",
+    "S7": "The net loss was reduced to DKK 6.6m from DKK 14.9m, partly supported by a DKK 1.0m positive change in deferred tax.",
+    "S8": "Cost reductions were an important contributor: external expenses fell 11% to DKK 6.3m, and staff costs after capitalized wages declined to DKK 21.1m from DKK 22.0m despite a higher average workforce.",
+    "S9": "Outsourcing marketing activities, reduced advertising and consulting expenditure, and the transfer of customer-success activities in Sweden and Norway to Exsitec supported operating efficiency.",
+    "S10": "Other operating income of DKK 2.0m also positively affected EBITDA.",
+    "S11": "The second half showed an important operating improvement, with EBITDA of DKK 0.5m compared with a DKK 3.6m loss in the corresponding period of 2024.",
+    "S12": "Operating cash flow for the full year improved from an outflow of DKK 9.2m to DKK 1.0m, while net cash flow was slightly positive at DKK 11,000.",
+    "S13": "The company raised DKK 4.8m through two private placements, but cash remained limited at DKK 0.4m at year-end.",
+    "S14": "Debt repayments began in July, and total borrowings were DKK 14.1m.",
+    "S15": "Consolidated equity remained negative at DKK 3.6m, although the parent company reported positive equity of DKK 0.7m.",
+    "S16": "Recurring-revenue indicators also strengthened.",
+    "S17": "Contracted ARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period improved from 43 to 23 months.",
+    "S18": "The Rule of 40 score improved from negative 40% to 17%, and CLV/CAC increased from 2.7 to 4.1.",
+    "S19": "However, ARR churn worsened to 12.6% from 10.5%, while net retention remained 94%.",
+    "S20": "The launch of the Konsolidator Suite, including financial data management, analytics, and FP&A capabilities, was the central strategic development.",
+    "S21": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_12.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_12.json",
+    "key_information_hash": "bd7466c557ea2ace",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 0.966667,
+      "correct": 29,
+      "incorrect": 1,
+      "total": 30
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 0,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Konsolidator delivered materially improved financial performance in 2025, combining stronger growth with lower costs and a substantially reduced operating loss.",
+        "label": "SUPPORTED",
+        "source_evidence": "H2 2025 showed a positive EBITDA of DKK 0.5m compared with a DKK 3.6m loss in H2 2024; revenue increased 25% to DKK 25.3m; staff costs and external expenses decreased, and the net loss narrowed to DKK 6.6m from DKK 14.9m.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Konsolidator delivered materially improved financial performance in 2025, combining stronger growth with lower costs and a substantially reduced operating loss."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia.",
+        "label": "SUPPORTED",
+        "source_evidence": "By year-end Konsolidator served 283 active customers with 52 new customers joined during 2025; geographic expansion included Portugal, Chile, France, and Malaysia as new markets.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Profitability improved significantly.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m and the net loss decreased to DKK 6.6m from DKK 14.9m, reflecting better cost control and higher operating income.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Profitability improved significantly."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Outsourcing marketing activities, reduced advertising and consulting expenditure, and the transfer of customer-success activities in Sweden and Norway to Exsitec supported operating efficiency.",
+        "label": "SUPPORTED",
+        "source_evidence": "In 2024 Konsolidator outsourced many marketing activities; advertising and consulting costs fell 11%; in September 2025 an agreement with Exsitec AB moved customer-success activities for Sweden and Norway to the partner.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Outsourcing marketing activities, reduced advertising and consulting expenditure, and the transfer of customer-success activities in Sweden and Norway to Exsitec supported operating efficiency."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Debt repayments began in July.",
+        "label": "SUPPORTED",
+        "source_evidence": "In July 2025 repayment of the loans to EIFO and 2L Kapital A/S commenced, with quarterly fixed installment payments of DKK 1.2m.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Debt repayments began in July, and total borrowings were DKK 14.1m."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Recurring-revenue indicators also strengthened.",
+        "label": "SUPPORTED",
+        "source_evidence": "CARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period shortened from 43 to 23 months, showing healthier subscription dynamics.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Recurring-revenue indicators also strengthened."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The launch of the Konsolidator Suite, including financial data management, analytics, and FP&A capabilities, was the central strategic development.",
+        "label": "SUPPORTED",
+        "source_evidence": "2025 saw the expansion from a single consolidation tool to the Konsolidator Suite, featuring a Financial Data Management solution (launched April 2025), The Hub analytics platform, and the first version of the FP&A tool (development started May 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The launch of the Konsolidator Suite, including financial data management, analytics, and FP&A capabilities, was the central strategic development."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue increased 25% to DKK 25.3m from DKK 20.3m in 2024.",
+        "candidate_value": "DKK 25.3m (25% increase from DKK 20.3m)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 25,282k in 2025 vs DKK 20,268k in 2024 (25% increase)",
+        "source_evidence": "Revenue increased to DKK 25.3m in 2025 compared to DKK 20.3m in 2024, a 25% improvement.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Revenue increased 25% to DKK 25.3m from DKK 20.3m in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Subscription revenue rose to DKK 20.6m from DKK 18.3m.",
+        "candidate_value": "DKK 20.6m (from DKK 18.3m)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 20,621k in 2025 vs DKK 18,278k in 2024",
+        "source_evidence": "Subscription fees increased from DKK 18.3m in 2024 to DKK 20.6m in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Subscription revenue rose to DKK 20.6m from DKK 18.3m, while onboarding and consulting revenue increased 134% to DKK 4.7m, supported by higher onboarding fees introduced for new customers."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Onboarding and consulting revenue increased 134% to DKK 4.7m.",
+        "candidate_value": "DKK 4.7m (134% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 4,661k in 2025 vs DKK 1,990k in 2024 (134% increase)",
+        "source_evidence": "Onboarding and consulting fees increased by 134% to DKK 4.7m, driven by higher onboarding fees for new customers.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Subscription revenue rose to DKK 20.6m from DKK 18.3m, while onboarding and consulting revenue increased 134% to DKK 4.7m, supported by higher onboarding fees introduced for new customers."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m.",
+        "candidate_value": "DKK 2.0m (from DKK 9.3m loss)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA loss of DKK 1,990k in 2025 vs DKK 9,290k loss in 2024",
+        "source_evidence": "EBITDA loss summarised to DKK 2.0m in 2025 compared with a loss of DKK 9.3m in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m, while EBIT loss decreased to DKK 5.1m from DKK 12.1m."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBIT loss decreased to DKK 5.1m from DKK 12.1m.",
+        "candidate_value": "DKK 5.1m (from DKK 12.1m loss)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBIT loss of DKK 5,077k in 2025 vs DKK 12,055k loss in 2024",
+        "source_evidence": "EBIT loss improved to DKK 5.1m compared with DKK 12.1m in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m, while EBIT loss decreased to DKK 5.1m from DKK 12.1m."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net loss was reduced to DKK 6.6m from DKK 14.9m.",
+        "candidate_value": "DKK 6.6m (from DKK 14.9m loss)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Profit/loss for the year DKK (6,621k) in 2025 vs DKK (14,866k) in 2024",
+        "source_evidence": "The loss for 2025 was DKK 6.6m, compared to DKK 14.9m in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The net loss was reduced to DKK 6.6m from DKK 14.9m, partly supported by a DKK 1.0m positive change in deferred tax."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Positive change in deferred tax of DKK 1.0m supported the loss reduction.",
+        "candidate_value": "DKK 1.0m positive change",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 1,241k corporation tax for the year includes a DKK 1.0m positive change in deferred tax",
+        "source_evidence": "In 2025, the loss was positively impacted by a change in deferred tax of DKK 1m, compared to 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The net loss was reduced to DKK 6.6m from DKK 14.9m, partly supported by a DKK 1.0m positive change in deferred tax."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "External expenses fell 11% to DKK 6.3m.",
+        "candidate_value": "DKK 6.3m (11% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 6,289k in 2025 vs DKK 7,030k in 2024 (11% decrease)",
+        "source_evidence": "External expenses amounted to DKK 6.3m in 2025, down 11% from DKK 7.0m in 2024 due to reduced advertising and consulting spend.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Cost reductions were an important contributor: external expenses fell 11% to DKK 6.3m, and staff costs after capitalized wages declined to DKK 21.1m from DKK 22.0m despite a higher average workforce."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Staff costs after capitalized wages declined to DKK 21.1m from DKK 22.0m.",
+        "candidate_value": "DKK 21.1m (from DKK 22.0m)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 21,098k in 2025 vs DKK 21,966k in 2024",
+        "source_evidence": "Staff costs after capitalized wages and salaries were DKK 21.1m in 2025 compared with DKK 22.0m in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Cost reductions were an important contributor: external expenses fell 11% to DKK 6.3m, and staff costs after capitalized wages declined to DKK 21.1m from DKK 22.0m despite a higher average workforce."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Other operating income was DKK 2.0m.",
+        "candidate_value": "DKK 2.0m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 2,026k",
+        "source_evidence": "Other operating income amounted to DKK 2.0m, positively impacting EBITDA.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Other operating income of DKK 2.0m also positively affected EBITDA."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "H2 EBITDA was DKK 0.5m compared with a DKK 3.6m loss in the corresponding period of 2024.",
+        "candidate_value": "DKK 0.5m (vs DKK 3.6m loss)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA profit of DKK 538k in H2 2025 vs loss of DKK 3,631k in H2 2024",
+        "source_evidence": "H2 2025 showed a positive EBITDA by DKK 0.5m compared to a loss in H2 2024 by DKK 3.6m.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The second half showed an important operating improvement, with EBITDA of DKK 0.5m compared with a DKK 3.6m loss in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Operating cash flow improved from an outflow of DKK 9.2m to DKK 1.0m.",
+        "candidate_value": "DKK 1.0m (from DKK 9.2m outflow)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cash flow from operating activities DKK (1,047k) vs DKK (9,171k)",
+        "source_evidence": "Cash flow from operating activities was negative by DKK 1.0m in 2025 compared to the negative cash flow of DKK 9.2m in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Operating cash flow for the full year improved from an outflow of DKK 9.2m to DKK 1.0m, while net cash flow was slightly positive at DKK 11,000."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net cash flow for the year was slightly positive at DKK 11,000.",
+        "candidate_value": "DKK 11,000",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net cash flow for the year DKK 11k",
+        "source_evidence": "Net cash flow for 2025 was positive by DKK 0.01m compared to net cash flow of DKK (1.5m) for 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Operating cash flow for the full year improved from an outflow of DKK 9.2m to DKK 1.0m, while net cash flow was slightly positive at DKK 11,000."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company raised DKK 4.8m through two private placements.",
+        "candidate_value": "DKK 4.8m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 4,802k from capital increase",
+        "source_evidence": "In 2025, Konsolidator secured additional equity through two successful private placements, raising a total of DKK 4.8m.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company raised DKK 4.8m through two private placements, but cash remained limited at DKK 0.4m at year-end."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Cash and cash equivalents were DKK 0.4m at year-end.",
+        "candidate_value": "DKK 0.4m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 370k",
+        "source_evidence": "Cash and cash equivalents amounted to DKK 0.4m on December 31, 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company raised DKK 4.8m through two private placements, but cash remained limited at DKK 0.4m at year-end."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Total borrowings were DKK 14.1m.",
+        "candidate_value": "DKK 14.1m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 14,066k (credit institutions DKK 6,119k + other loans DKK 6,603k + participation loan DKK 1,344k)",
+        "source_evidence": "Credit institutions and other loans totalled DKK 14.1m at year-end, including the DKK 1.3m participation loan.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Debt repayments began in July, and total borrowings were DKK 14.1m."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Consolidated equity remained negative at DKK 3.6m, while parent company equity was positive at DKK 0.7m.",
+        "candidate_value": "DKK (3.6m) consolidated, DKK 0.7m parent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Consolidated equity DKK (3,583k), parent company equity DKK 701k",
+        "source_evidence": "On December 31, 2025, the consolidated equity was negative by DKK 3.6m compared to a positive equity of DKK 0.7m for Konsolidator A/S.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Consolidated equity remained negative at DKK 3.6m, although the parent company reported positive equity of DKK 0.7m."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "CARR increased 15% to DKK 24.4m.",
+        "candidate_value": "DKK 24.4m (15% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 24,388k (15% increase from DKK 21,291k)",
+        "source_evidence": "Contracted Annual Recurring Revenue (CARR) increased by 15% to DKK 24.4m on December 31, 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Contracted ARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period improved from 43 to 23 months."
+          }
+        ]
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "New sales rose 45% to DKK 4.5m.",
+        "candidate_value": "DKK 4.5m (45% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 4,500k new sales (45% YoY increase)",
+        "source_evidence": "New sales rose 45% year-over-year to DKK 4.5m.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Contracted ARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period improved from 43 to 23 months."
+          }
+        ]
+      },
+      {
+        "id": "N20",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "CAC payback period improved from 43 to 23 months.",
+        "candidate_value": "23 months (from 43 months)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "23 months in 2025 vs 43 months in 2024",
+        "source_evidence": "The CAC Payback Period was down to 23 months in 2025 from 43 months in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Contracted ARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period improved from 43 to 23 months."
+          }
+        ]
+      },
+      {
+        "id": "N21",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Rule of 40 score improved from negative 40% to 17%.",
+        "candidate_value": "17% (from -40%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Rule of 40 score 17% in 2025 vs -40% in 2024",
+        "source_evidence": "The Rule of 40 score improved to 17% at year-end 2025, up from -40% in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Rule of 40 score improved from negative 40% to 17%, and CLV/CAC increased from 2.7 to 4.1."
+          }
+        ]
+      },
+      {
+        "id": "N22",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "CLV/CAC increased from 2.7 to 4.1.",
+        "candidate_value": "4.1 (from 2.7)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "CLV/CAC 4.1 in 2025 vs 2.7 in 2024",
+        "source_evidence": "CLV/CAC climbed from 2.7 in 2024 to 4.1 in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Rule of 40 score improved from negative 40% to 17%, and CLV/CAC increased from 2.7 to 4.1."
+          }
+        ]
+      },
+      {
+        "id": "N23",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "ARR churn worsened to 12.6% from 10.5%.",
+        "candidate_value": "12.6% (from 10.5%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ARR churn rate 12.6% in 2025 vs 10.5% in 2024",
+        "source_evidence": "In 2025, ARR churn rate was 12.6% compared to 10.5% in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "However, ARR churn worsened to 12.6% from 10.5%, while net retention remained 94%."
+          }
+        ]
+      },
+      {
+        "id": "N24",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Net retention remained at 94%.",
+        "candidate_value": "94%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "94% in 2025 and 2024",
+        "source_evidence": "Net Retention remained unchanged compared to 2024 at 94%.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "However, ARR churn worsened to 12.6% from 10.5%, while net retention remained 94%."
+          }
+        ]
+      },
+      {
+        "id": "N25",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "2026 guidance for CARR is DKK 27–29m.",
+        "candidate_value": "DKK 27–29m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 27–29m",
+        "source_evidence": "Financial guidance for 2026: CARR DKK 27–29m.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+          }
+        ]
+      },
+      {
+        "id": "N26",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "2026 guidance for revenue is DKK 27–29m.",
+        "candidate_value": "DKK 27–29m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 27–29m",
+        "source_evidence": "Financial guidance for 2026: Revenue DKK 27–29m.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+          }
+        ]
+      },
+      {
+        "id": "N27",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "2026 guidance for EBITDA is DKK 1–2m.",
+        "candidate_value": "DKK 1–2m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 1–2m",
+        "source_evidence": "Financial guidance for 2026: EBITDA DKK 1–2m.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+          }
+        ]
+      },
+      {
+        "id": "N28",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "2026 target churn is 6–9%.",
+        "candidate_value": "6–9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6–9%",
+        "source_evidence": "Churn is expected to decline to a level between 6–9% in 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+          }
+        ]
+      },
+      {
+        "claim": "283 active customers",
+        "candidate_value": "283",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "283",
+        "source_evidence": "MARKET GLANCE section: 'Customers 2025 283'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "id": "N29",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia."
+          }
+        ]
+      },
+      {
+        "claim": "51–52 new customers signed during the year",
+        "candidate_value": "51–52",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "52",
+        "source_evidence": "LETTER FROM THE CHAIR AND CEO: 'welcomed 52 new customers' and SAAS METRICS 2025: 'Konsolidator signed 52 new customers during the year'",
+        "error_explanation": "Source reports exactly 52 new customers, not a range of 51–52.",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "id": "N30",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Revenue increased 25% to DKK 25.3m in 2025 from DKK 20.3m in 2024, with EBITDA loss improving by 77% to DKK 2.0m from DKK 9.3m in 2024; H2 2025 achieved positive EBITDA of DKK 0.5m compared to H2 2024 loss of DKK 3.6m.",
+        "importance": "HIGH",
+        "source_evidence": "Pages 24-25 (Periodic Reporting), Page 29 (Financial Highlights), Page 30 (Financial Review)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Revenue increased 25% to DKK 25.3m from DKK 20.3m in 2024."
+          },
+          {
+            "id": "S6",
+            "text": "EBITDA loss narrowed to DKK 2.0m from DKK 9.3m, while EBIT loss decreased to DKK 5.1m from DKK 12.1m."
+          },
+          {
+            "id": "S11",
+            "text": "The second half showed an important operating improvement, with EBITDA of DKK 0.5m compared with a DKK 3.6m loss in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Contracted Annual Recurring Revenue (CARR) grew 15% to DKK 24.4m; new sales rose 45% to DKK 4.5m; Customer Acquisition Cost (CAC) payback period improved to 23 months from 43 months; ARR churn rate increased to 12.6% from 10.5%.",
+        "importance": "HIGH",
+        "source_evidence": "Pages 26-27 (SaaS Metrics), Page 28 (Definitions & Calculations)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Contracted ARR increased 15% to DKK 24.4m, new sales rose 45% to DKK 4.5m, and the CAC payback period improved from 43 to 23 months."
+          },
+          {
+            "id": "S19",
+            "text": "However, ARR churn worsened to 12.6% from 10.5%, while net retention remained 94%."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Expanded product suite from consolidation tool to Konsolidator Suite, including Financial Planning & Analysis (FP&A) tool launched in January 2026 and Financial Data Management solution launched in April 2025, enhancing OCFO integration and customer lifetime value.",
+        "importance": "HIGH",
+        "source_evidence": "Pages 12-13 (Strategy: Build, Buy, Partner), Pages 18-19 (Product expansion details)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The launch of the Konsolidator Suite, including financial data management, analytics, and FP&A capabilities, was the central strategic development."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Acquired 52 new customers (38% via partners), increasing average customer size to TDKK 87 from TDKK 70; partner-driven growth model reduced customer acquisition costs and enabled geographic expansion into Portugal, Chile, France, and Malaysia.",
+        "importance": "HIGH",
+        "source_evidence": "Page 8 (Letter from Chair), Page 24 (Key events), Page 15 (Market expansion)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Operational efficiency improved through marketing department restructuring (saving DKK 3m) and optimized onboarding processes reducing churn terminations, contributing to cost discipline and improved cash flow from primary activities.",
+        "importance": "MEDIUM",
+        "source_evidence": "Page 8 (Letter from CEO), Page 13 (Resilience pillar), Page 30 (Financial Review)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Cost reductions were an important contributor: external expenses fell 11% to DKK 6.3m, and staff costs after capitalized wages declined to DKK 21.1m from DKK 22.0m despite a higher average workforce."
+          },
+          {
+            "id": "S9",
+            "text": "Outsourcing marketing activities, reduced advertising and consulting expenditure, and the transfer of customer-success activities in Sweden and Norway to Exsitec supported operating efficiency."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Secured DKK 4.8m via two private placements in 2025 to fund operations and product development; parent company Konsolidator A/S maintained positive equity of DKK 0.7m despite consolidated negative equity of DKK 3.6m.",
+        "importance": "MEDIUM",
+        "source_evidence": "Page 8 (Equity & Funding), Page 41 (Shareholder information)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company raised DKK 4.8m through two private placements, but cash remained limited at DKK 0.4m at year-end."
+          },
+          {
+            "id": "S15",
+            "text": "Consolidated equity remained negative at DKK 3.6m, although the parent company reported positive equity of DKK 0.7m."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "2026 guidance targets CARR of DKK 27-29m, revenue of DKK 27-29m, and EBITDA of DKK 1-2m, based on disciplined cost control, partner model expansion, and new product adoption; expects churn to decline to 6-9% and positive operating cash flow.",
+        "importance": "HIGH",
+        "source_evidence": "Page 32 (Outlook 2026)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "For 2026, management guides for CARR and revenue of DKK 27–29m and positive EBITDA of DKK 1–2m, while targeting churn of 6–9%."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Konsolidator Iberia grew 200% to 30 customers in its first year (2024-2025), becoming the third-largest market; local team of 8 employees leverages Microsoft ecosystem and partner model for mid-market focus in Spain/Portugal with plans for LATAM expansion in 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Page 21 (Insight: Konsolidator Iberia)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company reached 283 active customers, signed 51–52 new customers during the year, and expanded into Portugal, Chile, France, and Malaysia."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All eight key information units are adequately represented in the candidate summary. K1 is covered by S2 (revenue growth), S6 (EBITDA loss improvement), and S11 (H2 positive EBITDA). K2 is covered by S17 (CARR growth, new sales, CAC payback) and S19 (churn rate). K3 is covered by S20 (product suite expansion). K4 is covered by S4 (new customers and geographic expansion). K5 is covered by S8 and S9 (cost reductions and efficiency measures). K6 is covered by S13 and S15 (private placements and equity positions). K7 is covered by S21 (2026 guidance targets). K8 is covered by S4 (Iberia expansion and new markets). No material omissions affect the overall understanding.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements logically support the overall narrative of improved financial performance in 2025. There are no self-contradictions: profitability metrics (EBITDA, EBIT, net loss) consistently show improvement. The revenue growth explanations (subscription, onboarding/consulting) align with stated customer metrics. Cost reduction initiatives are clearly described and tied to operating efficiency. Strategic developments (Konsolidator Suite launch) and future guidance are presented without conflicting with past performance statements. While some metrics show mixed signals (e.g., ARR churn increase vs. net retention), these are presented as separate facts without contradiction. The structure flows logically from overall performance to revenue breakdown, profitability, cost management, cash flow, and future guidance."
+  },
+  "usage": {
+    "input_tokens_total": 108043,
+    "output_tokens_total_including_reasoning": 13001,
+    "total_tokens": 121044,
+    "latency_seconds_total": 73.24
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 105700,
+    "output_tokens_total_including_reasoning": 49606,
+    "total_tokens": 155306,
+    "latency_seconds_total": 152.85
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_12.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_12_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_12.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_12.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_12_few_shot_openai.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_12_few_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_12_few_shot_openai.json"
+    }
+  }
+}

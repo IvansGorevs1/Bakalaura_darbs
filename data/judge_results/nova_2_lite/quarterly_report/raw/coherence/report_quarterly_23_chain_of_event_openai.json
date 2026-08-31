@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T22:13:56.603322",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_23_chain_of_event_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "2aa6c5c60aa4a573",
+    "sentence_map_hash": "d24a3004730b0281",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "For the nine months ended 30 September 2025, AB KN Energies reported consolidated revenue of EUR 76.664 million, up 12.8% from EUR 67.977 million in the same period of 2024.",
+    "S2": "Gross profit increased 7.9% to EUR 31.549 million, although the gross margin narrowed from approximately 43.0% to 41.1% as cost of sales rose 16.5% to EUR 45.115 million.",
+    "S3": "Operating profit grew 12.4% to EUR 21.282 million despite distribution and administrative expenses increasing 2.1% to EUR 10.640 million.",
+    "S4": "Profit before tax rose 8.6% to EUR 16.186 million, while net profit increased 10.9% to EUR 13.158 million.",
+    "S5": "Earnings per share improved from EUR 0.031 to EUR 0.035.",
+    "S6": "Total comprehensive income reached EUR 13.215 million, compared with EUR 11.615 million in 2024.",
+    "S7": "The company’s separate net profit increased 8.5%, from EUR 10.702 million to EUR 11.613 million.",
+    "S8": "The main contributor to revenue growth was LNG terminal activity.",
+    "S9": "LNG regasification and reloading revenue increased to EUR 43.640 million from EUR 31.401 million, supported by the terminal’s full operation in 2025 after a one-and-a-half-month dry-dock outage in 2024, higher regasification volumes, and bonuses from clients for booked capacity.",
+    "S10": "Liquid energy transshipment revenue increased to EUR 21.375 million from EUR 20.241 million, while consulting revenue rose to EUR 7.507 million from EUR 3.961 million.",
+    "S11": "These gains were partly offset by lower revenue from other LNG terminal activities, mainly because clients made fewer payments for unused allocated capacity, and by a EUR 2.753 million reduction in LNG security supplement income related to repayment of excess regulated returns from 2022–2023.",
+    "S12": "Cost growth was influenced by significantly higher depreciation and amortisation following the acquisition of the floating storage and regasification unit in December 2024.",
+    "S13": "Depreciation and amortisation included EUR 11.369 million of FSRU depreciation in 2025, whereas related depreciation had previously been classified largely as right-of-use depreciation.",
+    "S14": "FSRU operation and maintenance costs also increased to EUR 6.602 million from EUR 5.698 million, while environmental taxes and emission allowance costs rose to EUR 3.892 million from EUR 2.009 million.",
+    "S15": "Operating cash flow more than doubled to EUR 76.331 million from EUR 35.637 million.",
+    "S16": "After investing and financing outflows, cash increased to EUR 54.398 million from EUR 17.203 million at year-end 2024.",
+    "S17": "Total equity rose to EUR 167.721 million after EUR 13.158 million of profit, partly offset by EUR 8.622 million in dividends.",
+    "S18": "No significant subsequent events were reported."
+  },
+  "usage": {
+    "input_tokens": 1283,
+    "output_tokens_including_reasoning": 182,
+    "total_tokens": 1465
+  },
+  "latency_seconds": 1.43,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S7\", \"S4\"],\n      \"description\": \"S7 repeats the net profit increase already mentioned in S4, adding no new information and creating redundancy.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with logical relationships between revenue growth, cost increases, and profitability metrics. Explanations for changes (e.g., dry-dock outage, FSRU acquisition) are clear and contextually linked. However, S7 repeats the net profit increase already stated in S4, creating unnecessary repetition that slightly reduces clarity. No self-contradictions or logical gaps are present, and the structure flows logically from revenue through to cash and equity.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S7",
+          "S4"
+        ],
+        "description": "S7 repeats the net profit increase already mentioned in S4, adding no new information and creating redundancy."
+      }
+    ],
+    "justification": "The summary is generally coherent with logical relationships between revenue growth, cost increases, and profitability metrics. Explanations for changes (e.g., dry-dock outage, FSRU acquisition) are clear and contextually linked. However, S7 repeats the net profit increase already stated in S4, creating unnecessary repetition that slightly reduces clarity. No self-contradictions or logical gaps are present, and the structure flows logically from revenue through to cash and equity."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

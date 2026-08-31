@@ -1,0 +1,684 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_23_chain_of_event_qwen36.txt",
+    "report": "report_quarterly_23.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AB KN Energies reported consolidated revenue of EUR 76,664 thousand for the nine months ended 30 September 2025, representing a twelve point eight percent increase compared to EUR 67,977 thousand in the same period of 2024.",
+    "S2": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously.",
+    "S3": "Basic earnings per share rose to EUR 0.035 from EUR 0.031.",
+    "S4": "The Group generated robust operating cash flows of EUR 76,331 thousand, more than doubling the prior year figure of EUR 35,637 thousand, ultimately strengthening its cash and cash equivalents position to EUR 54,398 thousand at quarter end.",
+    "S5": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024.",
+    "S6": "Management explicitly attributes this segment expansion to the absence of the one and a half month dry dock maintenance outage that reduced 2024 output, coupled with higher regasification volumes and additional capacity booking bonuses paid by clients.",
+    "S7": "Liquid energy terminal revenues also saw modest growth to EUR 21,856 thousand from EUR 21,066 thousand.",
+    "S8": "These gains were partially offset by a reduction in security supplement income related to regulated excess return repayments, which decreased other LNG terminal sales.",
+    "S9": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, mainly reflecting an accounting change following the acquisition and subsequent reclassification of the Floating Storage and Regasification Unit from right of use assets to property, plant and equipment in December 2024.",
+    "S10": "This adjustment reclassified approximately EUR 11,369 thousand of annualized depreciation into cost of sales, whereas it was previously recognized under operating expenses.",
+    "S11": "Operating expenses remained relatively stable at EUR 10,640 thousand, demonstrating effective cost management despite a slight rise in average headcount and wage costs.",
+    "S12": "Total borrowings declined marginally to EUR 311,443 thousand, resulting in a minor reduction in finance costs to EUR 6,616 thousand.",
+    "S13": "Total equity grew to EUR 167,721 thousand, supported by retained earnings and the declaration of higher dividends amounting to EUR 8,622 thousand.",
+    "S14": "Overall, the reporting period demonstrates enhanced operational throughput, improved cash generation, and stabilized leverage following infrastructure normalization."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_23.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_23.json",
+    "key_information_hash": "a646a38065a4d96c",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 14,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 14
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AB KN Energies reported consolidated revenue of EUR 76,664 thousand for the nine months ended 30 September 2025, representing a twelve point eight percent increase compared to EUR 67,977 thousand in the same period of 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Statement of Comprehensive Income (GROUP) shows Revenue from contracts with customers of EUR 76,664 thousand for 9 months of 2025 vs EUR 67,977 thousand for 9 months of 2024. The percentage increase aligns with the candidate's calculation.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AB KN Energies reported consolidated revenue of EUR 76,664 thousand for the nine months ended 30 September 2025, representing a twelve point eight percent increase compared to EUR 67,977 thousand in the same period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "Statement of Comprehensive Income (GROUP) shows Operating profit of EUR 21,282 thousand for 9 months of 2025 vs EUR 18,942 thousand for 9 months of 2024, and Profit for the year of EUR 13,158 thousand vs EUR 11,862 thousand. The percentage increases match the candidate's figures.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Basic earnings per share rose to EUR 0.035 from EUR 0.031.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 17 (Earnings per share) states Basic earnings per share were EUR 0.035 for 9 months of 2025 and EUR 0.031 for 9 months of 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Basic earnings per share rose to EUR 0.035 from EUR 0.031."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The Group generated robust operating cash flows of EUR 76,331 thousand, more than doubling the prior year figure of EUR 35,637 thousand, ultimately strengthening its cash and cash equivalents position to EUR 54,398 thousand at quarter end.",
+        "label": "SUPPORTED",
+        "source_evidence": "Statement of Cash Flow shows Net cash flows from operating activities of EUR 76,331 thousand for GROUP in 9 months of 2025 vs EUR 35,637 thousand in 9 months of 2024. Cash and cash equivalents at 30 September 2025 were EUR 54,398 thousand (Statement of Financial Position).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The Group generated robust operating cash flows of EUR 76,331 thousand, more than doubling the prior year figure of EUR 35,637 thousand, ultimately strengthening its cash and cash equivalents position to EUR 54,398 thousand at quarter end."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 13 (Operating segments) shows LNGT revenues of EUR 45,568 thousand for GROUP in 9 months of 2025 vs EUR 38,426 thousand in 9 months of 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Management explicitly attributes this segment expansion to the absence of the one and a half month dry dock maintenance outage that reduced 2024 output, coupled with higher regasification volumes and additional capacity booking bonuses paid by clients.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 13 footnote (1) states: 'Revenue from LNG services during the nine months of 2025 is higher... due to: (i) the terminal being out of operation for one and a half months in 2024 due to dry-dock repair works; (ii) higher LNG regasification volumes and (iii) bonuses paid by LNGT clients for booked capacity.'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Management explicitly attributes this segment expansion to the absence of the one and a half month dry dock maintenance outage that reduced 2024 output, coupled with higher regasification volumes and additional capacity booking bonuses paid by clients."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Liquid energy terminal revenues also saw modest growth to EUR 21,856 thousand from EUR 21,066 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 13 (Operating segments) shows LET revenues of EUR 21,856 thousand for GROUP in 9 months of 2025 vs EUR 21,066 thousand in 9 months of 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Liquid energy terminal revenues also saw modest growth to EUR 21,856 thousand from EUR 21,066 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "These gains were partially offset by a reduction in security supplement income related to regulated excess return repayments, which decreased other LNG terminal sales.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 13 footnote (3) states: 'The decrease in revenue was affected by the reduction of LNG security supplement income in 2025 due to proportionally recognised repayment of the excess returns (surplus income) from regulated activities during the period 2022-2023.'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "These gains were partially offset by a reduction in security supplement income related to regulated excess return repayments, which decreased other LNG terminal sales."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, mainly reflecting an accounting change following the acquisition and subsequent reclassification of the Floating Storage and Regasification Unit from right of use assets to property, plant and equipment in December 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 14 (Cost of sales) states total cost of sales was EUR 45,115 thousand for GROUP in 9 months of 2025 vs EUR 38,740 thousand in 9 months of 2024. Note 14 footnote explains the reclassification of FSRU depreciation from right-of-use assets to cost of sales after acquisition on 6 December 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, mainly reflecting an accounting change following the acquisition and subsequent reclassification of the Floating Storage and Regasification Unit from right of use assets to property, plant and equipment in December 2024."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "This adjustment reclassified approximately EUR 11,369 thousand of annualized depreciation into cost of sales, whereas it was previously recognized under operating expenses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 14 footnote states: 'Following the acquisition of the FSRU on December 6, 2024... for the 9 months of 2025, EUR 11,369 thousand of the FSRU depreciation expenses were recognised under 'Depreciation and amortisation'. In previous periods, these expenses were accounted as the 'Depreciation of right-of-use assets'' (referenced in Note 15).",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "This adjustment reclassified approximately EUR 11,369 thousand of annualized depreciation into cost of sales, whereas it was previously recognized under operating expenses."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Operating expenses remained relatively stable at EUR 10,640 thousand, demonstrating effective cost management despite a slight rise in average headcount and wage costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 15 (Operating expenses) shows total operating expenses of EUR 10,640 thousand for GROUP in 9 months of 2025. Note 2 states the average number of employees increased from 374 (2024) to 405 (2025).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Operating expenses remained relatively stable at EUR 10,640 thousand, demonstrating effective cost management despite a slight rise in average headcount and wage costs."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total borrowings declined marginally to EUR 311,443 thousand, resulting in a minor reduction in finance costs to EUR 6,616 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 9 (Borrowings) shows total loans of EUR 311,443 thousand for GROUP as at 30 September 2025. Note 16 (Finance income and costs) shows total finance costs of EUR 6,616 thousand for GROUP in 9 months of 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total borrowings declined marginally to EUR 311,443 thousand, resulting in a minor reduction in finance costs to EUR 6,616 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total equity grew to EUR 167,721 thousand, supported by retained earnings and the declaration of higher dividends amounting to EUR 8,622 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Statement of Changes in Equity shows total equity of EUR 167,721 thousand for GROUP as at 30 September 2025. Note 5 (Dividends) states dividends declared were EUR 8,622 thousand for the period.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total equity grew to EUR 167,721 thousand, supported by retained earnings and the declaration of higher dividends amounting to EUR 8,622 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Overall, the reporting period demonstrates enhanced operational throughput, improved cash generation, and stabilized leverage following infrastructure normalization.",
+        "label": "SUPPORTED",
+        "source_evidence": "The conclusion is inferable from multiple sources: 1) Increased revenue and profits (S1-S2) indicate operational throughput growth. 2) More than doubled operating cash flows (S4) show improved cash generation. 3) Marginal decline in borrowings (S12) and stable equity growth (S13) suggest stabilized leverage post-infrastructure changes (e.g., FSRU acquisition and dry-dock completion mentioned in notes).",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Overall, the reporting period demonstrates enhanced operational throughput, improved cash generation, and stabilized leverage following infrastructure normalization."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Consolidated revenue of EUR 76,664 thousand for nine months ended 30 September 2025 represents a 12.8% increase from EUR 67,977 thousand in same period of 2024",
+        "candidate_value": "76,664",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "76,664",
+        "source_evidence": "Statement of Comprehensive Income (GROUP) - Revenue from contracts with customers: EUR 76,664 thousand (2025) vs EUR 67,977 thousand (2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AB KN Energies reported consolidated revenue of EUR 76,664 thousand for the nine months ended 30 September 2025, representing a twelve point eight percent increase compared to EUR 67,977 thousand in the same period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Operating profit of EUR 21,282 thousand (12.4% increase) and net profit of EUR 13,158 thousand (10.9% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21,282 / 13,158",
+        "source_evidence": "Statement of Comprehensive Income (GROUP) - Operating profit: EUR 21,282 thousand (2025) vs EUR 18,942 thousand (2024); Profit for the year: EUR 13,158 thousand (2025) vs EUR 11,862 thousand (2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Basic earnings per share rose to EUR 0.035 from EUR 0.031",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.035 / 0.031",
+        "source_evidence": "Note 17 - Basic and diluted earnings per share: EUR 0.035 (2025) vs EUR 0.031 (2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Basic earnings per share rose to EUR 0.035 from EUR 0.031."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating cash flows of EUR 76,331 thousand (more than doubling from EUR 35,637 thousand) and cash & cash equivalents of EUR 54,398 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "76,331 / 35,637 / 54,398",
+        "source_evidence": "Statement of Cash Flow - Net cash from operating activities: EUR 76,331 thousand (2025) vs EUR 35,637 thousand (2024); Statement of Financial Position - Cash and cash equivalents: EUR 54,398 thousand (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The Group generated robust operating cash flows of EUR 76,331 thousand, more than doubling the prior year figure of EUR 35,637 thousand, ultimately strengthening its cash and cash equivalents position to EUR 54,398 thousand at quarter end."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "LNG terminal revenues of EUR 45,568 thousand vs EUR 38,426 thousand in 2024",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "45,568 / 38,426",
+        "source_evidence": "Note 13 - LNGT revenues: EUR 45,568 thousand (2025) vs EUR 38,426 thousand (2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Liquid energy terminal revenues grew to EUR 21,856 thousand from EUR 21,066 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21,856 / 21,066",
+        "source_evidence": "Note 13 - LET revenues: EUR 21,856 thousand (2025) vs EUR 21,066 thousand (2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Liquid energy terminal revenues also saw modest growth to EUR 21,856 thousand from EUR 21,066 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, driven by EUR 11,369 thousand reclassification of FSRU depreciation",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "45,115 / 38,740 / 11,369",
+        "source_evidence": "Note 14 - Total cost of sales: EUR 45,115 thousand (2025) vs EUR 38,740 thousand (2024); Note 14 footnote details EUR 11,369 thousand FSRU depreciation reclassification",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, mainly reflecting an accounting change following the acquisition and subsequent reclassification of the Floating Storage and Regasification Unit from right of use assets to property, plant and equipment in December 2024."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total borrowings declined to EUR 311,443 thousand with finance costs of EUR 6,616 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "311,443 / 6,616",
+        "source_evidence": "Note 9 - Total loans: EUR 311,443 thousand (2025); Note 16 - Total finance costs: EUR 6,616 thousand (2025)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total borrowings declined marginally to EUR 311,443 thousand, resulting in a minor reduction in finance costs to EUR 6,616 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total equity grew to EUR 167,721 thousand with dividends of EUR 8,622 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "167,721 / 8,622",
+        "source_evidence": "Statement of Changes in Equity - Total equity: EUR 167,721 thousand (2025); Note 5 - Dividends declared: EUR 8,622 thousand",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total equity grew to EUR 167,721 thousand, supported by retained earnings and the declaration of higher dividends amounting to EUR 8,622 thousand."
+          }
+        ]
+      },
+      {
+        "claim": "reclassified approximately EUR 11,369 thousand of annualized depreciation into cost of sales",
+        "candidate_value": "11,369 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11,369 thousand",
+        "source_evidence": "Note 14 (Cost of Sales): 'Following the acquisition of the FSRU on 6 December 2024, the asset was reclassified from the right-of-use assets to the Company’s property, plant and equipment. As a result of this change, for the 9 months of 2025, EUR 11,369 thousand of the FSRU depreciation expenses were recognised under “Depreciation and amortisation (incl. amortisation of grants)”.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "id": "N10",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "This adjustment reclassified approximately EUR 11,369 thousand of annualized depreciation into cost of sales, whereas it was previously recognized under operating expenses."
+          }
+        ]
+      },
+      {
+        "claim": "Operating expenses remained relatively stable at EUR 10,640 thousand",
+        "candidate_value": "10,640 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10,640 thousand",
+        "source_evidence": "Note 15 (Operating Expenses): 'Total' for GROUP for 9 months of 2025 shows operating expenses of EUR 10,640 thousand.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "id": "N11",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Operating expenses remained relatively stable at EUR 10,640 thousand, demonstrating effective cost management despite a slight rise in average headcount and wage costs."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Group revenue increased to EUR 76.7 million (2025) from EUR 68.0 million (2024), while Group net profit rose to EUR 13.2 million from EUR 11.9 million. Company revenue grew to EUR 72.8 million from EUR 65.0 million, with net profit of EUR 11.6 million compared to EUR 10.7 million.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income (pages 3-4)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AB KN Energies reported consolidated revenue of EUR 76,664 thousand for the nine months ended 30 September 2025, representing a twelve point eight percent increase compared to EUR 67,977 thousand in the same period of 2024."
+          },
+          {
+            "id": "S2",
+            "text": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Operating profit increased to EUR 21.3 million (2025) from EUR 18.9 million (2024), driven by higher LNG regasification volumes, full terminal operational capacity (vs. 1.5 months downtime in 2024), and client capacity bonuses; partially offset by reduced LNG security supplement income due to regulatory excess return repayments.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income and Note 13 (page 13)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S6",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top line growth translated to an operating profit of EUR 21,282 thousand, up twelve point four percent from EUR 18,942 thousand, and a net profit of EUR 13,158 thousand, which is ten point nine percent higher than the EUR 11,862 thousand recorded previously."
+          },
+          {
+            "id": "S5",
+            "text": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024."
+          },
+          {
+            "id": "S6",
+            "text": "Management explicitly attributes this segment expansion to the absence of the one and a half month dry dock maintenance outage that reduced 2024 output, coupled with higher regasification volumes and additional capacity booking bonuses paid by clients."
+          },
+          {
+            "id": "S8",
+            "text": "These gains were partially offset by a reduction in security supplement income related to regulated excess return repayments, which decreased other LNG terminal sales."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Segment performance: Liquid Energy Terminals (LET) revenue was EUR 21.9 million (2025 vs EUR 21.1 million), LNG Terminal (LNGT) revenue rose to EUR 45.6 million (vs EUR 38.4 million), and commercial LNG activities revenue increased to EUR 9.2 million (vs EUR 8.5 million).",
+        "importance": "HIGH",
+        "source_evidence": "Note 4 (pages 8-9)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The improvement in core profitability was primarily driven by the liquefied natural gas terminal operations, which recorded revenues of EUR 45,568 thousand against EUR 38,426 thousand in 2024."
+          },
+          {
+            "id": "S7",
+            "text": "Liquid energy terminal revenues also saw modest growth to EUR 21,856 thousand from EUR 21,066 thousand."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Net cash generated from operating activities surged to EUR 76.3 million in 2025 from EUR 35.6 million in 2024, primarily due to higher net profit and net favorable working capital changes.",
+        "importance": "MEDIUM",
+        "source_evidence": "Statement of Cash Flow (page 6)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The Group generated robust operating cash flows of EUR 76,331 thousand, more than doubling the prior year figure of EUR 35,637 thousand, ultimately strengthening its cash and cash equivalents position to EUR 54,398 thousand at quarter end."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Group borrowings decreased slightly to EUR 294.4 million (2025) from EUR 301.4 million (2024), while lease liabilities remained stable at approximately EUR 24 million. Cash and cash equivalents increased significantly to EUR 54.4 million from EUR 17.2 million.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 9 (page 11) and Statement of Cash Flow (page 6)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Acquisition of a Floating Storage and Regasification Unit (FSRU) in December 2024, reclassifying the asset from right-of-use to property, plant and equipment.",
+        "importance": "HIGH",
+        "source_evidence": "Note 1.1 and Note 3 (pages 7-8)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Cost of sales increased to EUR 45,115 thousand from EUR 38,740 thousand, mainly reflecting an accounting change following the acquisition and subsequent reclassification of the Floating Storage and Regasification Unit from right of use assets to property, plant and equipment in December 2024."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Establishment of KN Energies Deutschland GmbH in September 2024 to operate the Wilhelmshaven 2 floating LNG import terminal for Deutsche Energy Terminal GmbH.",
+        "importance": "HIGH",
+        "source_evidence": "Note 1.1 (page 7)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, and K6 are all PRESENT with supporting evidence in the candidate summary. K5 is MISSING as there is no mention of group borrowings, lease liabilities, or cash and cash equivalents changes. K7 is MISSING as there is no mention of the establishment of KN Energies Deutschland GmbH for Wilhelmshaven 2 terminal operations. The summary captures most high-importance financial trends and drivers but omits two key structural items (K5 and K7), resulting in a Generally yes rating.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent with no material contradictions or logical gaps. All statements build logically upon each other, showing consistent progression from revenue growth to profitability metrics, cash flow generation, and balance sheet changes. Explanations for variances (e.g., dry dock outage, accounting changes) are clearly tied to specific line items. The structure follows a logical flow from top-line performance to profitability, cash flow, and balance sheet impacts. There is no unnecessary repetition, and all relationships between figures and explanations are internally consistent. The summary forms a coherent whole without self-contradiction."
+  },
+  "usage": {
+    "input_tokens_total": 39139,
+    "output_tokens_total_including_reasoning": 5714,
+    "total_tokens": 44853,
+    "latency_seconds_total": 37.08
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 37076,
+    "output_tokens_total_including_reasoning": 54596,
+    "total_tokens": 91672,
+    "latency_seconds_total": 151.64
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_23.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_23_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_23.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_23.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_23_chain_of_event_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_23_chain_of_event_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_23_chain_of_event_qwen36.json"
+    }
+  }
+}

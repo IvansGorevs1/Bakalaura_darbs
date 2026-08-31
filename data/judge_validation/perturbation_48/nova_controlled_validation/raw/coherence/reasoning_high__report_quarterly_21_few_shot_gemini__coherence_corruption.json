@@ -1,0 +1,188 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:56:02.879398",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_quarterly_21_few_shot_gemini__coherence_corruption.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "aa7ce3405aac9693",
+    "sentence_map_hash": "4e0e1e2fc617358c",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first six months of 2026, AS Tallinna Sadam reported a slight increase in revenue alongside a notable decline in profitability compared to the same period of the previous year, during the first six months, alongside, compared with it.",
+    "S2": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million, supported primarily by a higher number of charter days for the multifunctional icebreaker Botnica, increased electricity sales, and higher ferry service revenue.",
+    "S3": "Group revenue grew by EUR 1.4 million, or 2.4%, reaching EUR 59.3 million.",
+    "S4": "In contrast.",
+    "S5": "Operating profit fell by EUR 4.7 million, or 25.7%, to EUR 13.6 million, in contrast, the operating profit.",
+    "S6": "Adjusted EBITDA decreased by EUR 4.0 million, or 13.5%, to EUR 25.8 million, while profit for the period dropped by EUR 4.3 million, or 41.7%, to EUR 6.0 million, while this, while that.",
+    "S7": "The operating profit margin declined from 31.6% to 22.9%.",
+    "S8": "The contraction in profitability was largely driven by higher operating expenses, which rose by EUR 3.9 million, or 24.0%.",
+    "S9": "The contraction in profitability was largely driven by higher operating expenses.",
+    "S10": "Significant increases were recorded in fuel costs due to higher diesel prices and severe ice conditions, technical maintenance and repair expenses, and electricity costs, increases, recorded, the costs and expenses.",
+    "S11": "Furthermore, financial results for the comparative period in 2025 had been positively affected by a one-off profit from the disposal of land for the Rail Baltica project and an insurance indemnity.",
+    "S12": "Operating volumes also saw overall declines, as total cargo volumes handled across the group harbours decreased by 5.0% to 6.5 million tonnes, primarily due to lower liquid bulk volumes, the volumes, overall declines, as they decreased.",
+    "S13": "The total number of passengers fell by 2.0% to 3.6 million, and vessel calls decreased by 4.8% to 3,376, though cruise passenger numbers experienced growth.",
+    "S14": "Group investments during the six-month period totaled EUR 3.5 million, representing a substantial decrease of EUR 8.5 million compared to the previous year, with funds directed toward ferry engine replacements, quay infrastructure, and terminal designs.",
+    "S15": "Total assets at the end of June 2026 stood at EUR 615.0 million, reflecting a minor decrease of 1.1%, while equity was recorded at EUR 367.7 million.",
+    "S16": "Net debt ended the period at EUR 145.8 million.",
+    "S17": "In May 2026, the company paid out dividends totaling EUR 19.2 million, corresponding to EUR 0.073 per share.",
+    "S18": "Significant corporate developments during the period included the adoption of municipal detailed plans for terminal expansion areas, the execution of a new unsecured loan agreement of up to EUR 32 million with OP Corporate Bank, and the filing of civil damage claims totaling EUR 4.7 million against former management board members following the finalization of long-standing criminal proceedings."
+  },
+  "usage": {
+    "input_tokens": 1317,
+    "output_tokens_including_reasoning": 521,
+    "total_tokens": 1838
+  },
+  "latency_seconds": 3.84,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 2,\n  \"label\": \"Neutral/Mixed\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\"],\n      \"description\": \"S2 and S3 repeat the exact same revenue growth figures and total, adding no new information and reducing conciseness.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S4\", \"S5\"],\n      \"description\": \"S4 ('In contrast.') is a standalone contrastive phrase without a clear antecedent. S5 begins with 'in contrast, the operating profit' but the structure is fragmented ('in contrast, the operating profit.') making the logical link to prior sentences unclear.\"\n    },\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S8\", \"S9\"],\n      \"description\": \"S8 and S9 state the same cause for profitability contraction (higher operating expenses) with S9 adding no new information.\"\n    },\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S10\", \"S8\", \"S9\"],\n      \"description\": \"S10 lists specific cost increases (fuel, maintenance, electricity) that are already implied as part of the 'higher operating expenses' explained in S8/S9, creating redundancy.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"description\": \"S6 contains multiple 'while this, while that' constructions and an unfinished clause ('while this, while that.') that disrupt the flow and make the relationships between profit measures hard to follow.\"\n    }\n  ],\n  \"justification\": \"The summary exhibits several coherence issues primarily centered on repetition and organizational clarity. S2 and S3 repeat identical revenue figures, S8 and S9 repeat the same profitability driver, and S10 redundantly elaborates on expenses already covered. S4 is a contrastive phrase lacking a clear antecedent, and S5 has a fragmented structure ('in contrast, the operating profit.'). S6's multiple 'while' constructions and unfinished clause disrupt logical flow. While there are no self-contradictions and the core narrative (revenue up, profitability down due to costs) is consistent, these repetitive and structural issues prevent the summary from being fully coherent. The issues are noticeable enough to warrant a 'Neutral/Mixed' rating (score 2).\"\n}\n```",
+  "evaluation": {
+    "score": 2,
+    "label": "Neutral/Mixed",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "description": "S2 and S3 repeat the exact same revenue growth figures and total, adding no new information and reducing conciseness."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ],
+        "description": "S4 ('In contrast.') is a standalone contrastive phrase without a clear antecedent. S5 begins with 'in contrast, the operating profit' but the structure is fragmented ('in contrast, the operating profit.') making the logical link to prior sentences unclear."
+      },
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "description": "S8 and S9 state the same cause for profitability contraction (higher operating expenses) with S9 adding no new information."
+      },
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S10",
+          "S8",
+          "S9"
+        ],
+        "description": "S10 lists specific cost increases (fuel, maintenance, electricity) that are already implied as part of the 'higher operating expenses' explained in S8/S9, creating redundancy."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "description": "S6 contains multiple 'while this, while that' constructions and an unfinished clause ('while this, while that.') that disrupt the flow and make the relationships between profit measures hard to follow."
+      }
+    ],
+    "justification": "The summary exhibits several coherence issues primarily centered on repetition and organizational clarity. S2 and S3 repeat identical revenue figures, S8 and S9 repeat the same profitability driver, and S10 redundantly elaborates on expenses already covered. S4 is a contrastive phrase lacking a clear antecedent, and S5 has a fragmented structure ('in contrast, the operating profit.'). S6's multiple 'while' constructions and unfinished clause disrupt logical flow. While there are no self-contradictions and the core narrative (revenue up, profitability down due to costs) is consistent, these repetitive and structural issues prevent the summary from being fully coherent. The issues are noticeable enough to warrant a 'Neutral/Mixed' rating (score 2)."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

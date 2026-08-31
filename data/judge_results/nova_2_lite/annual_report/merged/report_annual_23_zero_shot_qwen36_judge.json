@@ -1,0 +1,631 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_23_zero_shot_qwen36.txt",
+    "report": "report_annual_23.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "TKM Grupp AS reported consolidated revenue of 919.6 million euros for the fiscal year 2025, representing a decrease of 2.6 percent compared to 944.6 million euros in the previous year.",
+    "S2": "The Group’s net profit amounted to 17.5 million euros, a significant decline of 36.1 percent from the 27.5 million euros recorded in 2024.",
+    "S3": "This reduction in profitability was primarily driven by a substantial contraction in the car trade segment, which was heavily impacted by the introduction of the motor vehicle tax in Estonia and resulting declines in consumer demand.",
+    "S4": "The car segment’s revenue fell by 11.9 percent to 176.9 million euros, and its net profit dropped by 54.4 percent to 4.3 million euros.",
+    "S5": "The supermarket segment, the Group’s largest revenue contributor, showed resilience with a slight revenue increase of 0.3 percent to 611.9 million euros, although its net profit decreased by 38.6 percent to 9.5 million euros due to lower sales volumes and increased promotional activity.",
+    "S6": "The department stores segment recorded a net loss of 0.5 million euros, a deterioration from the small profit in the prior year, while the security services segment saw its net profit decline by 117.8 percent to nearly zero.",
+    "S7": "Conversely, the real estate segment contributed positively to the bottom line, with net profit rising by 20.5 percent to 6.3 million euros, supported by rental income from a new logistics centre.",
+    "S8": "The Group’s operating profit decreased to 34.9 million euros from 47.6 million euros, and earnings per share fell to 43 cents from 67 cents.",
+    "S9": "Despite the challenging economic environment characterized by low consumer confidence and high price sensitivity, the Group maintained stable operations with a workforce of 4,743 employees.",
+    "S10": "Total investments in 2025 amounted to 25.5 million euros, focusing on store refurbishments, digital platform upgrades, and the expansion of the car dealership network in the Baltic States.",
+    "S11": "The Group continued to strengthen its market position through strategic developments, including the opening of new KIA and Škoda showrooms in Vilnius and the establishment of a new dealership in Peetri, Estonia.",
+    "S12": "Furthermore, the Group announced a post-balance-sheet event in January 2026 to acquire Rohe Auto AS and SKO Motors OÜ, aiming to expand its Škoda distribution rights in Tallinn and Harju County.",
+    "S13": "The company’s share price closed at 9.50 euros at the end of the year, with a market capitalization of 386.9 million euros.",
+    "S14": "The Management Board proposed a dividend of 0.60 euros per share for the 2025 financial year, to be paid out of accumulated retained earnings.",
+    "S15": "Overall, the Group’s performance in 2025 reflected the pressures of a volatile economic landscape, yet the company demonstrated operational stability and continued strategic investment in its core business segments to support long-term growth."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_23.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_23.json",
+    "key_information_hash": "42f4885663c37e71",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 0.818182,
+      "correct": 9,
+      "incorrect": 2,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 7,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This reduction in profitability was primarily driven by a substantial contraction in the car trade segment, which was heavily impacted by the introduction of the motor vehicle tax in Estonia and resulting declines in consumer demand.",
+        "label": "SUPPORTED",
+        "source_evidence": "The motor vehicle tax introduced in Estonia during the reporting year and the resulting sharp decrease in demand led to a significant contraction in new passenger car sales... the Group’s car segment sales revenue for 2025 as a whole was 11.9% lower than in the previous year.",
+        "original_model_id": "F3",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This reduction in profitability was primarily driven by a substantial contraction in the car trade segment, which was heavily impacted by the introduction of the motor vehicle tax in Estonia and resulting declines in consumer demand."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The department stores segment recorded a net loss of 0.5 million euros, a deterioration from the small profit in the prior year, while the security services segment saw its net profit decline to nearly zero.",
+        "label": "SUPPORTED",
+        "source_evidence": "Department stores segment recorded a loss before tax of 0.5 million euros in 2025... Security segment recorded a loss before tax of 0.04 million euros in 2025, which was 0.3 million euros weaker than the result for the corresponding period of the previous year. Net profit for Security segment in 2025 was 0.0 million euros versus 0.2 million euros in 2024.",
+        "original_model_id": "F6",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The department stores segment recorded a net loss of 0.5 million euros, a deterioration from the small profit in the prior year, while the security services segment saw its net profit decline by 117.8 percent to nearly zero."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Conversely, the real estate segment contributed positively to the bottom line, with net profit rising to 6.3 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Real estate segment generated profit before tax of 9.0 million euros... Net profit for Real Estate segment in 2025 was 6.3 million euros compared to 5.2 million euros in 2024.",
+        "original_model_id": "F7",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Conversely, the real estate segment contributed positively to the bottom line, with net profit rising by 20.5 percent to 6.3 million euros, supported by rental income from a new logistics centre."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Despite the challenging economic environment characterized by low consumer confidence and high price sensitivity, the Group maintained stable operations with a workforce of 4,743 employees.",
+        "label": "SUPPORTED",
+        "source_evidence": "At the year-end 2025, the Group employed more than 4,700 employees... Average number of employees converted to full-time equivalents in 2025 was 4,743.",
+        "original_model_id": "F9",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Despite the challenging economic environment characterized by low consumer confidence and high price sensitivity, the Group maintained stable operations with a workforce of 4,743 employees."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The Group continued to strengthen its market position through strategic developments, including the opening of new KIA and Škoda showrooms in Vilnius and the establishment of a new dealership in Peetri, Estonia.",
+        "label": "SUPPORTED",
+        "source_evidence": "In Lithuania, the ramp-up of the new car centre will continue... In Estonia, Viking Motors opened a new car dealership in Peetri, near Tallinn... new KIA and Škoda showrooms were opened in Vilnius.",
+        "original_model_id": "F11",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The Group continued to strengthen its market position through strategic developments, including the opening of new KIA and Škoda showrooms in Vilnius and the establishment of a new dealership in Peetri, Estonia."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Furthermore, the Group announced a post-balance-sheet event in January 2026 to acquire Rohe Auto AS and SKO Motors OÜ, aiming to expand its Škoda distribution rights in Tallinn and Harju County.",
+        "label": "SUPPORTED",
+        "source_evidence": "On 7 January 2026, TKM Auto OÜ entered into an agreement to acquire 100% of the shares in Rohe Auto AS, SKO Motors OÜ... The transaction will strengthen the position of the TKM Group’s car segment in Estonia and the Baltic States.",
+        "original_model_id": "F12",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Furthermore, the Group announced a post-balance-sheet event in January 2026 to acquire Rohe Auto AS and SKO Motors OÜ, aiming to expand its Škoda distribution rights in Tallinn and Harju County."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Overall, the Group’s performance in 2025 reflected the pressures of a volatile economic landscape, yet the company demonstrated operational stability and continued strategic investment in its core business segments to support long-term growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "The year 2025 will go down in history as a year of a challenging economic environment... Through effective cost control, accurate inventory planning and the dedication of its employees, the Group was able to ensure a stable result even in volatile conditions... The Group continued with strategic investments... Total investments in 2025 amounted to 25.5 million euros.",
+        "original_model_id": "F15",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Overall, the Group’s performance in 2025 reflected the pressures of a volatile economic landscape, yet the company demonstrated operational stability and continued strategic investment in its core business segments to support long-term growth."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "TKM Grupp AS reported consolidated revenue of 919.6 million euros for the fiscal year 2025, representing a decrease of 2.6 percent compared to 944.6 million euros in the previous year.",
+        "candidate_value": "919.6 million euros (2025) vs 944.6 million euros (2024), -2.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "919.6 million euros (2025) vs 944.6 million euros (2024), -2.6%",
+        "source_evidence": "The Group’s audited consolidated sales revenue for 2025 amounted to 919.6 million euros, representing a decrease of 2.6% compared to 2024, when sales revenue totalled 944.6 million euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "TKM Grupp AS reported consolidated revenue of 919.6 million euros for the fiscal year 2025, representing a decrease of 2.6 percent compared to 944.6 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The Group’s net profit amounted to 17.5 million euros, a significant decline of 36.1 percent from the 27.5 million euros recorded in 2024.",
+        "candidate_value": "17.5 million euros (2025) vs 27.5 million euros (2024), -36.1%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17.5 million euros (2025) vs 27.5 million euros (2024), -36.1%",
+        "source_evidence": "Net profit amounted to 17.5 million euros, representing a decrease of 36.1% compared to the previous year.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The Group’s net profit amounted to 17.5 million euros, a significant decline of 36.1 percent from the 27.5 million euros recorded in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The car segment’s revenue fell by 11.9 percent to 176.9 million euros, and its net profit dropped by 54.4 percent to 4.3 million euros.",
+        "candidate_value": "176.9 million euros (2025) vs 200.8 million euros (2024), -11.9%; 4.3 million euros (2025) vs 9.5 million euros (2024), -54.4%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "176.9 million euros (2025) vs 200.8 million euros (2024), -11.9%; 4.3 million euros (2025) vs 9.5 million euros (2024), -54.4%",
+        "source_evidence": "Car Trade revenue: 176.9 million euros (2025) vs 200.8 million euros (2024), -11.9%. Net profit: 4.3 million euros (2025) vs 9.5 million euros (2024), -54.4%.",
+        "error_explanation": null,
+        "original_model_id": "N4",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The car segment’s revenue fell by 11.9 percent to 176.9 million euros, and its net profit dropped by 54.4 percent to 4.3 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The supermarket segment... showed resilience with a slight revenue increase of 0.3 percent to 611.9 million euros, although its net profit decreased by 38.6 percent to 9.5 million euros due to lower sales volumes and increased promotional activity.",
+        "candidate_value": "611.9 million euros (2025) vs 610.4 million euros (2024), +0.3%; 9.5 million euros (2025) vs 15.5 million euros (2024), -38.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "611.9 million euros (2025) vs 610.4 million euros (2024), +0.3%; 9.5 million euros (2025) vs 15.5 million euros (2024), -38.6%",
+        "source_evidence": "Supermarkets revenue: 611.9 million euros (2025) vs 610.4 million euros (2024), +0.3%. Net profit: 9.5 million euros (2025) vs 15.5 million euros (2024), -38.6%.",
+        "error_explanation": null,
+        "original_model_id": "N5",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The supermarket segment, the Group’s largest revenue contributor, showed resilience with a slight revenue increase of 0.3 percent to 611.9 million euros, although its net profit decreased by 38.6 percent to 9.5 million euros due to lower sales volumes and increased promotional activity."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The security services segment saw its net profit decline by 117.8 percent to nearly zero.",
+        "candidate_value": "0.0 million euros (2025) vs 0.2 million euros (2024), -117.8%",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "0.0 million euros (2025) vs 0.2 million euros (2024), -100%",
+        "source_evidence": "Security segment net profit: 0.0 million euros (2025) vs 0.2 million euros (2024). The segment recorded a loss before tax of 0.04 million euros in 2025, which was 0.3 million euros weaker than 2024.",
+        "error_explanation": "The candidate reports a 117.8% decline, but the source shows a 100% decline (from 0.2M to 0.0M). The 117.8% figure does not match the source data.",
+        "original_model_id": "N6",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The department stores segment recorded a net loss of 0.5 million euros, a deterioration from the small profit in the prior year, while the security services segment saw its net profit decline by 117.8 percent to nearly zero."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The real estate segment... net profit rising by 20.5 percent to 6.3 million euros",
+        "candidate_value": "6.3 million euros (2025) vs 5.2 million euros (2024), +20.5%",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "6.3 million euros (2025) vs 5.2 million euros (2024), +21.15%",
+        "source_evidence": "Real Estate net profit: 6.3 million euros (2025) vs 5.2 million euros (2024). The increase is (6.3-5.2)/5.2 = 21.15%, not 20.5% as stated in the candidate.",
+        "error_explanation": "The candidate rounds the percentage change incorrectly. The source data supports a 21.15% increase, not 20.5%.",
+        "original_model_id": "N7",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Conversely, the real estate segment contributed positively to the bottom line, with net profit rising by 20.5 percent to 6.3 million euros, supported by rental income from a new logistics centre."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The Group’s operating profit decreased to 34.9 million euros from 47.6 million euros, and earnings per share fell to 43 cents from 67 cents.",
+        "candidate_value": "34.9 million euros (2025) vs 47.6 million euros (2024); 0.43 euros (2025) vs 0.67 euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "34.922 million euros (2025) vs 47.574 million euros (2024); 0.43 euros (2025) vs 0.67 euros (2024)",
+        "source_evidence": "Operating profit: 34,922 thousand euros (2025) vs 47,574 thousand euros (2024). Earnings per share: 0.43 euros (2025) vs 0.67 euros (2024).",
+        "error_explanation": null,
+        "original_model_id": "N8",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The Group’s operating profit decreased to 34.9 million euros from 47.6 million euros, and earnings per share fell to 43 cents from 67 cents."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total investments in 2025 amounted to 25.5 million euros",
+        "candidate_value": "25.5 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25.5 million euros",
+        "source_evidence": "Total investments in 2025 amounted to 25.5 million euros (36.6 million euros in 2024).",
+        "error_explanation": null,
+        "original_model_id": "N10",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total investments in 2025 amounted to 25.5 million euros, focusing on store refurbishments, digital platform upgrades, and the expansion of the car dealership network in the Baltic States."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company’s share price closed at 9.50 euros at the end of the year, with a market capitalization of 386.9 million euros.",
+        "candidate_value": "9.50 euros; 386.9 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9.50 euros; 386.9 million euros",
+        "source_evidence": "At the end of 2025, the TKM Group share price closed at 9.50 euros... market capitalisation of TKM Group at the end of the reporting year amounted to 386.9 million euros.",
+        "error_explanation": null,
+        "original_model_id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company’s share price closed at 9.50 euros at the end of the year, with a market capitalization of 386.9 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The Management Board proposed a dividend of 0.60 euros per share for the 2025 financial year",
+        "candidate_value": "0.60 euros per share",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.60 euros per share",
+        "source_evidence": "The Chairman of the Management Board... proposes to pay dividends in the amount of 24,438 thousand euros, or 0.60 euros per share out of retained earnings accumulated until 31 December 2025.",
+        "error_explanation": null,
+        "original_model_id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The Management Board proposed a dividend of 0.60 euros per share for the 2025 financial year, to be paid out of accumulated retained earnings."
+          }
+        ]
+      },
+      {
+        "claim": "Group maintained stable operations with a workforce of 4,743 employees",
+        "candidate_value": "4,743",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4,743",
+        "source_evidence": "Note 22 Staff costs: 'Average number of employees converted to full-time equivalents | 4,743 | 4,769' (2025 vs 2024)",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "id": "N11",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Despite the challenging economic environment characterized by low consumer confidence and high price sensitivity, the Group maintained stable operations with a workforce of 4,743 employees."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "The Group reported a 2.6% decrease in consolidated revenue to 919.6 million euros in 2025 (from 944.6 million euros in 2024), with net profit declining 36.2% to 17.5 million euros (from 27.5 million euros in 2024). Profit before tax fell 31.4% to 24.3 million euros.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Financial performance section (pages 17-18)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "TKM Grupp AS reported consolidated revenue of 919.6 million euros for the fiscal year 2025, representing a decrease of 2.6 percent compared to 944.6 million euros in the previous year."
+          },
+          {
+            "id": "S2",
+            "text": "The Group’s net profit amounted to 17.5 million euros, a significant decline of 36.1 percent from the 27.5 million euros recorded in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The car trade segment experienced an 11.9% revenue decline to 176.9 million euros due to the Estonian motor vehicle tax, which caused a 48.6% drop in new passenger car sales in Estonia; this was partially offset by stable performance in Latvian and Lithuanian subsidiaries.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, 2025 overview and Car segment section (pages 20-21)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This reduction in profitability was primarily driven by a substantial contraction in the car trade segment, which was heavily impacted by the introduction of the motor vehicle tax in Estonia and resulting declines in consumer demand."
+          },
+          {
+            "id": "S4",
+            "text": "The car segment’s revenue fell by 11.9 percent to 176.9 million euros, and its net profit dropped by 54.4 percent to 4.3 million euros."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "The supermarket segment increased revenue by 0.3% to 611.9 million euros but net profit fell 38.6% to 9.5 million euros, driven by economic weakness, promotional pricing pressure, and one-off costs from store refurbishments; strategic investments included logistics center optimization and assortment expansion with the First Price range.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Supermarkets segment section (page 19)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The supermarket segment, the Group’s largest revenue contributor, showed resilience with a slight revenue increase of 0.3 percent to 611.9 million euros, although its net profit decreased by 38.6 percent to 9.5 million euros due to lower sales volumes and increased promotional activity."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "The department stores segment recorded a 1.1% revenue decline to 103.0 million euros and a net loss of 0.5 million euros, affected by warmer winter conditions; strategic actions included refurbishment of Kaubamaja Children’s World and launch of the Anni Arro café, with e-shop upgrades planned for 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Department stores segment section (page 19)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The department stores segment recorded a net loss of 0.5 million euros, a deterioration from the small profit in the prior year, while the security services segment saw its net profit decline by 117.8 percent to nearly zero."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "The real estate segment increased revenue by 5.1% to 7.7 million euros but profit before tax fell 18.4% to 9.0 million euros, primarily due to one-off gains in 2024; rental income from the newly operational logistics centre offset declines from prior-year property sales.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Real Estate segment section (page 21)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Cash and cash equivalents decreased to 29.5 million euros (from 45.5 million euros in 2024), with working capital turning negative at 14.2 million euros; management confirms strong operating cash flow mitigates liquidity risk despite short-term loan maturities in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Financial risks section and Consolidated Cash Flow Statement (pages 15, 91)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Strategic expansion in the car segment includes the January 2026 agreement to acquire Rohe Auto AS and SKO Motors OÜ (Škoda distribution rights) in Estonia, enhancing brand portfolio and dealership network; 2025 also saw a new multi-brand showroom in Vilnius and ongoing bodywork workshop construction in Peetri.",
+        "importance": "HIGH",
+        "source_evidence": "Chairman of the Management Board’s Statement and Events after the reporting period (pages 6, 10)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The Group continued to strengthen its market position through strategic developments, including the opening of new KIA and Škoda showrooms in Vilnius and the establishment of a new dealership in Peetri, Estonia."
+          },
+          {
+            "id": "S12",
+            "text": "Furthermore, the Group announced a post-balance-sheet event in January 2026 to acquire Rohe Auto AS and SKO Motors OÜ, aiming to expand its Škoda distribution rights in Tallinn and Harju County."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Major operational developments include refurbishment of Jõgeva Selver and Kaubamaja Children’s World; energy-efficient CO₂ refrigeration systems at Jõgeva Selver; digital upgrades to e-shops, Partner Card platforms, and D365 business software.",
+        "importance": "HIGH",
+        "source_evidence": "2025 overview key events and Strategy section (pages 11, 22)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Total investments in 2025 amounted to 25.5 million euros, focusing on store refurbishments, digital platform upgrades, and the expansion of the car dealership network in the Baltic States."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "The Management Board proposes a dividend payment of 0.60 euros per share (24.4 million euros total) from 2025 retained earnings, with associated income tax expense of 6.7 million euros.",
+        "importance": "HIGH",
+        "source_evidence": "Profit Allocation Proposal section (page 146)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The Management Board proposed a dividend of 0.60 euros per share for the 2025 financial year, to be paid out of accumulated retained earnings."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K6"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K7, K8, and K9 are all PRESENT with clear coverage in the candidate summary. K5 and K6 are MISSING entirely – no mention of real estate segment revenue/profit dynamics or cash/working capital changes. Despite two HIGH-importance omissions, the majority of material information is captured, justifying a 'Generally yes' (score 3).",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The summary follows a clear structure: consolidated results (S1-S2), segment performance (S3-S7), operational context (S8-S9), investments and strategic moves (S10-S12), and financial closing/market position (S13-S15). Explanations for changes in profitability are consistently provided (e.g., tax impact in S3, sales volumes in S5). There is no unnecessary repetition, and all segment figures are presented without implying they should arithmetically reconcile to the consolidated total. The summary forms a logical narrative about performance pressures and strategic responses."
+  },
+  "usage": {
+    "input_tokens_total": 249085,
+    "output_tokens_total_including_reasoning": 9372,
+    "total_tokens": 258457,
+    "latency_seconds_total": 69.61
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 246512,
+    "output_tokens_total_including_reasoning": 68302,
+    "total_tokens": 314814,
+    "latency_seconds_total": 264.46
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_23.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_23_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_23.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_23.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_23_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_23_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_23_zero_shot_qwen36.json"
+    }
+  }
+}

@@ -1,0 +1,876 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_20_zero_shot_qwen36.txt",
+    "report": "report_annual_20.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Tallink Grupp reported consolidated revenue of EUR 765.3 million for the year ended 31 December 2025, a 2.6 percent decrease from EUR 785.8 million in 2024.",
+    "S2": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent.",
+    "S3": "Core route revenue fell by EUR 13.7 million to EUR 625.2 million.",
+    "S4": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year.",
+    "S5": "Net profit totaled EUR 17.3 million, or EUR 0.023 per share, compared to EUR 40.3 million, or EUR 0.054 per share, in 2024.",
+    "S6": "Profitability deterioration stemmed from weak consumer and business confidence, ongoing economic headwinds in core markets, and geopolitical uncertainty suppressing travel demand.",
+    "S7": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million.",
+    "S8": "Management simultaneously extended the estimated useful lives of cruise and passenger vessels to forty-five years.",
+    "S9": "Personnel expenses rose 4.3 percent to EUR 201.0 million due to maritime collective agreements, while fuel costs increased marginally to EUR 96.5 million.",
+    "S10": "Route performance diverged; Estonia-Finland revenue remained resilient at EUR 314.5 million despite volume pressures, whereas Estonia-Sweden and Finland-Sweden routes faced steeper declines driven by falling cargo volumes and sixty-eight days of scheduled dry-docking maintenance in early 2025.",
+    "S11": "Financial discipline helped improve the balance sheet, with interest-bearing liabilities falling to EUR 445.9 million and net debt decreasing to EUR 432.4 million from EUR 537.7 million.",
+    "S12": "The net debt to EBITDA ratio rose slightly to 3.3 times from 3.1 times.",
+    "S13": "Operating cash flow remained robust at EUR 127.1 million, supporting total liquidity of EUR 110.4 million after distributing EUR 44.6 million in dividends plus EUR 11.3 million in associated withholding tax.",
+    "S14": "Management maintained market leadership through route optimization, strategic vessel charters, and persistent cost efficiency measures.",
+    "S15": "The Group also advanced sustainability initiatives, planning to convert shuttle vessels to liquefied biomethane by 2026, while announcing a leadership transition with Peep Jalakas appointed as new Chairman of the Management Board effective April 2026.",
+    "S16": "Overall, Tallink delivered lower profits amid volatile demand but preserved strong cash generation and strengthened its capital structure through fleet rationalization and disciplined execution."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_20.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_20.json",
+    "key_information_hash": "7290c172ad9935e4",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 16,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 16
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallink Grupp reported consolidated revenue of EUR 765.3 million for the year ended 31 December 2025, a 2.6 percent decrease from EUR 785.8 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table in Management Report: Revenue (EUR million) 2025: 765.3, 2024: 785.8",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Tallink Grupp reported consolidated revenue of EUR 765.3 million for the year ended 31 December 2025, a 2.6 percent decrease from EUR 785.8 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Number of passengers 2025: 5,531,132 (0.9% decrease from 2024), Number of cargo units 2025: 245,004 (19.2% decrease from 2024), Number of passenger vehicles 2025: 760,473 (2.2% decrease from 2024)",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Core route revenue fell by EUR 13.7 million to EUR 625.2 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Revenue from route operations (the Group’s core operations) decreased by EUR 13.7 million to EUR 625.2 million compared to the financial year 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Core route revenue fell by EUR 13.7 million to EUR 625.2 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Gross profit/loss (EUR million) 2025: 143.2 (vs 153.6 in 2024), EBITDA (EUR million) 2025: 130.1 (vs 175.2 in 2024), EBITDA margin (%) 2025: 17.0% (vs 22.3% in 2024)",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit totaled EUR 17.3 million, or EUR 0.023 per share, compared to EUR 40.3 million, or EUR 0.054 per share, in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Net profit/loss for the period (EUR million) 2025: 17.3 (vs 40.3 in 2024), Earnings/loss per share (EUR) 2025: 0.02 (Note 7 shows diluted EPS of 0.023)",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit totaled EUR 17.3 million, or EUR 0.023 per share, compared to EUR 40.3 million, or EUR 0.054 per share, in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Profitability deterioration stemmed from weak consumer and business confidence, ongoing economic headwinds in core markets, and geopolitical uncertainty suppressing travel demand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Demand was impacted by low consumer and business confidence, ongoing economic challenges in the Group’s core markets, and heightened global geopolitical tensions.'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Profitability deterioration stemmed from weak consumer and business confidence, ongoing economic headwinds in core markets, and geopolitical uncertainty suppressing travel demand."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Net cash flow from investing activities was EUR 46.1 million (EUR 3.2 million in the financial year 2024), including proceeds from disposals of EUR 78.8 million.' and 'Amortisation and depreciation expense decreased by EUR 18.0 million to EUR 79.8 million year-on-year.'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Management simultaneously extended the estimated useful lives of cruise and passenger vessels to forty-five years.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 14: 'In 2025, the Group aligned the useful lives of its cruise and passenger vessels (except for shuttle vessels) to 45 years.'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Management simultaneously extended the estimated useful lives of cruise and passenger vessels to forty-five years."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Personnel expenses rose 4.3 percent to EUR 201.0 million due to maritime collective agreements, while fuel costs increased marginally to EUR 96.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Total personnel expenses amounted to EUR 201.0 million (EUR 192.8 million in FY24).' and 'Fuel and emission costs for the financial year 2025 amounted to EUR 96.5 million (EUR 95.8 million in the financial year 2024).'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Personnel expenses rose 4.3 percent to EUR 201.0 million due to maritime collective agreements, while fuel costs increased marginally to EUR 96.5 million."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Route performance diverged; Estonia-Finland revenue remained resilient at EUR 314.5 million despite volume pressures, whereas Estonia-Sweden and Finland-Sweden routes faced steeper declines driven by falling cargo volumes and sixty-eight days of scheduled dry-docking maintenance in early 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Revenue from the Estonia-Finland route increased by EUR 1.7 million to EUR 314.5 million... The routes’ results were impacted by maintenance works on the cruise ferries Silja Serenade and Baltic Princess that totalled 68 days in the first quarter of 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Route performance diverged; Estonia-Finland revenue remained resilient at EUR 314.5 million despite volume pressures, whereas Estonia-Sweden and Finland-Sweden routes faced steeper declines driven by falling cargo volumes and sixty-eight days of scheduled dry-docking maintenance in early 2025."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Financial discipline helped improve the balance sheet, with interest-bearing liabilities falling to EUR 445.9 million and net debt decreasing to EUR 432.4 million from EUR 537.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'As at 31 December 2025, the Group’s net debt amounted to EUR 432.4 million compared to EUR 537.7 million as at 31 December 2024.' and 'At the end of the financial year 2025, interest-bearing liabilities totalled EUR 445.9 million, down by 19.9% compared to EUR 556.4 million at the end of the financial year 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Financial discipline helped improve the balance sheet, with interest-bearing liabilities falling to EUR 445.9 million and net debt decreasing to EUR 432.4 million from EUR 537.7 million."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The net debt to EBITDA ratio rose slightly to 3.3 times from 3.1 times.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table: Net debt to EBITDA 2025: 3.3, 2024: 3.1",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The net debt to EBITDA ratio rose slightly to 3.3 times from 3.1 times."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow remained robust at EUR 127.1 million, supporting total liquidity of EUR 110.4 million after distributing EUR 44.6 million in dividends plus EUR 11.3 million in associated withholding tax.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The Group’s net operating cash flow for the financial year 2025 was positive at EUR 127.1 million... total liquidity buffer (cash, cash equivalents and unused credit facilities) amounted to EUR 110.4 million at 31 December 2025... payment of dividends in the amount of EUR 44.6 million and related income tax of EUR 11.3 million.'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow remained robust at EUR 127.1 million, supporting total liquidity of EUR 110.4 million after distributing EUR 44.6 million in dividends plus EUR 11.3 million in associated withholding tax."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Management maintained market leadership through route optimization, strategic vessel charters, and persistent cost efficiency measures.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The Group continues to focus on cost efficiencies from the previously implemented measures and maintaining profitable operations on its core routes... The Group regularly monitors developments on its core routes... and continues to seek options for chartering vessels that are not used on the main routes.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Management maintained market leadership through route optimization, strategic vessel charters, and persistent cost efficiency measures."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The Group also advanced sustainability initiatives, planning to convert shuttle vessels to liquefied biomethane by 2026, while announcing a leadership transition with Peep Jalakas appointed as new Chairman of the Management Board effective April 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'One of the most significant steps forward is the imminent large-scale adoption of liquefied biomethane on our shuttle vessels operating between Tallinn and Helsinki... Fully transitioning to renewable biofuel would reduce greenhouse gas emissions by a remarkable 75%... On 26 February 2026, the Supervisory Board elected Peep Jalakas as the new Chairman of the Management Board. The term of office of Mr Jalakas commenced on 6 April 2026 and will last for three years.'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also advanced sustainability initiatives, planning to convert shuttle vessels to liquefied biomethane by 2026, while announcing a leadership transition with Peep Jalakas appointed as new Chairman of the Management Board effective April 2026."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Overall, Tallink delivered lower profits amid volatile demand but preserved strong cash generation and strengthened its capital structure through fleet rationalization and disciplined execution.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated financial statements show net profit decreased to EUR 17.3 million (from EUR 40.3 million in 2024) while operating cash flow remained robust at EUR 127.1 million. Management Report highlights fleet rationalization (sale of three vessels) and disciplined execution as key factors in maintaining liquidity and improving the net debt position.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Overall, Tallink delivered lower profits amid volatile demand but preserved strong cash generation and strengthened its capital structure through fleet rationalization and disciplined execution."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Consolidated revenue decreased by 2.6% from EUR 785.8 million to EUR 765.3 million",
+        "candidate_value": "765.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "765.3 million EUR",
+        "source_evidence": "Key Figures table: Revenue 2025: 765.3, 2024: 785.8",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Tallink Grupp reported consolidated revenue of EUR 765.3 million for the year ended 31 December 2025, a 2.6 percent decrease from EUR 785.8 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Passengers decreased by 0.9% to 5.5 million",
+        "candidate_value": "5.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,531,132",
+        "source_evidence": "Key Figures table: Number of passengers 2025: 5,531,132 (0.9% decrease from 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Cargo units decreased by 19.2% to 245,004",
+        "candidate_value": "245,004",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "245,004",
+        "source_evidence": "Key Figures table: Number of cargo units 2025: 245,004 (19.2% decrease from 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Passenger vehicles decreased by 2.2% to 760,473",
+        "candidate_value": "760,473",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "760,473",
+        "source_evidence": "Key Figures table: Number of passenger vehicles 2025: 760,473 (2.2% decrease from 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Core route revenue decreased by EUR 13.7 million to EUR 625.2 million",
+        "candidate_value": "625.2 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "625.2 million EUR",
+        "source_evidence": "Management Report: 'Revenue from route operations (the Group’s core operations) decreased by EUR 13.7 million to EUR 625.2 million compared to the financial year 2024.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Core route revenue fell by EUR 13.7 million to EUR 625.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit decreased by EUR 10.3 million to EUR 143.2 million",
+        "candidate_value": "143.2 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "143.2 million EUR",
+        "source_evidence": "Key Figures table: Gross profit/loss (EUR million) 2025: 143.2 (decrease of EUR 10.4 million from 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "EBITDA decreased by EUR 45.1 million to EUR 130.1 million",
+        "candidate_value": "130.1 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "130.1 million EUR",
+        "source_evidence": "Key Figures table: EBITDA (EUR million) 2025: 130.1 (decrease of EUR 45.1 million from 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "EBITDA margin was 17.0% versus 22.3% in 2024",
+        "candidate_value": "17.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17.0%",
+        "source_evidence": "Key Figures table: EBITDA margin (%) 2025: 17.0%, 2024: 22.3%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit was EUR 17.3 million (EUR 0.023 per share) vs EUR 40.3 million (EUR 0.054 per share) in 2024",
+        "candidate_value": "17.3 million EUR / 0.023 EUR per share",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17.3 million EUR / 0.023 EUR per share",
+        "source_evidence": "Key Figures table: Net profit/loss for the period (EUR million) 2025: 17.3 (vs 40.3 in 2024). Note 7: Earnings per share (EUR) 2025: 0.023 (diluted EPS)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit totaled EUR 17.3 million, or EUR 0.023 per share, compared to EUR 40.3 million, or EUR 0.054 per share, in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Sale of three vessels generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million",
+        "candidate_value": "78.8 million EUR / 18.0 million EUR / 79.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "78.8 million EUR / 18.0 million EUR / 79.8 million EUR",
+        "source_evidence": "Management Report: 'Net cash flow from investing activities was EUR 46.1 million (EUR 3.2 million in the financial year 2024), including proceeds from disposals of EUR 78.8 million.' and 'Amortisation and depreciation expense decreased by EUR 18.0 million to EUR 79.8 million year-on-year.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Personnel expenses rose 4.3% to EUR 201.0 million",
+        "candidate_value": "201.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "201.0 million EUR",
+        "source_evidence": "Management Report: 'Total personnel expenses amounted to EUR 201.0 million (EUR 192.8 million in FY24)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Personnel expenses rose 4.3 percent to EUR 201.0 million due to maritime collective agreements, while fuel costs increased marginally to EUR 96.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Fuel costs increased marginally to EUR 96.5 million",
+        "candidate_value": "96.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "96.5 million EUR",
+        "source_evidence": "Management Report: 'Fuel and emission costs for the financial year 2025 amounted to EUR 96.5 million (EUR 95.8 million in the financial year 2024)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Personnel expenses rose 4.3 percent to EUR 201.0 million due to maritime collective agreements, while fuel costs increased marginally to EUR 96.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Estonia-Finland revenue was EUR 314.5 million",
+        "candidate_value": "314.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "314.5 million EUR",
+        "source_evidence": "Management Report: 'Revenue from the Estonia-Finland route increased by EUR 1.7 million to EUR 314.5 million'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Route performance diverged; Estonia-Finland revenue remained resilient at EUR 314.5 million despite volume pressures, whereas Estonia-Sweden and Finland-Sweden routes faced steeper declines driven by falling cargo volumes and sixty-eight days of scheduled dry-docking maintenance in early 2025."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Interest-bearing liabilities fell to EUR 445.9 million and net debt decreased to EUR 432.4 million from EUR 537.7 million",
+        "candidate_value": "445.9 million EUR / 432.4 million EUR / 537.7 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "445.9 million EUR / 432.4 million EUR / 537.7 million EUR",
+        "source_evidence": "Management Report: 'As at 31 December 2025, the Group’s net debt amounted to EUR 432.4 million compared to EUR 537.7 million as at 31 December 2024.' and 'At the end of the financial year 2025, interest-bearing liabilities totalled EUR 445.9 million, down by 19.9% compared to EUR 556.4 million at the end of the financial year 2024.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Financial discipline helped improve the balance sheet, with interest-bearing liabilities falling to EUR 445.9 million and net debt decreasing to EUR 432.4 million from EUR 537.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net debt to EBITDA ratio rose to 3.3 times from 3.1 times",
+        "candidate_value": "3.3 / 3.1",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3.3 / 3.1",
+        "source_evidence": "Key Figures table: Net debt to EBITDA 2025: 3.3, 2024: 3.1",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The net debt to EBITDA ratio rose slightly to 3.3 times from 3.1 times."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow was EUR 127.1 million and total liquidity was EUR 110.4 million after EUR 44.6 million in dividends plus EUR 11.3 million in tax",
+        "candidate_value": "127.1 million EUR / 110.4 million EUR / 44.6 million EUR / 11.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "127.1 million EUR / 110.4 million EUR / 44.6 million EUR / 11.3 million EUR",
+        "source_evidence": "Management Report: 'The Group’s net operating cash flow for the financial year 2025 was positive at EUR 127.1 million... total liquidity buffer (cash, cash equivalents and unused credit facilities) amounted to EUR 110.4 million at 31 December 2025... payment of dividends in the amount of EUR 44.6 million and related income tax of EUR 11.3 million.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow remained robust at EUR 127.1 million, supporting total liquidity of EUR 110.4 million after distributing EUR 44.6 million in dividends plus EUR 11.3 million in associated withholding tax."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated revenue decreased 2.6% to EUR 765.3 million (from EUR 785.8 million in 2024), with core route operations down EUR 13.7 million to EUR 625.2 million; EBITDA declined to EUR 130.1 million (from EUR 175.2 million); net profit fell to EUR 17.3 million (from EUR 40.3 million) with earnings per share at EUR 0.02 (from EUR 0.05).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: Key Figures table and 'Earnings' section detailing revenue, EBITDA, net profit, and EPS for 2025 vs 2024.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Tallink Grupp reported consolidated revenue of EUR 765.3 million for the year ended 31 December 2025, a 2.6 percent decrease from EUR 785.8 million in 2024."
+          },
+          {
+            "id": "S3",
+            "text": "Core route revenue fell by EUR 13.7 million to EUR 625.2 million."
+          },
+          {
+            "id": "S4",
+            "text": "Gross profit contracted by EUR 10.3 million to EUR 143.2 million, while EBITDA dropped by EUR 45.1 million to EUR 130.1 million, yielding an EBITDA margin of 17.0 percent versus 22.3 percent in the prior year."
+          },
+          {
+            "id": "S5",
+            "text": "Net profit totaled EUR 17.3 million, or EUR 0.023 per share, compared to EUR 40.3 million, or EUR 0.054 per share, in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Passenger volumes decreased 0.9% to 5.5 million (from 5.58 million in 2024); cargo units transported fell 19.2% to 245,004 (from 303,234); passenger vehicles carried declined 2.2% to 760,473 (from 777,592).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'Key Figures' table and operational summary stating passenger, cargo, and vehicle volumes for 2025 vs 2024.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Passengers carried fell 0.9 percent to 5.5 million, cargo units declined 19.2 percent to 245,004, and passenger vehicles dropped 2.2 percent."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Key performance drivers included weak consumer and business confidence, geopolitical tensions impacting demand; fleet optimization through vessel sales and continued chartering; cost efficiency measures; and a depreciation expense decline from aligning cruise/passenger vessel useful lives to 45 years (excluding shuttle vessels).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'The following operational factors impacted...' section and 'Earnings' section detailing depreciation impact and strategic focus on cost efficiencies.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S7",
+          "S8",
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Profitability deterioration stemmed from weak consumer and business confidence, ongoing economic headwinds in core markets, and geopolitical uncertainty suppressing travel demand."
+          },
+          {
+            "id": "S7",
+            "text": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million."
+          },
+          {
+            "id": "S8",
+            "text": "Management simultaneously extended the estimated useful lives of cruise and passenger vessels to forty-five years."
+          },
+          {
+            "id": "S14",
+            "text": "Management maintained market leadership through route optimization, strategic vessel charters, and persistent cost efficiency measures."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Fleet management involved the sale of three vessels (passenger vessel Star I in April, cargo vessels Regal Star in August and Sailor in October) and reduction of lay-up vessels from four to zero by Q3 2025; three vessels (Romantika, Galaxy I, Silja Europa) remained chartered out at year-end.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report: Bullet points under operational factors listing vessel sales, lay-up reductions, and chartering details.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operational adjustments also shaped results, including the sale of three vessels which generated EUR 78.8 million in proceeds and reduced annual depreciation by EUR 18.0 million to EUR 79.8 million."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Segment performance: Estonia-Finland route revenue increased EUR 1.7 million to EUR 314.5 million (passenger volumes up 1.8%) while Finland-Sweden routes declined EUR 3.3 million to EUR 225.5 million (due to maintenance) and Estonia-Sweden routes fell EUR 12.1 million to EUR 85.3 million (passenger volumes down 12.5%).",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report: 'Sales and Segments' section breaking down revenue and results by route, including passenger/cargo unit changes and maintenance impacts.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Route performance diverged; Estonia-Finland revenue remained resilient at EUR 314.5 million despite volume pressures, whereas Estonia-Sweden and Finland-Sweden routes faced steeper declines driven by falling cargo volumes and sixty-eight days of scheduled dry-docking maintenance in early 2025."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Net debt decreased to EUR 432.4 million (from EUR 537.7 million in 2024) with a net debt/EBITDA ratio of 3.3 (vs 3.1 in 2024); cash position impacted by EUR 44.6 million dividends paid (plus EUR 11.3 million related income tax) and EUR 113.5 million in loan repayments and interest during the year.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'Liquidity and Cash Flow' section detailing net debt, dividend payments, and financing activities.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Financial discipline helped improve the balance sheet, with interest-bearing liabilities falling to EUR 445.9 million and net debt decreasing to EUR 432.4 million from EUR 537.7 million."
+          },
+          {
+            "id": "S12",
+            "text": "The net debt to EBITDA ratio rose slightly to 3.3 times from 3.1 times."
+          },
+          {
+            "id": "S13",
+            "text": "Operating cash flow remained robust at EUR 127.1 million, supporting total liquidity of EUR 110.4 million after distributing EUR 44.6 million in dividends plus EUR 11.3 million in associated withholding tax."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Capital investments totaled EUR 33.0 million (focused on vessel maintenance and IT systems), with planned maintenance and repair works amounting to 73 vessel-days.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report: 'Liquidity and Cash Flow' and 'Investments and Vessels' sections specifying capital expenditures and maintenance days.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Strategic focus on emissions reduction includes preparations to transition shuttle vessels (MyStar and Megastar) to liquified biomethane from 2026, targeting a 75% reduction in greenhouse gas emissions and cost mitigation amid regulatory pressures.",
+        "importance": "MEDIUM",
+        "source_evidence": "CEO Letter to Shareholders and Sustainability Strategy and Governance section outlining biofuel transition plans and environmental targets.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also advanced sustainability initiatives, planning to convert shuttle vessels to liquefied biomethane by 2026, while announcing a leadership transition with Peep Jalakas appointed as new Chairman of the Management Board effective April 2026."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Post-reporting-period management changes: Paavo Nõgene resigned as Chairman of the Management Board effective May 2026; Peep Jalakas appointed as new Chairman effective April 2026; Margus Schults removed from Management Board effective February 2026 (remaining as Managing Director of Tallink Silja Oy).",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 25: 'Subsequent Events' and Management Report 'Events After the Reporting Period' detailing management board resignations and elections.",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also advanced sustainability initiatives, planning to convert shuttle vessels to liquefied biomethane by 2026, while announcing a leadership transition with Peep Jalakas appointed as new Chairman of the Management Board effective April 2026."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All HIGH importance criteria (K1, K2, K3, K6) are fully represented with core material meaning covered. MEDIUM criteria K4, K5, K8, and K9 are also PRESENT. K7 (capital investments) is MISSING but this does not change the overall understanding given the strong representation of all HIGH items and most MEDIUM items. The summary captures the main financial performance, volume changes, drivers, fleet actions, route performance, balance sheet position, sustainability plans, and leadership changes.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements logically follow one another without contradictions. The narrative progresses from revenue and operational metrics to profitability drivers, balance sheet changes, and strategic initiatives. Explanations for performance changes (e.g., weak demand, operational adjustments) are consistent throughout. There is no unnecessary repetition, and related information is grouped appropriately (e.g., route performance in S10, financial metrics in S11-S13). The summary forms a clear, logical whole that supports its concluding statement in S16."
+  },
+  "usage": {
+    "input_tokens_total": 110262,
+    "output_tokens_total_including_reasoning": 6639,
+    "total_tokens": 116901,
+    "latency_seconds_total": 39.09
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 214476,
+    "output_tokens_total_including_reasoning": 32847,
+    "total_tokens": 247323,
+    "latency_seconds_total": 245.58
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_20.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_20_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_20.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_20.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_20_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_20_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_20_zero_shot_qwen36.json"
+    }
+  }
+}

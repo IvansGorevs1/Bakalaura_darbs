@@ -1,0 +1,636 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_18_few_shot_qwen36.txt",
+    "report": "report_quarterly_18.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AB Pieno Žvaigždės delivered a marked improvement in financial performance for the first quarter of 2026, characterized by significantly expanded profit margins following a substantial reduction in costs, even as sales volumes remained broadly stable.",
+    "S2": "Total revenue amounted to 52,064 thousand euros, a decrease of less than one percent from 52,324 thousand euros in the corresponding period of the previous year.",
+    "S3": "Sales within the domestic Lithuanian market declined modestly to 31,405 thousand euros from 32,112 thousand euros, while shipments to other European Union countries rose to 11,341 thousand euros from 10,801 thousand euros.",
+    "S4": "Exports to non-EU countries edged down slightly to 9,318 thousand euros.",
+    "S5": "Product-wise, sales of fresh milk products held steady at 42,497 thousand euros, dominating the portfolio, whereas dry milk sales contracted noticeably to 1,397 thousand euros; however, cheese and other product lines showed modest growth, contributing to a stable top-line environment across diverse market segments.",
+    "S6": "The most material factor driving profitability was a steep decline in the cost of sales, which fell to 38,078 thousand euros from 42,530 thousand euros.",
+    "S7": "This efficiency gain propelled gross profit to 13,986 thousand euros, a 43 percent increase compared to 9,794 thousand euros in the prior year.",
+    "S8": "While sales and administrative expenses climbed to 10,983 thousand euros from 9,287 thousand euros, indicating some pressure on overheads, the company recorded an operating profit before finance costs of 3,366 thousand euros, a dramatic recovery from 535 thousand euros the previous year.",
+    "S9": "EBITDA more than doubled, reaching 4,730 thousand euros versus 2,001 thousand euros.",
+    "S10": "After accounting for finance expenses netting 298 thousand euros, comparable to the prior period, net profit surged to 3,068 thousand euros, yielding earnings per share of 0.07 euros compared to 0.01 euros previously.",
+    "S11": "The company's balance sheet position strengthened during the period.",
+    "S12": "Total assets grew to 85,305 thousand euros from 83,475 thousand euros at the end of 2025, comprising non-current assets of 49,653 thousand euros and current assets of 35,651 thousand euros.",
+    "S13": "Retained earnings increased to 18,614 thousand euros, bringing total equity to 41,164 thousand euros.",
+    "S14": "Long-term borrowings stood at 16,548 thousand euros, while current liabilities, primarily trade payables of 21,418 thousand euros, decreased slightly, supporting an improved current ratio of 1.51 against 1.27 in the prior year quarter.",
+    "S15": "Cash flow from operating activities generated a net inflow of 1,625 thousand euros, a sharp turnaround from a 183 thousand euro outflow previously.",
+    "S16": "This improvement was supported by depreciation of 1,427 thousand euros and favorable working capital movements, notably a cash release from inventory reductions of 998 thousand euros, partially offset by an increase in receivables of 2,536 thousand euros.",
+    "S17": "The company maintained disciplined investment spending with net cash used in investing activities at 551 thousand euros, and financing activities resulted in a 723 thousand euro outflow, driven by borrowings repayments of 469 thousand euros and finance lease payments, signaling a shift toward deleveraging and return of capital amidst the improved cash generation profile.",
+    "S18": "Overall, the reporting period demonstrated the company's ability to convert stable revenues into much stronger earnings through effective cost management and working capital optimization."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_18.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_18.json",
+    "key_information_hash": "7611edb4a60d4385",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 3,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 3
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 15,
+      "incorrect": 0,
+      "total": 15
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 9,
+      "partially_present": 0,
+      "missing": 0,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AB Pieno Žvaigždės delivered a marked improvement in financial performance for the first quarter of 2026, characterized by significantly expanded profit margins following a substantial reduction in costs, even as sales volumes remained broadly stable.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue decreased slightly (52,064 vs 52,324 thousand EUR) but gross profit increased from 9,794 to 13,986 thousand EUR, and cost of sales decreased from 42,530 to 38,078 thousand EUR, indicating improved profit margins despite stable sales volumes.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AB Pieno Žvaigždės delivered a marked improvement in financial performance for the first quarter of 2026, characterized by significantly expanded profit margins following a substantial reduction in costs, even as sales volumes remained broadly stable."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The company's balance sheet position strengthened during the period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total assets increased from 83,475 to 85,305 thousand EUR, total equity increased from 38,238 to 41,164 thousand EUR, and the current ratio improved from 1.27 to 1.51.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The company's balance sheet position strengthened during the period."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Overall, the reporting period demonstrated the company's ability to convert stable revenues into much stronger earnings through effective cost management and working capital optimization.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue decreased minimally (-0.5%) while net profit increased from 227 to 3,068 thousand EUR, driven by cost reductions (cost of sales down 4,452 thousand EUR) and working capital improvements (inventory reduction of 998 thousand EUR).",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Overall, the reporting period demonstrated the company's ability to convert stable revenues into much stronger earnings through effective cost management and working capital optimization."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue amounted to 52,064 thousand euros, a decrease of less than one percent from 52,324 thousand euros in the corresponding period of the previous year.",
+        "candidate_value": "52,064 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "52,064 thousand EUR",
+        "source_evidence": "Statement of comprehensive income - Revenue line item for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue amounted to 52,064 thousand euros, a decrease of less than one percent from 52,324 thousand euros in the corresponding period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Sales within the domestic Lithuanian market declined modestly to 31,405 thousand euros from 32,112 thousand euros, while shipments to other European Union countries rose to 11,341 thousand euros from 10,801 thousand euros.",
+        "candidate_value": "31,405 thousand EUR (Lithuania) and 11,341 thousand EUR (EU)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "31,405 thousand EUR (Lithuania) and 11,341 thousand EUR (EU)",
+        "source_evidence": "Notes to the financial statements - Sales by geographical markets table for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Sales within the domestic Lithuanian market declined modestly to 31,405 thousand euros from 32,112 thousand euros, while shipments to other European Union countries rose to 11,341 thousand euros from 10,801 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Exports to non-EU countries edged down slightly to 9,318 thousand euros.",
+        "candidate_value": "9,318 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9,318 thousand EUR",
+        "source_evidence": "Notes to the financial statements - Sales by geographical markets table for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Exports to non-EU countries edged down slightly to 9,318 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Product-wise, sales of fresh milk products held steady at 42,497 thousand euros, dominating the portfolio, whereas dry milk sales contracted noticeably to 1,397 thousand euros; however, cheese and other product lines showed modest growth, contributing to a stable top-line environment across diverse market segments.",
+        "candidate_value": "42,497 thousand EUR (fresh milk), 1,397 thousand EUR (dry milk), 5,276 thousand EUR (cheese), 2,894 thousand EUR (other products)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42,497 thousand EUR (fresh milk), 1,397 thousand EUR (dry milk), 5,276 thousand EUR (cheese), 2,894 thousand EUR (other products)",
+        "source_evidence": "Notes to the financial statements - Sales by product groups table for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Product-wise, sales of fresh milk products held steady at 42,497 thousand euros, dominating the portfolio, whereas dry milk sales contracted noticeably to 1,397 thousand euros; however, cheese and other product lines showed modest growth, contributing to a stable top-line environment across diverse market segments."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The most material factor driving profitability was a steep decline in the cost of sales, which fell to 38,078 thousand euros from 42,530 thousand euros.",
+        "candidate_value": "38,078 thousand EUR (2026) vs 42,530 thousand EUR (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "38,078 thousand EUR (2026) vs 42,530 thousand EUR (2025)",
+        "source_evidence": "Statement of comprehensive income - Cost of sales line item for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The most material factor driving profitability was a steep decline in the cost of sales, which fell to 38,078 thousand euros from 42,530 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "This efficiency gain propelled gross profit to 13,986 thousand euros, a 43 percent increase compared to 9,794 thousand euros in the prior year.",
+        "candidate_value": "13,986 thousand EUR (2026) vs 9,794 thousand EUR (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13,986 thousand EUR (2026) vs 9,794 thousand EUR (2025)",
+        "source_evidence": "Statement of comprehensive income - Gross profit line item for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This efficiency gain propelled gross profit to 13,986 thousand euros, a 43 percent increase compared to 9,794 thousand euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "While sales and administrative expenses climbed to 10,983 thousand euros from 9,287 thousand euros, indicating some pressure on overheads, the company recorded an operating profit before finance costs of 3,366 thousand euros, a dramatic recovery from 535 thousand euros the previous year.",
+        "candidate_value": "10,983 thousand EUR (2026) vs 9,287 thousand EUR (2025) for expenses; 3,366 thousand EUR (2026) vs 535 thousand EUR (2025) for operating profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10,983 thousand EUR (2026) vs 9,287 thousand EUR (2025) for expenses; 3,366 thousand EUR (2026) vs 535 thousand EUR (2025) for operating profit",
+        "source_evidence": "Statement of comprehensive income - Sales and administrative expenses and Operating profit before finance costs line items for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "While sales and administrative expenses climbed to 10,983 thousand euros from 9,287 thousand euros, indicating some pressure on overheads, the company recorded an operating profit before finance costs of 3,366 thousand euros, a dramatic recovery from 535 thousand euros the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "EBITDA more than doubled, reaching 4,730 thousand euros versus 2,001 thousand euros.",
+        "candidate_value": "4,730 thousand EUR (2026) vs 2,001 thousand EUR (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4,730 thousand EUR (2026) vs 2,001 thousand EUR (2025)",
+        "source_evidence": "Main indicators of the Company's performance table - EBITDA line item for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "EBITDA more than doubled, reaching 4,730 thousand euros versus 2,001 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "After accounting for finance expenses netting 298 thousand euros, comparable to the prior period, net profit surged to 3,068 thousand euros, yielding earnings per share of 0.07 euros compared to 0.01 euros previously.",
+        "candidate_value": "298 thousand EUR finance expenses (2026), 3,068 thousand EUR net profit (2026), 0.07 EUR EPS (2026), 0.01 EUR EPS (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "298 thousand EUR finance expenses (2026), 3,068 thousand EUR net profit (2026), 0.07 EUR EPS (2026), 0.01 EUR EPS (2025)",
+        "source_evidence": "Statement of comprehensive income - Finance income/expenses, net and Net profit line items; Earnings per share note for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "After accounting for finance expenses netting 298 thousand euros, comparable to the prior period, net profit surged to 3,068 thousand euros, yielding earnings per share of 0.07 euros compared to 0.01 euros previously."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets grew to 85,305 thousand euros from 83,475 thousand euros at the end of 2025, comprising non-current assets of 49,653 thousand euros and current assets of 35,651 thousand euros.",
+        "candidate_value": "85,305 thousand EUR total assets (2026), 83,475 thousand EUR total assets (2025), 49,653 thousand EUR non-current assets, 35,651 thousand EUR current assets",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "85,305 thousand EUR total assets (2026), 83,475 thousand EUR total assets (2025), 49,653 thousand EUR non-current assets, 35,651 thousand EUR current assets",
+        "source_evidence": "Statement of financial position - Asset section for the periods ending 2026-03-31 and 2025-12-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total assets grew to 85,305 thousand euros from 83,475 thousand euros at the end of 2025, comprising non-current assets of 49,653 thousand euros and current assets of 35,651 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Retained earnings increased to 18,614 thousand euros, bringing total equity to 41,164 thousand euros.",
+        "candidate_value": "18,614 thousand EUR retained earnings, 41,164 thousand EUR total equity",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "18,614 thousand EUR retained earnings, 41,164 thousand EUR total equity",
+        "source_evidence": "Statement of financial position - Equity section for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Retained earnings increased to 18,614 thousand euros, bringing total equity to 41,164 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Long-term borrowings stood at 16,548 thousand euros, while current liabilities, primarily trade payables of 21,418 thousand euros, decreased slightly, supporting an improved current ratio of 1.51 against 1.27 in the prior year quarter.",
+        "candidate_value": "16,548 thousand EUR long-term borrowings, 21,418 thousand EUR trade payables, current ratio 1.51 (2026) vs 1.27 (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16,548 thousand EUR long-term borrowings, 21,418 thousand EUR trade payables, current ratio 1.51 (2026) vs 1.27 (2025)",
+        "source_evidence": "Statement of financial position - Liabilities section and Main indicators of the Company's performance - Current ratio.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Long-term borrowings stood at 16,548 thousand euros, while current liabilities, primarily trade payables of 21,418 thousand euros, decreased slightly, supporting an improved current ratio of 1.51 against 1.27 in the prior year quarter."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Cash flow from operating activities generated a net inflow of 1,625 thousand euros, a sharp turnaround from a 183 thousand euro outflow previously.",
+        "candidate_value": "1,625 thousand EUR operating cash flow (2026) vs -183 thousand EUR operating cash flow (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,625 thousand EUR operating cash flow (2026) vs -183 thousand EUR operating cash flow (2025)",
+        "source_evidence": "Statement of cash flows - Net cash flow from operating activities for the periods ending 2026-03-31 and 2025-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Cash flow from operating activities generated a net inflow of 1,625 thousand euros, a sharp turnaround from a 183 thousand euro outflow previously."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "This improvement was supported by depreciation of 1,427 thousand euros and favorable working capital movements, notably a cash release from inventory reductions of 998 thousand euros, partially offset by an increase in receivables of 2,536 thousand euros.",
+        "candidate_value": "1,427 thousand EUR depreciation, 998 thousand EUR inventory reduction (cash source), 2,536 thousand EUR increase in receivables (cash use)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,427 thousand EUR depreciation, 998 thousand EUR inventory reduction (cash source), 2,536 thousand EUR increase in receivables (cash use)",
+        "source_evidence": "Statement of cash flows - Adjustments section and changes in working capital for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "This improvement was supported by depreciation of 1,427 thousand euros and favorable working capital movements, notably a cash release from inventory reductions of 998 thousand euros, partially offset by an increase in receivables of 2,536 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The company maintained disciplined investment spending with net cash used in investing activities at 551 thousand euros, and financing activities resulted in a 723 thousand euro outflow, driven by borrowings repayments of 469 thousand euros and finance lease payments, signaling a shift toward deleveraging and return of capital amidst the improved cash generation profile.",
+        "candidate_value": "-551 thousand EUR investing cash flow, -723 thousand EUR financing cash flow, 469 thousand EUR borrowings repayments, 251 thousand EUR finance lease payments",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-551 thousand EUR investing cash flow, -723 thousand EUR financing cash flow, 469 thousand EUR borrowings repayments, 251 thousand EUR finance lease payments",
+        "source_evidence": "Statement of cash flows - Net cash flow used in investing activities, Net cash from/(used in) financing activities, Repayment of borrowings, and Payment of finance lease liabilities for the period ending 2026-03-31.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The company maintained disciplined investment spending with net cash used in investing activities at 551 thousand euros, and financing activities resulted in a 723 thousand euro outflow, driven by borrowings repayments of 469 thousand euros and finance lease payments, signaling a shift toward deleveraging and return of capital amidst the improved cash generation profile."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Revenue decreased to EUR 52.1 million in Q1 2026 from EUR 52.3 million in Q1 2025, a year-over-year decrease of 0.5%.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income (page 5) and Main indicators of the Company’s performance (page 8)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue amounted to 52,064 thousand euros, a decrease of less than one percent from 52,324 thousand euros in the corresponding period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Gross profit increased to EUR 13.99 million in Q1 2026 from EUR 9.79 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income (page 5)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This efficiency gain propelled gross profit to 13,986 thousand euros, a 43 percent increase compared to 9,794 thousand euros in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Operating profit before finance costs increased to EUR 3.37 million in Q1 2026 from EUR 0.54 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income (page 5)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "While sales and administrative expenses climbed to 10,983 thousand euros from 9,287 thousand euros, indicating some pressure on overheads, the company recorded an operating profit before finance costs of 3,366 thousand euros, a dramatic recovery from 535 thousand euros the previous year."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Net profit rose to EUR 3.07 million in Q1 2026 from EUR 0.23 million in Q1 2025, with earnings per share increasing to EUR 0.07 from EUR 0.01.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of Comprehensive Income (page 5) and Main indicators of the Company’s performance (page 8)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "After accounting for finance expenses netting 298 thousand euros, comparable to the prior period, net profit surged to 3,068 thousand euros, yielding earnings per share of 0.07 euros compared to 0.01 euros previously."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "EBITDA grew to EUR 4.73 million in Q1 2026 from EUR 2.00 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Main indicators of the Company’s performance (page 8)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "EBITDA more than doubled, reaching 4,730 thousand euros versus 2,001 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Cash flows from operating activities increased to EUR 2.41 million in Q1 2026 from EUR 0.05 million in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of cash flows (page 6)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Cash flow from operating activities generated a net inflow of 1,625 thousand euros, a sharp turnaround from a 183 thousand euro outflow previously."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The current ratio improved to 1.51 at March 31, 2026, from 1.27 at March 31, 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Main indicators of the Company’s performance (page 8)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Long-term borrowings stood at 16,548 thousand euros, while current liabilities, primarily trade payables of 21,418 thousand euros, decreased slightly, supporting an improved current ratio of 1.51 against 1.27 in the prior year quarter."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Geographically, Lithuania contributed EUR 31.4 million (60.2%) of total Q1 2026 sales, followed by other EU countries (EUR 11.3 million) and non-EU countries (EUR 9.3 million).",
+        "importance": "MEDIUM",
+        "source_evidence": "Segment reporting (page 8)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Sales within the domestic Lithuanian market declined modestly to 31,405 thousand euros from 32,112 thousand euros, while shipments to other European Union countries rose to 11,341 thousand euros from 10,801 thousand euros."
+          },
+          {
+            "id": "S4",
+            "text": "Exports to non-EU countries edged down slightly to 9,318 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Fresh milk products remained the dominant product category at EUR 42.5 million (81.4% of sales) in Q1 2026, while dry milk products decreased to EUR 1.4 million from EUR 1.9 million year-over-year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Segment reporting (page 8)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Product-wise, sales of fresh milk products held steady at 42,497 thousand euros, dominating the portfolio, whereas dry milk sales contracted noticeably to 1,397 thousand euros; however, cheese and other product lines showed modest growth, contributing to a stable top-line environment across diverse market segments."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All key information units are adequately represented in the candidate summary. K1 is covered in S2 (revenue decrease to EUR 52.064m from EUR 52.324m). K2 is covered in S7 (gross profit to EUR 13,986k from EUR 9,794k). K3 is covered in S8 (operating profit before finance costs to EUR 3,366k from EUR 535k). K4 is covered in S10 (net profit to EUR 3,068k from EUR 0.23m and EPS to EUR 0.07 from EUR 0.01). K5 is covered in S9 (EBITDA to EUR 4,730k from EUR 2,001k). K6 is covered in S15 (cash flow from operating activities to EUR 1,625k from EUR 0.183m outflow). K7 is covered in S14 (current ratio improved to 1.51 from 1.27). K8 is covered in S3 and S4 (Lithuania EUR 31,405k, other EU EUR 11,341k, non-EU EUR 9,318k). K9 is covered in S5 (fresh milk products EUR 42,497k, dry milk products EUR 1,397k).",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent with no material contradictions or logical gaps. All statements are logically connected, showing a clear narrative of improved financial performance through cost management and working capital optimization. The summary maintains consistent terminology and directional trends (e.g., cost reductions driving profit growth). While there is a minor arithmetic relationship between current assets and liabilities (current ratio calculation), the candidate does not explicitly claim these figures are exhaustive components of the same total, so this does not constitute a contradiction under the specified evaluation criteria. The structure progresses logically from revenue trends to profitability metrics, balance sheet changes, and cash flow dynamics, forming a cohesive whole without unnecessary repetition."
+  },
+  "usage": {
+    "input_tokens_total": 8142,
+    "output_tokens_total_including_reasoning": 14434,
+    "total_tokens": 22576,
+    "latency_seconds_total": 59.24
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 8740,
+    "output_tokens_total_including_reasoning": 58732,
+    "total_tokens": 67472,
+    "latency_seconds_total": 173.0
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_18.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_18_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_18.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_18.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_18_few_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_18_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_18_few_shot_qwen36.json"
+    }
+  }
+}

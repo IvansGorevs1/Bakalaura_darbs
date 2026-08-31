@@ -1,0 +1,849 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_15_few_shot_qwen36.txt",
+    "report": "report_quarterly_15.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year.",
+    "S2": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment.",
+    "S3": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas.",
+    "S4": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%.",
+    "S5": "EBITDA also declined to €8.3 million, with an EBITDA margin of 4.0%.",
+    "S6": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024.",
+    "S7": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries.",
+    "S8": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities.",
+    "S9": "However, credit losses increased sharply to €354,000 from €20,000 in the previous year.",
+    "S10": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024.",
+    "S11": "This expansion was driven by a nearly threefold increase in the Infrastructure segment’s order book, fueled by major contracts including Rail Baltica and national road construction projects.",
+    "S12": "Approximately 69% of the current order book is scheduled for completion in 2026, providing visibility for future revenue growth.",
+    "S13": "The strategic shift toward infrastructure is evident in the order book composition, where Infrastructure now represents 42% compared to 18% at the end of 2024.",
+    "S14": "Liquidity remained tight, with the current ratio standing at 0.93.",
+    "S15": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments.",
+    "S16": "No dividends were paid in 2025, whereas €1.3 million was distributed in 2024.",
+    "S17": "The construction market in Estonia stabilized with modest economic growth of 1%, although rising material prices contributed to a 1.5% increase in the construction price index.",
+    "S18": "Management anticipates improved business volumes in 2026, supported by the strengthened order book and optimistic economic forecasts, while maintaining a focus on cost control and risk management in a competitive environment."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_15.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_15.json",
+    "key_information_hash": "a4793d435397641f",
+    "key_information_units_total": 6
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 18,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 18
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 6
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key figures for the 12 months of 2025 show revenue decreased by 7% to €208m (2024: €224m). Financial review confirms revenue of €208,281k (2025) vs €223,925k (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key figures state Buildings segment revenue decreased by roughly 10% while Infrastructure grew by 10%. Segment reporting shows Buildings contributed 81% of revenue in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key figures and Financial review confirm gross margin decreased to 6.5% (2025) from 7.5% (2024). Administrative expenses decreased despite margin compression.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial review states operating profit was €5,651k (2025) vs €8,061k (2024). Operating margin was 2.7% (2025) vs 3.6% (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA also declined to €8.3 million, with an EBITDA margin of 4.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial review reports EBITDA of €8,250k (4.0% margin) compared to €11,025k (4.9% margin) in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA also declined to €8.3 million, with an EBITDA margin of 4.0%."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial review shows net profit of €2,545k (2025) vs €5,165k (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial risks section details a €750k foreign exchange loss due to hryvnia weakening. Finance costs note includes this loss from loan translations.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 11 shows administrative expenses of €6,814k (2025) vs €7,878k (2024), a 13.5% decrease. Explanation cites lower staff costs and performance pay.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "However, credit losses increased sharply to €354,000 from €20,000 in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial risks section states credit losses were €354k (2025) vs €20k (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, credit losses increased sharply to €354,000 from €20,000 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Order book section confirms growth of ~30% to €273,060k (2025) from €209,489k (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "This expansion was driven by a nearly threefold increase in the Infrastructure segment’s order book, fueled by major contracts including Rail Baltica and national road construction projects.",
+        "label": "SUPPORTED",
+        "source_evidence": "Order book analysis states Infrastructure order book increased nearly threefold. Major contracts listed include Rail Baltica and road construction projects.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "This expansion was driven by a nearly threefold increase in the Infrastructure segment’s order book, fueled by major contracts including Rail Baltica and national road construction projects."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Approximately 69% of the current order book is scheduled for completion in 2026, with the remainder spread across 2027–2028.",
+        "label": "SUPPORTED",
+        "source_evidence": "Order book section specifies ~69% of backlog is for 2026 execution.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Approximately 69% of the current order book is scheduled for completion in 2026, providing visibility for future revenue growth."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The strategic shift toward infrastructure is evident in the order book composition, where Infrastructure now represents 42% compared to 18% at the end of 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Order book breakdown shows Infrastructure accounted for 42% (2025) vs 18% (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The strategic shift toward infrastructure is evident in the order book composition, where Infrastructure now represents 42% compared to 18% at the end of 2024."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Liquidity remained tight, with the current ratio standing at 0.93.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial risks section states current ratio was 0.93 as of 31 December 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Liquidity remained tight, with the current ratio standing at 0.93."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash and cash equivalents were €5,266k (2025) vs €8,195k (2024). Cash flow notes mention €2,898k placed in long-term deposits and increased lease payments.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "No dividends were paid in 2025, whereas €1.3 million was distributed in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flows show dividends paid were €0 (2025) vs €1,347k (2024).",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "No dividends were paid in 2025, whereas €1.3 million was distributed in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The construction market in Estonia stabilized with modest economic growth of 1%, although rising material prices contributed to a 1.5% increase in the construction price index.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key figures and Operations in Estonia section confirm 1% economic growth and 1.5% construction price index increase driven by material prices.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The construction market in Estonia stabilized with modest economic growth of 1%, although rising material prices contributed to a 1.5% increase in the construction price index."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Management anticipates improved business volumes in 2026, supported by the strengthened order book and optimistic economic forecasts, while maintaining a focus on cost control and risk management in a competitive environment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Order book section states management expects business volumes to increase in 2026 based on order book strength. Strategic agenda emphasizes cost control and risk management.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management anticipates improved business volumes in 2026, supported by the strengthened order book and optimistic economic forecasts, while maintaining a focus on cost control and risk management in a competitive environment."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Revenue decreased by 7% to €208.3 million compared to €223.9 million in the prior year",
+        "candidate_value": "208.3 million EUR (7% decrease from 223.9 million EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€208,281k (2025) vs €223,925k (2024)",
+        "source_evidence": "Key figures and Financial review confirm revenue figures and percentage change.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "10% drop in the Buildings segment and 10% growth in the Infrastructure segment",
+        "candidate_value": "10% decrease in Buildings, 10% increase in Infrastructure",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Buildings revenue decreased ~10%, Infrastructure increased ~10%",
+        "source_evidence": "Key figures and segment reporting detail segment revenue changes.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross margin narrowed to 6.5% from 7.5% in 2024",
+        "candidate_value": "6.5% (2025) vs 7.5% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6.5% (2025) vs 7.5% (2024)",
+        "source_evidence": "Key figures and Financial review state gross margin percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit fell to €5.7 million from €8.1 million, operating margin of 2.7% down from 3.6%",
+        "candidate_value": "€5.7M (2.7%) vs €8.1M (3.6%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€5,651k (2.7%) vs €8,061k (3.6%)",
+        "source_evidence": "Financial review provides operating profit amounts and margin percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA declined to €8.3 million with an EBITDA margin of 4.0%",
+        "candidate_value": "€8.3M (4.0%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€8,250k (4.0%)",
+        "source_evidence": "Financial review reports EBITDA and margin.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA also declined to €8.3 million, with an EBITDA margin of 4.0%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit was €2.5 million vs €5.2 million in 2024",
+        "candidate_value": "€2.5M vs €5.2M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€2,545k vs €5,165k",
+        "source_evidence": "Financial review states net profit figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Foreign exchange losses of €750,000",
+        "candidate_value": "€750,000",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€750k",
+        "source_evidence": "Financial risks and finance costs sections detail the foreign exchange loss amount.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Administrative expenses decreased by approximately 14% to €6.8 million",
+        "candidate_value": "~14% decrease to €6.8M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€6,814k (13.5% decrease from €7,878k)",
+        "source_evidence": "Note 11 provides administrative expense amounts showing the decrease.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Credit losses increased to €354,000 from €20,000",
+        "candidate_value": "€354k vs €20k",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€354k (2025) vs €20k (2024)",
+        "source_evidence": "Financial risks section states credit loss amounts.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "However, credit losses increased sharply to €354,000 from €20,000 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Order book grew by 30% to €273.1 million from €209.5 million",
+        "candidate_value": "30% increase to €273.1M from €209.5M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€273,060k (30% increase) from €209,489k",
+        "source_evidence": "Order book section provides exact order book values and growth percentage.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Current ratio standing at 0.93",
+        "candidate_value": "0.93",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.93",
+        "source_evidence": "Financial risks section states current ratio as of 31 December 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Liquidity remained tight, with the current ratio standing at 0.93."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Cash and cash equivalents decreased to €5.3 million from €8.2 million",
+        "candidate_value": "€5.3M vs €8.2M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€5,266k vs €8,195k",
+        "source_evidence": "Cash and cash equivalents are reported in the statement of cash flows and balance sheet.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "No dividends paid in 2025 vs €1.3 million in 2024",
+        "candidate_value": "€0 vs €1.3M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€0 (2025) vs €1,347k (2024)",
+        "source_evidence": "Cash flows show dividend payments for both years.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "No dividends were paid in 2025, whereas €1.3 million was distributed in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Estonia's economy grew 1% and construction price index increased 1.5%",
+        "candidate_value": "1% economic growth, 1.5% price index increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1% growth, 1.5% increase",
+        "source_evidence": "Key figures and Operations in Estonia section provide these exact figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The construction market in Estonia stabilized with modest economic growth of 1%, although rising material prices contributed to a 1.5% increase in the construction price index."
+          }
+        ]
+      },
+      {
+        "claim": "69% of the group's order book comprises work scheduled for 2026",
+        "candidate_value": "69%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "69%",
+        "source_evidence": "Page 15: 'Approximately 69% of the group’s order book comprises work scheduled for 2026, with the remainder spread across 2027–2028.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "id": "N15",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Approximately 69% of the current order book is scheduled for completion in 2026, providing visibility for future revenue growth."
+          }
+        ]
+      },
+      {
+        "claim": "Infrastructure represents 42% of the group's order book at 31 December 2025 compared to 18% at 31 December 2024",
+        "candidate_value": "42% (2025) and 18% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42% (2025) and 18% (2024)",
+        "source_evidence": "Page 15: 'The Buildings segment accounts for 58% and the Infrastructure segment for 42% of the group’s total order book (31 December 2024: 82% and 18%, respectively).'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "id": "N16",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The strategic shift toward infrastructure is evident in the order book composition, where Infrastructure now represents 42% compared to 18% at the end of 2024."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance for 2025 showed revenue declining 7% to €208.3m, gross margin contracting to 6.5% from 7.5%, operating margin falling to 2.7% from 3.6%, net profit shrinking to €2.5m (from €5.2m), and earnings per share dropping to €0.05 (from €0.12), with the decline driven primarily by a foreign exchange loss of €750k resulting from the Ukrainian hryvnia weakening approximately 12% against the euro during 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Key figures section; Financial review section; Consolidated statement of comprehensive income; Note 13 (Finance income and costs)",
+        "origin_draft_ids": [
+          "D1",
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year."
+          },
+          {
+            "id": "S3",
+            "text": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas."
+          },
+          {
+            "id": "S4",
+            "text": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%."
+          },
+          {
+            "id": "S6",
+            "text": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024."
+          },
+          {
+            "id": "S7",
+            "text": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Year-on-year segment revenue changes showed the Buildings segment decreasing approximately 10% while the Infrastructure segment increased approximately 10%, resulting in Buildings contributing 81% of total revenue (down from 84%) and Infrastructure 19% (up from 16%).",
+        "importance": "HIGH",
+        "source_evidence": "Key figures section; Segment reporting – operating segments (revenue tables)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "The order book grew by 30% to €273.1m at year-end, driven by a nearly threefold increase in the Infrastructure segment order book; approximately 69% of the backlog relates to work scheduled for 2026, with the remainder spread across 2027-2028.",
+        "importance": "HIGH",
+        "source_evidence": "Order book section",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024."
+          },
+          {
+            "id": "S11",
+            "text": "This expansion was driven by a nearly threefold increase in the Infrastructure segment’s order book, fueled by major contracts including Rail Baltica and national road construction projects."
+          },
+          {
+            "id": "S12",
+            "text": "Approximately 69% of the current order book is scheduled for completion in 2026, providing visibility for future revenue growth."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Cash flows for 2025 included €1.2m net cash from operating activities, €2.8m net cash used in investing activities (including €2.9m placed in long-term deposits), and €1.2m net cash used in financing activities, resulting in a net cash outflow of €2.8m for the year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Consolidated statement of cash flows",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Liquidity position at 31 December 2025 was characterized by a current ratio of 0.93 (down from 0.94 in 2024), cash and cash equivalents of €5.3m (down from €8.2m), and short-term borrowings of €12.0m.",
+        "importance": "MEDIUM",
+        "source_evidence": "Liquidity risk section; Consolidated statement of financial position",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Liquidity remained tight, with the current ratio standing at 0.93."
+          },
+          {
+            "id": "S15",
+            "text": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Average employee count remained stable at 431 (274 engineers and technical professionals) in 2025, while staff costs decreased to €21.4m (from €24.1m in 2024), a decline of approximately 11.5% primarily due to lower performance-based pay.",
+        "importance": "MEDIUM",
+        "source_evidence": "People section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4"
+    ],
+    "completeness_justification": "K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING because the candidate does not include any information about cash flows from operating, investing, or financing activities, or the net cash outflow for the year. The overall score is 3 (Generally yes) because most material information is represented, but the omission of the complete cash flow statement (K4) is a notable gap, especially as it is classified as MEDIUM importance.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The narrative flows from revenue decline to profitability metrics, order book growth, liquidity position, and future outlook. Explanations for changes (e.g., foreign exchange losses, order book growth drivers) are consistent with preceding statements. There is no unnecessary repetition, and related information is grouped appropriately (e.g., revenue and segments in S1-S2, profitability in S3-S6, order book in S10-S13, liquidity in S14-S15). The summary forms a clear, logical whole with each section building on the previous one."
+  },
+  "usage": {
+    "input_tokens_total": 44284,
+    "output_tokens_total_including_reasoning": 6351,
+    "total_tokens": 50635,
+    "latency_seconds_total": 33.03
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 42538,
+    "output_tokens_total_including_reasoning": 52038,
+    "total_tokens": 94576,
+    "latency_seconds_total": 160.22
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_15.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_15_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_15.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_15.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_15_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_15_few_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_15_few_shot_qwen36.json"
+    }
+  }
+}

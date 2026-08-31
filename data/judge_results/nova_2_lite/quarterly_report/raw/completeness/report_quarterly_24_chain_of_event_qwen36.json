@@ -1,0 +1,169 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T22:24:37.274727",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_24_chain_of_event_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "2e3583db126b6169",
+    "sentence_map_hash": "28f920b8db5aad22",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "c4c37597b85bb625",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_24.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Trigon Property Development reported a net loss of 99,507 euros for the twelve months ended December 31, 2025, marking a significant deterioration in financial performance compared to the net profit of 167,409 euros recorded in the same period of 2024.",
+    "S2": "This shift resulted in a return on assets of negative 5.51 percent, down from 8.93 percent in 2024, and a return on equity of negative 5.67 percent, compared to 9.03 percent previously.",
+    "S3": "Earnings per share declined from 0.03721 euros to negative 0.02212 euros.",
+    "S4": "The primary driver of this decline was the absence of property sales in 2025, which generated zero gross profit, whereas the previous year saw gross profits of 220,299 euros from the sale of two land plots.",
+    "S5": "Despite the operational loss, the company’s balance sheet remained robust, with total assets decreasing slightly from 1,873,680 euros to 1,804,656 euros.",
+    "S6": "Equity also declined from 1,854,774 euros to 1,755,267 euros, primarily due to the accumulated loss.",
+    "S7": "Inventories, representing the development project in Pärnu, increased from 1,471,238 euros to 1,562,500 euros, reflecting investments of 91,262 euros made into the property development during the year.",
+    "S8": "Cash reserves decreased from 370,856 euros to 227,911 euros, resulting in negative cash flows from operating activities of 142,945 euros, a reversal from the positive 194,723 euros generated in 2024.",
+    "S9": "This cash outflow was largely due to increases in inventory and payables, partially offset by reductions in receivables.",
+    "S10": "Administrative and general expenses rose significantly to 108,021 euros from 63,650 euros in 2024.",
+    "S11": "This increase was driven by the introduction of personnel expenses totaling 41,452 euros, paid to board members, which were absent in the prior year.",
+    "S12": "Other notable expense increases included auditing fees and accounting services.",
+    "S13": "The company maintains a low debt ratio of 2.74 percent, with total liabilities standing at 49,389 euros.",
+    "S14": "The share price closed at 0.634 euros at year-end 2025, up from 0.620 euros in 2024, with a market capitalization of 2,852,405 euros.",
+    "S15": "The company continues to hold a single real estate development project in Pärnu, aiming to sell land plots, with no plans to change its business activity.",
+    "S16": "The report confirms the company is a going concern, with no employees and minimal operational risks related to interest rates or liquidity."
+  },
+  "usage": {
+    "input_tokens": 1807,
+    "output_tokens_including_reasoning": 433,
+    "total_tokens": 2240
+  },
+  "latency_seconds": 2.61,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S3\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S8\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S7\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S10\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S6\"]\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K6\", \"K7\"],\n  \"justification\": \"The candidate summary adequately covers the core material meaning of K1 (net loss and EPS change), K2 (cash balance decrease and operating cash outflows), K3 (inventory increase for Pärnu project), K4 (operating loss driven by expense surge), K5 (absence of 2025 land sales vs 2024 gains), and K8 (equity decrease due to net loss). However, it omits the core details for K6 (planning amendment merging land designations) and K7 (shareholder structure shift with Väätsa Agro AS). These omissions are material for their respective criteria but do not fundamentally alter the overall financial picture presented. Therefore, the coverage is generally good but not complete.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ]
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K6",
+      "K7"
+    ],
+    "justification": "The candidate summary adequately covers the core material meaning of K1 (net loss and EPS change), K2 (cash balance decrease and operating cash outflows), K3 (inventory increase for Pärnu project), K4 (operating loss driven by expense surge), K5 (absence of 2025 land sales vs 2024 gains), and K8 (equity decrease due to net loss). However, it omits the core details for K6 (planning amendment merging land designations) and K7 (shareholder structure shift with Väätsa Agro AS). These omissions are material for their respective criteria but do not fundamentally alter the overall financial picture presented. Therefore, the coverage is generally good but not complete."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

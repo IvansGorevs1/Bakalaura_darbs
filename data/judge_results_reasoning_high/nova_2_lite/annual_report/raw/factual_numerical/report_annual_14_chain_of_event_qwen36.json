@@ -1,0 +1,502 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:50:34.511540",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_14_chain_of_event_qwen36.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "c5d2c455f7151a00",
+    "sentence_map_hash": "e0b938e593a1f7a7",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_14.md",
+    "source_hash": "b8511f4a5af98ff6",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Lyko Group reported net revenue of 3,963 million Swedish kronor for 2025, an 11.3 percent increase from 3,562 million in 2024.",
+    "S2": "While sales expanded, profitability indicators declined.",
+    "S3": "Gross profit reached 1,659 million, but the gross margin contracted from 44.0 percent to 41.9 percent.",
+    "S4": "Operating profit fell from 117.4 million to 78.2 million, reducing the EBIT margin from 3.3 percent to 2.0 percent.",
+    "S5": "This resulted in a net loss of 3.0 million compared to a 21.0 million profit previously, lowering earnings per share to minus 0.20 SEK.",
+    "S6": "Conversely, cash flow from operating activities surged to 527.5 million from 209.7 million, driven by efficient working capital management within the dominant Nordic segment, which comprised 93.4 percent of revenue.",
+    "S7": "The company reported net debt of 292.5 million excluding IFRS 16 leases and maintained an equity ratio of 14.8 percent.",
+    "S8": "These financial movements stem directly from strategic infrastructure projects and prevailing market dynamics.",
+    "S9": "Lyko commissioned its new automated warehouse in Vansbro, a 500 million SEK investment designed to handle 100,000 orders daily.",
+    "S10": "Management explicitly states that implementing this automation impacted results during the year.",
+    "S11": "Simultaneously, the company opened its first Fab Store in Täby, alongside locations in Norway and Finland, while increasing depreciation and amortization to 174.1 million.",
+    "S12": "Financing these expansions required 270.3 million in new loans, elevating financial expenses to 82.7 million and pressuring the bottom line.",
+    "S13": "The beauty sector faced intensifying competition and structural shifts, leading Lyko to initiate a late-year reorganization centralizing European operations to lower overhead.",
+    "S14": "To navigate temporary margin compression, Lyko deferred dividends to prioritize reinvestment, aligning with its medium-term target of 15 to 20 percent annual revenue growth and a long-term 10 percent EBITDA margin before IFRS 16.",
+    "S15": "The firm bolstered its own brand portfolio through initiatives like the Make Up Store relaunch to improve future margins.",
+    "S16": "Post-reporting, Lyko announced a cost savings program targeting 100 million SEK annually across approximately 70 positions, backed by 28 million SEK in committed facility extensions until 2028.",
+    "S17": "The reporting period thus reflects a deliberate scaling phase where elevated capital expenditure and financing costs temporarily suppressed accounting profitability while securing the operational capacity and positive cash generation required to sustain competitive advantage and pursue targeted efficiency improvements."
+  },
+  "usage": {
+    "input_tokens": 148177,
+    "output_tokens_including_reasoning": 5530,
+    "total_tokens": 153707
+  },
+  "latency_seconds": 33.41,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"Lyko Group reported net revenue of 3,963 million Swedish kronor for 2025, an 11.3 percent increase from 3,562 million in 2024.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Net sales amounted to SEK 3,962.6m (3,561.7), representing a growth of 11.3% compared to 2024.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"While sales expanded, profitability indicators declined.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"EBIT for the period amounted to SEK 78.2m (117.4), with an EBIT margin of 2.0 (3.3) %.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Gross profit reached 1,659 million, but the gross margin contracted from 44.0 percent to 41.9 percent.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Gross profit margin, %: 41.9% (44.0%)\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit fell from 117.4 million to 78.2 million, reducing the EBIT margin from 3.3 percent to 2.0 percent.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"EBIT: 78.2 (117.4), EBIT margin, %: 2.0 (3.3)\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"This resulted in a net loss of 3.0 million compared to a 21.0 million profit previously, lowering earnings per share to minus 0.20 SEK.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Net result: -3 (21), Earnings per share (SEK): -0.20 (1.37)\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Conversely, cash flow from operating activities surged to 527.5 million from 209.7 million, driven by efficient working capital management within the dominant Nordic segment, which comprised 93.4 percent of revenue.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Cash flow from operating activities: 527.5 (209.7). At the end of 2025, Lyko Nordics accounted for 93.4 percent of sales.\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"The company reported net debt of 292.5 million excluding IFRS 16 leases and maintained an equity ratio of 14.8 percent.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Net debt (+) / Net cash (-), excl. IFRS 16: 292 (333). Equity ratio: 14.8 (20.3) %.\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"These financial movements stem directly from strategic infrastructure projects and prevailing market dynamics.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In 2025, Lyko’s growth increased. The group invested in infrastructure, stores, organization, and brand development... The beauty sector faced intensifying competition and structural shifts.\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Lyko commissioned its new automated warehouse in Vansbro, a 500 million SEK investment designed to handle 100,000 orders daily.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In October, we opened our very first Fab Store... In 2025, the next step in Lyko’s growth journey was taken as the new automated warehouse expansion in Vansbro went live... The investment of approximately SEK 500 million... capacity to handle 100,000 orders per day!\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Management explicitly states that implementing this automation impacted results during the year.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The implementation affected results during parts of the year...\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Simultaneously, the company opened its first Fab Store in Täby, alongside locations in Norway and Finland, while increasing depreciation and amortization to 174.1 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In November, the store in Westfield Täby Centrum in northern Stockholm reopened as Lyko’s first Fab Store... Depreciation and amortization of non-current assets: 174.1 (170.0).\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Financing these expansions required 270.3 million in new loans, elevating financial expenses to 82.7 million and pressuring the bottom line.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Cash flow from financing activities amounted to SEK 150.9m (65.9) and mainly consists of loans taken out amounting to SEK 270.3m... Financial expenses: 82.7 (82.7).\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"The beauty sector faced intensifying competition and structural shifts, leading Lyko to initiate a late-year reorganization centralizing European operations to lower overhead.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"During the fourth quarter, a reorganization of the Europe segment was initiated, including the closure of local offices in the Netherlands and Germany...\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"To navigate temporary margin compression, Lyko deferred dividends to prioritize reinvestment, aligning with its medium-term target of 15 to 20 percent annual revenue growth and a long-term 10 percent EBITDA margin before IFRS 16.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Growth: Lyko’s target is to grow total revenues by an average of 15 to 20 percent annually over the medium term. Profitability: Lyko’s target is to achieve an EBITDA margin of 10 percent in the long term, before effects from IFRS 16.\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"The firm bolstered its own brand portfolio through initiatives like the Make Up Store relaunch to improve future margins.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In 2025, Make Up Store was relaunched – one of Scandinavia’s most iconic beauty brands.\"\n    },\n    {\n      \"id\": \"F16\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Post-reporting, Lyko announced a cost savings program targeting 100 million SEK annually across approximately 70 positions, backed by 28 million SEK in committed facility extensions until 2028.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"On January 29, Lyko published a Trading Update with preliminary figures and announced a cost savings programme... The programme is expected to generate annual cost savings of approximately SEK 100m... On March 31 Lyko signed an extension agreement with Danske Bank and Swedbank to extend current RCFs until 2028.\"\n    },\n    {\n      \"id\": \"F17\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"The reporting period thus reflects a deliberate scaling phase where elevated capital expenditure and financing costs temporarily suppressed accounting profitability while securing the operational capacity and positive cash generation required to sustain competitive advantage and pursue targeted efficiency improvements.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In 2025, Lyko’s growth increased. The group invested in infrastructure, stores, organization, and brand development... The new automated warehouse in Vansbro, expected to be fully operational in early 2026, provides structural cost advantages...\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"Lyko Group reported net revenue of 3,963 million Swedish kronor for 2025, an 11.3 percent increase from 3,562 million in 2024.\",\n      \"candidate_value\": \"3,963 million SEK (2025), 3,562 million SEK (2024), 11.3% increase\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"3,962.6 million SEK (2025), 3,561.7 million SEK (2024), 11.3% growth\",\n      \"source_evidence\": \"Net sales: 3,962.6 (3,561.7)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Gross profit reached 1,659 million, but the gross margin contracted from 44.0 percent to 41.9 percent.\",\n      \"candidate_value\": \"1,659 million SEK, 44.0% (2024), 41.9% (2025)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"1,658.7 million SEK, 44.0% (2024), 41.9% (2025)\",\n      \"source_evidence\": \"Gross profit: 1,659 (1,568.8). Gross profit margin, %: 41.9 (44.0)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating profit fell from 117.4 million to 78.2 million, reducing the EBIT margin from 3.3 percent to 2.0 percent.\",\n      \"candidate_value\": \"78.2 million SEK (2025), 117.4 million SEK (2024), 2.0% (2025), 3.3% (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"78.2 million SEK (2025), 117.4 million SEK (2024), 2.0% (2025), 3.3% (2024)\",\n      \"source_evidence\": \"EBIT: 78.2 (117.4). EBIT margin, %: 2.0 (3.3)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"This resulted in a net loss of 3.0 million compared to a 21.0 million profit previously, lowering earnings per share to minus 0.20 SEK.\",\n      \"candidate_value\": \"-3.0 million SEK (2025), 21.0 million SEK (2024), -0.20 SEK EPS\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"-3.0 million SEK (2025), 21.0 million SEK (2024), -0.20 SEK EPS\",\n      \"source_evidence\": \"Net result: -3 (21). Earnings per share (SEK): -0.20 (1.37)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Conversely, cash flow from operating activities surged to 527.5 million from 209.7 million, driven by efficient working capital management within the dominant Nordic segment, which comprised 93.4 percent of revenue.\",\n      \"candidate_value\": \"527.5 million SEK (2025), 209.7 million SEK (2024), 93.4% Nordic revenue share\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"527.5 million SEK (2025), 209.7 million SEK (2024), 93.4% Nordic revenue share\",\n      \"source_evidence\": \"Cash flow from operating activities: 527.5 (209.7). At the end of 2025, Lyko Nordics accounted for 93.4 percent of sales.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"The company reported net debt of 292.5 million excluding IFRS 16 leases and maintained an equity ratio of 14.8 percent.\",\n      \"candidate_value\": \"292.5 million SEK net debt (excl. IFRS 16), 14.8% equity ratio\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"292.5 million SEK net debt (excl. IFRS 16), 14.8% equity ratio\",\n      \"source_evidence\": \"Net debt (+) / Net cash (-), excl. IFRS 16: 292 (333). Equity ratio: 14.8 (20.3) %.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Lyko commissioned its new automated warehouse in Vansbro, a 500 million SEK investment designed to handle 100,000 orders daily.\",\n      \"candidate_value\": \"500 million SEK investment, 100,000 orders/day capacity\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"500 million SEK investment, 100,000 orders/day capacity\",\n      \"source_evidence\": \"The investment of approximately SEK 500 million... capacity to handle 100,000 orders per day!\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Simultaneously, the company opened its first Fab Store in Täby, alongside locations in Norway and Finland, while increasing depreciation and amortization to 174.1 million.\",\n      \"candidate_value\": \"174.1 million SEK depreciation/amortization\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"174.1 million SEK depreciation/amortization\",\n      \"source_evidence\": \"Depreciation and amortization of non-current assets: 174.1 (170.0)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Financing these expansions required 270.3 million in new loans, elevating financial expenses to 82.7 million and pressuring the bottom line.\",\n      \"candidate_value\": \"270.3 million SEK new loans, 82.7 million SEK financial expenses\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"270.3 million SEK new loans, 82.7 million SEK financial expenses\",\n      \"source_evidence\": \"Loans taken out amounting to SEK 270.3m... Financial expenses: 82.7 (82.7)\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Post-reporting, Lyko announced a cost savings program targeting 100 million SEK annually across approximately 70 positions, backed by 28 million SEK in committed facility extensions until 2028.\",\n      \"candidate_value\": \"100 million SEK annual savings, 70 positions, 28 million SEK facility extensions until 2028\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"100 million SEK annual savings, 70 positions, 28 million SEK facility extensions until 2028\",\n      \"source_evidence\": \"The programme is expected to generate annual cost savings of approximately SEK 100m... On March 31 Lyko signed an extension agreement... to extend current RCFs until 2028.\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Lyko Group reported net revenue of 3,963 million Swedish kronor for 2025, an 11.3 percent increase from 3,562 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net sales amounted to SEK 3,962.6m (3,561.7), representing a growth of 11.3% compared to 2024."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "While sales expanded, profitability indicators declined.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBIT for the period amounted to SEK 78.2m (117.4), with an EBIT margin of 2.0 (3.3) %."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross profit reached 1,659 million, but the gross margin contracted from 44.0 percent to 41.9 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Gross profit margin, %: 41.9% (44.0%)"
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit fell from 117.4 million to 78.2 million, reducing the EBIT margin from 3.3 percent to 2.0 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBIT: 78.2 (117.4), EBIT margin, %: 2.0 (3.3)"
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "This resulted in a net loss of 3.0 million compared to a 21.0 million profit previously, lowering earnings per share to minus 0.20 SEK.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net result: -3 (21), Earnings per share (SEK): -0.20 (1.37)"
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Conversely, cash flow from operating activities surged to 527.5 million from 209.7 million, driven by efficient working capital management within the dominant Nordic segment, which comprised 93.4 percent of revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow from operating activities: 527.5 (209.7). At the end of 2025, Lyko Nordics accounted for 93.4 percent of sales."
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The company reported net debt of 292.5 million excluding IFRS 16 leases and maintained an equity ratio of 14.8 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net debt (+) / Net cash (-), excl. IFRS 16: 292 (333). Equity ratio: 14.8 (20.3) %."
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "These financial movements stem directly from strategic infrastructure projects and prevailing market dynamics.",
+        "label": "SUPPORTED",
+        "source_evidence": "In 2025, Lyko’s growth increased. The group invested in infrastructure, stores, organization, and brand development... The beauty sector faced intensifying competition and structural shifts."
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Lyko commissioned its new automated warehouse in Vansbro, a 500 million SEK investment designed to handle 100,000 orders daily.",
+        "label": "SUPPORTED",
+        "source_evidence": "In October, we opened our very first Fab Store... In 2025, the next step in Lyko’s growth journey was taken as the new automated warehouse expansion in Vansbro went live... The investment of approximately SEK 500 million... capacity to handle 100,000 orders per day!"
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Management explicitly states that implementing this automation impacted results during the year.",
+        "label": "SUPPORTED",
+        "source_evidence": "The implementation affected results during parts of the year..."
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Simultaneously, the company opened its first Fab Store in Täby, alongside locations in Norway and Finland, while increasing depreciation and amortization to 174.1 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "In November, the store in Westfield Täby Centrum in northern Stockholm reopened as Lyko’s first Fab Store... Depreciation and amortization of non-current assets: 174.1 (170.0)."
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Financing these expansions required 270.3 million in new loans, elevating financial expenses to 82.7 million and pressuring the bottom line.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow from financing activities amounted to SEK 150.9m (65.9) and mainly consists of loans taken out amounting to SEK 270.3m... Financial expenses: 82.7 (82.7)."
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The beauty sector faced intensifying competition and structural shifts, leading Lyko to initiate a late-year reorganization centralizing European operations to lower overhead.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the fourth quarter, a reorganization of the Europe segment was initiated, including the closure of local offices in the Netherlands and Germany..."
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "To navigate temporary margin compression, Lyko deferred dividends to prioritize reinvestment, aligning with its medium-term target of 15 to 20 percent annual revenue growth and a long-term 10 percent EBITDA margin before IFRS 16.",
+        "label": "SUPPORTED",
+        "source_evidence": "Growth: Lyko’s target is to grow total revenues by an average of 15 to 20 percent annually over the medium term. Profitability: Lyko’s target is to achieve an EBITDA margin of 10 percent in the long term, before effects from IFRS 16."
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The firm bolstered its own brand portfolio through initiatives like the Make Up Store relaunch to improve future margins.",
+        "label": "SUPPORTED",
+        "source_evidence": "In 2025, Make Up Store was relaunched – one of Scandinavia’s most iconic beauty brands."
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Post-reporting, Lyko announced a cost savings program targeting 100 million SEK annually across approximately 70 positions, backed by 28 million SEK in committed facility extensions until 2028.",
+        "label": "SUPPORTED",
+        "source_evidence": "On January 29, Lyko published a Trading Update with preliminary figures and announced a cost savings programme... The programme is expected to generate annual cost savings of approximately SEK 100m... On March 31 Lyko signed an extension agreement with Danske Bank and Swedbank to extend current RCFs until 2028."
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The reporting period thus reflects a deliberate scaling phase where elevated capital expenditure and financing costs temporarily suppressed accounting profitability while securing the operational capacity and positive cash generation required to sustain competitive advantage and pursue targeted efficiency improvements.",
+        "label": "SUPPORTED",
+        "source_evidence": "In 2025, Lyko’s growth increased. The group invested in infrastructure, stores, organization, and brand development... The new automated warehouse in Vansbro, expected to be fully operational in early 2026, provides structural cost advantages..."
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Lyko Group reported net revenue of 3,963 million Swedish kronor for 2025, an 11.3 percent increase from 3,562 million in 2024.",
+        "candidate_value": "3,963 million SEK (2025), 3,562 million SEK (2024), 11.3% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,962.6 million SEK (2025), 3,561.7 million SEK (2024), 11.3% growth",
+        "source_evidence": "Net sales: 3,962.6 (3,561.7)",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross profit reached 1,659 million, but the gross margin contracted from 44.0 percent to 41.9 percent.",
+        "candidate_value": "1,659 million SEK, 44.0% (2024), 41.9% (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,658.7 million SEK, 44.0% (2024), 41.9% (2025)",
+        "source_evidence": "Gross profit: 1,659 (1,568.8). Gross profit margin, %: 41.9 (44.0)",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit fell from 117.4 million to 78.2 million, reducing the EBIT margin from 3.3 percent to 2.0 percent.",
+        "candidate_value": "78.2 million SEK (2025), 117.4 million SEK (2024), 2.0% (2025), 3.3% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "78.2 million SEK (2025), 117.4 million SEK (2024), 2.0% (2025), 3.3% (2024)",
+        "source_evidence": "EBIT: 78.2 (117.4). EBIT margin, %: 2.0 (3.3)",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "This resulted in a net loss of 3.0 million compared to a 21.0 million profit previously, lowering earnings per share to minus 0.20 SEK.",
+        "candidate_value": "-3.0 million SEK (2025), 21.0 million SEK (2024), -0.20 SEK EPS",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-3.0 million SEK (2025), 21.0 million SEK (2024), -0.20 SEK EPS",
+        "source_evidence": "Net result: -3 (21). Earnings per share (SEK): -0.20 (1.37)",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Conversely, cash flow from operating activities surged to 527.5 million from 209.7 million, driven by efficient working capital management within the dominant Nordic segment, which comprised 93.4 percent of revenue.",
+        "candidate_value": "527.5 million SEK (2025), 209.7 million SEK (2024), 93.4% Nordic revenue share",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "527.5 million SEK (2025), 209.7 million SEK (2024), 93.4% Nordic revenue share",
+        "source_evidence": "Cash flow from operating activities: 527.5 (209.7). At the end of 2025, Lyko Nordics accounted for 93.4 percent of sales.",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The company reported net debt of 292.5 million excluding IFRS 16 leases and maintained an equity ratio of 14.8 percent.",
+        "candidate_value": "292.5 million SEK net debt (excl. IFRS 16), 14.8% equity ratio",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "292.5 million SEK net debt (excl. IFRS 16), 14.8% equity ratio",
+        "source_evidence": "Net debt (+) / Net cash (-), excl. IFRS 16: 292 (333). Equity ratio: 14.8 (20.3) %.",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Lyko commissioned its new automated warehouse in Vansbro, a 500 million SEK investment designed to handle 100,000 orders daily.",
+        "candidate_value": "500 million SEK investment, 100,000 orders/day capacity",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "500 million SEK investment, 100,000 orders/day capacity",
+        "source_evidence": "The investment of approximately SEK 500 million... capacity to handle 100,000 orders per day!",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Simultaneously, the company opened its first Fab Store in Täby, alongside locations in Norway and Finland, while increasing depreciation and amortization to 174.1 million.",
+        "candidate_value": "174.1 million SEK depreciation/amortization",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "174.1 million SEK depreciation/amortization",
+        "source_evidence": "Depreciation and amortization of non-current assets: 174.1 (170.0)",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Financing these expansions required 270.3 million in new loans, elevating financial expenses to 82.7 million and pressuring the bottom line.",
+        "candidate_value": "270.3 million SEK new loans, 82.7 million SEK financial expenses",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "270.3 million SEK new loans, 82.7 million SEK financial expenses",
+        "source_evidence": "Loans taken out amounting to SEK 270.3m... Financial expenses: 82.7 (82.7)",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Post-reporting, Lyko announced a cost savings program targeting 100 million SEK annually across approximately 70 positions, backed by 28 million SEK in committed facility extensions until 2028.",
+        "candidate_value": "100 million SEK annual savings, 70 positions, 28 million SEK facility extensions until 2028",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "100 million SEK annual savings, 70 positions, 28 million SEK facility extensions until 2028",
+        "source_evidence": "The programme is expected to generate annual cost savings of approximately SEK 100m... On March 31 Lyko signed an extension agreement... to extend current RCFs until 2028.",
+        "error_explanation": null
+      },
+      {
+        "claim": "15 to 20 percent annual revenue growth",
+        "candidate_value": "15 to 20 percent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15 to 20 percent",
+        "source_evidence": "Strategy section, page 15: 'Growth: Lyko’s target is to grow total revenues by an average of 15 to 20 percent annually over the medium term.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "id": "N11"
+      },
+      {
+        "claim": "10 percent EBITDA margin before IFRS 16",
+        "candidate_value": "10 percent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10 percent",
+        "source_evidence": "Strategy section, page 15: 'Profitability: Lyko’s target is to achieve an EBITDA margin of 10 percent in the long term, before effects from IFRS 16.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "id": "N12"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S11",
+      "S12",
+      "S14",
+      "S16"
+    ],
+    "covered_sentence_ids": [
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S11",
+      "S12",
+      "S14",
+      "S16"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S14\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains two independently verifiable numerical targets: 1) medium-term revenue growth target of 15-20% annually, and 2) long-term EBITDA margin target of 10% before IFRS 16. Both figures are explicitly stated in the source report under Strategy Targets.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"15 to 20 percent annual revenue growth\",\n          \"candidate_value\": \"15 to 20 percent\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"15 to 20 percent\",\n          \"source_evidence\": \"Strategy section, page 15: 'Growth: Lyko’s target is to grow total revenues by an average of 15 to 20 percent annually over the medium term.'\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"10 percent EBITDA margin before IFRS 16\",\n          \"candidate_value\": \"10 percent\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"10 percent\",\n          \"source_evidence\": \"Strategy section, page 15: 'Profitability: Lyko’s target is to achieve an EBITDA margin of 10 percent in the long term, before effects from IFRS 16.'\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S14",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains two independently verifiable numerical targets: 1) medium-term revenue growth target of 15-20% annually, and 2) long-term EBITDA margin target of 10% before IFRS 16. Both figures are explicitly stated in the source report under Strategy Targets.",
+          "numerical_claims": [
+            {
+              "claim": "15 to 20 percent annual revenue growth",
+              "candidate_value": "15 to 20 percent",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "15 to 20 percent",
+              "source_evidence": "Strategy section, page 15: 'Growth: Lyko’s target is to grow total revenues by an average of 15 to 20 percent annually over the medium term.'",
+              "error_explanation": null
+            },
+            {
+              "claim": "10 percent EBITDA margin before IFRS 16",
+              "candidate_value": "10 percent",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "10 percent",
+              "source_evidence": "Strategy section, page 15: 'Profitability: Lyko’s target is to achieve an EBITDA margin of 10 percent in the long term, before effects from IFRS 16.'",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 73560,
+      "output_tokens_including_reasoning": 771,
+      "total_tokens": 74331
+    }
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

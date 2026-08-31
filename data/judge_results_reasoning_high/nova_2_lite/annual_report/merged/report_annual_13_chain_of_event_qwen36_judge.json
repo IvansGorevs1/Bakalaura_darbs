@@ -1,0 +1,839 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_13_chain_of_event_qwen36.txt",
+    "report": "report_annual_13.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023.",
+    "S2": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion.",
+    "S3": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services.",
+    "S4": "Operating expenses increased by 14 percent to EUR 146.9 million, a development the report explicitly attributes to workforce expansion and strategic investments required to establish retail banking operations in the United Kingdom.",
+    "S5": "Despite these expenditures, the group maintained a manageable cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year.",
+    "S6": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023, as the equity base grew alongside profitability.",
+    "S7": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent.",
+    "S8": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes.",
+    "S9": "Management successfully upgraded its annual financial targets by 25 percent following stronger-than-expected mid-year results.",
+    "S10": "Liquidity remained resilient, with liquidity coverage and net stable funding ratios positioned well above regulatory thresholds.",
+    "S11": "While interest rates peaked and began decreasing in the second half of 2024, impacting future margin expectations, the group navigated the shifting rate environment through disciplined liability management, including a deliberate reduction in costly deposit platform inflows while growing stable retail funding.",
+    "S12": "Strategic actions also included issuing EUR 20 million in new Tier 2 bonds and restructuring debt maturities to optimize the capital framework ahead of evolving regulatory mandates.",
+    "S13": "Overall, the consolidated results reflect aggressive yet controlled expansion across established and emerging markets, supported by sustained asset quality and robust capital generation."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_13.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_13.json",
+    "key_information_hash": "f84a7c621909204b",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 19,
+      "incorrect": 0,
+      "total": 19
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 4,
+      "partially_present": 0,
+      "missing": 5,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total consolidated assets reached EUR 8.7 billion (+23% YoY). The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY). The volume of deposits increased to EUR 6.9 billion (+21% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net interest income grew 8% and net fee income increased 24%... Net interest income|273.3|... Net fee income|60.3|",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating expenses increased by 14 percent to EUR 146.9 million, a development the report explicitly attributes to workforce expansion and strategic investments required to establish retail banking operations in the United Kingdom.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating expenses amounted to EUR 146.9 million (+14% YoY). Most of the increase in expenses has been related to the increased numbers of employees... investments made to building the retail bank in UK.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating expenses increased by 14 percent to EUR 146.9 million, a development the report explicitly attributes to workforce expansion and strategic investments required to establish retail banking operations in the United Kingdom."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Despite these expenditures, the group maintained a manageable cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cost to income ratio %|43.4%|42.3%",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite these expenditures, the group maintained a manageable cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023, as the equity base grew alongside profitability.",
+        "label": "SUPPORTED",
+        "source_evidence": "Return on equity (ROE) %|24.5%|29.0%",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023, as the equity base grew alongside profitability."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Impairments|16.3|... Common equity Tier 1 %|16.89|... CAD %|20.68|",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Estonian corporate banking loans increased by 21%... Estonian retail loans increased by similar 21%... SME loans in UK... increased by 338%... During the year, we acquired a small but highly profitable loan portfolio.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Management successfully upgraded its annual financial targets by 25 percent following stronger-than-expected mid-year results.",
+        "label": "SUPPORTED",
+        "source_evidence": "In September, as we saw that the environment changes quickly... we updated our financial plan only in September, as we saw that the environment changes quickly... and hiked up the profitability targets by 25%.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Management successfully upgraded its annual financial targets by 25 percent following stronger-than-expected mid-year results."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Liquidity remained resilient, with liquidity coverage and net stable funding ratios positioned well above regulatory thresholds.",
+        "label": "SUPPORTED",
+        "source_evidence": "LCR %|187.50%|... NSFR %|154.40|... regulatory minimum|100.00|",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Liquidity remained resilient, with liquidity coverage and net stable funding ratios positioned well above regulatory thresholds."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "While interest rates peaked and began decreasing in the second half of 2024, impacting future margin expectations, the group navigated the shifting rate environment through disciplined liability management, including a deliberate reduction in costly deposit platform inflows while growing stable retail funding.",
+        "label": "SUPPORTED",
+        "source_evidence": "In the second half of 2024, but we had prepared for it... In 2024, LHV Pank reduced deposits collected from deposit platforms by 1/3 and will continue to decrease them.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "While interest rates peaked and began decreasing in the second half of 2024, impacting future margin expectations, the group navigated the shifting rate environment through disciplined liability management, including a deliberate reduction in costly deposit platform inflows while growing stable retail funding."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Strategic actions also included issuing EUR 20 million in new Tier 2 bonds and restructuring debt maturities to optimize the capital framework ahead of evolving regulatory mandates.",
+        "label": "SUPPORTED",
+        "source_evidence": "LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Strategic actions also included issuing EUR 20 million in new Tier 2 bonds and restructuring debt maturities to optimize the capital framework ahead of evolving regulatory mandates."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Overall, the consolidated results reflect aggressive yet controlled expansion across established and emerging markets, supported by sustained asset quality and robust capital generation.",
+        "label": "SUPPORTED",
+        "source_evidence": "The year also saw continued improvements in operational efficiency... The Group fulfilled all the financial ratios... Return on equity (ROE) %|24.5|... Capital adequacy... The quality of the loan portfolio stayed strong...",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Overall, the consolidated results reflect aggressive yet controlled expansion across established and emerging markets, supported by sustained asset quality and robust capital generation."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023",
+        "candidate_value": "150.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "150.3 million EUR",
+        "source_evidence": "Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "7 percent increase compared to EUR 140.9 million in 2023",
+        "candidate_value": "7%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7%",
+        "source_evidence": "Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total assets expanded by 23 percent to EUR 8.7 billion",
+        "candidate_value": "23%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "23%",
+        "source_evidence": "Total consolidated assets reached EUR 8.7 billion (+23% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "28 percent rise in the loan portfolio to EUR 4.6 billion",
+        "candidate_value": "28%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "28%",
+        "source_evidence": "The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "21 percent increase in deposits to EUR 6.9 billion",
+        "candidate_value": "21%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21%",
+        "source_evidence": "The volume of deposits increased to EUR 6.9 billion (+21% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net interest income grew 8 percent to EUR 273.3 million",
+        "candidate_value": "8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8%",
+        "source_evidence": "Net interest income grew 8%... Net interest income|273.3|",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "net fee and commission income surged 24 percent to EUR 60.3 million",
+        "candidate_value": "24%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24%",
+        "source_evidence": "Net fee income increased 24%... Net fee income|60.3|",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating expenses increased by 14 percent to EUR 146.9 million",
+        "candidate_value": "14%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14%",
+        "source_evidence": "Operating expenses amounted to EUR 146.9 million (+14% YoY).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating expenses increased by 14 percent to EUR 146.9 million, a development the report explicitly attributes to workforce expansion and strategic investments required to establish retail banking operations in the United Kingdom."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year",
+        "candidate_value": "43.4%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "43.4%",
+        "source_evidence": "Cost to income ratio %|43.4%|42.3%",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite these expenditures, the group maintained a manageable cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023",
+        "candidate_value": "24.5%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24.5%",
+        "source_evidence": "Return on equity (ROE) %|24.5%|29.0%",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023, as the equity base grew alongside profitability."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "impairment losses totaling EUR 16.3 million",
+        "candidate_value": "16.3 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16.3 million EUR",
+        "source_evidence": "Impairments|16.3|",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Common Equity Tier 1 ratio of 16.89 percent",
+        "candidate_value": "16.89%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16.89%",
+        "source_evidence": "Common equity Tier 1 %|16.89|",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "total capital adequacy ratio of 20.68 percent",
+        "candidate_value": "20.68%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20.68%",
+        "source_evidence": "CAD %|20.68|",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Estonian corporate and retail lending expanded by 21 percent each",
+        "candidate_value": "21%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21%",
+        "source_evidence": "Estonian corporate banking loans increased by 21%... Estonian retail loans increased by similar 21%...",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent",
+        "candidate_value": "338%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "338%",
+        "source_evidence": "SME loans in UK... increased by 338% and reached EUR 0.3 billion.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "upgraded its annual financial targets by 25 percent",
+        "candidate_value": "25%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25%",
+        "source_evidence": "we updated our financial plan only in September... and hiked up the profitability targets by 25%.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Management successfully upgraded its annual financial targets by 25 percent following stronger-than-expected mid-year results."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "liquidity coverage and net stable funding ratios positioned well above regulatory thresholds",
+        "candidate_value": null,
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": null,
+        "source_evidence": "LCR %|187.50%|... NSFR %|154.40|... regulatory minimum|100.00|",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Liquidity remained resilient, with liquidity coverage and net stable funding ratios positioned well above regulatory thresholds."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "reduction in costly deposit platform inflows",
+        "candidate_value": null,
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": null,
+        "source_evidence": "In 2024, LHV Pank reduced deposits collected from deposit platforms by 1/3 and will continue to decrease them.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "While interest rates peaked and began decreasing in the second half of 2024, impacting future margin expectations, the group navigated the shifting rate environment through disciplined liability management, including a deliberate reduction in costly deposit platform inflows while growing stable retail funding."
+          }
+        ]
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "issuing EUR 20 million in new Tier 2 bonds",
+        "candidate_value": "20 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20 million EUR",
+        "source_evidence": "LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Strategic actions also included issuing EUR 20 million in new Tier 2 bonds and restructuring debt maturities to optimize the capital framework ahead of evolving regulatory mandates."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated revenue increased by 11% to EUR 338.3 million in 2024, driven by net interest income growth of 8% to EUR 273.3 million and net fee and commission income growth of 24% to EUR 60.3 million; net profit rose 7% to EUR 150.3 million, resulting in a cost-to-income ratio of 43.4% and return on equity of 24.5%.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (pages 10-11); Consolidated statement of profit or loss (page 189)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS LHV Group delivered record financial performance in 2024, with consolidated net profit reaching EUR 150.3 million, a 7 percent increase compared to EUR 140.9 million in 2023."
+          },
+          {
+            "id": "S3",
+            "text": "Net interest income grew 8 percent to EUR 273.3 million, benefiting from elevated interest rate levels during much of the year, while net fee and commission income surged 24 percent to EUR 60.3 million, reflecting heightened customer engagement across services."
+          },
+          {
+            "id": "S5",
+            "text": "Despite these expenditures, the group maintained a manageable cost to income ratio of 43.4 percent, up slightly from 42.3 percent in the prior year."
+          },
+          {
+            "id": "S6",
+            "text": "Return on equity stood at 24.5 percent, down from 29.0 percent in 2023, as the equity base grew alongside profitability."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The loan portfolio expanded by EUR 990 million (28% YoY) to EUR 4.6 billion, comprising Estonian corporate loans up 21% to EUR 2.3 billion, Estonian retail loans up 21% to EUR 1.9 billion, and UK SME loans up 338% to EUR 0.3 billion.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Note 12, Loans and advances to customers (page 223)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total assets expanded by 23 percent to EUR 8.7 billion, driven primarily by a 28 percent rise in the loan portfolio to EUR 4.6 billion and a 21 percent increase in deposits to EUR 6.9 billion."
+          },
+          {
+            "id": "S8",
+            "text": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Deposits grew by EUR 1,179 million (21% YoY) to EUR 6.9 billion, with regular customer deposits in LHV Pank rising EUR 554 million (14% YoY to EUR 4.6 billion) and deposits from financial intermediaries increasing significantly (LHV Bank collections up EUR 416 million, +388% YoY), partly offset by LHV Pank reducing platform deposits by one-third.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Note 17, Deposits from customers (page 226)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K4",
+        "information": "Assets under management increased to EUR 1.56 billion (3% YoY), primarily due to positive market returns, with LHV Varahaldus maintaining a ~25% market share in Estonia's II pillar pension system managing savings for 22.3% of participants.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Overview of LHV Varahaldus (page 24)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Customer base grew with LHV Pank reaching 456,000 clients (+9% YoY, including 38,000 new customers), and LHV Kindlustus insuring 170,000 customers (+6% YoY).",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Summary of the year 2024 (page 10); Overview of LHV Kindlustus (page 24)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Strategic initiatives included launching retail banking operations in the UK, introducing a mobile banking app, and implementing cost-control measures involving redundancies and departmental restructuring to enhance operational efficiency.",
+        "importance": "HIGH",
+        "source_evidence": "Letter from the CEO (page 8); Overview of LHV Bank Ltd (page 25); Management report, Development activities (page 22)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S8",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating expenses increased by 14 percent to EUR 146.9 million, a development the report explicitly attributes to workforce expansion and strategic investments required to establish retail banking operations in the United Kingdom."
+          },
+          {
+            "id": "S8",
+            "text": "The pronounced balance sheet growth stemmed from multiple strategic drivers: Estonian corporate and retail lending expanded by 21 percent each, UK subsidiary LHV Bank recorded exceptional SME loan growth exceeding 338 percent, and an acquisition of a profitable loan portfolio accelerated volumes."
+          },
+          {
+            "id": "S12",
+            "text": "Strategic actions also included issuing EUR 20 million in new Tier 2 bonds and restructuring debt maturities to optimize the capital framework ahead of evolving regulatory mandates."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The dividend proposal recommends paying EUR 0.09 per share (total EUR 29.2 million) with related income tax of EUR 8.2 million, and transferring EUR 123.2 million of parent-company attributable profit to retained earnings.",
+        "importance": "HIGH",
+        "source_evidence": "Proposal for profit distribution (page 245)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "The Group maintained strong regulatory capital positions with a CET1 ratio of 16.89% (above minimum 12.41%), complying with all capital adequacy (including MREL of 33.24% and 12.41%), leverage ratio (6.71%), and liquidity requirements (LCR 187.5%, NSFR 154.4%).",
+        "importance": "HIGH",
+        "source_evidence": "Regulatory and financial ratios (page 13); Note 21, Shareholders' equity (page 230)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Credit quality remained strong, with impairment losses totaling EUR 16.3 million against a healthy allowance, and capital buffers exceeded internal and regulatory requirements, evidenced by a Common Equity Tier 1 ratio of 16.89 percent and a total capital adequacy ratio of 20.68 percent."
+          },
+          {
+            "id": "S10",
+            "text": "Liquidity remained resilient, with liquidity coverage and net stable funding ratios positioned well above regulatory thresholds."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Operations occurred amid a contracting Estonian economy (GDP -0.7% YoY) and stabilized UK economy, with LHV Pank maintaining tight credit quality (loans overdue >60 days at 0.3% of portfolio) and benefiting from rising corporate loan demand late in the year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Business environment (page 18); Market average share of overdue loans (page 20); Overview of LHV Pank (page 21)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K3",
+      "K4",
+      "K5",
+      "K7",
+      "K9"
+    ],
+    "completeness_justification": "K1, K2, K6, and K8 are fully represented with supporting sentences. K3, K4, K5, K7, and K9 are missing entirely. The summary captures the core financial performance, loan/deposit growth, strategic initiatives, and capital adequacy, but omits critical details on deposits, AUM, customer base growth, dividend proposal, and macroeconomic context. This results in substantial missing information, placing coverage in the 'Generally yes' category due to strong representation of high-importance items but significant gaps in other areas.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected and support the overall narrative of strong financial performance in 2024. There are no self-contradictions, logical gaps, or organizational problems. Explanations for changes in key metrics (e.g., cost-to-income ratio, ROE) are consistent with preceding statements. The summary flows logically from consolidated results to specific drivers, credit quality, capital ratios, strategic actions, and concluding assessment. No unnecessary repetition materially reduces clarity. The relationships between balance sheet growth drivers, income statement items, and strategic actions are internally consistent."
+  },
+  "usage": {
+    "input_tokens_total": 243541,
+    "output_tokens_total_including_reasoning": 5896,
+    "total_tokens": 249437,
+    "latency_seconds_total": 38.02
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 481493,
+    "output_tokens_total_including_reasoning": 37383,
+    "total_tokens": 518876,
+    "latency_seconds_total": 354.84
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_13.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_13_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_13.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_13.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_13_chain_of_event_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_13_chain_of_event_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_13_chain_of_event_qwen36.json"
+    }
+  }
+}

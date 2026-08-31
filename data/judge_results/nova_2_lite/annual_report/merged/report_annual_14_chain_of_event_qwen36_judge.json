@@ -1,0 +1,638 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_14_chain_of_event_qwen36.txt",
+    "report": "report_annual_14.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Lyko Group reported net revenue of SEK 3,962.6 million for the full year 2025, representing an 11.3 percent increase from SEK 3,561.7 million in 2024.",
+    "S2": "This growth was primarily driven by the Nordic segment, where sales rose 12.0 percent to SEK 3,699.8 million, accounting for 93.4 percent of total revenue.",
+    "S3": "In contrast, the Europe segment experienced a slight decline of 1.3 percent, with net sales decreasing to SEK 130.7 million.",
+    "S4": "The company welcomed over 350,000 new customers during the fourth quarter, reinforcing its position as the leading beauty destination in the Nordics.",
+    "S5": "Despite the top-line growth, profitability metrics deteriorated compared to the previous year.",
+    "S6": "Gross profit increased to SEK 1,658.7 million, but the gross profit margin contracted to 41.9 percent from 44.0 percent in 2024.",
+    "S7": "Operating profit (EBIT) fell significantly to SEK 78.2 million from SEK 117.4 million, resulting in an EBIT margin of 2.0 percent compared to 3.3 percent previously.",
+    "S8": "This decline in operating performance was attributed to investments in infrastructure, store expansion, and brand development, as well as the ramp-up of new warehouse automation in Vansbro.",
+    "S9": "The implementation of this automation, the company’s largest historical investment, affected results during parts of the year but is expected to provide structural cost advantages and higher capacity for future growth.",
+    "S10": "The net result for the year was a loss of SEK 3.0 million, a sharp reversal from the profit of SEK 21.0 million recorded in 2024.",
+    "S11": "Earnings per share decreased to negative SEK 0.20 from SEK 1.37.",
+    "S12": "Depreciation and amortization expenses increased to SEK 174.1 million, and tax expenses amounted to SEK 2.1 million.",
+    "S13": "Financial items, including interest expenses, contributed to the negative net result.",
+    "S14": "However, cash flow from operating activities improved substantially to SEK 527.5 million from SEK 209.7 million in the prior year, driven by strong working capital management.",
+    "S15": "Strategic developments during the period included the opening of Lyko’s first Fab Store in Täby Centrum, a scalable retail concept designed to enhance customer experience.",
+    "S16": "The company also continued expanding its physical store network, opening new locations in Norway and Finland.",
+    "S17": "Additionally, Lyko relaunched its iconic Make Up Store brand and launched new own brands such as Scandinavian Soap Factory and PLY Skin.",
+    "S18": "The Lyko Community platform saw high engagement, with 21 million views in November alone.",
+    "S19": "Looking ahead, the company announced a cost savings program in January 2026 aimed at generating annual savings of approximately SEK 100 million, following a restructuring cost of SEK 22 million in the first quarter.",
+    "S20": "The Board of Directors proposed no dividend for the 2025 financial year, prioritizing cash flows for continued expansion."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_14.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_14.json",
+    "key_information_hash": "66aa7d05a7b21c7b",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 0.916667,
+      "correct": 11,
+      "incorrect": 1,
+      "total": 12
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Profitability metrics deteriorated compared to the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBIT margin contracted to 2.0% from 3.3%, net result turned to a loss of SEK 3.0m from SEK 21.0m.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite the top-line growth, profitability metrics deteriorated compared to the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The decline in operating performance was attributed to investments in infrastructure, store expansion, and brand development, as well as the ramp-up of new warehouse automation in Vansbro.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report attributes EBIT decline to investments in infrastructure, stores, organization, brand development, and warehouse automation implementation.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "This decline in operating performance was attributed to investments in infrastructure, store expansion, and brand development, as well as the ramp-up of new warehouse automation in Vansbro."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The implementation of the warehouse automation, the company’s largest historical investment, affected results during parts of the year but is expected to provide structural cost advantages and higher capacity for future growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Vansbro warehouse automation investment of SEK 500m described as largest in company history, with implementation affecting results but providing future capacity and cost benefits.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The implementation of this automation, the company’s largest historical investment, affected results during parts of the year but is expected to provide structural cost advantages and higher capacity for future growth."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Strategic developments during the period included the opening of Lyko’s first Fab Store in Täby Centrum, a scalable retail concept designed to enhance customer experience.",
+        "label": "SUPPORTED",
+        "source_evidence": "Selected events section details opening of first Fab Store in Täby Centrum in October 2025 as a blueprint for future stores.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Strategic developments during the period included the opening of Lyko’s first Fab Store in Täby Centrum, a scalable retail concept designed to enhance customer experience."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company also continued expanding its physical store network, opening new locations in Norway and Finland.",
+        "label": "SUPPORTED",
+        "source_evidence": "Selected events reports opening of fifth store in Norway (Sandnes/Stavanger) and third store in Finland (Espoo).",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company also continued expanding its physical store network, opening new locations in Norway and Finland."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Additionally, Lyko relaunched its iconic Make Up Store brand and launched new own brands such as Scandinavian Soap Factory and PLY Skin.",
+        "label": "SUPPORTED",
+        "source_evidence": "Own Brands section details relaunch of Make Up Store and launches of Scandinavian Soap Factory and PLY Skin.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Additionally, Lyko relaunched its iconic Make Up Store brand and launched new own brands such as Scandinavian Soap Factory and PLY Skin."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The Board of Directors proposed no dividend for the 2025 financial year, prioritizing cash flows for continued expansion.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Share section states Board does not intend to propose dividend for current fiscal year, prioritizing cash for expansion.",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Board of Directors proposed no dividend for the 2025 financial year, prioritizing cash flows for continued expansion."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Net revenue was SEK 3,962.6 million for 2025, representing an 11.3 percent increase from SEK 3,561.7 million in 2024.",
+        "candidate_value": "3,962.6 million SEK (11.3% increase from 3,561.7 million SEK)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net revenue 2025: 3,962.6 MSEK; 2024: 3,561.7 MSEK; growth: 11.3%",
+        "source_evidence": "Key Figures table in financial statements.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Lyko Group reported net revenue of SEK 3,962.6 million for the full year 2025, representing an 11.3 percent increase from SEK 3,561.7 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Nordic segment sales rose 12.0 percent to SEK 3,699.8 million, accounting for 93.4 percent of total revenue.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "3,699.8 million SEK (12.0% increase)",
+        "source_value": "Nordics net sales 2025: 3,699.8 MSEK; growth: 12.0%; share of total: 93.4%",
+        "source_evidence": "Management Report and segment breakdown.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This growth was primarily driven by the Nordic segment, where sales rose 12.0 percent to SEK 3,699.8 million, accounting for 93.4 percent of total revenue."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Europe segment net sales decreased 1.3 percent to SEK 130.7 million.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "130.7 million SEK (1.3% decrease)",
+        "source_value": "Europe net sales 2025: 130.7 MSEK; change: -1.3%",
+        "source_evidence": "Management Report and segment breakdown.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, the Europe segment experienced a slight decline of 1.3 percent, with net sales decreasing to SEK 130.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Over 350,000 new customers were welcomed during the fourth quarter.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "350,000 customers",
+        "source_value": "Over 350,000 new customers in Q4",
+        "source_evidence": "CEO’s Statement: 'in the fourth quarter alone we welcomed over 350,000 new customers'.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The company welcomed over 350,000 new customers during the fourth quarter, reinforcing its position as the leading beauty destination in the Nordics."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Gross profit increased to SEK 1,658.7 million, but the gross profit margin contracted to 41.9 percent from 44.0 percent in 2024.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "1,658.7 million SEK (41.9% margin vs 44.0%)",
+        "source_value": "Gross profit 2025: 1,658.7 MSEK; margin: 41.9%; 2024 margin: 44.0%",
+        "source_evidence": "Key Figures table.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Gross profit increased to SEK 1,658.7 million, but the gross profit margin contracted to 41.9 percent from 44.0 percent in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Operating profit (EBIT) fell to SEK 78.2 million from SEK 117.4 million, resulting in an EBIT margin of 2.0 percent compared to 3.3 percent previously.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "78.2 million SEK (2.0% margin vs 117.4 million SEK and 3.3% margin)",
+        "source_value": "EBIT 2025: 78.2 MSEK (margin 2.0%); 2024: 117.4 MSEK (margin 3.3%)",
+        "source_evidence": "Key Figures table.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operating profit (EBIT) fell significantly to SEK 78.2 million from SEK 117.4 million, resulting in an EBIT margin of 2.0 percent compared to 3.3 percent previously."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The net result for the year was a loss of SEK 3.0 million, a sharp reversal from the profit of SEK 21.0 million recorded in 2024.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "-3.0 million SEK loss vs 21.0 million SEK profit",
+        "source_value": "Profit/(Loss) for the year 2025: -3.0 MSEK; 2024: 21.0 MSEK",
+        "source_evidence": "Income Statement.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The net result for the year was a loss of SEK 3.0 million, a sharp reversal from the profit of SEK 21.0 million recorded in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Earnings per share decreased to negative SEK 0.20 from SEK 1.37.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "-0.20 SEK vs 1.37 SEK",
+        "source_value": "EPS 2025: -0.20 SEK; 2024: 1.37 SEK",
+        "source_evidence": "Note 14: Earnings per share.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Earnings per share decreased to negative SEK 0.20 from SEK 1.37."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Depreciation and amortization expenses increased to SEK 174.1 million, and tax expenses amounted to SEK 2.1 million.",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "candidate_value": "174.1 million SEK (D&A); 2.1 million SEK (tax expense)",
+        "source_value": "Depreciation and amortization 2025: 174.1 MSEK; tax expense 2025: -2.1 MSEK (tax benefit)",
+        "source_evidence": "Note 11 (D&A) and Income Statement (tax line item shows -2.1 MSEK).",
+        "error_explanation": "Candidate reports tax expense as a positive SEK 2.1 million, but source shows a tax benefit (negative expense) of SEK 2.1 million for 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Depreciation and amortization expenses increased to SEK 174.1 million, and tax expenses amounted to SEK 2.1 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Cash flow from operating activities improved substantially to SEK 527.5 million from SEK 209.7 million in the prior year.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "527.5 million SEK vs 209.7 million SEK",
+        "source_value": "Cash flow from operating activities 2025: 527.5 MSEK; 2024: 209.7 MSEK",
+        "source_evidence": "Cash Flow Statement.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "However, cash flow from operating activities improved substantially to SEK 527.5 million from SEK 209.7 million in the prior year, driven by strong working capital management."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The Lyko Community platform saw high engagement, with 21 million views in November alone.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "21 million views",
+        "source_value": "21 million views in November 2025",
+        "source_evidence": "Lyko in Brief section: 'In November 2025, Lyko Community had 21 million views.'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The Lyko Community platform saw high engagement, with 21 million views in November alone."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "A cost savings program was announced in January 2026 aimed at generating annual savings of approximately SEK 100 million, following a restructuring cost of SEK 22 million in the first quarter.",
+        "label": "CORRECT",
+        "error_type": null,
+        "candidate_value": "SEK 100 million annual savings; SEK 22 million restructuring cost",
+        "source_value": "SEK 100m annual savings target; SEK 22m restructuring cost in Q1 2026",
+        "source_evidence": "Events after the reporting date section: 'In January, ... cost savings programme ... SEK 100m ... restructuring cost of SEK 22m'.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Looking ahead, the company announced a cost savings program in January 2026 aimed at generating annual savings of approximately SEK 100 million, following a restructuring cost of SEK 22 million in the first quarter."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance: Net revenue increased by 11.3% to SEK 3,962.6M (2025 vs 2024), with EBIT declining to SEK 78.2M (2.0% margin) due to warehouse automation costs, resulting in a net loss of SEK 3.0M versus profit of SEK 21.0M in 2024.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT pages 62-63 (Key Figures table)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S5",
+          "S7",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Lyko Group reported net revenue of SEK 3,962.6 million for the full year 2025, representing an 11.3 percent increase from SEK 3,561.7 million in 2024."
+          },
+          {
+            "id": "S5",
+            "text": "Despite the top-line growth, profitability metrics deteriorated compared to the previous year."
+          },
+          {
+            "id": "S7",
+            "text": "Operating profit (EBIT) fell significantly to SEK 78.2 million from SEK 117.4 million, resulting in an EBIT margin of 2.0 percent compared to 3.3 percent previously."
+          },
+          {
+            "id": "S10",
+            "text": "The net result for the year was a loss of SEK 3.0 million, a sharp reversal from the profit of SEK 21.0 million recorded in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Nordics segment (Sweden, Norway, Finland, Denmark) accounted for 93.4% of sales (SEK 3,699.8M) with 12.0% growth, while Europe segment (Germany, Austria, Poland, Netherlands) declined 1.3% to SEK 130.7M following operational reorganization.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT page 63 (Net sales and results per segment)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This growth was primarily driven by the Nordic segment, where sales rose 12.0 percent to SEK 3,699.8 million, accounting for 93.4 percent of total revenue."
+          },
+          {
+            "id": "S3",
+            "text": "In contrast, the Europe segment experienced a slight decline of 1.3 percent, with net sales decreasing to SEK 130.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Commissioning of a new SEK 500M automated warehouse in Vansbro, increasing total order capacity to approximately 100,000 orders per day, with full operation expected in early 2026.",
+        "importance": "HIGH",
+        "source_evidence": "THE VANSBRO WAREHOUSE pages 24-25",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "This decline in operating performance was attributed to investments in infrastructure, store expansion, and brand development, as well as the ramp-up of new warehouse automation in Vansbro."
+          },
+          {
+            "id": "S9",
+            "text": "The implementation of this automation, the company’s largest historical investment, affected results during parts of the year but is expected to provide structural cost advantages and higher capacity for future growth."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Retail expansion included the launch of Lyko's first Fab Store (500 sqm) in Täby Centrum, opening of a third store in Finland and a fifth store in Norway, bringing total stores to 34.",
+        "importance": "HIGH",
+        "source_evidence": "SELECTED EVENTS page 47 (Fab Store facts) and MANAGEMENT REPORT page 62 (Significant events); city names and exact dates in source_evidence",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Strategic developments during the period included the opening of Lyko’s first Fab Store in Täby Centrum, a scalable retail concept designed to enhance customer experience."
+          },
+          {
+            "id": "S16",
+            "text": "The company also continued expanding its physical store network, opening new locations in Norway and Finland."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strategic development of own brands included the relaunch of Make Up Store and launch of Scandinavian Soap Factory, strengthening margins and assortment uniqueness.",
+        "importance": "HIGH",
+        "source_evidence": "OWN BRANDS page 19 and CEO'S STATEMENT page 7",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Additionally, Lyko relaunched its iconic Make Up Store brand and launched new own brands such as Scandinavian Soap Factory and PLY Skin."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Liquidity position strengthened with net debt (excl. IFRS 16) at SEK 292.5M versus SEK 333.1M, cash and cash equivalents at SEK 452.5M, supported by ongoing banking agreements.",
+        "importance": "HIGH",
+        "source_evidence": "MANAGEMENT REPORT page 63 (Financial position)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Brand awareness improved significantly, with spontaneous awareness reaching 51% in Sweden, 46% in Norway, and 30% in Finland.",
+        "importance": "HIGH",
+        "source_evidence": "STRATEGY page 16 (Brand awareness chart); demographic scope (women 16-60) in source_evidence",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Strategic focus areas include growth in existing markets, broadening assortment, geographic expansion via 'online first' model, store network development, own brand growth, brand awareness enhancement, platform development, and strategic acquisitions.",
+        "importance": "HIGH",
+        "source_evidence": "STRATEGY page 15 (Focus areas list)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Material post-reporting events include a cost savings program targeting SEK 100M annual savings, lease of a new store in Charlottenberg, launch of Gleeze own brand, and extension of RCFs with banks until 2028.",
+        "importance": "MEDIUM",
+        "source_evidence": "EVENTS AFTER THE END OF THE YEAR page 65; specific dates (Q1 2026, April 1 2026) in source_evidence",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Looking ahead, the company announced a cost savings program in January 2026 aimed at generating annual savings of approximately SEK 100 million, following a restructuring cost of SEK 22 million in the first quarter."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (headline financial performance), K2 (segment performance), K3 (warehouse automation), K4 (retail expansion), K5 (own brand development), and K9 (post-reporting events). However, it omits the liquidity position details required by K6, brand awareness metrics required by K7, and strategic focus areas required by K8. These omissions are material because they represent distinct HIGH-importance components of the overall financial report. While the summary captures most of the financial and operational highlights, the absence of liquidity, brand awareness, and strategic focus information prevents it from achieving full coverage.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The narrative flows from revenue growth to profitability challenges, strategic investments, cash flow improvements, and future plans. Explanations for performance changes (e.g., investments causing margin contraction) are consistent. There is no unnecessary repetition, and the organization clearly groups related topics (financial performance, strategic actions, future outlook). Segment figures are presented without implying they should arithmetically reconcile to the total, avoiding any false contradiction. All elements work together to form a unified, logical summary."
+  },
+  "usage": {
+    "input_tokens_total": 77917,
+    "output_tokens_total_including_reasoning": 7388,
+    "total_tokens": 85305,
+    "latency_seconds_total": 40.83
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 149395,
+    "output_tokens_total_including_reasoning": 48817,
+    "total_tokens": 198212,
+    "latency_seconds_total": 152.78
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_14.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_14_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_14.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_14.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_14_chain_of_event_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_14_chain_of_event_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_14_chain_of_event_qwen36.json"
+    }
+  }
+}

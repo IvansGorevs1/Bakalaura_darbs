@@ -1,0 +1,607 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_5_few_shot_gemini.txt",
+    "report": "report_quarterly_5.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Arco Vara AS reported improved financial performance during the first quarter of 2025, driven by a moderate recovery in the Estonian real estate market.",
+    "S2": "The company’s sales revenue increased significantly to 1,706 thousand euros in the first quarter of 2025, compared to 990 thousand euros in the same period of the previous year.",
+    "S3": "This revenue growth was primarily supported by higher proceeds from the sale of the group’s own real estate, which rose to 1,589 thousand euros from 927 thousand euros, alongside increases in service and franchise revenues.",
+    "S4": "Profitability also showed a positive turnaround compared with the previous year.",
+    "S5": "The group recorded an operating profit of 259 thousand euros for the first quarter of 2025, recovering from an operating loss of 208 thousand euros in the first quarter of 2024.",
+    "S6": "Net profit for the reporting period reached 103 thousand euros, representing a substantial improvement from the net loss of 349 thousand euros reported in the corresponding period of 2024.",
+    "S7": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the prior-year period.",
+    "S8": "The broader economic environment during the quarter was characterized by a stable real estate sector supported by declining Euribor rates and stabilizing inflation, which contributed to increased consumer interest and transaction activity.",
+    "S9": "Operational developments included the sale of four apartments during the first quarter of 2025, bringing total units sold in the Rannakalda project to 91 out of 113.",
+    "S10": "Pre-sales activities continued across other residential projects, including Soodi 6 and Botanica Lozen in Bulgaria, where the first phase neared completion.",
+    "S11": "Additionally, the company acquired a new development property on Spordi Street in Tallinn during the quarter to expand its future project portfolio.",
+    "S12": "Regarding balance sheet and financial indicators, total assets increased to 42,728 thousand euros as of 31 March 2025, up from 35,079 thousand euros at the end of the first quarter of 2024.",
+    "S13": "Equity at the end of the reporting period stood at 19,842 thousand euros, compared to 20,668 thousand euros a year earlier.",
+    "S14": "The group’s debt burden, represented by net loans, reached 15,455 thousand euros as of 31 March 2025, reflecting ongoing investments in real estate development projects.",
+    "S15": "Interest-bearing liabilities totaled 16,568 thousand euros at the end of the period, with a weighted average annual interest rate of 8.2 percent, marking a decrease of 0.5 percentage points compared to the end of December 2024 due to declining benchmark interest rates.",
+    "S16": "Cash and cash equivalents amounted to 1,113 thousand euros at the end of March 2025, reflecting net cash flows of -607 thousand euros for the quarter driven by cash usage in operating activities, which was partially offset by financing activities.",
+    "S17": "Overall, the first quarter of 2025 reflected operational stability, preparation for upcoming construction stages, and a return to profitability amid recovering market conditions."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "key_information_hash": "aabb2f7afff6bfca",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 10,
+      "incorrect": 0,
+      "total": 10
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 1,
+      "missing": 4,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Arco Vara AS reported improved financial performance during the first quarter of 2025, driven by a moderate recovery in the Estonian real estate market.",
+        "label": "SUPPORTED",
+        "source_evidence": "The first quarter of 2025 continued the moderate recovery in Estonia’s real estate market that began at the end of 2024. Despite the generally cautious economic sentiment, the market remained stable and showed the first credible signs of revitalization.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Arco Vara AS reported improved financial performance during the first quarter of 2025, driven by a moderate recovery in the Estonian real estate market."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Profitability also showed a positive turnaround compared with the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "In Q1 2025, the group’s operating profit (=EBIT) was 259 thousand euros and net profit 103 thousand euros. In Q1 2024, the group’s operating loss (=EBIT) was 208 thousand euros and net loss 349 thousand euros.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Profitability also showed a positive turnaround compared with the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The broader economic environment during the quarter was characterized by a stable real estate sector supported by declining Euribor rates and stabilizing inflation, which contributed to increased consumer interest and transaction activity.",
+        "label": "SUPPORTED",
+        "source_evidence": "The continued decline of the Euribor, alongside stabilizing inflation, contributed to increased transaction activity and consumer interest, particularly within the residential segment.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The broader economic environment during the quarter was characterized by a stable real estate sector supported by declining Euribor rates and stabilizing inflation, which contributed to increased consumer interest and transaction activity."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operational developments included the sale of four apartments during the first quarter of 2025, bringing total units sold in the Rannakalda project to 91 out of 113.",
+        "label": "SUPPORTED",
+        "source_evidence": "In the Rannakalda development, Arco Vara sold four additional apartments in Q1 2025, bringing the total number of units sold to 91 out of 113.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational developments included the sale of four apartments during the first quarter of 2025, bringing total units sold in the Rannakalda project to 91 out of 113."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Pre-sales activities continued across other residential projects, including Soodi 6 and Botanica Lozen in Bulgaria, where the first phase neared completion.",
+        "label": "SUPPORTED",
+        "source_evidence": "The pre-sales in the Soodi 6 project continued at a calm pace, with 10 out of 66 apartments pre-sold by the end of the quarter. In Bulgaria, the local team brought the Botanica Lozen project even closer to completion, reaching 95% readiness by the end of the quarter.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Pre-sales activities continued across other residential projects, including Soodi 6 and Botanica Lozen in Bulgaria, where the first phase neared completion."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Additionally, the company acquired a new development property on Spordi Street in Tallinn during the quarter to expand its future project portfolio.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the first quarter of 2025, Arco Vara acquired a new development site in Tallinn on Spordi Street. The property, located in an attractive area suitable for residential development, expands Arco Vara’s project portfolio in sought-after districts of Tallinn.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Additionally, the company acquired a new development property on Spordi Street in Tallinn during the quarter to expand its future project portfolio."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Overall, the first quarter of 2025 reflected operational stability, preparation for upcoming construction stages, and a return to profitability amid recovering market conditions.",
+        "label": "SUPPORTED",
+        "source_evidence": "In summary, Q1 2025 was a period of stability and preparation, with the real estate market moving quietly but steadily toward recovery.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Overall, the first quarter of 2025 reflected operational stability, preparation for upcoming construction stages, and a return to profitability amid recovering market conditions."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The company’s sales revenue increased significantly to 1,706 thousand euros in the first quarter of 2025, compared to 990 thousand euros in the same period of the previous year.",
+        "candidate_value": "1,706 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,706 thousand euros",
+        "source_evidence": "In Q1 2025, the group's sales revenue was 1,706 thousand euros, which is 716 thousand euros more than the sales revenue of the Q1 2024 of 990 thousand euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company’s sales revenue increased significantly to 1,706 thousand euros in the first quarter of 2025, compared to 990 thousand euros in the same period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This revenue growth was primarily supported by higher proceeds from the sale of the group’s own real estate, which rose to 1,589 thousand euros from 927 thousand euros, alongside increases in service and franchise revenues.",
+        "candidate_value": "1,589 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,589 thousand euros",
+        "source_evidence": "The group’s sales revenue was 1,706 thousand euros in Q1 2025 (Q1 2024: 990 thousand euros), including the sale of real estate in the group’s own development projects 1,589 thousand euros (927 thousand euros in Q1 2024).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This revenue growth was primarily supported by higher proceeds from the sale of the group’s own real estate, which rose to 1,589 thousand euros from 927 thousand euros, alongside increases in service and franchise revenues."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The group recorded an operating profit of 259 thousand euros for the first quarter of 2025, recovering from an operating loss of 208 thousand euros in the first quarter of 2024.",
+        "candidate_value": "259 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "259 thousand euros",
+        "source_evidence": "In Q1 2025, the group’s operating profit (=EBIT) was 259 thousand euros and net profit 103 thousand euros. In Q1 2024, the group’s operating loss (=EBIT) was 208 thousand euros and net loss 349 thousand euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The group recorded an operating profit of 259 thousand euros for the first quarter of 2025, recovering from an operating loss of 208 thousand euros in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit for the reporting period reached 103 thousand euros, representing a substantial improvement from the net loss of 349 thousand euros reported in the corresponding period of 2024.",
+        "candidate_value": "103 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "103 thousand euros",
+        "source_evidence": "In Q1 2025, the group’s operating profit (=EBIT) was 259 thousand euros and net profit 103 thousand euros. In Q1 2024, the group’s operating loss (=EBIT) was 208 thousand euros and net loss 349 thousand euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net profit for the reporting period reached 103 thousand euros, representing a substantial improvement from the net loss of 349 thousand euros reported in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the prior-year period.",
+        "candidate_value": "0.01 euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.01 euros",
+        "source_evidence": "Earnings per share (in euros) 0.01 | -0.03 ; Diluted earnings per share (in euros) 0.01 | -0.03",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the prior-year period."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets increased to 42,728 thousand euros as of 31 March 2025, up from 35,079 thousand euros at the end of the first quarter of 2024.",
+        "candidate_value": "42,728 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42,728 thousand euros",
+        "source_evidence": "Total assets at the end of period 42,728 | 35,079",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Regarding balance sheet and financial indicators, total assets increased to 42,728 thousand euros as of 31 March 2025, up from 35,079 thousand euros at the end of the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Equity at the end of the reporting period stood at 19,842 thousand euros, compared to 20,668 thousand euros a year earlier.",
+        "candidate_value": "19,842 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,842 thousand euros",
+        "source_evidence": "Equity at the end of period 19,842 | 20,668",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Equity at the end of the reporting period stood at 19,842 thousand euros, compared to 20,668 thousand euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The group’s debt burden, represented by net loans, reached 15,455 thousand euros as of 31 March 2025, reflecting ongoing investments in real estate development projects.",
+        "candidate_value": "15,455 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15,455 thousand euros",
+        "source_evidence": "Net loans at the end of period 15,455 | 10,559",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The group’s debt burden, represented by net loans, reached 15,455 thousand euros as of 31 March 2025, reflecting ongoing investments in real estate development projects."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Interest-bearing liabilities totaled 16,568 thousand euros at the end of the period, with a weighted average annual interest rate of 8.2 percent, marking a decrease of 0.5 percentage points compared to the end of December 2024 due to declining benchmark interest rates.",
+        "candidate_value": "16,568 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16,568 thousand euros",
+        "source_evidence": "The group’s interest-bearing liabilities amounted to 16,568 thousand euros on 31 March 2025... The group’s weighted average loan interest rate was 8.2%. This is an decrease by 0.5 percentage points compared to the end of year 2024.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Interest-bearing liabilities totaled 16,568 thousand euros at the end of the period, with a weighted average annual interest rate of 8.2 percent, marking a decrease of 0.5 percentage points compared to the end of December 2024 due to declining benchmark interest rates."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Cash and cash equivalents amounted to 1,113 thousand euros at the end of March 2025, reflecting net cash flows of -607 thousand euros for the quarter driven by cash usage in operating activities, which was partially offset by financing activities.",
+        "candidate_value": "1,113 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,113 thousand euros",
+        "source_evidence": "Cash and cash equivalents at end of period 1,113 | 734 ; Net cash flows -607 | -738",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Cash and cash equivalents amounted to 1,113 thousand euros at the end of March 2025, reflecting net cash flows of -607 thousand euros for the quarter driven by cash usage in operating activities, which was partially offset by financing activities."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2025 revenue increased to EUR 1,706 thousand (72% YoY growth from EUR 990 thousand in Q1 2024), with operating profit of EUR 259 thousand (vs operating loss of EUR 208 thousand in Q1 2024) and net profit of EUR 103 thousand (vs net loss of EUR 349 thousand in Q1 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators table and Consolidated Statement of Comprehensive Income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company’s sales revenue increased significantly to 1,706 thousand euros in the first quarter of 2025, compared to 990 thousand euros in the same period of the previous year."
+          },
+          {
+            "id": "S5",
+            "text": "The group recorded an operating profit of 259 thousand euros for the first quarter of 2025, recovering from an operating loss of 208 thousand euros in the first quarter of 2024."
+          },
+          {
+            "id": "S6",
+            "text": "Net profit for the reporting period reached 103 thousand euros, representing a substantial improvement from the net loss of 349 thousand euros reported in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Net loans increased to EUR 15,455 thousand as of 31 March 2025, with the weighted average annual interest rate of interest-bearing liabilities decreasing to 8.2% (a reduction of 0.5 percentage points compared to 31 December 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators section and Note 12 (Interest bearing liabilities)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The group’s debt burden, represented by net loans, reached 15,455 thousand euros as of 31 March 2025, reflecting ongoing investments in real estate development projects."
+          },
+          {
+            "id": "S15",
+            "text": "Interest-bearing liabilities totaled 16,568 thousand euros at the end of the period, with a weighted average annual interest rate of 8.2 percent, marking a decrease of 0.5 percentage points compared to the end of December 2024 due to declining benchmark interest rates."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Estonia’s real estate market showed credible signs of revitalization in Q1 2025, with increased transaction activity, stabilized price levels, and declining Euribor rates supporting consumer interest and transaction volumes.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review (first paragraph)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The broader economic environment during the quarter was characterized by a stable real estate sector supported by declining Euribor rates and stabilizing inflation, which contributed to increased consumer interest and transaction activity."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "In the Rannakalda development (Kodulahe), four additional apartments were sold in Q1 2025, bringing the total units sold to 91 out of 113 (21 units remaining vacant as of the report publication date).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operational developments included the sale of four apartments during the first quarter of 2025, bringing total units sold in the Rannakalda project to 91 out of 113."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "The Soodi 6 project (Kodulahe VII etapp) has the detail plan issued, with 66 units (62 apartments and 4 commercial premises) planned; construction is expected to commence at the end of Q2 2025 and complete in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Arco Vara's Active Projects table",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Arco Vara acquired a development site at Spordi 3a, 3b in Tallinn during Q1 2025; the project comprises 56 apartments (7,600 m² gross building area) with a total investment of EUR 15 million; pre-sales will begin in Q2 2025, and handover is scheduled for the end of 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Operating report section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Additionally, the company acquired a new development property on Spordi Street in Tallinn during the quarter to expand its future project portfolio."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The Botanica Lozen project in Bulgaria reached 95% readiness for the first phase (16 houses) by the end of Q1 2025; nine of the 16 houses had been sold by quarter-end, with full completion expected by the end of Q2 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Operating report section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Pre-sales activities continued across other residential projects, including Soodi 6 and Botanica Lozen in Bulgaria, where the first phase neared completion."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Preparatory work for the Arcojärve project is progressing according to plan; the detailed plan approval is targeted in the coming months, with construction scheduled to begin at the end of 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Detailed planning for the Kodulahe development at Lammi 6 advanced significantly in Q1 2025; construction is anticipated to start in approximately two years from the report date.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "The Merivälja Kuldlehe exclusive cluster house development comprises five apartments; two have been sold to date, with three remaining vacant as of 31 March 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K7",
+      "K8",
+      "K9",
+      "K10"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (Q1 2025 revenue, operating profit, and net profit), K2 (net loans and interest rate), K3 (Estonian real estate market revitalization), K4 (Rannakalda development sales), and K6 (Arco Vara acquisition of Spordi 3a, 3b site). K7 is partially present as it mentions Botanica Lozen in Bulgaria and nearing completion of the first phase, but omits specific details about the 95% readiness, nine houses sold, and full completion expected by end of Q2 2025. K5, K8, K9, and K10 are missing entirely with no core material meaning represented. The overall coverage is mixed with most high-importance items captured but several key projects omitted or only partially addressed, resulting in a 'Generally yes' score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent with no material contradictions or logical gaps. All statements build logically upon each other, showing a clear narrative of improved financial performance, operational developments, and balance sheet changes. The relationships between revenue growth, profitability improvements, and supporting operational activities are consistent. There are no self-contradictions, logical gaps, or organizational problems that materially reduce clarity. While minor points like the decrease in equity (S13) could prompt curiosity about context, the summary does not claim exhaustive additivity or create internal inconsistencies. The progression from revenue to profit to balance sheet metrics forms a coherent whole without unnecessary repetition."
+  },
+  "usage": {
+    "input_tokens_total": 22255,
+    "output_tokens_total_including_reasoning": 4375,
+    "total_tokens": 26630,
+    "latency_seconds_total": 20.82
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 37630,
+    "output_tokens_total_including_reasoning": 49189,
+    "total_tokens": 86819,
+    "latency_seconds_total": 164.67
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_5.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_5_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_5_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_5_few_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_5_few_shot_gemini.json"
+    }
+  }
+}

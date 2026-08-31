@@ -1,0 +1,86 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:46:01.312653",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_16_zero_shot_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "4bcea8c26c5bd53e",
+    "sentence_map_hash": "64a564c41aadde40",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordic Fibreboard AS reported consolidated net revenue of 1.86 million euros for the first quarter of 2026, marking a 7.3 percent increase compared to 1.74 million euros in the same period of the previous year.",
+    "S2": "This growth was primarily driven by the fibreboard production segment, where sales rose by 127 thousand euros to 1.86 million euros.",
+    "S3": "The improvement in sales performance was largely supported by Finnish DIY stores, whose order volume increased by 241 thousand euros to 855 thousand euros.",
+    "S4": "Revenue from the real estate management segment remained immaterial following the termination of lease agreements in August 2024.",
+    "S5": "Despite the revenue growth, the company recorded a significant deterioration in profitability.",
+    "S6": "Consolidated EBITDA for Q1 2026 was negative 395 thousand euros, representing an EBITDA margin of negative 21 percent, a sharp decline from the negative 85 thousand euros (negative 5 percent margin) reported in Q1 2025.",
+    "S7": "The fibreboard segment’s EBITDA also turned more negative, falling to negative 321 thousand euros from negative 62 thousand euros in the prior year period.",
+    "S8": "The company reported a consolidated net loss of 570 thousand euros, compared to a net loss of 228 thousand euros in Q1 2025.",
+    "S9": "The negative impact on results was attributed to the scheduled shutdown of the factory in early January 2026 for the transition to a new boiler house, which required approximately two months for calibration and start-up.",
+    "S10": "Additionally, energy consumption increased due to cold weather conditions, and gas prices nearly doubled in late February 2026 following geopolitical tensions, remaining approximately 50 percent higher than at the beginning of the year.",
+    "S11": "Financial expenses were 41 thousand euros, lower than the 51 thousand euros recorded in the previous year.",
+    "S12": "The group’s total assets increased to 9.7 million euros as of March 31, 2026, up from 8.7 million euros in the previous year.",
+    "S13": "Equity decreased to 3.9 million euros from 4.5 million euros at the end of 2025.",
+    "S14": "Borrowings stood at 3.3 million euros, down from 3.8 million euros in the previous year.",
+    "S15": "The group employed 57 people at the end of the quarter, a reduction from 69 employees in the previous year.",
+    "S16": "In the real estate segment, design works for the Admirali Quarter development project were completed, and building permits were issued.",
+    "S17": "A preliminary sale-purchase agreement for ten properties in Pärnu was signed in January 2026, with the final agreement expected by June 30, 2026.",
+    "S18": "Looking ahead, the company expects stable demand for fibreboard and plans to focus on developing existing clients and expanding into the Nordic market."
+  },
+  "usage": {
+    "input_tokens": 1221,
+    "output_tokens_including_reasoning": 295,
+    "total_tokens": 1516
+  },
+  "latency_seconds": 2.43,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"description\": \"Sentence S2 states that the fibreboard production segment sales rose by 127 thousand euros to 1.86 million euros, which equals the entire consolidated net revenue figure mentioned in S1. This creates a logical gap because it implies the fibreboard segment constitutes 100% of consolidated revenue, which is unlikely without explicit clarification. The summary does not explain whether other segments exist or if this represents a consolidation anomaly.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear structure covering revenue, segment performance, profitability, expenses, assets/equity, and outlook. Most statements logically connect: revenue growth (S1) is explained by fibreboard segment performance (S2-S3), profitability deterioration (S5) is quantified (S6-S8) and explained by shutdown and energy costs (S9-S10), and financial positions are consistently presented (S11-S15). The only notable issue is the unexplained equivalence between the fibreboard segment sales and total consolidated revenue in S2, which creates an unexplained logical gap. There are no self-contradictions, organizational confusion, or material repetitions. The summary forms a coherent narrative despite this one analytical gap.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "description": "Sentence S2 states that the fibreboard production segment sales rose by 127 thousand euros to 1.86 million euros, which equals the entire consolidated net revenue figure mentioned in S1. This creates a logical gap because it implies the fibreboard segment constitutes 100% of consolidated revenue, which is unlikely without explicit clarification. The summary does not explain whether other segments exist or if this represents a consolidation anomaly."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear structure covering revenue, segment performance, profitability, expenses, assets/equity, and outlook. Most statements logically connect: revenue growth (S1) is explained by fibreboard segment performance (S2-S3), profitability deterioration (S5) is quantified (S6-S8) and explained by shutdown and energy costs (S9-S10), and financial positions are consistently presented (S11-S15). The only notable issue is the unexplained equivalence between the fibreboard segment sales and total consolidated revenue in S2, which creates an unexplained logical gap. There are no self-contradictions, organizational confusion, or material repetitions. The summary forms a coherent narrative despite this one analytical gap."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

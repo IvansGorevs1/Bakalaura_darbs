@@ -1,0 +1,175 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:08:58.965399",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_25_few_shot_gemini.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "d4ed34e0bfd9f02b",
+    "sentence_map_hash": "a91479d030e66b07",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "df925e7e4daa63dd",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_25.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "WindowMaster International A/S reported a weaker financial performance for the financial year 2025 compared with the previous year, primarily affected by a slow start to the period and lower sales to a key customer in the Nordic region.",
+    "S2": "Consolidated revenue decreased by 8% to DKK 268.6m from DKK 294.5m in 2024, falling somewhat short of the original budget.",
+    "S3": "Despite the top-line decline, the gross margin improved to 48.8% compared with 46.9% in the prior year, supported by a shift in business mix featuring less revenue from key accounts and more direct project revenue.",
+    "S4": "Operating profitability measured by EBITDA decreased to DKK 28.0m in 2025 from DKK 37.3m in 2024, resulting in an EBITDA margin of 10.4% compared with 12.7%.",
+    "S5": "The reduction in operating profitability was linked to maintained fixed cost levels designed to support future growth, alongside extraordinary costs of DKK 2.5m incurred from a ransomware attack that affected the company's IT infrastructure in May and June.",
+    "S6": "Profit before tax declined to DKK 2.9m from DKK 12.2m, and profit after tax dropped significantly to DKK 0.9m from DKK 10.6m, the latter also impacted by unutilized tax assets.",
+    "S7": "Cash flow from operating activities remained strong at DKK 28.5m compared with DKK 29.4m in 2024, supported by improvements in net working capital, particularly inventories and work in progress.",
+    "S8": "Cash flow from investing activities amounted to DKK -9.4m compared with DKK -17.6m in the previous year, reflecting investments in digitalization, software development, process automation, and IT network updates.",
+    "S9": "Net interest-bearing debt increased slightly to DKK 38.7m at the end of 2025 from DKK 36.7m, with a financial gearing ratio of 1.7.",
+    "S10": "Equity stood at DKK 32.5m, representing an equity ratio of 23.5%.",
+    "S11": "Market conditions improved during the second half of 2025 as interest rates stabilized, increasing project execution within the non-residential segment, whereas residential demand remained subdued due to low consumer confidence.",
+    "S12": "Looking ahead to 2026, WindowMaster expects organic revenue growth in the range of 7% to 14%, reaching DKK 290m to DKK 310m, with EBITDA anticipated to increase to DKK 45m to DKK 55m, representing an EBITDA margin of around 8% to 10%.",
+    "S13": "Management expects fixed costs and the investment base to remain unchanged while market conditions improve gradually throughout the year."
+  },
+  "usage": {
+    "input_tokens": 1800,
+    "output_tokens_including_reasoning": 423,
+    "total_tokens": 2223
+  },
+  "latency_seconds": 2.53,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S2\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S5\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S6\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S7\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\", \"S10\"]\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K7\", \"K9\"],\n  \"justification\": \"The candidate summary adequately covers K1-K6 and K8, representing core material meanings for revenue decline, EBITDA drop, profit after tax fall, operating cash flow strength, 2026 outlook, and market condition improvements. However, K7 (North America market attractiveness and WindowMaster's competitive position) and K9 (strategic initiative 'Accelerate Core') are entirely missing, resulting in a 'Generally yes' score due to major omissions of two HIGH-importance items.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ]
+      },
+      {
+        "id": "K9",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K7",
+      "K9"
+    ],
+    "justification": "The candidate summary adequately covers K1-K6 and K8, representing core material meanings for revenue decline, EBITDA drop, profit after tax fall, operating cash flow strength, 2026 outlook, and market condition improvements. However, K7 (North America market attractiveness and WindowMaster's competitive position) and K9 (strategic initiative 'Accelerate Core') are entirely missing, resulting in a 'Generally yes' score due to major omissions of two HIGH-importance items."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

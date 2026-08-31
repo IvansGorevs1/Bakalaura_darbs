@@ -1,0 +1,469 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:01:04.029514",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_13_zero_shot_gemini.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "9aa6bfe95cf493e4",
+    "sentence_map_hash": "9609eef7cd0fc8c7",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_13.md",
+    "source_hash": "b9ff75002c5107c4",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the financial year ended December 31, 2024, AS LHV Group achieved the highest business volumes and net profit in its history, despite challenging economic conditions and declining interest rates in the second half of the year.",
+    "S2": "The group reported a net profit of EUR 150.3 million, representing a 7% increase compared to EUR 140.9 million in the previous year.",
+    "S3": "Total net income grew by 11% year-on-year to reach EUR 338.3 million, driven by an 8% increase in net interest income to EUR 273.3 million and a 24% increase in net fee and commission income to EUR 60.3 million.",
+    "S4": "Operating expenses increased by 14% to EUR 146.9 million, largely due to an increased number of employees, resulting in a cost-to-income ratio of 43.4%.",
+    "S5": "Return on equity stood at 24.5%, and return on assets was 1.9%.",
+    "S6": "Expected credit losses on financial instruments measured at amortised cost amounted to EUR 16.3 million, compared to EUR 11.5 million in 2023.",
+    "S7": "Total consolidated assets expanded by 23% year-on-year to reach EUR 8.7 billion.",
+    "S8": "The growth in the balance sheet was supported by a 21% increase in total customer deposits, which totaled EUR 6.9 billion at year-end, and a 28% expansion in the net loan portfolio, which increased by EUR 990 million to EUR 4.6 billion.",
+    "S9": "Growth in the loan portfolio was broad-based, with Estonian corporate loans increasing by 21% to EUR 2.3 billion, retail loans increasing by 21% to EUR 1.9 billion, and UK SME loans growing by 338% to EUR 348 million.",
+    "S10": "Asset quality remained strong overall, supported by proactive risk management.",
+    "S11": "Capital adequacy ratios remained robust and well above regulatory requirements, with total capital adequacy at 20.68%, Tier 1 capital ratio at 17.96%, and Common Equity Tier 1 capital ratio at 16.89%.",
+    "S12": "The leverage ratio stood at 6.71%, while the Liquidity Coverage Ratio and Net Stable Funding Ratio were 187.5% and 154.4%, respectively.",
+    "S13": "The company successfully executed capital-related transactions during the year, including issuing EUR 20 million of Tier 2 bonds and EUR 300 million of MREL-eligible bonds while redeeming EUR 20 million of Additional Tier 1 bonds.",
+    "S14": "Business developments were marked by strong customer acquisition, with the number of LHV Pank customers increasing by 9% to 456,000, expansion of lending and payment services in the UK following a full year of operations under a banking license, and steady performance across asset management and non-life insurance subsidiaries.",
+    "S15": "Looking forward, LHV Group enters 2025 in a strong position, anticipating short-term profit moderation due to declining benchmark interest rates, which will be partially offset by ongoing business volume growth and enhanced operational efficiencies."
+  },
+  "usage": {
+    "input_tokens": 479912,
+    "output_tokens_including_reasoning": 6808,
+    "total_tokens": 486720
+  },
+  "latency_seconds": 55.63,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"AS LHV Group achieved the highest business volumes and net profit in its history during the financial year ended December 31, 2024, despite challenging economic conditions and declining interest rates in the second half of the year.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The CEO's letter states: 'Despite the various challenges, 2024 was successful year for LHV. Following a supervisory transition, we managed to restore historically ambitious business growth.' The 'Summary of the year 2024' section confirms: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The CEO also notes declining interest rates: 'interest rates are decreasing, competition on lending side has increased drastically.'\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"The group reported a net profit of EUR 150.3 million, representing a 7% increase compared to EUR 140.9 million in the previous year.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 150.3 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The 'Financial results for last 7 years' table shows net profit of EUR 140.9 million for 2023.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Total consolidated net income grew by 11% year-on-year to reach EUR 338.3 million, driven by an 8% increase in net interest income to EUR 273.3 million and a 24% increase in net fee and commission income to EUR 60.3 million.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 338.3 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'The Group's net income was EUR 338.3 million (+11% YoY). Net interest income grew 8% and net fee income increased 24%.' The 'Financial results for last 7 years' table confirms net interest income of EUR 273.3 million and net fee income of EUR 60.3 million for 2024.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating expenses amounted to EUR 146.9 million (+14% YoY), resulting in a cost-to-income ratio of 43.4%.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 146.9 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Operating expenses amounted to EUR 146.9 million (+14% YoY). The Group's cost to income ratio was a decent 43.4%.'\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Return on equity stood at 24.5%, and return on assets was 1.9%.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"24.5% ROE, 1.9% ROA\",\n      \"source_evidence\": \"The 'Regulatory and financial ratios' table shows ROE of 24.5% and ROA of 1.9% for 2024.\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Expected credit losses on financial instruments measured at amortised cost amounted to EUR 16.3 million, compared to EUR 11.5 million in 2023.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 16.3 million\",\n      \"source_evidence\": \"The 'Financial results for last 7 years' table shows impairments (which represent expected credit losses) of EUR 16.3 million for 2024 and EUR 11.5 million for 2023.\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Total consolidated assets expanded by 23% year-on-year to reach EUR 8.7 billion.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 8.7 billion\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Total consolidated assets reached EUR 8.7 billion (+23% YoY).'\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"The growth in the balance sheet was supported by a 21% increase in total customer deposits, which totaled EUR 6.9 billion at year-end, and a 28% expansion in the net loan portfolio, which increased by EUR 990 million to EUR 4.6 billion.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 6.9 billion deposits, EUR 4.6 billion loans\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'The volume of deposits increased to EUR 6.9 billion (+21% YoY)... The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY).'\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Growth in the loan portfolio was broad-based, with Estonian corporate loans increasing by 21% to EUR 2.3 billion, retail loans increasing by 21% to EUR 1.9 billion, and UK SME loans growing by 338% to EUR 348 million.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Estonian corporate banking loans increased by 21% to EUR 2.3 billion... Estonian retail loans increased by similar 21%, amounting to EUR 1.9 billion... SME lending in UK picked up in 2024, where the portfolio increased 338% to EUR 348 million.'\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Asset quality remained strong overall, supported by proactive risk management.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The CEO's letter states: 'The quality of the loan portfolio stayed strong, with some individual customers showing signs of weakening.' The risk management section details proactive measures like enhanced due diligence and stress testing.\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Capital adequacy ratios remained robust and well above regulatory requirements, with total capital adequacy at 20.68%, Tier 1 capital ratio at 17.96%, and Common Equity Tier 1 capital ratio at 16.89%.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"20.68% CAD, 17.96% T1, 16.89% CET1\",\n      \"source_evidence\": \"The 'Regulatory ratios' table for 2024 shows exactly these values.\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"The leverage ratio stood at 6.71%, while the Liquidity Coverage Ratio and Net Stable Funding Ratio were 187.5% and 154.4%, respectively.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"6.71% leverage, 187.5% LCR, 154.4% NSFR\",\n      \"source_evidence\": \"The 'Regulatory ratios' table for 2024 confirms these exact figures.\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"The company successfully executed capital-related transactions during the year, including issuing EUR 20 million of Tier 2 bonds and EUR 300 million of MREL-eligible bonds while redeeming EUR 20 million of Additional Tier 1 bonds.\",\n      \"label\": \"CORRECT\",\n      \"source_value\": \"EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption\",\n      \"source_evidence\": \"The 'Shares and bonds issued by LHV' section states: 'LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds... LHV issued EUR 300 million of MREL eligible bonds in May 2024.'\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Business developments were marked by strong customer acquisition, with the number of LHV Pank customers increasing by 9% to 456,000, expansion of lending and payment services in the UK following a full year of operations under a banking license, and steady performance across asset management and non-life insurance subsidiaries.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'The number of LHV Pank customers increased by 38,000 to 456,000, i.e., by 9%... In the UK, the corporate portfolio exceeded the EUR 300 million mark... LHV Kindlustus had second profitable year... LHV Paytech advanced its role as a key innovator.'\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Looking forward, LHV Group enters 2025 in a strong position, anticipating short-term profit moderation due to declining benchmark interest rates, which will be partially offset by ongoing business volume growth and enhanced operational efficiencies.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"The CEO's letter states: 'We enter 2025 in a strong position... Although we anticipate a short-term decline in profits due to changes in the interest rate environment, we can offset part of the negative impact through business growth and more efficient operations.'\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Net profit of EUR 150.3 million represents a 7% increase from EUR 140.9 million in 2023.\",\n      \"candidate_value\": \"EUR 150.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 150.3 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The 'Financial results for last 7 years' table shows net profit of EUR 140.9 million for 2023.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Total net income grew by 11% to EUR 338.3 million, with net interest income increasing by 8% to EUR 273.3 million and net fee and commission income increasing by 24% to EUR 60.3 million.\",\n      \"candidate_value\": \"EUR 338.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 338.3 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'The Group's net income was EUR 338.3 million (+11% YoY). Net interest income grew 8% and net fee income increased 24%.' The 'Financial results for last 7 years' table confirms net interest income of EUR 273.3 million and net fee income of EUR 60.3 million for 2024.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Operating expenses increased by 14% to EUR 146.9 million.\",\n      \"candidate_value\": \"EUR 146.9 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 146.9 million\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Operating expenses amounted to EUR 146.9 million (+14% YoY).'\"\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Return on equity was 24.5% and return on assets was 1.9%.\",\n      \"candidate_value\": \"24.5% ROE, 1.9% ROA\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"24.5% ROE, 1.9% ROA\",\n      \"source_evidence\": \"The 'Regulatory and financial ratios' table shows ROE of 24.5% and ROA of 1.9% for 2024.\"\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Expected credit losses on financial instruments measured at amortised cost were EUR 16.3 million in 2024, compared to EUR 11.5 million in 2023.\",\n      \"candidate_value\": \"EUR 16.3 million\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 16.3 million\",\n      \"source_evidence\": \"The 'Financial results for last 7 years' table shows impairments (which represent expected credit losses) of EUR 16.3 million for 2024 and EUR 11.5 million for 2023.\"\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Total consolidated assets reached EUR 8.7 billion, a 23% increase from the previous year.\",\n      \"candidate_value\": \"EUR 8.7 billion\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 8.7 billion\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Total consolidated assets reached EUR 8.7 billion (+23% YoY).'\"\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Total customer deposits increased by 21% to EUR 6.9 billion, and the net loan portfolio expanded by 28% to EUR 4.6 billion (an increase of EUR 990 million).\",\n      \"candidate_value\": \"EUR 6.9 billion deposits, EUR 4.6 billion loans\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 6.9 billion deposits, EUR 4.6 billion loans\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'The volume of deposits increased to EUR 6.9 billion (+21% YoY)... The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY).'\"\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Estonian corporate loans increased by 21% to EUR 2.3 billion, retail loans increased by 21% to EUR 1.9 billion, and UK SME loans grew by 338% to EUR 348 million.\",\n      \"candidate_value\": \"EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME\",\n      \"source_evidence\": \"The 'Summary of the year 2024' section states: 'Estonian corporate banking loans increased by 21% to EUR 2.3 billion... Estonian retail loans increased by similar 21%, amounting to EUR 1.9 billion... SME lending in UK picked up in 2024, where the portfolio increased 338% to EUR 348 million.'\"\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Total capital adequacy ratio was 20.68%, Tier 1 capital ratio was 17.96%, and Common Equity Tier 1 capital ratio was 16.89%.\",\n      \"candidate_value\": \"20.68% CAD, 17.96% T1, 16.89% CET1\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"20.68% CAD, 17.96% T1, 16.89% CET1\",\n      \"source_evidence\": \"The 'Regulatory ratios' table for 2024 shows exactly these values.\"\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"The leverage ratio was 6.71%, Liquidity Coverage Ratio was 187.5%, and Net Stable Funding Ratio was 154.4%.\",\n      \"candidate_value\": \"6.71% leverage, 187.5% LCR, 154.4% NSFR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"6.71% leverage, 187.5% LCR, 154.4% NSFR\",\n      \"source_evidence\": \"The 'Regulatory ratios' table for 2024 confirms these exact figures.\"\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"The company issued EUR 20 million of Tier 2 bonds and EUR 300 million of MREL-eligible bonds, while redeeming EUR 20 million of Additional Tier 1 bonds.\",\n      \"candidate_value\": \"EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption\",\n      \"source_evidence\": \"The 'Shares and bonds issued by LHV' section states: 'LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds... LHV issued EUR 300 million of MREL eligible bonds in May 2024.'\"\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS LHV Group achieved the highest business volumes and net profit in its history during the financial year ended December 31, 2024, despite challenging economic conditions and declining interest rates in the second half of the year.",
+        "label": "SUPPORTED",
+        "source_evidence": "The CEO's letter states: 'Despite the various challenges, 2024 was successful year for LHV. Following a supervisory transition, we managed to restore historically ambitious business growth.' The 'Summary of the year 2024' section confirms: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The CEO also notes declining interest rates: 'interest rates are decreasing, competition on lending side has increased drastically.'"
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The group reported a net profit of EUR 150.3 million, representing a 7% increase compared to EUR 140.9 million in the previous year.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 150.3 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The 'Financial results for last 7 years' table shows net profit of EUR 140.9 million for 2023.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total consolidated net income grew by 11% year-on-year to reach EUR 338.3 million, driven by an 8% increase in net interest income to EUR 273.3 million and a 24% increase in net fee and commission income to EUR 60.3 million.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 338.3 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'The Group's net income was EUR 338.3 million (+11% YoY). Net interest income grew 8% and net fee income increased 24%.' The 'Financial results for last 7 years' table confirms net interest income of EUR 273.3 million and net fee income of EUR 60.3 million for 2024.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating expenses amounted to EUR 146.9 million (+14% YoY), resulting in a cost-to-income ratio of 43.4%.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 146.9 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Operating expenses amounted to EUR 146.9 million (+14% YoY). The Group's cost to income ratio was a decent 43.4%.'",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Return on equity stood at 24.5%, and return on assets was 1.9%.",
+        "label": "SUPPORTED",
+        "source_value": "24.5% ROE, 1.9% ROA",
+        "source_evidence": "The 'Regulatory and financial ratios' table shows ROE of 24.5% and ROA of 1.9% for 2024.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Expected credit losses on financial instruments measured at amortised cost amounted to EUR 16.3 million, compared to EUR 11.5 million in 2023.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 16.3 million",
+        "source_evidence": "The 'Financial results for last 7 years' table shows impairments (which represent expected credit losses) of EUR 16.3 million for 2024 and EUR 11.5 million for 2023.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total consolidated assets expanded by 23% year-on-year to reach EUR 8.7 billion.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 8.7 billion",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Total consolidated assets reached EUR 8.7 billion (+23% YoY).'",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The growth in the balance sheet was supported by a 21% increase in total customer deposits, which totaled EUR 6.9 billion at year-end, and a 28% expansion in the net loan portfolio, which increased by EUR 990 million to EUR 4.6 billion.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 6.9 billion deposits, EUR 4.6 billion loans",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'The volume of deposits increased to EUR 6.9 billion (+21% YoY)... The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY).'",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Growth in the loan portfolio was broad-based, with Estonian corporate loans increasing by 21% to EUR 2.3 billion, retail loans increasing by 21% to EUR 1.9 billion, and UK SME loans growing by 338% to EUR 348 million.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Estonian corporate banking loans increased by 21% to EUR 2.3 billion... Estonian retail loans increased by similar 21%, amounting to EUR 1.9 billion... SME lending in UK picked up in 2024, where the portfolio increased 338% to EUR 348 million.'",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Asset quality remained strong overall, supported by proactive risk management.",
+        "label": "SUPPORTED",
+        "source_evidence": "The CEO's letter states: 'The quality of the loan portfolio stayed strong, with some individual customers showing signs of weakening.' The risk management section details proactive measures like enhanced due diligence and stress testing."
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Capital adequacy ratios remained robust and well above regulatory requirements, with total capital adequacy at 20.68%, Tier 1 capital ratio at 17.96%, and Common Equity Tier 1 capital ratio at 16.89%.",
+        "label": "SUPPORTED",
+        "source_value": "20.68% CAD, 17.96% T1, 16.89% CET1",
+        "source_evidence": "The 'Regulatory ratios' table for 2024 shows exactly these values.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The leverage ratio stood at 6.71%, while the Liquidity Coverage Ratio and Net Stable Funding Ratio were 187.5% and 154.4%, respectively.",
+        "label": "SUPPORTED",
+        "source_value": "6.71% leverage, 187.5% LCR, 154.4% NSFR",
+        "source_evidence": "The 'Regulatory ratios' table for 2024 confirms these exact figures.",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company successfully executed capital-related transactions during the year, including issuing EUR 20 million of Tier 2 bonds and EUR 300 million of MREL-eligible bonds while redeeming EUR 20 million of Additional Tier 1 bonds.",
+        "label": "SUPPORTED",
+        "source_value": "EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption",
+        "source_evidence": "The 'Shares and bonds issued by LHV' section states: 'LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds... LHV issued EUR 300 million of MREL eligible bonds in May 2024.'",
+        "original_model_label": "CORRECT"
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Business developments were marked by strong customer acquisition, with the number of LHV Pank customers increasing by 9% to 456,000, expansion of lending and payment services in the UK following a full year of operations under a banking license, and steady performance across asset management and non-life insurance subsidiaries.",
+        "label": "SUPPORTED",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'The number of LHV Pank customers increased by 38,000 to 456,000, i.e., by 9%... In the UK, the corporate portfolio exceeded the EUR 300 million mark... LHV Kindlustus had second profitable year... LHV Paytech advanced its role as a key innovator.'"
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Looking forward, LHV Group enters 2025 in a strong position, anticipating short-term profit moderation due to declining benchmark interest rates, which will be partially offset by ongoing business volume growth and enhanced operational efficiencies.",
+        "label": "SUPPORTED",
+        "source_evidence": "The CEO's letter states: 'We enter 2025 in a strong position... Although we anticipate a short-term decline in profits due to changes in the interest rate environment, we can offset part of the negative impact through business growth and more efficient operations.'"
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net profit of EUR 150.3 million represents a 7% increase from EUR 140.9 million in 2023.",
+        "candidate_value": "EUR 150.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 150.3 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Net profit was at the historically highest level of EUR 150.3 million (+7% YoY).' The 'Financial results for last 7 years' table shows net profit of EUR 140.9 million for 2023."
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total net income grew by 11% to EUR 338.3 million, with net interest income increasing by 8% to EUR 273.3 million and net fee and commission income increasing by 24% to EUR 60.3 million.",
+        "candidate_value": "EUR 338.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 338.3 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'The Group's net income was EUR 338.3 million (+11% YoY). Net interest income grew 8% and net fee income increased 24%.' The 'Financial results for last 7 years' table confirms net interest income of EUR 273.3 million and net fee income of EUR 60.3 million for 2024."
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating expenses increased by 14% to EUR 146.9 million.",
+        "candidate_value": "EUR 146.9 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 146.9 million",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Operating expenses amounted to EUR 146.9 million (+14% YoY).'"
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Return on equity was 24.5% and return on assets was 1.9%.",
+        "candidate_value": "24.5% ROE, 1.9% ROA",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24.5% ROE, 1.9% ROA",
+        "source_evidence": "The 'Regulatory and financial ratios' table shows ROE of 24.5% and ROA of 1.9% for 2024."
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Expected credit losses on financial instruments measured at amortised cost were EUR 16.3 million in 2024, compared to EUR 11.5 million in 2023.",
+        "candidate_value": "EUR 16.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 16.3 million",
+        "source_evidence": "The 'Financial results for last 7 years' table shows impairments (which represent expected credit losses) of EUR 16.3 million for 2024 and EUR 11.5 million for 2023."
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total consolidated assets reached EUR 8.7 billion, a 23% increase from the previous year.",
+        "candidate_value": "EUR 8.7 billion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 8.7 billion",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Total consolidated assets reached EUR 8.7 billion (+23% YoY).'"
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Total customer deposits increased by 21% to EUR 6.9 billion, and the net loan portfolio expanded by 28% to EUR 4.6 billion (an increase of EUR 990 million).",
+        "candidate_value": "EUR 6.9 billion deposits, EUR 4.6 billion loans",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 6.9 billion deposits, EUR 4.6 billion loans",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'The volume of deposits increased to EUR 6.9 billion (+21% YoY)... The loan portfolio increased by EUR 990 million to EUR 4.6 billion (+28% YoY).'"
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Estonian corporate loans increased by 21% to EUR 2.3 billion, retail loans increased by 21% to EUR 1.9 billion, and UK SME loans grew by 338% to EUR 348 million.",
+        "candidate_value": "EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 2.3 billion corporate, EUR 1.9 billion retail, EUR 348 million UK SME",
+        "source_evidence": "The 'Summary of the year 2024' section states: 'Estonian corporate banking loans increased by 21% to EUR 2.3 billion... Estonian retail loans increased by similar 21%, amounting to EUR 1.9 billion... SME lending in UK picked up in 2024, where the portfolio increased 338% to EUR 348 million.'"
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total capital adequacy ratio was 20.68%, Tier 1 capital ratio was 17.96%, and Common Equity Tier 1 capital ratio was 16.89%.",
+        "candidate_value": "20.68% CAD, 17.96% T1, 16.89% CET1",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20.68% CAD, 17.96% T1, 16.89% CET1",
+        "source_evidence": "The 'Regulatory ratios' table for 2024 shows exactly these values."
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The leverage ratio was 6.71%, Liquidity Coverage Ratio was 187.5%, and Net Stable Funding Ratio was 154.4%.",
+        "candidate_value": "6.71% leverage, 187.5% LCR, 154.4% NSFR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "6.71% leverage, 187.5% LCR, 154.4% NSFR",
+        "source_evidence": "The 'Regulatory ratios' table for 2024 confirms these exact figures."
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company issued EUR 20 million of Tier 2 bonds and EUR 300 million of MREL-eligible bonds, while redeeming EUR 20 million of Additional Tier 1 bonds.",
+        "candidate_value": "EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 20M Tier 2, EUR 300M MREL, EUR 20M AT1 redemption",
+        "source_evidence": "The 'Shares and bonds issued by LHV' section states: 'LHV redeemed EUR 20 million of Additional Tier 1 bonds and issued EUR 20 million of new Tier 2 bonds... LHV issued EUR 300 million of MREL eligible bonds in May 2024.'"
+      },
+      {
+        "claim": "LHV Pank customer count increased by 9% to 456,000 in 2024",
+        "candidate_value": "456,000",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "456,000",
+        "source_evidence": "Overview of LHV Group’s and its subsidiaries’ total assets and net income table (page 12) shows LHV Pank's customer count at 456 thousand (456,000) in 2024, representing a 9% YoY increase from 417 thousand (417,000) in 2023. This is also confirmed in the Financial results section for LHV Pank (page 22) under 'No of bank customers, thous.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "id": "N12"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S11",
+      "S12",
+      "S13",
+      "S14"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S14\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"The sentence contains a verifiable numerical proposition regarding LHV Pank's customer count increasing by 9% to 456,000 customers in 2024.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"LHV Pank customer count increased by 9% to 456,000 in 2024\",\n          \"candidate_value\": \"456,000\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"456,000\",\n          \"source_evidence\": \"Overview of LHV Group’s and its subsidiaries’ total assets and net income table (page 12) shows LHV Pank's customer count at 456 thousand (456,000) in 2024, representing a 9% YoY increase from 417 thousand (417,000) in 2023. This is also confirmed in the Financial results section for LHV Pank (page 22) under 'No of bank customers, thous.'\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S14",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "The sentence contains a verifiable numerical proposition regarding LHV Pank's customer count increasing by 9% to 456,000 customers in 2024.",
+          "numerical_claims": [
+            {
+              "claim": "LHV Pank customer count increased by 9% to 456,000 in 2024",
+              "candidate_value": "456,000",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "456,000",
+              "source_evidence": "Overview of LHV Group’s and its subsidiaries’ total assets and net income table (page 12) shows LHV Pank's customer count at 456 thousand (456,000) in 2024, representing a 9% YoY increase from 417 thousand (417,000) in 2023. This is also confirmed in the Financial results section for LHV Pank (page 22) under 'No of bank customers, thous.'",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 239386,
+      "output_tokens_including_reasoning": 1181,
+      "total_tokens": 240567
+    }
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

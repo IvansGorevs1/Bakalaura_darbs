@@ -1,0 +1,137 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:47:57.345625",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_3_few_shot_gemini.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "3164e6238128fa98",
+    "sentence_map_hash": "859df85804c4f69c",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "3d664a5aa2d0843c",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_3.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first three months of 2026, the company experienced a significant deterioration in its financial performance, driven by a sharp downturn in global markets, geopolitical pressures affecting the parent group following its support for Ukraine, and insolvency proceedings affecting its largest customer, Stoli Group (USA), LLC.",
+    "S2": "These compounding cash flow pressures and delayed excise tax liabilities led the State Revenue Service to freeze the company’s bank accounts.",
+    "S3": "To protect creditors and ensure business continuity, the company filed for legal protection proceedings, which were approved by the Riga City Court on February 5, 2026.",
+    "S4": "Unaudited net turnover for the three-month period ended March 31, 2026, fell by 29.6% to 11.1 million euros compared with 15.8 million euros in the corresponding period of 2025.",
+    "S5": "This decrease was primarily driven by lower sales volumes, with total sales dropping by 36.1% to 517,600 nine-liter cases from 810,079 nine-liter cases, alongside a high comparison base from the previous year that had benefited from a contractual revenue adjustment.",
+    "S6": "Profitability declined sharply across all key metrics.",
+    "S7": "Gross profit fell by 66.5% to 1.2 million euros compared with 3.5 million euros in the prior-year period, constrained by changes in the product mix and pricing methodology adjustments that largely offset achieved cost reductions.",
+    "S8": "The company reported an operating loss of 1.6 million euros, contrasting with an operating profit of 0.6 million euros in the first three months of 2025, resulting in an operating profit margin of -14.5% compared to 3.7% previously.",
+    "S9": "Net results deteriorated to a net loss of 1.4 million euros from a net profit of 0.9 million euros in the comparative period.",
+    "S10": "Consequently, earnings per share worsened to a negative 0.19 euros from positive 0.11 euros.",
+    "S11": "Operational efficiency indicators showed mixed results during the reporting period.",
+    "S12": "The Right First Time production quality rate improved to 99.5% from 98.4%, whereas the On Time In Full delivery rate declined significantly to 70.3% from 97.5%.",
+    "S13": "The company's statement of financial position as of March 31, 2026, recorded total assets of 191.3 million euros, up from 187.3 million euros at the end of December 2025.",
+    "S14": "Total equity decreased to 126.0 million euros from 127.4 million euros, reflecting the net loss incurred during the quarter.",
+    "S15": "Total liabilities increased to 65.3 million euros from 59.9 million euros, comprising 0.4 million euros in non-current liabilities and 64.8 million euros in current liabilities.",
+    "S16": "Current assets stood at 147.7 million euros against current liabilities of 64.8 million euros, maintaining a strong surplus of current assets over current liabilities, though the company continues to navigate ongoing restructuring and debt resolution efforts alongside its principal shareholder, which also entered restructuring proceedings in Luxembourg in April 2026."
+  },
+  "usage": {
+    "input_tokens": 1925,
+    "output_tokens_including_reasoning": 455,
+    "total_tokens": 2380
+  },
+  "latency_seconds": 2.39,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S7\", \"S9\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S5\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S2\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S16\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\", \"S12\"]\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K5\", \"K8\"],\n  \"justification\": \"The candidate summary adequately covers the core material meaning of K1 (financial performance deterioration), K2 (sales volume decline), K3 (external factors driving decline), K4 (LPP initiation and approval), K6 (principal shareholder's judicial reorganization proceedings), K7 (mixed operational efficiency indicators), and K4 (LPP filing timeline). However, it omits the core material meaning of K5 (automatic default triggered under bond documentation by LPP filing) and K8 (management's assessment of doubtful receivables provisions and finance function strengthening), both of which are explicitly required by the fixed criteria and represent HIGH-importance information. The absence of these two HIGH items prevents the summary from achieving a 'Yes' rating, resulting in a 'Generally yes' assessment.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S7",
+          "S9"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ]
+      },
+      {
+        "id": "K8",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K5",
+      "K8"
+    ],
+    "justification": "The candidate summary adequately covers the core material meaning of K1 (financial performance deterioration), K2 (sales volume decline), K3 (external factors driving decline), K4 (LPP initiation and approval), K6 (principal shareholder's judicial reorganization proceedings), K7 (mixed operational efficiency indicators), and K4 (LPP filing timeline). However, it omits the core material meaning of K5 (automatic default triggered under bond documentation by LPP filing) and K8 (management's assessment of doubtful receivables provisions and finance function strengthening), both of which are explicitly required by the fixed criteria and represent HIGH-importance information. The absence of these two HIGH items prevents the summary from achieving a 'Yes' rating, resulting in a 'Generally yes' assessment."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

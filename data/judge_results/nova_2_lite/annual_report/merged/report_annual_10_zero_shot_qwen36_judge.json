@@ -1,0 +1,625 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_10_zero_shot_qwen36.txt",
+    "report": "report_annual_10.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "InCoax Networks AB reported a significant decline in financial performance for the year 2025, marking a transition from intensive product development to commercial execution.",
+    "S2": "Net sales amounted to SEK 48,055,007, representing a 35 percent decrease compared to SEK 74,497,775 in the previous year.",
+    "S3": "This reduction was primarily attributed to timing shifts in customer orders and a more cautious market environment, particularly within the North American segment which contributed the majority of revenue.",
+    "S4": "Despite the lower top line, the gross margin improved to 62 percent from 57 percent in 2024, reflecting a more efficient cost structure for goods sold.",
+    "S5": "The company recorded an operating loss of SEK 32,380,175, a substantial widening from the operating loss of SEK 19,378,406 in 2024.",
+    "S6": "This deterioration in earnings was driven by the drop in revenue, while the company maintained high levels of investment in product development and commercial expansion to strengthen its long-term growth platform.",
+    "S7": "Capitalized development costs remained stable at SEK 25,269,745, largely related to the next-generation MoCA Access platform.",
+    "S8": "The net loss after tax reached SEK 32,559,663, corresponding to a loss per share of SEK 0.25, compared to SEK 0.18 in the prior year.",
+    "S9": "A critical aspect of the 2025 performance was the company’s cash flow position.",
+    "S10": "While operating cash flow remained negative at SEK 20,011,617, the total cash flow including financing activities turned positive at SEK 6,516,117, a sharp reversal from the negative SEK 12,758,133 in 2024.",
+    "S11": "This positive outcome was the result of successful financing activities, including a directed share issue that raised approximately SEK 33.5 million and the issuance of loans.",
+    "S12": "These activities strengthened the company’s financial position, resulting in cash and cash equivalents of SEK 8,748,046 at year-end, up from SEK 2,231,929 in 2024.",
+    "S13": "Strategically, 2025 concluded the most development-intensive phase in the company’s history.",
+    "S14": "Key milestones included the launch of the D2501 product within the Nokia Gigabit Connect platform, providing access to Nokia’s global operator base, and the launch of the D2508 product through InCoax’s own channels.",
+    "S15": "The CEO highlighted a shift in focus toward commercial execution, noting that structural cost reductions of more than 40 percent have been implemented to lower the ongoing cost base.",
+    "S16": "The company aims to reach positive cash flow within the coming twelve months by intensifying commercial efforts and converting its pipeline into business.",
+    "S17": "The equity ratio decreased to 71.8 percent from 80.8 percent, reflecting the dilution from new share issues and accumulated losses, yet the company maintains a robust balance sheet with total assets of SEK 152,839,491.",
+    "S18": "The overall development indicates a company stabilizing its operations after a period of heavy investment, now positioning itself for scalable commercial rollout in multi-dwelling buildings where existing coaxial infrastructure can be leveraged for high-speed broadband."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_10.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_10.json",
+    "key_information_hash": "43fd4ecf0839c10d",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 9,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 9
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 10,
+      "incorrect": 0,
+      "total": 10
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "InCoax Networks AB reported a significant decline in financial performance for the year 2025, marking a transition from intensive product development to commercial execution.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments state '2025 was a year in which our financial results did not meet expectations, while at the same time we concluded the most development-intensive phase in the company’s history. We are now entering a new phase with full focus on commercial execution.' Directors’ Report also notes shift from development to commercial execution.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "InCoax Networks AB reported a significant decline in financial performance for the year 2025, marking a transition from intensive product development to commercial execution."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This reduction was primarily attributed to timing shifts in customer orders and a more cautious market environment, particularly within the North American segment which contributed the majority of revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Directors’ Report: 'The decline is mainly explained by timing shifts in customer orders.' Notes show North America net sales of SEK 39,578,479 (82% of total SEK 48,055,007).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This reduction was primarily attributed to timing shifts in customer orders and a more cautious market environment, particularly within the North American segment which contributed the majority of revenue."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "This deterioration in earnings was driven by the drop in revenue, while the company maintained high levels of investment in product development and commercial expansion to strengthen its long-term growth platform.",
+        "label": "SUPPORTED",
+        "source_evidence": "Directors’ Report: 'Operating profit... reflects the lower sales during the year, combined with a continued high level of activity in product development and commercial initiatives.'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "This deterioration in earnings was driven by the drop in revenue, while the company maintained high levels of investment in product development and commercial expansion to strengthen its long-term growth platform."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "A critical aspect of the 2025 performance was the company’s cash flow position.",
+        "label": "SUPPORTED",
+        "source_evidence": "Directors’ Report extensively discusses cash flow challenges, financing activities, and cash position as key operational factors.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "A critical aspect of the 2025 performance was the company’s cash flow position."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Strategically, 2025 concluded the most development-intensive phase in the company’s history.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments: '2025 was a year in which... we concluded the most development-intensive phase in the company’s history.'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Strategically, 2025 concluded the most development-intensive phase in the company’s history."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Key milestones included the launch of the D2501 product within the Nokia Gigabit Connect platform, providing access to Nokia’s global operator base, and the launch of the D2508 product through InCoax’s own channels.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments: 'At the beginning of 2026, our first product within the Nokia collaboration was launched... D2501... The first installations via Nokia have been carried out... In parallel, we have launched D2508 through our own channels.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Key milestones included the launch of the D2501 product within the Nokia Gigabit Connect platform, providing access to Nokia’s global operator base, and the launch of the D2508 product through InCoax’s own channels."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The CEO highlighted a shift in focus toward commercial execution, noting that structural cost reductions of more than 40 percent have been implemented to lower the ongoing cost base.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments: 'Compared with 2025, we have reduced our ongoing costs by more than 40 percent, corresponding to more than SEK 25 million on an annual basis.'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The CEO highlighted a shift in focus toward commercial execution, noting that structural cost reductions of more than 40 percent have been implemented to lower the ongoing cost base."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company aims to reach positive cash flow within the coming twelve months by intensifying commercial efforts and converting its pipeline into business.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments: 'The objective is to reach cash flow neutrality during the coming year... This is the year in which we are to demonstrate that our technical platform can be translated into commercial success.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company aims to reach positive cash flow within the coming twelve months by intensifying commercial efforts and converting its pipeline into business."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The overall development indicates a company stabilizing its operations after a period of heavy investment, now positioning itself for scalable commercial rollout in multi-dwelling buildings where existing coaxial infrastructure can be leveraged for high-speed broadband.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO’s comments and Business Overview describe transition to commercial execution, leveraging existing coaxial infrastructure for scalable rollout in MDUs.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The overall development indicates a company stabilizing its operations after a period of heavy investment, now positioning itself for scalable commercial rollout in multi-dwelling buildings where existing coaxial infrastructure can be leveraged for high-speed broadband."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales amounted to SEK 48,055,007, representing a 35 percent decrease compared with the previous year",
+        "candidate_value": "SEK 48,055,007 (35% decrease from SEK 74,497,775)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 48,055,007 (2025) vs SEK 74,497,775 (2024)",
+        "source_evidence": "Income Statement and Directors' Report confirm net sales figures and 35% decrease attribution to timing shifts.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales amounted to SEK 48,055,007, representing a 35 percent decrease compared to SEK 74,497,775 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross margin improved to 62 percent from 57 percent in 2024",
+        "candidate_value": "62% (2025) vs 57% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "62% (2025) vs 57% (2024)",
+        "source_evidence": "Key ratios table in '2025 in figures' section shows gross margin percentages.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the lower top line, the gross margin improved to 62 percent from 57 percent in 2024, reflecting a more efficient cost structure for goods sold."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating loss of SEK 32,380,175, a substantial widening from the operating loss of SEK 19,378,406 in 2024",
+        "candidate_value": "SEK -32,380,175 (2025) vs SEK -19,378,406 (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -32,380,175 (2025) vs SEK -19,378,406 (2024)",
+        "source_evidence": "Income Statement shows operating loss (EBIT) figures for both years.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The company recorded an operating loss of SEK 32,380,175, a substantial widening from the operating loss of SEK 19,378,406 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Capitalized development costs remained stable at SEK 25,269,745",
+        "candidate_value": "SEK 25,269,745",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 25,269,745",
+        "source_evidence": "Note 2 and Annual development costs table show capitalized development costs of SEK 25,269,745 for 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Capitalized development costs remained stable at SEK 25,269,745, largely related to the next-generation MoCA Access platform."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net loss after tax reached SEK 32,559,663, corresponding to a loss per share of SEK 0.25",
+        "candidate_value": "SEK -32,559,663 loss; SEK -0.25 loss per share",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -32,559,663 loss; SEK -0.25 loss per share",
+        "source_evidence": "Income Statement shows loss after tax of SEK -32,559,663. Key ratios table confirms EPS of -0.25.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The net loss after tax reached SEK 32,559,663, corresponding to a loss per share of SEK 0.25, compared to SEK 0.18 in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Operating cash flow remained negative at SEK 20,011,617, total cash flow including financing activities turned positive at SEK 6,516,117",
+        "candidate_value": "Operating cash flow: SEK -20,011,617; Total cash flow: SEK 6,516,117",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating cash flow: SEK -20,011,617; Total cash flow: SEK 6,516,117",
+        "source_evidence": "Cash Flow Statement shows operating cash flow of SEK -20,011,617 and total cash flow of SEK 6,516,117.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "While operating cash flow remained negative at SEK 20,011,617, the total cash flow including financing activities turned positive at SEK 6,516,117, a sharp reversal from the negative SEK 12,758,133 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Directed share issue that raised approximately SEK 33.5 million",
+        "candidate_value": "SEK 33.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 33.5 million",
+        "source_evidence": "Directors' Report: 'In February 2025, the Board resolved to carry out a directed share issue of approximately SEK 33.5 million.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "This positive outcome was the result of successful financing activities, including a directed share issue that raised approximately SEK 33.5 million and the issuance of loans."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Cash and cash equivalents of SEK 8,748,046 at year-end, up from SEK 2,231,929 in 2024",
+        "candidate_value": "SEK 8,748,046 (2025) vs SEK 2,231,929 (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 8,748,046 (2025) vs SEK 2,231,929 (2024)",
+        "source_evidence": "Cash Flow Statement and Balance Sheet show cash and bank balances for both years.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "These activities strengthened the company’s financial position, resulting in cash and cash equivalents of SEK 8,748,046 at year-end, up from SEK 2,231,929 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Equity ratio decreased to 71.8 percent from 80.8 percent, total assets of SEK 152,839,491",
+        "candidate_value": "Equity ratio: 71.8% (2025) vs 80.8% (2024); Total assets: SEK 152,839,491",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Equity ratio: 71.8% (2025) vs 80.8% (2024); Total assets: SEK 152,839,491",
+        "source_evidence": "Key ratios table shows equity ratios. Balance Sheet shows total assets of SEK 152,839,491 as of Dec 31, 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The equity ratio decreased to 71.8 percent from 80.8 percent, reflecting the dilution from new share issues and accumulated losses, yet the company maintains a robust balance sheet with total assets of SEK 152,839,491."
+          }
+        ]
+      },
+      {
+        "claim": "structural cost reductions of more than 40 percent",
+        "candidate_value": "more than 40 percent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "more than 40 percent",
+        "source_evidence": "CEO’s comments section: 'Compared with 2025, we have reduced our ongoing costs by more than 40 percent, corresponding to more than SEK 25 million on an annual basis.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "id": "N10",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The CEO highlighted a shift in focus toward commercial execution, noting that structural cost reductions of more than 40 percent have been implemented to lower the ongoing cost base."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Net sales decreased 35% to SEK 48,055,007 (SEK 74,497,775 in 2024) primarily due to timing shifts in customer orders; operating loss widened to SEK -32,380,175 (SEK -19,378,406 in 2024); net loss after tax was SEK -32,559,663 (SEK -19,150,134 in 2024) or SEK -0.25 per share (SEK -0.18); cash flow including financing activities turned positive to SEK 6,516,117 (SEK -12,758,133 in 2024).",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s comments: net sales SEK 48.1 million (-35% YoY), operating result SEK -32.0 million, net result SEK -32.56 million (EPS -0.25); cash flow SEK 6.52 million. Income statement and 2025 in figures confirm these figures.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S8",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales amounted to SEK 48,055,007, representing a 35 percent decrease compared to SEK 74,497,775 in the previous year."
+          },
+          {
+            "id": "S5",
+            "text": "The company recorded an operating loss of SEK 32,380,175, a substantial widening from the operating loss of SEK 19,378,406 in 2024."
+          },
+          {
+            "id": "S8",
+            "text": "The net loss after tax reached SEK 32,559,663, corresponding to a loss per share of SEK 0.25, compared to SEK 0.18 in the prior year."
+          },
+          {
+            "id": "S10",
+            "text": "While operating cash flow remained negative at SEK 20,011,617, the total cash flow including financing activities turned positive at SEK 6,516,117, a sharp reversal from the negative SEK 12,758,133 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Gross margin improved to 62% (57% in 2024) despite lower sales, while equity ratio declined to 71.8% (80.8% in 2024), indicating increased leverage.",
+        "importance": "HIGH",
+        "source_evidence": "2025 in figures: Gross margin 62% (2024: 57%); Equity ratio 71.8% (2024: 80.8%) in key ratios table and multi-year summary.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the lower top line, the gross margin improved to 62 percent from 57 percent in 2024, reflecting a more efficient cost structure for goods sold."
+          },
+          {
+            "id": "S17",
+            "text": "The equity ratio decreased to 71.8 percent from 80.8 percent, reflecting the dilution from new share issues and accumulated losses, yet the company maintains a robust balance sheet with total assets of SEK 152,839,491."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "The company completed its most development-intensive phase and shifted focus to commercial execution, reducing ongoing costs by more than 40% (corresponding to more than SEK 25 million annually) to target positive cash flow within twelve months.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s comments: 'implemented important changes to translate our technical position into concrete sales and established a structurally lower cost base, with the objective of reaching positive cash flow within the coming twelve months... reduced our ongoing costs by more than 40 percent, corresponding to more than SEK 25 million on an annual basis.'",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S15",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Strategically, 2025 concluded the most development-intensive phase in the company’s history."
+          },
+          {
+            "id": "S15",
+            "text": "The CEO highlighted a shift in focus toward commercial execution, noting that structural cost reductions of more than 40 percent have been implemented to lower the ongoing cost base."
+          },
+          {
+            "id": "S16",
+            "text": "The company aims to reach positive cash flow within the coming twelve months by intensifying commercial efforts and converting its pipeline into business."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "The D2501 product (for smaller properties) is fully launched and integrated into Nokia’s Gigabit Connect platform, while the D2508 product (for medium/large multi-dwelling buildings) was launched through the company’s own channels and is planned for Nokia integration in summer 2026.",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s comments: 'our first product, D2501, is now fully launched in Nokia’s platform... we have launched D2508 through our own channels... planned to be integrated into Nokia’s platform... during the summer'. Business overview details D2501 and D2508 roles.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Key milestones included the launch of the D2501 product within the Nokia Gigabit Connect platform, providing access to Nokia’s global operator base, and the launch of the D2508 product through InCoax’s own channels."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Key target markets include smaller multi-dwelling buildings, single-family housing areas, and large-scale projects in the United States where rapid, cost-effective broadband expansion is prioritized.",
+        "importance": "MEDIUM",
+        "source_evidence": "CEO’s comments: 'We see clear business opportunities for our MoCA Home solution in segments such as smaller multi-dwelling buildings and single-family housing areas, as well as in large-scale projects in the United States...'. Market overview confirms US and EU dynamics.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Cash and cash equivalents were SEK 8.7 million at year-end with the credit facility fully utilized; financing was strengthened by a directed share issue (SEK 33.5 million), convertible debentures (SEK 3.245 million), and a credit facility from Saugatuck Invest AB (up to SEK 20 million).",
+        "importance": "HIGH",
+        "source_evidence": "CEO’s comments: 'At year-end, our cash and cash equivalents amounted to SEK 8.7 million and the credit facility was fully utilized.' Directors’ report details share issue, convertibles, and Saugatuck facility.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "This positive outcome was the result of successful financing activities, including a directed share issue that raised approximately SEK 33.5 million and the issuance of loans."
+          },
+          {
+            "id": "S12",
+            "text": "These activities strengthened the company’s financial position, resulting in cash and cash equivalents of SEK 8,748,046 at year-end, up from SEK 2,231,929 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "As of December 31, 2025, outstanding financial instruments included warrants totaling 1,692,955 shares and convertible debentures of SEK 3,245,786 convertible at SEK 1.72 per share.",
+        "importance": "MEDIUM",
+        "source_evidence": "Directors’ report: 'outstanding warrants as of 31 December amounted to 1,692,955... Convertible debentures... SEK 3,245,786... conversion price: SEK 1.72'.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Material post-reporting-period events include: a SEK 12.5 million convertible loan issued on January 19, 2026 (conversion price SEK 1.0, planned conversion in June 2027); three warrant programs (TO1-TO3) granted in January 2026; launch of the first Nokia-collaboration product at the start of 2026; and selection by Deutsche GigaNetz for in-building fiber extension in Germany.",
+        "importance": "HIGH",
+        "source_evidence": "Note 10: Lists 'convertible loan of SEK 12.5 million was issued on 19 January 2026... warrants (TO1: 18–29 May 2026, TO2: 16–30 September 2026, TO3: 18–29 January 2027)', 'Deutsche GigaNetz selects InCoax for in-building fiber extension in Germany', and 'At the beginning of 2026, our first product within the Nokia collaboration was launched'. CEO comments also reference the Nokia launch.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, and K6 are all PRESENT with clear coverage in the candidate summary. K5 (target markets) is MISSING entirely. K7 (outstanding financial instruments) is MISSING. K8 (material post-reporting-period events) is MISSING. The summary captures most HIGH-importance financial and strategic information but omits several MEDIUM and HIGH items, resulting in a Generally yes rating.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements logically follow one another without contradictions. The narrative progresses from financial performance decline (S1-S5), through margin improvements and cash flow management (S6-S12), to strategic shifts and future outlook (S13-S18). Explanations consistently link causes to effects (e.g., revenue drop driving operating loss in S5-S6), and all comparisons are internally consistent. There is no unnecessary repetition, and the organization clearly groups related topics (financial results, cash flow, strategy). The summary forms a logical whole describing a transition from development to commercial execution with appropriate financial and strategic context."
+  },
+  "usage": {
+    "input_tokens_total": 51494,
+    "output_tokens_total_including_reasoning": 4426,
+    "total_tokens": 55920,
+    "latency_seconds_total": 37.8
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 49293,
+    "output_tokens_total_including_reasoning": 63128,
+    "total_tokens": 112421,
+    "latency_seconds_total": 196.85
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_10.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_10_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_10.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_10.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_10_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_10_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_10_zero_shot_qwen36.json"
+    }
+  }
+}

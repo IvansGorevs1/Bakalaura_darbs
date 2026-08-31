@@ -1,0 +1,202 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:56:14.330501",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_annual_7_zero_shot_openai__completeness_corruption.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "ce2c85304c04674a",
+    "sentence_map_hash": "4c747fd08e611dd2",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "7083e41338fa32d3",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_7.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Heimstaden delivered stronger operating and financial performance in 2025 despite stable reported rental income and a smaller portfolio.",
+    "S2": "Consolidated rental income was SEK 15,916 million, broadly unchanged from SEK 15,919 million in 2024.",
+    "S3": "Indexation and tenant improvement investments supported income, while foreign-exchange effects, privatisations and portfolio sales were negative factors.",
+    "S4": "Like-for-like rental growth moderated to 4.9% from 5.6%, while real economic occupancy remained strong at 98.5%.",
+    "S5": "Property expenses decreased 6.1% to SEK 4,378 million, supported by cost controls, digitalisation and the reduction in portfolio size.",
+    "S6": "As a result, net operating income increased to SEK 11,475 million from SEK 11,188 million and the NOI margin improved to 72.1% from 70.3%.",
+    "S7": "Profitability benefited from higher property-related gains and financial effects.",
+    "S8": "Profit before tax rose to SEK 16,012 million, and profit for the year increased to SEK 13,056 million.",
+    "S9": "The privatisation programme remained a major business development, with residential units sold at a premium to book value.",
+    "S10": "Together with other portfolio sales, the proceeds supported deleveraging.",
+    "S11": "Financial risk indicators improved.",
+    "S12": "Net interest-bearing liabilities declined to SEK 170,212 million from SEK 190,381 million, net LTV fell to 52.2% from 56.4%, and the interest coverage ratio improved to 2.0x from 1.9x.",
+    "S13": "Interest expense was broadly stable at SEK 6,536 million, although the average interest rate increased to 3.43% from 3.01%.",
+    "S14": "Heimstaden Bostad completed approximately SEK 59.5 billion of financing, while unutilised credit facilities reached SEK 23.449 billion.",
+    "S15": "The group generated SEK 2,742 million of operating cash flow and ended the year with SEK 4,179 million in cash.",
+    "S16": "The parent company reported a loss before tax of SEK 33 million, improved from SEK 273 million, and no dividends were proposed.",
+    "S17": "Fitch affirmed Heimstaden’s B- rating but revised the outlook to negative, while an arbitration award in favour of Heimstaden confirmed no breach of the Heimstaden Bostad shareholders’ agreement."
+  },
+  "usage": {
+    "input_tokens": 2310,
+    "output_tokens_including_reasoning": 367,
+    "total_tokens": 2677
+  },
+  "latency_seconds": 1.96,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S6\", \"S9\", \"S12\", \"S13\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\", \"S5\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\", \"S13\", \"S14\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S17\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K2\", \"K4\", \"K7\"],\n  \"justification\": \"K1, K3, K5, and K6 are adequately represented with core material meaning covered in multiple sentences. K2, K4, and K7 are entirely missing from the candidate summary, meaning the overall coverage is mixed with significant omissions of high-importance information. The score reflects that while several key areas are captured, major HIGH items are absent, placing it in the 'Generally yes' category.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S6",
+          "S9",
+          "S12",
+          "S13"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S5"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S13",
+          "S14"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K2",
+      "K4",
+      "K7"
+    ],
+    "justification": "K1, K3, K5, and K6 are adequately represented with core material meaning covered in multiple sentences. K2, K4, and K7 are entirely missing from the candidate summary, meaning the overall coverage is mixed with significant omissions of high-importance information. The score reflects that while several key areas are captured, major HIGH items are absent, placing it in the 'Generally yes' category."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

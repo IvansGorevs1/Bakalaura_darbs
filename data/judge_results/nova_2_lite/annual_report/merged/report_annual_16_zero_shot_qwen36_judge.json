@@ -1,0 +1,884 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_16_zero_shot_qwen36.txt",
+    "report": "report_annual_16.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordic Fibreboard AS reported a challenging financial year in 2025, characterized by a decline in profitability and negative operational cash flows despite stable top-line revenue.",
+    "S2": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024.",
+    "S3": "This slight reduction was primarily driven by a drop in sales to non-EU regions, particularly Africa and Asia, while sales within the European Union, which constitute 92% of total revenue, remained relatively flat.",
+    "S4": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year, reflecting the termination of rental agreements in 2024.",
+    "S5": "The company’s operational performance deteriorated, resulting in a consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024.",
+    "S6": "The EBITDA margin contracted by 6 percentage points to negative 6%.",
+    "S7": "This negative result was largely attributable to a planned factory shutdown in December 2025 to transition to a new gas boiler house, which incurred ongoing personnel and maintenance costs without generating production output.",
+    "S8": "In 2024, a similar shutdown occurred due to force majeure weather damage.",
+    "S9": "Additionally, underutilized production capacity increased the per-unit cost of goods, further pressuring margins.",
+    "S10": "Consequently, the operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million.",
+    "S11": "Total assets grew to €9.3 million from €8.3 million in 2024, driven by investments in property, plant, and equipment, as well as increases in inventories and receivables.",
+    "S12": "However, the group’s liquidity position remained under pressure, with working capital turning negative by €2.7 million compared to €0.7 million in the previous year.",
+    "S13": "Operating cash flow was negative €0.5 million, reflecting the operational losses and changes in working capital.",
+    "S14": "To address liquidity needs and fund investments, the company executed a share issue in October 2025, raising €2.0 million.",
+    "S15": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%.",
+    "S16": "Total borrowings decreased to €3.2 million from €3.7 million, although the loan from Coop Pank AS was classified as short-term due to covenant non-fulfillment.",
+    "S17": "Strategically, the group simplified its structure by merging its subsidiary Pärnu Riverside Development OÜ into the parent company in June 2025.",
+    "S18": "The real estate segment continues to focus on the Admirali Quarter development project in Pärnu, where design works are complete and building permits have been issued.",
+    "S19": "Following the balance sheet date, the company entered into a preliminary agreement to sell ten properties related to this project, aiming to liquidate negative working capital and fund future obligations.",
+    "S20": "The workforce was reduced to 60 employees from 68 in 2024, while labor costs increased to €1.9 million due to wage adjustments.",
+    "S21": "The company anticipates stable demand for fibreboards in the near term and continues to invest in energy-efficient production technologies."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_16.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_16.json",
+    "key_information_hash": "90798b354d5db477",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 21,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 21
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 13,
+      "incorrect": 0,
+      "total": 13
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Nordic Fibreboard AS reported a challenging financial year in 2025, characterized by a decline in profitability and negative operational cash flows despite stable top-line revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states consolidated net sales decreased by 3.4% to €7.33 million, consolidated EBITDA was negative €0.42 million (vs negative €0.03 million in 2024), and operating cash flow was negative €0.5 million. Revenue stability in EU (92% of total) contrasts with overall decline.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Nordic Fibreboard AS reported a challenging financial year in 2025, characterized by a decline in profitability and negative operational cash flows despite stable top-line revenue."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Consolidated net sales for 2025 were €7.33 million, which is a decrease of 3.4% compared to 2024 sales of €7.59 million.'",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This slight reduction was primarily driven by a drop in sales to non-EU regions, particularly Africa and Asia, while sales within the European Union, which constitute 92% of total revenue, remained relatively flat.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'Sales to the EU which makes up 92% of the sales held relatively flat. Sales to other regions dropped compared to 2024, with Africa and Asia seeing the sharpest drops.' Revenue by Regions table confirms EU at 92% in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This slight reduction was primarily driven by a drop in sales to non-EU regions, particularly Africa and Asia, while sales within the European Union, which constitute 92% of total revenue, remained relatively flat."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year, reflecting the termination of rental agreements in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The sales revenue from real estate management was €3 thousand (2024: €25 thousand).' Real Estate Management section: 'Rental income was €3 thousand in 2025 (2024: €27 thousand)... decreased due to the termination of rental agreements in August 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year, reflecting the termination of rental agreements in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The company’s operational performance deteriorated, resulting in a consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBITDA by Business Segments table shows Total EBITDA: (420) thousand (€0.42 million) in 2025 vs (25) thousand (≈€0.03 million) in 2024. Management Report states 'consolidated EBITDA of Nordic Fibreboard AS for 2025 was negative €0.42 million (2024: € negative 0.03 million)'.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The company’s operational performance deteriorated, resulting in a consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The EBITDA margin contracted by 6 percentage points to negative 6%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'EBITDA margin in 2025 was negative 6% representing a decrease of 6 percentage points compared to 2024 (2024: 0%).'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The EBITDA margin contracted by 6 percentage points to negative 6%."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "This negative result was largely attributable to a planned factory shutdown in December 2025 to transition to a new gas boiler house, which incurred ongoing personnel and maintenance costs without generating production output.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'The negative EBITDA in both 2025 and 2024 was attributable to the factory shutdown in December — in 2025 this occurred as planned in order to transition to the new gas boiler house... During the shutdown, personnel costs, ongoing factory maintenance costs, and repair costs continued to accrue...'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This negative result was largely attributable to a planned factory shutdown in December 2025 to transition to a new gas boiler house, which incurred ongoing personnel and maintenance costs without generating production output."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "In 2024, a similar shutdown occurred due to force majeure weather damage.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: '...while in 2024 it was unplanned due to a force majeure situation, when production was temporarily suspended due to structural damage caused by weather conditions.'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "In 2024, a similar shutdown occurred due to force majeure weather damage."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Additionally, underutilized production capacity increased the per-unit cost of goods, further pressuring margins.",
+        "label": "SUPPORTED",
+        "source_evidence": "Performance of Business Units section: 'The EBITDA of Nordic Fibreboard Ltd OÜ was negative €0.3 million in 2025 (2024: positive €0.03 million). The negative EBITDA was a result of underutilized capacity which makes the own production of goods more expensive.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Additionally, underutilized production capacity increased the per-unit cost of goods, further pressuring margins."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Consequently, the operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBITDA by Business Segments table: Total Operating Loss 2025 = (940) thousand (€0.94 million), 2024 = (547) thousand (≈€0.55 million). Net Loss 2025 = (1,154) thousand (€1.15 million), 2024 = (786) thousand (€0.79 million). Management Report confirms these figures.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Consequently, the operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total assets grew to €9.3 million from €8.3 million in 2024, driven by investments in property, plant, and equipment, as well as increases in inventories and receivables.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Financial Position: Total Assets 31.12.2025 = €9,323 thousand (€9.3 million), 31.12.2024 = €8,252 thousand (€8.3 million). Note 8 details increases in PP&E, inventories (Note 6), and receivables (Note 5).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Total assets grew to €9.3 million from €8.3 million in 2024, driven by investments in property, plant, and equipment, as well as increases in inventories and receivables."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "However, the group’s liquidity position remained under pressure, with working capital turning negative by €2.7 million compared to €0.7 million in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 25: 'As of 31.12.2025, the Group's working capital was negative €2,7 million... negative by €0.7 million as at 31 December 2024.'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "However, the group’s liquidity position remained under pressure, with working capital turning negative by €2.7 million compared to €0.7 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow was negative €0.5 million, reflecting the operational losses and changes in working capital.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Cash Flows: 'Net cash generated from operating activities' = (503) thousand (€0.503 million ≈ €0.5 million). Explained by operating loss and working capital changes.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow was negative €0.5 million, reflecting the operational losses and changes in working capital."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "To address liquidity needs and fund investments, the company executed a share issue in October 2025, raising €2.0 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Share capital increase of €2,000 thousand in 2025. Note 13: 'The total value of the offering was 2 million euros... completed in October 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "To address liquidity needs and fund investments, the company executed a share issue in October 2025, raising €2.0 million."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Total Equity 31.12.2025 = €4,462 thousand (€4.46 million). Financial Ratios table: Debt-to-equity-ratio 2025 = 52%, 2024 = 56%.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Total borrowings decreased to €3.2 million from €3.7 million, although the loan from Coop Pank AS was classified as short-term due to covenant non-fulfillment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 10: Borrowings 31.12.2025 = €3,168 thousand (€3.17 million ≈ €3.2 million), 31.12.2024 = €3,724 thousand (€3.72 million ≈ €3.7 million). Also states: 'since no confirmation has been received from the lender regarding the acceptance of non-fulfillment of the covenants, the long-term loan liability to Coop Pank AS... is recorded as short-term.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Total borrowings decreased to €3.2 million from €3.7 million, although the loan from Coop Pank AS was classified as short-term due to covenant non-fulfillment."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Strategically, the group simplified its structure by merging its subsidiary Pärnu Riverside Development OÜ into the parent company in June 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Company Profile: 'On 30.07.2025, Nordic Fibreboard AS and Pärnu Riverside Development OÜ entered into a merger agreement... the balance sheet date of the merger is 01.06.2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Strategically, the group simplified its structure by merging its subsidiary Pärnu Riverside Development OÜ into the parent company in June 2025."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The real estate segment continues to focus on the Admirali Quarter development project in Pärnu, where design works are complete and building permits have been issued.",
+        "label": "SUPPORTED",
+        "source_evidence": "Real Estate Management section: 'The design work of the Admirali quarter development project has been completed. Building permits have been issued for intra-quarter roads and utility networks and apartment buildings...'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The real estate segment continues to focus on the Admirali Quarter development project in Pärnu, where design works are complete and building permits have been issued."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Following the balance sheet date, the company entered into a preliminary agreement to sell ten properties related to this project, aiming to liquidate negative working capital and fund future obligations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 26: 'After the balance sheet date, on 08.01.2026 Nordic Fibreboard AS entered into a preliminary sale-purchase agreement for the sale of ten properties... will be concluded with the potential Buyer upon fulfilment of the conditions... no later than 30.06.2026.'",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Following the balance sheet date, the company entered into a preliminary agreement to sell ten properties related to this project, aiming to liquidate negative working capital and fund future obligations."
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The workforce was reduced to 60 employees from 68 in 2024, while labor costs increased to €1.9 million due to wage adjustments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Personnel section: 'As at 31.12.2025 the Group employed 60 people (31.12.2024: 68 employees).' Also: 'In 2025, employee wages and salaries with all applicable taxes totalled €1.9 million (2024: €1.6 million).'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The workforce was reduced to 60 employees from 68 in 2024, while labor costs increased to €1.9 million due to wage adjustments."
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "The company anticipates stable demand for fibreboards in the near term and continues to invest in energy-efficient production technologies.",
+        "label": "SUPPORTED",
+        "source_evidence": "Forecast and Development: 'Nordic Fibreboard Ltd OÜ expects demand for fibreboard to remain stable in the coming months... The Group has carried out an investment in modern energy solutions, aimed at improving the reliability and energy efficiency of production processes.'",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "The company anticipates stable demand for fibreboards in the near term and continues to invest in energy-efficient production technologies."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024.",
+        "candidate_value": "7.33 million EUR (2025), 7.59 million EUR (2024), -3.4% change",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7.33 million EUR (2025), 7.59 million EUR (2024), -3.4% change",
+        "source_evidence": "Management Report: 'Consolidated net sales for 2025 were €7.33 million, which is a decrease of 3.4% compared to 2024 sales of €7.59 million.' Note 15 Revenue table confirms these figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year",
+        "candidate_value": "3 thousand EUR (2025), 25 thousand EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3 thousand EUR (2025), 25 thousand EUR (2024)",
+        "source_evidence": "Management Report: 'The sales revenue from real estate management was €3 thousand (2024: €25 thousand).' Real Estate Management section confirms rental income figures align with revenue.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year, reflecting the termination of rental agreements in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024",
+        "candidate_value": "-0.42 million EUR (2025), -0.03 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-0.42 million EUR (2025), -0.03 million EUR (2024)",
+        "source_evidence": "EBITDA by Business Segments table: Total EBITDA 2025 = (420) thousand (€0.42 million), 2024 = (25) thousand (≈€0.025 million, rounded to €0.03 million in text). Management Report states these figures explicitly.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The company’s operational performance deteriorated, resulting in a consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBITDA margin contracted by 6 percentage points to negative 6%",
+        "candidate_value": "-6% (2025), 0% (2024), -6 pp change",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-6% (2025), 0% (2024), -6 pp change",
+        "source_evidence": "Management Report: 'EBITDA margin in 2025 was negative 6% representing a decrease of 6 percentage points compared to 2024 (2024: 0%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The EBITDA margin contracted by 6 percentage points to negative 6%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million",
+        "candidate_value": "0.94 million EUR op loss (2025), 0.55 million EUR op loss (2024), 1.15 million EUR net loss (2025), 0.79 million EUR net loss (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.94 million EUR op loss (2025), approx 0.55 million EUR op loss (2024), 1.15 million EUR net loss (2025), 0.79 million EUR net loss (2024)",
+        "source_evidence": "EBITDA by Business Segments table: Operating Loss 2025 = (940) thousand (€0.94 million), 2024 = (547) thousand (≈€0.55 million). Net Loss 2025 = (1,154) thousand (€1.15 million), 2024 = (786) thousand (€0.79 million). Management Report confirms these figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Consequently, the operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total assets grew to €9.3 million from €8.3 million in 2024",
+        "candidate_value": "9.3 million EUR (2025), 8.3 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9.3 million EUR (2025), 8.3 million EUR (2024)",
+        "source_evidence": "Consolidated Statement of Financial Position: Total Assets 31.12.2025 = €9,323 thousand (€9.32 million ≈ €9.3 million), 31.12.2024 = €8,252 thousand (€8.25 million ≈ €8.3 million).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Total assets grew to €9.3 million from €8.3 million in 2024, driven by investments in property, plant, and equipment, as well as increases in inventories and receivables."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "working capital turning negative by €2.7 million compared to €0.7 million in the previous year",
+        "candidate_value": "-2.7 million EUR (2025), -0.7 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-2.7 million EUR (2025), -0.7 million EUR (2024)",
+        "source_evidence": "Note 25: 'As of 31.12.2025, the Group's working capital was negative €2,7 million... negative by €0.7 million as at 31 December 2024.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "However, the group’s liquidity position remained under pressure, with working capital turning negative by €2.7 million compared to €0.7 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operating cash flow was negative €0.5 million",
+        "candidate_value": "-0.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-0.503 million EUR",
+        "source_evidence": "Consolidated Statement of Cash Flows: 'Net cash generated from operating activities' = (503) thousand (€0.503 million ≈ €0.5 million).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow was negative €0.5 million, reflecting the operational losses and changes in working capital."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "share issue in October 2025, raising €2.0 million",
+        "candidate_value": "2.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.0 million EUR",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Share capital increase of €2,000 thousand in 2025. Note 13: 'The total value of the offering was 2 million euros... completed in October 2025.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "To address liquidity needs and fund investments, the company executed a share issue in October 2025, raising €2.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%",
+        "candidate_value": "4.46 million EUR equity (2025), 56% debt-to-equity (2024), 52% debt-to-equity (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.46 million EUR equity (2025), 56% debt-to-equity (2024), 52% debt-to-equity (2025)",
+        "source_evidence": "Consolidated Statement of Changes in Equity: Total Equity 31.12.2025 = €4,462 thousand (€4.46 million). Financial Ratios table: Debt-to-equity-ratio 2025 = 52%, 2024 = 56%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Total borrowings decreased to €3.2 million from €3.7 million",
+        "candidate_value": "3.2 million EUR (2025), 3.7 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "approx 3.2 million EUR (2025), approx 3.7 million EUR (2024)",
+        "source_evidence": "Note 10: Borrowings 31.12.2025 = €3,168 thousand (€3.17 million ≈ €3.2 million), 31.12.2024 = €3,724 thousand (€3.72 million ≈ €3.7 million).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Total borrowings decreased to €3.2 million from €3.7 million, although the loan from Coop Pank AS was classified as short-term due to covenant non-fulfillment."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "workforce was reduced to 60 employees from 68 in 2024, while labor costs increased to €1.9 million due to wage adjustments",
+        "candidate_value": "60 employees (2025), 68 employees (2024), 1.9 million EUR labor cost (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "60 employees (2025), 68 employees (2024), 1.9 million EUR labor cost (2025)",
+        "source_evidence": "Personnel section: 'As at 31.12.2025 the Group employed 60 people (31.12.2024: 68 employees).' Also: 'In 2025, employee wages and salaries with all applicable taxes totalled €1.9 million (2024: €1.6 million).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The workforce was reduced to 60 employees from 68 in 2024, while labor costs increased to €1.9 million due to wage adjustments."
+          }
+        ]
+      },
+      {
+        "claim": "Sales to the European Union constitute 92% of total revenue",
+        "candidate_value": "92%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "92%",
+        "source_evidence": "MANAGEMENT REPORT: 'Sales to the EU which makes up 92% of the sales held relatively flat.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This slight reduction was primarily driven by a drop in sales to non-EU regions, particularly Africa and Asia, while sales within the European Union, which constitute 92% of total revenue, remained relatively flat."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated net sales decreased 3.4% to €7.33 million in 2025 from €7.59 million in 2024, with EU sales (92% of total) remaining flat and sales to Africa/Asia dropping sharply; real estate management revenue fell to €3 thousand from €25 thousand.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Overview section (pages 4-5), Note 15 Revenue breakdown (page 50)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated net sales decreased by 3.4% to €7.33 million from €7.59 million in 2024."
+          },
+          {
+            "id": "S3",
+            "text": "This slight reduction was primarily driven by a drop in sales to non-EU regions, particularly Africa and Asia, while sales within the European Union, which constitute 92% of total revenue, remained relatively flat."
+          },
+          {
+            "id": "S4",
+            "text": "Revenue from real estate management also fell significantly to €3 thousand from €25 thousand in the prior year, reflecting the termination of rental agreements in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Consolidated EBITDA was -€0.42 million in 2025 (vs -€0.03 million in 2024) with a margin of -6% (vs 0%), and net loss widened to €1.15 million from €0.79 million; the decline was driven by underutilized production capacity increasing costs and a planned December 2025 factory shutdown for new gas boiler house transition (compared to an unplanned weather-related shutdown in 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Overview of Operating Results (page 4), EBITDA by Business Segments table (page 4), Management Report Fibreboard Production section (page 4-5)",
+        "origin_draft_ids": [
+          "D2",
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6",
+          "S7",
+          "S8",
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The company’s operational performance deteriorated, resulting in a consolidated EBITDA of negative €0.42 million, a sharp decline from the negative €0.03 million reported in 2024."
+          },
+          {
+            "id": "S6",
+            "text": "The EBITDA margin contracted by 6 percentage points to negative 6%."
+          },
+          {
+            "id": "S7",
+            "text": "This negative result was largely attributable to a planned factory shutdown in December 2025 to transition to a new gas boiler house, which incurred ongoing personnel and maintenance costs without generating production output."
+          },
+          {
+            "id": "S8",
+            "text": "In 2024, a similar shutdown occurred due to force majeure weather damage."
+          },
+          {
+            "id": "S9",
+            "text": "Additionally, underutilized production capacity increased the per-unit cost of goods, further pressuring margins."
+          },
+          {
+            "id": "S10",
+            "text": "Consequently, the operating loss widened to €0.94 million from €0.55 million in 2024, and the net loss increased to €1.15 million from €0.79 million."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Total assets increased to €9.3 million (from €8.3 million in 2024), with current assets at €1.829 million (including inventories of €1.034 million and cash of €5 thousand) and total liabilities at €4.9 million; equity rose to €4.462 million.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statement of Financial Position (page 23)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Total assets grew to €9.3 million from €8.3 million in 2024, driven by investments in property, plant, and equipment, as well as increases in inventories and receivables."
+          },
+          {
+            "id": "S15",
+            "text": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Operating activities generated net cash outflow of €503 thousand (vs €174 thousand outflow in 2024); investing activities used €989 thousand (primarily €1.367 million in production assets and €161 thousand in real estate, partially offset by €539 thousand proceeds from sale of TPD shares); financing activities provided €1.444 million net cash inflow, primarily from a €2.0 million share capital increase completed in October 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statement of Cash Flows (page 25), Note 13 Equity movements (page 49)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13",
+          "S14",
+          "S15",
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operating cash flow was negative €0.5 million, reflecting the operational losses and changes in working capital."
+          },
+          {
+            "id": "S14",
+            "text": "To address liquidity needs and fund investments, the company executed a share issue in October 2025, raising €2.0 million."
+          },
+          {
+            "id": "S15",
+            "text": "This capital increase boosted equity to €4.46 million and reduced the debt-to-equity ratio from 56% to 52%."
+          },
+          {
+            "id": "S16",
+            "text": "Total borrowings decreased to €3.2 million from €3.7 million, although the loan from Coop Pank AS was classified as short-term due to covenant non-fulfillment."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Fibreboard production and sales accounted for 100% of revenue (€7.33 million) with EBITDA of -€296 thousand; real estate management contributed minimal revenue (€3 thousand) and EBITDA of -€86 thousand, reflecting terminated rental agreements.",
+        "importance": "HIGH",
+        "source_evidence": "Note 22 Operating Segments (page 52), Real Estate Management section (page 5)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "The group merged with subsidiary Pärnu Riverside Development OÜ effective June 1, 2025; the Admirali Quarter development project achieved completed design works and building permits for key areas.",
+        "importance": "HIGH",
+        "source_evidence": "Company Profile (page 3), Real Estate Management (page 5)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17",
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Strategically, the group simplified its structure by merging its subsidiary Pärnu Riverside Development OÜ into the parent company in June 2025."
+          },
+          {
+            "id": "S18",
+            "text": "The real estate segment continues to focus on the Admirali Quarter development project in Pärnu, where design works are complete and building permits have been issued."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "After the reporting period, a preliminary sale-purchase agreement was signed on January 8, 2026, for ten Admirali Quarter properties, with finalization conditional on satisfaction of terms by June 30, 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 26 Events after balance sheet date (page 55)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Following the balance sheet date, the company entered into a preliminary agreement to sell ten properties related to this project, aiming to liquidate negative working capital and fund future obligations."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K6, and K7 are all PRESENT with supporting trace sentences. K5 is MISSING because the candidate does not explicitly state that fibreboard production and sales accounted for 100% of revenue (€7.33 million) with EBITDA of -€296 thousand, and that real estate management contributed minimal revenue (€3 thousand) and EBITDA of -€86 thousand. While S4 mentions the real estate revenue drop and S5/S6 mention overall EBITDA, the specific split between fibreboard and real estate contributions is absent, making the core material meaning of K5 missing. The overall score is 3 (Generally yes) because most HIGH importance criteria are covered, but a key HIGH criterion (K5) is missing, preventing a higher score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected, with clear cause-and-effect relationships (e.g., factory shutdown leading to negative EBITDA). There are no self-contradictions, and the organization flows logically from revenue performance to operational results, liquidity, and strategic actions. While there is a minor numerical discrepancy between the stated 92% EU revenue share and the later mention of real estate revenue (€3k vs €25k), this does not constitute a logical contradiction because real estate revenue is presented as a separate line item and not part of the 92% EU sales figure. The summary avoids unnecessary repetition and maintains a clear narrative arc from performance challenges to corrective actions."
+  },
+  "usage": {
+    "input_tokens_total": 99181,
+    "output_tokens_total_including_reasoning": 8492,
+    "total_tokens": 107673,
+    "latency_seconds_total": 48.33
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 96881,
+    "output_tokens_total_including_reasoning": 81182,
+    "total_tokens": 178063,
+    "latency_seconds_total": 321.0
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_16.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_16_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_16.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_16.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_16_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_16_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_16_zero_shot_qwen36.json"
+    }
+  }
+}

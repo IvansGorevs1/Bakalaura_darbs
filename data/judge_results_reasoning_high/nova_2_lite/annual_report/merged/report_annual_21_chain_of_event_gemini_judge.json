@@ -1,0 +1,789 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_21_chain_of_event_gemini.txt",
+    "report": "report_annual_21.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the financial year ended 31 December 2025, AS Tallinna Sadam Group reported consolidated revenue of EUR 118,687 thousand, representing a slight decrease of 0.8 percent or EUR 901 thousand compared to EUR 119,587 thousand in 2024.",
+    "S2": "The reduction in overall revenue was primarily driven by lower charter fees in the Other segment due to a decreased number of charter days and lower day rates for the icebreaker Botnica, where charter fee revenue fell by 33.6 percent to EUR 7,911 thousand.",
+    "S3": "In contrast, revenue increased in the passenger harbours, cargo harbours, and ferry segments, supported by indexed fee rates, higher vessel dues from larger vessels, and growth in operational volumes.",
+    "S4": "Specifically, cargo volumes grew by 5.1 percent to 13.799 million tonnes, supported by liquid bulk recovery at Paldiski South Harbour and record shipments of steel and grain at Muuga Harbour.",
+    "S5": "Passenger numbers increased by 1.0 percent to 8.284 million passengers, driven by growth on the Tallinn to Helsinki route and an increase in cruise passengers.",
+    "S6": "Despite the minor decline in revenue, the Group achieved improved profitability due to a 9.9 percent reduction in operating expenses, which fell by EUR 4,015 thousand to EUR 36,412 thousand.",
+    "S7": "This expense reduction was mainly attributable to lower technical maintenance and repair costs for non-current assets, lower lease expenses, and reduced fuel costs, alongside the receipt of insurance indemnity for a prior-year technical failure on the icebreaker Botnica.",
+    "S8": "Consequently, operating profit grew by 12.2 percent to EUR 32,704 thousand compared to EUR 29,148 thousand in 2024.",
+    "S9": "Adjusted EBITDA increased by 6.4 percent to EUR 56,510 thousand from EUR 53,134 thousand, with the adjusted EBITDA margin rising from 44.4 percent to 47.6 percent.",
+    "S10": "Financial costs decreased by 30.2 percent to EUR 5,773 thousand due to lower market interest rates and reduced loan and debt security balances.",
+    "S11": "Profit before income tax rose by 25.1 percent to EUR 27,878 thousand.",
+    "S12": "Net profit for the period increased by 17.3 percent to EUR 22,463 thousand compared to EUR 19,153 thousand in the previous year, although net profit growth was partially moderated by an increase in income tax expense on dividends due to a higher tax rate.",
+    "S13": "Basic and diluted earnings per share increased from EUR 0.07 to EUR 0.09.",
+    "S14": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour.",
+    "S15": "Net debt decreased by 15.5 percent to EUR 141,708 thousand at year-end, while total equity rose by 0.9 percent to EUR 380,877 thousand, resulting in an equity to assets ratio of 61 percent.",
+    "S16": "In 2025, the Group paid dividends of EUR 0.073 per share, totaling EUR 19,199 thousand, and the management board has proposed a dividend of EUR 0.073 per share, amounting to EUR 19,199 thousand, for the 2025 financial year."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_21.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_21.json",
+    "key_information_hash": "3fc96d4b91b972e6",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 16,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 16
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Tallinna Sadam Group reported consolidated revenue of EUR 118,687 thousand for the financial year ended 31 December 2025, representing a decrease of 0.8 percent compared to 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20: Revenue for 2025 was EUR 118,687 thousand (2024: EUR 119,587 thousand), a decrease of EUR 901 thousand (-0.8%).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended 31 December 2025, AS Tallinna Sadam Group reported consolidated revenue of EUR 118,687 thousand, representing a slight decrease of 0.8 percent or EUR 901 thousand compared to EUR 119,587 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The reduction in overall revenue was primarily driven by lower charter fees in the Other segment due to a decreased number of charter days and lower day rates for the icebreaker Botnica.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20: Charter fees (Botnica) decreased by EUR 4,0 million (-34%) to EUR 7,911 million in 2025 due to lower utilisation (42 fewer charter days) and lower day rates.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The reduction in overall revenue was primarily driven by lower charter fees in the Other segment due to a decreased number of charter days and lower day rates for the icebreaker Botnica, where charter fee revenue fell by 33.6 percent to EUR 7,911 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Revenue increased in the passenger harbours, cargo harbours, and ferry segments, supported by indexed fee rates, higher vessel dues from larger vessels, and growth in operational volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3: Revenue grew in Passenger harbours (+EUR 1.6m, +4%), Cargo harbours (+EUR 1.4m, +5%), and Ferry segments (+EUR 0.3m, +1%). Vessel dues increased due to larger vessel calls and fee indexing.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, revenue increased in the passenger harbours, cargo harbours, and ferry segments, supported by indexed fee rates, higher vessel dues from larger vessels, and growth in operational volumes."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Cargo volumes grew by 5.1 percent to 13.799 million tonnes, supported by liquid bulk recovery at Paldiski South Harbour and record shipments of steel and grain at Muuga Harbour.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3: Cargo volume increased by 664 thousand tonnes (+5.1%) to 13,799 thousand tonnes in 2025. Liquid bulk volumes grew +0.6m tonnes (+47%), with ligroin and gasoline recovery.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Specifically, cargo volumes grew by 5.1 percent to 13.799 million tonnes, supported by liquid bulk recovery at Paldiski South Harbour and record shipments of steel and grain at Muuga Harbour."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Passenger numbers increased by 1.0 percent to 8.284 million passengers, driven by growth on the Tallinn to Helsinki route and an increase in cruise passengers.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3: Number of passengers increased by 83 thousand (+1.0%) to 8,284 thousand in 2025. Tallinn-Helsinki route passengers grew +0.1m, cruise passengers +39k.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Passenger numbers increased by 1.0 percent to 8.284 million passengers, driven by growth on the Tallinn to Helsinki route and an increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating expenses decreased by 9.9 percent to EUR 36,412 thousand due to lower technical maintenance and repair costs, reduced lease expenses, and lower fuel costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 21: Operating expenses decreased by EUR 4.0m (-10%) to EUR 36.4m in 2025. Key drivers included lower asset repairs (-EUR 2.6m), reduced lease costs (-EUR 0.8m), and lower fuel costs (-EUR 0.6m).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite the minor decline in revenue, the Group achieved improved profitability due to a 9.9 percent reduction in operating expenses, which fell by EUR 4,015 thousand to EUR 36,412 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The expense reduction was also attributable to the receipt of insurance indemnity for a prior-year technical failure on the icebreaker Botnica.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 21: Insurance indemnity of EUR +0.9m was received in 2025 related to a technical failure of the icebreaker Botnica in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This expense reduction was mainly attributable to lower technical maintenance and repair costs for non-current assets, lower lease expenses, and reduced fuel costs, alongside the receipt of insurance indemnity for a prior-year technical failure on the icebreaker Botnica."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operating profit grew by 12.2 percent to EUR 32,704 thousand compared to EUR 29,148 thousand in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3: Operating profit increased by EUR 3.6m (+12.2%) to EUR 32.7m in 2025 (2024: EUR 29.1m).",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Consequently, operating profit grew by 12.2 percent to EUR 32,704 thousand compared to EUR 29,148 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Adjusted EBITDA increased by 6.4 percent to EUR 56,510 thousand from EUR 53,134 thousand, with the adjusted EBITDA margin rising from 44.4 percent to 47.6 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3: Adjusted EBITDA grew by EUR 3.4m (+6.4%) to EUR 56.5m in 2025 (2024: EUR 53.1m). Adjusted EBITDA margin rose to 47.6% (2024: 44.4%).",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Adjusted EBITDA increased by 6.4 percent to EUR 56,510 thousand from EUR 53,134 thousand, with the adjusted EBITDA margin rising from 44.4 percent to 47.6 percent."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Financial costs decreased by 30.2 percent to EUR 5,773 thousand due to lower market interest rates and reduced loan and debt security balances.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 23: Finance costs decreased by EUR 2.5m (-30%) to EUR 5.8m in 2025, driven by lower Euribor rates and reduced loan/debt security balances.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial costs decreased by 30.2 percent to EUR 5,773 thousand due to lower market interest rates and reduced loan and debt security balances."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Profit before income tax rose by 25.1 percent to EUR 27,878 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 66: Profit before income tax increased by EUR 5.6m (+25.1%) to EUR 27.9m in 2025 (2024: EUR 22.3m).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Profit before income tax rose by 25.1 percent to EUR 27,878 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net profit for the period increased by 17.3 percent to EUR 22,463 thousand compared to EUR 19,153 thousand in the previous year, although net profit growth was partially moderated by an increase in income tax expense on dividends due to a higher tax rate.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 66: Profit for the period increased by EUR 3.3m (+17.3%) to EUR 22.5m in 2025. Note 19 explains the increase in dividend tax expense due to the abolition of the 14% rate for regular dividends effective 1 Jan 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Net profit for the period increased by 17.3 percent to EUR 22,463 thousand compared to EUR 19,153 thousand in the previous year, although net profit growth was partially moderated by an increase in income tax expense on dividends due to a higher tax rate."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Basic and diluted earnings per share increased from EUR 0.07 to EUR 0.09.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 19: Basic and diluted EPS increased to EUR 0.09 in 2025 (2024: EUR 0.07).",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Basic and diluted earnings per share increased from EUR 0.07 to EUR 0.09."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 26: Investments decreased by EUR 5.6m (-14.4%) to EUR 33.2m in 2025. The largest investment was the completion of the new multifunctional quay at Paldiski South Harbour.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Net debt decreased by 15.5 percent to EUR 141,708 thousand at year-end, while total equity rose by 0.9 percent to EUR 380,877 thousand, resulting in an equity to assets ratio of 61 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 17: Net debt decreased by EUR 25.9m (-15.5%) to EUR 141.7m at 31 Dec 2025. Note 19: Equity increased by EUR 3.3m (+0.9%) to EUR 380.9m, with an equity-to-assets ratio of 61% (2024: 60%).",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Net debt decreased by 15.5 percent to EUR 141,708 thousand at year-end, while total equity rose by 0.9 percent to EUR 380,877 thousand, resulting in an equity to assets ratio of 61 percent."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "In 2025, the Group paid dividends of EUR 0.073 per share, totaling EUR 19,199 thousand, and the management board has proposed a dividend of EUR 0.073 per share, amounting to EUR 19,199 thousand, for the 2025 financial year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 19: Dividends paid in 2025 were EUR 19.2m (EUR 0.073 per share). The profit allocation proposal for 2025 also recommends a dividend of EUR 0.073 per share (EUR 19.2m).",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In 2025, the Group paid dividends of EUR 0.073 per share, totaling EUR 19,199 thousand, and the management board has proposed a dividend of EUR 0.073 per share, amounting to EUR 19,199 thousand, for the 2025 financial year."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Consolidated revenue was EUR 118,687 thousand in 2025, representing a decrease of 0.8 percent or EUR 901 thousand compared to 2024.",
+        "candidate_value": "118,687 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "118,687 thousand EUR (2025) vs 119,587 thousand EUR (2024)",
+        "source_evidence": "Note 20: Revenue for 2025 was EUR 118,687 thousand (2024: EUR 119,587 thousand), a decrease of EUR 901 thousand (-0.8%).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended 31 December 2025, AS Tallinna Sadam Group reported consolidated revenue of EUR 118,687 thousand, representing a slight decrease of 0.8 percent or EUR 901 thousand compared to EUR 119,587 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Charter fee revenue fell by 33.6 percent to EUR 7,911 thousand in 2025.",
+        "candidate_value": "7,911 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,911 thousand EUR (2025) vs 11,914 thousand EUR (2024)",
+        "source_evidence": "Note 20: Charter fees (Botnica) decreased by EUR 4.0m (-34%) to EUR 7,911 thousand in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The reduction in overall revenue was primarily driven by lower charter fees in the Other segment due to a decreased number of charter days and lower day rates for the icebreaker Botnica, where charter fee revenue fell by 33.6 percent to EUR 7,911 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Cargo volumes grew by 5.1 percent to 13.799 million tonnes in 2025.",
+        "candidate_value": "13.799 million tonnes",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13.799 million tonnes",
+        "source_evidence": "Note 3: Cargo volume increased by 664 thousand tonnes (+5.1%) to 13,799 thousand tonnes in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Specifically, cargo volumes grew by 5.1 percent to 13.799 million tonnes, supported by liquid bulk recovery at Paldiski South Harbour and record shipments of steel and grain at Muuga Harbour."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Passenger numbers increased by 1.0 percent to 8.284 million passengers in 2025.",
+        "candidate_value": "8.284 million passengers",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.284 million passengers",
+        "source_evidence": "Note 3: Number of passengers increased by 83 thousand (+1.0%) to 8,284 thousand in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Passenger numbers increased by 1.0 percent to 8.284 million passengers, driven by growth on the Tallinn to Helsinki route and an increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating expenses fell by EUR 4,015 thousand to EUR 36,412 thousand in 2025.",
+        "candidate_value": "36,412 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "36,412 thousand EUR",
+        "source_evidence": "Note 21: Operating expenses decreased by EUR 4.0m (-10%) to EUR 36.4m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite the minor decline in revenue, the Group achieved improved profitability due to a 9.9 percent reduction in operating expenses, which fell by EUR 4,015 thousand to EUR 36,412 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operating profit grew by EUR 3,556 thousand to EUR 32,704 thousand in 2025.",
+        "candidate_value": "32,704 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "32,704 thousand EUR",
+        "source_evidence": "Note 3: Operating profit increased by EUR 3.6m (+12.2%) to EUR 32.7m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Consequently, operating profit grew by 12.2 percent to EUR 32,704 thousand compared to EUR 29,148 thousand in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Adjusted EBITDA increased by EUR 3,376 thousand to EUR 56,510 thousand in 2025.",
+        "candidate_value": "56,510 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "56,510 thousand EUR",
+        "source_evidence": "Note 3: Adjusted EBITDA grew by EUR 3.4m (+6.4%) to EUR 56.5m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Adjusted EBITDA increased by 6.4 percent to EUR 56,510 thousand from EUR 53,134 thousand, with the adjusted EBITDA margin rising from 44.4 percent to 47.6 percent."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Financial costs decreased by EUR 2,484 thousand to EUR 5,773 thousand in 2025.",
+        "candidate_value": "5,773 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,773 thousand EUR",
+        "source_evidence": "Note 23: Finance costs decreased by EUR 2.5m (-30%) to EUR 5.8m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial costs decreased by 30.2 percent to EUR 5,773 thousand due to lower market interest rates and reduced loan and debt security balances."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Profit before income tax rose by EUR 5,600 thousand to EUR 27,878 thousand in 2025.",
+        "candidate_value": "27,878 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "27,878 thousand EUR",
+        "source_evidence": "Note 66: Profit before income tax increased by EUR 5.6m (+25.1%) to EUR 27.9m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Profit before income tax rose by 25.1 percent to EUR 27,878 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net profit for the period increased by EUR 3,310 thousand to EUR 22,463 thousand in 2025.",
+        "candidate_value": "22,463 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "22,463 thousand EUR",
+        "source_evidence": "Note 66: Profit for the period increased by EUR 3.3m (+17.3%) to EUR 22.5m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Net profit for the period increased by 17.3 percent to EUR 22,463 thousand compared to EUR 19,153 thousand in the previous year, although net profit growth was partially moderated by an increase in income tax expense on dividends due to a higher tax rate."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Basic and diluted earnings per share increased to EUR 0.09 in 2025 from EUR 0.07 in 2024.",
+        "candidate_value": "0.09 EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.09 EUR",
+        "source_evidence": "Note 19: Basic and diluted EPS increased to EUR 0.09 in 2025 (2024: EUR 0.07).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Basic and diluted earnings per share increased from EUR 0.07 to EUR 0.09."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Capital investments totaled EUR 33,245 thousand in 2025, down 14.4 percent from EUR 38,831 thousand in 2024.",
+        "candidate_value": "33,245 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "33,245 thousand EUR",
+        "source_evidence": "Note 26: Investments decreased by EUR 5.6m (-14.4%) to EUR 33.2m in 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Net debt decreased by EUR 25,914 thousand to EUR 141,708 thousand at year-end 2025, while total equity rose by EUR 3,264 thousand to EUR 380,877 thousand.",
+        "candidate_value": "141,708 thousand EUR; 380,877 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "141,708 thousand EUR; 380,877 thousand EUR",
+        "source_evidence": "Note 17: Net debt decreased by EUR 25.9m (-15.5%) to EUR 141.7m at 31 Dec 2025. Note 19: Equity increased by EUR 3.3m (+0.9%) to EUR 380.9m.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Net debt decreased by 15.5 percent to EUR 141,708 thousand at year-end, while total equity rose by 0.9 percent to EUR 380,877 thousand, resulting in an equity to assets ratio of 61 percent."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Dividends of EUR 19,199 thousand (EUR 0.073 per share) were paid in 2025, with the same amount proposed for the 2025 financial year.",
+        "candidate_value": "19,199 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,199 thousand EUR",
+        "source_evidence": "Note 19: Dividends paid in 2025 were EUR 19.2m (EUR 0.073 per share). The profit allocation proposal for 2025 also recommends a dividend of EUR 0.073 per share (EUR 19.2m).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In 2025, the Group paid dividends of EUR 0.073 per share, totaling EUR 19,199 thousand, and the management board has proposed a dividend of EUR 0.073 per share, amounting to EUR 19,199 thousand, for the 2025 financial year."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance showing revenue of EUR 118.7 million (-0.8%), adjusted EBITDA of EUR 56.5 million (+6%), profit of EUR 22.5 million (+17%), and investments of EUR 33.2 million (-14%), with improved equity position and reduced net debt.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Section 5.1 Key performance indicators table and surrounding text; Consolidated Financial Statements",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S9",
+          "S12",
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended 31 December 2025, AS Tallinna Sadam Group reported consolidated revenue of EUR 118,687 thousand, representing a slight decrease of 0.8 percent or EUR 901 thousand compared to EUR 119,587 thousand in 2024."
+          },
+          {
+            "id": "S9",
+            "text": "Adjusted EBITDA increased by 6.4 percent to EUR 56,510 thousand from EUR 53,134 thousand, with the adjusted EBITDA margin rising from 44.4 percent to 47.6 percent."
+          },
+          {
+            "id": "S12",
+            "text": "Net profit for the period increased by 17.3 percent to EUR 22,463 thousand compared to EUR 19,153 thousand in the previous year, although net profit growth was partially moderated by an increase in income tax expense on dividends due to a higher tax rate."
+          },
+          {
+            "id": "S14",
+            "text": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour."
+          },
+          {
+            "id": "S15",
+            "text": "Net debt decreased by 15.5 percent to EUR 141,708 thousand at year-end, while total equity rose by 0.9 percent to EUR 380,877 thousand, resulting in an equity to assets ratio of 61 percent."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Passenger business growth with 8.3 million passengers (+1.0% YoY), dominated by Tallinn-Helsinki route (+1% passengers), and cruise tourism recovery featuring 190 thousand cruise passengers (+25%) and 118 calls (+18), offset by Tallinn-Stockholm decline.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.4 Market overview: passengers and 5.6.1 Number of passengers",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Passenger numbers increased by 1.0 percent to 8.284 million passengers, driven by growth on the Tallinn to Helsinki route and an increase in cruise passengers."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Cargo volume recovery to 13.8 million tonnes (+5.1% YoY) driven by liquid bulk surge (+47%, led by ligroin and gasoline), transit goods growth (+75%), and dry bulk increase, partially offset by ro-ro and container declines.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.5 Market overview: cargo and 5.6.2 Cargo volume",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Specifically, cargo volumes grew by 5.1 percent to 13.799 million tonnes, supported by liquid bulk recovery at Paldiski South Harbour and record shipments of steel and grain at Muuga Harbour."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Major strategic infrastructure investments including completion of multifunctional quay at Paldiski South Harbour, Muuga Harbour quay reinforcement for large vessels, and ongoing design work for Old City Harbour Terminal A and shore power capacity.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Section 5.10 Investments and development prospects",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Capital investments totaled EUR 33,245 thousand, down 14.4 percent from EUR 38,831 thousand in 2024, with major investments including the completion of the multifunctional quay at Paldiski South Harbour."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Dividend distribution of EUR 19.199 million (EUR 0.073 per share) representing 100% of prior year profit, aligned with policy, accompanied by share price appreciation to EUR 1.296 (+22.7%).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.11 Dividends and 5.12 Share and shareholders",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In 2025, the Group paid dividends of EUR 0.073 per share, totaling EUR 19,199 thousand, and the management board has proposed a dividend of EUR 0.073 per share, amounting to EUR 19,199 thousand, for the 2025 financial year."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Adverse impact of Russia-Ukraine war reducing liquid bulk volumes and eliminating St. Petersburg cruise calls, partially mitigated by winter cruise season extension, regional marketing, and economic recovery in Estonia and Nordic partners.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Sections 5.2 Economic environment and 5.3 Impact of Russia-Ukraine war",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Icebreaker Botnica operated at reduced utilization rate (49%) with lower charter revenue, but participated in international rescue operations for cargo ship MV Thamesborg in Canadian Arctic waters.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Section 5.6.4 Icebreaker Botnica",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Environmental sustainability progress including 77% renewable energy usage in operations, GHG emissions reduction of 11% YoY to 19,261 tonnes CO2e, and initiatives for shore power and waste circularity at Old City Harbour.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Section 3 Environment and CEO letter (Section 1.4)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, and K5 are all PRESENT with clear coverage in the candidate summary. K6, K7, and K8 are MISSING entirely—there is no mention of the Russia-Ukraine war impacts, icebreaker Botnica utilization details, or environmental sustainability metrics. While the summary captures most core financial and operational highlights, the absence of HIGH-importance external impact context (K6) and MEDIUM importance items (K7, K8) prevents a 'Yes' rating. The overall picture is substantially captured but lacks key qualifying factors and secondary operational details.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements logically follow one another without contradictions. The summary begins with overall revenue performance, then explains segment-specific drivers, followed by cost management, profitability metrics, investment activity, and capital structure changes. Each section builds on the previous one with clear cause-effect relationships (e.g., revenue decline due to charter fees offset by other segments, expense reduction driving profitability improvements). There is no unnecessary repetition, and the organization follows a logical flow from top-line performance to bottom-line results. All numerical changes are consistently presented with appropriate context."
+  },
+  "usage": {
+    "input_tokens_total": 85277,
+    "output_tokens_total_including_reasoning": 5876,
+    "total_tokens": 91153,
+    "latency_seconds_total": 38.71
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 163514,
+    "output_tokens_total_including_reasoning": 53159,
+    "total_tokens": 216673,
+    "latency_seconds_total": 185.3
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_21.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_21_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_21.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_21.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_21_chain_of_event_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_21_chain_of_event_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_21_chain_of_event_gemini.json"
+    }
+  }
+}

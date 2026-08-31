@@ -1,0 +1,144 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:29:09.606406",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_20_few_shot_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "5d878a41eb7409cd",
+    "sentence_map_hash": "2d5790e2af139101",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the financial year 2025, AS Tallink Grupp operated within a challenging environment marked by subdued consumer and business confidence, economic pressures in core markets, and geopolitical tensions.",
+    "S2": "The group carried 5.5 million passengers, representing a 0.9% decrease year-on-year.",
+    "S3": "Transported cargo units dropped by 19.2% to 245,004, while passenger vehicles declined by 2.2% to 760,473.",
+    "S4": "Total consolidated revenue amounted to EUR 765.3 million, down 2.6% from EUR 785.8 million in 2024.",
+    "S5": "Core route operations revenue decreased by EUR 13.7 million to EUR 625.2 million.",
+    "S6": "Estonia-Finland route revenue increased slightly by EUR 1.7 million to EUR 314.5 million, whereas Finland-Sweden and Estonia-Sweden revenues declined to EUR 225.5 million and EUR 85.3 million, respectively.",
+    "S7": "Profitability indicators weakened across the financial year.",
+    "S8": "Gross profit fell from EUR 153.6 million to EUR 143.2 million, yielding a gross margin of 18.7%.",
+    "S9": "EBITDA decreased from EUR 175.2 million to EUR 130.1 million, with the EBITDA margin dropping to 17.0%.",
+    "S10": "Net profit declined to EUR 17.3 million compared to EUR 40.3 million in 2024, resulting in a net profit margin of 2.3% and earnings per share of EUR 0.023.",
+    "S11": "Results were adversely affected by weaker leisure spending and lower sales volumes.",
+    "S12": "Conversely, profitability was positively impacted by an EUR 18.0 million decline in depreciation and amortization expenses to EUR 79.8 million, achieved by aligning estimated useful lives of cruise and passenger vessels, excluding shuttle vessels, to 45 years.",
+    "S13": "Net finance costs also decreased by EUR 6.8 million to EUR 21.4 million due to lower interest rates and reduced loan balances.",
+    "S14": "During the period, the group completed the sales of three vessels and eliminated all idle vessels in lay-up by the end of the third quarter.",
+    "S15": "Net operating cash flow remained positive at EUR 127.1 million.",
+    "S16": "Net cash flow from investing activities was EUR 46.1 million, supported by EUR 78.8 million in disposal proceeds.",
+    "S17": "Capital expenditures totaled EUR 33.0 million, focusing on vessel maintenance and IT improvements.",
+    "S18": "Total interest-bearing liabilities decreased by 19.9% to EUR 445.9 million.",
+    "S19": "Net debt improved to EUR 432.4 million from EUR 537.7 million at the end of 2024, while the net debt to EBITDA ratio moved from 3.1 to 3.3.",
+    "S20": "Loan repayments and interest payments reached EUR 113.5 million.",
+    "S21": "The liquidity buffer stood at EUR 110.4 million, comprising EUR 13.5 million in cash and cash equivalents and EUR 96.9 million in unused overdraft facilities.",
+    "S22": "Cash outflows included EUR 44.6 million for dividend payments at EUR 0.06 per share and EUR 11.3 million in related income tax.",
+    "S23": "Total equity closed at EUR 750.1 million with an equity ratio of 56.4%.",
+    "S24": "Management will propose a dividend of EUR 0.06 per share for 2025."
+  },
+  "usage": {
+    "input_tokens": 1355,
+    "output_tokens_including_reasoning": 278,
+    "total_tokens": 1633
+  },
+  "latency_seconds": 2.44,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"description\": \"Sentence S19 states that the net debt to EBITDA ratio moved from 3.1 to 3.3 while net debt improved from EUR 537.7 million to EUR 432.4 million. This implies that EBITDA must have decreased significantly to cause the ratio to increase despite the reduction in net debt, but the candidate does not explicitly state the EBITDA value for 2024 or explain this movement, creating a logical gap.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear structure covering performance, profitability, cash flow, and balance sheet items. Most relationships between causes and effects are logically presented (e.g., weaker leisure spending affecting results, lower depreciation improving profitability). The only notable issue is in S19 where the increase in the net debt to EBITDA ratio despite a decrease in net debt introduces a logical gap because the necessary context (EBITDA change) is missing. There are no self-contradictions, organizational problems, or unnecessary repetition. The arithmetic differences between segment and consolidated figures are not claimed to be directly additive, so they do not constitute contradictions.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "description": "Sentence S19 states that the net debt to EBITDA ratio moved from 3.1 to 3.3 while net debt improved from EUR 537.7 million to EUR 432.4 million. This implies that EBITDA must have decreased significantly to cause the ratio to increase despite the reduction in net debt, but the candidate does not explicitly state the EBITDA value for 2024 or explain this movement, creating a logical gap."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear structure covering performance, profitability, cash flow, and balance sheet items. Most relationships between causes and effects are logically presented (e.g., weaker leisure spending affecting results, lower depreciation improving profitability). The only notable issue is in S19 where the increase in the net debt to EBITDA ratio despite a decrease in net debt introduces a logical gap because the necessary context (EBITDA change) is missing. There are no self-contradictions, organizational problems, or unnecessary repetition. The arithmetic differences between segment and consolidated figures are not claimed to be directly additive, so they do not constitute contradictions."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

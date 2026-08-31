@@ -1,0 +1,137 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:55:33.101282",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_2_few_shot_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "a02f5c4e0a4cea57",
+    "sentence_map_hash": "5beb70750117dfd6",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Amber Grid AB delivered significantly stronger financial results for the first quarter of 2026, with revenue and profitability surging compared to the prior-year period.",
+    "S2": "Revenue grew by approximately 58% to EUR 32.8 million, driven by a 35% increase in natural gas transmission volumes and higher regulated tariffs implemented for 2026.",
+    "S3": "The revenue mix shifted markedly as income from system balancing products collapsed by 99% following a new transit agreement that minimized balancing requirements.",
+    "S4": "Operating expenses decreased by 19% to EUR 9.6 million, supported by a 68% reduction in natural gas purchases to EUR 1.5 million, which reflected near-total elimination of balancing gas costs, despite a 118% rise in expenditures for technological gas needs.",
+    "S5": "The cost improvements propelled EBITDA to EUR 23.3 million from EUR 8.9 million, and operating profit more than tripled to EUR 19.6 million from EUR 5.2 million.",
+    "S6": "Net profit exceeded EUR 15.8 million, rising from EUR 4.2 million, lifting earnings per share to EUR 0.09 from EUR 0.02.",
+    "S7": "While IFRS results improved dramatically, the company's adjusted EBITDA remained essentially flat at EUR 8.3 million versus EUR 8.3 million in the first quarter of 2025, underscoring that the reported profit expansion was influenced by substantial timing adjustments related to regulatory determinations and favorable cost variances rather than a proportional increase in underlying adjusted operational generation.",
+    "S8": "Balance sheet developments included a major resolution of liquidity constraints.",
+    "S9": "Following the expiration of a Nordic Investment Bank loan and a restructuring agreement with parent company EPSO-G that transferred certain obligations, the Company cured previous financial covenant breaches.",
+    "S10": "This allowed the reclassification of the European Investment Bank loan from current to non-current liabilities.",
+    "S11": "As a result, current liabilities dropped to EUR 38.7 million from EUR 103.0 million at year-end, while non-current borrowings increased to EUR 97.7 million, bringing total borrowings to EUR 104.2 million.",
+    "S12": "Net debt stood at EUR 106.6 million.",
+    "S13": "Cash generation improved robustly, with operating cash flows reaching EUR 22.9 million compared to EUR 8.3 million in the prior period.",
+    "S14": "Cash and cash equivalents declined by EUR 1.1 million due to capital expenditures and lending activities within the group exceeding financing inflows and dividend distributions.",
+    "S15": "Total assets held steady at EUR 324.1 million, with equity expanding to EUR 182.0 million as retained earnings absorbed the net profit gain.",
+    "S16": "The General Meeting of Shareholders subsequently approved dividends of EUR 10.0 million for 2025.",
+    "S17": "The Company maintains a provision of EUR 5.8 million concerning a legal dispute over warranty defects in the construction of the gas interconnector between Poland and Lithuania."
+  },
+  "usage": {
+    "input_tokens": 1232,
+    "output_tokens_including_reasoning": 289,
+    "total_tokens": 1521
+  },
+  "latency_seconds": 2.1,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"description\": \"Sentence S7 introduces the concept of 'adjusted EBITDA' remaining flat but does not define or explain what 'adjusted EBITDA' entails or how it differs from the reported EBITDA. This creates a logical gap because readers are left without clarity on the nature of this metric that is central to the author's argument about the nature of profit expansion.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative structure covering revenue, profitability, balance sheet, and cash flow developments. Most statements logically follow each other, e.g., cost reductions leading to higher EBITDA (S4→S5), balance sheet improvements enabling liability reclassification (S8→S10), and net profit growth supporting dividend approval (S6, S15→S16). The only notable issue is in S7 where the term 'adjusted EBITDA' is used without definition, creating a logical gap in explaining how the company measures underlying operational performance. There are no self-contradictions, organizational confusion, or material repetitions. Arithmetic differences (e.g., between segment figures and totals) are not claimed to be exhaustive additive components, so they do not constitute contradictions per evaluation rules.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "description": "Sentence S7 introduces the concept of 'adjusted EBITDA' remaining flat but does not define or explain what 'adjusted EBITDA' entails or how it differs from the reported EBITDA. This creates a logical gap because readers are left without clarity on the nature of this metric that is central to the author's argument about the nature of profit expansion."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative structure covering revenue, profitability, balance sheet, and cash flow developments. Most statements logically follow each other, e.g., cost reductions leading to higher EBITDA (S4→S5), balance sheet improvements enabling liability reclassification (S8→S10), and net profit growth supporting dividend approval (S6, S15→S16). The only notable issue is in S7 where the term 'adjusted EBITDA' is used without definition, creating a logical gap in explaining how the company measures underlying operational performance. There are no self-contradictions, organizational confusion, or material repetitions. Arithmetic differences (e.g., between segment figures and totals) are not claimed to be exhaustive additive components, so they do not constitute contradictions per evaluation rules."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,104 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:57:48.382036",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_16_few_shot_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "3806ddc544d638dc",
+    "sentence_map_hash": "8cb18acdf4594c5f",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordic Fibreboard AS reported a decline in financial performance for the 2025 financial year, driven by challenging market conditions, underutilized production capacity, and planned factory shutdowns.",
+    "S2": "Consolidated net sales for 2025 decreased by 3.4% to 7.33 million euros, compared with 7.59 million euros in 2024.",
+    "S3": "Fibreboard production and sales remained the primary revenue source at 7.33 million euros, declining slightly by 3% from 7.57 million euros in the previous year.",
+    "S4": "Real estate management revenue dropped significantly to 3 thousand euros, down from 25 thousand euros in 2024, following the termination of rental agreements in August 2024 to prepare for development activities.",
+    "S5": "Geographically, European Union sales remained relatively flat at 6.70 million euros, representing 92 percent of total net sales, while sales to Africa, Asia, and the Middle East experienced declines.",
+    "S6": "Profitability metrics weakened further during the period.",
+    "S7": "The consolidated EBITDA was negative 0.42 million euros, compared with negative 0.03 million euros in 2024, resulting in a negative EBITDA margin of 6 percent.",
+    "S8": "The negative EBITDA was primarily caused by underutilized production capacity and a planned factory shutdown in December 2025 to transition to a new gas boiler house, during which personnel, maintenance, and repair costs continued to accrue.",
+    "S9": "Operating loss widened to 0.94 million euros from 0.54 million euros in 2024, while net financial costs remained relatively stable at 0.21 million euros.",
+    "S10": "Consequently, the Group reported a consolidated net loss of 1.15 million euros for 2025, compared with a net loss of 0.79 million euros in the previous year.",
+    "S11": "Basic and diluted loss per share improved slightly to 0.14 euros, compared with 0.17 euros in 2024.",
+    "S12": "The statement of financial position showed total assets of 9.32 million euros as of December 31, 2025, compared with 8.25 million euros at the end of 2024.",
+    "S13": "Total liabilities increased to 4.86 million euros from 4.63 million euros, consisting of 1.55 million euros in payables and prepayments and 3.17 million euros in borrowings and lease liabilities.",
+    "S14": "Total equity rose to 4.46 million euros, up from 3.61 million euros, bolstered by a share capital increase completed in October 2025 that generated 2.00 million euros through the issuance of 4,000,000 new shares.",
+    "S15": "Cash flow from operating activities was a negative 0.50 million euros, cash outflows from investing activities totaled 0.99 million euros due to production and real estate investments, and cash generated from financing activities reached 1.44 million euros.",
+    "S16": "The Group ended the year with negative net working capital of 2.7 million euros.",
+    "S17": "Subsequent to the balance sheet date, the company entered into a preliminary agreement on January 8, 2026, to sell the ten properties comprising the Admirali Quarter development project in Pärnu, with the final sale agreement expected by June 30, 2026."
+  },
+  "usage": {
+    "input_tokens": 1316,
+    "output_tokens_including_reasoning": 295,
+    "total_tokens": 1611
+  },
+  "latency_seconds": 1.87,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\", \"S5\"],\n      \"description\": \"Sentence S3 states that Fibreboard production and sales remained the primary revenue source at 7.33 million euros, declining slightly by 3% from 7.57 million euros in 2024. However, Sentence S5 states that European Union sales were 6.70 million euros, representing 92% of total net sales (7.33 million euros). This creates a logical gap because the Fibreboard revenue figure (7.33 million euros) appears to be conflated with total net sales, making the relationship between Fibreboard revenue and geographic sales unclear.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative about declining financial performance, reduced sales, increased losses, and changes in the balance sheet. The structure follows a logical flow from revenue to profitability to balance sheet and cash flow. There are no self-contradictions or major organizational issues. The only notable issue is a logical gap in S3 and S5 where Fibreboard revenue and geographic sales figures appear to overlap in a confusing way, creating ambiguity about how these figures relate to each other. This is not a contradiction but a logical gap that reduces clarity.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3",
+          "S5"
+        ],
+        "description": "Sentence S3 states that Fibreboard production and sales remained the primary revenue source at 7.33 million euros, declining slightly by 3% from 7.57 million euros in 2024. However, Sentence S5 states that European Union sales were 6.70 million euros, representing 92% of total net sales (7.33 million euros). This creates a logical gap because the Fibreboard revenue figure (7.33 million euros) appears to be conflated with total net sales, making the relationship between Fibreboard revenue and geographic sales unclear."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative about declining financial performance, reduced sales, increased losses, and changes in the balance sheet. The structure follows a logical flow from revenue to profitability to balance sheet and cash flow. There are no self-contradictions or major organizational issues. The only notable issue is a logical gap in S3 and S5 where Fibreboard revenue and geographic sales figures appear to overlap in a confusing way, creating ambiguity about how these figures relate to each other. This is not a contradiction but a logical gap that reduces clarity."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

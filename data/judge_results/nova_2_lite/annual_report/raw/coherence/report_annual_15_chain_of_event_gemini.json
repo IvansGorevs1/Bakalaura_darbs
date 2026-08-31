@@ -1,0 +1,81 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:48:15.190273",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_15_chain_of_event_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "953c3994bfed6f84",
+    "sentence_map_hash": "30ebf546c23ec05e",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "For the financial year ended December 31, 2025, AS Merko Ehitus reported consolidated revenue of EUR 310.9 million, marking a decrease from EUR 539.0 million in 2024.",
+    "S2": "Gross profit for the period stood at EUR 55.9 million compared to EUR 95.9 million in the previous year, while the gross margin remained stable at 18.0% versus 17.8% in 2024.",
+    "S3": "Operating profit reached EUR 34.3 million, down from EUR 72.5 million in 2024, resulting in an operating profit margin of 11.0% compared to 13.4% previously.",
+    "S4": "EBITDA declined to EUR 37.5 million from EUR 75.7 million, with an EBITDA margin of 12.0% compared to 14.0%.",
+    "S5": "Net profit attributable to equity holders of the parent was reported at EUR 39.9 million, compared to EUR 64.7 million in 2024, yielding a net margin of 12.8% versus 12.0%.",
+    "S6": "Basic and diluted earnings per share were EUR 2.26, down from EUR 3.65 in 2024.",
+    "S7": "Total assets as of December 31, 2025, were EUR 415.1 million, compared to EUR 447.1 million at the end of 2024, while equity attributable to equity holders of the parent rose to EUR 260.6 million from EUR 254.3 million.",
+    "S8": "Return on equity decreased to 15.6% from 28.4%, whereas the equity ratio improved to 62.8% from 56.9%.",
+    "S9": "The secured order book as of December 31, 2025, increased to EUR 466.9 million from EUR 340.6 million at the end of the previous period.",
+    "S10": "The financial performance changes were influenced by global political uncertainty, which continued to restrain private investments, and the completion during 2025 of several large construction projects that had commenced in earlier years.",
+    "S11": "The pace of signing new construction contracts was slower in 2024 and the first half of 2025, leading to lower construction service revenues, although the second half of 2025 showed a clear improvement with preparatory efforts resulting in new major contracts.",
+    "S12": "Concurrently, the group started construction on more than three times as many new apartments in 2025 compared to 2024 due to improving market conditions and consumer confidence in Estonia and Latvia alongside continued high confidence in Lithuania.",
+    "S13": "For the reporting period, the Management Board proposed a dividend of EUR 1.25 per share, totalling EUR 22.1 million from retained earnings."
+  },
+  "usage": {
+    "input_tokens": 1200,
+    "output_tokens_including_reasoning": 267,
+    "total_tokens": 1467
+  },
+  "latency_seconds": 2.02,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"description\": \"Sentence S11 states that the pace of signing new construction contracts was slower in 2024 and the first half of 2025, leading to lower construction service revenues. However, it does not explicitly explain how this slower pace directly caused the decrease in construction service revenues reported in S1, leaving a logical gap between cause and effect.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with consistent comparisons between 2025 and 2024 across multiple financial metrics. The majority of statements logically follow one another, showing a clear trend of declining profitability and changes in business conditions. The primary issue is a logical gap in S11 where the connection between slower contract signing and lower revenues is implied but not explicitly detailed, creating a minor coherence problem. There are no self-contradictions, organizational issues, or significant repetition. The financial relationships presented (e.g., revenue, profit margins, assets, equity) are internally consistent and do not raise arithmetic contradictions because the candidate does not claim they are exhaustive additive components of the same total.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "description": "Sentence S11 states that the pace of signing new construction contracts was slower in 2024 and the first half of 2025, leading to lower construction service revenues. However, it does not explicitly explain how this slower pace directly caused the decrease in construction service revenues reported in S1, leaving a logical gap between cause and effect."
+      }
+    ],
+    "justification": "The summary is generally coherent with consistent comparisons between 2025 and 2024 across multiple financial metrics. The majority of statements logically follow one another, showing a clear trend of declining profitability and changes in business conditions. The primary issue is a logical gap in S11 where the connection between slower contract signing and lower revenues is implied but not explicitly detailed, creating a minor coherence problem. There are no self-contradictions, organizational issues, or significant repetition. The financial relationships presented (e.g., revenue, profit margins, assets, equity) are internally consistent and do not raise arithmetic contradictions because the candidate does not claim they are exhaustive additive components of the same total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

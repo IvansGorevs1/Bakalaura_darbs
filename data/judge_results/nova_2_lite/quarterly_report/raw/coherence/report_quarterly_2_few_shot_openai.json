@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:39:39.482332",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_2_few_shot_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "822c95d8262d4ac2",
+    "sentence_map_hash": "67b91ffc303db685",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Amber Grid AB reported a substantial improvement in financial performance in the three months ended 31 March 2026.",
+    "S2": "Revenue increased to EUR 32.821 million from EUR 20.763 million in the corresponding period of 2025, while total income rose to EUR 32.874 million from EUR 20.785 million.",
+    "S3": "The increase was driven mainly by a 35% rise in transmitted natural gas volumes and higher transmission prices for 2026.",
+    "S4": "Revenue from natural gas transmission and related services increased by 58%.",
+    "S5": "In contrast, revenue from system balancing products fell by 99%, reflecting a new transit agreement with Kaliningrad that significantly reduced the need for balancing gas.",
+    "S6": "Operating efficiency improved materially.",
+    "S7": "Operating expenses excluding depreciation, impairment and write-offs declined to EUR 9.570 million from EUR 11.867 million.",
+    "S8": "Natural gas purchases fell by 68% to EUR 1.477 million, mainly because balancing-gas costs decreased by 99%, although gas costs for technological needs increased by 118%.",
+    "S9": "Wage-related expenses rose to EUR 4.367 million from EUR 3.659 million, and other expenses increased moderately to EUR 3.231 million from EUR 3.015 million.",
+    "S10": "EBITDA more than doubled to EUR 23.304 million from EUR 8.918 million, and the EBITDA margin increased substantially.",
+    "S11": "Adjusted EBITDA was EUR 8.285 million, broadly in line with EUR 8.260 million a year earlier, as management adjustments related to temporary regulatory differences had a much larger negative effect in 2026.",
+    "S12": "Operating profit rose to EUR 19.627 million from EUR 5.185 million.",
+    "S13": "After net finance costs of EUR 626 thousand and income tax expense of EUR 3.238 million, net profit reached EUR 15.763 million, compared with EUR 4.239 million in the prior-year period.",
+    "S14": "Earnings per share increased to EUR 0.09 from EUR 0.02.",
+    "S15": "Operating cash flow improved to EUR 22.927 million from EUR 8.264 million, supported by higher earnings, although increased trade receivables absorbed EUR 3.946 million.",
+    "S16": "Capital expenditure and other investing outflows increased to EUR 3.570 million from EUR 1.308 million.",
+    "S17": "Financing outflows reached EUR 20.467 million, primarily due to a EUR 17.845 million reduction in overdraft, resulting in a net decrease in cash of EUR 1.110 million and closing cash of EUR 832 thousand.",
+    "S18": "At 31 March 2026, total assets were broadly stable at EUR 324.064 million, while equity increased to EUR 182.039 million from EUR 166.276 million through retained profit.",
+    "S19": "Total borrowings declined to EUR 104.174 million from EUR 123.666 million, and the reclassification of debt following the expiry of the Nordic Investment Bank agreement moved much of the borrowing to non-current liabilities.",
+    "S20": "Net debt was EUR 106.610 million, compared with EUR 76.052 million at 31 March 2025.",
+    "S21": "The company also retained a EUR 5.815 million provision related to disputed GIPL warranty guarantee funds."
+  },
+  "usage": {
+    "input_tokens": 1314,
+    "output_tokens_including_reasoning": 340,
+    "total_tokens": 1654
+  },
+  "latency_seconds": 3.33,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S8\", \"S5\"],\n      \"description\": \"S8 states that natural gas purchases fell by 68% to EUR 1.477 million, mainly because balancing-gas costs decreased by 99%. However, S5 states that revenue from system balancing products fell by 99% due to a new transit agreement. There is no explicit logical link explaining how the decrease in balancing-gas costs (a cost item) directly results from the reduction in revenue from system balancing products (a revenue item). The relationship between these two changes is implied but not explained, creating a small logical gap.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative structure covering revenue, costs, profitability, cash flow, and balance sheet developments. Most sections logically connect, such as the revenue growth drivers in S3 linking to the revenue figures in S2 and S4. The EBITDA and profit growth in S10-S14 follow from the revenue and cost changes described earlier. The cash flow and balance sheet items in S15-S20 also logically follow from operating performance. However, there is a small logical gap between S5 (revenue decrease in balancing products) and S8 (cost decrease in balancing-gas purchases), as the causal link between these two changes is implied but not explicitly stated. This represents a minor issue but does not severely undermine the overall coherence. There are no self-contradictions, organizational problems, or significant repetition.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S8",
+          "S5"
+        ],
+        "description": "S8 states that natural gas purchases fell by 68% to EUR 1.477 million, mainly because balancing-gas costs decreased by 99%. However, S5 states that revenue from system balancing products fell by 99% due to a new transit agreement. There is no explicit logical link explaining how the decrease in balancing-gas costs (a cost item) directly results from the reduction in revenue from system balancing products (a revenue item). The relationship between these two changes is implied but not explained, creating a small logical gap."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative structure covering revenue, costs, profitability, cash flow, and balance sheet developments. Most sections logically connect, such as the revenue growth drivers in S3 linking to the revenue figures in S2 and S4. The EBITDA and profit growth in S10-S14 follow from the revenue and cost changes described earlier. The cash flow and balance sheet items in S15-S20 also logically follow from operating performance. However, there is a small logical gap between S5 (revenue decrease in balancing products) and S8 (cost decrease in balancing-gas purchases), as the causal link between these two changes is implied but not explicitly stated. This represents a minor issue but does not severely undermine the overall coherence. There are no self-contradictions, organizational problems, or significant repetition."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,822 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_5_few_shot_qwen36.txt",
+    "report": "report_annual_5.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Eleving Group reported strong financial growth during the 2025 fiscal year, driven by robust demand across its diversified product portfolio and successful geographic expansion.",
+    "S2": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million.",
+    "S3": "The group successfully launched device financing, contributing EUR 7.9 million in its first full year, while traditional vehicle financing saw a moderate decline of 6.0%.",
+    "S4": "Operating profitability improved, with adjusted EBITDA reaching a record EUR 101.9 million, reflecting a 13.5% year-over-year increase.",
+    "S5": "Net profit from continuing operations remained stable at EUR 29.2 million, though underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million.",
+    "S6": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year.",
+    "S7": "This growth was fueled by strong customer acquisition, exceeding 2.7 million loan applications globally, and higher retention rates.",
+    "S8": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio.",
+    "S9": "The introduction of unsecured installment loans in several European markets also provided additional tailwinds.",
+    "S10": "Operational efficiencies were maintained through digital transformation initiatives, including the pilot testing of AI-driven customer service tools, and continued focus on optimizing the cost-to-income ratio.",
+    "S11": "On the capital front, Eleving demonstrated disciplined treasury management by completing two major debt transactions, most notably a EUR 275 million senior secured bond offering that replaced maturing liabilities.",
+    "S12": "These actions strengthened the group’s funding base and led to a positive credit rating outlook from Fitch Ratings.",
+    "S13": "Shareholders received EUR 19.65 million in dividends, delivering a 10% cash yield relative to the IPO price.",
+    "S14": "Looking ahead, the group remains positioned for sustainable expansion, emphasizing portfolio growth in Africa and Europe, further product diversification, and ongoing technological integration to support its double-digit growth trajectory."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_5.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_5.json",
+    "key_information_hash": "f7cb2a1c00f3c4f7",
+    "key_information_units_total": 12
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 14,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 14
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 12
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Eleving Group reported strong financial growth during the 2025 fiscal year, driven by robust demand across its diversified product portfolio and successful geographic expansion.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report section 'Well-balanced growth delivering strong financial results' states strong performance with revenue growth and expansion into new markets like Tanzania.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Eleving Group reported strong financial growth during the 2025 fiscal year, driven by robust demand across its diversified product portfolio and successful geographic expansion."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights section confirms revenue of EUR 250.0 million (15.4% increase). Note 6 and Management Report detail consumer lending growth of 18.0% to EUR 114.8 million and flexible vehicle financing growth of 25.9% to EUR 60.3 million.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The group successfully launched device financing, contributing EUR 7.9 million in its first full year, while traditional vehicle financing saw a moderate decline of 6.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 6 shows device financing revenue of EUR 7.9 million (launched in 2025). Management Report states traditional vehicle financing decreased by 6.0% compared to 12M 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The group successfully launched device financing, contributing EUR 7.9 million in its first full year, while traditional vehicle financing saw a moderate decline of 6.0%."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profitability improved, with adjusted EBITDA reaching a record EUR 101.9 million, reflecting a 13.5% year-over-year increase.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights section states adjusted EBITDA reached EUR 101.9 million, representing a 13.5% increase compared to the corresponding period a year ago.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating profitability improved, with adjusted EBITDA reaching a record EUR 101.9 million, reflecting a 13.5% year-over-year increase."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit from continuing operations remained stable at EUR 29.2 million, though underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of profit and loss shows profit from continuing operations at EUR 29.2 million (unchanged from 2024). Management Report states net profit before FX and discontinued operations amounted to EUR 40.8 million, up 25.6%.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit from continuing operations remained stable at EUR 29.2 million, though underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial highlights section confirms net portfolio growth of 20.2% to EUR 446.3 million and loan issuances of EUR 458.0 million, representing a 24.3% increase.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "This growth was fueled by strong customer acquisition, exceeding 2.7 million loan applications globally, and higher retention rates.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states total loan applications reached 2.7 million, a 50.0% year-on-year increase, and mentions customer retention initiatives.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This growth was fueled by strong customer acquisition, exceeding 2.7 million loan applications globally, and higher retention rates."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operational Milestones section details entry into Tanzania and smartphone financing portfolio reaching EUR 13.5 million by year-end.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The introduction of unsecured installment loans in several European markets also provided additional tailwinds.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operational Milestones section mentions launch of installment loans in Latvia, Estonia, Romania, and Armenia, contributing to increased demand.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The introduction of unsecured installment loans in several European markets also provided additional tailwinds."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Operational efficiencies were maintained through digital transformation initiatives, including the pilot testing of AI-driven customer service tools, and continued focus on optimizing the cost-to-income ratio.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states pilot testing of AI voice agents and focus on optimizing cost-to-income ratio.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Operational efficiencies were maintained through digital transformation initiatives, including the pilot testing of AI-driven customer service tools, and continued focus on optimizing the cost-to-income ratio."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "On the capital front, Eleving demonstrated disciplined treasury management by completing two major debt transactions, most notably a EUR 275 million senior secured bond offering that replaced maturing liabilities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 34 details the EUR 275 million senior secured bond offering completed in Q4 2025, refinancing previous bonds.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "On the capital front, Eleving demonstrated disciplined treasury management by completing two major debt transactions, most notably a EUR 275 million senior secured bond offering that replaced maturing liabilities."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "These actions strengthened the group’s funding base and led to a positive credit rating outlook from Fitch Ratings.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states Fitch Ratings upgraded outlook to positive while affirming its B credit rating.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "These actions strengthened the group’s funding base and led to a positive credit rating outlook from Fitch Ratings."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Shareholders received EUR 19.65 million in dividends, delivering a 10% cash yield relative to the IPO price.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 32 states dividends paid totaled EUR 19.65 million, representing a 10% cash yield based on IPO share price.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Shareholders received EUR 19.65 million in dividends, delivering a 10% cash yield relative to the IPO price."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Looking ahead, the group remains positioned for sustainable expansion, emphasizing portfolio growth in Africa and Europe, further product diversification, and ongoing technological integration to support its double-digit growth trajectory.",
+        "label": "SUPPORTED",
+        "source_evidence": "Business outlook section outlines strategic focus on portfolio growth in Africa and Europe, product diversification, and technological integration.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Looking ahead, the group remains positioned for sustainable expansion, emphasizing portfolio growth in Africa and Europe, further product diversification, and ongoing technological integration to support its double-digit growth trajectory."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue increased by 15.4% to EUR 250.0 million",
+        "candidate_value": "EUR 250.0 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 250.0 million",
+        "source_evidence": "Financial highlights section states revenue of EUR 250.0 million representing a 15.4% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consumer lending rose 18.0% to EUR 114.8 million",
+        "candidate_value": "EUR 114.8 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 114.8 million",
+        "source_evidence": "Note 6 and Management Report confirm consumer lending revenue of EUR 114.8 million, an 18.0% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Flexible vehicle financing grew 25.9% to EUR 60.3 million",
+        "candidate_value": "EUR 60.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 60.3 million",
+        "source_evidence": "Note 6 and Management Report confirm flexible vehicle financing revenue of EUR 60.3 million, a 25.9% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Device financing contributed EUR 7.9 million",
+        "candidate_value": "EUR 7.9 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 7.9 million",
+        "source_evidence": "Note 6 shows device financing revenue of EUR 7.9 million for 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The group successfully launched device financing, contributing EUR 7.9 million in its first full year, while traditional vehicle financing saw a moderate decline of 6.0%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Adjusted EBITDA reached a record EUR 101.9 million",
+        "candidate_value": "EUR 101.9 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 101.9 million",
+        "source_evidence": "Financial highlights section states adjusted EBITDA reached EUR 101.9 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Operating profitability improved, with adjusted EBITDA reaching a record EUR 101.9 million, reflecting a 13.5% year-over-year increase."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit from continuing operations remained stable at EUR 29.2 million",
+        "candidate_value": "EUR 29.2 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 29.2 million",
+        "source_evidence": "Consolidated statement of profit and loss shows profit from continuing operations at EUR 29.2 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit from continuing operations remained stable at EUR 29.2 million, though underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million",
+        "candidate_value": "EUR 40.8 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 40.8 million",
+        "source_evidence": "Management Report states net profit before FX and discontinued operations amounted to EUR 40.8 million, up 25.6%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net profit from continuing operations remained stable at EUR 29.2 million, though underlying earnings before foreign exchange impacts and discontinued items rose by 25.6% to EUR 40.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net portfolio growing 20.2% to EUR 446.3 million",
+        "candidate_value": "EUR 446.3 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 446.3 million",
+        "source_evidence": "Financial highlights section confirms net portfolio of EUR 446.3 million, a 20.2% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3%",
+        "candidate_value": "EUR 458.0 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 458.0 million",
+        "source_evidence": "Management Report states loan issuances totaled EUR 458.0 million, a 24.3% increase.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Exceeding 2.7 million loan applications globally",
+        "candidate_value": "2.7 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.7 million",
+        "source_evidence": "Management Report states total loan applications reached 2.7 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "This growth was fueled by strong customer acquisition, exceeding 2.7 million loan applications globally, and higher retention rates."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Smartphone financing portfolio quickly amassed a EUR 13.5 million",
+        "candidate_value": "EUR 13.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 13.5 million",
+        "source_evidence": "Operational Milestones section states smartphone financing portfolio reached EUR 13.5 million by year-end.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "EUR 275 million senior secured bond offering",
+        "candidate_value": "EUR 275 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 275 million",
+        "source_evidence": "Note 34 details the EUR 275 million senior secured bond offering completed in Q4 2025.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "On the capital front, Eleving demonstrated disciplined treasury management by completing two major debt transactions, most notably a EUR 275 million senior secured bond offering that replaced maturing liabilities."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Positive credit rating outlook from Fitch Ratings",
+        "candidate_value": "positive",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "positive",
+        "source_evidence": "Management Report states Fitch Ratings upgraded outlook to positive.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "These actions strengthened the group’s funding base and led to a positive credit rating outlook from Fitch Ratings."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "EUR 19.65 million in dividends",
+        "candidate_value": "EUR 19.65 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 19.65 million",
+        "source_evidence": "Note 32 states dividends paid totaled EUR 19.65 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Shareholders received EUR 19.65 million in dividends, delivering a 10% cash yield relative to the IPO price."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Eleving Group achieved record-high revenue of EUR 250.0 million in 2025 (15.5% year-on-year increase), with EBITDA reaching EUR 101.9 million (13.5% increase) and net profit stable at EUR 29.2 million; the net portfolio grew 20.2% to EUR 446.3 million.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report '2025 at a glance'; Consolidated Statement of Profit and Loss and Other Comprehensive Income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S4",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          },
+          {
+            "id": "S4",
+            "text": "Operating profitability improved, with adjusted EBITDA reaching a record EUR 101.9 million, reflecting a 13.5% year-over-year increase."
+          },
+          {
+            "id": "S6",
+            "text": "The company’s loan book expanded significantly, with the net portfolio growing 20.2% to EUR 446.3 million and total loan issuances hitting an all-time high of EUR 458.0 million, up 24.3% from the previous year."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Revenue breakdown shows traditional vehicle financing decreased 6.0% to EUR 67.0 million, flexible vehicle financing increased 25.9% to EUR 60.3 million, device financing contributed EUR 7.9 million (launched in 2025), and consumer lending grew 18.0% to EUR 114.8 million.",
+        "importance": "HIGH",
+        "source_evidence": "Keynote from the CEO section detailing business line contributions",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue increased by 15.4% to EUR 250.0 million, supported primarily by resilient sales in consumer lending, which rose 18.0% to EUR 114.8 million, and flexible vehicle financing, which grew 25.9% to EUR 60.3 million."
+          },
+          {
+            "id": "S3",
+            "text": "The group successfully launched device financing, contributing EUR 7.9 million in its first full year, while traditional vehicle financing saw a moderate decline of 6.0%."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Strategic launch of installment loans in European markets (Latvia, Estonia, Romania, Armenia), generating EUR 14.7 million in loan issuances during 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report sections on Operations in European markets and Business outlook",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The introduction of unsecured installment loans in several European markets also provided additional tailwinds."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Introduction of smartphone financing in Kenya and Uganda, building a EUR 13.5 million loan portfolio by year-end with 260 thousand customers.",
+        "importance": "HIGH",
+        "source_evidence": "Environmental information section and Management Report on Operations in African markets",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Expansion into Tanzania as the 17th market, initially focusing on motorcycle financing.",
+        "importance": "MEDIUM",
+        "source_evidence": "Supervisory Board statement and Management Report Outlook",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategically, Eleving accelerated its market penetration by entering Tanzania with motorcycle financing and scaling smartphone financing in Kenya and Uganda, where the new product segment quickly amassed a EUR 13.5 million portfolio."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Pilot implementation of AI voice agents at call centers, demonstrating capacity to handle up to 20,000 calls per day (equivalent to 100 operators).",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report Operational efficiency and Outlook",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Operational efficiencies were maintained through digital transformation initiatives, including the pilot testing of AI-driven customer service tools, and continued focus on optimizing the cost-to-income ratio."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Completion of EUR 40 million bond tap in March 2025, adding to existing EUR 50 million bonds from 2023.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Capital management section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Refinancing of EUR 150 million bonds maturing in 2026 and issuance of new EUR 275 million bonds in October 2025, marking the largest bond issuance in the Group's history.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Capital management section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "On the capital front, Eleving demonstrated disciplined treasury management by completing two major debt transactions, most notably a EUR 275 million senior secured bond offering that replaced maturing liabilities."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Distribution of EUR 19.65 million in dividends during 2025, representing a 10% cash yield based on IPO share price.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Capital management section; Consolidated Statement of Cash Flows",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Shareholders received EUR 19.65 million in dividends, delivering a 10% cash yield relative to the IPO price."
+          }
+        ]
+      },
+      {
+        "id": "K10",
+        "information": "Impairment expense increased to EUR 54.2 million in 2025 due to derecognition of long-overdue balances deemed unrecoverable, offset by reversal of accumulated impairment allowances.",
+        "importance": "HIGH",
+        "source_evidence": "Note 7 and Consolidated Statement of Profit and Loss",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K11",
+        "information": "Regulatory challenge in Moldova alleging non-compliance with consumer credit legislation regarding daily fees and total loan costs for approximately 1,080 contracts; subsidiary is contesting through administrative and judicial proceedings.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report Regulatory matter in Moldova section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K12",
+        "information": "Post-reporting period, the Group secured approximately EUR 12.3 million in additional funding from P2P platforms and increased local borrowings in Kenya by EUR 6.3 million.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report Events after balance sheet date section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K10",
+      "K11",
+      "K12"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1, K2, K3, K4, K5, K6, K8, and K9. K1 is fully covered with revenue, EBITDA, net profit, and portfolio growth. K2 is covered with the revenue breakdown across product lines. K3 is covered with the introduction of installment loans in European markets. K4 is covered with smartphone financing in Kenya and Uganda. K5 is covered with the expansion into Tanzania. K6 is covered with the pilot implementation of AI voice agents. K8 is covered with the refinancing and issuance of bonds. K9 is covered with the distribution of dividends. However, K7 (bond tap completion), K10 (impairment expense), K11 (regulatory challenge in Moldova), and K12 (post-reporting period funding) are missing entirely, leading to a 'Generally yes' score due to significant omissions in HIGH-importance items.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements logically support the overall narrative of financial growth and strategic expansion. There are no self-contradictions: revenue growth (S2) aligns with segment performance descriptions (S2-S3), profitability metrics (S4-S5) show consistent improvement trends, and strategic initiatives (S8-S9) directly support the reported growth figures. The organizational flow moves logically from financial highlights to operational drivers and future outlook. No unnecessary repetition occurs, and all components work together to form a unified narrative without internal inconsistencies."
+  },
+  "usage": {
+    "input_tokens_total": 139940,
+    "output_tokens_total_including_reasoning": 5114,
+    "total_tokens": 145054,
+    "latency_seconds_total": 37.01
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 273350,
+    "output_tokens_total_including_reasoning": 46298,
+    "total_tokens": 319648,
+    "latency_seconds_total": 177.08
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_5.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_5_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_5.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_5.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_5_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_5_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_5_few_shot_qwen36.json"
+    }
+  }
+}

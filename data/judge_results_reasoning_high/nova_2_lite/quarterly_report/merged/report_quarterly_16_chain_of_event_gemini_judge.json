@@ -1,0 +1,802 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_16_chain_of_event_gemini.txt",
+    "report": "report_quarterly_16.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first quarter of 2026, Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros, representing a 7.3 percent increase compared to 1.74 million euros in the first quarter of 2025.",
+    "S2": "This top-line growth was supported by an increase in order volumes from Finnish DIY stores, which grew by 241 thousand euros to 855 thousand euros.",
+    "S3": "Geographically, European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year.",
+    "S4": "However, despite the revenue growth, the company's financial performance deteriorated significantly across major profitability indicators.",
+    "S5": "The gross result turned negative at 105 thousand euros, down from a gross profit of 127 thousand euros in the same period of 2025.",
+    "S6": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in the first quarter of 2025.",
+    "S7": "The operating loss expanded to 530 thousand euros from 217 thousand euros, and the consolidated net loss for the period widened to 570 thousand euros from 228 thousand euros in the prior year period.",
+    "S8": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in the first quarter of 2025.",
+    "S9": "The decline in profitability was directly driven by several operational and macroeconomic factors, including a scheduled factory shutdown in early January for the transition to a new boiler house, the subsequent two-month calibration and start-up period for the new gas boiler house, and exceptionally cold weather conditions that increased normal energy consumption.",
+    "S10": "Furthermore, a late February geopolitical conflict caused a sharp increase in energy prices, nearly doubling the market price of gas, which remained approximately 50 percent higher than at the beginning of the year.",
+    "S11": "Consequently, electricity, heat, and water costs rose to 1.05 million euros from 725 thousand euros in the first quarter of 2025.",
+    "S12": "In terms of financial position, total assets as of March 31, 2026, reached 9.69 million euros, compared to 8.72 million euros a year earlier.",
+    "S13": "Total liabilities increased to 5.80 million euros, while total borrowings decreased slightly to 3.32 million euros from 3.81 million euros.",
+    "S14": "Equity stood at 3.89 million euros at the end of March 2026, compared to 3.39 million euros as of March 31, 2025.",
+    "S15": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros.",
+    "S16": "In real estate management, design works for the Admirali Quarter development project at Suur-Jõe 48 in Pärnu were completed and building permits were issued.",
+    "S17": "Additionally, the company entered into a preliminary sale-purchase agreement on January 8, 2026, to sell ten properties on Suur-Jõe and Admirali streets, with the final transaction scheduled for completion no later than June 30, 2026."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_16.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_16.json",
+    "key_information_hash": "1e676886e9644b14",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 17,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 17
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 13,
+      "incorrect": 0,
+      "total": 13
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "During the first quarter of 2026, Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros, representing a 7.3 percent increase compared to 1.74 million euros in the first quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Nordic Fibreboard AS consolidated net revenue in Q1 2026 was €1.86 million, representing a 7.3% increase compared to the same period of the previous year (Q1 2025: €1.74 million), revenue increased by €126 thousand. NOTE 13 shows Q1 2026 revenue of €1,861 thousand and Q1 2025 revenue of €1,734 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first quarter of 2026, Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros, representing a 7.3 percent increase compared to 1.74 million euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "This top-line growth was supported by an increase in order volumes from Finnish DIY stores, which grew by 241 thousand euros to 855 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "The improvement in sales performance was mainly supported by Finnish DIY stores, whose order volume increased by €241 thousand, from €614 thousand in Q1 2025 to €855 thousand in Q1 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top-line growth was supported by an increase in order volumes from Finnish DIY stores, which grew by 241 thousand euros to 855 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Geographically, European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "NOTE 13 SALES REVENUE shows EU revenue for Q1 2026: €1,781 thousand and Q1 2025: €1,639 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Geographically, European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "However, despite the revenue growth, the company's financial performance deteriorated significantly across major profitability indicators.",
+        "label": "SUPPORTED",
+        "source_evidence": "The report details worsening EBITDA, expanded operating loss, increased net loss, and declining margins for Q1 2026 compared to Q1 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "However, despite the revenue growth, the company's financial performance deteriorated significantly across major profitability indicators."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The gross result turned negative at 105 thousand euros, down from a gross profit of 127 thousand euros in the same period of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "NOTE 14 COST OF GOODS SOLD shows Gross profit(loss) for Q1 2026: (€105) thousand and Q1 2025: €127 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The gross result turned negative at 105 thousand euros, down from a gross profit of 127 thousand euros in the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in the first quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "FINANCIAL HIGHLIGHTS table shows EBITDA Q1 2026: (€395) thousand, margin: (21%); Q1 2025: (€85) thousand, margin: (5%). MANAGEMENT REPORT confirms these figures.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The operating loss expanded to 530 thousand euros from 217 thousand euros, and the consolidated net loss for the period widened to 570 thousand euros from 228 thousand euros in the prior year period.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF PROFIT OR LOSS shows Operating loss Q1 2026: (€530) thousand, Q1 2025: (€217) thousand. Net loss Q1 2026: (€570) thousand, Q1 2025: (€228) thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The operating loss expanded to 530 thousand euros from 217 thousand euros, and the consolidated net loss for the period widened to 570 thousand euros from 228 thousand euros in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in the first quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "NOTE 12 EARNINGS PER SHARE shows Basic and diluted EPS for Q1 2026: (€0.07) euros; Q1 2025: (€0.05) euros.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The decline in profitability was directly driven by several operational and macroeconomic factors, including a scheduled factory shutdown in early January for the transition to a new boiler house, the subsequent two-month calibration and start-up period for the new gas boiler house, and exceptionally cold weather conditions that increased normal energy consumption.",
+        "label": "SUPPORTED",
+        "source_evidence": "The results for the Q1 2026 were negatively impacted by the scheduled shutdown of the factory in early January in connection with the transition to the new boiler house... The EBITDA for Q1 2026 was impacted by the commissioning of the new gas boiler house, the calibration and start-up of which took approximately two months, as well as by cold weather conditions, which increased normal energy consumption.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The decline in profitability was directly driven by several operational and macroeconomic factors, including a scheduled factory shutdown in early January for the transition to a new boiler house, the subsequent two-month calibration and start-up period for the new gas boiler house, and exceptionally cold weather conditions that increased normal energy consumption."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Furthermore, a late February geopolitical conflict caused a sharp increase in energy prices, nearly doubling the market price of gas, which remained approximately 50 percent higher than at the beginning of the year.",
+        "label": "SUPPORTED",
+        "source_evidence": "In late February, the US military attack on Iran caused a sharp increase in energy prices, with the market price of gas nearly doubling. Gas prices have since fallen, but remain approximately 50% higher than at the beginning of the year.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Furthermore, a late February geopolitical conflict caused a sharp increase in energy prices, nearly doubling the market price of gas, which remained approximately 50 percent higher than at the beginning of the year."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Consequently, electricity, heat, and water costs rose to 1.05 million euros from 725 thousand euros in the first quarter of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "NOTE 14 COST OF GOODS SOLD shows Electricity, heat and water for Q1 2026: €1,048 thousand and Q1 2025: €725 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Consequently, electricity, heat, and water costs rose to 1.05 million euros from 725 thousand euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "In terms of financial position, total assets as of March 31, 2026, reached 9.69 million euros, compared to 8.72 million euros a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENTS OF FINANCIAL POSITIONS shows Total assets 31.03.2026: €9,694 thousand and 31.03.2025: €8,722 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "In terms of financial position, total assets as of March 31, 2026, reached 9.69 million euros, compared to 8.72 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total liabilities increased to 5.80 million euros, while total borrowings decreased slightly to 3.32 million euros from 3.81 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENTS OF FINANCIAL POSITIONS shows Total liabilities 31.03.2026: €5,802 thousand. NOTE 8 shows Total borrowings 31.03.2026: €3,320 thousand and 31.03.2025: €3,808 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total liabilities increased to 5.80 million euros, while total borrowings decreased slightly to 3.32 million euros from 3.81 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Equity stood at 3.89 million euros at the end of March 2026, compared to 3.39 million euros as of March 31, 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF CHANGES IN EQUITY shows Total equity 31.03.2026: €3,892 thousand and 31.03.2025: €3,388 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Equity stood at 3.89 million euros at the end of March 2026, compared to 3.39 million euros as of March 31, 2025."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "PEOPLE section states employment: 57 people as of 31.03.2026 (69 people as of 31.03.2025). NOTE 17 LABOUR EXPENSES shows total labour expenses Q1 2026: €411 thousand and Q1 2025: €471 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "In real estate management, design works for the Admirali Quarter development project at Suur-Jõe 48 in Pärnu were completed and building permits were issued.",
+        "label": "SUPPORTED",
+        "source_evidence": "The design works for the Admirali Quarter development project at Suur-Jõe 48 have been completed. Building permits have been issued for the internal roads and utility networks within the quarter, for apartment buildings at Admirali 1/3, Admirali 5/7, and Admirali 9/11, as well as for the reconstruction of the existing office building at Suur-Jõe 48.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In real estate management, design works for the Admirali Quarter development project at Suur-Jõe 48 in Pärnu were completed and building permits were issued."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Additionally, the company entered into a preliminary sale-purchase agreement on January 8, 2026, to sell ten properties on Suur-Jõe and Admirali streets, with the final transaction scheduled for completion no later than June 30, 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "08.01.2026 Nordic Fibreboard AS entered into a preliminary sale-purchase agreement for the sale of ten properties located on Suur-Jõe Street and Admirali Street in Pärnu... the final sale-purchase agreement... will be concluded... no later than 30.06.2026.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Additionally, the company entered into a preliminary sale-purchase agreement on January 8, 2026, to sell ten properties on Suur-Jõe and Admirali streets, with the final transaction scheduled for completion no later than June 30, 2026."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros in Q1 2026, representing a 7.3 percent increase compared to 1.74 million euros in Q1 2025",
+        "candidate_value": "1,861 thousand euros (Q1 2026) vs 1,734 thousand euros (Q1 2025), 7.3% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,861 thousand euros (Q1 2026) vs 1,734 thousand euros (Q1 2025)",
+        "source_evidence": "MANAGEMENT REPORT: €1.86 million (Q1 2026) vs €1.74 million (Q1 2025), 7.3% increase. NOTE 13 confirms Q1 2026 revenue: €1,861 thousand, Q1 2025: €1,734 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first quarter of 2026, Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros, representing a 7.3 percent increase compared to 1.74 million euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Order volumes from Finnish DIY stores grew by 241 thousand euros to 855 thousand euros",
+        "candidate_value": "Increase of €241 thousand to €855 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Increase of €241 thousand to €855 thousand",
+        "source_evidence": "FIBREBOARD PRODUCTION AND SALES: 'Finnish DIY stores, whose order volume increased by €241 thousand, from €614 thousand in Q1 2025 to €855 thousand in Q1 2026.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top-line growth was supported by an increase in order volumes from Finnish DIY stores, which grew by 241 thousand euros to 855 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year",
+        "candidate_value": "1,781 thousand euros (Q1 2026) vs 1,639 thousand euros (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,781 thousand euros (Q1 2026) vs 1,639 thousand euros (Q1 2025)",
+        "source_evidence": "NOTE 13 SALES REVENUE BY GEOGRAPHICAL LOCATION shows EU revenue Q1 2026: €1,781 thousand, Q1 2025: €1,639 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Geographically, European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Gross result turned negative at 105 thousand euros, down from a gross profit of 127 thousand euros in Q1 2025",
+        "candidate_value": "Gross loss of €105 thousand (Q1 2026) vs gross profit of €127 thousand (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Gross loss of €105 thousand (Q1 2026) vs gross profit of €127 thousand (Q1 2025)",
+        "source_evidence": "NOTE 14 COST OF GOODS SOLD shows Gross profit(loss) Q1 2026: (€105) thousand, Q1 2025: €127 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The gross result turned negative at 105 thousand euros, down from a gross profit of 127 thousand euros in the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in Q1 2025",
+        "candidate_value": "EBITDA: (€395) thousand, margin: (21%) vs (€85) thousand, margin: (5%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA: (€395) thousand, margin: (21%) vs (€85) thousand, margin: (5%)",
+        "source_evidence": "FINANCIAL HIGHLIGHTS table and MANAGEMENT REPORT confirm EBITDA Q1 2026: (€395) thousand, margin: (21%); Q1 2025: (€85) thousand, margin: (5%).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Operating loss expanded to 530 thousand euros from 217 thousand euros, and consolidated net loss widened to 570 thousand euros from 228 thousand euros",
+        "candidate_value": "Operating loss: €530 thousand (Q1 2026) vs €217 thousand (Q1 2025); Net loss: €570 thousand (Q1 2026) vs €228 thousand (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating loss: €530 thousand (Q1 2026) vs €217 thousand (Q1 2025); Net loss: €570 thousand (Q1 2026) vs €228 thousand (Q1 2025)",
+        "source_evidence": "CONSOLIDATED STATEMENT OF PROFIT OR LOSS shows Operating loss Q1 2026: (€530) thousand, Q1 2025: (€217) thousand. Net loss Q1 2026: (€570) thousand, Q1 2025: (€228) thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The operating loss expanded to 530 thousand euros from 217 thousand euros, and the consolidated net loss for the period widened to 570 thousand euros from 228 thousand euros in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in Q1 2025",
+        "candidate_value": "EPS: (€0.07) per share (Q1 2026) vs (€0.05) per share (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EPS: (€0.07) per share (Q1 2026) vs (€0.05) per share (Q1 2025)",
+        "source_evidence": "NOTE 12 EARNINGS PER SHARE shows Basic and diluted EPS Q1 2026: (€0.07) euros, Q1 2025: (€0.05) euros.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Electricity, heat, and water costs rose to 1.05 million euros from 725 thousand euros in Q1 2025",
+        "candidate_value": "€1,048 thousand (Q1 2026) vs €725 thousand (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€1,048 thousand (Q1 2026) vs €725 thousand (Q1 2025)",
+        "source_evidence": "NOTE 14 COST OF GOODS SOLD shows Electricity, heat and water Q1 2026: €1,048 thousand, Q1 2025: €725 thousand. Candidate rounding to 1.05 million is acceptable.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Consequently, electricity, heat, and water costs rose to 1.05 million euros from 725 thousand euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets as of March 31, 2026, reached 9.69 million euros, compared to 8.72 million euros a year earlier",
+        "candidate_value": "€9,694 thousand (31.03.2026) vs €8,722 thousand (31.03.2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€9,694 thousand (31.03.2026) vs €8,722 thousand (31.03.2025)",
+        "source_evidence": "CONSOLIDATED STATEMENTS OF FINANCIAL POSITIONS shows Total assets 31.03.2026: €9,694 thousand, 31.03.2025: €8,722 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "In terms of financial position, total assets as of March 31, 2026, reached 9.69 million euros, compared to 8.72 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total liabilities increased to 5.80 million euros, while total borrowings decreased slightly to 3.32 million euros from 3.81 million euros",
+        "candidate_value": "Liabilities: €5,802 thousand (31.03.2026); Borrowings: €3,320 thousand (31.03.2026) vs €3,808 thousand (31.03.2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Liabilities: €5,802 thousand (31.03.2026); Borrowings: €3,320 thousand (31.03.2026) vs €3,808 thousand (31.03.2025)",
+        "source_evidence": "CONSOLIDATED STATEMENTS OF FINANCIAL POSITIONS shows Total liabilities 31.03.2026: €5,802 thousand. NOTE 8 shows Total borrowings 31.03.2026: €3,320 thousand, 31.03.2025: €3,808 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total liabilities increased to 5.80 million euros, while total borrowings decreased slightly to 3.32 million euros from 3.81 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Equity stood at 3.89 million euros at the end of March 2026, compared to 3.39 million euros as of March 31, 2025",
+        "candidate_value": "€3,892 thousand (31.03.2026) vs €3,388 thousand (31.03.2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€3,892 thousand (31.03.2026) vs €3,388 thousand (31.03.2025)",
+        "source_evidence": "CONSOLIDATED STATEMENT OF CHANGES IN EQUITY shows Total equity 31.03.2026: €3,892 thousand, 31.03.2025: €3,388 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Equity stood at 3.89 million euros at the end of March 2026, compared to 3.39 million euros as of March 31, 2025."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros",
+        "candidate_value": "Employees: 57 (31.03.2026) vs 69 (31.03.2025); Labour expenses: €411 thousand (Q1 2026) vs €471 thousand (Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Employees: 57 (31.03.2026) vs 69 (31.03.2025); Labour expenses: €411 thousand (Q1 2026) vs €471 thousand (Q1 2025)",
+        "source_evidence": "PEOPLE section: employment 57 (31.03.2026), 69 (31.03.2025). NOTE 17 LABOUR EXPENSES shows total labour expenses Q1 2026: €411 thousand, Q1 2025: €471 thousand.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros."
+          }
+        ]
+      },
+      {
+        "claim": "market price of gas remained approximately 50 percent higher than at the beginning of the year",
+        "candidate_value": "50 percent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "approximately 50%",
+        "source_evidence": "In late February, the US military attack on Iran caused a sharp increase in energy prices, with the market price of gas nearly doubling. Gas prices have since fallen, but remain approximately 50% higher than at the beginning of the year.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Furthermore, a late February geopolitical conflict caused a sharp increase in energy prices, nearly doubling the market price of gas, which remained approximately 50 percent higher than at the beginning of the year."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated net revenue increased 7.3% to €1.86 million in Q1 2026 (Q1 2025: €1.74 million), with consolidated EBITDA at negative €395 thousand (margin negative 21%) and net loss of €570 thousand; basic/diluted EPS was negative €0.07.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'Nordic Fibreboard AS consolidated net revenue in Q1 2026 was €1.86 million, representing a 7.3% increase compared to Q1 2025. Consolidated EBITDA in Q1 2026 was negative €395 thousand, with an EBITDA margin of negative 21%. The Group's consolidated net loss for Q1 2026 was €570 thousand.' Financial Highlights table confirms figures. Note 12 shows basic/diluted EPS of (€0.07).",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S6",
+          "S7",
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first quarter of 2026, Nordic Fibreboard AS reported consolidated sales revenue of 1.86 million euros, representing a 7.3 percent increase compared to 1.74 million euros in the first quarter of 2025."
+          },
+          {
+            "id": "S6",
+            "text": "Consolidated EBITDA worsened to a negative 395 thousand euros with an EBITDA margin of negative 21 percent, compared to a negative 85 thousand euros and a negative 5 percent margin in the first quarter of 2025."
+          },
+          {
+            "id": "S7",
+            "text": "The operating loss expanded to 530 thousand euros from 217 thousand euros, and the consolidated net loss for the period widened to 570 thousand euros from 228 thousand euros in the prior year period."
+          },
+          {
+            "id": "S8",
+            "text": "Basic and diluted earnings per share both stood at negative 0.07 euros, compared to negative 0.05 euros in the first quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Total assets increased to €9.694 million as of 31 March 2026 (31 December 2025: €9.323 million); total liabilities were €5.802 million (payables and prepayments €2.3 million, borrowings €3.3 million) with equity decreasing to €3.892 million (31 December 2025: €4.462 million).",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statements of Financial Positions: 'As of 31.03.2026 the total assets of Nordic Fibreboard AS were €9.7 million... liabilities €5.8 million... equity €3.9 million.' Comparative figures from 31.12.2025 column. Note 9 shows payables and prepayments of €2,348 thousand as of 31.03.2026; Note 8 shows borrowings of €3,320 thousand as of 31.03.2026.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K3",
+        "information": "Q1 2026 results were negatively impacted by a scheduled factory shutdown in early January for the new boiler house transition and a sharp increase in gas prices in February 2026; the boiler house start-up and calibration took approximately two months.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report: 'The results for Q1 2026 were negatively impacted by the scheduled shutdown of the factory in early January in connection with the transition to the new boiler house... In late February, the US military attack on Iran caused a sharp increase in energy prices... The EBITDA for Q1 2026 was impacted by the commissioning of the new gas boiler house, the calibration and start-up of which took approximately two months.'",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The decline in profitability was directly driven by several operational and macroeconomic factors, including a scheduled factory shutdown in early January for the transition to a new boiler house, the subsequent two-month calibration and start-up period for the new gas boiler house, and exceptionally cold weather conditions that increased normal energy consumption."
+          },
+          {
+            "id": "S10",
+            "text": "Furthermore, a late February geopolitical conflict caused a sharp increase in energy prices, nearly doubling the market price of gas, which remained approximately 50 percent higher than at the beginning of the year."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Fibreboard segment revenue was €1.86 million (+7.3% YoY), driven by increased orders from Finnish DIY stores (volume €855 thousand vs €614 thousand in Q1 2025); segment EBITDA was negative €321 thousand with sales split: EU €1,781 thousand, Africa €62 thousand, Asia €13 thousand.",
+        "importance": "HIGH",
+        "source_evidence": "Fibreboard Production and Sales section: 'Revenue from fibreboard sales amounted to €1.86 million in Q1 2026... improvement supported by Finnish DIY stores... order volume increased by €241 thousand.' Sales by Geographical Segments table provides regional breakdown. EBITDA figure stated in same section.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This top-line growth was supported by an increase in order volumes from Finnish DIY stores, which grew by 241 thousand euros to 855 thousand euros."
+          },
+          {
+            "id": "S3",
+            "text": "Geographically, European Union revenues reached 1.78 million euros, up from 1.64 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Real estate development: design works and building permits were completed for the Admirali Quarter project at Suur-Jõe 48; on 08.01.2026 a preliminary sale-purchase agreement was signed for ten properties, with the final agreement required by 30.06.2026.",
+        "importance": "HIGH",
+        "source_evidence": "Real Estate Management section: 'Design works... completed. Building permits have been issued... 08.01.2026 Nordic Fibreboard AS entered into a preliminary sale-purchase agreement for the sale of ten properties... final sale-purchase agreement... no later than 30.06.2026.'",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In real estate management, design works for the Admirali Quarter development project at Suur-Jõe 48 in Pärnu were completed and building permits were issued."
+          },
+          {
+            "id": "S17",
+            "text": "Additionally, the company entered into a preliminary sale-purchase agreement on January 8, 2026, to sell ten properties on Suur-Jõe and Admirali streets, with the final transaction scheduled for completion no later than June 30, 2026."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Cash flow: operating activities generated net cash inflow of €13 thousand (Q1 2025: outflow €528 thousand); investing activities used net cash of €169 thousand (Q1 2025: inflow €471 thousand); financing activities provided net cash inflow of €152 thousand; closing cash and cash equivalents were €1 thousand.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated Statement of Cash Flows: Shows cash from operating activities €13k, investing activities (€169k), financing activities €152k, and closing balance of cash €1k for Q1 2026 with comparative Q1 2025 figures.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "The Group completed an investment in modern energy solutions (boiler house upgrade) in January 2026 to improve production process reliability and energy efficiency.",
+        "importance": "HIGH",
+        "source_evidence": "Outlook section under Fibreboard Production and Sales: 'The Group has carried out an investment in modern energy solutions, aimed at improving the reliability and energy efficiency of production processes. As part of the project, the boiler system used for steam production was upgraded, with completion taking place in January 2026.'",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The decline in profitability was directly driven by several operational and macroeconomic factors, including a scheduled factory shutdown in early January for the transition to a new boiler house, the subsequent two-month calibration and start-up period for the new gas boiler house, and exceptionally cold weather conditions that increased normal energy consumption."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Personnel: 57 employees as of 31 March 2026 (down from 69 at 31 March 2025); average Q1 headcount was 59; labour costs were €0.41 million including taxes (Q1 2025: €0.47 million).",
+        "importance": "MEDIUM",
+        "source_evidence": "People section: 'On 31 March 2026, the Group employed 57 people (31.03.2025: 69 employees). The average number of personnel was 59 people in Q1 2026... Labour costs were €0.41 million including taxes in Q1 2026 (Q1 2025: €0.47 million).'",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The group employed 57 people at the end of the period, down from 69 employees a year prior, leading to lower total labour expenses of 411 thousand euros compared to 471 thousand euros."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K6"
+    ],
+    "completeness_justification": "K1, K3, K4, K5, K7, and K8 are PRESENT with supporting sentences identified. K2 is MISSING because the candidate does not report total liabilities breakdown (payables/prepayments and borrowings) or prior period equity value as required by the criterion. K6 is MISSING because the candidate does not present cash flow details for operating, investing, and financing activities or closing cash equivalents. The summary captures most high-importance financial and operational themes but lacks two critical HIGH items (K2 and K6), placing it in the 'Generally yes' category.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements logically follow one another without contradictions. Revenue growth is clearly stated in S1-S3, followed by a detailed explanation of profitability deterioration in S4-S8. The causes of the profitability decline are thoroughly explained in S9-S11 with specific operational and macroeconomic factors. Balance sheet items in S12-S14 and staffing information in S15 are presented without conflict. Real estate activities in S16-S17 are additional contextual information that doesn't interfere with the financial narrative. The summary maintains clear organization with each sentence building upon the previous one, and there is no unnecessary repetition. All numerical comparisons are consistent in direction (e.g., all decreases are properly framed as such)."
+  },
+  "usage": {
+    "input_tokens_total": 33806,
+    "output_tokens_total_including_reasoning": 8960,
+    "total_tokens": 42766,
+    "latency_seconds_total": 64.63
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 31884,
+    "output_tokens_total_including_reasoning": 57363,
+    "total_tokens": 89247,
+    "latency_seconds_total": 171.1
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_16.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_16_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_16.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_16.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_16_chain_of_event_gemini.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_16_chain_of_event_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_16_chain_of_event_gemini.json"
+    }
+  }
+}

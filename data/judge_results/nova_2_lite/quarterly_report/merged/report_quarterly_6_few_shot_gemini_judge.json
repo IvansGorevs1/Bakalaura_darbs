@@ -1,0 +1,595 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_6_few_shot_gemini.txt",
+    "report": "report_quarterly_6.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Infortar Group reported mixed financial results for the first half and second quarter of 2026.",
+    "S2": "For the six months ended 30 June 2026, consolidated revenue reached 945.9 million euros, compared with 951.9 million euros in the corresponding period of the previous year.",
+    "S3": "For the second quarter of 2026, revenue was 440.9 million euros, down from 504.5 million euros a year earlier.",
+    "S4": "The lower revenue figures were primarily driven by a decline in the energy segment, where lower wholesale sales affected overall energy sales volumes.",
+    "S5": "Despite the slight decrease in revenue, the company achieved improved profitability across several key indicators.",
+    "S6": "Gross profit for the six-month period rose significantly to 114.1 million euros from 81.7 million euros in the prior-year period.",
+    "S7": "Second-quarter gross profit also improved to 59.4 million euros compared with 55.7 million euros a year ago.",
+    "S8": "Earnings before interest, taxes, depreciation, and amortization for the first six months increased to 111.2 million euros, up from 85.1 million euros in the first half of 2025.",
+    "S9": "Second-quarter EBITDA rose to 64.2 million euros from 57.4 million euros previously, lifting the EBITDA margin to 14.6% from 11.4%.",
+    "S10": "Operating profit for the six-month period doubled to 51.1 million euros compared with 26.4 million euros in the prior year, while second-quarter operating profit reached 29.7 million euros versus 27.0 million euros in the second quarter of 2025.",
+    "S11": "Profit before tax for the first six months improved substantially to 27.2 million euros from 2.7 million euros a year earlier.",
+    "S12": "Net profit for the six-month period turned positive at 7.2 million euros, recovering from a net loss of 14.4 million euros in the first half of 2025.",
+    "S13": "Net profit attributable to the owners of the parent for the six-month period reached 15.2 million euros compared with a net loss of 2.5 million euros previously.",
+    "S14": "For the second quarter alone, net profit stood at 1.9 million euros, with 2.3 million euros attributable to the owners of the parent.",
+    "S15": "Corporate income tax expenses remained high at 20.0 million euros for the six-month period, reflecting income tax on dividends recorded during the reporting window.",
+    "S16": "As of 30 June 2026, Infortar Group held total assets of 2,714.3 million euros and total equity of 1,200.5 million euros, with an equity ratio of 44.2%.",
+    "S17": "Interest-bearing liabilities stood at 1,083.1 million euros, and cash and cash equivalents totaled 253.2 million euros.",
+    "S18": "The group's performance during the period was supported by stronger results in the energy segment, the expansion of agricultural units, the closure of unprofitable operations, and a notable turnaround in supporting businesses."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_6.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_6.json",
+    "key_information_hash": "9de3896c87548d91",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 4,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 4
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 14,
+      "incorrect": 0,
+      "total": 14
+    },
+    "completeness": {
+      "score": 1,
+      "scale_max": 4,
+      "label": "Not generally",
+      "present": 3,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Infortar Group reported mixed financial results for the first half and second quarter of 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states revenue remained broadly unchanged but EBITDA increased by 31% and EBIT by 94% in the first half of 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Infortar Group reported mixed financial results for the first half and second quarter of 2026."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The lower revenue figures were primarily driven by a decline in the energy segment, where lower wholesale sales affected overall energy sales volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures section states: 'The Group’s revenue in the second quarter decreased year on year, mainly due to lower revenue in the energy segment, where Elenger Group’s gas and electricity sales volumes were affected by a decline in wholesale sales.'",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The lower revenue figures were primarily driven by a decline in the energy segment, where lower wholesale sales affected overall energy sales volumes."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Despite the slight decrease in revenue, the company achieved improved profitability across several key indicators.",
+        "label": "SUPPORTED",
+        "source_evidence": "Letter from the CEO states: 'Although revenue remained broadly unchanged, EBITDA increased by 31% and EBIT by 94%... No new business combinations were completed during the second quarter, and every business segment contributed to the Group's improved EBITDA performance.'",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Despite the slight decrease in revenue, the company achieved improved profitability across several key indicators."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The group's performance during the period was supported by stronger results in the energy segment, the expansion of agricultural units, the closure of unprofitable operations, and a notable turnaround in supporting businesses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Letter from the CEO states: 'The improvement in the Group’s profitability was supported by stronger performance in the energy segment, the addition of new agricultural units and the closure of unprofitable operations... The most significant turnaround came from our supporting businesses, where EBITDA improved from a loss of €4.4 million to a profit of €5.6 million.'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The group's performance during the period was supported by stronger results in the energy segment, the expansion of agricultural units, the closure of unprofitable operations, and a notable turnaround in supporting businesses."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "For the six months ended 30 June 2026, consolidated revenue reached 945.9 million euros, compared with 951.9 million euros in the corresponding period of the previous year.",
+        "candidate_value": "945.9 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "945,917 thousand EUR",
+        "source_evidence": "Key Figures table: 'Revenue (in thousands of EUR) 6 months 2026: 945 917'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the six months ended 30 June 2026, consolidated revenue reached 945.9 million euros, compared with 951.9 million euros in the corresponding period of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "For the second quarter of 2026, revenue was 440.9 million euros, down from 504.5 million euros a year earlier.",
+        "candidate_value": "440.9 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "440,921 thousand EUR",
+        "source_evidence": "Key Figures table: 'Revenue (in thousands of EUR) Q2 2026: 440 921'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "For the second quarter of 2026, revenue was 440.9 million euros, down from 504.5 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Gross profit for the six-month period rose significantly to 114.1 million euros from 81.7 million euros in the prior-year period.",
+        "candidate_value": "114.1 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "114,132 thousand EUR",
+        "source_evidence": "Key Figures table: 'Gross profit (in thousands of EUR) 6 months 2026: 114 132'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Gross profit for the six-month period rose significantly to 114.1 million euros from 81.7 million euros in the prior-year period."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Second-quarter gross profit also improved to 59.4 million euros compared with 55.7 million euros a year ago.",
+        "candidate_value": "59.4 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "59,397 thousand EUR",
+        "source_evidence": "Key Figures table: 'Gross profit (in thousands of EUR) Q2 2026: 59 397'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Second-quarter gross profit also improved to 59.4 million euros compared with 55.7 million euros a year ago."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization for the first six months increased to 111.2 million euros, up from 85.1 million euros in the first half of 2025.",
+        "candidate_value": "111.2 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111,228 thousand EUR",
+        "source_evidence": "Key Figures table: 'EBITDA (in thousands of EUR) 6 months 2026: 111 228'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Earnings before interest, taxes, depreciation, and amortization for the first six months increased to 111.2 million euros, up from 85.1 million euros in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Second-quarter EBITDA rose to 64.2 million euros from 57.4 million euros previously, lifting the EBITDA margin to 14.6% from 11.4%.",
+        "candidate_value": "64.2 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "64,158 thousand EUR",
+        "source_evidence": "Key Figures table: 'EBITDA (in thousands of EUR) Q2 2026: 64 158'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Second-quarter EBITDA rose to 64.2 million euros from 57.4 million euros previously, lifting the EBITDA margin to 14.6% from 11.4%."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Operating profit for the six-month period doubled to 51.1 million euros compared with 26.4 million euros in the prior year, while second-quarter operating profit reached 29.7 million euros versus 27.0 million euros in the second quarter of 2025.",
+        "candidate_value": "51.1 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "51,068 thousand EUR",
+        "source_evidence": "Key Figures table: 'Operating profit/loss (EBIT) (in thousands of EUR) 6 months 2026: 51 068'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Operating profit for the six-month period doubled to 51.1 million euros compared with 26.4 million euros in the prior year, while second-quarter operating profit reached 29.7 million euros versus 27.0 million euros in the second quarter of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Profit before tax for the first six months improved substantially to 27.2 million euros from 2.7 million euros a year earlier.",
+        "candidate_value": "27.2 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "27,195 thousand EUR",
+        "source_evidence": "Key Figures table: 'Profit before tax (in thousands of EUR) 6 months 2026: 27 195'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Profit before tax for the first six months improved substantially to 27.2 million euros from 2.7 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net profit for the six-month period turned positive at 7.2 million euros, recovering from a net loss of 14.4 million euros in the first half of 2025.",
+        "candidate_value": "7.2 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,201 thousand EUR",
+        "source_evidence": "Key Figures table: 'Net profit/loss for the period (in thousands of EUR) 6 months 2026: 7 201'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Net profit for the six-month period turned positive at 7.2 million euros, recovering from a net loss of 14.4 million euros in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net profit attributable to the owners of the parent for the six-month period reached 15.2 million euros compared with a net loss of 2.5 million euros previously.",
+        "candidate_value": "15.2 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15,163 thousand EUR",
+        "source_evidence": "Key Figures table: 'Net profit attributable to owners of the parent (in thousands of EUR) 6 months 2026: 15 163'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net profit attributable to the owners of the parent for the six-month period reached 15.2 million euros compared with a net loss of 2.5 million euros previously."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "For the second quarter alone, net profit stood at 1.9 million euros, with 2.3 million euros attributable to the owners of the parent.",
+        "candidate_value": "1.9 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,883 thousand EUR",
+        "source_evidence": "Key Figures table: 'Net profit/loss for the period (in thousands of EUR) Q2 2026: 1 883'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "For the second quarter alone, net profit stood at 1.9 million euros, with 2.3 million euros attributable to the owners of the parent."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Corporate income tax expenses remained high at 20.0 million euros for the six-month period, reflecting income tax on dividends recorded during the reporting window.",
+        "candidate_value": "20.0 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,994 thousand EUR",
+        "source_evidence": "Key Figures table: 'Income tax (in thousands of EUR) 6 months 2026: -19 994'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Corporate income tax expenses remained high at 20.0 million euros for the six-month period, reflecting income tax on dividends recorded during the reporting window."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "As of 30 June 2026, Infortar Group held total assets of 2,714.3 million euros and total equity of 1,200.5 million euros, with an equity ratio of 44.2%.",
+        "candidate_value": "2,714.3 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,714,309 thousand EUR",
+        "source_evidence": "Key Figures table: 'Total assets (in thousands of EUR) 30.06.26: 2 714 309'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "As of 30 June 2026, Infortar Group held total assets of 2,714.3 million euros and total equity of 1,200.5 million euros, with an equity ratio of 44.2%."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Interest-bearing liabilities stood at 1,083.1 million euros, and cash and cash equivalents totaled 253.2 million euros.",
+        "candidate_value": "1,083.1 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,083,091 thousand EUR",
+        "source_evidence": "Key Figures table: 'Interest-bearing liabilities (in thousands of EUR) 30.06.26: 1 083 091'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Interest-bearing liabilities stood at 1,083.1 million euros, and cash and cash equivalents totaled 253.2 million euros."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "In H1 2026, consolidated EBIT increased by 94% to EUR 51.1 million (from EUR 26.4 million in H1 2025) and EBITDA rose by 31% to EUR 111.2 million (from EUR 85.1 million). Revenue remained broadly unchanged at EUR 946 million (vs EUR 952 million in H1 2025), while net profit turned positive at EUR 7.2 million (compared to a loss of EUR 14.4 million in H1 2025). The group invested approximately EUR 50 million during H1 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Management Report (I6)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S10",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Earnings before interest, taxes, depreciation, and amortization for the first six months increased to 111.2 million euros, up from 85.1 million euros in the first half of 2025."
+          },
+          {
+            "id": "S10",
+            "text": "Operating profit for the six-month period doubled to 51.1 million euros compared with 26.4 million euros in the prior year, while second-quarter operating profit reached 29.7 million euros versus 27.0 million euros in the second quarter of 2025."
+          },
+          {
+            "id": "S12",
+            "text": "Net profit for the six-month period turned positive at 7.2 million euros, recovering from a net loss of 14.4 million euros in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "H1 2026 segment EBITDA was EUR 39.3 million for maritime transport (vs EUR 33.3 million in H1 2025), EUR 59.9 million for energy (vs EUR 51.7 million), and EUR 6.5 million for real estate (vs EUR 4.4 million). Supporting segments contributed EBITDA of EUR 5.6 million, improving from a loss of EUR -4.4 million in H1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Note 2: Segment Reporting (I23-I24)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K3",
+        "information": "In Q2 2026, Tallink Grupp carried 1,454,725 passengers (-2.2% YoY), 68,986 cargo units (+2.9%), and 199,025 passenger vehicles (-6.5%). The segment reported a net loss of EUR 2.5 million (unchanged YoY), impacted by higher fuel costs (up EUR 8.4 million vs Q2 2025), full EU ETS emissions surrender (100% of CO2 equivalent vs 70% in 2025), and the 36-month charter of the Superfast IX vessel from May 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Maritime transport business segment (I7)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K4",
+        "information": "Elenger Grupp's Q2 2026 gas and electricity sales volumes decreased by 34% to 3.3 TWh (from 4.9 TWh in Q2 2025), primarily due to reduced wholesale sales. The segment held a 29% market share in the Finnish-Baltic gas market. During Q2, Elenger continued developing battery energy storage systems, with a 4.5 MW facility in Liepāja, Latvia entering commercial operation at the start of Q3 2026. Polish subsidiaries secured a EUR 60 million loan agreement to expand the Polish gas business.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Energy business segment (I7-I8)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "INF Infra continued construction of Rail Baltica's mainline on the Kangru-Saku section (contract value EUR 67.2 million, scheduled to continue until March 2028). Construction of the Depo DIY store adjacent to the Tallink Tennis Centre progressed, with completion planned for autumn 2026. Renovation of 166 rooms at Tallink Express Hotel was completed in May 2026 following closure for renovations since November 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Real Estate Development and Construction Projects (I8)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Cash and cash equivalents increased to EUR 253.2 million as at 30 June 2026 (from EUR 146.4 million at 31 December 2025). Operating cash flow for H1 2026 was EUR 99.5 million, reflecting cash flow management and the maintenance of a liquidity buffer to finance new investments.",
+        "importance": "MEDIUM",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Consolidated Cash Flow Statement (I19)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Interest-bearing liabilities stood at 1,083.1 million euros, and cash and cash equivalents totaled 253.2 million euros."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Total loan and lease liabilities stood at EUR 1,083.1 million as at 30 June 2026, with net debt at EUR 829.9 million (down from EUR 851.6 million at 31 December 2025). The net debt/EBITDA ratio improved to 3.3x (from 3.7x at the end of 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Note 7: Financial Liabilities (I33)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Interest-bearing liabilities stood at 1,083.1 million euros, and cash and cash equivalents totaled 253.2 million euros."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K3",
+      "K4",
+      "K5"
+    ],
+    "completeness_justification": "K1, K6, and K7 are PRESENT with sufficient core coverage in the candidate. K2, K3, K4, and K5 are MISSING entirely—no segment EBITDA breakdown, Q2 passenger/cargo statistics, Elenger Grupp sales details, or INF Infra project updates appear in the candidate. The absence of these HIGH-importance items results in a score of 1 (Not generally), as less than half of the material information is adequately represented.",
+    "coherence_issues": [
+      {
+        "type": "SELF_CONTRADICTION",
+        "candidate_sentence_ids": [
+          "S4",
+          "S18"
+        ],
+        "description": "Sentence S4 states that lower revenue was driven by a decline in the energy segment, while S18 claims the group's performance was supported by stronger results in the energy segment. These statements contradict each other regarding the energy segment's contribution to financial performance.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The lower revenue figures were primarily driven by a decline in the energy segment, where lower wholesale sales affected overall energy sales volumes."
+          },
+          {
+            "id": "S18",
+            "text": "The group's performance during the period was supported by stronger results in the energy segment, the expansion of agricultural units, the closure of unprofitable operations, and a notable turnaround in supporting businesses."
+          }
+        ]
+      }
+    ],
+    "coherence_justification": "The summary is generally coherent with a clear structure showing revenue, profitability metrics, and balance sheet data. However, there is a direct contradiction between S4 (energy segment decline causing lower revenue) and S18 (energy segment providing stronger results supporting performance). All other elements maintain logical relationships and organization without material repetition. The contradiction regarding the energy segment's performance impact is the primary coherence issue."
+  },
+  "usage": {
+    "input_tokens_total": 28974,
+    "output_tokens_total_including_reasoning": 4035,
+    "total_tokens": 33009,
+    "latency_seconds_total": 28.83
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 51018,
+    "output_tokens_total_including_reasoning": 61396,
+    "total_tokens": 112414,
+    "latency_seconds_total": 203.19
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_6.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_6_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_6.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_6.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_6_few_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_6_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_6_few_shot_gemini.json"
+    }
+  }
+}

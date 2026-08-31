@@ -1,0 +1,167 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T22:11:05.172538",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_23_zero_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "f467df28bb99f2a4",
+    "sentence_map_hash": "b8d0f7fd36b9f198",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "a646a38065a4d96c",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_23.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "AB KN Energies reported strong financial performance for the nine months ended September 30, 2025, with consolidated revenue increasing by 12.8 percent to EUR 76.664 million, compared to EUR 67.977 million in the same period of 2024.",
+    "S2": "This growth was primarily driven by higher volumes of liquefied natural gas regasification and bonuses paid by clients for booked capacity at the LNG terminal.",
+    "S3": "The terminal had been out of operation for one and a half months in 2024 due to dry-dock repairs, which suppressed the prior year's comparables.",
+    "S4": "Gross profit rose to EUR 31.549 million from EUR 29.237 million, reflecting improved operational efficiency despite higher depreciation costs associated with the Floating Storage and Regasification Unit, which was reclassified from right-of-use assets to property, plant, and equipment following its acquisition in December 2024.",
+    "S5": "Operating profit increased by 12.3 percent to EUR 21.282 million, up from EUR 18.942 million in the previous year.",
+    "S6": "This improvement was supported by a decrease in finance costs, which fell to EUR 6.616 million from EUR 6.692 million, largely due to lower interest on lease liabilities as the FSRU lease was restructured.",
+    "S7": "Finance income also declined slightly to EUR 1.520 million from EUR 2.644 million, primarily because of reduced income from currency exchange and financial derivatives.",
+    "S8": "The company recorded a net profit attributable to shareholders of EUR 13.158 million, representing a 10.9 percent increase from EUR 11.862 million in the prior period.",
+    "S9": "Earnings per share grew to EUR 0.035 from EUR 0.031.",
+    "S10": "The company’s balance sheet remained robust, with total assets decreasing slightly to EUR 530.364 million from EUR 535.174 million at the end of 2024.",
+    "S11": "This reduction was mainly due to a decrease in other financial assets and trade receivables, partially offset by a significant increase in cash and cash equivalents, which rose to EUR 54.398 million from EUR 17.203 million.",
+    "S12": "Total equity increased to EUR 167.721 million from EUR 163.128 million, driven by retained earnings from the period’s profit, partially offset by dividends declared totaling EUR 8.622 million.",
+    "S13": "Borrowings decreased to EUR 311.443 million from EUR 320.352 million, reflecting loan repayments.",
+    "S14": "Cash flow from operating activities strengthened considerably, reaching EUR 76.331 million compared to EUR 35.637 million in the prior year, aided by higher net profit and favorable changes in working capital.",
+    "S15": "Investing activities used EUR 13.804 million in cash, primarily for the acquisition of property, plant, and equipment and short-term deposits.",
+    "S16": "Financing activities consumed EUR 25.332 million, mainly due to dividend payments and loan repayments.",
+    "S17": "The company maintains a stable capital structure with no indications of asset impairment for its Klaipėda liquid energy terminal assets.",
+    "S18": "Overall, the period demonstrated enhanced profitability and liquidity, supported by normalized LNG terminal operations and effective cost management."
+  },
+  "usage": {
+    "input_tokens": 1890,
+    "output_tokens_including_reasoning": 394,
+    "total_tokens": 2284
+  },
+  "latency_seconds": 1.95,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S8\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\", \"S5\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\", \"S13\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K3\", \"K7\"],\n  \"justification\": \"K1, K2, K4, K5, and K6 are PRESENT with supporting sentences identified. K3 is MISSING as there is no mention of segment performance breakdown for Liquid Energy Terminals, LNG Terminal, or commercial LNG activities. K7 is MISSING as there is no reference to the establishment of KN Energies Deutschland GmbH or its purpose regarding the Wilhelmshaven 2 floating LNG import terminal. The overall score is 3 (Generally yes) because most HIGH-importance criteria are covered, but two HIGH items (K3 and K7) are missing, impacting the completeness assessment.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S8"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S5"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S13"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K3",
+      "K7"
+    ],
+    "justification": "K1, K2, K4, K5, and K6 are PRESENT with supporting sentences identified. K3 is MISSING as there is no mention of segment performance breakdown for Liquid Energy Terminals, LNG Terminal, or commercial LNG activities. K7 is MISSING as there is no reference to the establishment of KN Energies Deutschland GmbH or its purpose regarding the Wilhelmshaven 2 floating LNG import terminal. The overall score is 3 (Generally yes) because most HIGH-importance criteria are covered, but two HIGH items (K3 and K7) are missing, impacting the completeness assessment."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

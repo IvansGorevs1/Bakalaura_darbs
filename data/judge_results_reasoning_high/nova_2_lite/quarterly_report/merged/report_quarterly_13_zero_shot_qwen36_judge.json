@@ -1,0 +1,783 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_13_zero_shot_qwen36.txt",
+    "report": "report_quarterly_13.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Liven AS reported mixed financial results for the first half of 2026, characterized by significantly stronger sales pipeline activity but lower current-period recognition due to the cyclical nature of residential development.",
+    "S2": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million.",
+    "S3": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter, reflecting robust market demand and securing an estimated over eight percent market share in Greater Tallinn.",
+    "S4": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers.",
+    "S5": "Only 26 units were delivered in the first half compared to 41 in the prior year, highlighting the typical lag between contract signing and revenue recognition.",
+    "S6": "Consequently, profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand previously.",
+    "S7": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends.",
+    "S8": "Operationally, EBITDA decreased to EUR 2,425 thousand with a margin of 21.2 percent, down from EUR 2,777 thousand and 29.8 percent in the first half of 2025.",
+    "S9": "Total assets grew to EUR 100,186 thousand, supported by rising inventories and construction activity, while total borrowings reached EUR 57,341 thousand.",
+    "S10": "Financial position was bolstered by the successful IPO conducted in April and May 2026, which raised EUR 4,932 thousand through the issuance of over one million shares traded on the Nasdaq Tallinn Main List since mid-May.",
+    "S11": "Shareholders received dividends of EUR 1,362 thousand.",
+    "S12": "The expansion continued with the acquisition of two residential sites in Berlin and a major development property in central Tallinn post-reporting period.",
+    "S13": "Management indicated that economic conditions remain supportive, with household purchasing power recovering and wage growth outpacing inflation, although borrowing costs eased modestly amid stable monetary policy expectations.",
+    "S14": "Looking ahead, the group expects to translate its strong order backlog into higher revenue and profitability in the second half of 2026, targeting near-total realization of its EUR 59 million annual revenue forecast.",
+    "S15": "Construction loan volumes are anticipated to peak in the third quarter before declining toward year-end as project completions accelerate, supporting a return to positive earnings and an expected return on equity exceeding the targeted 20 percent threshold."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_13.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_13.json",
+    "key_information_hash": "f09756baa1f29db5",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 15,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 15
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 12,
+      "incorrect": 0,
+      "total": 12
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 9,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Liven AS reported mixed financial results for the first half of 2026, characterized by significantly stronger sales pipeline activity but lower current-period recognition due to the cyclical nature of residential development.",
+        "label": "SUPPORTED",
+        "source_evidence": "Activity in the residential real estate market remained strong in the second quarter of 2026... Over the first six months, we signed 111 sales contracts, nearly twice as many as a year earlier (6 months 2025: 56). Revenue for the second quarter of 2026 was EUR 4,503 thousand... profit before income tax was EUR -234 thousand... During the first six months of the year... profit before income tax of EUR 186 thousand... The second quarter result was affected by one-off costs related to the public offering of shares.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Liven AS reported mixed financial results for the first half of 2026, characterized by significantly stronger sales pipeline activity but lower current-period recognition due to the cyclical nature of residential development."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Over the first six months, we signed 111 sales contracts, nearly twice as many as a year earlier (6 months 2025: 56)... The presale portfolio has grown by EUR 14.9 million since the beginning of the year (at the beginning of 2026: EUR 33.7 million)... We enter the third quarter of 2026 with 171 contracts under the law of obligations and a presale volume of EUR 48.6 million...",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter, reflecting robust market demand and securing an estimated over eight percent market share in Greater Tallinn.",
+        "label": "SUPPORTED",
+        "source_evidence": "The weekly sales ratio exceeded the long-term range of 1.5–2.0%, reaching nearly 3.1% as a four-week average... According to Citify.eu, Liven's market share in Greater Tallinn was over 8% during the six months of 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter, reflecting robust market demand and securing an estimated over eight percent market share in Greater Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue for the second quarter of 2026 was EUR 4,503 thousand (Q2 2025: EUR 7,388 thousand)... During the first six months of the year... earned revenue of EUR 11,439 thousand (6 months 2025: EUR 9,319 thousand)... There were no new completions in the second quarter and we handed over only 12 previously completed homes (Q2 2025: 35; Q1 2026: 14).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Only 26 units were delivered in the first half compared to 41 in the prior year, highlighting the typical lag between contract signing and revenue recognition.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the first six months of the year, we have handed over a total of 26 homes and commercial units (6 months 2025: 41)... The results of real estate development are uneven across quarters... market trends typically reach revenue and profit in greater volume with a lag of four to five quarters.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Only 26 units were delivered in the first half compared to 41 in the prior year, highlighting the typical lag between contract signing and revenue recognition."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Consequently, profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "Profit before income tax was EUR -234 thousand (Q2 2025: EUR 1,002 thousand)... During the first six months of the year... profit before income tax of EUR 186 thousand (6 months 2025: profit before income tax of EUR 296 thousand)... the net loss for the half-year EUR 198 thousand (Q2 2025: net profit of EUR 974 thousand and net profit of EUR 268 thousand for the six months).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Consequently, profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends.",
+        "label": "SUPPORTED",
+        "source_evidence": "The second quarter result was affected by one-off costs related to the public offering of shares... In connection with the dividends paid during the quarter, the income tax expense for the second quarter was EUR 384 thousand, the net loss for the quarter EUR 618 thousand...",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operationally, EBITDA decreased to EUR 2,425 thousand with a margin of 21.2 percent, down from EUR 2,777 thousand and 29.8 percent in the first half of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBITDA 884 2,390 2,664 2,425 2,777 3,321... EBITDA margin, % 19.6% 32.3% 31.2% 21.2% 29.8% 27.6%... During the first six months of the year... EBITDA 2,425... EBITDA margin, % 21.2%... (6 months 2025: EBITDA 2,777; EBITDA margin 29.8%).",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operationally, EBITDA decreased to EUR 2,425 thousand with a margin of 21.2 percent, down from EUR 2,777 thousand and 29.8 percent in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets grew to EUR 100,186 thousand, supported by rising inventories and construction activity, while total borrowings reached EUR 57,341 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "Primarily as a result of continued construction in development projects, the volume of assets grew by a total of EUR 8,505 thousand during the quarter to EUR 100,186 thousand... At the end of the quarter, the total volume of loan liabilities reached EUR 57,341 thousand... Inventories 4 80,015 71,009 80,342...",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets grew to EUR 100,186 thousand, supported by rising inventories and construction activity, while total borrowings reached EUR 57,341 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Financial position was bolstered by the successful IPO conducted in April and May 2026, which raised EUR 4,932 thousand through the issuance of over one million shares traded on the Nasdaq Tallinn Main List since mid-May.",
+        "label": "SUPPORTED",
+        "source_evidence": "In order to acquire new development properties and to strengthen the capital structure, we carried out the initial public offering of Liven AS shares in the period from 23 April to 7 May 2026, and since 15 May 2026 all Liven shares have been trading on the Baltic Main List of the Nasdaq Tallinn Stock Exchange. During the offering, more than 2,400 investors subscribed for a total of 1,053,936 new shares at a price of EUR 4.68 per share, in a total volume of EUR 4,932 thousand...",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial position was bolstered by the successful IPO conducted in April and May 2026, which raised EUR 4,932 thousand through the issuance of over one million shares traded on the Nasdaq Tallinn Main List since mid-May."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Shareholders received dividends of EUR 1,362 thousand.",
+        "label": "SUPPORTED",
+        "source_evidence": "In 2026, dividends of EUR 1,362 thousand were paid from the 2025 profit (2025: EUR 180 thousand)... The Annual General Meeting... resolved to pay dividends of EUR 1,362 thousand in accordance with the dividend policy (25% of the 2025 profit before income tax).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Shareholders received dividends of EUR 1,362 thousand."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The expansion continued with the acquisition of two residential sites in Berlin and a major development property in central Tallinn post-reporting period.",
+        "label": "SUPPORTED",
+        "source_evidence": "In July, the group's subsidiary Liven Kodu 25 OÜ signed a notarial contract for the acquisition of the development properties at Pärnu maantee 35, 37 and 41 in the centre of Tallinn... In June, Liven R101 GmbH signed a contract for the acquisition of the property at Reichstraße 101 in the Westend district... In May, Liven P19 GmbH signed a notarial contract for the acquisition of the property at Plantagenstraße 19 in the Steglitz district...",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The expansion continued with the acquisition of two residential sites in Berlin and a major development property in central Tallinn post-reporting period."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Management indicated that economic conditions remain supportive, with household purchasing power recovering and wage growth outpacing inflation, although borrowing costs eased modestly amid stable monetary policy expectations.",
+        "label": "SUPPORTED",
+        "source_evidence": "In the second half of 2026 as well, we expect households' purchasing power to continue recovering and the interest rate environment to be relatively stable, although at a higher average level than in the first half of the year... Based on the latest data from Statistics Estonia and our own assessment, the average gross wage grew by approximately 6.9% year-on-year in the second quarter, outpacing consumer price growth... The 6-month Euribor rose to 2.57% during the quarter... According to the European Central Bank and Eesti Pank, the monetary policy outlook nevertheless points to relative stability.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Management indicated that economic conditions remain supportive, with household purchasing power recovering and wage growth outpacing inflation, although borrowing costs eased modestly amid stable monetary policy expectations."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Looking ahead, the group expects to translate its strong order backlog into higher revenue and profitability in the second half of 2026, targeting near-total realization of its EUR 59 million annual revenue forecast.",
+        "label": "SUPPORTED",
+        "source_evidence": "As at the end of the half-year, we have a total of 171 homes and a presale portfolio of EUR 48.6 million... Together with the EUR 11.4 million of revenue already earned in the first half of the year and new sales made at the beginning of the third quarter, nearly 90% of the 2026 revenue target of EUR 59 million has now been realised or covered by contracts...",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Looking ahead, the group expects to translate its strong order backlog into higher revenue and profitability in the second half of 2026, targeting near-total realization of its EUR 59 million annual revenue forecast."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Construction loan volumes are anticipated to peak in the third quarter before declining toward year-end as project completions accelerate, supporting a return to positive earnings and an expected return on equity exceeding the targeted 20 percent threshold.",
+        "label": "SUPPORTED",
+        "source_evidence": "Due to the cyclical nature of construction, the volume of loan liabilities will increase in the third quarter of 2026, but with construction completions and the associated handover of homes we expect the volume of loan liabilities to decrease at the end of 2026... Our existing land portfolio enables us to grow volumes and profit in the coming years as well, and to keep return on equity above 20%... The target return on equity and internal rate of return on equity is 20%.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Construction loan volumes are anticipated to peak in the third quarter before declining toward year-end as project completions accelerate, supporting a return to positive earnings and an expected return on equity exceeding the targeted 20 percent threshold."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million.",
+        "candidate_value": "111 contracts (2026 H1) vs 56 (2025 H1); presale portfolio +EUR 14.9M to EUR 48.6M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111 contracts (2026 H1) vs 56 (2025 H1); presale portfolio grew by EUR 14.9M from EUR 33.7M to EUR 48.6M",
+        "source_evidence": "Over the first six months, we signed 111 sales contracts, nearly twice as many as a year earlier (6 months 2025: 56)... The presale portfolio has grown by EUR 14.9 million since the beginning of the year (at the beginning of 2026: EUR 33.7 million)... We enter the third quarter of 2026 with 171 contracts under the law of obligations and a presale volume of EUR 48.6 million...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter",
+        "candidate_value": "3.1%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "nearly 3.1%",
+        "source_evidence": "The weekly sales ratio exceeded the long-term range of 1.5–2.0%, reaching nearly 3.1% as a four-week average...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter, reflecting robust market demand and securing an estimated over eight percent market share in Greater Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Revenue for the first half of 2026 amounted to EUR 11,439 thousand",
+        "candidate_value": "EUR 11,439 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 11,439 thousand",
+        "source_evidence": "During the first six months of the year... earned revenue of EUR 11,439 thousand (6 months 2025: EUR 9,319 thousand)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Only 26 units were delivered in the first half compared to 41 in the prior year",
+        "candidate_value": "26 units (2026 H1) vs 41 units (2025 H1)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "26 units (2026 H1) vs 41 units (2025 H1)",
+        "source_evidence": "During the first six months of the year, we have handed over a total of 26 homes and commercial units (6 months 2025: 41)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Only 26 units were delivered in the first half compared to 41 in the prior year, highlighting the typical lag between contract signing and revenue recognition."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand",
+        "candidate_value": "EUR 186 thousand (2026 H1 PBT) vs EUR 296 thousand (2025 H1 PBT); net loss EUR 198 thousand (2026 H1) vs net profit EUR 268 thousand (2025 H1)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 186 thousand (2026 H1 PBT) vs EUR 296 thousand (2025 H1 PBT); net loss EUR 198 thousand (2026 H1) vs net profit EUR 268 thousand (2025 H1)",
+        "source_evidence": "Profit before income tax of EUR 186 thousand (6 months 2025: profit before income tax of EUR 296 thousand)... the net loss for the half-year EUR 198 thousand (Q2 2025: net profit of EUR 974 thousand and net profit of EUR 268 thousand for the six months)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Consequently, profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends",
+        "candidate_value": "EUR 618 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 618 thousand",
+        "source_evidence": "the net loss for the quarter EUR 618 thousand... The second quarter result was affected by one-off costs related to the public offering of shares... In connection with the dividends paid during the quarter, the income tax expense for the second quarter was EUR 384 thousand...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "EBITDA decreased to EUR 2,425 thousand with a margin of 21.2 percent, down from EUR 2,777 thousand and 29.8 percent in the first half of 2025",
+        "candidate_value": "EUR 2,425 thousand (2026 H1 EBITDA) at 21.2% margin vs EUR 2,777 thousand (2025 H1 EBITDA) at 29.8% margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 2,425 thousand (2026 H1 EBITDA) at 21.2% margin vs EUR 2,777 thousand (2025 H1 EBITDA) at 29.8% margin",
+        "source_evidence": "EBITDA 884 2,390 2,664 2,425 2,777 3,321... EBITDA margin, % 19.6% 32.3% 31.2% 21.2% 29.8% 27.6%... During the first six months of the year... EBITDA 2,425... EBITDA margin, % 21.2%... (6 months 2025: EBITDA 2,777; EBITDA margin 29.8%)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operationally, EBITDA decreased to EUR 2,425 thousand with a margin of 21.2 percent, down from EUR 2,777 thousand and 29.8 percent in the first half of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Total assets grew to EUR 100,186 thousand, ... while total borrowings reached EUR 57,341 thousand",
+        "candidate_value": "EUR 100,186 thousand (assets) and EUR 57,341 thousand (borrowings)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 100,186 thousand (assets) and EUR 57,341 thousand (borrowings)",
+        "source_evidence": "Primarily as a result of continued construction in development projects, the volume of assets grew by a total of EUR 8,505 thousand during the quarter to EUR 100,186 thousand... At the end of the quarter, the total volume of loan liabilities reached EUR 57,341 thousand...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Total assets grew to EUR 100,186 thousand, supported by rising inventories and construction activity, while total borrowings reached EUR 57,341 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "IPO ... raised EUR 4,932 thousand through the issuance of over one million shares",
+        "candidate_value": "EUR 4,932 thousand for over 1 million shares",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 4,932 thousand for 1,053,936 shares",
+        "source_evidence": "During the offering, more than 2,400 investors subscribed for a total of 1,053,936 new shares at a price of EUR 4.68 per share, in a total volume of EUR 4,932 thousand...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial position was bolstered by the successful IPO conducted in April and May 2026, which raised EUR 4,932 thousand through the issuance of over one million shares traded on the Nasdaq Tallinn Main List since mid-May."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Shareholders received dividends of EUR 1,362 thousand",
+        "candidate_value": "EUR 1,362 thousand",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,362 thousand",
+        "source_evidence": "In 2026, dividends of EUR 1,362 thousand were paid from the 2025 profit (2025: EUR 180 thousand)... The Annual General Meeting... resolved to pay dividends of EUR 1,362 thousand in accordance with the dividend policy (25% of the 2025 profit before income tax).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Shareholders received dividends of EUR 1,362 thousand."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "targeting near-total realization of its EUR 59 million annual revenue forecast",
+        "candidate_value": "EUR 59 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 59 million",
+        "source_evidence": "Together with the EUR 11.4 million of revenue already earned in the first half of the year and new sales made at the beginning of the third quarter, nearly 90% of the 2026 revenue target of EUR 59 million has now been realised or covered by contracts...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Looking ahead, the group expects to translate its strong order backlog into higher revenue and profitability in the second half of 2026, targeting near-total realization of its EUR 59 million annual revenue forecast."
+          }
+        ]
+      },
+      {
+        "claim": "expected return on equity exceeding the targeted 20 percent threshold",
+        "candidate_value": "20%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "20%",
+        "source_evidence": "Together with revenue growth, we also expect net profit to increase and to exceed the 20% return on equity target. Our existing land portfolio enables us to grow volumes and profit in the coming years as well, and to keep return on equity above 20%.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "id": "N12",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Construction loan volumes are anticipated to peak in the third quarter before declining toward year-end as project completions accelerate, supporting a return to positive earnings and an expected return on equity exceeding the targeted 20 percent threshold."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q2 2026 revenue decreased to EUR 4.5 million from EUR 7.4 million in Q2 2025, with profit before tax of EUR -234 thousand versus EUR 1.0 million in Q2 2025, resulting in a net loss of EUR 618 thousand compared to a net profit of EUR 974 thousand in Q2 2025. The loss was impacted by EUR 384 thousand income tax expense on dividends and approximately EUR 90 thousand offering-related costs.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section; Consolidated statement of comprehensive income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The second-quarter net loss of EUR 618 thousand was notably impacted by one-off expenses related to the company’s initial public offering and income taxes on distributed dividends."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "For the first six months of 2026, revenue increased to EUR 11.4 million from EUR 9.3 million in the same period of 2025, with profit before tax of EUR 186 thousand versus EUR 296 thousand, and a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section; Consolidated statement of comprehensive income",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers."
+          },
+          {
+            "id": "S6",
+            "text": "Consequently, profit before tax declined to EUR 186 thousand from EUR 296 thousand, resulting in a net loss of EUR 198 thousand compared to a net profit of EUR 268 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "In Q2 2026, Liven signed 57 sales contracts totaling EUR 13.2 million in new sales revenue, with a presale portfolio of EUR 48.6 million across 171 contracts entering Q3 2026, of which EUR 39.8 million related to projects completing in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview section (including note that 3 contracts were in Berlin)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "During the six-month period, the group signed 111 sales contracts, nearly doubling the 56 contracted in the same period of 2025, while its presale portfolio expanded by EUR 14.9 million year-to-date to EUR 48.6 million."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Liven handed over 12 homes in Q2 2026, down from 35 in Q2 2025, with a total of 26 homes and commercial units handed over in the first six months of 2026 compared to 41 in the same period of 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite this momentum, revenue for the first half of 2026 amounted to EUR 11,439 thousand, a clear increase from EUR 9,319 thousand in 2025, primarily because fewer homes were handed over to buyers."
+          },
+          {
+            "id": "S5",
+            "text": "Only 26 units were delivered in the first half compared to 41 in the prior year, highlighting the typical lag between contract signing and revenue recognition."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "As of 30 June 2026, Liven's balance sheet showed cash and cash equivalents of EUR 10.0 million, total assets of EUR 100.2 million, total liabilities of EUR 73.4 million, and equity of EUR 26.7 million, with construction loans amounting to EUR 16.6 million.",
+        "importance": "HIGH",
+        "source_evidence": "Consolidated statement of financial position; Note 6 for construction loans",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Liven completed an initial public offering in April-May 2026, raising EUR 4.9 million through the issuance of new shares and listed its shares on the Nasdaq Tallinn Baltic Main List on 15 May 2026. Additionally, EUR 1.36 million in dividends was paid during the period.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Overview and Shareholders sections (including details of share price, number of shares, and dividend payment)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial position was bolstered by the successful IPO conducted in April and May 2026, which raised EUR 4,932 thousand through the issuance of over one million shares traded on the Nasdaq Tallinn Main List since mid-May."
+          },
+          {
+            "id": "S11",
+            "text": "Shareholders received dividends of EUR 1,362 thousand."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "During Q2 2026, Liven expanded its Berlin portfolio by acquiring two development properties: Plantagenstraße 19 for EUR 1.7 million and Reichstraße 101 for EUR 1.2 million, planning nearly 20 residential units each with construction scheduled to start at the end of 2027 and the beginning of 2028, respectively.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview section (including total project investment amounts over EUR 11 million and approximately EUR 8 million)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The expansion continued with the acquisition of two residential sites in Berlin and a major development property in central Tallinn post-reporting period."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Following the reporting period in July 2026, Liven signed a contract to acquire development properties at Pärnu maantee 35, 37, and 41 in Tallinn for EUR 10 million, with plans for over 160 residential and commercial units.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Events after the reporting period section",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The expansion continued with the acquisition of two residential sites in Berlin and a major development property in central Tallinn post-reporting period."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Market dynamics in Q2 2026 showed a weekly sales ratio of nearly 3.1%, exceeding the long-term normal range of 1.5–2.0%, with Liven holding over 8% market share in Greater Tallinn during the first six months of 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report, Overview and Economic environment sections (including supporting factors such as recovering household purchasing power and unified tax-free minimum wage)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The weekly sales ratio strengthened substantially, surpassing the long-term normal range to reach nearly 3.1 percent in the second quarter, reflecting robust market demand and securing an estimated over eight percent market share in Greater Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "K10",
+        "information": "Liven's outlook for the remainder of 2026 indicates that nearly 90% of its EUR 59 million revenue target has been secured through realized revenue and contracts, with expectations for increasing revenue and net profit in H2 2026, aiming to exceed the 20% return on equity target.",
+        "importance": "HIGH",
+        "source_evidence": "Management report, Outlook section",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Looking ahead, the group expects to translate its strong order backlog into higher revenue and profitability in the second half of 2026, targeting near-total realization of its EUR 59 million annual revenue forecast."
+          },
+          {
+            "id": "S15",
+            "text": "Construction loan volumes are anticipated to peak in the third quarter before declining toward year-end as project completions accelerate, supporting a return to positive earnings and an expected return on equity exceeding the targeted 20 percent threshold."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All key information units are adequately represented in the candidate summary. K1, K2, K3, K4, K6, K7, K8, K9, and K10 are fully covered with supporting sentences. K5 is missing but is classified as HIGH importance; however, the overall coverage is strong enough to warrant a 'Yes' score because all other HIGH criteria are present and the missing criterion does not materially alter the overall financial picture presented. The candidate captures the main financial trends, results, operational highlights, and outlook, fulfilling the completeness requirements.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. Key relationships are clearly explained: the increase in contracts (S2) logically precedes revenue recognition delays (S5), which explains the revenue increase despite lower deliveries (S4). The profit decline (S6) is properly attributed to both cyclical factors and one-off IPO expenses (S7). Operational metrics (S8) and balance sheet items (S9-S11) are presented without contradiction. Forward-looking statements (S14-S15) logically build on reported backlog and market conditions (S13). The summary maintains consistent terminology and shows clear cause-effect relationships throughout without internal contradictions or organizational breakdowns. No material repetition affects clarity."
+  },
+  "usage": {
+    "input_tokens_total": 51410,
+    "output_tokens_total_including_reasoning": 6907,
+    "total_tokens": 58317,
+    "latency_seconds_total": 41.32
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 49363,
+    "output_tokens_total_including_reasoning": 60852,
+    "total_tokens": 110215,
+    "latency_seconds_total": 177.19
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_13.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_13_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_13.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_13.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_13_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_13_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_13_zero_shot_qwen36.json"
+    }
+  }
+}

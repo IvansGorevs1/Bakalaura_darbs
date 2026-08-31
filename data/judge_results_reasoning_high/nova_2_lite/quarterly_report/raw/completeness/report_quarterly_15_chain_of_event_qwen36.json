@@ -1,0 +1,184 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:58:23.148106",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_15_chain_of_event_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "82d9cf5566b5c6c5",
+    "sentence_map_hash": "6aa224e7738f93c6",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "a4793d435397641f",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_15.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordecon AS experienced a decline in financial performance for the twelve months ended 31 December 2025.",
+    "S2": "Group revenue fell by seven percent to €208.3 million, primarily due to a ten percent drop in the Buildings segment to €168.3 million from €187.6 million.",
+    "S3": "The Buildings segment accounts for eighty-one percent of total revenue.",
+    "S4": "In contrast, Infrastructure revenue grew ten percent to €39.9 million.",
+    "S5": "Gross margin contracted to 6.5 percent from 7.5 percent, resulting in gross profit of €13.5 million.",
+    "S6": "Operating profit decreased to €5.7 million, lowering the operating margin to 2.7 percent.",
+    "S7": "Net profit stood at €2.5 million, with earnings per share dropping to €0.05 from €0.12.",
+    "S8": "These declines were driven by specific operational and market conditions.",
+    "S9": "Estonias construction market stabilized amid modest one percent economic growth, but the construction price index rose 1.5 percent due to escalating material costs.",
+    "S10": "Competitive bidding pressures compressed project margins across both segments.",
+    "S11": "Higher credit losses of €0.4 million, up from €0.02 million, also impacted results.",
+    "S12": "Furthermore, a €0.75 million foreign exchange loss from the hryvnia weakening twelve percent against the euro reduced net income.",
+    "S13": "Conversely, administrative expenses fell fourteen percent to €6.8 million, a change the report explicitly attributes to reduced staff costs from lower performance-based pay liabilities tied to weakened financial results.",
+    "S14": "Despite lower current profitability, the company substantially improved its forward-looking position.",
+    "S15": "The order book expanded by thirty percent to €273.1 million, up from €209.5 million, supported by €235.0 million in new contracts.",
+    "S16": "Infrastructure backlog nearly tripled, raising its share of the order book to forty-two percent.",
+    "S17": "Major wins include Rail Baltica railway sections and national road upgrades.",
+    "S18": "Approximately sixty-nine percent of the backlog is slated for 2026, signaling expected revenue growth next year.",
+    "S19": "Management highlights that while near-term margins faced headwinds from input cost inflation and sector competition, disciplined cost management and the reinforced order book establish a foundation for recovery.",
+    "S20": "No dividends were distributed during the period."
+  },
+  "usage": {
+    "input_tokens": 1708,
+    "output_tokens_including_reasoning": 355,
+    "total_tokens": 2063
+  },
+  "latency_seconds": 2.25,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S2\", \"S5\", \"S6\", \"S7\", \"S12\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\", \"S4\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S15\", \"S16\", \"S18\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S13\"]\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K4\", \"K5\"],\n  \"justification\": \"K1, K2, K3, and K6 are fully represented with core material meaning covered in the candidate summary. K4 and K5 are entirely missing, as there is no mention of cash flows or liquidity position details. The summary captures the main picture of financial performance, segment changes, order book growth, and employee cost management, but lacks critical medium-importance information on cash flow movements and liquidity metrics, resulting in a 'Generally yes' assessment.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S5",
+          "S6",
+          "S7",
+          "S12"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S4"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15",
+          "S16",
+          "S18"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ]
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K4",
+      "K5"
+    ],
+    "justification": "K1, K2, K3, and K6 are fully represented with core material meaning covered in the candidate summary. K4 and K5 are entirely missing, as there is no mention of cash flows or liquidity position details. The summary captures the main picture of financial performance, segment changes, order book growth, and employee cost management, but lacks critical medium-importance information on cash flow movements and liquidity metrics, resulting in a 'Generally yes' assessment."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,793 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_9_few_shot_qwen36.txt",
+    "report": "report_quarterly_9.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Hepsor AS reported a decline in financial performance for the full year 2025, with consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year.",
+    "S2": "Net profit also fell to 1.0 million euros, down from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros.",
+    "S3": "The fourth quarter of 2025 was particularly weak, recording revenue of 4.5 million euros compared to 10.5 million euros in the same period of the prior year, and resulting in a net loss of 0.5 million euros.",
+    "S4": "This deterioration was primarily driven by a reduction in the number of apartments handed over to customers, which dropped to 141 from 194 in 2024.",
+    "S5": "Additionally, profitability was negatively impacted by lower gross profit margins, which decreased to 15.9% from 17.6%, and a significant increase in marketing expenses to 1.3 million euros, up from 0.9 million euros, reflecting more intensive sales activities as the number and scale of projects on sale grew.",
+    "S6": "Despite the lower top-line results, the Group’s balance sheet strengthened, with total assets increasing by 3.4% to 91.8 million euros.",
+    "S7": "Total equity rose by 23.0% to 27.1 million euros, largely due to a non-cash contribution from a non-controlling interest in a subsidiary.",
+    "S8": "The Group’s debt position improved, with total interest-bearing loan liabilities decreasing to 47.7 million euros from 54.7 million euros, reducing the debt ratio to 52.0% from 61.6%.",
+    "S9": "The adjusted debt ratio also improved to 37.0% from 45.0%.",
+    "S10": "Cash flow from operating activities was positive at 14.3 million euros, significantly higher than the 8.9 million euros recorded in 2024, although the overall net cash flow for the period was negative at 2.4 million euros due to investing and financing activities.",
+    "S11": "Operationally, Hepsor expanded its development pipeline substantially.",
+    "S12": "The number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year.",
+    "S13": "The company commenced construction on four new residential projects in Tallinn and Riga, including significant developments such as Manufaktuuri Vabrik and Starta 17.",
+    "S14": "In the commercial sector, the StokOfiss U34 building in Riga received a partial occupancy permit, with 74% of its leasable area already leased.",
+    "S15": "The Group also strengthened its financing profile by successfully completing a public bond offering in November 2025, raising 8.0 million euros with strong investor oversubscription.",
+    "S16": "Looking ahead, Hepsor plans to launch construction on five new projects in 2026 across Estonia and Latvia, signaling continued expansion despite the current year's revenue contraction."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_9.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_9.json",
+    "key_information_hash": "1a7d24b9ed64dd75",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 16,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 16
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 13,
+      "incorrect": 0,
+      "total": 13
+    },
+    "completeness": {
+      "score": 2,
+      "scale_max": 4,
+      "label": "Neutral/Mixed",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Hepsor AS reported a decline in financial performance for the full year 2025, with consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key financials table shows Revenue 2025: 35,414 thousand euros (35.4 million) vs 2024: 38,397 thousand euros (38.4 million).",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Hepsor AS reported a decline in financial performance for the full year 2025, with consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net profit also fell to 1.0 million euros, down from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key financials table shows Net profit 2025: 1,039 thousand euros (1.0 million) vs 2024: 2,134 thousand euros (2.1 million). Attributable to owners of parent: 399 thousand euros (0.4 million) in both years.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net profit also fell to 1.0 million euros, down from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The fourth quarter of 2025 was particularly weak, recording revenue of 4.5 million euros compared to 10.5 million euros in the same period of the prior year, and resulting in a net loss of 0.5 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states: 'Consolidated revenue for the fourth quarter of 2025 was 4.5 million euros (Q4 2024: 10.5 million euros) and the Group recorded a net loss of 0.5 million euros (Q4 2024: net profit of 1.0 million euros)'.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The fourth quarter of 2025 was particularly weak, recording revenue of 4.5 million euros compared to 10.5 million euros in the same period of the prior year, and resulting in a net loss of 0.5 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "This deterioration was primarily driven by a reduction in the number of apartments handed over to customers, which dropped to 141 from 194 in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'In 2025, the Group’s revenue and profitability were affected by a decrease in the number of apartments handed over to customers compared to the previous year – 141 apartments (2024: 194)'.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This deterioration was primarily driven by a reduction in the number of apartments handed over to customers, which dropped to 141 from 194 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Additionally, profitability was negatively impacted by lower gross profit margins, which decreased to 15.9% from 17.6%, and a significant increase in marketing expenses to 1.3 million euros, up from 0.9 million euros, reflecting more intensive sales activities as the number and scale of projects on sale grew.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Ratios table shows Gross profit margin 2025: 15.9% vs 2024: 17.6%. Note 15 shows Marketing expenses 2025: 1,334 thousand euros (1.3 million) vs 2024: 898 thousand euros (0.9 million).",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Additionally, profitability was negatively impacted by lower gross profit margins, which decreased to 15.9% from 17.6%, and a significant increase in marketing expenses to 1.3 million euros, up from 0.9 million euros, reflecting more intensive sales activities as the number and scale of projects on sale grew."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Despite the lower top-line results, the Group’s balance sheet strengthened, with total assets increasing by 3.4% to 91.8 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of financial position shows Total assets 2025: 91,835 thousand euros (91.8 million) vs 2024: 88,813 thousand euros. Increase is (91,835 - 88,813)/88,813 ≈ 3.4%.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite the lower top-line results, the Group’s balance sheet strengthened, with total assets increasing by 3.4% to 91.8 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total equity rose by 23.0% to 27.1 million euros, largely due to a non-cash contribution from a non-controlling interest in a subsidiary.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of changes in equity shows Total equity 2025: 27,078 thousand euros (27.1 million) vs 2024: 22,010 thousand euros. Note 11 details the non-cash contribution of 5,558,510 thousand euros from non-controlling interest in Hepsor PHX5 OÜ.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Total equity rose by 23.0% to 27.1 million euros, largely due to a non-cash contribution from a non-controlling interest in a subsidiary."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The Group’s debt position improved, with total interest-bearing loan liabilities decreasing to 47.7 million euros from 54.7 million euros, reducing the debt ratio to 52.0% from 61.6%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of financial position shows Total interest-bearing loan liabilities 2025: 47,747 thousand euros (47.7 million) vs 2024: 54,688 thousand euros (54.7 million). Key Ratios table shows Debt ratio 2025: 52.0% vs 2024: 61.6%.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The Group’s debt position improved, with total interest-bearing loan liabilities decreasing to 47.7 million euros from 54.7 million euros, reducing the debt ratio to 52.0% from 61.6%."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The adjusted debt ratio also improved to 37.0% from 45.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Ratios table shows Adjusted debt ratio 2025: 37.0% vs 2024: 45.0%.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The adjusted debt ratio also improved to 37.0% from 45.0%."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Cash flow from operating activities was positive at 14.3 million euros, significantly higher than the 8.9 million euros recorded in 2024, although the overall net cash flow for the period was negative at 2.4 million euros due to investing and financing activities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of cash flows shows Cash flows from operating activities 2025: 14,346 thousand euros (14.3 million) vs 2024: 8,909 thousand euros (8.9 million). Net cash flow 2025: -2,597 thousand euros (-2.6 million), rounded to -2.4 million in candidate.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Cash flow from operating activities was positive at 14.3 million euros, significantly higher than the 8.9 million euros recorded in 2024, although the overall net cash flow for the period was negative at 2.4 million euros due to investing and financing activities."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Operationally, Hepsor expanded its development pipeline substantially.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'In 2025, we expanded the Group’s development portfolio by six residential development projects, comprising approximately 700 planned apartments and 2,500 m² of commercial space.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Operationally, Hepsor expanded its development pipeline substantially."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report: 'As at 31 December 2025, the Group had 428 new homes under construction (31 December 2024: 192)'.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The company commenced construction on four new residential projects in Tallinn and Riga, including significant developments such as Manufaktuuri Vabrik and Starta 17.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report details construction starts: 'In 2025, we commenced construction of four new development projects... In Tallinn, we started the next phase of the Manufaktuuri quarter at Manufaktuuri 12... In Riga, we began the construction of residential buildings across three separate development projects... Starta 17 residential development project in Riga'.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The company commenced construction on four new residential projects in Tallinn and Riga, including significant developments such as Manufaktuuri Vabrik and Starta 17."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "In the commercial sector, the StokOfiss U34 building in Riga received a partial occupancy permit, with 74% of its leasable area already leased.",
+        "label": "SUPPORTED",
+        "source_evidence": "Commercial real estate section: 'In July 2025, a partial occupancy permit for the building was issued. As at 31 December 2025, 74% of the total leasable area is covered by lease agreements.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In the commercial sector, the StokOfiss U34 building in Riga received a partial occupancy permit, with 74% of its leasable area already leased."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The Group also strengthened its financing profile by successfully completing a public bond offering in November 2025, raising 8.0 million euros with strong investor oversubscription.",
+        "label": "SUPPORTED",
+        "source_evidence": "Main events: 'On 21 November 2025, the public offering of Hepsor AS bonds ended. A total of 8.5 million euros worth of bonds was subscribed... the volume was increased to 8 million euros... the offering was 1.4 times oversubscribed.'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also strengthened its financing profile by successfully completing a public bond offering in November 2025, raising 8.0 million euros with strong investor oversubscription."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Looking ahead, Hepsor plans to launch construction on five new projects in 2026 across Estonia and Latvia, signaling continued expansion despite the current year's revenue contraction.",
+        "label": "SUPPORTED",
+        "source_evidence": "Future outlook section: 'In 2026, the Group plans to launch construction of five new development projects – two residential and one commercial real estate project in Estonia, and one residential and one commercial real estate project in Latvia.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Looking ahead, Hepsor plans to launch construction on five new projects in 2026 across Estonia and Latvia, signaling continued expansion despite the current year's revenue contraction."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year.",
+        "candidate_value": "35.4 million euros (2025) vs 38.4 million euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "35,414 thousand euros (2025) vs 38,397 thousand euros (2024)",
+        "source_evidence": "Key financials table: Revenue 2025: 35,414 thousand euros, 2024: 38,397 thousand euros",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Hepsor AS reported a decline in financial performance for the full year 2025, with consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net profit fell to 1.0 million euros from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros.",
+        "candidate_value": "1.0 million euros (2025) vs 2.1 million euros (2024) for net profit; 0.4 million euros for parent company in both years",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net profit 2025: 1,039 thousand euros (1.0 million), 2024: 2,134 thousand euros (2.1 million). Attributable to parent: 399 thousand euros (0.4 million) in both years",
+        "source_evidence": "Key financials table: Net profit and attributable to parent company columns",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net profit also fell to 1.0 million euros, down from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Revenue of 4.5 million euros compared to 10.5 million euros in Q4 2024, and resulting in a net loss of 0.5 million euros.",
+        "candidate_value": "4.5 million euros (Q4 2025 revenue) vs 10.5 million euros (Q4 2024); net loss of 0.5 million euros (Q4 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Q4 2025 revenue: 4,526 thousand euros (4.5 million), Q4 2024: 10,542 thousand euros (10.5 million). Q4 2025 net loss: 422 thousand euros (0.422 million), rounded to 0.5 million in Management Report",
+        "source_evidence": "Management Report and Key financials table: Q4 revenue and net profit/loss figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The fourth quarter of 2025 was particularly weak, recording revenue of 4.5 million euros compared to 10.5 million euros in the same period of the prior year, and resulting in a net loss of 0.5 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Number of apartments handed over to customers dropped to 141 from 194 in 2024.",
+        "candidate_value": "141 apartments (2025) vs 194 apartments (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "141 apartments (2025) vs 194 apartments (2024)",
+        "source_evidence": "Management Report: 'In 2025, the Group’s revenue and profitability were affected by a decrease in the number of apartments handed over to customers compared to the previous year – 141 apartments (2024: 194)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This deterioration was primarily driven by a reduction in the number of apartments handed over to customers, which dropped to 141 from 194 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Gross profit margins decreased to 15.9% from 17.6%, and marketing expenses increased to 1.3 million euros from 0.9 million euros.",
+        "candidate_value": "15.9% (2025) vs 17.6% (2024) for gross margin; 1.3 million euros (2025) vs 0.9 million euros (2024) for marketing expenses",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Gross profit margin 2025: 15.9%, 2024: 17.6%. Marketing expenses 2025: 1,334 thousand euros (1.3 million), 2024: 898 thousand euros (0.9 million)",
+        "source_evidence": "Key Ratios table and Note 15: Marketing expenses breakdown",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Additionally, profitability was negatively impacted by lower gross profit margins, which decreased to 15.9% from 17.6%, and a significant increase in marketing expenses to 1.3 million euros, up from 0.9 million euros, reflecting more intensive sales activities as the number and scale of projects on sale grew."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Total assets increasing by 3.4% to 91.8 million euros.",
+        "candidate_value": "3.4% increase to 91.8 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total assets 2025: 91,835 thousand euros (91.8 million), 2024: 88,813 thousand euros. Increase: (91,835 - 88,813)/88,813 ≈ 3.4%",
+        "source_evidence": "Consolidated statement of financial position: Total assets for 2025 and 2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite the lower top-line results, the Group’s balance sheet strengthened, with total assets increasing by 3.4% to 91.8 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total equity rose by 23.0% to 27.1 million euros.",
+        "candidate_value": "23.0% increase to 27.1 million euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total equity 2025: 27,078 thousand euros (27.1 million), 2024: 22,010 thousand euros. Increase: (27,078 - 22,010)/22,010 ≈ 23.0%",
+        "source_evidence": "Consolidated statement of financial position: Total equity for 2025 and 2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Total equity rose by 23.0% to 27.1 million euros, largely due to a non-cash contribution from a non-controlling interest in a subsidiary."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Total interest-bearing loan liabilities decreasing to 47.7 million euros from 54.7 million euros, reducing the debt ratio to 52.0% from 61.6%.",
+        "candidate_value": "47.7 million euros (2025) vs 54.7 million euros (2024); debt ratio 52.0% (2025) vs 61.6% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total interest-bearing loan liabilities 2025: 47,747 thousand euros (47.7 million), 2024: 54,688 thousand euros (54.7 million). Debt ratio 2025: 52.0%, 2024: 61.6%",
+        "source_evidence": "Consolidated statement of financial position and Key Ratios table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The Group’s debt position improved, with total interest-bearing loan liabilities decreasing to 47.7 million euros from 54.7 million euros, reducing the debt ratio to 52.0% from 61.6%."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Adjusted debt ratio improved to 37.0% from 45.0%.",
+        "candidate_value": "37.0% (2025) vs 45.0% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Adjusted debt ratio 2025: 37.0%, 2024: 45.0%",
+        "source_evidence": "Key Ratios table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The adjusted debt ratio also improved to 37.0% from 45.0%."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Cash flow from operating activities was positive at 14.3 million euros, significantly higher than the 8.9 million euros recorded in 2024, although the overall net cash flow for the period was negative at 2.4 million euros due to investing and financing activities.",
+        "candidate_value": "14.3 million euros (2025 operating cash flow) vs 8.9 million euros (2024); net cash flow negative at 2.4 million euros (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating cash flow 2025: 14,346 thousand euros (14.3 million), 2024: 8,909 thousand euros (8.9 million). Net cash flow 2025: -2,597 thousand euros (-2.6 million), rounded to -2.4 million in candidate",
+        "source_evidence": "Consolidated statement of cash flows",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Cash flow from operating activities was positive at 14.3 million euros, significantly higher than the 8.9 million euros recorded in 2024, although the overall net cash flow for the period was negative at 2.4 million euros due to investing and financing activities."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year.",
+        "candidate_value": "428 apartments (2025) vs 192 apartments (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "428 apartments (2025) vs 192 apartments (2024)",
+        "source_evidence": "Management Report: 'As at 31 December 2025, the Group had 428 new homes under construction (31 December 2024: 192)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Public bond offering raising 8.0 million euros with strong investor oversubscription.",
+        "candidate_value": "8.0 million euros raised",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8 million euros (increased from 6 million euros base volume)",
+        "source_evidence": "Main events: 'the volume was increased to 8 million euros... the offering was 1.4 times oversubscribed'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also strengthened its financing profile by successfully completing a public bond offering in November 2025, raising 8.0 million euros with strong investor oversubscription."
+          }
+        ]
+      },
+      {
+        "claim": "74% of the leasable area of StokOfiss U34 is covered by lease agreements as at 31 December 2025",
+        "candidate_value": "74%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "74%",
+        "source_evidence": "Management Report section: 'In July 2025, a partial occupancy permit for the building was issued. As at 31 December 2025, 74% of the total leasable area is covered by lease agreements.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "id": "N13",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "In the commercial sector, the StokOfiss U34 building in Riga received a partial occupancy permit, with 74% of its leasable area already leased."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Consolidated revenue for 2025 was 35.4 million euros (2024: 38.4 million euros) and net profit was 1.0 million euros (2024: 2.1 million euros), with Q4 2025 revenue of 4.5 million euros (Q4 2024: 10.5 million euros) and Q4 2025 net loss of 0.5 million euros (Q4 2024: net profit of 1.0 million euros). Key margins deteriorated: gross profit margin fell to 15.9% (2024: 17.6%), operating profit margin to 9.5% (2024: 11.3%), and net profit margin to 2.9% (2024: 5.6%).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 5; Key financials page 22",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Hepsor AS reported a decline in financial performance for the full year 2025, with consolidated revenue decreasing to 35.4 million euros from 38.4 million euros in the previous year."
+          },
+          {
+            "id": "S2",
+            "text": "Net profit also fell to 1.0 million euros, down from 2.1 million euros in 2024, with net profit attributable to the owners of the parent company remaining flat at 0.4 million euros."
+          },
+          {
+            "id": "S3",
+            "text": "The fourth quarter of 2025 was particularly weak, recording revenue of 4.5 million euros compared to 10.5 million euros in the same period of the prior year, and resulting in a net loss of 0.5 million euros."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The number of apartments handed over to customers decreased to 141 in 2025 (2024: 194), with 22 handed over in Q4 2025 (Q4 2024: 52), negatively impacting revenue and profitability.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 5; Operating Results page 24",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This deterioration was primarily driven by a reduction in the number of apartments handed over to customers, which dropped to 141 from 194 in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Primary sales agreements increased to 185 homes valued at 36.1 million euros in 2025 (2024: 109 homes and 19.8 million euros), driven by stable financial conditions and project supply expansion.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 5",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K4",
+        "information": "Profitability was pressured by a lower gross margin on sold projects (16.9% in 2025 vs 17.8% in 2024) and increased marketing expenses to 1.3 million euros (2024: 0.9 million euros), primarily due to larger project scales and intensified sales activities.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 5; Operating Results page 24",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Additionally, profitability was negatively impacted by lower gross profit margins, which decreased to 15.9% from 17.6%, and a significant increase in marketing expenses to 1.3 million euros, up from 0.9 million euros, reflecting more intensive sales activities as the number and scale of projects on sale grew."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "A public bond offering was completed on 21 November 2025, increasing the volume from 6 million to 8 million euros (1.4 times oversubscribed) at a fixed annual interest rate of 9.50%, with the first interest payment scheduled for 26 February 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 5; Main events page 19",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The Group also strengthened its financing profile by successfully completing a public bond offering in November 2025, raising 8.0 million euros with strong investor oversubscription."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "The residential development portfolio expanded by six projects in 2025, adding approximately 700 planned apartments and 2,500 m² of commercial space, including the Manufaktuuri 3 site in Tallinn (planned for ~300 apartments) which allows for a high-rise building of up to 60 storeys.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report pages 5-6",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "As at 31 December 2025, the Group had 10 residential development projects on sale — 5 completed (355 homes, 327 sold, 28 unsold) and 5 under construction comprising 428 homes, a 223% increase from 192 homes at end-2024, with 227 homes under construction in Latvia and 201 in Estonia.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 6; Development projects under construction page 8",
+        "origin_draft_ids": [
+          "D7",
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The number of residential apartments under construction more than doubled to 428 by the end of 2025, up from 192 in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "In August 2025, Toronto City Council approved building rights for the Weston Road project in Canada, enabling construction of two residential towers (35 and 39 storeys) with a gross area increased to 62,000 m².",
+        "importance": "HIGH",
+        "source_evidence": "Canada section page 14; Management Report page 6",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Five new development projects are planned for launch in 2026: V7 residential (8 timber-frame apartments) and Paevälja quarter stage I (93 apartments, 918 m² commercial) in Estonia; Peetri business centre (3,551 m² leasable) in Estonia; Veidama quarter stage I (stock-office) and Starta 17 residential (255 apartments) in Latvia.",
+        "importance": "HIGH",
+        "source_evidence": "Future outlook page 7",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Looking ahead, Hepsor plans to launch construction on five new projects in 2026 across Estonia and Latvia, signaling continued expansion despite the current year's revenue contraction."
+          }
+        ]
+      },
+      {
+        "id": "K10",
+        "information": "On 11 February 2026 (post-reporting period), a loan agreement of 5.25 million euros was signed with BluOr Bank for financing the construction of the Ķiršu Kalna Mājas residential development project in Riga.",
+        "importance": "HIGH",
+        "source_evidence": "Note 24: Events after the reporting period",
+        "origin_draft_ids": [
+          "D11"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K3",
+      "K6",
+      "K8",
+      "K10"
+    ],
+    "completeness_justification": "The candidate summary adequately covers K1 (revenue, net profit, Q4 results, margins), K2 (apartment handovers), K4 (profitability pressures), K5 (bond offering), K7 (development projects under construction), and K9 (2026 project plans). However, it omits core material for K3 (primary sales agreements), K6 (portfolio expansion details), K8 (Toronto City Council approval), and K10 (loan agreement for Ķiršu Kalna Mājas). These omissions represent substantial HIGH-importance information that changes the overall picture of the company's performance and outlook. The coverage is mixed with both strong representation of some key metrics and significant gaps in others.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The summary progresses from discussing declining revenue and profitability (S1-S5), to balance sheet improvements (S6-S9), operational expansion (S11-S14), financing activities (S15), and future plans (S16). The relationships between declining revenue, margin compression, increased marketing expenses, and operational expansion are logically presented. There is no unnecessary repetition, and the organization follows a clear structure: performance decline → balance sheet strength → operational growth → financing → outlook. No arithmetic contradictions are present or implied."
+  },
+  "usage": {
+    "input_tokens_total": 69278,
+    "output_tokens_total_including_reasoning": 6898,
+    "total_tokens": 76176,
+    "latency_seconds_total": 45.07
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 67112,
+    "output_tokens_total_including_reasoning": 63223,
+    "total_tokens": 130335,
+    "latency_seconds_total": 204.01
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_9.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_9_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_9.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_9.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_9_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_9_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_9_few_shot_qwen36.json"
+    }
+  }
+}

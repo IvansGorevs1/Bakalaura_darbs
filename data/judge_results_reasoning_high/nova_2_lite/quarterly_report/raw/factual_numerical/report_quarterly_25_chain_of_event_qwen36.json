@@ -1,0 +1,483 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T01:02:30.061353",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_25_chain_of_event_qwen36.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "89de5462301ff071",
+    "sentence_map_hash": "8814dd9edba123e6",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_25.md",
+    "source_hash": "fe8fc04987c947a1",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first quarter of 2026, VILVI Group reported consolidated revenue of 86.97 million euros, a 22.4 percent increase compared to the prior year.",
+    "S2": "Top-line growth was driven by expanded production volumes and the consolidation of new segments following recent corporate transactions.",
+    "S3": "Revenue from fresh milk products rose 73.4 percent, dry milk products increased 126.9 percent, and the newly consolidated canned milk segment contributed 11.92 million euros.",
+    "S4": "Geographic sales showed accelerated momentum, with Lithuania surging 72.9 percent and other countries advancing 46.6 percent, while European Union sales remained flat.",
+    "S5": "The group procured 155,954 tons of basic indicator milk, up 54.2 percent, reflecting heightened processing capacity utilization.",
+    "S6": "Operational profitability contracted significantly despite the revenue expansion.",
+    "S7": "EBITDA declined 50.2 percent to 3.00 million euros, reducing the margin to 3.5 percent from 8.5 percent.",
+    "S8": "Gross profit fell to 5.42 million euros from 7.46 million euros, while distribution and administrative expenses more than doubled as the company scaled operations and integrated new assets.",
+    "S9": "Conversely, net profit increased 25.7 percent to 5.09 million euros, delivering earnings per share of 0.43 euros.",
+    "S10": "This divergence between declining EBITDA and rising net earnings is explicitly attributed to a preliminary negative goodwill gain of 5.5 million euros stemming from the January acquisition of Marijampolės pieno konservai UAB.",
+    "S11": "The report specifies that this acquisition-related gain is excluded from EBITDA metrics but flows directly into net profit, where management plans to realize future operational synergies.",
+    "S12": "Capital investment and financing activities materially altered the financial position.",
+    "S13": "Net financial debt surged 89.7 percent to 83.43 million euros, primarily funded through increased borrowings that accompanied 4.52 million euros in capital expenditures.",
+    "S14": "These investments coincide with the official commencement of commercial cheese production at the new Baltic Dairy Board SIA facility in Bauska, Latvia.",
+    "S15": "The new factory targets an annual capacity of 18,000 tons for export to over forty countries and recently secured third place in the 2025 Latvian Construction Awards.",
+    "S16": "Consequently, total assets expanded to 220.31 million euros, while cash reserves contracted to 951 thousand euros amid active infrastructure deployment and working capital demands.",
+    "S17": "The reporting period fundamentally reflects a strategic shift toward scaled manufacturing and portfolio consolidation, where volume-driven revenue growth and acquisition accounting benefits currently support headline profitability even as near-term operational margins and leverage face headwinds from expansion costs."
+  },
+  "usage": {
+    "input_tokens": 8002,
+    "output_tokens_including_reasoning": 6674,
+    "total_tokens": 14676
+  },
+  "latency_seconds": 32.99,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Top-line growth was driven by expanded production volumes and the consolidation of new segments following recent corporate transactions.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"VILVI Group has started commercial cheese production in Latvia... Following the acquisition of Marijampolės pieno konservai UAB... The company will be systematically integrated into the structure of VLP Group... New cheese factory of Baltic Dairy Board SIA became a finalist in the “Latvian Construction Awards 2025” competition.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operational profitability contracted significantly despite the revenue expansion.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"EBITDA declined 50.2% to 3.00 million euros... EBITDA margin reduced to 3.5% from 8.5%... Gross profit fell to 5.42 million euros from 7.46 million euros\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"This acquisition-related gain is excluded from EBITDA metrics but flows directly into net profit, where management plans to realize future operational synergies.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"In Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5 related to the acquisition of Marijampolės pieno konservai UAB.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Capital investment and financing activities materially altered the financial position.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Net cash flows generated from(used in) financing activities: 15,836 thousand EUR... Net cash flows (used in) investing activities: -8,037 thousand EUR... Net increase(decrease) in cash and cash equivalents: -1,834 thousand EUR\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"These investments coincide with the official commencement of commercial cheese production at the new Baltic Dairy Board SIA facility in Bauska, Latvia.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"VILVI Group has started commercial cheese production in Latvia... Cheese production has officially commenced at the new VILVI Group cheese factory, Baltic Dairy Board SIA, in Bauska, Latvia\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"The new factory targets an annual capacity of 18,000 tons for export to over forty countries and recently secured third place in the 2025 Latvian Construction Awards.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"planned cheese production volumes will reach 18 thousand tons per year... These products will be exported to more than 40 countries worldwide... The factory won an honorable 3rd place in the category “Production Facility / Industrial Building.”\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"The reporting period fundamentally reflects a strategic shift toward scaled manufacturing and portfolio consolidation, where volume-driven revenue growth and acquisition accounting benefits currently support headline profitability even as near-term operational margins and leverage face headwinds from expansion costs.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Following the acquisition of Marijampolės pieno konservai UAB... There are also plans to further increase the capacity of the largest whey processing line... New cheese factory... Discontinuation of transparent plastic lids... Increased net financial debt... Significant capital investments in property, plant and equipment\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"VILVI Group reported consolidated revenue of 86.97 million euros in Q1 2026\",\n      \"candidate_value\": \"86.97 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"86,970 thousand EUR\",\n      \"source_evidence\": \"Revenue, thousands EUR|Q1 2026|86,970\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Revenue from fresh milk products rose 73.4 percent\",\n      \"candidate_value\": \"73.4%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"73.4%\",\n      \"source_evidence\": \"Fresh milk products|Change in 2026/2025|73.4%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Dry milk products increased 126.9 percent\",\n      \"candidate_value\": \"126.9%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"126.9%\",\n      \"source_evidence\": \"Dry milk products|Change in 2026/2025|126.9%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Newly consolidated canned milk segment contributed 11.92 million euros\",\n      \"candidate_value\": \"11.92 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"11,923 thousand EUR\",\n      \"source_evidence\": \"Canned milk*|Q1 2026|11,923\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Lithuania sales surged 72.9 percent\",\n      \"candidate_value\": \"72.9%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"72.9%\",\n      \"source_evidence\": \"Lithuania|Change in 2026/2025|72.9%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Other countries sales advanced 46.6 percent\",\n      \"candidate_value\": \"46.6%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"46.6%\",\n      \"source_evidence\": \"Other countries|Change in 2026/2025|46.6%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"European Union sales remained flat\",\n      \"candidate_value\": \"0%\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"0.6%\",\n      \"source_evidence\": \"European Union|Change in 2026/2025|0.6%\",\n      \"error_explanation\": \"Source reports EU sales increased 0.6%, not flat\"\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Group procured 155,954 tons of basic indicator milk, up 54.2 percent\",\n      \"candidate_value\": \"155,954 tons (54.2% increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"155,954 tons (54.2% increase)\",\n      \"source_evidence\": \"Purchased basic indicators milk,in tons|Q1 2026|155,954|Change in 2026/2025|54.2%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"EBITDA declined 50.2 percent to 3.00 million euros\",\n      \"candidate_value\": \"3.00 million EUR (50.2% decrease)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"3,003 thousand EUR (50.2% decrease)\",\n      \"source_evidence\": \"EBITDA,thousands EUR|Q1 2026|3,003|Change in 2026/2025|-50.2%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Gross profit fell to 5.42 million euros from 7.46 million euros\",\n      \"candidate_value\": \"5.42 million EUR (from 7.46 million EUR)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"5,420 thousand EUR (from 7,459 thousand EUR)\",\n      \"source_evidence\": \"Gross profit|Q1 2026|5,420|Q1 2025|7,459\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Distribution and administrative expenses more than doubled as the company scaled operations\",\n      \"candidate_value\": \">100% increase\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"Distribution expenses: -2,510 thousand EUR (2026) vs -1,529 thousand EUR (2025) => 64% increase; Administrative expenses: -2,399 thousand EUR (2026) vs -1,220 thousand EUR (2025) => 97% increase\",\n      \"source_evidence\": \"Distribution expenses|Q1 2026|-2,510|Q1 2025|-1,529... Administrative expenses|Q1 2026|-2,399|Q1 2025|-1,220\",\n      \"error_explanation\": \"Expenses increased but did not double\"\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Net profit increased 25.7 percent to 5.09 million euros\",\n      \"candidate_value\": \"5.09 million EUR (25.7% increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"5,085 thousand EUR (25.7% increase)\",\n      \"source_evidence\": \"Net profit (loss),thousands EUR|Q1 2026|5,085|Change in 2026/2025|25.7%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Earnings per share of 0.43 euros\",\n      \"candidate_value\": \"0.43 EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"0.43 EUR\",\n      \"source_evidence\": \"Profit (loss) per share,EUR|Q1 2026|0.43\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Preliminary negative goodwill of 5.5 million euros from acquisition\",\n      \"candidate_value\": \"5.5 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"5.5 million EUR\",\n      \"source_evidence\": \"During Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5 related to the acquisition\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Net financial debt surged 89.7 percent to 83.43 million euros\",\n      \"candidate_value\": \"83.43 million EUR (89.7% increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"83,427 thousand EUR (89.7% increase)\",\n      \"source_evidence\": \"Net financial debt,thousands EUR|Q1 2026|83,427|Change in 2026/2025|89.7%\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Funded through increased borrowings accompanying 4.52 million euros in capital expenditures\",\n      \"candidate_value\": \"4.52 million EUR capex\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"4,518 thousand EUR\",\n      \"source_evidence\": \"Payments for acquisition of property, plant and equipment|Q1 2026|-4,518\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N17\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"New factory targets annual capacity of 18,000 tons\",\n      \"candidate_value\": \"18,000 tons/year\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"18 thousand tons per year\",\n      \"source_evidence\": \"planned cheese production volumes will reach 18 thousand tons per year\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N18\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Export to over forty countries\",\n      \"candidate_value\": \">40 countries\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"more than 40 countries worldwide\",\n      \"source_evidence\": \"These products will be exported to more than 40 countries worldwide\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N19\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Total assets expanded to 220.31 million euros\",\n      \"candidate_value\": \"220.31 million EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"220,311 thousand EUR\",\n      \"source_evidence\": \"Total assets|31/03/2026|220,311\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N20\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Cash reserves contracted to 951 thousand euros\",\n      \"candidate_value\": \"951 thousand EUR\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"951 thousand EUR\",\n      \"source_evidence\": \"Cash and cash equivalents|31/03/2026|951\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Top-line growth was driven by expanded production volumes and the consolidation of new segments following recent corporate transactions.",
+        "label": "SUPPORTED",
+        "source_evidence": "VILVI Group has started commercial cheese production in Latvia... Following the acquisition of Marijampolės pieno konservai UAB... The company will be systematically integrated into the structure of VLP Group... New cheese factory of Baltic Dairy Board SIA became a finalist in the “Latvian Construction Awards 2025” competition."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operational profitability contracted significantly despite the revenue expansion.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBITDA declined 50.2% to 3.00 million euros... EBITDA margin reduced to 3.5% from 8.5%... Gross profit fell to 5.42 million euros from 7.46 million euros"
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "This acquisition-related gain is excluded from EBITDA metrics but flows directly into net profit, where management plans to realize future operational synergies.",
+        "label": "SUPPORTED",
+        "source_evidence": "In Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5 related to the acquisition of Marijampolės pieno konservai UAB."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Capital investment and financing activities materially altered the financial position.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net cash flows generated from(used in) financing activities: 15,836 thousand EUR... Net cash flows (used in) investing activities: -8,037 thousand EUR... Net increase(decrease) in cash and cash equivalents: -1,834 thousand EUR"
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "These investments coincide with the official commencement of commercial cheese production at the new Baltic Dairy Board SIA facility in Bauska, Latvia.",
+        "label": "SUPPORTED",
+        "source_evidence": "VILVI Group has started commercial cheese production in Latvia... Cheese production has officially commenced at the new VILVI Group cheese factory, Baltic Dairy Board SIA, in Bauska, Latvia"
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The new factory targets an annual capacity of 18,000 tons for export to over forty countries and recently secured third place in the 2025 Latvian Construction Awards.",
+        "label": "SUPPORTED",
+        "source_evidence": "planned cheese production volumes will reach 18 thousand tons per year... These products will be exported to more than 40 countries worldwide... The factory won an honorable 3rd place in the category “Production Facility / Industrial Building.”"
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The reporting period fundamentally reflects a strategic shift toward scaled manufacturing and portfolio consolidation, where volume-driven revenue growth and acquisition accounting benefits currently support headline profitability even as near-term operational margins and leverage face headwinds from expansion costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Following the acquisition of Marijampolės pieno konservai UAB... There are also plans to further increase the capacity of the largest whey processing line... New cheese factory... Discontinuation of transparent plastic lids... Increased net financial debt... Significant capital investments in property, plant and equipment"
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "VILVI Group reported consolidated revenue of 86.97 million euros in Q1 2026",
+        "candidate_value": "86.97 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "86,970 thousand EUR",
+        "source_evidence": "Revenue, thousands EUR|Q1 2026|86,970",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Revenue from fresh milk products rose 73.4 percent",
+        "candidate_value": "73.4%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "73.4%",
+        "source_evidence": "Fresh milk products|Change in 2026/2025|73.4%",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Dry milk products increased 126.9 percent",
+        "candidate_value": "126.9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "126.9%",
+        "source_evidence": "Dry milk products|Change in 2026/2025|126.9%",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Newly consolidated canned milk segment contributed 11.92 million euros",
+        "candidate_value": "11.92 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11,923 thousand EUR",
+        "source_evidence": "Canned milk*|Q1 2026|11,923",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Lithuania sales surged 72.9 percent",
+        "candidate_value": "72.9%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "72.9%",
+        "source_evidence": "Lithuania|Change in 2026/2025|72.9%",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Other countries sales advanced 46.6 percent",
+        "candidate_value": "46.6%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "46.6%",
+        "source_evidence": "Other countries|Change in 2026/2025|46.6%",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "European Union sales remained flat",
+        "candidate_value": "0%",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "0.6%",
+        "source_evidence": "European Union|Change in 2026/2025|0.6%",
+        "error_explanation": "Source reports EU sales increased 0.6%, not flat"
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Group procured 155,954 tons of basic indicator milk, up 54.2 percent",
+        "candidate_value": "155,954 tons (54.2% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "155,954 tons (54.2% increase)",
+        "source_evidence": "Purchased basic indicators milk,in tons|Q1 2026|155,954|Change in 2026/2025|54.2%",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "EBITDA declined 50.2 percent to 3.00 million euros",
+        "candidate_value": "3.00 million EUR (50.2% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,003 thousand EUR (50.2% decrease)",
+        "source_evidence": "EBITDA,thousands EUR|Q1 2026|3,003|Change in 2026/2025|-50.2%",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Gross profit fell to 5.42 million euros from 7.46 million euros",
+        "candidate_value": "5.42 million EUR (from 7.46 million EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,420 thousand EUR (from 7,459 thousand EUR)",
+        "source_evidence": "Gross profit|Q1 2026|5,420|Q1 2025|7,459",
+        "error_explanation": null
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Distribution and administrative expenses more than doubled as the company scaled operations",
+        "candidate_value": ">100% increase",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "Distribution expenses: -2,510 thousand EUR (2026) vs -1,529 thousand EUR (2025) => 64% increase; Administrative expenses: -2,399 thousand EUR (2026) vs -1,220 thousand EUR (2025) => 97% increase",
+        "source_evidence": "Distribution expenses|Q1 2026|-2,510|Q1 2025|-1,529... Administrative expenses|Q1 2026|-2,399|Q1 2025|-1,220",
+        "error_explanation": "Expenses increased but did not double"
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net profit increased 25.7 percent to 5.09 million euros",
+        "candidate_value": "5.09 million EUR (25.7% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,085 thousand EUR (25.7% increase)",
+        "source_evidence": "Net profit (loss),thousands EUR|Q1 2026|5,085|Change in 2026/2025|25.7%",
+        "error_explanation": null
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Earnings per share of 0.43 euros",
+        "candidate_value": "0.43 EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.43 EUR",
+        "source_evidence": "Profit (loss) per share,EUR|Q1 2026|0.43",
+        "error_explanation": null
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Preliminary negative goodwill of 5.5 million euros from acquisition",
+        "candidate_value": "5.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.5 million EUR",
+        "source_evidence": "During Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5 related to the acquisition",
+        "error_explanation": null
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net financial debt surged 89.7 percent to 83.43 million euros",
+        "candidate_value": "83.43 million EUR (89.7% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "83,427 thousand EUR (89.7% increase)",
+        "source_evidence": "Net financial debt,thousands EUR|Q1 2026|83,427|Change in 2026/2025|89.7%",
+        "error_explanation": null
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Funded through increased borrowings accompanying 4.52 million euros in capital expenditures",
+        "candidate_value": "4.52 million EUR capex",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4,518 thousand EUR",
+        "source_evidence": "Payments for acquisition of property, plant and equipment|Q1 2026|-4,518",
+        "error_explanation": null
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "New factory targets annual capacity of 18,000 tons",
+        "candidate_value": "18,000 tons/year",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "18 thousand tons per year",
+        "source_evidence": "planned cheese production volumes will reach 18 thousand tons per year",
+        "error_explanation": null
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Export to over forty countries",
+        "candidate_value": ">40 countries",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "more than 40 countries worldwide",
+        "source_evidence": "These products will be exported to more than 40 countries worldwide",
+        "error_explanation": null
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Total assets expanded to 220.31 million euros",
+        "candidate_value": "220.31 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "220,311 thousand EUR",
+        "source_evidence": "Total assets|31/03/2026|220,311",
+        "error_explanation": null
+      },
+      {
+        "id": "N20",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Cash reserves contracted to 951 thousand euros",
+        "candidate_value": "951 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "951 thousand EUR",
+        "source_evidence": "Cash and cash equivalents|31/03/2026|951",
+        "error_explanation": null
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S13",
+      "S16"
+    ],
+    "covered_sentence_ids": [
+      "S1",
+      "S3",
+      "S4",
+      "S5",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S13",
+      "S15",
+      "S16"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

@@ -1,0 +1,458 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:59:15.357132",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\normal__report_quarterly_2_chain_of_event_qwen36__numerical_corruption.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "9b39e18ca663b807",
+    "sentence_map_hash": "6f9a159c017267b8",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_2.md",
+    "source_hash": "e77ff7c2e28e0d43",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AB Amber Grid reported a significant improvement in financial performance for the three-month period ended 30 June 2026.",
+    "S2": "Revenue increased by 68% to EUR 42,821 thousand, compared to EUR 20,763 thousand in the same period of 2025.",
+    "S3": "This growth was primarily driven by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.",
+    "S4": "Conversely, revenue from system balancing products decreased by 89% to EUR 240 thousand, a change attributed to a new transit agreement with Kaliningrad that significantly reduced the need for balancing gas.",
+    "S5": "Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 10,570 thousand, largely due to a 68% drop in natural gas costs.",
+    "S6": "Purchases of natural gas and related services fell to EUR 1,477 thousand from EUR 4,622 thousand in the prior year period.",
+    "S7": "Consequently, EBITDA surged to EUR 33,304 thousand, up from EUR 8,918 thousand in 2025.",
+    "S8": "Operating profit (EBIT) also improved substantially, reaching EUR 19,627 thousand compared to EUR 5,185 thousand in the previous year.",
+    "S9": "Net profit for the quarter was EUR 15,763 thousand, a marked increase from EUR 4,239 thousand in 2025.",
+    "S10": "Earnings per share rose to EUR 0.19 from EUR 0.02.",
+    "S11": "The company’s adjusted EBITDA was EUR 8,285 thousand, reflecting temporary regulatory differences.",
+    "S12": "On the balance sheet, total assets stood at EUR 324,064 thousand, while total equity increased to EUR 182,039 thousand from EUR 166,276 thousand at the end of 2025.",
+    "S13": "Net debt increased to EUR 106,610 thousand from EUR 76,052 thousand in the prior year period, influenced by changes in borrowings.",
+    "S14": "The company reclassified certain long-term borrowings to current liabilities in late 2025 due to covenant issues, but these were reclassified back to non-current in February 2026 following a loan transfer agreement with EPSO-G.",
+    "S15": "Cash and cash equivalents decreased to EUR 832 thousand from EUR 1,942 thousand at year-end 2025.",
+    "S16": "The company continues to manage a legal dispute regarding guarantee funds for the GIPL pipeline, with a provision of EUR 5,815 thousand recognized for potential repayment.",
+    "S17": "In April 2026, the General Meeting of Shareholders approved a dividend distribution of EUR 19,989 thousand."
+  },
+  "usage": {
+    "input_tokens": 43950,
+    "output_tokens_including_reasoning": 5241,
+    "total_tokens": 49191
+  },
+  "latency_seconds": 26.39,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"AB Amber Grid reported a significant improvement in financial performance for the three-month period ended 30 June 2026.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"The SOURCE reports financial statements for the period ended 31 March 2026, not 30 June 2026.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"This growth was primarily driven by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 25 states: 'As of 31 March 2026 revenue from natural gas transmission and related services increased by 58%, compared to the corresponding period in 2025. The increase in revenue was influenced by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.'\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Revenue from system balancing products decreased by 89% to EUR 240 thousand, a change attributed to a new transit agreement with Kaliningrad that significantly reduced the need for balancing gas.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 25 states revenue from system balancing products decreased by 99% to EUR 24 thousand due to a new transit agreement with Kaliningrad. Note 27 confirms the decrease was driven by reduced need for balancing gas.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 10,570 thousand, largely due to a 68% drop in natural gas costs.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 27 states natural gas costs decreased by 68% (from EUR 4,622k to EUR 1,477k). Note 4 shows operating expenses excluding non-cash items were EUR 9,570k (down 19% from EUR 11,867k in 2025).\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"The company reclassified certain long-term borrowings to current liabilities in late 2025 due to covenant issues, but these were reclassified back to non-current in February 2026 following a loan transfer agreement with EPSO-G.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 18 details reclassification of borrowings to current liabilities as of 31 December 2025 due to covenant breaches, with reclassification back to non-current after a loan transfer agreement effective 25 February 2026.\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"The company continues to manage a legal dispute regarding guarantee funds for the GIPL pipeline, with a provision of EUR 5,815 thousand recognized for potential repayment.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 21 and Note 34 describe the legal dispute over guarantee funds and confirm a provision of EUR 5,815k for potential repayment is recognized.\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Revenue increased by 68% to EUR 42,821 thousand, compared to EUR 20,763 thousand in the same period of 2025.\",\n      \"candidate_value\": \"42,821\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"32,821\",\n      \"source_evidence\": \"Note 25 shows revenue for the period ended 31 March 2026 was EUR 32,821k (up 58% from EUR 20,763k in 2025), not 68% to EUR 42,821k.\",\n      \"error_explanation\": \"Incorrect revenue amount and growth percentage.\"\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Revenue from system balancing products decreased by 89% to EUR 240 thousand\",\n      \"candidate_value\": \"240\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"24\",\n      \"source_evidence\": \"Note 25 states system balancing revenue was EUR 24k in 2026 (down 99% from EUR 4,403k in 2025).\",\n      \"error_explanation\": \"Incorrect magnitude of decrease and revenue amount.\"\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 10,570 thousand\",\n      \"candidate_value\": \"10,570\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"9,570\",\n      \"source_evidence\": \"Note 4 shows operating expenses excluding non-cash items were EUR 9,570k (down 19% from EUR 11,867k in 2025).\",\n      \"error_explanation\": \"Incorrect operating expenses amount.\"\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Purchases of natural gas and related services fell to EUR 1,477 thousand from EUR 4,622 thousand in the prior year period\",\n      \"candidate_value\": \"1,477\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"1,477\",\n      \"source_evidence\": \"Note 27 confirms natural gas costs were (EUR 1,477k) in 2026 vs (EUR 4,622k) in 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"EBITDA surged to EUR 33,304 thousand, up from EUR 8,918 thousand in 2025\",\n      \"candidate_value\": \"33,304\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"23,304\",\n      \"source_evidence\": \"Note 4 shows EBITDA was EUR 23,304k in 2026 vs EUR 8,918k in 2025.\",\n      \"error_explanation\": \"Incorrect EBITDA amount.\"\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Operating profit (EBIT) also improved substantially, reaching EUR 19,627 thousand compared to EUR 5,185 thousand in the previous year\",\n      \"candidate_value\": \"19,627\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"19,627\",\n      \"source_evidence\": \"Note 4 confirms EBIT was EUR 19,627k in 2026 vs EUR 5,185k in 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Net profit for the quarter was EUR 15,763 thousand, a marked increase from EUR 4,239 thousand in 2025\",\n      \"candidate_value\": \"15,763\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"15,763\",\n      \"source_evidence\": \"Note 4 shows net profit was EUR 15,763k in 2026 vs EUR 4,239k in 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"Earnings per share rose to EUR 0.19 from EUR 0.02\",\n      \"candidate_value\": \"0.19\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"0.09\",\n      \"source_evidence\": \"Note 33 shows EPS was EUR 0.09 in 2026 vs EUR 0.02 in 2025.\",\n      \"error_explanation\": \"EPS is double the reported value.\"\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The company’s adjusted EBITDA was EUR 8,285 thousand, reflecting temporary regulatory differences\",\n      \"candidate_value\": \"8,285\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"8,285\",\n      \"source_evidence\": \"Note 4 shows adjusted EBITDA for 2026 was EUR 8,285k.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Total assets stood at EUR 324,064 thousand, while total equity increased to EUR 182,039 thousand from EUR 166,276 thousand at the end of 2025\",\n      \"candidate_value\": \"324,064\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"324,064\",\n      \"source_evidence\": \"Statement of financial position confirms total assets were EUR 324,064k and equity was EUR 182,039k vs EUR 166,276k.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Net debt increased to EUR 106,610 thousand from EUR 76,052 thousand in the prior year period\",\n      \"candidate_value\": \"106,610\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"106,610\",\n      \"source_evidence\": \"Note 20 shows net debt was EUR (106,610k) as at 31 March 2026 vs EUR (76,052k) as at 31 March 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Cash and cash equivalents decreased to EUR 832 thousand from EUR 1,942 thousand at year-end 2025\",\n      \"candidate_value\": \"832\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"832\",\n      \"source_evidence\": \"Note 13 shows cash and cash equivalents were EUR 832k as at 31 March 2026 vs EUR 1,942k as at 31 December 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Provision of EUR 5,815 thousand recognized for potential repayment\",\n      \"candidate_value\": \"5,815\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"5,815\",\n      \"source_evidence\": \"Note 21 and Note 34 confirm a provision of EUR 5,815k for potential repayment of guarantee funds.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Dividend distribution of EUR 19,989 thousand\",\n      \"candidate_value\": \"19,989\",\n      \"label\": \"INCORRECT\",\n      \"error_type\": \"INCORRECT_VALUE\",\n      \"source_value\": \"9,989\",\n      \"source_evidence\": \"Note 36 states the General Meeting approved a dividend distribution of EUR 9,989k (EUR 0.0560 per share).\",\n      \"error_explanation\": \"Dividend amount is double the reported value.\"\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AB Amber Grid reported a significant improvement in financial performance for the three-month period ended 30 June 2026.",
+        "label": "CONTRADICTED",
+        "source_evidence": "The SOURCE reports financial statements for the period ended 31 March 2026, not 30 June 2026."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This growth was primarily driven by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 25 states: 'As of 31 March 2026 revenue from natural gas transmission and related services increased by 58%, compared to the corresponding period in 2025. The increase in revenue was influenced by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.'"
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Revenue from system balancing products decreased by 89% to EUR 240 thousand, a change attributed to a new transit agreement with Kaliningrad that significantly reduced the need for balancing gas.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 25 states revenue from system balancing products decreased by 99% to EUR 24 thousand due to a new transit agreement with Kaliningrad. Note 27 confirms the decrease was driven by reduced need for balancing gas."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 10,570 thousand, largely due to a 68% drop in natural gas costs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 27 states natural gas costs decreased by 68% (from EUR 4,622k to EUR 1,477k). Note 4 shows operating expenses excluding non-cash items were EUR 9,570k (down 19% from EUR 11,867k in 2025)."
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The company reclassified certain long-term borrowings to current liabilities in late 2025 due to covenant issues, but these were reclassified back to non-current in February 2026 following a loan transfer agreement with EPSO-G.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 18 details reclassification of borrowings to current liabilities as of 31 December 2025 due to covenant breaches, with reclassification back to non-current after a loan transfer agreement effective 25 February 2026."
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company continues to manage a legal dispute regarding guarantee funds for the GIPL pipeline, with a provision of EUR 5,815 thousand recognized for potential repayment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 21 and Note 34 describe the legal dispute over guarantee funds and confirm a provision of EUR 5,815k for potential repayment is recognized."
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Revenue increased by 68% to EUR 42,821 thousand, compared to EUR 20,763 thousand in the same period of 2025.",
+        "candidate_value": "42,821",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "32,821",
+        "source_evidence": "Note 25 shows revenue for the period ended 31 March 2026 was EUR 32,821k (up 58% from EUR 20,763k in 2025), not 68% to EUR 42,821k.",
+        "error_explanation": "Incorrect revenue amount and growth percentage."
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Revenue from system balancing products decreased by 89% to EUR 240 thousand",
+        "candidate_value": "240",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "24",
+        "source_evidence": "Note 25 states system balancing revenue was EUR 24k in 2026 (down 99% from EUR 4,403k in 2025).",
+        "error_explanation": "Incorrect magnitude of decrease and revenue amount."
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses excluding depreciation, impairment, and write-offs decreased by 19% to EUR 10,570 thousand",
+        "candidate_value": "10,570",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "9,570",
+        "source_evidence": "Note 4 shows operating expenses excluding non-cash items were EUR 9,570k (down 19% from EUR 11,867k in 2025).",
+        "error_explanation": "Incorrect operating expenses amount."
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Purchases of natural gas and related services fell to EUR 1,477 thousand from EUR 4,622 thousand in the prior year period",
+        "candidate_value": "1,477",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,477",
+        "source_evidence": "Note 27 confirms natural gas costs were (EUR 1,477k) in 2026 vs (EUR 4,622k) in 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "EBITDA surged to EUR 33,304 thousand, up from EUR 8,918 thousand in 2025",
+        "candidate_value": "33,304",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "23,304",
+        "source_evidence": "Note 4 shows EBITDA was EUR 23,304k in 2026 vs EUR 8,918k in 2025.",
+        "error_explanation": "Incorrect EBITDA amount."
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operating profit (EBIT) also improved substantially, reaching EUR 19,627 thousand compared to EUR 5,185 thousand in the previous year",
+        "candidate_value": "19,627",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,627",
+        "source_evidence": "Note 4 confirms EBIT was EUR 19,627k in 2026 vs EUR 5,185k in 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net profit for the quarter was EUR 15,763 thousand, a marked increase from EUR 4,239 thousand in 2025",
+        "candidate_value": "15,763",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15,763",
+        "source_evidence": "Note 4 shows net profit was EUR 15,763k in 2026 vs EUR 4,239k in 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Earnings per share rose to EUR 0.19 from EUR 0.02",
+        "candidate_value": "0.19",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "0.09",
+        "source_evidence": "Note 33 shows EPS was EUR 0.09 in 2026 vs EUR 0.02 in 2025.",
+        "error_explanation": "EPS is double the reported value."
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The company’s adjusted EBITDA was EUR 8,285 thousand, reflecting temporary regulatory differences",
+        "candidate_value": "8,285",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8,285",
+        "source_evidence": "Note 4 shows adjusted EBITDA for 2026 was EUR 8,285k.",
+        "error_explanation": null
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets stood at EUR 324,064 thousand, while total equity increased to EUR 182,039 thousand from EUR 166,276 thousand at the end of 2025",
+        "candidate_value": "324,064",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "324,064",
+        "source_evidence": "Statement of financial position confirms total assets were EUR 324,064k and equity was EUR 182,039k vs EUR 166,276k.",
+        "error_explanation": null
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt increased to EUR 106,610 thousand from EUR 76,052 thousand in the prior year period",
+        "candidate_value": "106,610",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "106,610",
+        "source_evidence": "Note 20 shows net debt was EUR (106,610k) as at 31 March 2026 vs EUR (76,052k) as at 31 March 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Cash and cash equivalents decreased to EUR 832 thousand from EUR 1,942 thousand at year-end 2025",
+        "candidate_value": "832",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "832",
+        "source_evidence": "Note 13 shows cash and cash equivalents were EUR 832k as at 31 March 2026 vs EUR 1,942k as at 31 December 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Provision of EUR 5,815 thousand recognized for potential repayment",
+        "candidate_value": "5,815",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,815",
+        "source_evidence": "Note 21 and Note 34 confirm a provision of EUR 5,815k for potential repayment of guarantee funds.",
+        "error_explanation": null
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Dividend distribution of EUR 19,989 thousand",
+        "candidate_value": "19,989",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_VALUE",
+        "source_value": "9,989",
+        "source_evidence": "Note 36 states the General Meeting approved a dividend distribution of EUR 9,989k (EUR 0.0560 per share).",
+        "error_explanation": "Dividend amount is double the reported value."
+      },
+      {
+        "claim": "35% increase in the volume of natural gas transmitted",
+        "candidate_value": "35%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "35%",
+        "source_evidence": "Note 25: 'As of 31 March 2026 revenue from natural gas transmission and related services increased by 58%, compared to the corresponding period in 2025. The increase in revenue was influenced by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "id": "N15"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S17"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S15",
+      "S16",
+      "S17"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S3\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains a verifiable percentage claim (35% increase in natural gas transmission volume) explicitly referenced in the source\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"35% increase in the volume of natural gas transmitted\",\n          \"candidate_value\": \"35%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"35%\",\n          \"source_evidence\": \"Note 25: 'As of 31 March 2026 revenue from natural gas transmission and related services increased by 58%, compared to the corresponding period in 2025. The increase in revenue was influenced by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.'\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S3",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains a verifiable percentage claim (35% increase in natural gas transmission volume) explicitly referenced in the source",
+          "numerical_claims": [
+            {
+              "claim": "35% increase in the volume of natural gas transmitted",
+              "candidate_value": "35%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "35%",
+              "source_evidence": "Note 25: 'As of 31 March 2026 revenue from natural gas transmission and related services increased by 58%, compared to the corresponding period in 2025. The increase in revenue was influenced by a 35% increase in the volume of natural gas transmitted and higher transmission prices set for 2026.'",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 21438,
+      "output_tokens_including_reasoning": 620,
+      "total_tokens": 22058
+    }
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

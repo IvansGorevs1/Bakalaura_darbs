@@ -1,0 +1,861 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_6_few_shot_gemini.txt",
+    "report": "report_annual_6.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Gigasun AB experienced continued operational growth and improved underlying profitability during the 2025 financial year amid a shifting market environment in China.",
+    "S2": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year.",
+    "S3": "Net revenue, which stems primarily from electricity sales and accounted for 85 percent of total revenue, grew by 9.9 percent to SEK 203.2 million from SEK 184.8 million.",
+    "S4": "Other operating income, largely comprising government and regional subsidies, rose to SEK 36.5 million from SEK 33.5 million.",
+    "S5": "Top-line growth was driven by higher production volumes, though partially dampened by negative currency effects and lower average electricity prices following regional tariff adjustments and a higher share of surplus electricity sold to the grid.",
+    "S6": "Operational profitability strengthened during the period.",
+    "S7": "Gross profit rose to SEK 195.8 million, maintaining a gross margin of 82 percent.",
+    "S8": "Earnings before interest, taxes, depreciation, and amortization increased to SEK 163.7 million, yielding an EBITDA margin of 68 percent compared with 67 percent previously.",
+    "S9": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent.",
+    "S10": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year.",
+    "S11": "Earnings per share improved to SEK -0.13 compared with SEK -0.58.",
+    "S12": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations.",
+    "S13": "Total electricity generated during the year increased to 327.8 million kilowatt-hours.",
+    "S14": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously.",
+    "S15": "Financial position and capital structure developments included significant refinancing activities.",
+    "S16": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities.",
+    "S17": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent.",
+    "S18": "Total interest-bearing debt decreased to SEK 1,382.6 million from SEK 1,483.1 million, and net interest-bearing debt stood at SEK 1,337.5 million.",
+    "S19": "Equity declined to SEK 488.2 million from SEK 577.3 million, resulting in an equity ratio of 21 percent compared with 23 percent at the end of the previous year.",
+    "S20": "Cash and bank balances decreased to SEK 45.1 million from SEK 89.9 million, reflecting a total cash flow of SEK -34.9 million."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_6.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_6.json",
+    "key_information_hash": "cfa08f73bf36fbe1",
+    "key_information_units_total": 6
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 20,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 20
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 6
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Gigasun AB experienced continued operational growth and improved underlying profitability during the 2025 financial year amid a shifting market environment in China.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board of Directors' Report states operational growth with increased installed capacity (395.8 MW vs 340.1 MW) and improved profitability (EBIT increased to SEK 73.5M from 60.7M). Market and Trends section describes shifting environment with tariff adjustments and regulatory changes in China.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Gigasun AB experienced continued operational growth and improved underlying profitability during the 2025 financial year amid a shifting market environment in China."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Multi-year overview table shows total revenue of SEK 239,655K (239.7M) for 2025 vs SEK 218,264K (218.3M) for 2024, representing a 9.8% increase.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net revenue, which stems primarily from electricity sales and accounted for 85 percent of total revenue, grew by 9.9 percent to SEK 203.2 million from SEK 184.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Multi-year overview shows net revenue of SEK 203,179K (203.2M) for 2025 vs SEK 184,795K (184.8M) for 2024, a 9.9% increase. Definitions section confirms net revenue represents electricity sales.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net revenue, which stems primarily from electricity sales and accounted for 85 percent of total revenue, grew by 9.9 percent to SEK 203.2 million from SEK 184.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Other operating income, largely comprising government and regional subsidies, rose to SEK 36.5 million from SEK 33.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income Statement shows other operating income of SEK 36,476K (36.5M) for 2025 vs SEK 33,469K (33.5M) for 2024. Board report identifies subsidies as primary component.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Other operating income, largely comprising government and regional subsidies, rose to SEK 36.5 million from SEK 33.5 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Top-line growth was driven by higher production volumes, though partially dampened by negative currency effects and lower average electricity prices following regional tariff adjustments and a higher share of surplus electricity sold to the grid.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report attributes revenue growth to higher production (327.8M kWh vs 252.6M kWh) but notes dampening factors: currency effects (-SEK 18M), tariff adjustments, and increased grid sales reducing average prices.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Top-line growth was driven by higher production volumes, though partially dampened by negative currency effects and lower average electricity prices following regional tariff adjustments and a higher share of surplus electricity sold to the grid."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operational profitability strengthened during the period.",
+        "label": "SUPPORTED",
+        "source_evidence": "EBIT increased by 21.1% to SEK 73.5M from SEK 60.7M, with EBIT margin improving to 31% from 28% (Multi-year overview and Board report).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Operational profitability strengthened during the period."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Gross profit rose to SEK 195.8 million, maintaining a gross margin of 82 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income Statement shows gross profit of SEK 195,829K (195.8M) for 2025 with gross margin% at 82%, consistent with 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Gross profit rose to SEK 195.8 million, maintaining a gross margin of 82 percent."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization increased to SEK 163.7 million, yielding an EBITDA margin of 68 percent compared with 67 percent previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "Multi-year overview shows EBITDA of SEK 163,733K (163.7M) for 2025 vs SEK 145,760K (145.8M) for 2024, with EBITDA margin% increasing to 68% from 67%.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Earnings before interest, taxes, depreciation, and amortization increased to SEK 163.7 million, yielding an EBITDA margin of 68 percent compared with 67 percent previously."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Multi-year overview and Board report confirm EBIT increased to SEK 73,478K (73.5M) from SEK 60,677K (60.7M), a 21.1% increase, with operating margin improving to 31% from 28%.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income Statement shows profit after tax of SEK -7,206K (-7.2M) for 2025 vs SEK -32,944K (-32.9M) for 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Earnings per share improved to SEK -0.13 compared with SEK -0.58.",
+        "label": "SUPPORTED",
+        "source_evidence": "Earnings per share after dilution is reported as SEK -0.13 for both 2025 and 2024, but the text clarifies this reflects improved performance from SEK -0.58 in prior comparisons (Note 24).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Earnings per share improved to SEK -0.13 compared with SEK -0.58."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operations section states installed capacity of 395.8 MW (216 installations) at December 31, 2025, compared to 340.1 MW (200 installations) at end of 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total electricity generated during the year increased to 327.8 million kilowatt-hours.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report and Sustainability section state electricity generated was 327.8M kWh in 2025, up from 252.6M kWh in 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total electricity generated during the year increased to 327.8 million kilowatt-hours."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report states 17 contracts signed for 41.7 MW in 2025, with signed orders decreasing to 16.4 MW from 38.8 MW.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Financial position and capital structure developments included significant refinancing activities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report details refinancing agreements with Agricultural Bank Financial Leasing Co., Ltd and extension of SOLT4 bond as key financial developments.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Financial position and capital structure developments included significant refinancing activities."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report specifies SEK 1,242M refinancing with Agricultural Bank at 3.60% over 10 years, replacing previous higher-cost facilities.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Board report and Note 16 confirm SOLT4 bond extension to November 8, 2026, with interest rate of 14.25%.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Total interest-bearing debt decreased to SEK 1,382.6 million from SEK 1,483.1 million, and net interest-bearing debt stood at SEK 1,337.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Balance Sheet shows interest-bearing debt of SEK 1,382,613K (1,382.6M) vs SEK 1,483,061K (1,483.1M), with net interest-bearing debt at SEK 1,337,465K (1,337.5M).",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Total interest-bearing debt decreased to SEK 1,382.6 million from SEK 1,483.1 million, and net interest-bearing debt stood at SEK 1,337.5 million."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Equity declined to SEK 488.2 million from SEK 577.3 million, resulting in an equity ratio of 21 percent compared with 23 percent at the end of the previous year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Balance Sheet shows equity of SEK 488,201K (488.2M) vs SEK 577,336K (577.3M), with equity ratio declining to 21% from 23% (Balance Sheet and Definitions).",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Equity declined to SEK 488.2 million from SEK 577.3 million, resulting in an equity ratio of 21 percent compared with 23 percent at the end of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Cash and bank balances decreased to SEK 45.1 million from SEK 89.9 million, reflecting a total cash flow of SEK -34.9 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cash flow statement shows cash and bank balances of SEK 45,149K (45.1M) vs SEK 89,889K (89.9M), with total cash flow for the period at SEK -34,902K (-34.9M).",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Cash and bank balances decreased to SEK 45.1 million from SEK 89.9 million, reflecting a total cash flow of SEK -34.9 million."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year.",
+        "candidate_value": "239.7 million SEK (9.8% increase from 218.3 million SEK)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 239,655K (239.7M) for 2025 vs SEK 218,264K (218.3M) for 2024",
+        "source_evidence": "Multi-year overview table in Financial Reporting section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net revenue, which stems primarily from electricity sales and accounted for 85 percent of total revenue, grew by 9.9 percent to SEK 203.2 million from SEK 184.8 million.",
+        "candidate_value": "203.2 million SEK (9.9% increase from 184.8 million SEK, 85% of total revenue)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 203,179K (203.2M) for 2025 vs SEK 184,795K (184.8M) for 2024 (9.9% increase), representing 85% of total revenue",
+        "source_evidence": "Multi-year overview table and Definitions section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net revenue, which stems primarily from electricity sales and accounted for 85 percent of total revenue, grew by 9.9 percent to SEK 203.2 million from SEK 184.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Other operating income, largely comprising government and regional subsidies, rose to SEK 36.5 million from SEK 33.5 million.",
+        "candidate_value": "36.5 million SEK from 33.5 million SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 36,476K (36.5M) for 2025 vs SEK 33,469K (33.5M) for 2024",
+        "source_evidence": "Income Statement in Financial Reporting section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Other operating income, largely comprising government and regional subsidies, rose to SEK 36.5 million from SEK 33.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Gross profit rose to SEK 195.8 million, maintaining a gross margin of 82 percent.",
+        "candidate_value": "195.8 million SEK (82% gross margin)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 195,829K (195.8M) gross profit with 82% gross margin",
+        "source_evidence": "Income Statement and Definitions section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Gross profit rose to SEK 195.8 million, maintaining a gross margin of 82 percent."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization increased to SEK 163.7 million, yielding an EBITDA margin of 68 percent compared with 67 percent previously.",
+        "candidate_value": "163.7 million SEK (68% EBITDA margin vs 67% prior)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 163,733K (163.7M) EBITDA with 68% margin vs SEK 145,760K (145.8M) and 67% margin in 2024",
+        "source_evidence": "Multi-year overview table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Earnings before interest, taxes, depreciation, and amortization increased to SEK 163.7 million, yielding an EBITDA margin of 68 percent compared with 67 percent previously."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent.",
+        "candidate_value": "73.5 million SEK (21.1% increase from 60.7 million SEK, 31% margin vs 28%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 73,478K (73.5M) EBIT vs SEK 60,677K (60.7M) in 2024 (21.1% increase), with EBIT margin at 31% vs 28%",
+        "source_evidence": "Multi-year overview table and Board report",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year.",
+        "candidate_value": "-7.2 million SEK loss vs -32.9 million SEK loss",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -7,206K (-7.2M) profit after tax for 2025 vs SEK -32,944K (-32.9M) for 2024",
+        "source_evidence": "Income Statement in Financial Reporting section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Earnings per share improved to SEK -0.13 compared with SEK -0.58.",
+        "candidate_value": "-0.13 SEK EPS vs -0.58 SEK EPS",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EPS after dilution: SEK -0.13 for 2025 vs SEK -0.58 for 2024 (Note 24)",
+        "source_evidence": "Note 24: Earnings per share",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Earnings per share improved to SEK -0.13 compared with SEK -0.58."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations.",
+        "candidate_value": "395.8 MW (216 installations) vs 340.1 MW (200 installations)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "395.8 MW (216 installations) at December 31, 2025 vs 340.1 MW (200 installations) at December 31, 2024",
+        "source_evidence": "Operations section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total electricity generated during the year increased to 327.8 million kilowatt-hours.",
+        "candidate_value": "327.8 million kWh",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "327.8M kWh generated in 2025",
+        "source_evidence": "Board report and Sustainability section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total electricity generated during the year increased to 327.8 million kilowatt-hours."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously.",
+        "candidate_value": "17 contracts (41.7 MW) signed in 2025, 16.4 MW in signed orders vs 38.8 MW prior",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17 contracts for 41.7 MW signed in 2025, with 16.4 MW in signed orders at year-end vs 38.8 MW at end of 2024",
+        "source_evidence": "Board report",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities.",
+        "candidate_value": "SEK 1,242 million refinanced at 3.60% over 10 years",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 1,242M (CNY 880M) refinanced with Agricultural Bank at 3.60% over 10 years",
+        "source_evidence": "Board report",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent.",
+        "candidate_value": "SOLT4 bond extended to Nov 8, 2026 at 14.25% interest",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SOLT4 bond extended to November 8, 2026 with interest rate of 14.25%",
+        "source_evidence": "Board report and Note 16",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Total interest-bearing debt decreased to SEK 1,382.6 million from SEK 1,483.1 million, and net interest-bearing debt stood at SEK 1,337.5 million.",
+        "candidate_value": "1,382.6 million SEK debt down from 1,483.1 million SEK, net debt at 1,337.5 million SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Interest-bearing debt: SEK 1,382,613K (1,382.6M) vs SEK 1,483,061K (1,483.1M); Net interest-bearing debt: SEK 1,337,465K (1,337.5M)",
+        "source_evidence": "Balance Sheet and Definitions section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Total interest-bearing debt decreased to SEK 1,382.6 million from SEK 1,483.1 million, and net interest-bearing debt stood at SEK 1,337.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Equity declined to SEK 488.2 million from SEK 577.3 million, resulting in an equity ratio of 21 percent compared with 23 percent at the end of the previous year.",
+        "candidate_value": "488.2 million SEK equity (21% ratio) vs 577.3 million SEK (23% ratio)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Equity: SEK 488,201K (488.2M) vs SEK 577,336K (577.3M); Equity ratio: 21% vs 23%",
+        "source_evidence": "Balance Sheet and Definitions section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Equity declined to SEK 488.2 million from SEK 577.3 million, resulting in an equity ratio of 21 percent compared with 23 percent at the end of the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Cash and bank balances decreased to SEK 45.1 million from SEK 89.9 million, reflecting a total cash flow of SEK -34.9 million.",
+        "candidate_value": "45.1 million SEK cash vs 89.9 million SEK, cash flow of -34.9 million SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Cash and bank balances: SEK 45,149K (45.1M) vs SEK 89,889K (89.9M); Total cash flow for period: SEK -34,902K (-34.9M)",
+        "source_evidence": "Cash flow statement and Note 13",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Cash and bank balances decreased to SEK 45.1 million from SEK 89.9 million, reflecting a total cash flow of SEK -34.9 million."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Gigasun's installed solar capacity increased to 395.8 MW from 340.1 MW, representing a 16% year-over-year growth and expanding its portfolio to 216 electricity-generating installations.",
+        "importance": "HIGH",
+        "source_evidence": "On 31 December 2025, Gigasun had a portfolio of 216 (200) electricity-generating solar energy installations with a total capacity of 395.8 (340.1) MW.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company’s portfolio expansion continued, with total installed and revenue-generating capacity reaching 395.8 megawatts across 216 installations at year-end, up from 340.1 megawatts and 200 installations."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Gigasun reported revenue of SEK 239.7 million (up 9.8% YoY) and operating profit of SEK 73.5 million (up 21.1% YoY). Net profit was SEK -7.2 million, impacted by a SEK 3.8 million currency effect and SEK 3.5 million one-off cost; excluding these items, adjusted net profit was SEK 0.1 million. The full-year profit increase was significantly driven by a record Q3 with production up 36% and profit up 275% compared to Q3 2024.",
+        "importance": "HIGH",
+        "source_evidence": "Revenues amounted to SEK 239.7 (218.3) million... Operating profit amounted to SEK 73.5 (60.7) million... Profit after tax amounted to SEK -7.2 (-32.9) million and were impacted by a non-cash currency effect of SEK -3.8 (1.8) million as well as a one-off cost of SEK 3.5 million... The most notable development during the year was our record quarter in Q3. Production increased by 36 percent and profit rose by as much as 275 percent compared with the same period the previous year.",
+        "origin_draft_ids": [
+          "D2",
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Total revenue for the group increased by 9.8 percent to SEK 239.7 million compared with SEK 218.3 million in the previous year."
+          },
+          {
+            "id": "S9",
+            "text": "Operating profit grew by 21.1 percent to SEK 73.5 million from SEK 60.7 million, with the operating margin improving to 31 percent from 28 percent."
+          },
+          {
+            "id": "S10",
+            "text": "The group reported a net loss after tax of SEK 7.2 million, representing a substantial improvement compared with the net loss of SEK 32.9 million recorded in the preceding year."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "The company secured new financing of SEK 372 million through its Chinese subsidiary, extended loan amortization to 10 years at improved rates (3.60%), and postponed the SOLT4 bond repayment to November 8, 2026, enhancing liquidity and reducing financing costs.",
+        "importance": "HIGH",
+        "source_evidence": "The company has entered into two agreements with the Chinese company Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 millions... The interest rate on the new financing is 3.60% and the amortization period has been extended from 7 to 10 years... The remaining bond, SOLT4, has been extended to November 8, 2026.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The company expanded agreements with Agricultural Bank Financial Leasing Co., Ltd to refinance approximately SEK 1,242 million in total, extending amortization periods to ten years at a 3.60 percent interest rate to replace higher-cost facilities."
+          },
+          {
+            "id": "S17",
+            "text": "The remaining SOLT4 bond was successfully extended to November 8, 2026, carrying an interest rate of 14.25 percent."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Gigasun expanded into new regions such as Chongqing where declining construction costs now make solar viable, while navigating regulatory tariff adjustments in Jiangsu and Anhui provinces that reduced realized kWh prices by approximately 8% in H2 2025, impacting revenue by an estimated 3-4%.",
+        "importance": "HIGH",
+        "source_evidence": "Our geographical expansion also continues... expanded into Chongqing... electricity tariffs in the Jiangsu and Anhui provinces were adjusted... reduced the realized price per kWh by approximately 8 percent in the second half of the year... impact on our existing project portfolio is manageable and amounts to approximately a 3–4 percent reduction in revenue.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Total electricity production reached 327.8 million kWh in 2025 (up 30% YoY), reducing CO2 emissions by approximately 161,000 tonnes (vs 124,000 tonnes in 2024), contributing to China's climate transition.",
+        "importance": "HIGH",
+        "source_evidence": "During the year, 327.8 (252.6) million kWh were generated, reducing CO2-related emissions by approximately 161,000 (124,000) tonnes.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total electricity generated during the year increased to 327.8 million kilowatt-hours."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "The company signed 17 contracts for 41.7 MW of new capacity in 2025 (down from 15 contracts for 56.6 MW in 2024), with signed orders standing at 16.4 MW at year-end (compared to 38.8 MW in 2024).",
+        "importance": "MEDIUM",
+        "source_evidence": "The Company signed 17 (15) contracts representing total installed capacity of 41.7 (56.6) MW. At the end of the year, the Company had 16.4 (38.8) MW in signed orders.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Order intake slowed, with the company signing 17 contracts representing 41.7 megawatts of capacity during the year, leaving 16.4 megawatts in signed orders at year-end compared with 38.8 megawatts previously."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4"
+    ],
+    "completeness_justification": "K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING because there is no mention of regional expansion into Chongqing, declining construction costs making solar viable, or the specific impact of regulatory tariff adjustments in Jiangsu and Anhui provinces that reduced realized kWh prices by approximately 8% in H2 2025. While S5 mentions 'lower average electricity prices following regional tariff adjustments,' it does not specify the locations, the 8% reduction, or the revenue impact of 3-4%, which are core components of K4. Therefore, the overall score is 3 (Generally yes) because most key information is covered, but a HIGH-priority criterion (K4) is missing.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support the overall narrative of operational growth and improved profitability. There are no self-contradictions, logical gaps, or organizational issues. The progression from revenue growth to profitability metrics, capacity expansion, and financial position changes forms a clear and consistent narrative. While there is a decrease in equity and cash balances, these are presented as factual outcomes without contradiction to other statements. The summary avoids unnecessary repetition and maintains a logical flow from operational performance to financial position."
+  },
+  "usage": {
+    "input_tokens_total": 66904,
+    "output_tokens_total_including_reasoning": 6650,
+    "total_tokens": 73554,
+    "latency_seconds_total": 33.26
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 127165,
+    "output_tokens_total_including_reasoning": 53528,
+    "total_tokens": 180693,
+    "latency_seconds_total": 178.06
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_6.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_6_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_6.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_6.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_6_few_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_6_few_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_6_few_shot_gemini.json"
+    }
+  }
+}

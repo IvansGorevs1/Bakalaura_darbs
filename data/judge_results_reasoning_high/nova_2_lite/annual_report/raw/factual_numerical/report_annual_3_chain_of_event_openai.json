@@ -1,0 +1,612 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:07:04.932382",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_3_chain_of_event_openai.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "be0be91985e63ec3",
+    "sentence_map_hash": "e46613e06dfae3c7",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_3.md",
+    "source_hash": "fbb5d20785c1b264",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Coop Pank delivered strong business growth in 2025, but profitability declined as falling interest rates reduced income.",
+    "S2": "Consolidated net profit was €28.7 million, down 11% from €32.2 million in 2024.",
+    "S3": "Total net operating income decreased 3% to €79.4 million, mainly because net interest income fell 6% to €73.3 million and the net interest margin narrowed from 3.8% to 3.0%.",
+    "S4": "The bank stated that the lower-interest environment was the main reason profit declined, as the 19% expansion in business volumes did not fully offset the pressure on interest income.",
+    "S5": "Net fee and commission income increased 4% to €4.5 million, while net other income rose from near zero to €1.5 million.",
+    "S6": "Operating expenses increased 2% to €41.5 million, causing the cost-to-income ratio to deteriorate from 49.6% to 52.3%.",
+    "S7": "Credit loss allowances improved, declining to €3.3 million from €4.6 million, while the effective tax rate rose to 17% from 12%, partly reflecting the increase in the advance income tax rate for credit institutions from 14% to 18%.",
+    "S8": "Return on equity fell from 16.2% to 12.9% and return on assets from 1.6% to 1.2%.",
+    "S9": "Business volumes expanded substantially amid the early recovery of the Estonian economy, declining Euribor rates and stronger confidence among businesses and households.",
+    "S10": "The customer base grew by 19,000, or 9%, to 227,000.",
+    "S11": "The net loan portfolio increased by €340 million, or 19%, to €2.11 billion, exceeding €2 billion for the first time.",
+    "S12": "Business loans grew 27% to €986 million and home loans increased 17% to €863 million.",
+    "S13": "Customer deposits rose 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%.",
+    "S14": "Management reported that loan quality remained at a low-risk level; Stage 3 gross exposures declined to €14.0 million from €14.8 million despite portfolio growth.",
+    "S15": "Funding was strengthened through the first €250 million covered-bond issuance under a €750 million programme, providing longer-term financing and allowing the bank to reduce more expensive term and foreign deposits.",
+    "S16": "An agreement with the European Investment Bank Group is expected to provide capital relief and enable up to €249 million of new business lending, although it was not yet effective and had no impact on 2025 results.",
+    "S17": "Equity rose to €234.5 million from €211.6 million.",
+    "S18": "Capital ratios declined as risk-weighted assets grew, with the CET1 ratio at 14.15% and total capital ratio at 18.54%, but all regulatory requirements were met.",
+    "S19": "The bank paid €7.2 million in dividends for 2024 and proposed a 2025 dividend of €0.065 per share, totaling €6.7 million."
+  },
+  "usage": {
+    "input_tokens": 202090,
+    "output_tokens_including_reasoning": 9703,
+    "total_tokens": 211793
+  },
+  "latency_seconds": 57.67,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"Coop Pank delivered strong business growth in 2025, but profitability declined as falling interest rates reduced income.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.'\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Consolidated net profit was €28.7 million, down 11% from €32.2 million in 2024.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Net profit 2025: 28.7 million, 2024: 32.2 million. Calculation: (32.2 - 28.7)/32.2 ≈ 11% decrease.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Total net operating income decreased 3% to €79.4 million, mainly because net interest income fell 6% to €73.3 million and the net interest margin narrowed from 3.8% to 3.0%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Total net operating income 2025: 79.4 million vs 2024: 81.9 million (~3% decrease). Net interest income 2025: 73.3 million vs 2024: 77.6 million (~6% decrease). Ratios table: NIM 2025: 3.0% vs 2024: 3.8%.\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"The bank stated that the lower-interest environment was the main reason profit declined, as the 19% expansion in business volumes did not fully offset the pressure on interest income.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.'\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Net fee and commission income increased 4% to €4.5 million, while net other income rose from near zero to €1.5 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Net fee and commission income 2025: 4.5 million vs 2024: 4.3 million (~4.65% increase). Net other income 2025: 1.5 million vs 2024: 0.0 million.\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operating expenses increased 2% to €41.5 million, causing the cost-to-income ratio to deteriorate from 49.6% to 52.3%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Operating expenses 2025: 41.5 million vs 2024: 40.6 million (~2.2% increase). Ratios table: Cost to income ratio 2025: 52.3% vs 2024: 49.6%.\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Credit loss allowances improved, declining to €3.3 million from €4.6 million, while the effective tax rate rose to 17% from 12%, partly reflecting the increase in the advance income tax rate for credit institutions from 14% to 18%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Credit loss allowance 2025: -3.3 million vs 2024: -4.6 million. Note 25: Effective tax rate 2025: 17% vs 2024: 12%. Note 25: Advance income tax rate increased from 14% to 18% in 2025.\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Return on equity fell from 16.2% to 12.9% and return on assets from 1.6% to 1.2%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Ratios table: ROE 2025: 12.9% vs 2024: 16.2%. ROA 2025: 1.2% vs 2024: 1.6%.\"\n    },\n    {\n      \"id\": \"F9\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"Business volumes expanded substantially amid the early recovery of the Estonian economy, declining Euribor rates and stronger confidence among businesses and households.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'In 2025, many macroeconomic indicators improved, and we entered the post-recession recovery phase... The decline and subsequent stabilization of interest rates increasingly translated into the loan market, improving confidence among both businesses and households.' Operating environment section discusses declining Euribor rates.\"\n    },\n    {\n      \"id\": \"F10\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"The customer base grew by 19,000, or 9%, to 227,000.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Increase in the number of customers section: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year.'\"\n    },\n    {\n      \"id\": \"F11\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The net loan portfolio increased by €340 million, or 19%, to €2.11 billion, exceeding €2 billion for the first time.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Net loan portfolio 2025: 2,114 million vs 2024: 1,774 million. Increase: 340 million (~19.15%). Managing Director´s Statement: 'For the first time in Coop Pank’s history, our loan portfolio exceeded €2 billion.'\"\n    },\n    {\n      \"id\": \"F12\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Business loans grew 27% to €986 million and home loans increased 17% to €863 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'The business loan portfolio grew the fastest, increasing by €207 million (+27%).' Note 4 Operating segments: Business loans (Corporate banking) 2025: 986.0 million vs 2024: 761.9 million (~29.4% increase, consistent with 27% reported growth). Note 11: Mortgage and other private loans 2025: 863.2 million vs 2024: 727.9 million (~18.5% increase, consistent with 17% reported growth).\"\n    },\n    {\n      \"id\": \"F13\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Customer deposits rose 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Increase in deposits section: 'Coop Pank’s deposits increased by 9% over the year, reaching 2.05 billion euros by the end of 2025. Term deposits increased by 8% over the year, while demand deposits increased by 11%.' Financial results table: Customer deposits and loans received 2025: 2,125 million vs 2024: 1,886 million (~12.6% increase; text reports 9% likely due to rounding).\"\n    },\n    {\n      \"id\": \"F14\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Management reported that loan quality remained at a low-risk level; Stage 3 gross exposures declined to €14.0 million from €14.8 million despite portfolio growth.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 2 Credit risk management: Maximum exposure to credit risk table shows Stage 3 gross exposures for loans to customers totalled €14,019 million (2025) vs €14,822 million (2024). Managing Director´s Statement: 'The loan portfolio’s quality remained at a low-risk level throughout the year.'\"\n    },\n    {\n      \"id\": \"F15\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Funding was strengthened through the first €250 million covered-bond issuance under a €750 million programme, providing longer-term financing and allowing the bank to reduce more expensive term and foreign deposits.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'In the first quarter of 2025, Coop Pank issued covered bonds on the Irish stock exchange for the first time, amounting to €250 million with a four-year maturity. This was the first tranche of a €750 million covered bond program... This stable long-term funding allowed the bank to begin intentionally reducing the volume of more expensive term and foreign deposits.' Note 17 details the covered bond issuance.\"\n    },\n    {\n      \"id\": \"F16\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"An agreement with the European Investment Bank Group is expected to provide capital relief and enable up to €249 million of new business lending, although it was not yet effective and had no impact on 2025 results.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Managing Director´s Statement: 'At the end of the year, Coop Pank entered into a guarantee agreement with the European Investment Bank Group... enabling the bank to issue up to €249 million in new loans to businesses... This is Coop Pank’s first synthetic securitization transaction... The capital relief accompanying the agreement enables the bank to issue new loans... The new funding will be directed toward projects in Estonia... This is Coop Pank’s first synthetic securitization transaction, and also the first such transaction in the Baltics... The capital relief accompanying the agreement enables the bank to issue new loans... The transaction had not yet become effective and had no impact on the financial results during the reporting period.'\"\n    },\n    {\n      \"id\": \"F17\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Equity rose to €234.5 million from €211.6 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Financial results table: Shareholders' equity 2025: 235 million vs 2024: 212 million (values reported in thousands; minor rounding difference).\"\n    },\n    {\n      \"id\": \"F18\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Capital ratios declined as risk-weighted assets grew, with the CET1 ratio at 14.15% and total capital ratio at 18.54%, but all regulatory requirements were met.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Capitalisation and risk positions table: CET1 capital ratio 2025: 14.15% vs 2024: 14.28%. Total capital ratio 2025: 18.54% vs 2024: 19.41%. Risk-weighted assets increased from 1,229,961 to 1,437,574. Text: 'As at 31.12.2025 and also as at 31.12.2024, the Group was in compliance with all regulatory capital requirements.'\"\n    },\n    {\n      \"id\": \"F19\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"The bank paid €7.2 million in dividends for 2024 and proposed a 2025 dividend of €0.065 per share, totaling €6.7 million.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Dividend policy section: 'On May 6, 2025, Coop Pank paid a dividend of €0.07 per share (net) from the profit earned in 2024, in the total net amount of €7,209 thousand euros.' Note 20: 'As of 31.12.2025 according to the dividend policy it is possible to pay out dividends to shareholders at a rate of €0.065 per share in the total net amount of €6,738 thousand euros.' Minor rounding differences exist but figures are consistent.\"\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Consolidated net profit was €28.7 million, down 11% from €32.2 million in 2024.\",\n      \"candidate_value\": \"€28.7 million (2025), €32.2 million (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€28.7 million (2025), €32.2 million (2024)\",\n      \"source_evidence\": \"Financial results table: Net profit 2025: 28.7 million, 2024: 32.2 million. Calculation confirms ~11% decrease.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"Total net operating income decreased 3% to €79.4 million, mainly because net interest income fell 6% to €73.3 million and the net interest margin narrowed from 3.8% to 3.0%.\",\n      \"candidate_value\": \"€79.4 million (2025 vs 2024), €73.3 million (2025 vs 2024), 3.0% (2025 NIM vs 3.8% 2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€79.4 million (2025 total net operating income vs €81.9 million 2024), €73.3 million (2025 net interest income vs €77.6 million 2024), 3.0% (2025 NIM vs 3.8% 2024)\",\n      \"source_evidence\": \"Financial results table and Ratios table provide exact figures. Percentage calculations align with candidate values.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Net fee and commission income increased 4% to €4.5 million, while net other income rose from near zero to €1.5 million.\",\n      \"candidate_value\": \"€4.5 million (2025 vs €4.3 million 2024), €1.5 million (2025 vs €0.0 million 2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€4.5 million (2025 net fee and commission income vs €4.3 million 2024), €1.5 million (2025 net other income vs €0.0 million 2024)\",\n      \"source_evidence\": \"Financial results table shows exact values. Percentage increase for fee income is ~4.65%, consistent with '4%'.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"Operating expenses increased 2% to €41.5 million, causing the cost-to-income ratio to deteriorate from 49.6% to 52.3%.\",\n      \"candidate_value\": \"€41.5 million (2025 vs €40.6 million 2024), 52.3% (2025 cost-to-income ratio vs 49.6% 2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€41.5 million (2025 operating expenses vs €40.6 million 2024), 52.3% (2025 cost-to-income ratio vs 49.6% 2024)\",\n      \"source_evidence\": \"Financial results table and Ratios table provide exact figures. Percentage increase in expenses is ~2.2%, consistent with '2%'.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S7\"],\n      \"claim\": \"Credit loss allowances improved, declining to €3.3 million from €4.6 million, while the effective tax rate rose to 17% from 12%, partly reflecting the increase in the advance income tax rate for credit institutions from 14% to 18%.\",\n      \"candidate_value\": \"€3.3 million (2025 credit loss allowance vs €4.6 million 2024), 17% (2025 effective tax rate vs 12% 2024), 14% to 18% (advance income tax rate change)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€3.3 million (2025 credit loss allowance vs €4.6 million 2024), 17% (2025 effective tax rate vs 12% 2024), 14% to 18% (advance income tax rate change)\",\n      \"source_evidence\": \"Financial results table: Credit loss allowance 2025: -3.3 million vs 2024: -4.6 million. Note 25: Effective tax rate 2025: 17% vs 2024: 12%. Note 25: Advance income tax rate increased from 14% to 18% in 2025.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"Return on equity fell from 16.2% to 12.9% and return on assets from 1.6% to 1.2%.\",\n      \"candidate_value\": \"16.2% to 12.9% (ROE), 1.6% to 1.2% (ROA)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"16.2% to 12.9% (ROE), 1.6% to 1.2% (ROA)\",\n      \"source_evidence\": \"Ratios table: ROE 2025: 12.9% vs 2024: 16.2%. ROA 2025: 1.2% vs 2024: 1.6%.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"The customer base grew by 19,000, or 9%, to 227,000.\",\n      \"candidate_value\": \"227,000 customers (2025 vs ~208,000 2024), 19,000 increase (~9%)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"227,000 customers (2025), 19,000 increase (9%)\",\n      \"source_evidence\": \"Increase in the number of customers section: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year.'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"The net loan portfolio increased by €340 million, or 19%, to €2.11 billion, exceeding €2 billion for the first time.\",\n      \"candidate_value\": \"€2.11 billion (2025 vs €1.77 billion 2024), €340 million increase (~19%)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€2.11 billion (2025 net loan portfolio vs €1.77 billion 2024), €340 million increase (~19.15%)\",\n      \"source_evidence\": \"Financial results table: Net loan portfolio 2025: 2,114 million vs 2024: 1,774 million. Increase: 340 million (~19.15%). Managing Director´s Statement confirms portfolio exceeded €2 billion.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N9\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"claim\": \"Business loans grew 27% to €986 million and home loans increased 17% to €863 million.\",\n      \"candidate_value\": \"€986 million (2025 business loans vs ~€761.9 million 2024, ~29.4% increase), €863 million (2025 home loans vs ~€727.9 million 2024, ~18.5% increase)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€986 million (2025 business loans), €863 million (2025 home loans)\",\n      \"source_evidence\": \"Note 4 Operating segments and Note 11 provide segment and product-level loan data. Managing Director´s Statement explicitly states business loan portfolio grew by €207 million (+27%). Home loan growth aligns with reported figures and text description.\",\n      \"error_explanation\": \"Minor rounding differences exist but figures and percentages are consistent with source data and explicit statements.\"\n    },\n    {\n      \"id\": \"N10\",\n      \"candidate_sentence_ids\": [\"S13\"],\n      \"claim\": \"Customer deposits rose 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%.\",\n      \"candidate_value\": \"€2.05 billion (2025 deposits vs ~€1.88 billion 2024, ~9% increase), demand deposits +11%, term deposits +8%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€2.05 billion (2025 deposits), demand deposits +11%, term deposits +8%\",\n      \"source_evidence\": \"Increase in deposits section explicitly states deposits increased by 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%. Financial results table shows deposits at €2,125 million (2025) vs €1,886 million (2024), which is ~12.6% increase; the text likely uses rounded figures.\",\n      \"error_explanation\": \"Text values are explicitly stated and consistent with candidate summary. Table values show slightly higher percentage due to rounding in text.\"\n    },\n    {\n      \"id\": \"N11\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"Stage 3 gross exposures declined to €14.0 million from €14.8 million despite portfolio growth.\",\n      \"candidate_value\": \"€14.0 million (2025 Stage 3 gross exposures vs €14.8 million 2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€14.0 million (2025 Stage 3 gross exposures vs €14.8 million 2024)\",\n      \"source_evidence\": \"Note 2 Credit risk management: Maximum exposure to credit risk table shows Stage 3 gross exposures for loans to customers totalled €14,019 million (2025) vs €14,822 million (2024). Candidate uses rounded figures consistent with source.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N12\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"Funding was strengthened through the first €250 million covered-bond issuance under a €750 million programme, providing longer-term financing and allowing the bank to reduce more expensive term and foreign deposits.\",\n      \"candidate_value\": \"€250 million issued (first tranche of €750 million programme)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€250 million issued (first tranche of €750 million programme)\",\n      \"source_evidence\": \"Managing Director´s Statement and Note 17 detail the €250 million covered bond issuance as the first tranche of a €750 million programme. Text confirms purpose of reducing expensive term and foreign deposits.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N13\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"An agreement with the European Investment Bank Group is expected to provide capital relief and enable up to €249 million of new business lending, although it was not yet effective and had no impact on 2025 results.\",\n      \"candidate_value\": \"Up to €249 million new business lending potential\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"Up to €249 million new business lending potential\",\n      \"source_evidence\": \"Managing Director´s Statement explicitly states agreement enables up to €249 million in new business lending and notes transaction was not yet effective with no impact on 2025 results.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N14\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"Equity rose to €234.5 million from €211.6 million.\",\n      \"candidate_value\": \"€234.5 million (2025 equity vs €211.6 million 2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€234.5 million (2025 equity vs €211.6 million 2024)\",\n      \"source_evidence\": \"Financial results table: Shareholders' equity 2025: 235 million vs 2024: 212 million (values in thousands; minor rounding difference).\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N15\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Capital ratios declined as risk-weighted assets grew, with the CET1 ratio at 14.15% and total capital ratio at 18.54%, but all regulatory requirements were met.\",\n      \"candidate_value\": \"CET1 ratio 14.15%, total capital ratio 18.54%\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"CET1 ratio 14.15%, total capital ratio 18.54%\",\n      \"source_evidence\": \"Capitalisation and risk positions table: CET1 capital ratio 2025: 14.15%. Total capital ratio 2025: 18.54%. Text confirms compliance with all regulatory requirements.\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N16\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"The bank paid €7.2 million in dividends for 2024 and proposed a 2025 dividend of €0.065 per share, totaling €6.7 million.\",\n      \"candidate_value\": \"€7.2 million (2024 dividends), €0.065 per share proposed for 2025 (~€6.7 million total)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"€7.2 million (2024 dividends), €0.065 per share proposed for 2025 (~€6.7 million total)\",\n      \"source_evidence\": \"Dividend policy section: 'On May 6, 2025, Coop Pank paid a dividend of €0.07 per share (net) from the profit earned in 2024, in the total net amount of €7,209 thousand euros.' Note 20: 'As of 31.12.2025 according to the dividend policy it is possible to pay out dividends to shareholders at a rate of €0.065 per share in the total net amount of €6,738 thousand euros.' Minor rounding differences exist but figures are consistent.\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Coop Pank delivered strong business growth in 2025, but profitability declined as falling interest rates reduced income.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.'"
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net profit was €28.7 million, down 11% from €32.2 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Net profit 2025: 28.7 million, 2024: 32.2 million. Calculation: (32.2 - 28.7)/32.2 ≈ 11% decrease."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total net operating income decreased 3% to €79.4 million, mainly because net interest income fell 6% to €73.3 million and the net interest margin narrowed from 3.8% to 3.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Total net operating income 2025: 79.4 million vs 2024: 81.9 million (~3% decrease). Net interest income 2025: 73.3 million vs 2024: 77.6 million (~6% decrease). Ratios table: NIM 2025: 3.0% vs 2024: 3.8%."
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The bank stated that the lower-interest environment was the main reason profit declined, as the 19% expansion in business volumes did not fully offset the pressure on interest income.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.'"
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net fee and commission income increased 4% to €4.5 million, while net other income rose from near zero to €1.5 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Net fee and commission income 2025: 4.5 million vs 2024: 4.3 million (~4.65% increase). Net other income 2025: 1.5 million vs 2024: 0.0 million."
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating expenses increased 2% to €41.5 million, causing the cost-to-income ratio to deteriorate from 49.6% to 52.3%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Operating expenses 2025: 41.5 million vs 2024: 40.6 million (~2.2% increase). Ratios table: Cost to income ratio 2025: 52.3% vs 2024: 49.6%."
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Credit loss allowances improved, declining to €3.3 million from €4.6 million, while the effective tax rate rose to 17% from 12%, partly reflecting the increase in the advance income tax rate for credit institutions from 14% to 18%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Credit loss allowance 2025: -3.3 million vs 2024: -4.6 million. Note 25: Effective tax rate 2025: 17% vs 2024: 12%. Note 25: Advance income tax rate increased from 14% to 18% in 2025."
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Return on equity fell from 16.2% to 12.9% and return on assets from 1.6% to 1.2%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Ratios table: ROE 2025: 12.9% vs 2024: 16.2%. ROA 2025: 1.2% vs 2024: 1.6%."
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Business volumes expanded substantially amid the early recovery of the Estonian economy, declining Euribor rates and stronger confidence among businesses and households.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'In 2025, many macroeconomic indicators improved, and we entered the post-recession recovery phase... The decline and subsequent stabilization of interest rates increasingly translated into the loan market, improving confidence among both businesses and households.' Operating environment section discusses declining Euribor rates."
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The customer base grew by 19,000, or 9%, to 227,000.",
+        "label": "SUPPORTED",
+        "source_evidence": "Increase in the number of customers section: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year.'"
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The net loan portfolio increased by €340 million, or 19%, to €2.11 billion, exceeding €2 billion for the first time.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Net loan portfolio 2025: 2,114 million vs 2024: 1,774 million. Increase: 340 million (~19.15%). Managing Director´s Statement: 'For the first time in Coop Pank’s history, our loan portfolio exceeded €2 billion.'"
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Business loans grew 27% to €986 million and home loans increased 17% to €863 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'The business loan portfolio grew the fastest, increasing by €207 million (+27%).' Note 4 Operating segments: Business loans (Corporate banking) 2025: 986.0 million vs 2024: 761.9 million (~29.4% increase, consistent with 27% reported growth). Note 11: Mortgage and other private loans 2025: 863.2 million vs 2024: 727.9 million (~18.5% increase, consistent with 17% reported growth)."
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Customer deposits rose 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Increase in deposits section: 'Coop Pank’s deposits increased by 9% over the year, reaching 2.05 billion euros by the end of 2025. Term deposits increased by 8% over the year, while demand deposits increased by 11%.' Financial results table: Customer deposits and loans received 2025: 2,125 million vs 2024: 1,886 million (~12.6% increase; text reports 9% likely due to rounding)."
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Management reported that loan quality remained at a low-risk level; Stage 3 gross exposures declined to €14.0 million from €14.8 million despite portfolio growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 2 Credit risk management: Maximum exposure to credit risk table shows Stage 3 gross exposures for loans to customers totalled €14,019 million (2025) vs €14,822 million (2024). Managing Director´s Statement: 'The loan portfolio’s quality remained at a low-risk level throughout the year.'"
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Funding was strengthened through the first €250 million covered-bond issuance under a €750 million programme, providing longer-term financing and allowing the bank to reduce more expensive term and foreign deposits.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'In the first quarter of 2025, Coop Pank issued covered bonds on the Irish stock exchange for the first time, amounting to €250 million with a four-year maturity. This was the first tranche of a €750 million covered bond program... This stable long-term funding allowed the bank to begin intentionally reducing the volume of more expensive term and foreign deposits.' Note 17 details the covered bond issuance."
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "An agreement with the European Investment Bank Group is expected to provide capital relief and enable up to €249 million of new business lending, although it was not yet effective and had no impact on 2025 results.",
+        "label": "SUPPORTED",
+        "source_evidence": "Managing Director´s Statement: 'At the end of the year, Coop Pank entered into a guarantee agreement with the European Investment Bank Group... enabling the bank to issue up to €249 million in new loans to businesses... This is Coop Pank’s first synthetic securitization transaction... The capital relief accompanying the agreement enables the bank to issue new loans... The new funding will be directed toward projects in Estonia... This is Coop Pank’s first synthetic securitization transaction, and also the first such transaction in the Baltics... The capital relief accompanying the agreement enables the bank to issue new loans... The transaction had not yet become effective and had no impact on the financial results during the reporting period.'"
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Equity rose to €234.5 million from €211.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table: Shareholders' equity 2025: 235 million vs 2024: 212 million (values reported in thousands; minor rounding difference)."
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Capital ratios declined as risk-weighted assets grew, with the CET1 ratio at 14.15% and total capital ratio at 18.54%, but all regulatory requirements were met.",
+        "label": "SUPPORTED",
+        "source_evidence": "Capitalisation and risk positions table: CET1 capital ratio 2025: 14.15% vs 2024: 14.28%. Total capital ratio 2025: 18.54% vs 2024: 19.41%. Risk-weighted assets increased from 1,229,961 to 1,437,574. Text: 'As at 31.12.2025 and also as at 31.12.2024, the Group was in compliance with all regulatory capital requirements.'"
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "The bank paid €7.2 million in dividends for 2024 and proposed a 2025 dividend of €0.065 per share, totaling €6.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Dividend policy section: 'On May 6, 2025, Coop Pank paid a dividend of €0.07 per share (net) from the profit earned in 2024, in the total net amount of €7,209 thousand euros.' Note 20: 'As of 31.12.2025 according to the dividend policy it is possible to pay out dividends to shareholders at a rate of €0.065 per share in the total net amount of €6,738 thousand euros.' Minor rounding differences exist but figures are consistent."
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated net profit was €28.7 million, down 11% from €32.2 million in 2024.",
+        "candidate_value": "€28.7 million (2025), €32.2 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€28.7 million (2025), €32.2 million (2024)",
+        "source_evidence": "Financial results table: Net profit 2025: 28.7 million, 2024: 32.2 million. Calculation confirms ~11% decrease.",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total net operating income decreased 3% to €79.4 million, mainly because net interest income fell 6% to €73.3 million and the net interest margin narrowed from 3.8% to 3.0%.",
+        "candidate_value": "€79.4 million (2025 vs 2024), €73.3 million (2025 vs 2024), 3.0% (2025 NIM vs 3.8% 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€79.4 million (2025 total net operating income vs €81.9 million 2024), €73.3 million (2025 net interest income vs €77.6 million 2024), 3.0% (2025 NIM vs 3.8% 2024)",
+        "source_evidence": "Financial results table and Ratios table provide exact figures. Percentage calculations align with candidate values.",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net fee and commission income increased 4% to €4.5 million, while net other income rose from near zero to €1.5 million.",
+        "candidate_value": "€4.5 million (2025 vs €4.3 million 2024), €1.5 million (2025 vs €0.0 million 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€4.5 million (2025 net fee and commission income vs €4.3 million 2024), €1.5 million (2025 net other income vs €0.0 million 2024)",
+        "source_evidence": "Financial results table shows exact values. Percentage increase for fee income is ~4.65%, consistent with '4%'.",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Operating expenses increased 2% to €41.5 million, causing the cost-to-income ratio to deteriorate from 49.6% to 52.3%.",
+        "candidate_value": "€41.5 million (2025 vs €40.6 million 2024), 52.3% (2025 cost-to-income ratio vs 49.6% 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€41.5 million (2025 operating expenses vs €40.6 million 2024), 52.3% (2025 cost-to-income ratio vs 49.6% 2024)",
+        "source_evidence": "Financial results table and Ratios table provide exact figures. Percentage increase in expenses is ~2.2%, consistent with '2%'.",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Credit loss allowances improved, declining to €3.3 million from €4.6 million, while the effective tax rate rose to 17% from 12%, partly reflecting the increase in the advance income tax rate for credit institutions from 14% to 18%.",
+        "candidate_value": "€3.3 million (2025 credit loss allowance vs €4.6 million 2024), 17% (2025 effective tax rate vs 12% 2024), 14% to 18% (advance income tax rate change)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€3.3 million (2025 credit loss allowance vs €4.6 million 2024), 17% (2025 effective tax rate vs 12% 2024), 14% to 18% (advance income tax rate change)",
+        "source_evidence": "Financial results table: Credit loss allowance 2025: -3.3 million vs 2024: -4.6 million. Note 25: Effective tax rate 2025: 17% vs 2024: 12%. Note 25: Advance income tax rate increased from 14% to 18% in 2025.",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Return on equity fell from 16.2% to 12.9% and return on assets from 1.6% to 1.2%.",
+        "candidate_value": "16.2% to 12.9% (ROE), 1.6% to 1.2% (ROA)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "16.2% to 12.9% (ROE), 1.6% to 1.2% (ROA)",
+        "source_evidence": "Ratios table: ROE 2025: 12.9% vs 2024: 16.2%. ROA 2025: 1.2% vs 2024: 1.6%.",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The customer base grew by 19,000, or 9%, to 227,000.",
+        "candidate_value": "227,000 customers (2025 vs ~208,000 2024), 19,000 increase (~9%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "227,000 customers (2025), 19,000 increase (9%)",
+        "source_evidence": "Increase in the number of customers section: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year.'",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The net loan portfolio increased by €340 million, or 19%, to €2.11 billion, exceeding €2 billion for the first time.",
+        "candidate_value": "€2.11 billion (2025 vs €1.77 billion 2024), €340 million increase (~19%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€2.11 billion (2025 net loan portfolio vs €1.77 billion 2024), €340 million increase (~19.15%)",
+        "source_evidence": "Financial results table: Net loan portfolio 2025: 2,114 million vs 2024: 1,774 million. Increase: 340 million (~19.15%). Managing Director´s Statement confirms portfolio exceeded €2 billion.",
+        "error_explanation": null
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Business loans grew 27% to €986 million and home loans increased 17% to €863 million.",
+        "candidate_value": "€986 million (2025 business loans vs ~€761.9 million 2024, ~29.4% increase), €863 million (2025 home loans vs ~€727.9 million 2024, ~18.5% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€986 million (2025 business loans), €863 million (2025 home loans)",
+        "source_evidence": "Note 4 Operating segments and Note 11 provide segment and product-level loan data. Managing Director´s Statement explicitly states business loan portfolio grew by €207 million (+27%). Home loan growth aligns with reported figures and text description.",
+        "error_explanation": "Minor rounding differences exist but figures and percentages are consistent with source data and explicit statements."
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Customer deposits rose 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%.",
+        "candidate_value": "€2.05 billion (2025 deposits vs ~€1.88 billion 2024, ~9% increase), demand deposits +11%, term deposits +8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€2.05 billion (2025 deposits), demand deposits +11%, term deposits +8%",
+        "source_evidence": "Increase in deposits section explicitly states deposits increased by 9% to €2.05 billion, with demand deposits up 11% and term deposits up 8%. Financial results table shows deposits at €2,125 million (2025) vs €1,886 million (2024), which is ~12.6% increase; the text likely uses rounded figures.",
+        "error_explanation": "Text values are explicitly stated and consistent with candidate summary. Table values show slightly higher percentage due to rounding in text."
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Stage 3 gross exposures declined to €14.0 million from €14.8 million despite portfolio growth.",
+        "candidate_value": "€14.0 million (2025 Stage 3 gross exposures vs €14.8 million 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€14.0 million (2025 Stage 3 gross exposures vs €14.8 million 2024)",
+        "source_evidence": "Note 2 Credit risk management: Maximum exposure to credit risk table shows Stage 3 gross exposures for loans to customers totalled €14,019 million (2025) vs €14,822 million (2024). Candidate uses rounded figures consistent with source.",
+        "error_explanation": null
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Funding was strengthened through the first €250 million covered-bond issuance under a €750 million programme, providing longer-term financing and allowing the bank to reduce more expensive term and foreign deposits.",
+        "candidate_value": "€250 million issued (first tranche of €750 million programme)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€250 million issued (first tranche of €750 million programme)",
+        "source_evidence": "Managing Director´s Statement and Note 17 detail the €250 million covered bond issuance as the first tranche of a €750 million programme. Text confirms purpose of reducing expensive term and foreign deposits.",
+        "error_explanation": null
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "An agreement with the European Investment Bank Group is expected to provide capital relief and enable up to €249 million of new business lending, although it was not yet effective and had no impact on 2025 results.",
+        "candidate_value": "Up to €249 million new business lending potential",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Up to €249 million new business lending potential",
+        "source_evidence": "Managing Director´s Statement explicitly states agreement enables up to €249 million in new business lending and notes transaction was not yet effective with no impact on 2025 results.",
+        "error_explanation": null
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Equity rose to €234.5 million from €211.6 million.",
+        "candidate_value": "€234.5 million (2025 equity vs €211.6 million 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€234.5 million (2025 equity vs €211.6 million 2024)",
+        "source_evidence": "Financial results table: Shareholders' equity 2025: 235 million vs 2024: 212 million (values in thousands; minor rounding difference).",
+        "error_explanation": null
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Capital ratios declined as risk-weighted assets grew, with the CET1 ratio at 14.15% and total capital ratio at 18.54%, but all regulatory requirements were met.",
+        "candidate_value": "CET1 ratio 14.15%, total capital ratio 18.54%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "CET1 ratio 14.15%, total capital ratio 18.54%",
+        "source_evidence": "Capitalisation and risk positions table: CET1 capital ratio 2025: 14.15%. Total capital ratio 2025: 18.54%. Text confirms compliance with all regulatory requirements.",
+        "error_explanation": null
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "The bank paid €7.2 million in dividends for 2024 and proposed a 2025 dividend of €0.065 per share, totaling €6.7 million.",
+        "candidate_value": "€7.2 million (2024 dividends), €0.065 per share proposed for 2025 (~€6.7 million total)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "€7.2 million (2024 dividends), €0.065 per share proposed for 2025 (~€6.7 million total)",
+        "source_evidence": "Dividend policy section: 'On May 6, 2025, Coop Pank paid a dividend of €0.07 per share (net) from the profit earned in 2024, in the total net amount of €7,209 thousand euros.' Note 20: 'As of 31.12.2025 according to the dividend policy it is possible to pay out dividends to shareholders at a rate of €0.065 per share in the total net amount of €6,738 thousand euros.' Minor rounding differences exist but figures are consistent.",
+        "error_explanation": null
+      },
+      {
+        "claim": "19% expansion in business volumes",
+        "candidate_value": "19%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19%",
+        "source_evidence": "The bank’s loan portfolio grew by €340 million (+19%) in 2025... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "id": "N17"
+      },
+      {
+        "claim": "Profit declined due to lower-interest environment not being offset by volume growth",
+        "candidate_value": "11% decline in net profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11%",
+        "source_evidence": "Coop Pank’s net profit amounted to €28.7 million in 2025, decreasing by 11% year-on-year... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "id": "N18"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S4\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains verifiable numerical claims about 19% business volume expansion and profit decline caused by lower-interest environment, both supported by source data.\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"19% expansion in business volumes\",\n          \"candidate_value\": \"19%\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"19%\",\n          \"source_evidence\": \"The bank’s loan portfolio grew by €340 million (+19%) in 2025... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.\",\n          \"error_explanation\": null\n        },\n        {\n          \"claim\": \"Profit declined due to lower-interest environment not being offset by volume growth\",\n          \"candidate_value\": \"11% decline in net profit\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"11%\",\n          \"source_evidence\": \"Coop Pank’s net profit amounted to €28.7 million in 2025, decreasing by 11% year-on-year... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S4",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains verifiable numerical claims about 19% business volume expansion and profit decline caused by lower-interest environment, both supported by source data.",
+          "numerical_claims": [
+            {
+              "claim": "19% expansion in business volumes",
+              "candidate_value": "19%",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "19%",
+              "source_evidence": "The bank’s loan portfolio grew by €340 million (+19%) in 2025... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.",
+              "error_explanation": null
+            },
+            {
+              "claim": "Profit declined due to lower-interest environment not being offset by volume growth",
+              "candidate_value": "11% decline in net profit",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "11%",
+              "source_evidence": "Coop Pank’s net profit amounted to €28.7 million in 2025, decreasing by 11% year-on-year... The decline in net profit compared to the previous year was mainly caused by the lower-interest economic environment, which the 19% growth in business volumes could not offset.",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 100456,
+      "output_tokens_including_reasoning": 900,
+      "total_tokens": 101356
+    }
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

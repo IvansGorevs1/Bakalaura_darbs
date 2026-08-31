@@ -1,0 +1,761 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_11_few_shot_qwen36.txt",
+    "report": "report_annual_11.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "The company reported a clear stabilization of financial performance during the 2025 reporting period, marked by consistent top-line growth alongside a substantial narrowing of losses.",
+    "S2": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million.",
+    "S3": "This commercial momentum translated into improved operational leverage, as total operating expenses fell to SEK 52.4 million from SEK 57.3 million.",
+    "S4": "The reduction stemmed from deliberate structural adjustments, notably the integration of software development workflows and the strategic wind-down of the JLT Software Solutions subsidiary, which collectively trimmed overhead and research spending by SEK 6.3 million.",
+    "S5": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously.",
+    "S6": "Despite these operational improvements, profitability faced downward pressure from currency dynamics, with the gross margin declining to 38.3 percent from 45.8 percent.",
+    "S7": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency.",
+    "S8": "Additionally, unresolved customs regulations increased administrative expenditures and prolonged customer decision-making timelines.",
+    "S9": "Market dynamics reflected a cautious macroeconomic environment, particularly within the traditional warehousing and logistics vertical, where end-users adopted delayed procurement strategies.",
+    "S10": "Conversely, emerging traction in port infrastructure, mining, and heavy construction sectors provided meaningful diversification, highlighted by a secured supply contract valued at SEK 22 million for an American food distribution client.",
+    "S11": "Strategic product investments further reinforced the company’s positioning, including the launch of a pioneering 15-inch high-definition rugged terminal and an integrated artificial intelligence safeguard for industrial vehicle displays.",
+    "S12": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million.",
+    "S13": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_11.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_11.json",
+    "key_information_hash": "d5fcb5f9afaac54f",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 15,
+      "incorrect": 0,
+      "total": 15
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "The company reported a clear stabilization of financial performance during the 2025 reporting period, marked by consistent top-line growth alongside a substantial narrowing of losses.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report states: '2025 was a year characterized by both strong commercial progress and a continued challenging market picture... This year’s result is thus not only a recovery, but also an acknowledgment that our long-term priorities create sustainable value'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "The company reported a clear stabilization of financial performance during the 2025 reporting period, marked by consistent top-line growth alongside a substantial narrowing of losses."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'Group turnover increased by 11.1 percent in 2025... Order intake for the year increased by 37.5 percent compared to the previous year.' Note 2 confirms net sales of SEK 131.5M (2025) vs 118.4M (2024) and order intake of SEK 141.6M vs 103.0M",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This commercial momentum translated into improved operational leverage, as total operating expenses fell to SEK 52.4 million from SEK 57.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'Organizational and R&D costs have decreased by MSEK 6.3 since the previous year... Operating expenses totaled MSEK 52.4 (57.3)'",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This commercial momentum translated into improved operational leverage, as total operating expenses fell to SEK 52.4 million from SEK 57.3 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The reduction stemmed from deliberate structural adjustments, notably the integration of software development workflows and the strategic wind-down of the JLT Software Solutions subsidiary, which collectively trimmed overhead and research spending by SEK 6.3 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'We have implemented several structural changes to reduce our costs and increase scalability. We have coordinated software development with other product development and discontinued the operations of our subsidiary JLT Software Solutions AB... which helped to reduce overhead costs in 2025 by SEK 5 million and reduced depreciation on development projects.' Management report confirms total reduction of SEK 6.3M in organizational and R&D costs",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The reduction stemmed from deliberate structural adjustments, notably the integration of software development workflows and the strategic wind-down of the JLT Software Solutions subsidiary, which collectively trimmed overhead and research spending by SEK 6.3 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "Income statement: Operating profit was MSEK -1.9 (2025) vs -9.7 (2024). Net profit was MSEK -2.5 (2025) vs -7.7 (2024)",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Despite these operational improvements, profitability faced downward pressure from currency dynamics, with the gross margin declining to 38.3 percent from 45.8 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'Gross profit amounted to MSEK 50.4 (54.2) and gross margin to 38.3 percent (45.8). The reduced gross margin is a temporary effect resulting from currency fluctuations.' CEO letter confirms USD depreciation impact",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite these operational improvements, profitability faced downward pressure from currency dynamics, with the gross margin declining to 38.3 percent from 45.8 percent."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'The US dollar lost almost 20 percent against the Swedish krona during the year, while 74 percent of our sales were invoiced in dollars.' Management report confirms gross margin impact from currency",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Additionally, unresolved customs regulations increased administrative expenditures and prolonged customer decision-making timelines.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'The customs concerns continued to affect demand, and the unclear situation increased our administrative burden with associated cost increases for follow-up and investigation... causing our end customers to take a wait-and-see approach.'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Additionally, unresolved customs regulations increased administrative expenditures and prolonged customer decision-making timelines."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Market dynamics reflected a cautious macroeconomic environment, particularly within the traditional warehousing and logistics vertical, where end-users adopted delayed procurement strategies.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'At the same time, demand in our largest market segment, warehousing and logistics, remained subdued, largely due to the geopolitical uncertainty that is causing our end customers to take a wait-and-see approach.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Market dynamics reflected a cautious macroeconomic environment, particularly within the traditional warehousing and logistics vertical, where end-users adopted delayed procurement strategies."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Conversely, emerging traction in port infrastructure, mining, and heavy construction sectors provided meaningful diversification, highlighted by a secured supply contract valued at SEK 22 million for an American food distribution client.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'We increased order intake to SEK 142 million... A significant part of the increase came from a major deal of SEK 22 million to an American food producer.' Also mentions strategic focus on ports, construction and mining",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Conversely, emerging traction in port infrastructure, mining, and heavy construction sectors provided meaningful diversification, highlighted by a secured supply contract valued at SEK 22 million for an American food distribution client."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Strategic product investments further reinforced the company’s positioning, including the launch of a pioneering 15-inch high-definition rugged terminal and an integrated artificial intelligence safeguard for industrial vehicle displays.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO letter: 'During the year, we launched the industry’s first rugged on-board computer with a 15-inch Full HD display... We also launched an innovative “screen blanking” solution that leverages the unique sensors in our computers and uses AI and machine learning to improve safety in industrial environments.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Strategic product investments further reinforced the company’s positioning, including the launch of a pioneering 15-inch high-definition rugged terminal and an integrated artificial intelligence safeguard for industrial vehicle displays."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'The efforts to reduce the safety stock that was built up during the component shortage have resulted in inventory decreasing by MSEK 12.7 during the year... At the end of the year, inventory amounted to SEK 25.5 million... Cash flow was MSEK +3.7'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume.",
+        "label": "SUPPORTED",
+        "source_evidence": "Equity section shows equity of SEK 41.8M. Solidity ratio of 59% stated in management report. Order backlog of SEK 24.1M confirmed in management report. CEO letter details cost base improvements and geographic expansion",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year",
+        "candidate_value": "SEK 131.5 million (11.1% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 131.5 million (2025) vs SEK 118.4 million (2024)",
+        "source_evidence": "Note 2 and management report confirm net sales figures and year-over-year growth calculation",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "order intake that surged by 37.5 percent to reach SEK 141.6 million",
+        "candidate_value": "SEK 141.6 million (37.5% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 141.6 million (2025) vs SEK 103.0 million (2024)",
+        "source_evidence": "Management report: 'Order intake for the year increased by 37.5 percent compared to the previous year'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "total operating expenses fell to SEK 52.4 million from SEK 57.3 million",
+        "candidate_value": "SEK 52.4 million (2025) from SEK 57.3 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 52.4 million (2025) vs SEK 57.3 million (2024)",
+        "source_evidence": "Management report explicitly states operating expenses figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This commercial momentum translated into improved operational leverage, as total operating expenses fell to SEK 52.4 million from SEK 57.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "trimmed overhead and research spending by SEK 6.3 million",
+        "candidate_value": "SEK 6.3 million reduction",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 6.3 million decrease in organizational and R&D costs",
+        "source_evidence": "Management report: 'Organizational and R&D costs have decreased by MSEK 6.3 since the previous year'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The reduction stemmed from deliberate structural adjustments, notably the integration of software development workflows and the strategic wind-down of the JLT Software Solutions subsidiary, which collectively trimmed overhead and research spending by SEK 6.3 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million",
+        "candidate_value": "SEK -1.9 million (2025) from SEK -9.7 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -1.9 million (2025) vs SEK -9.7 million (2024)",
+        "source_evidence": "Income statement shows operating profit figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million",
+        "candidate_value": "SEK -2.5 million (2025) vs SEK -7.7 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -2.5 million (2025) vs SEK -7.7 million (2024)",
+        "source_evidence": "Income statement confirms net profit figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "gross margin declining to 38.3 percent from 45.8 percent",
+        "candidate_value": "38.3% (2025) from 45.8% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "38.3% (2025) vs 45.8% (2024)",
+        "source_evidence": "Management report states gross margin figures",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Despite these operational improvements, profitability faced downward pressure from currency dynamics, with the gross margin declining to 38.3 percent from 45.8 percent."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "near 20 percent depreciation of the US dollar against the Swedish krona",
+        "candidate_value": "~20% USD depreciation",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Almost 20% depreciation",
+        "source_evidence": "CEO letter: 'The US dollar lost almost 20 percent against the Swedish krona during the year'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "74 percent of invoices are priced in American currency",
+        "candidate_value": "74% USD-priced invoices",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "74% of sales invoiced in USD",
+        "source_evidence": "CEO letter: '74 percent of our sales were invoiced in dollars'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "secured supply contract valued at SEK 22 million for an American food distribution client",
+        "candidate_value": "SEK 22 million contract",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 22 million deal",
+        "source_evidence": "CEO letter: 'A significant part of the increase came from a major deal of SEK 22 million to an American food producer'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Conversely, emerging traction in port infrastructure, mining, and heavy construction sectors provided meaningful diversification, highlighted by a secured supply contract valued at SEK 22 million for an American food distribution client."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "reduced inventories by SEK 12.7 million to SEK 25.5 million",
+        "candidate_value": "SEK 12.7 million reduction to SEK 25.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Inventory decreased by MSEK 12.7 to SEK 25.5 million",
+        "source_evidence": "Management report: 'inventory amounted to SEK 25.5 million, which is SEK 13 million less than the previous year' (note: MSEK 12.7 = SEK 12.7 million)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "generating a cash flow of plus SEK 3.7 million",
+        "candidate_value": "SEK +3.7 million cash flow",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "MSEK +3.7 cash flow",
+        "source_evidence": "Management report: 'Cash flow was MSEK +3.7'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "equity adjusted to SEK 41.8 million",
+        "candidate_value": "SEK 41.8 million equity",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 41.8 million equity",
+        "source_evidence": "Equity section shows equity of MSEK 41.8",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "solidity ratio of 59 percent",
+        "candidate_value": "59% solidity ratio",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "59% solidity",
+        "source_evidence": "Management report: 'The solidity was 59 percent'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "order backlog of SEK 24.1 million",
+        "candidate_value": "SEK 24.1 million backlog",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 24.1 million backlog",
+        "source_evidence": "Management report: 'The order backlog at the end of the period amounted to MSEK 24.1'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "With equity adjusted to SEK 41.8 million and a solidity ratio of 59 percent, the organization concluded the year with a strengthened foundational cost base, expanded regional market penetration, and a robust order backlog of SEK 24.1 million, establishing a consolidated platform for scaling revenues as broader industrial capital expenditure cycles resume."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance for 2025 versus 2024: order intake increased 37% to SEK 142M (from SEK 103M), net sales grew 11% to SEK 131M (from SEK 118M), operating profit improved to SEK -1.9M (from SEK -9.7M), profit after tax was SEK -2.5M (from SEK -7.7M), cash flow was SEK +3.7M (from SEK +6.8M), and no dividend was proposed.",
+        "importance": "HIGH",
+        "source_evidence": "Management report (page 19) and condensed income statement (page 19) show year-on-year comparisons for order intake, net sales, operating profit, profit after tax, and cash flow. Dividend proposal stated in Management report (page 21) and Share section (page 18).",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Net sales rose to SEK 131.5 million, representing an 11.1 percent increase over the prior year, buoyed by active pipeline execution and order intake that surged by 37.5 percent to reach SEK 141.6 million."
+          },
+          {
+            "id": "S5",
+            "text": "As a direct consequence, the operating deficit contracted sharply to minus SEK 1.9 million from minus SEK 9.7 million, while the bottom-line net loss similarly tightened to minus SEK 2.5 million compared to minus SEK 7.7 million previously."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Operational impact of external challenges: geopolitical uncertainty suppressed demand in the largest segment (warehousing and logistics), a ~20% depreciation of the US dollar against the Swedish krona (affecting 74% of sales and gross margin), and customs duties on non-European components increased administrative costs and burden.",
+        "importance": "HIGH",
+        "source_evidence": "CEO letter (page 5-6) explicitly details geopolitical uncertainty, weak demand in logistics, currency effects (USD lost almost 20% against SEK), and customs duty impacts on inventory valuation and administrative workload.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7",
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The contraction was largely attributable to a near 20 percent depreciation of the US dollar against the Swedish krona, a significant headwind given that 74 percent of invoices are priced in American currency."
+          },
+          {
+            "id": "S8",
+            "text": "Additionally, unresolved customs regulations increased administrative expenditures and prolonged customer decision-making timelines."
+          },
+          {
+            "id": "S9",
+            "text": "Market dynamics reflected a cautious macroeconomic environment, particularly within the traditional warehousing and logistics vertical, where end-users adopted delayed procurement strategies."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Strategic diversification into ports, construction, and mining equipment segments to reduce reliance on the weakened logistics market, with early results reported from increased focus in these areas.",
+        "importance": "HIGH",
+        "source_evidence": "CEO letter (page 5) states: 'We are addressing this weakness by increasing focus in other segments, especially ports as well as construction and mining equipment – areas where we are now starting to see results.' Investor highlights (page 7) reinforce diversified market mix as a value driver.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Conversely, emerging traction in port infrastructure, mining, and heavy construction sectors provided meaningful diversification, highlighted by a secured supply contract valued at SEK 22 million for an American food distribution client."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Cost base reduction through structural changes: discontinuation of subsidiary JLT Software Solutions AB, coordination of software development, and write-downs of capitalized development costs led to SEK 5M lower overhead and improved operational leverage.",
+        "importance": "HIGH",
+        "source_evidence": "CEO letter (page 5) describes cost-saving measures, including overhead reduction of SEK 5M from structural changes and discontinued subsidiary operations. Note 5 (page 34) confirms personnel cost decreases reflect these initiatives.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The reduction stemmed from deliberate structural adjustments, notably the integration of software development workflows and the strategic wind-down of the JLT Software Solutions subsidiary, which collectively trimmed overhead and research spending by SEK 6.3 million."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Launch of material product innovations: industry's first rugged on-board computer with a 15-inch Full HD display (JLT6015) and an AI-powered 'screen blanking' safety solution validated for port operations, strengthening premium positioning in prioritized segments.",
+        "importance": "HIGH",
+        "source_evidence": "CEO letter (page 6) announces JLT6015 launch and AI screen blanking solution. Product development section (page 20) confirms validation by Navis for port operations and presentations at trade fairs in Rotterdam and Singapore.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Strategic product investments further reinforced the company’s positioning, including the launch of a pioneering 15-inch high-definition rugged terminal and an integrated artificial intelligence safeguard for industrial vehicle displays."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Liquidity management success: inventory reduced by SEK 12.7M to SEK 25.5M, improving cash flow and capital efficiency, with cash and cash equivalents increasing to SEK 16.9M (from SEK 13.3M).",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report (page 20) states inventory reduction of MSEK 12.7 during the year. Cash flow statement (page 30) shows operating cash flow of SEK +3.7M and balance sheet (page 27) reports cash and cash equivalents of SEK 16.9M at year-end.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financial discipline extended to balance sheet management, as targeted depletion of pandemic-era safety stocks reduced inventories by SEK 12.7 million to SEK 25.5 million, thereby unlocking working capital and generating a cash flow of plus SEK 3.7 million."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Geographical sales shift: Americas region contributed 70.1% of 2025 sales (SEK 92.2M, up from 59.0% in 2024), while Nordics contribution fell to 11.1% (SEK 14.5M, down from 15.4%), reflecting regional strength and segment-specific challenges.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 2 (page 33) provides sales breakdown by region for 2025 and 2024, showing Americas at 92.2M (70.1%) vs 69.8M (59.0%) and Nordics at 14.5M (11.1%) vs 18.2M (15.4%).",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Initiation of a strategic project to evaluate defense market opportunities in the second half of 2025, with associated costs of approximately SEK 1 million.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management report comments on operations (page 20) state: 'During the second half of the year, a project was initiated to evaluate the possibilities of addressing the defense market. The total costs for this during the year amounted to approximately SEK 1 million.'",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "All HIGH-importance criteria (K1-K5) are fully represented with core material meaning covered in the candidate summary. MEDIUM criteria K6 is also present. K7 (geographical sales shift) and K8 (defense market project) are missing entirely, but these are of lower importance and do not change the overall understanding of the company's performance, strategy, and financial position. The summary captures the main picture of financial improvement, operational challenges, strategic diversification, product innovation, and liquidity management.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon each other without contradiction: sales growth (S2) leads to operational improvements (S3-S5), which are partially offset by currency impacts (S6-S7). The narrative flows from revenue performance through cost management to profitability outcomes, with clear cause-effect relationships (e.g., structural adjustments in S4 directly causing deficit reduction in S5). Market context (S9) and strategic wins (S10-S11) provide complementary context without conflicting with financial results. Balance sheet management (S12) and year-end positioning (S13) form a logical conclusion. No material repetitions or organizational breaks are present, and all relationships (e.g., currency impact on margin) are internally consistent."
+  },
+  "usage": {
+    "input_tokens_total": 33446,
+    "output_tokens_total_including_reasoning": 5649,
+    "total_tokens": 39095,
+    "latency_seconds_total": 29.13
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 60812,
+    "output_tokens_total_including_reasoning": 63234,
+    "total_tokens": 124046,
+    "latency_seconds_total": 212.65
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_11.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_11_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_11.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_11.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_11_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_11_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_11_few_shot_qwen36.json"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:40:52.447270",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_9_chain_of_event_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "a560f37e4c17174f",
+    "sentence_map_hash": "28886fd9f27e07d2",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "During the twelve months ended 31 December 2025, Hepsor AS reported consolidated revenue of 35.4 million euros, representing a decrease compared to 38.4 million euros in 2024.",
+    "S2": "Consolidated net profit for the reporting year declined to 1.0 million euros from 2.1 million euros in the previous year, while net profit attributable to the owners of the parent company was 0.4 million euros in both 2025 and 2024.",
+    "S3": "For the fourth quarter of 2025, the Group recorded revenue of 4.5 million euros and a net loss of 0.5 million euros, compared to revenue of 10.5 million euros and a net profit of 1.0 million euros in the fourth quarter of 2024.",
+    "S4": "The Group's gross profit for 2025 was 5.6 million euros with a gross profit margin of 15.9%, down from 6.8 million euros and a 17.6% margin in 2024.",
+    "S5": "Operating profit for 2025 stood at 3.4 million euros, yielding an operating profit margin of 9.5%, compared to 4.3 million euros and an 11.3% margin in the prior year.",
+    "S6": "EBITDA for 2025 decreased to 3.5 million euros from 4.5 million euros in 2024.",
+    "S7": "According to the document, the Group's revenue and profitability were negatively affected by a decrease in the number of apartments handed over to customers, totaling 141 apartments in 2025 compared to 194 apartments in 2024.",
+    "S8": "Profitability was further impacted by lower profit margins on sold development projects and higher marketing expenses, which rose to 1.3 million euros from 0.9 million euros due to increased sales and marketing activities driven by a larger number and scale of projects on sale.",
+    "S9": "Despite the decline in delivered apartments, the Group concluded primary sales agreements for 185 homes valued at 36.1 million euros during 2025, nearly doubling the 109 homes and 19.8 million euros recorded in 2024.",
+    "S10": "Furthermore, the number of homes under construction increased by 223% to 428 units as at 31 December 2025, up from 192 units a year earlier.",
+    "S11": "Total assets increased by 3.4% to reach 91.8 million euros as at 31 December 2025.",
+    "S12": "Total interest-bearing loan liabilities decreased to 47.7 million euros from 54.7 million euros at the end of 2024.",
+    "S13": "Total equity rose by 23.0% to 27.1 million euros, primarily driven by a non-cash contribution to the voluntary reserve of a subsidiary, resulting in an improved equity ratio of 29.5% compared to 24.8% at the end of 2024.",
+    "S14": "Key financing developments included the successful public offering of bonds in November 2025, raising 8.0 million euros at a fixed annual interest rate of 9.50%, with the bonds admitted to trading on the Nasdaq Baltic Bond List.",
+    "S15": "Additionally, the Group paid dividends totaling 1.0 million euros, or 0.26 euros per share, in August 2025.",
+    "S16": "Operational highlights included portfolio expansions in Estonia and Latvia, progress on Canadian development projects following the granting of building rights for the Weston Road project in Toronto, and leasing progress across commercial properties."
+  },
+  "usage": {
+    "input_tokens": 1357,
+    "output_tokens_including_reasoning": 323,
+    "total_tokens": 1680
+  },
+  "latency_seconds": 2.14,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"SELF_CONTRADICTION\",\n      \"candidate_sentence_ids\": [\"S2\", \"S3\"],\n      \"description\": \"Sentence S2 states that net profit attributable to the owners of the parent company was 0.4 million euros in both 2025 and 2024, but S3 reports a net loss of 0.5 million euros for Q4 2025 compared to a net profit of 1.0 million euros in Q4 2024. This creates an internal contradiction because the annual net profit for 2025 cannot be positive (1.0 million euros) while also showing a net loss in the fourth quarter.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a logical flow of information covering revenue, profitability, operational highlights, and financial position. Most statements are consistent with each other and build a coherent narrative about the company's performance. The primary issue is the contradiction between the annual net profit attributable to parent owners (stated as unchanged at 0.4 million euros in S2) and the quarterly net loss reported in S3, which implies the annual net profit should have decreased. Other than this specific contradiction, the summary maintains clear organization, logical relationships between causes and effects (e.g., decreased apartments handed over impacting revenue and profitability), and avoids unnecessary repetition. The financial metrics are presented in a structured way that allows the reader to follow the company's performance trends.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "SELF_CONTRADICTION",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3"
+        ],
+        "description": "Sentence S2 states that net profit attributable to the owners of the parent company was 0.4 million euros in both 2025 and 2024, but S3 reports a net loss of 0.5 million euros for Q4 2025 compared to a net profit of 1.0 million euros in Q4 2024. This creates an internal contradiction because the annual net profit for 2025 cannot be positive (1.0 million euros) while also showing a net loss in the fourth quarter."
+      }
+    ],
+    "justification": "The summary is generally coherent with a logical flow of information covering revenue, profitability, operational highlights, and financial position. Most statements are consistent with each other and build a coherent narrative about the company's performance. The primary issue is the contradiction between the annual net profit attributable to parent owners (stated as unchanged at 0.4 million euros in S2) and the quarterly net loss reported in S3, which implies the annual net profit should have decreased. Other than this specific contradiction, the summary maintains clear organization, logical relationships between causes and effects (e.g., decreased apartments handed over impacting revenue and profitability), and avoids unnecessary repetition. The financial metrics are presented in a structured way that allows the reader to follow the company's performance trends."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

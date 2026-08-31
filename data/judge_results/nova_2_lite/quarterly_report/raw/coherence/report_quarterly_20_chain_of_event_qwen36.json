@@ -1,0 +1,126 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:45:35.819940",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_20_chain_of_event_qwen36.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "289620eabf8d99de",
+    "sentence_map_hash": "ae8a3167cba86641",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "SAF Tehnika reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, representing a 4% decline compared to EUR 27.09 million in the previous financial year.",
+    "S2": "For the fourth quarter alone, net turnover decreased by 13% to EUR 5.18 million from EUR 5.98 million in the prior year period.",
+    "S3": "The company recorded a net loss of EUR 820 thousand for the full year, a significant improvement from the EUR 2.37 million loss reported in the 2023/2024 financial year.",
+    "S4": "However, the fourth quarter saw an increased loss of EUR 913 thousand, compared to a EUR 498 thousand loss in the same quarter of the previous year.",
+    "S5": "Earnings before interest and taxes for the twelve months were a loss of EUR 754 thousand, while the quarterly EBIT loss widened to EUR 863 thousand.",
+    "S6": "Regional performance varied significantly.",
+    "S7": "In North and Latin America, which accounted for 55% of annual turnover, revenue fell by 14% to EUR 14.28 million.",
+    "S8": "In contrast, European revenues grew by 17% to EUR 10.04 million, representing 38% of total turnover.",
+    "S9": "The Asia, Africa, and Middle East region saw a slight 5% decline to EUR 1.78 million.",
+    "S10": "Quarterly analysis showed a 40% drop in North and Latin American sales, while European sales increased by 24% and Asia, Africa, and Middle East sales doubled.",
+    "S11": "The management attributed quarterly fluctuations to the timing of project completions and revenue recognition, noting that dispatch of goods often occurs in subsequent quarters.",
+    "S12": "Operating expenses remained substantial, with salaries and social expenses increasing by 8% to EUR 10.58 million, and bonuses rising sharply to EUR 1.82 million from EUR 942 thousand.",
+    "S13": "The Group continued to invest in product development and sales promotion, with expenses not exceeding budgeted amounts.",
+    "S14": "The global shortage of electronic components affected operations, but the company had accumulated material reserves to maintain delivery times, which have recently improved.",
+    "S15": "Financial position remained strong with a net cash flow of EUR 2.6 million for the year and a cash balance of EUR 4.8 million at period end.",
+    "S16": "Customer advances increased substantially to EUR 3.9 million from EUR 759 thousand the previous year.",
+    "S17": "Total assets grew to EUR 25.9 million, driven by an 8% increase in inventories to EUR 13.9 million.",
+    "S18": "The company maintained liquidity through an unused EUR 4.95 million credit line with Luminor Bank.",
+    "S19": "Employee count increased slightly to 273 from 265.",
+    "S20": "The Board remains cautious regarding future forecasts, aiming to stabilize turnover to ensure long-term positive net results amidst ongoing global business uncertainty."
+  },
+  "usage": {
+    "input_tokens": 1235,
+    "output_tokens_including_reasoning": 255,
+    "total_tokens": 1490
+  },
+  "latency_seconds": 1.91,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S7\", \"S8\", \"S9\", \"S10\"],\n      \"description\": \"The summary provides regional revenue percentages for the full year (S7-S9) and quarterly percentage changes (S10) but does not explicitly clarify whether the quarterly percentages are derived from the same regional definitions or bases as the annual figures. This creates a potential logical gap in connecting annual and quarterly regional performance without explicit reconciliation.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a logical flow from consolidated results to regional performance, expenses, and financial position. The primary issue is a LOGICAL_GAP in S7-S10 where the relationship between annual regional revenue percentages and quarterly percentage changes is not explicitly clarified, leaving room for ambiguity about whether the same definitions/bases apply across periods. No self-contradictions, severe organizational problems, or unnecessary repetition are present. The summary forms a coherent whole with clear cause-effect explanations (e.g., project timing affecting quarterly results in S11) and consistent terminology.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S7",
+          "S8",
+          "S9",
+          "S10"
+        ],
+        "description": "The summary provides regional revenue percentages for the full year (S7-S9) and quarterly percentage changes (S10) but does not explicitly clarify whether the quarterly percentages are derived from the same regional definitions or bases as the annual figures. This creates a potential logical gap in connecting annual and quarterly regional performance without explicit reconciliation."
+      }
+    ],
+    "justification": "The summary is generally coherent with a logical flow from consolidated results to regional performance, expenses, and financial position. The primary issue is a LOGICAL_GAP in S7-S10 where the relationship between annual regional revenue percentages and quarterly percentage changes is not explicitly clarified, leaving room for ambiguity about whether the same definitions/bases apply across periods. No self-contradictions, severe organizational problems, or unnecessary repetition are present. The summary forms a coherent whole with clear cause-effect explanations (e.g., project timing affecting quarterly results in S11) and consistent terminology."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

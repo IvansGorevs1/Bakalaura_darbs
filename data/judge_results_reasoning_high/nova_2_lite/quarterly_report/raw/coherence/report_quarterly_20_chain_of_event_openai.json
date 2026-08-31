@@ -1,0 +1,152 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T00:28:46.800114",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_20_chain_of_event_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "cf47ff649cf5967e",
+    "sentence_map_hash": "9b96dab43fd1bbed",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "SAF Tehnika’s consolidated turnover for the 2024/2025 financial year was EUR 26.11 million, down 4% from EUR 27.09 million in 2023/2024.",
+    "S2": "Despite the lower revenue, the Group significantly reduced its annual net loss to EUR 820 thousand from EUR 2.37 million, while EBIT improved to a loss of EUR 754 thousand from a loss of EUR 2.26 million.",
+    "S3": "The improvement was supported by lower direct costs of goods sold, which declined to EUR 9.33 million from EUR 13.12 million, and lower total operating expenses of EUR 27.56 million compared with EUR 30.27 million.",
+    "S4": "Financial items also produced a smaller net loss, EUR 62 thousand versus EUR 90 thousand previously, although foreign exchange results changed from a gain to a loss.",
+    "S5": "The fourth quarter was materially weaker.",
+    "S6": "Net sales fell 13% year on year to EUR 5.18 million, and the net loss widened to EUR 913 thousand from EUR 498 thousand.",
+    "S7": "EBIT deteriorated to a loss of EUR 863 thousand from EUR 495 thousand.",
+    "S8": "Quarterly turnover was affected by the timing of individual projects, whose production, material procurement and delivery schedules can shift revenue recognition into subsequent quarters.",
+    "S9": "Regional performance was mixed: North and Latin American turnover declined 40% to EUR 2.5 million, while European turnover increased 24% to EUR 1.9 million and turnover in Asia, Africa and the Middle East doubled to EUR 846 thousand.",
+    "S10": "For the full year, the Americas remained the largest market with EUR 14.28 million of revenue, down 14%.",
+    "S11": "European revenue rose 17% to EUR 10.04 million, while Asia, Africa and the Middle East declined 5%.",
+    "S12": "The regional shift toward Europe partly offset the decline in the Americas.",
+    "S13": "The Group continued investing in new and enhanced products, sales promotion, and IoT solutions; management stated that expenses remained within budget.",
+    "S14": "Operations continued to be affected by the global shortage of electronic components.",
+    "S15": "The Group had accumulated material reserves to meet orders and maintain short delivery times, while component delivery times had recently improved.",
+    "S16": "Inventories increased 8% to EUR 13.94 million, reflecting the Group’s policy of maintaining materials for timely deliveries and repair services.",
+    "S17": "Cash generation strengthened considerably.",
+    "S18": "Net cash flow was EUR 2.60 million, compared with an outflow of EUR 1.25 million in the prior year, and year-end cash increased to EUR 4.81 million from EUR 2.21 million.",
+    "S19": "Customer advances were EUR 3.92 million, and the unused EUR 4.95 million Luminor Bank credit line provided additional liquidity capacity.",
+    "S20": "Total assets increased to EUR 25.92 million, while owners’ equity declined to EUR 15.58 million, reflecting the year’s loss."
+  },
+  "usage": {
+    "input_tokens": 1259,
+    "output_tokens_including_reasoning": 361,
+    "total_tokens": 1620
+  },
+  "latency_seconds": 2.49,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S2\", \"S6\", \"S7\"],\n      \"description\": \"The summary states that the annual net loss significantly reduced (S2), but then states that the Q4 net loss widened (S6) and EBIT deteriorated (S7). While these could reflect different timeframes, the summary does not explicitly clarify how these Q4 results reconcile with the overall annual improvement, creating a logical gap in the narrative.\"\n    },\n    {\n      \"type\": \"ORGANIZATION\",\n      \"candidate_sentence_ids\": [\"S5\", \"S6\", \"S7\", \"S8\"],\n      \"description\": \"S5 states 'The fourth quarter was materially weaker' but does not elaborate. S6 and S7 then provide specific Q4 figures, and S8 explains a cause (project timing). The sequence feels slightly disjointed because S5 is a blanket statement that could have been immediately followed by S8's explanation before presenting the specific Q4 numbers in S6 and S7.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear overall narrative of improved annual performance despite weaker Q4 results. There are two notable issues: (1) a logical gap between annual loss reduction and Q4 loss widening/deterioration without explicit reconciliation; and (2) a minor organizational issue where the blanket Q4 weakness statement (S5) is followed by specific Q4 figures before receiving its explanation (S8). These issues are not severe enough to undermine the overall coherence, hence the score of 3.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6",
+          "S7"
+        ],
+        "description": "The summary states that the annual net loss significantly reduced (S2), but then states that the Q4 net loss widened (S6) and EBIT deteriorated (S7). While these could reflect different timeframes, the summary does not explicitly clarify how these Q4 results reconcile with the overall annual improvement, creating a logical gap in the narrative."
+      },
+      {
+        "type": "ORGANIZATION",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6",
+          "S7",
+          "S8"
+        ],
+        "description": "S5 states 'The fourth quarter was materially weaker' but does not elaborate. S6 and S7 then provide specific Q4 figures, and S8 explains a cause (project timing). The sequence feels slightly disjointed because S5 is a blanket statement that could have been immediately followed by S8's explanation before presenting the specific Q4 numbers in S6 and S7."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear overall narrative of improved annual performance despite weaker Q4 results. There are two notable issues: (1) a logical gap between annual loss reduction and Q4 loss widening/deterioration without explicit reconciliation; and (2) a minor organizational issue where the blanket Q4 weakness statement (S5) is followed by specific Q4 figures before receiving its explanation (S8). These issues are not severe enough to undermine the overall coherence, hence the score of 3."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

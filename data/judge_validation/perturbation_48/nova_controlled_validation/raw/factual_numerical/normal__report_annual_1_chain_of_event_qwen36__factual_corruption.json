@@ -1,0 +1,420 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:56:39.151302",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": true,
+    "judge_reasoning_effort": "low",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\normal__report_annual_1_chain_of_event_qwen36__factual_corruption.txt",
+    "evaluation_type": "factual_numerical",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "b80ea8349acefe94",
+    "candidate_hash": "5793b4d9a9f3f835",
+    "sentence_map_hash": "2a8cb1e4c7493b26",
+    "source_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_1.md",
+    "source_hash": "83629bd3f10a3f8b",
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AAC Clyde Space reported a strong improvement in financial performance for the year 2025, driven by on-time programme delivery and earlier revenue recognition.",
+    "S2": "Net sales decreased by 16 percent to SEK 295.3 million, down from SEK 352.9 million in 2024.",
+    "S3": "This reduction was primarily caused by accelerated deliveries in the Products & Missions segment, where technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026.",
+    "S4": "Specifically, the EPS-Sterna programme initiation was completed ahead of schedule, and a separate customer project milestone was achieved early.",
+    "S5": "Despite the lower top line, the Data & Services segment demonstrated strong growth, with net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million in the prior year.",
+    "S6": "This growth reflects the company’s expanding capability to design, build, and operate its own satellite systems, generating recurring revenue streams.",
+    "S7": "The Group’s profitability metrics reflected the impact of these delays and increased investment activities.",
+    "S8": "EBITDA fell significantly to SEK 17.5 million from SEK 46.7 million in 2024.",
+    "S9": "The operating result after depreciation and impairment was a loss of SEK 40.0 million, compared to a loss of SEK 4.0 million in 2024.",
+    "S10": "The loss after tax amounted to SEK 46.6 million, resulting in earnings per share of negative SEK 7.63, compared to negative SEK 1.00 in the previous year.",
+    "S11": "Operating cash flow also deteriorated, moving from a positive SEK 56.8 million in 2024 to a negative SEK 72.6 million in 2025, largely due to the timing of revenue recognition and working capital changes associated with project delays.",
+    "S12": "Key business developments during the period included the signing of a Phase 1 contract with the European Space Agency for the INFLECION programme, aimed at developing a satellite constellation for maritime intelligence.",
+    "S13": "The company also received an order for long-lead components for the EPS-Sterna weather constellation and began assembly of its first VIREON™ Earth Observation satellites.",
+    "S14": "The Sedna-1 and Sedna-2 satellites failed their commissioning tests and remained unavailable to the maritime data network.",
+    "S15": "To support these investments and ensure liquidity, the company completed two directed share issues, raising approximately SEK 114.8 million before transaction costs.",
+    "S16": "Notably, Bonnier Capital exited its holding during the year.",
+    "S17": "The equity ratio improved to 80 percent from 71 percent, indicating a strengthened balance sheet despite the operational losses.",
+    "S18": "Order backlog stood at SEK 352 million at year-end, though the CEO noted that a major contract awarded in early 2026 would significantly increase this figure.",
+    "S19": "The company also launched a new Aurora-3 communications satellite service that became profitable during its first month.",
+    "S20": "The company maintained a strong focus on capital discipline while expanding its constellation capacity to meet growing demand for space-based data services."
+  },
+  "usage": {
+    "input_tokens": 124748,
+    "output_tokens_including_reasoning": 4285,
+    "total_tokens": 129033
+  },
+  "latency_seconds": 38.39,
+  "logical_requests": 2,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 1,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "factual_numerical: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": "targeted_repair",
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": true,
+    "content": [
+      "[REDACTED]."
+    ]
+  },
+  "model_output_text": "```json\n{\n  \"factual_claims\": [\n    {\n      \"id\": \"F1\",\n      \"candidate_sentence_ids\": [\"S1\"],\n      \"claim\": \"AAC Clyde Space reported a strong improvement in financial performance for the year 2025, driven by on-time programme delivery and earlier revenue recognition.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Board of Directors' Report states: 'Two programme-related delays materially affected revenue, cash flow and order intake in 2025... Guidance for 2025 was revised during the year in light of programme developments and timing effects.' CEO Review also notes delays affecting revenues.\"\n    },\n    {\n      \"id\": \"F2\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"claim\": \"This reduction was primarily caused by accelerated deliveries in the Products & Missions segment, where technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Board of Directors' Report states: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.' This indicates delayed recognition, not acceleration.\"\n    },\n    {\n      \"id\": \"F3\",\n      \"candidate_sentence_ids\": [\"S4\"],\n      \"claim\": \"Specifically, the EPS-Sterna programme initiation was completed ahead of schedule, and a separate customer project milestone was achieved early.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Board of Directors' Report states: 'In the EPS-Sterna programme, political and procurement developments postponed project initiation.'\"\n    },\n    {\n      \"id\": \"F4\",\n      \"candidate_sentence_ids\": [\"S5\"],\n      \"claim\": \"Despite the lower top line, the Data & Services segment demonstrated strong growth, with net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million in the prior year.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"Note 5 Segment Information: Data & Services net sales 2025: SEK 80,142k (80.1M) vs 2024: SEK 44,887k (44.9M), representing 78% growth.\"\n    },\n    {\n      \"id\": \"F5\",\n      \"candidate_sentence_ids\": [\"S6\"],\n      \"claim\": \"This growth reflects the company’s expanding capability to design, build, and operate its own satellite systems, generating recurring revenue streams.\",\n      \"label\": \"SUPPORTED\",\n      \"source_evidence\": \"CEO Review: 'In 2025, Data & Services continued to grow, increasing by 80 percent... We have expanded our capabilities and our constellations to deliver data and services directly to customers... This remains our direction.'\"\n    },\n    {\n      \"id\": \"F6\",\n      \"candidate_sentence_ids\": [\"S14\"],\n      \"claim\": \"The Sedna-1 and Sedna-2 satellites failed their commissioning tests and remained unavailable to the maritime data network.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Board of Directors' Report: 'In November 2025, AAC Clyde Space’s Sedna-1 and Sedna-2 satellites were fully operational, strengthening the company’s space-based AIS data network... Together, they reinforce AAC Clyde Space’s leading position in space-based maritime intelligence.'\"\n    },\n    {\n      \"id\": \"F7\",\n      \"candidate_sentence_ids\": [\"S16\"],\n      \"claim\": \"Notably, Bonnier Capital exited its holding during the year.\",\n      \"label\": \"CONTRADICTED\",\n      \"source_evidence\": \"Board of Directors' Report: 'AAC Clyde Space welcomed Bonnier Capital in December 2025 as a new shareholder following a directed investment of up to SEK 140 M... The first of two tranches... was completed in December 2025.'\"\n    },\n    {\n      \"id\": \"F8\",\n      \"candidate_sentence_ids\": [\"S19\"],\n      \"claim\": \"The company also launched a new Aurora-3 communications satellite service that became profitable during its first month.\",\n      \"label\": \"NOT_FOUND\",\n      \"source_evidence\": null\n    }\n  ],\n  \"numerical_claims\": [\n    {\n      \"id\": \"N1\",\n      \"candidate_sentence_ids\": [\"S2\"],\n      \"claim\": \"Net sales decreased by 16 percent to SEK 295.3 million, down from SEK 352.9 million in 2024.\",\n      \"candidate_value\": \"SEK 295.3M (2025) vs SEK 352.9M (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK 295,283k (2025) vs SEK 352,857k (2024)\",\n      \"source_evidence\": \"Consolidated Statement of Comprehensive Income Note 6\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N2\",\n      \"candidate_sentence_ids\": [\"S8\"],\n      \"claim\": \"EBITDA fell significantly to SEK 17.5 million from SEK 46.7 million in 2024.\",\n      \"candidate_value\": \"SEK 17.5M (2025) vs SEK 46.7M (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK 17,463k (2025) vs SEK 46,694k (2024)\",\n      \"source_evidence\": \"Consolidated Statement of Comprehensive Income\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N3\",\n      \"candidate_sentence_ids\": [\"S9\"],\n      \"claim\": \"The operating result after depreciation and impairment was a loss of SEK 40.0 million, compared to a loss of SEK 4.0 million in 2024.\",\n      \"candidate_value\": \"SEK -40.0M (2025) vs SEK -4.0M (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK -39,985k (2025) vs SEK -4,022k (2024)\",\n      \"source_evidence\": \"Consolidated Statement of Comprehensive Income\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N4\",\n      \"candidate_sentence_ids\": [\"S10\"],\n      \"claim\": \"The loss after tax amounted to SEK 46.6 million, resulting in earnings per share of negative SEK 7.63, compared to negative SEK 1.00 in the previous year.\",\n      \"candidate_value\": \"SEK -46.6M loss, EPS -7.63 (2025) vs EPS -1.00 (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK -46,556k loss, EPS -7.63 (2025) vs EPS -1.00 (2024)\",\n      \"source_evidence\": \"Consolidated Statement of Comprehensive Income and Earnings per Share Note 31\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N5\",\n      \"candidate_sentence_ids\": [\"S11\"],\n      \"claim\": \"Operating cash flow also deteriorated, moving from a positive SEK 56.8 million in 2024 to a negative SEK 72.6 million in 2025.\",\n      \"candidate_value\": \"SEK +56.8M (2024) vs SEK -72.6M (2025)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK 56,789k (2024) vs SEK -72,600k (2025)\",\n      \"source_evidence\": \"Consolidated Statement of Cash Flows\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N6\",\n      \"candidate_sentence_ids\": [\"S15\"],\n      \"claim\": \"To support these investments and ensure liquidity, the company completed two directed share issues, raising approximately SEK 114.8 million before transaction costs.\",\n      \"candidate_value\": \"SEK 114.8M\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK 64.5M + SEK 50.3M = SEK 114.8M\",\n      \"source_evidence\": \"Board of Directors' Report: 'In June 2025... raising approximately SEK 64.5 M... Through the directed share issue... raised approximately SEK 50.3 M'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N7\",\n      \"candidate_sentence_ids\": [\"S17\"],\n      \"claim\": \"The equity ratio improved to 80 percent from 71 percent.\",\n      \"candidate_value\": \"80% (2025) vs 71% (2024)\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"80% (2025) vs 71% (2024)\",\n      \"source_evidence\": \"Board of Directors' Report: 'As of 31 December 2025, the equity to assets ratio was 80% (71)'\",\n      \"error_explanation\": null\n    },\n    {\n      \"id\": \"N8\",\n      \"candidate_sentence_ids\": [\"S18\"],\n      \"claim\": \"Order backlog stood at SEK 352 million at year-end...\",\n      \"candidate_value\": \"SEK 352M\",\n      \"label\": \"CORRECT\",\n      \"error_type\": null,\n      \"source_value\": \"SEK 352M\",\n      \"source_evidence\": \"2025 in brief section: 'Order backlog | 352 M | 641 M | 630 M'\",\n      \"error_explanation\": null\n    }\n  ]\n}\n```",
+  "evaluation": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AAC Clyde Space reported a strong improvement in financial performance for the year 2025, driven by on-time programme delivery and earlier revenue recognition.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Board of Directors' Report states: 'Two programme-related delays materially affected revenue, cash flow and order intake in 2025... Guidance for 2025 was revised during the year in light of programme developments and timing effects.' CEO Review also notes delays affecting revenues."
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This reduction was primarily caused by accelerated deliveries in the Products & Missions segment, where technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Board of Directors' Report states: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.' This indicates delayed recognition, not acceleration."
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Specifically, the EPS-Sterna programme initiation was completed ahead of schedule, and a separate customer project milestone was achieved early.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Board of Directors' Report states: 'In the EPS-Sterna programme, political and procurement developments postponed project initiation.'"
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Despite the lower top line, the Data & Services segment demonstrated strong growth, with net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 5 Segment Information: Data & Services net sales 2025: SEK 80,142k (80.1M) vs 2024: SEK 44,887k (44.9M), representing 78% growth."
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "This growth reflects the company’s expanding capability to design, build, and operate its own satellite systems, generating recurring revenue streams.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO Review: 'In 2025, Data & Services continued to grow, increasing by 80 percent... We have expanded our capabilities and our constellations to deliver data and services directly to customers... This remains our direction.'"
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The Sedna-1 and Sedna-2 satellites failed their commissioning tests and remained unavailable to the maritime data network.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Board of Directors' Report: 'In November 2025, AAC Clyde Space’s Sedna-1 and Sedna-2 satellites were fully operational, strengthening the company’s space-based AIS data network... Together, they reinforce AAC Clyde Space’s leading position in space-based maritime intelligence.'"
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Notably, Bonnier Capital exited its holding during the year.",
+        "label": "CONTRADICTED",
+        "source_evidence": "Board of Directors' Report: 'AAC Clyde Space welcomed Bonnier Capital in December 2025 as a new shareholder following a directed investment of up to SEK 140 M... The first of two tranches... was completed in December 2025.'"
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "The company also launched a new Aurora-3 communications satellite service that became profitable during its first month.",
+        "label": "NOT_FOUND",
+        "source_evidence": null
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Net sales decreased by 16 percent to SEK 295.3 million, down from SEK 352.9 million in 2024.",
+        "candidate_value": "SEK 295.3M (2025) vs SEK 352.9M (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 295,283k (2025) vs SEK 352,857k (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income Note 6",
+        "error_explanation": null
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "EBITDA fell significantly to SEK 17.5 million from SEK 46.7 million in 2024.",
+        "candidate_value": "SEK 17.5M (2025) vs SEK 46.7M (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 17,463k (2025) vs SEK 46,694k (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The operating result after depreciation and impairment was a loss of SEK 40.0 million, compared to a loss of SEK 4.0 million in 2024.",
+        "candidate_value": "SEK -40.0M (2025) vs SEK -4.0M (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -39,985k (2025) vs SEK -4,022k (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The loss after tax amounted to SEK 46.6 million, resulting in earnings per share of negative SEK 7.63, compared to negative SEK 1.00 in the previous year.",
+        "candidate_value": "SEK -46.6M loss, EPS -7.63 (2025) vs EPS -1.00 (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK -46,556k loss, EPS -7.63 (2025) vs EPS -1.00 (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income and Earnings per Share Note 31",
+        "error_explanation": null
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Operating cash flow also deteriorated, moving from a positive SEK 56.8 million in 2024 to a negative SEK 72.6 million in 2025.",
+        "candidate_value": "SEK +56.8M (2024) vs SEK -72.6M (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 56,789k (2024) vs SEK -72,600k (2025)",
+        "source_evidence": "Consolidated Statement of Cash Flows",
+        "error_explanation": null
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "To support these investments and ensure liquidity, the company completed two directed share issues, raising approximately SEK 114.8 million before transaction costs.",
+        "candidate_value": "SEK 114.8M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 64.5M + SEK 50.3M = SEK 114.8M",
+        "source_evidence": "Board of Directors' Report: 'In June 2025... raising approximately SEK 64.5 M... Through the directed share issue... raised approximately SEK 50.3 M'",
+        "error_explanation": null
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The equity ratio improved to 80 percent from 71 percent.",
+        "candidate_value": "80% (2025) vs 71% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "80% (2025) vs 71% (2024)",
+        "source_evidence": "Board of Directors' Report: 'As of 31 December 2025, the equity to assets ratio was 80% (71)'",
+        "error_explanation": null
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Order backlog stood at SEK 352 million at year-end...",
+        "candidate_value": "SEK 352M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 352M",
+        "source_evidence": "2025 in brief section: 'Order backlog | 352 M | 641 M | 630 M'",
+        "error_explanation": null
+      },
+      {
+        "claim": "technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026",
+        "candidate_value": "SEK 32 million",
+        "label": "INCORRECT",
+        "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+        "source_value": "SEK 32 million",
+        "source_evidence": "Board of Directors’ Report: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.'",
+        "error_explanation": "Source indicates revenue was DELAYED into 2026 (reducing 2025 revenue), while candidate claims revenue was ACCELERATED forward from 2026 (implying increased 2025 revenue) - opposite direction",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "id": "N9"
+      },
+      {
+        "claim": "Data & Services segment net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million",
+        "candidate_value": "78% increase to SEK 80.1M from SEK 44.9M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "78% increase to SEK 80.142M from SEK 44.887M",
+        "source_evidence": "Note 5 Segment Information: Data & Services net sales 2025: SEK 80,142k (80.142M), 2024: SEK 44,887k (44.887M)",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "id": "N10"
+      }
+    ]
+  },
+  "numerical_coverage": {
+    "ok": true,
+    "expected_sentence_ids": [
+      "S2",
+      "S3",
+      "S5",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S15",
+      "S17",
+      "S18"
+    ],
+    "covered_sentence_ids": [
+      "S2",
+      "S3",
+      "S5",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S15",
+      "S17",
+      "S18"
+    ],
+    "accepted_non_numerical_sentence_ids": [],
+    "missing_sentence_ids": []
+  },
+  "targeted_repair": {
+    "performed": true,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": "```json\n{\n  \"sentence_checks\": [\n    {\n      \"candidate_sentence_id\": \"S3\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains a quantitative claim about SEK 32 million revenue shift direction\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026\",\n          \"candidate_value\": \"SEK 32 million\",\n          \"label\": \"INCORRECT\",\n          \"error_type\": \"INCORRECT_DIRECTION_OR_COMPARISON\",\n          \"source_value\": \"SEK 32 million\",\n          \"source_evidence\": \"Board of Directors’ Report: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.'\",\n          \"error_explanation\": \"Source indicates revenue was DELAYED into 2026 (reducing 2025 revenue), while candidate claims revenue was ACCELERATED forward from 2026 (implying increased 2025 revenue) - opposite direction\"\n        }\n      ]\n    },\n    {\n      \"candidate_sentence_id\": \"S5\",\n      \"classification\": \"HAS_NUMERICAL_PROPOSITION\",\n      \"reason\": \"Contains quantitative claims about segment growth percentage and monetary values\",\n      \"numerical_claims\": [\n        {\n          \"claim\": \"Data & Services segment net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million\",\n          \"candidate_value\": \"78% increase to SEK 80.1M from SEK 44.9M\",\n          \"label\": \"CORRECT\",\n          \"error_type\": null,\n          \"source_value\": \"78% increase to SEK 80.142M from SEK 44.887M\",\n          \"source_evidence\": \"Note 5 Segment Information: Data & Services net sales 2025: SEK 80,142k (80.142M), 2024: SEK 44,887k (44.887M)\",\n          \"error_explanation\": null\n        }\n      ]\n    }\n  ]\n}\n```",
+    "evaluation": {
+      "sentence_checks": [
+        {
+          "candidate_sentence_id": "S3",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains a quantitative claim about SEK 32 million revenue shift direction",
+          "numerical_claims": [
+            {
+              "claim": "technical discussions and procurement progress brought approximately SEK 32 million in revenue forward from 2026",
+              "candidate_value": "SEK 32 million",
+              "label": "INCORRECT",
+              "error_type": "INCORRECT_DIRECTION_OR_COMPARISON",
+              "source_value": "SEK 32 million",
+              "source_evidence": "Board of Directors’ Report: 'In one programme, technical discussions between an end customer and a subcontractor delayed milestone recognition, shifting approximately SEK 32 M into 2026.'",
+              "error_explanation": "Source indicates revenue was DELAYED into 2026 (reducing 2025 revenue), while candidate claims revenue was ACCELERATED forward from 2026 (implying increased 2025 revenue) - opposite direction"
+            }
+          ]
+        },
+        {
+          "candidate_sentence_id": "S5",
+          "classification": "HAS_NUMERICAL_PROPOSITION",
+          "reason": "Contains quantitative claims about segment growth percentage and monetary values",
+          "numerical_claims": [
+            {
+              "claim": "Data & Services segment net sales increasing by 78 percent to SEK 80.1 million from SEK 44.9 million",
+              "candidate_value": "78% increase to SEK 80.1M from SEK 44.9M",
+              "label": "CORRECT",
+              "error_type": null,
+              "source_value": "78% increase to SEK 80.142M from SEK 44.887M",
+              "source_evidence": "Note 5 Segment Information: Data & Services net sales 2025: SEK 80,142k (80.142M), 2024: SEK 44,887k (44.887M)",
+              "error_explanation": null
+            }
+          ]
+        }
+      ]
+    },
+    "json_format_recovery": {
+      "performed": false,
+      "context": "targeted numerical repair",
+      "original_parse_error": null
+    },
+    "usage": {
+      "input_tokens": 61820,
+      "output_tokens_including_reasoning": 1097,
+      "total_tokens": 62917
+    }
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

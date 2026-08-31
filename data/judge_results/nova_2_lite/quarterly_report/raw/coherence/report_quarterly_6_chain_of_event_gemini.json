@@ -1,0 +1,119 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T21:43:24.443083",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_6_chain_of_event_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "1450cef39e3eceb4",
+    "sentence_map_hash": "e0100186fbcd3550",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Infortar Group presented its consolidated unaudited financial report for the first six months of 2026, ending on June 30, 2026.",
+    "S2": "During the reporting period, the group reported total revenue of 945 million euros, slightly down from 951 million euros in the first six months of 2025.",
+    "S3": "Despite the stable revenue, profitability improved significantly.",
+    "S4": "Gross profit for the six-month period rose to 114 million euros compared to 81 million euros in the previous year.",
+    "S5": "Earnings before interest, taxes, depreciation, and amortization reached 111 million euros, marking a 31 percent increase from 85 million euros reported for the first six months of 2025, supported by stronger performance in the energy segment and turnaround results in supporting businesses.",
+    "S6": "Operating profit increased to 51 million euros from 26 million euros, and profit before tax grew to 27 million euros compared to 2 million euros in the prior-year period.",
+    "S7": "Net profit for the six-month period turned positive at 7 million euros, recovering from a net loss of 14 million euros in the first half of 2025, with net profit attributable to the owners of the parent reaching 15 million euros compared to a net loss of 2 million euros a year earlier.",
+    "S8": "Basic earnings per share for the six-month period were 0.74 euros, compared to negative 0.12 euros in 2025.",
+    "S9": "Total assets of the group stood at 2,714 million euros as of June 30, 2026, up from 2,596 million euros at the end of December 2025.",
+    "S10": "Total equity reached 1,200 million euros compared to 1,175 million euros at the end of the previous year, while interest-bearing liabilities increased moderately to 1,083 million euros from 1,071 million euros.",
+    "S11": "Cash and cash equivalents rose to 253 million euros from 146 million euros at the close of the previous corresponding period.",
+    "S12": "For the second quarter alone, the group generated revenue of 440 million euros compared to 504 million euros in the second quarter of 2025.",
+    "S13": "Second-quarter EBITDA was 64 million euros compared to 57 million euros in the prior year, and second-quarter net profit attributable to the owners of the parent was 2 million euros compared to 1 million euros in the second quarter of 2025.",
+    "S14": "The financial performance changes were driven by a decline in wholesale sales volume in the energy segment alongside increased profitability across segments, including the addition of new agricultural units and the closure of unprofitable operations.",
+    "S15": "Market conditions during the period were influenced by heightened geopolitical tensions in the Middle East, volatility in global energy markets, higher fuel prices, and increased emission surrender requirements under the European Union Emissions Trading System."
+  },
+  "usage": {
+    "input_tokens": 1216,
+    "output_tokens_including_reasoning": 233,
+    "total_tokens": 1449
+  },
+  "latency_seconds": 2.72,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\", \"S14\"],\n      \"description\": \"Sentence S3 states that profitability improved significantly despite stable revenue, but S14 attributes financial performance changes to a decline in wholesale sales volume in the energy segment. There is an implicit tension between these statements that requires clearer explanation of how declining sales volume could coexist with improved profitability.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with logical relationships between financial metrics and explanations. All statements are consistent with each other without explicit contradictions. The primary issue is a logical gap between S3's claim of improved profitability despite stable revenue and S14's mention of declining wholesale sales volume in the energy segment, which could confuse readers about the drivers of profitability. The organization is clear, with no unnecessary repetition, and all financial figures are presented in a logical sequence. The summary forms a coherent whole covering revenue, profitability metrics, balance sheet items, and market context.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3",
+          "S14"
+        ],
+        "description": "Sentence S3 states that profitability improved significantly despite stable revenue, but S14 attributes financial performance changes to a decline in wholesale sales volume in the energy segment. There is an implicit tension between these statements that requires clearer explanation of how declining sales volume could coexist with improved profitability."
+      }
+    ],
+    "justification": "The summary is generally coherent with logical relationships between financial metrics and explanations. All statements are consistent with each other without explicit contradictions. The primary issue is a logical gap between S3's claim of improved profitability despite stable revenue and S14's mention of declining wholesale sales volume in the energy segment, which could confuse readers about the drivers of profitability. The organization is clear, with no unnecessary repetition, and all financial figures are presented in a logical sequence. The summary forms a coherent whole covering revenue, profitability metrics, balance sheet items, and market context."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

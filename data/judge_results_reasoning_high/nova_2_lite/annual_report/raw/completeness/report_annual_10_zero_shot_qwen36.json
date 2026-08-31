@@ -1,0 +1,193 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T01:00:15.868632",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_10_zero_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "b89af6d122c083f6",
+    "sentence_map_hash": "1b2d2bc2abe582f5",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "43fd4ecf0839c10d",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_10.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "InCoax Networks AB reported net sales of SEK 48,055,007 for fiscal year 2025, a 35 percent decrease compared to SEK 74,497,775 in 2024.",
+    "S2": "The revenue decline was primarily attributed to timing shifts in customer orders, delayed projects, and a more cautious market.",
+    "S3": "Gross profit totalled SEK 29,919,750, improving the gross margin to 62 percent from 57 percent previously.",
+    "S4": "Higher operational spending relative to reduced turnover resulted in an operating loss of SEK 32,380,175, widening from the prior year figure of SEK 19,378,406.",
+    "S5": "Net loss after tax reached SEK 32,559,663, equating to a loss per share of SEK 0.25.",
+    "S6": "Continued strategic investment maintained capitalised development costs at SEK 25,269,745.",
+    "S7": "Operating cash flow registered a negative SEK 20,011,617, showing marginal improvement from the previous years outflow of SEK 27,117,256.",
+    "S8": "The positive consolidated cash flow of SEK 6,516,117 was entirely funded by financing activities, which raised approximately SEK 53.5 million before costs through a directed share issue, convertible debentures, and borrowings.",
+    "S9": "Year end cash balances stood at SEK 8.7 million, while the shareholder credit facility was completely utilised.",
+    "S10": "The equity ratio consequently decreased to 71.8 percent from 80.8 percent, with total equity closing at SEK 109,778,755.",
+    "S11": "Operationally, 2025 marked a decisive shift from development to commercial execution.",
+    "S12": "The company finalised its updated MoCA Access platform, launching the D2501 product through Nokia Gigabit Connect and rolling out the D2508 unit via direct channels.",
+    "S13": "These solutions address operator demand for cost effective last mile distribution in multi dwelling buildings across North America and Europe.",
+    "S14": "To offset earnings pressure and preserve liquidity, management enacted a structural cost reduction programme expected to lower the ongoing cost base by more than 40 percent, yielding approximately SEK 25 million in annual savings from 2026.",
+    "S15": "While broader fibre and fixed wireless infrastructure rollouts support market relevance, InCoax faces extended procurement cycles and partner dependency risks.",
+    "S16": "The auditor noted a material uncertainty regarding going concern status, as near term financing depends on warrant exercises linked to equity valuation.",
+    "S17": "Looking forward, executive leadership has prioritised strict capital discipline, accelerated pipeline conversion, and achieving positive operating cash flow within twelve months, targeting cash flow neutrality throughout 2026."
+  },
+  "usage": {
+    "input_tokens": 1906,
+    "output_tokens_including_reasoning": 397,
+    "total_tokens": 2303
+  },
+  "latency_seconds": 1.89,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S4\", \"S5\", \"S8\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\", \"S10\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\", \"S14\", \"S17\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S13\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S8\", \"S9\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K7\", \"K8\"],\n  \"justification\": \"K1, K2, K3, K4, K5, and K6 are PRESENT with clear coverage in the candidate summary. K7 (outstanding financial instruments) and K8 (material post-reporting-period events) are MISSING entirely. The summary captures most core financial and operational developments, but omits important post-period events and specific financial instrument details, justifying a 'Generally yes' score.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S4",
+          "S5",
+          "S8"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S10"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S14",
+          "S17"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K7",
+      "K8"
+    ],
+    "justification": "K1, K2, K3, K4, K5, and K6 are PRESENT with clear coverage in the candidate summary. K7 (outstanding financial instruments) and K8 (material post-reporting-period events) are MISSING entirely. The summary captures most core financial and operational developments, but omits important post-period events and specific financial instrument details, justifying a 'Generally yes' score."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

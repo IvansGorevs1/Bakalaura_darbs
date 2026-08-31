@@ -1,0 +1,191 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T01:06:35.073451",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_25_few_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "51b10e58f9bd7bbd",
+    "sentence_map_hash": "4cee997e87980b5e",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "df925e7e4daa63dd",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_25.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "WindowMaster International A/S reported a contraction in revenue and profitability during the 2025 financial year compared to the prior period.",
+    "S2": "Revenue declined by 8% to DKK 269 million, primarily driven by a sluggish first half of the year, reduced sales to a key Nordic customer, and slower growth in North America.",
+    "S3": "Despite the top-line decrease, gross profit margin improved to 48.8% from 46.9% in 2024, reflecting a favorable business mix shift toward higher-margin direct project revenue and away from lower-margin key account sales under the company’s Accelerate Core strategy.",
+    "S4": "Operating earnings fell to DKK 28.0 million, yielding an EBITDA margin of 10.4% compared to 12.7% previously.",
+    "S5": "This margin compression was largely attributable to stable fixed costs intended to fund future expansion, combined with a DKK 2.5 million one-off expense incurred after a ransomware attack disrupted IT operations in the second quarter.",
+    "S6": "Net profit dropped sharply to DKK 0.9 million from DKK 10.6 million, impacted by elevated tax charges resulting from unutilized deferred tax assets.",
+    "S7": "Operating cash flow remained resilient at DKK 28.5 million, supported by tighter management of net working capital, particularly in inventories and work in progress.",
+    "S8": "Equity decreased to DKK 32.5 million, bringing the equity ratio to 23.5% on a net cash basis.",
+    "S9": "Market dynamics shifted during the reporting period as stabilized interest rates gradually revived investment activity, particularly in the non-residential construction sector, which accounts for the majority of the company’s exposure.",
+    "S10": "Residential demand remained muted amid low consumer confidence, while structural tailwinds from environmental regulations and sustainability mandates continued to support underlying demand across Europe and North America.",
+    "S11": "Looking forward, management anticipates organic revenue growth of 7% to 14% in 2026, with EBITDA expected to reach DKK 45 million to DKK 55 million.",
+    "S12": "The fixed cost base is projected to remain unchanged, positioning the group for improved operating leverage and a further reduction in financial gearing toward its internal target of below 2.0 times EBITDA.",
+    "S13": "Overall, the period reflected adaptation to cyclical headwinds and cybersecurity challenges, with the company maintaining disciplined cost management and reinforcing its strategic focus on core ventilation and safety solutions."
+  },
+  "usage": {
+    "input_tokens": 1719,
+    "output_tokens_including_reasoning": 422,
+    "total_tokens": 2141
+  },
+  "latency_seconds": 2.3,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S5\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S6\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S7\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\", \"S10\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S8\"]\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\", \"S13\"]\n    }\n  ],\n  \"score\": 4,\n  \"label\": \"Yes\",\n  \"missing_or_partial_key_information\": [],\n  \"justification\": \"All core material information from the fixed criteria is adequately represented in the candidate summary. K1-K6, K8-K9 are fully covered with supporting sentences identified. K7 is missing but is of MEDIUM importance and does not change the overall understanding of the report. The summary captures revenue decline, EBITDA compression drivers, profit after tax impact, cash flow resilience, 2026 outlook targets, market dynamics, liquidity position, and strategic initiatives, fulfilling all HIGH importance criteria and most MEDIUM ones.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ]
+      },
+      {
+        "id": "K9",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S13"
+        ]
+      }
+    ],
+    "score": 4,
+    "label": "Yes",
+    "missing_or_partial_key_information": [],
+    "justification": "All core material information from the fixed criteria is adequately represented in the candidate summary. K1-K6, K8-K9 are fully covered with supporting sentences identified. K7 is missing but is of MEDIUM importance and does not change the overall understanding of the report. The summary captures revenue decline, EBITDA compression drivers, profit after tax impact, cash flow resilience, 2026 outlook targets, market dynamics, liquidity position, and strategic initiatives, fulfilling all HIGH importance criteria and most MEDIUM ones."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

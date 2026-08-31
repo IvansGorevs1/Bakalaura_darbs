@@ -1,0 +1,126 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T23:06:00.104860",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "GPT-5.6 Luna",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_13_chain_of_event_openai.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "e621d32d5e0fabd3",
+    "sentence_map_hash": "9dd12e417ef35c1e",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AS LHV Group delivered record financial results in 2024 despite falling interest rates, severe competition for deposits and lending, increased regulation, and continued economic contraction in Estonia.",
+    "S2": "Consolidated net profit rose 7% to EUR 150.3 million, while profit attributable to the parent’s owners reached EUR 149.0 million.",
+    "S3": "Net income increased 11% to EUR 338.3 million, supported by 8% growth in net interest income to EUR 273.3 million and a 24% increase in net fee and commission income to EUR 60.3 million.",
+    "S4": "Profit before tax was EUR 175.1 million.",
+    "S5": "Operating expenses grew 14% to EUR 146.9 million, mainly because of higher employee numbers, and expected credit losses increased to EUR 16.3 million from EUR 11.5 million.",
+    "S6": "Nevertheless, the cost-to-income ratio remained 43.4%, and return on equity was 24.5%, compared with 29.0% in 2023.",
+    "S7": "Balance-sheet growth was substantial.",
+    "S8": "Total assets increased 23% to EUR 8.7 billion, net loans rose 28% to EUR 4.6 billion, and customer deposits increased 21% to EUR 6.9 billion.",
+    "S9": "Loan growth reflected 21% increases in both Estonian corporate and retail lending, while UK SME loans expanded 338% to EUR 348 million.",
+    "S10": "Deposit growth was supported particularly by term deposits, although LHV Pank reduced platform deposits by one-third.",
+    "S11": "Loan quality remained strong overall, but the prolonged Estonian recession led to higher overdue and forborne exposures, more restrictive consumer-finance lending, increased impairment allowances, and a rise in Stage 2 and Stage 3 loans.",
+    "S12": "LHV Pank remained the principal earnings contributor, generating EUR 140.5 million of net profit, down 1% despite 6% higher income.",
+    "S13": "Its results were negatively affected by deposit repricing as interest rates declined, while customer activity drove a 34% increase in fee income.",
+    "S14": "LHV Bank’s net profit increased to EUR 5.8 million from EUR 5.3 million as deposits rose 195% to EUR 705 million and loans grew 338% to EUR 348 million, although profitability remained below plan because of slower early-year lending and fluctuating intermediary deposits.",
+    "S15": "LHV Kindlustus reported its second profitable year, with net profit rising 300% to EUR 1.2 million on 21% premium growth.",
+    "S16": "LHV Paytech’s profit increased 40% to EUR 0.7 million, while LHV Varahaldus’s profit declined 2% to EUR 1.6 million because no success fee was earned.",
+    "S17": "Capital and liquidity remained strong.",
+    "S18": "The total capital adequacy ratio was 20.68%, down from 23.45%, while CET1 was 16.89%.",
+    "S19": "LCR and NSFR were 187.5% and 154.4%, respectively, both well above regulatory minima.",
+    "S20": "LHV issued EUR 20 million of Tier 2 bonds, redeemed EUR 20 million of Additional Tier 1 bonds, and issued EUR 300 million of MREL-eligible bonds.",
+    "S21": "The share price fell 7% to EUR 3.245.",
+    "S22": "Management expects lower 2025 profits because of the interest-rate environment, partly offset by continued business growth, cost control, and efficiency improvements."
+  },
+  "usage": {
+    "input_tokens": 1367,
+    "output_tokens_including_reasoning": 260,
+    "total_tokens": 1627
+  },
+  "latency_seconds": 3.01,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S4\", \"S2\"],\n      \"description\": \"Sentence S4 states profit before tax was EUR 175.1 million, but there is no explicit logical connection or explanation provided in the summary explaining how this figure relates to or derives from the previously mentioned consolidated net profit (EUR 150.3 million) and other income/expense components. The relationship between these key profitability metrics is left unexplained, creating a logical gap.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a clear narrative structure covering performance highlights, segment results, balance sheet growth, and outlook. Most statements logically follow from one another. The primary issue is the unexplained relationship between profit before tax (S4) and consolidated net profit (S2), creating a logical gap. There are no self-contradictions, severe organizational problems, or significant repetitions. Balance sheet figures (e.g., loans, deposits) show growth percentages that are internally consistent and do not constitute contradictions because the summary does not claim they are exhaustive additive components of a single total.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S4",
+          "S2"
+        ],
+        "description": "Sentence S4 states profit before tax was EUR 175.1 million, but there is no explicit logical connection or explanation provided in the summary explaining how this figure relates to or derives from the previously mentioned consolidated net profit (EUR 150.3 million) and other income/expense components. The relationship between these key profitability metrics is left unexplained, creating a logical gap."
+      }
+    ],
+    "justification": "The summary is generally coherent with a clear narrative structure covering performance highlights, segment results, balance sheet growth, and outlook. Most statements logically follow from one another. The primary issue is the unexplained relationship between profit before tax (S4) and consolidated net profit (S2), creating a logical gap. There are no self-contradictions, severe organizational problems, or significant repetitions. Balance sheet figures (e.g., loans, deposits) show growth percentages that are internally consistent and do not constitute contradictions because the summary does not claim they are exhaustive additive components of a single total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

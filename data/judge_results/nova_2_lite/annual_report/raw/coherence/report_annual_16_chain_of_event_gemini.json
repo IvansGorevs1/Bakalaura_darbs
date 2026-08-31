@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:59:35.997455",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_16_chain_of_event_gemini.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "28ef6bee19b8ca1f",
+    "sentence_map_hash": "c3250d5f2e947b43",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordic Fibreboard AS published its consolidated annual report for the financial year ended December 31, 2025.",
+    "S2": "During the reporting period, consolidated net sales reached 7.33 million euros, representing a decrease of 3.4% compared to 2024 revenue of 7.59 million euros.",
+    "S3": "Sales revenue from the core activity of fibreboard production and sales stood at 7.33 million euros, down slightly from 7.57 million euros in the previous year, while European Union sales, which accounted for 92% of total net sales, remained relatively flat.",
+    "S4": "Real estate management revenue dropped to 3 thousand euros compared to 25 thousand euros in 2024 due to the termination of rental agreements in August 2024 caused by high communal costs.",
+    "S5": "Financial performance declined further as the Group recorded a consolidated EBITDA of negative 0.42 million euros, compared to negative 0.03 million euros in 2024.",
+    "S6": "The negative EBITDA in both years was directly influenced by factory shutdowns in December—planned in 2025 for transitioning to a new gas boiler house and unplanned in 2024 due to force majeure weather damage—during which personnel, maintenance, and repair costs continued to accrue.",
+    "S7": "Consequently, the operating loss widened to 0.94 million euros from 0.547 million euros in 2024, and the consolidated net loss expanded to 1.15 million euros from a net loss of 0.79 million euros in the prior year.",
+    "S8": "Basic and diluted loss per share improved slightly to 0.14 euros from 0.17 euros in 2024.",
+    "S9": "As of December 31, 2025, total assets increased to 9.3 million euros from 8.3 million euros in 2024, total liabilities rose to 4.9 million euros from 4.6 million euros, and equity increased to 4.5 million euros from 3.6 million euros.",
+    "S10": "The growth in equity and share capital was supported by a public share issue completed in October 2025, which successfully raised 2.0 million euros through the issuance of 4,000,000 new shares, increasing total share capital to 850 thousand euros across 8,499,061 shares.",
+    "S11": "The Group ended the year with a negative net working capital of 2.7 million euros and a cash and cash equivalents balance of 5 thousand euros, down from 53 thousand euros at the end of 2024.",
+    "S12": "To address working capital and liquidity, Nordic Fibreboard AS entered into a preliminary purchase and sale agreement on January 8, 2026, for the sale of ten properties comprising the Admirali Quarter development project in Pärnu, with the final agreement expected to be concluded by June 30, 2026."
+  },
+  "usage": {
+    "input_tokens": 1219,
+    "output_tokens_including_reasoning": 206,
+    "total_tokens": 1425
+  },
+  "latency_seconds": 1.49,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"issues\": [\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"description\": \"Sentence S3 states that EU sales accounted for 92% of total net sales but does not specify the monetary value of EU sales, leaving a logical gap in the explanation of how the core activity sales relate to the geographic breakdown.\"\n    }\n  ],\n  \"justification\": \"The summary is generally coherent with a logical flow from revenue figures to financial performance, equity changes, and liquidity measures. The only notable issue is a logical gap in S3 where the relationship between core activity sales and EU sales percentages is not fully clarified. There are no self-contradictions, organizational problems, or significant repetitions. The arithmetic differences between segment figures and consolidated totals are not contradictions because the candidate does not claim they are exhaustive additive components of the same total.\"\n}\n```",
+  "evaluation": {
+    "score": 3,
+    "label": "Generally yes",
+    "issues": [
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "description": "Sentence S3 states that EU sales accounted for 92% of total net sales but does not specify the monetary value of EU sales, leaving a logical gap in the explanation of how the core activity sales relate to the geographic breakdown."
+      }
+    ],
+    "justification": "The summary is generally coherent with a logical flow from revenue figures to financial performance, equity changes, and liquidity measures. The only notable issue is a logical gap in S3 where the relationship between core activity sales and EU sales percentages is not fully clarified. There are no self-contradictions, organizational problems, or significant repetitions. The arithmetic differences between segment figures and consolidated totals are not contradictions because the candidate does not claim they are exhaustive additive components of the same total."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

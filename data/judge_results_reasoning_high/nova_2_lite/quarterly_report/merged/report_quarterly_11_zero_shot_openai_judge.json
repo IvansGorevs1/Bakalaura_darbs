@@ -1,0 +1,863 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_11_zero_shot_openai.txt",
+    "report": "report_quarterly_11.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Kvika banki reported a weaker second quarter but a stronger first half of 2026.",
+    "S2": "Q2 pre-tax profit was ISK 1,545 million, down ISK 480 million, or 23.7%, from Q2 2025 and 14.6% from Q1 2026.",
+    "S3": "After-tax profit was ISK 903 million, compared with ISK 1,439 million a year earlier.",
+    "S4": "Net operating income decreased 7.3% year on year to ISK 4,756 million.",
+    "S5": "Net interest income remained resilient at ISK 3,013 million, increasing 1.7% from Q2 2025, as higher income from customer lending offset a smaller liquidity portfolio and higher funding costs.",
+    "S6": "It fell from ISK 3,266 million in Q1, however, and the net interest margin declined to 4.0% from 4.5%.",
+    "S7": "The quarter was affected by lower inflation, which reduced the benefit from Kvika’s positive ISK 6.1 billion inflation balance, the ISK 10.2 billion dividend paid in June, and recent senior preferred and AT1 bond issuances.",
+    "S8": "Net fee and commission income fell 26.8% year on year to ISK 1,416 million amid subdued capital-market activity.",
+    "S9": "Equity-market turnover declined 50% and fixed-income turnover 12% from Q2 2025.",
+    "S10": "Other net operating income increased to ISK 327 million from ISK 231 million.",
+    "S11": "Administrative expenses decreased 1.1% to ISK 2,947 million despite a one-off ISK 112 million restructuring charge.",
+    "S12": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million.",
+    "S13": "Net impairment increased to ISK 269 million from ISK 122 million, reflecting a more conservative loan-book review and heightened economic uncertainty.",
+    "S14": "The effective income-tax rate rose to 34.8%, mainly because of higher special taxes related to the closure of funding derivatives.",
+    "S15": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million.",
+    "S16": "After-tax profit from continuing operations was ISK 2,277 million, compared with ISK 1,625 million in the prior-year period.",
+    "S17": "Reported profit for the period fell to ISK 2,277 million from ISK 3,525 million because 6M 2025 included ISK 1,901 million from discontinued operations.",
+    "S18": "Business activity remained positive.",
+    "S19": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion.",
+    "S20": "The Commercial Banking loan and deposit books expanded, UK lending reached a record level, and asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund.",
+    "S21": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%.",
+    "S22": "The sale of Straumur is progressing, while the CEO plans to step down by year-end 2026."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_11.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_11.json",
+    "key_information_hash": "8a5023d112718fa1",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 13,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 13
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 20,
+      "incorrect": 0,
+      "total": 20
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 7,
+      "partially_present": 0,
+      "missing": 0,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Kvika banki reported a weaker second quarter but a stronger first half of 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Q2 pre-tax profit decreased by 23.7% YoY, but 6M pre-tax profit from continuing operations increased by 23.0% YoY (pages 8-9, 15)",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Kvika banki reported a weaker second quarter but a stronger first half of 2026."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The quarter was affected by lower inflation, which reduced the benefit from Kvika’s positive ISK 6.1 billion inflation balance, the ISK 10.2 billion dividend paid in June, and recent senior preferred and AT1 bond issuances.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net interest margin decline driven by lower inflation reducing positive inflation balance, ISK 10.2 bn dividend payment, and recent senior preferred/AT1 issuances (page 11)",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The quarter was affected by lower inflation, which reduced the benefit from Kvika’s positive ISK 6.1 billion inflation balance, the ISK 10.2 billion dividend paid in June, and recent senior preferred and AT1 bond issuances."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Equity-market turnover declined 50% and fixed-income turnover 12% from Q2 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Turnover in equity market decreased by 50% from Q2 2025 and by 12% in fixed income markets (page 11)",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Equity-market turnover declined 50% and fixed-income turnover 12% from Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Employee count decreased to 232 at end of Q2; efficiency measures expected to lower annual cost base by ISK 300-400 m (page 14)",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net impairment increased to ISK 269 million from ISK 122 million, reflecting a more conservative loan-book review and heightened economic uncertainty.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net impairment was ISK 269 m in Q2 2026 vs ISK 122 m in Q2 2025; increase reflects more cautious approach amid economic uncertainty (page 17)",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net impairment increased to ISK 269 million from ISK 122 million, reflecting a more conservative loan-book review and heightened economic uncertainty."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The effective income-tax rate rose to 34.8%, mainly because of higher special taxes related to the closure of funding derivatives.",
+        "label": "SUPPORTED",
+        "source_evidence": "Effective income tax rate increased to 34.8% in Q2 2026 from 24.4% in Q2 2025, mainly reflecting higher special tax on financial activities related to closure of funding derivatives (page 8)",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The effective income-tax rate rose to 34.8%, mainly because of higher special taxes related to the closure of funding derivatives."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net operating income amounted to ISK 9,643 m, increasing 0.7% YoY; pre-tax profit from continuing operations increased by 23.0% YoY to ISK 3,354 m (pages 9, 15)",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Reported profit for the period fell to ISK 2,277 million from ISK 3,525 million because 6M 2025 included ISK 1,901 million from discontinued operations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Profit for the period was ISK 2,277 m vs ISK 3,525 m; 6M 2025 included ISK 1,901 m from discontinued operations (page 9)",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Reported profit for the period fell to ISK 2,277 million from ISK 3,525 million because 6M 2025 included ISK 1,901 million from discontinued operations."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Business activity remained positive.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loan book growth, deposit growth, strong liquidity/capital positions, and ongoing strategic initiatives described as positive (pages 15-22, 23-24)",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Business activity remained positive."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loans to customers amounted to ISK 223.3 bn (7.6% increase from year-end 2025); deposits amounted to ISK 201.2 bn (16.5% increase); total assets amounted to ISK 375.7 bn (9.5% increase) (pages 15, 18, 22)",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The Commercial Banking loan and deposit books expanded, UK lending reached a record level, and asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund.",
+        "label": "SUPPORTED",
+        "source_evidence": "Commercial Banking: deposit/lending growth; UK: loan book reached all-time high; Asset Management: assets under management decreased slightly to ISK 448.6 bn excluding liquidated fund (pages 15, 20, 21)",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Commercial Banking loan and deposit books expanded, UK lending reached a record level, and asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Liquidity Coverage Ratio (LCR) 276%; Net Stable Funding Ratio (NSFR) 137%; Common Equity Tier 1 Ratio (CAR) 23.0% (pages 20-22)",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "The sale of Straumur is progressing, while the CEO plans to step down by year-end 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Sale of Straumur greiðslumiðlun hf. in progress; CEO Ármann Þorvaldsson to step down by year-end 2026 (page 3, 24)",
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "The sale of Straumur is progressing, while the CEO plans to step down by year-end 2026."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Q2 pre-tax profit was ISK 1,545 million, down ISK 480 million, or 23.7%, from Q2 2025 and 14.6% from Q1 2026",
+        "candidate_value": "ISK 1,545 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 1,545 million",
+        "source_evidence": "Pre-tax profit ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m. from previous year, or 23.7%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Q2 pre-tax profit was ISK 1,545 million, down ISK 480 million, or 23.7%, from Q2 2025 and 14.6% from Q1 2026."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "After-tax profit was ISK 903 million, compared with ISK 1,439 million a year earlier",
+        "candidate_value": "ISK 903 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 903 million",
+        "source_evidence": "After-tax profit 903",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "After-tax profit was ISK 903 million, compared with ISK 1,439 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Net operating income decreased 7.3% year on year to ISK 4,756 million",
+        "candidate_value": "ISK 4,756 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 4,756 million",
+        "source_evidence": "Net operating income 4,756",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Net operating income decreased 7.3% year on year to ISK 4,756 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net interest income remained resilient at ISK 3,013 million, increasing 1.7% from Q2 2025",
+        "candidate_value": "ISK 3,013 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 3,013 million",
+        "source_evidence": "Net interest income ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Net interest income remained resilient at ISK 3,013 million, increasing 1.7% from Q2 2025, as higher income from customer lending offset a smaller liquidity portfolio and higher funding costs."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net interest income fell from ISK 3,266 million in Q1, and the net interest margin declined to 4.0% from 4.5%",
+        "candidate_value": "ISK 3,266 million | 4.0% | 4.5%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 3,266 million | 4.0% | 4.5%",
+        "source_evidence": "Net interest income 3,013 (Q2 2026) vs 3,266 (Q1 2026). Net interest margin was 4.0% in the quarter, compared with 4.5% in Q1 2026",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "It fell from ISK 3,266 million in Q1, however, and the net interest margin declined to 4.0% from 4.5%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Net fee and commission income fell 26.8% year on year to ISK 1,416 million",
+        "candidate_value": "ISK 1,416 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 1,416 million",
+        "source_evidence": "Net fee and commission income ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Net fee and commission income fell 26.8% year on year to ISK 1,416 million amid subdued capital-market activity."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Equity-market turnover declined 50% and fixed-income turnover 12% from Q2 2025",
+        "candidate_value": "50% | 12%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "50% | 12%",
+        "source_evidence": "Turnover in the equity market decreased by 50% from Q2 2025 and decreased by 12% in the fixed income markets",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Equity-market turnover declined 50% and fixed-income turnover 12% from Q2 2025."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Other net operating income increased to ISK 327 million from ISK 231 million",
+        "candidate_value": "ISK 327 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 327 million",
+        "source_evidence": "Other net operating income 327",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Other net operating income increased to ISK 327 million from ISK 231 million."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Administrative expenses decreased 1.1% to ISK 2,947 million despite a one-off ISK 112 million restructuring charge",
+        "candidate_value": "ISK 2,947 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 2,947 million",
+        "source_evidence": "Administrative expenses ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Administrative expenses decreased 1.1% to ISK 2,947 million despite a one-off ISK 112 million restructuring charge."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million",
+        "candidate_value": "232 | ISK 300-400 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "232 | ISK 300-400 million",
+        "source_evidence": "Employee count decreased to 232 at the end of Q2... efficiency measures... ISK 300-400 m.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net impairment increased to ISK 269 million from ISK 122 million",
+        "candidate_value": "ISK 269 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 269 million",
+        "source_evidence": "Net impairment (269)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net impairment increased to ISK 269 million from ISK 122 million, reflecting a more conservative loan-book review and heightened economic uncertainty."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The effective income-tax rate rose to 34.8%",
+        "candidate_value": "34.8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "34.8%",
+        "source_evidence": "The effective income tax rate increased to 34.8% in Q2 2026",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The effective income-tax rate rose to 34.8%, mainly because of higher special taxes related to the closure of funding derivatives."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million",
+        "candidate_value": "ISK 9,643 million | ISK 3,354 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 9,643 million | ISK 3,354 million",
+        "source_evidence": "Net operating income 9,643... Pre-tax profit 3,354",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "After-tax profit from continuing operations was ISK 2,277 million, compared with ISK 1,625 million in the prior-year period",
+        "candidate_value": "ISK 2,277 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 2,277 million",
+        "source_evidence": "After-tax profit 2,277",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "After-tax profit from continuing operations was ISK 2,277 million, compared with ISK 1,625 million in the prior-year period."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Reported profit for the period fell to ISK 2,277 million from ISK 3,525 million because 6M 2025 included ISK 1,901 million from discontinued operations",
+        "candidate_value": "ISK 2,277 million | ISK 3,525 million | ISK 1,901 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 2,277 million | ISK 3,525 million | ISK 1,901 million",
+        "source_evidence": "Profit for the period 2,277... 3,525... Profit after tax from discontinued operations - | 1,901",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Reported profit for the period fell to ISK 2,277 million from ISK 3,525 million because 6M 2025 included ISK 1,901 million from discontinued operations."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion",
+        "candidate_value": "ISK 223.3 billion | ISK 201.2 billion | ISK 375.7 billion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 223.3 billion | ISK 201.2 billion | ISK 375.7 billion",
+        "source_evidence": "Loans to customers 223.3 bn... Deposits 201.2 bn... Total assets 375.7 bn.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund",
+        "candidate_value": "ISK 448.6 billion",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 448.6 billion",
+        "source_evidence": "Assets under management decreased slightly from ISK 450.4 bn. to ISK 448.6 bn. during Q2 2026. Excluding the liquidation... assets under management increased by ISK 13.4 bn.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Commercial Banking loan and deposit books expanded, UK lending reached a record level, and asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%",
+        "candidate_value": "276% | 137% | 23.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "276% | 137% | 23.0%",
+        "source_evidence": "LCR remains strong at 276%... NSFR stood at 137%... CAR of 23.0%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%."
+          }
+        ]
+      },
+      {
+        "claim": "Kvika’s positive ISK 6.1 billion inflation balance",
+        "candidate_value": "ISK 6.1 bn.",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 6.1 bn.",
+        "source_evidence": "Balance Sheet: Assets section: 'The bank maintains a modest positive CPI imbalance (ISK 6.1 bn.), partly related to market-making activities'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N19",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The quarter was affected by lower inflation, which reduced the benefit from Kvika’s positive ISK 6.1 billion inflation balance, the ISK 10.2 billion dividend paid in June, and recent senior preferred and AT1 bond issuances."
+          }
+        ]
+      },
+      {
+        "claim": "ISK 10.2 billion dividend payment in June",
+        "candidate_value": "ISK 10.2 bn.",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 10.2 bn.",
+        "source_evidence": "Net interest income section: 'the impact of the ISK 10.2 bn. dividend payment in June'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N20",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The quarter was affected by lower inflation, which reduced the benefit from Kvika’s positive ISK 6.1 billion inflation balance, the ISK 10.2 billion dividend paid in June, and recent senior preferred and AT1 bond issuances."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Profit before tax decreased to ISK 1,545 million in Q2 2026 from ISK 2,025 million in Q2 2025, a decline of ISK 480 million or 23.7%, primarily due to a 26.8% drop in net fee income to ISK 1,416 million and a ISK 112 million one-off cost from efficiency measures announced in June; these measures are expected to lower the annual cost base by ISK 300-400 million, partially offset by resilient net interest income growth of 1.7%.",
+        "importance": "HIGH",
+        "source_evidence": "Profit before tax ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m. from previous year, or 23.7%. Net interest income ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%. Net fee and commission income ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%. Administrative expenses ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1% despite ISK 112 m. one-off restructuring charge. Efficiency measures... ISK 112 m. expensed... lowers the annual cost base by ISK 300-400 m.",
+        "origin_draft_ids": [
+          "D1",
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S8",
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Q2 pre-tax profit was ISK 1,545 million, down ISK 480 million, or 23.7%, from Q2 2025 and 14.6% from Q1 2026."
+          },
+          {
+            "id": "S5",
+            "text": "Net interest income remained resilient at ISK 3,013 million, increasing 1.7% from Q2 2025, as higher income from customer lending offset a smaller liquidity portfolio and higher funding costs."
+          },
+          {
+            "id": "S8",
+            "text": "Net fee and commission income fell 26.8% year on year to ISK 1,416 million amid subdued capital-market activity."
+          },
+          {
+            "id": "S11",
+            "text": "Administrative expenses decreased 1.1% to ISK 2,947 million despite a one-off ISK 112 million restructuring charge."
+          },
+          {
+            "id": "S12",
+            "text": "Employee numbers fell to 232 following organisational changes, and the efficiency programme is expected to reduce the annual cost base by ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Deposits surpassed ISK 200 billion for the first time, reaching ISK 201.2 billion at quarter-end, up 16.5% from year-end 2025, driven by retail deposits and public entities, while loans to customers grew to ISK 223.3 billion, up 7.6% from year-end 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Deposits amounted to ISK 201.2 bn. at the end of Q2 2026, increasing by 16.5% from year-end 2025. Loans to customers amounted to ISK 223.3 bn. at the end of Q2 2026, increasing by ISK 15.8 bn., or 7.6%, from year-end 2025.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Loans grew 7.6% from year-end 2025 to ISK 223.3 billion, deposits rose 16.5% to ISK 201.2 billion, and total assets increased 9.5% to ISK 375.7 billion."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Capital adequacy ratio (CAR) stood at 23.0% at 30 June 2026, down from 26.8% at year-end 2025 primarily due to the ISK 10.2 billion special dividend payment in June, while maintaining a strong management buffer above regulatory requirements.",
+        "importance": "HIGH",
+        "source_evidence": "CAR of 23.0% at 30 June 2026, decreasing as special dividend was distributed in June. The bank continues to target a management buffer of 2% to 4% over current and anticipated CAR requirements.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Liquidity position remains strong with LCR at 276% (well above 100% requirement) and NSFR at 137%, supported by high-quality liquid assets of ISK 76.4 billion (81% Level 1 assets).",
+        "importance": "HIGH",
+        "source_evidence": "The liquidity coverage ratio (LCR) remains strong at 276%, well above the 100% regulatory requirement. NSFR stood at 137%. High-quality liquid assets (HQLA) amounted to ISK 76.4 bn., of which 81% were classified as Level 1 assets.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Liquidity and capital remained strong, with an LCR of 276%, NSFR of 137% and CAR of 23.0%."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "CEO Ármann Þorvaldsson requested to step down by year-end 2026, and the divestment of Straumur greiðslumiðlun hf. is ongoing.",
+        "importance": "HIGH",
+        "source_evidence": "CEO Ármann Þorvaldsson to step down by year-end 2026. Sale of Straumur greiðslumiðlun hf. in progress.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "The sale of Straumur is progressing, while the CEO plans to step down by year-end 2026."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Segment performance highlights strong loan growth in Commercial Banking (+ISK 6 bn QoQ) and Investment Banking (+nearly 4% QoQ), while UK operations show record loan book levels and advancing asset sales.",
+        "importance": "MEDIUM",
+        "source_evidence": "Commercial Banking: deposits increasing by ISK 12 bn. during Q2 (+8% QoQ), loans increasing in total by ISK 6 bn. during the quarter (+3%). Investment Banking: loan book grew by nearly 4% quarter-on-quarter. UK: loan book reaching an all-time high, Harpa completing additional PE deal, UK largest PE asset sale process expected to close before year-end.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Commercial Banking loan and deposit books expanded, UK lending reached a record level, and asset management assets were broadly stable at ISK 448.6 billion excluding a liquidated fund."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Six-month 2026 results show pre-tax profit from continuing operations increased by 23.0% YoY to ISK 3,354 million, driven by 6.8% YoY growth in net interest income and disciplined cost management.",
+        "importance": "HIGH",
+        "source_evidence": "Pre-tax profit from continuing operations increasing by 23.0% YoY to ISK 3,354 million in 6M 2026. Net interest income increased by 6.8% YoY. Administrative expenses amounted to ISK 5,961 m., a 1.8% decrease YoY.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "For the six months, net operating income increased 0.7% to ISK 9,643 million, while pre-tax profit from continuing operations rose 23.0% to ISK 3,354 million."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All key information units are adequately represented in the candidate summary. K1 covers profit decline, fee income drop, one-off costs, and net interest income growth. K2 covers deposit and loan growth figures. K3 covers CAR decrease due to dividend payment. K4 covers liquidity ratios and HQLA details. K5 covers CEO resignation and Straumur divestment. K6 covers segment performance highlights. K7 covers six-month profit growth from continuing operations. No material omissions affect the overall understanding.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. It presents a consistent narrative about Kvika banki's financial performance across different metrics (profit, income components, expenses, balance sheet items) without self-contradiction. The relationships between quarterly and half-year figures are logically presented, with clear explanations for variances (e.g., inflation impact in S7, restructuring charge in S11). The organization follows a logical flow from income statement items to balance sheet highlights and strategic updates. There is no unnecessary repetition that materially reduces clarity. While some comparisons involve different bases (e.g., S17 notes discontinued operations in prior-year period), these are explicitly acknowledged and do not constitute internal contradictions."
+  },
+  "usage": {
+    "input_tokens_total": 39564,
+    "output_tokens_total_including_reasoning": 11170,
+    "total_tokens": 50734,
+    "latency_seconds_total": 58.83
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 25927,
+    "output_tokens_total_including_reasoning": 73586,
+    "total_tokens": 99513,
+    "latency_seconds_total": 274.72
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_11.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_11_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_11.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_11.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_11_zero_shot_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_11_zero_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_11_zero_shot_openai.json"
+    }
+  }
+}

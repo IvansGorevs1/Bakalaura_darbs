@@ -1,0 +1,489 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_3_zero_shot_openai.txt",
+    "report": "report_quarterly_3.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Amber Latvijas balzams reported a significant deterioration in performance in the first three months of 2026 compared with the same period of 2025.",
+    "S2": "Sales volume fell 36.1%, from 810,079 to 517,600 9-liter cases.",
+    "S3": "Net turnover decreased 29.6% to EUR 11.1 million from EUR 15.8 million, mainly because of lower sales volumes and a high comparison base in 2025, when revenue had benefited from an adjustment recognized under contractual terms.",
+    "S4": "Gross profit declined 66.5% to EUR 1.2 million from EUR 3.5 million.",
+    "S5": "Management attributed the reduction primarily to changes in product mix and pricing methodology; although cost reductions were achieved, their positive effect was largely offset.",
+    "S6": "The company moved from an operating profit of EUR 0.6 million in the first quarter of 2025 to an operating loss of EUR 1.6 million in 2026, reducing the operating margin from 3.7% to -14.5%.",
+    "S7": "Net finance income decreased to EUR 0.2 million from EUR 0.3 million, while the company reported a net loss of EUR 1.4 million compared with a profit of EUR 0.9 million previously.",
+    "S8": "Earnings per share consequently fell to a loss of EUR 0.19 from earnings of EUR 0.11.",
+    "S9": "The results were affected by several external and group-related developments.",
+    "S10": "In January 2026, a trustee was appointed for related company Stoli Group (USA), LLC following Chapter 11 bankruptcy proceedings, causing the group to lose control of its U.S. operations and directly affecting the solvency of the company’s largest customer.",
+    "S11": "The group also reported aggressive actions by Russian authorities, including the designation of related entities as extremist and the confiscation of the group-owned Talvis distillery.",
+    "S12": "In addition, the global spirits market experienced a downturn, with declining volumes, weaker discretionary spending and inventory adjustments in distribution channels.",
+    "S13": "These pressures created substantial cash-flow difficulties and delayed excise-tax payments.",
+    "S14": "After the State Revenue Service froze the company’s bank accounts, Amber Latvijas balzams applied for legal protection proceedings on 30 January 2026; the Riga City Court approved the application on 5 February.",
+    "S15": "The proceedings are intended to restructure liabilities and stabilize operations.",
+    "S16": "Operating activities used EUR 1.8 million of cash, and cash and cash equivalents fell from EUR 1.0 million at year-end 2025 to EUR 38,000 at 31 March 2026, although current assets exceeded current liabilities by EUR 82.9 million.",
+    "S17": "Subsequent to the period, the principal shareholder entered Luxembourg judicial reorganization proceedings with a moratorium until 24 August 2026.",
+    "S18": "Management is focusing on efficiency, cost optimization, stronger controls and improved financial stability."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_3.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_3.json",
+    "key_information_hash": "3d664a5aa2d0843c",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 3,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 3
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 7,
+      "incorrect": 0,
+      "total": 7
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Amber Latvijas balzams reported a significant deterioration in performance in the first three months of 2026 compared with the same period of 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Management Report details significant decreases in sales volume, net turnover, gross profit, operating profit, and net profit for Q1 2026 compared to Q1 2025, attributing this to external and internal factors.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Amber Latvijas balzams reported a significant deterioration in performance in the first three months of 2026 compared with the same period of 2025."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The results were affected by several external and group-related developments.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Management Report explicitly lists multiple external challenges (U.S. bankruptcy of Stoli Group, Russian actions, global spirits market downturn) and group-related issues that impacted financial performance.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The results were affected by several external and group-related developments."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Management is focusing on efficiency, cost optimization, stronger controls and improved financial stability.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Management Report states: 'In order to maintain competitiveness... the Company continues to implement a range of measures aimed at increasing production efficiency and reducing costs'... and mentions initiatives for governance structure enhancements, audits, and financial stability.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management is focusing on efficiency, cost optimization, stronger controls and improved financial stability."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Sales volume fell 36.1%, from 810,079 to 517,600 9-liter cases.",
+        "candidate_value": "36.1% decrease from 810,079 to 517,600 9Lcs",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "517,600 9Lcs (2026) vs 810,079 9Lcs (2025)",
+        "source_evidence": "Table in Management Report: 'Sales volume, in 9 liter boxes 517 600 810 079'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Sales volume fell 36.1%, from 810,079 to 517,600 9-liter cases."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net turnover decreased 29.6% to EUR 11.1 million from EUR 15.8 million.",
+        "candidate_value": "29.6% decrease to EUR 11.1M from EUR 15.8M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 11,098,522 (2026) vs EUR 15,766,805 (2025)",
+        "source_evidence": "Management Report: 'The Company's unaudited net turnover for the first three months of 2026 amounted to EUR 11.1 million, representing a decrease of 29.6% compared to the corresponding period in 2025.' Note 3b shows exact figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Net turnover decreased 29.6% to EUR 11.1 million from EUR 15.8 million, mainly because of lower sales volumes and a high comparison base in 2025, when revenue had benefited from an adjustment recognized under contractual terms."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit declined 66.5% to EUR 1.2 million from EUR 3.5 million.",
+        "candidate_value": "66.5% decrease to EUR 1.2M from EUR 3.5M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EUR 1,159,478 (2026) vs EUR 3,459,984 (2025)",
+        "source_evidence": "Management Report: 'Gross profit for the first three months of 2026 amounted to EUR 1.2 million, which is EUR 2.3 million, or 66.5%, lower than in the corresponding period of 2025.' Note 4 shows exact figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit declined 66.5% to EUR 1.2 million from EUR 3.5 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The company moved from an operating profit of EUR 0.6 million in Q1 2025 to an operating loss of EUR 1.6 million in 2026, reducing the operating margin from 3.7% to -14.5%.",
+        "candidate_value": "Operating profit: EUR 0.6M (2025) to (EUR 1.6M) (2026); Margin: 3.7% to -14.5%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating profit: EUR 0.6M (2025) vs (EUR 1.6M) (2026); Margin: 3.7% (2025) vs -14.5% (2026)",
+        "source_evidence": "Management Report: 'During the first three months of 2026, the Company's operating result was a loss of EUR 1.6 million... operating profit of EUR 0.6 million [in 2025]... operating profit margin for the first three months of 2026 was -14.5% (2025: 3.7%).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company moved from an operating profit of EUR 0.6 million in the first quarter of 2025 to an operating loss of EUR 1.6 million in 2026, reducing the operating margin from 3.7% to -14.5%."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net finance income decreased to EUR 0.2 million from EUR 0.3 million, while the company reported a net loss of EUR 1.4 million compared with a profit of EUR 0.9 million previously.",
+        "candidate_value": "Net finance income: EUR 0.2M (2026) vs EUR 0.3M (2025); Net result: (EUR 1.4M) vs EUR 0.9M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net finance income: EUR 221,863 (0.22M) vs EUR 269,556 (0.27M); Net profit: (EUR 1,387,095) vs EUR 858,896",
+        "source_evidence": "Note 7 shows net finance income of EUR 221,863 (2026) vs EUR 269,556 (2025). Income Statement and Note 8 show net loss of EUR 1,387,095 (2026) vs profit of EUR 858,896 (2025). Candidate rounding is acceptable.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net finance income decreased to EUR 0.2 million from EUR 0.3 million, while the company reported a net loss of EUR 1.4 million compared with a profit of EUR 0.9 million previously."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Earnings per share consequently fell to a loss of EUR 0.19 from earnings of EUR 0.11.",
+        "candidate_value": "EPS: (EUR 0.19) vs EUR 0.11",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EPS: (EUR 0.19) (2026) vs EUR 0.11 (2025)",
+        "source_evidence": "Note 8: 'Earnings per share (EUR) (0,19) 0,11' for 2026 and 2025 respectively.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Earnings per share consequently fell to a loss of EUR 0.19 from earnings of EUR 0.11."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Operating activities used EUR 1.8 million of cash, and cash and cash equivalents fell from EUR 1.0 million at year-end 2025 to EUR 38,000 at 31 March 2026, although current assets exceeded current liabilities by EUR 82.9 million.",
+        "candidate_value": "Operating cash use: EUR 1.8M; Cash: EUR 1.0M (2025) to EUR 38,000 (2026); Current asset excess: EUR 82.9M",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Operating cash flow: (EUR 1,813,318); Cash at 31.12.2025: EUR 1,044,951; Cash at 31.03.2026: EUR 38,318; Current asset excess: EUR 82.9M",
+        "source_evidence": "Cash Flow Statement shows operating cash flow of (EUR 1,813,318). Statement of Financial Position shows cash of EUR 1,044,951 (31.12.2025) and EUR 38,318 (31.03.2026). Management Report states current assets exceeded current liabilities by EUR 82.9 million as of 31.03.2026.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Operating activities used EUR 1.8 million of cash, and cash and cash equivalents fell from EUR 1.0 million at year-end 2025 to EUR 38,000 at 31 March 2026, although current assets exceeded current liabilities by EUR 82.9 million."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2026 financial performance deteriorated significantly: net turnover decreased 29.6% to EUR 11.1 million, gross profit fell 66.5% to EUR 1.2 million, and the company reported a net loss of EUR 1.4 million (compared to a profit of EUR 0.9 million in Q1 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Unaudited net turnover for Q1 2026: EUR 11.1 million (-29.6% YoY); gross profit: EUR 1.2 million (-66.5% YoY); unaudited net result: loss of EUR 1.4 million (Q1 2025: profit of EUR 0.9 million).",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S4",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Amber Latvijas balzams reported a significant deterioration in performance in the first three months of 2026 compared with the same period of 2025."
+          },
+          {
+            "id": "S3",
+            "text": "Net turnover decreased 29.6% to EUR 11.1 million from EUR 15.8 million, mainly because of lower sales volumes and a high comparison base in 2025, when revenue had benefited from an adjustment recognized under contractual terms."
+          },
+          {
+            "id": "S4",
+            "text": "Gross profit declined 66.5% to EUR 1.2 million from EUR 3.5 million."
+          },
+          {
+            "id": "S7",
+            "text": "Net finance income decreased to EUR 0.2 million from EUR 0.3 million, while the company reported a net loss of EUR 1.4 million compared with a profit of EUR 0.9 million previously."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Sales volume plummeted by 36.1% to 517,600 9-liter cases in Q1 2026 compared to Q1 2025, representing a major period-over-period decline and a key driver of the turnover drop.",
+        "importance": "HIGH",
+        "source_evidence": "Sales volume, in 9 liter boxes: 517,600 (Q1 2026) vs. 810,079 (Q1 2025), a 36.1% decrease.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Sales volume fell 36.1%, from 810,079 to 517,600 9-liter cases."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Performance decline was primarily driven by three external factors: loss of control over Stoli Group (USA), LLC; Russian confiscation of the Talvis distillery; and a global spirits market downturn, compounded by delayed excise tax payments that led to bank account freezes.",
+        "importance": "HIGH",
+        "source_evidence": "In January 2026, a trustee was appointed for Stoli Group (USA), LLC; Russian authorities designated related entities as 'extremist' and confiscated the Group-owned Talvis distillery; global spirits market downturn; delayed excise tax payments caused SRS to freeze bank accounts.",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10",
+          "S11",
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The results were affected by several external and group-related developments."
+          },
+          {
+            "id": "S10",
+            "text": "In January 2026, a trustee was appointed for related company Stoli Group (USA), LLC following Chapter 11 bankruptcy proceedings, causing the group to lose control of its U.S. operations and directly affecting the solvency of the company’s largest customer."
+          },
+          {
+            "id": "S11",
+            "text": "The group also reported aggressive actions by Russian authorities, including the designation of related entities as extremist and the confiscation of the group-owned Talvis distillery."
+          },
+          {
+            "id": "S12",
+            "text": "In addition, the global spirits market experienced a downturn, with declining volumes, weaker discretionary spending and inventory adjustments in distribution channels."
+          },
+          {
+            "id": "S13",
+            "text": "These pressures created substantial cash-flow difficulties and delayed excise-tax payments."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "The company initiated Legal Protection Proceedings (LPP) in January 2026 (court-approved in February) to restructure liabilities and stabilize operations; the deadline for the LPP action plan was later extended to October 2026, with legal effects remaining in force until August 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Filed LPP application on 30 January 2026, approved on 5 February 2026; court set initial plan deadline of 5 June 2026, later extended to 5 October 2026; legal consequences remain until 5 August 2026.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "After the State Revenue Service froze the company’s bank accounts, Amber Latvijas balzams applied for legal protection proceedings on 30 January 2026; the Riga City Court approved the application on 5 February."
+          },
+          {
+            "id": "S15",
+            "text": "The proceedings are intended to restructure liabilities and stabilize operations."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "The LPP filing automatically triggered an event of default under the Principal Shareholder's (Amber Beverage Group Holding S.à r.l.) bond documentation, which in turn triggered events of default under its bank financing arrangements.",
+        "importance": "HIGH",
+        "source_evidence": "The filing of the LPP application also automatically triggered an event of default for Amber Beverage Group Holding S.à r.l. under the terms of its issued bond documentation. This, in turn, automatically triggered events of default by the Principal Shareholder under its financing arrangements with banks.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Subsequent to the report period, in April 2026 the Principal Shareholder initiated judicial reorganization proceedings (réorganisation judiciaire) in Luxembourg, receiving a four-month moratorium until August 2026, during which enforcement actions against bondholders are suspended.",
+        "importance": "HIGH",
+        "source_evidence": "Pursuant to the judgment of the Luxembourg District Court sitting in commercial matters dated 24 April 2026, Amber Beverage Group Holding S.à r.l. has been authorized to initiate judicial reorganization proceedings; the Court has granted the Principal Shareholder a four-month moratorium until 24 August 2026, which suspends enforcement actions and collateral enforcement.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Subsequent to the period, the principal shareholder entered Luxembourg judicial reorganization proceedings with a moratorium until 24 August 2026."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Operational efficiency indicators showed mixed results: the Right First Time (RFT) rate improved to 99.5% (Q1 2025: 98.4%), but the On Time In Full (OTIF) rate declined sharply to 70.3% (Q1 2025: 97.5%).",
+        "importance": "MEDIUM",
+        "source_evidence": "RFT rate: 99.5% (Q1 2026) vs. 98.4% (Q1 2025); OTIF rate: 70.3% (Q1 2026) vs. 97.5% (Q1 2025).",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Management is conducting an additional assessment of doubtful receivables provisions established in prior periods and strengthening the finance function as part of governance enhancements to ensure financial stability.",
+        "importance": "HIGH",
+        "source_evidence": "Continuing initiatives to improve internal processes: additional assessment of provisions for doubtful receivables established in 2025 and prior periods; strengthening finance function with new accounting and finance professionals.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management is focusing on efficiency, cost optimization, stronger controls and improved financial stability."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K6, and K8 are all PRESENT with clear coverage in the candidate summary. K5 is MISSING because there is no mention of the automatic default triggered under the Principal Shareholder's bond documentation or subsequent defaults under bank financing. K7 is MISSING because there is no reference to operational efficiency indicators like RFT or OTIF rates. The overall coverage is strong for most HIGH criteria, but the absence of K5 and K7 (one HIGH, one MEDIUM) prevents a full 'Yes' score, resulting in a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. It presents a consistent narrative of declining financial performance, clearly links causes (volume decline, external pressures, operational issues) to effects (profit/loss changes, cash flow difficulties), and maintains logical flow from performance deterioration to specific financial metrics and eventual legal proceedings. No self-contradictions are present, explanations follow logically from preceding statements, organization is clear and progressive, and there is no material repetition that reduces clarity. The summary forms a coherent whole describing a deteriorating business situation with identified challenges and responses."
+  },
+  "usage": {
+    "input_tokens_total": 14187,
+    "output_tokens_total_including_reasoning": 3918,
+    "total_tokens": 18105,
+    "latency_seconds_total": 24.05
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 21933,
+    "output_tokens_total_including_reasoning": 73331,
+    "total_tokens": 95264,
+    "latency_seconds_total": 246.02
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_3.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_3_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_3.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_3.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_3_zero_shot_openai.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_3_zero_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_3_zero_shot_openai.json"
+    }
+  }
+}

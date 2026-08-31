@@ -1,0 +1,926 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_7_few_shot_qwen36.txt",
+    "report": "report_annual_7.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Heimstaden reported mixed top-line results but improved overall profitability during the 2025 reporting period.",
+    "S2": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments.",
+    "S3": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million.",
+    "S4": "The decline in operating costs reflected sustained efficiency measures, digitalisation initiatives, and the shrinking footprint following active sales programmes.",
+    "S5": "Consequently, the net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year.",
+    "S6": "Property valuations showed resilience, with the fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million.",
+    "S7": "The valuation uplift of SEK 9,498 million was supported by strong rental performance across multiple markets, value-accretive capital expenditure, and favorable ownership housing dynamics in several regions.",
+    "S8": "The company continued its strategic privatisation programme, selling 2,466 residential units throughout the year at an average premium of 28.9 percent to book value.",
+    "S9": "Full-year realised gains from property divestments reached SEK 2,207 million, contributing significantly to the bottom line.",
+    "S10": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition.",
+    "S11": "On the capital structure front, the group successfully continued its deleveraging trajectory.",
+    "S12": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment.",
+    "S13": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times.",
+    "S14": "Financing activities remained robust, with the subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions across both capital markets and banking facilities.",
+    "S15": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom.",
+    "S16": "Operational developments included a final arbitration award in December 2025 ruling in favour of the company in a dispute with Alecta regarding the Shareholders Agreement.",
+    "S17": "Credit ratings received a negative outlook revision in January 2025, while the company maintained a negligible environmental, social, and governance risk rating.",
+    "S18": "The board proposed carrying forward all accumulated profits with no interim dividend distribution, directing capital toward further balance sheet strengthening and portfolio optimisation.",
+    "S19": "Overall, the reporting period was characterised by disciplined execution, margin expansion, and successful asset monetisation, reinforcing the company’s focus on sustainable returns and financial flexibility."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_7.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_7.json",
+    "key_information_hash": "7083e41338fa32d3",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 19,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 19
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 17,
+      "incorrect": 0,
+      "total": 17
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Heimstaden reported mixed top-line results but improved overall profitability during the 2025 reporting period.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Annual Review section states rental income remained flat while net operating income improved, indicating mixed top-line but better profitability.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Heimstaden reported mixed top-line results but improved overall profitability during the 2025 reporting period."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows rental income SEK 15,916m (2025) vs SEK 15,919m (2024). MD&A explains flat income due to indexation/TI offsets vs FX and divestment effects.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows NOI SEK 11,475m (2025) vs SEK 11,188m (2024). MD&A Annual Review states property expenses decreased 6.1% to SEK 4,378m.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "The decline in operating costs reflected sustained efficiency measures, digitalisation initiatives, and the shrinking footprint following active sales programmes.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Property Expenses section attributes decreases to cost control, digitalisation, and shrinking portfolio from privatisation/sales programmes.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "The decline in operating costs reflected sustained efficiency measures, digitalisation initiatives, and the shrinking footprint following active sales programmes."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Consequently, the net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Annual Review states LTM NOI margin of 72.1% (70.3%). Calculated from NOI/rental income: 11,475/15,916 = 72.1%.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Consequently, the net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Property valuations showed resilience, with the fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Investment Properties section reports fair value change of SEK 9,498m (3% of fair value) to SEK 324,429m.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Property valuations showed resilience, with the fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The valuation uplift of SEK 9,498 million was supported by strong rental performance across multiple markets, value-accretive capital expenditure, and favorable ownership housing dynamics in several regions.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Investment Properties attributes fair value growth to operating fundamentals, NOI growth, and ownership housing market performance.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The valuation uplift of SEK 9,498 million was supported by strong rental performance across multiple markets, value-accretive capital expenditure, and favorable ownership housing dynamics in several regions."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The company continued its strategic privatisation programme, selling 2,466 residential units throughout the year at an average premium of 28.9 percent to book value.",
+        "label": "SUPPORTED",
+        "source_evidence": "Q4 Highlights states privatisation sales of SEK 10,664m; 2,466 units sold at 28.9% premium to book value.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The company continued its strategic privatisation programme, selling 2,466 residential units throughout the year at an average premium of 28.9 percent to book value."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Full-year realised gains from property divestments reached SEK 2,207 million, contributing significantly to the bottom line.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Investment Properties reports realised gains from divestment of properties increased to SEK 2,207m (1,687m).",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Full-year realised gains from property divestments reached SEK 2,207 million, contributing significantly to the bottom line."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows profit before tax SEK 16,012m (2025) vs SEK 10,403m (2024). Goodwill impairment of SEK 3,707m noted.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "On the capital structure front, the group successfully continued its deleveraging trajectory.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Funding section states deleveraging achieved through privatisation proceeds reducing debt.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "On the capital structure front, the group successfully continued its deleveraging trajectory."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Alternative Performance Measures table shows Net LTV 52.2% (56.4%). MD&A explains reduction via privatisation proceeds.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times.",
+        "label": "SUPPORTED",
+        "source_evidence": "Alternative Performance Measures table shows Net debt/Total assets 48.0% (51.0%) and ICR 2.0x (1.9x).",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Financing activities remained robust, with the subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions across both capital markets and banking facilities.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Liability Management states Heimstaden Bostad completed approx SEK 59,500m in financings.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Financing activities remained robust, with the subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions across both capital markets and banking facilities."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Interest Expenses states average interest rate 3.43%. Liquidity Management states unutilised credit facilities SEK 23,449m.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Operational developments included a final arbitration award in December 2025 ruling in favour of the company in a dispute with Alecta regarding the Shareholders Agreement.",
+        "label": "SUPPORTED",
+        "source_evidence": "Q4 Highlights states arbitration award in December 2025 in favour of Heimstaden regarding Shareholders Agreement.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Operational developments included a final arbitration award in December 2025 ruling in favour of the company in a dispute with Alecta regarding the Shareholders Agreement."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Credit ratings received a negative outlook revision in January 2025, while the company maintained a negligible environmental, social, and governance risk rating.",
+        "label": "SUPPORTED",
+        "source_evidence": "Q4 Highlights states Fitch revised Outlook to Negative in January 2025. Sustainability Report states Sustainalytics 'Negligible Risk' ESG rating.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Credit ratings received a negative outlook revision in January 2025, while the company maintained a negligible environmental, social, and governance risk rating."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The board proposed carrying forward all accumulated profits with no interim dividend distribution, directing capital toward further balance sheet strengthening and portfolio optimisation.",
+        "label": "SUPPORTED",
+        "source_evidence": "Proposed Appropriation of Accumulated Profit states no dividend to be paid, funds carried forward.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The board proposed carrying forward all accumulated profits with no interim dividend distribution, directing capital toward further balance sheet strengthening and portfolio optimisation."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Overall, the reporting period was characterised by disciplined execution, margin expansion, and successful asset monetisation, reinforcing the company’s focus on sustainable returns and financial flexibility.",
+        "label": "SUPPORTED",
+        "source_evidence": "MD&A Concluding 2025 section describes strong performance, margin growth, and asset monetisation via privatisation programme.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Overall, the reporting period was characterised by disciplined execution, margin expansion, and successful asset monetisation, reinforcing the company’s focus on sustainable returns and financial flexibility."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024",
+        "candidate_value": "SEK 15,916 million (2025) vs SEK 15,919 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 15,916 million (2025) vs SEK 15,919 million (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Net operating income expanded to SEK 11,475 million from SEK 11,188 million",
+        "candidate_value": "SEK 11,475 million (2025) vs SEK 11,188 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 11,475 million (2025) vs SEK 11,188 million (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Property expenses decreased by 6.1 percent to SEK 4,378 million",
+        "candidate_value": "SEK 4,378 million (2025) [6.1% decrease from 2024]",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 4,378 million (2025) vs SEK 4,661 million (2024) [6.1% decrease]",
+        "source_evidence": "MD&A Annual Review and Property Expenses section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year",
+        "candidate_value": "72.1% (2025) vs 70.3% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "72.1% (2025) vs 70.3% (2024)",
+        "source_evidence": "MD&A Annual Review and calculated from NOI/rental income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Consequently, the net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million",
+        "candidate_value": "SEK 324,429 million (2025) [3% increase from 2024]",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 324,429 million (2025) vs SEK 335,422 million (2024) [3% increase]",
+        "source_evidence": "MD&A Investment Properties section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Property valuations showed resilience, with the fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Valuation uplift of SEK 9,498 million",
+        "candidate_value": "SEK 9,498 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 9,498 million",
+        "source_evidence": "MD&A Investment Properties section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Property valuations showed resilience, with the fair value of investment properties increasing by 3 percent over the year to SEK 324,429 million."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Selling 2,466 residential units at an average premium of 28.9 percent to book value",
+        "candidate_value": "2,466 units [28.9% premium]",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,466 units [28.9% premium]",
+        "source_evidence": "Q4 Highlights",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The company continued its strategic privatisation programme, selling 2,466 residential units throughout the year at an average premium of 28.9 percent to book value."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Full-year realised gains from property divestments reached SEK 2,207 million",
+        "candidate_value": "SEK 2,207 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 2,207 million",
+        "source_evidence": "MD&A Investment Properties section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Full-year realised gains from property divestments reached SEK 2,207 million, contributing significantly to the bottom line."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million",
+        "candidate_value": "SEK 16,012 million (2025) vs SEK 10,403 million (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 16,012 million (2025) vs SEK 10,403 million (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Goodwill impairment charge of SEK 3,707 million",
+        "candidate_value": "SEK 3,707 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 3,707 million",
+        "source_evidence": "Consolidated Statement of Comprehensive Income",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Net loan-to-value ratio decreased to 52.2 percent from 56.4 percent",
+        "candidate_value": "52.2% (2025) vs 56.4% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "52.2% (2025) vs 56.4% (2024)",
+        "source_evidence": "Alternative Performance Measures table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Net debt to total assets fell to 48.0 percent",
+        "candidate_value": "48.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "48.0%",
+        "source_evidence": "Alternative Performance Measures table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Interest coverage ratio strengthened to 2.0 times",
+        "candidate_value": "2.0x",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.0x",
+        "source_evidence": "Alternative Performance Measures table",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions",
+        "candidate_value": "SEK 59,500 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 59,500 million",
+        "source_evidence": "MD&A Liability Management section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Financing activities remained robust, with the subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions across both capital markets and banking facilities."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Average borrowing costs stabilised at 3.43 percent",
+        "candidate_value": "3.43%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3.43%",
+        "source_evidence": "MD&A Interest Expenses section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Unutilised credit facilities amounted to SEK 23,449 million",
+        "candidate_value": "SEK 23,449 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "SEK 23,449 million",
+        "source_evidence": "MD&A Liquidity Management section",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom."
+          }
+        ]
+      },
+      {
+        "claim": "valuation uplift of SEK 9,498 million",
+        "candidate_value": "9,498 million SEK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9,498 million SEK",
+        "source_evidence": "Change in fair value of investment properties, for the year were SEK 9,498 million (8,553) corresponding to 3% (2.6%) of fair value.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N17",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The valuation uplift of SEK 9,498 million was supported by strong rental performance across multiple markets, value-accretive capital expenditure, and favorable ownership housing dynamics in several regions."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Annual headline financial performance for 2025: like-for-like rental income growth of 4.9% (vs 5.6% in 2024), real economic occupancy flat at 98.5%, net operating income margin improved to 72.1% (70.3% in 2024), property values up 2.9% year-on-year, privatization sales of SEK 10,664 million (2,466 units at 28.9% premium), SEK 44,900 million asset-backed financing and SEK 14,600 million capital markets issuance (six green transactions), with credit metrics at Net LTV 52.2% (56.4%) and ICR 2.0x (1.9x).",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: 2025 in Brief, Key Figures table, Funding section",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S5",
+          "S8",
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments."
+          },
+          {
+            "id": "S3",
+            "text": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million."
+          },
+          {
+            "id": "S5",
+            "text": "Consequently, the net operating income margin improved to 72.1 percent, up from 70.3 percent in the prior year."
+          },
+          {
+            "id": "S8",
+            "text": "The company continued its strategic privatisation programme, selling 2,466 residential units throughout the year at an average premium of 28.9 percent to book value."
+          },
+          {
+            "id": "S12",
+            "text": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment."
+          },
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Q4 2025 performance: like-for-like rental growth of 4.6% (5.3% in Q4 2024), rental income decreased 3.4% to SEK 3,945 million, real economic occupancy rose to 98.7% (98.6% in Q4 2024), net operating income margin held at 70.2% (LTM margin 72.1%), privatization sales of SEK 2,890 million (798 units at 32.5% premium vs 24% in Q4 2024), property values up 0.5%, goodwill impairment loss of SEK 3,707 million, and credit metrics at Net LTV 52.2% (56.4%) and ICR 2.0x (1.9x).",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: Q4 Highlights, Key Figures table for Q4",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Reported profit before tax rose to SEK 16,012 million from SEK 10,403 million, primarily reflecting the combined effect of higher net operating income, substantial unrealised property revaluations, and realised divestment gains, partially offset by a SEK 3,707 million goodwill impairment charge related to the Akelius acquisition."
+          },
+          {
+            "id": "S12",
+            "text": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment."
+          },
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Operational performance drivers: standing assets contributed SEK 800 million rental income growth via indexation, tenant improvements, and occupancy gains; like-for-like growth decomposed into indexations (3.3% of 4.9% annual growth), tenant improvements (0.7%), occupancy improvements (0.7%), and rent reversion (0.2%); property expenses decreased 6.1% annually to SEK 4,378 million due to digitalisation and portfolio contraction; capital expenditures of SEK 3,893 million allocated to maintenance (SEK 1,790m), sustainability (SEK 557m), tenant improvements (SEK 1,168m), and value-add (SEK 241m).",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: Rental Income Development, Like-for-like Development, Property Expenses, Asset Management sections",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Annual rental income remained virtually unchanged at SEK 15,916 million, compared with SEK 15,919 million in 2024, as positive contributions from contract indexations and tenant improvement investments were largely offset by foreign currency translation effects and portfolio reductions from divestments."
+          },
+          {
+            "id": "S3",
+            "text": "Despite flat top-line growth, net operating income expanded to SEK 11,475 million from SEK 11,188 million, driven by a 6.1 percent reduction in property expenses to SEK 4,378 million."
+          },
+          {
+            "id": "S4",
+            "text": "The decline in operating costs reflected sustained efficiency measures, digitalisation initiatives, and the shrinking footprint following active sales programmes."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Country-specific investment property fair value developments: Sweden +0.8% (SEK 717m) from rental performance; Germany +1.2% (SEK 926m) despite privatisation strategy shift; Denmark +7.2% (SEK 4,643m) from ownership market strength; Czechia +6.7% (SEK 1,856m) from rental growth; Netherlands +5.4% (SEK 1,424m) with privatisation as highest-and-best use; Norway -2.7% (SEK -382m) from buy-to-let supply increase; UK -0.4% (SEK -20m) from yield stabilisation; Poland +4.1% (SEK 173m) and Finland +4.3% (SEK 161m) from rental growth and rent reversion.",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: Investment Properties, Country Fair Value Development section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Liquidity and financing: Heimstaden Bostad completed SEK 59,500 million financing (refinancings and new financings); liability management in January 2025 issued SEK 750 million senior unsecured floating rate notes and EUR 430 million/400 million fixed rate notes while tendering existing maturities; interest expenses of SEK 6,536 million (average rate 3.43% vs 3.01% in 2024); interest coverage ratio improved to 2.0x (1.9x); net loan-to-value decreased to 52.2% (56.4%); unutilised credit facilities of SEK 23,449 million at parent level.",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: Funding section, Interest Expenses, Liability Management, Alternative Performance Measures",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12",
+          "S13",
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "On the capital structure front, the group successfully continued its deleveraging trajectory."
+          },
+          {
+            "id": "S12",
+            "text": "The net loan-to-value ratio decreased to 52.2 percent from 56.4 percent, supported by the deployment of privatisation proceeds toward debt repayment."
+          },
+          {
+            "id": "S13",
+            "text": "Net debt to total assets fell to 48.0 percent, and the interest coverage ratio strengthened to 2.0 times."
+          },
+          {
+            "id": "S14",
+            "text": "Financing activities remained robust, with the subsidiary executing approximately SEK 59,500 million in refinancing and new funding transactions across both capital markets and banking facilities."
+          },
+          {
+            "id": "S15",
+            "text": "Average borrowing costs stabilised at 3.43 percent, and unutilised credit facilities amounted to SEK 23,449 million, providing ample liquidity headroom."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Material post-reporting-period events: December 2025 arbitration award in favour of Heimstaden confirmed no breach of Heimstaden Bostad Shareholders' Agreement; January 2025 issuance of EUR 500 million perpetual hybrid maturity by Heimstaden Bostad replaced EUR 500 million perpetual hybrid resetting in April 2026.",
+        "importance": "HIGH",
+        "source_evidence": "MD&A: Q4 Highlights (arbitration), Funding section (hybrid bond)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Operational developments included a final arbitration award in December 2025 ruling in favour of the company in a dispute with Alecta regarding the Shareholders Agreement."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Sustainability performance: weather-corrected energy intensity reduced 10% to 148 kWh/m² (exceeding 2% target); GHG emissions reduced 14.2% against 2020 baseline (on track for 42% reduction by 2030); EU Taxonomy-aligned revenue at 22% (26% in 2024) and capex at 18% (22% in 2024); green assets valued at approximately SEK 76 billion supported green bond issuance of SEK 13,767 million in FY25; sustainability-linked loans of SEK 5,818 million all met KPIs (Sustainalytics Negligible Risk, SBTi emission target achievement).",
+        "importance": "HIGH",
+        "source_evidence": "Sustainability Report: Highlights, E1 sections, EU Taxonomy tables",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K5, and K6 are adequately represented with core material meaning covered across multiple sentences. K4 (country-specific property valuations) and K7 (sustainability metrics) are entirely missing, representing two HIGH-importance criteria. The summary captures most financial performance drivers, liquidity improvements, and key post-period events, but lacks detailed geographic valuation breakdowns and comprehensive sustainability performance data, resulting in a mixed coverage profile.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary demonstrates strong internal logical coherence. All statements build upon each other without contradiction: flat rental income (S2) supports the 'mixed top-line results' in S1, while cost reductions (S3-S4) logically explain the improved NOI and margin (S5). The property valuation increase (S6-S7) and divestment gains (S8-S9) align with the significant profit jump in S10. Capital structure improvements (S11-S13) follow naturally from the privatisation proceeds mentioned in S8 and S12. Operational and financing developments (S14-S15) are presented as complementary elements of the overall strategy. The concluding statement (S19) effectively synthesizes these themes. No material contradictions, logical gaps, or organizational issues are present. Repetition is minimal and serves to reinforce key points rather than impair clarity."
+  },
+  "usage": {
+    "input_tokens_total": 253927,
+    "output_tokens_total_including_reasoning": 6566,
+    "total_tokens": 260493,
+    "latency_seconds_total": 45.01
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 251601,
+    "output_tokens_total_including_reasoning": 65089,
+    "total_tokens": 316690,
+    "latency_seconds_total": 191.59
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_7.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_7_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_7.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_7.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_7_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_7_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_7_few_shot_qwen36.json"
+    }
+  }
+}

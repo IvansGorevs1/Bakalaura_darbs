@@ -1,0 +1,145 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:40:16.127876",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_2_zero_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "764c48df860821d5",
+    "sentence_map_hash": "41e6a9c717969548",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "2a2c80c5759e3045",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_2.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Aktsiaselts Infortar reported strong financial performance for the full year 2025, characterized by significant revenue growth and improved operational efficiency.",
+    "S2": "The Group’s total revenue reached EUR 1,837 million, a substantial increase from EUR 1,371.8 million in 2024.",
+    "S3": "This growth was primarily driven by the full-year consolidation of Tallink Grupp, which contributed significantly to the maritime transport segment, alongside improved results in the energy segment and the addition of new agricultural operations.",
+    "S4": "Gross profit expanded to EUR 239.8 million from EUR 128.6 million in the prior year.",
+    "S5": "Operating profit also saw a notable rise, increasing to EUR 109 million compared to EUR 77 million in 2024.",
+    "S6": "EBITDA grew by approximately 57% to EUR 228 million, with the EBITDA margin improving from 10.6% to 12.4%.",
+    "S7": "The net profit attributable to equity holders of the parent company was EUR 70.6 million, a decrease from EUR 191.3 million in 2024.",
+    "S8": "The report attributes this decline in net profit to one-off effects related to the initial consolidation of Tallink Grupp in 2024, which included a gain from bargain purchase that did not recur in 2025.",
+    "S9": "The balance sheet reflects a strengthened financial position with total assets amounting to EUR 2,597 million and total equity increasing to EUR 1,175 million.",
+    "S10": "The equity ratio improved to 45% from 43% in the previous year.",
+    "S11": "Interest-bearing liabilities decreased to EUR 1,071 million from EUR 1,223 million, resulting in a reduction of net debt to EUR 852 million from EUR 1,056 million.",
+    "S12": "The net debt to EBITDA ratio improved to 3.7 from 4.0.",
+    "S13": "The Group maintained strong liquidity with cash and cash equivalents totaling EUR 219.8 million.",
+    "S14": "Strategic developments during the year included the acquisition of Estonia Farmid OÜ in July, enhancing the Group’s presence in agriculture and biomethane production.",
+    "S15": "In the energy segment, Elenger Grupp expanded its renewable portfolio by commissioning a new solar power plant in Latvia and completing its first large-scale battery storage facility.",
+    "S16": "The maritime segment benefited from vessel chartering, which helped balance seasonal fluctuations.",
+    "S17": "The Group continued to focus on sustainability, with 7% of turnover and 13% of capital expenditure classified as taxonomy-aligned.",
+    "S18": "Infortar paid dividends of EUR 3 per share, totaling EUR 62 million, consistent with its dividend aristocrat policy.",
+    "S19": "The share price increased by 5.5% to EUR 45.8 at year-end.",
+    "S20": "The Group’s workforce grew to 6,466 employees, reflecting the expansion of its consolidated subsidiaries.",
+    "S21": "Overall, Infortar demonstrated resilience and strategic execution, delivering stable cash flows and strengthening its asset base despite a challenging macroeconomic environment marked by geopolitical tensions and energy market volatility."
+  },
+  "usage": {
+    "input_tokens": 1987,
+    "output_tokens_including_reasoning": 435,
+    "total_tokens": 2422
+  },
+  "latency_seconds": 3.5,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S6\", \"S7\", \"S9\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S3\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S16\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S11\", \"S12\", \"S13\", \"S18\"]\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\", \"S15\"]\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K4\", \"K5\"],\n  \"justification\": \"K1, K2, K6, K7, and K8 are PRESENT with supporting sentences identified. K3 is PRESENT via S16, which covers vessel chartering balancing seasonal fluctuations, though it lacks explicit mention of passenger/cargo numbers and CO₂ reduction focus. K4 and K5 are MISSING entirely – no mention of LNG volumes to terminals, solar/battery investments, or real estate developments/contracts. The summary captures most high-importance financial and strategic themes but omits two entire segments' core operational details (energy and real estate), resulting in a 'Generally yes' rating.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6",
+          "S7",
+          "S9"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12",
+          "S13",
+          "S18"
+        ]
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ]
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K4",
+      "K5"
+    ],
+    "justification": "K1, K2, K6, K7, and K8 are PRESENT with supporting sentences identified. K3 is PRESENT via S16, which covers vessel chartering balancing seasonal fluctuations, though it lacks explicit mention of passenger/cargo numbers and CO₂ reduction focus. K4 and K5 are MISSING entirely – no mention of LNG volumes to terminals, solar/battery investments, or real estate developments/contracts. The summary captures most high-importance financial and strategic themes but omits two entire segments' core operational details (energy and real estate), resulting in a 'Generally yes' rating."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

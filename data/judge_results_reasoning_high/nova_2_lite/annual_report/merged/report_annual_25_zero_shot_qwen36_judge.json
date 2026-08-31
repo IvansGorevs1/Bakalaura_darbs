@@ -1,0 +1,611 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_25_zero_shot_qwen36.txt",
+    "report": "report_annual_25.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024.",
+    "S2": "The contraction was primarily driven by a sluggish first quarter and reduced sales volume to a major Nordic customer, compounded by slower growth in North America.",
+    "S3": "Despite the top-line decrease, the company delivered a gross profit of DKK 131.1 million, successfully expanding its gross margin to 48.8 percent from 46.9 percent in the prior year.",
+    "S4": "This margin expansion reflects a deliberate business mix shift away from lower-margin key accounts toward higher-yield direct project revenues, aligning with the adopted Accelerate Core strategy.",
+    "S5": "Operating profit measured as EBITDA settled at DKK 28.0 million, down from DKK 37.3 million in 2024, compressing the EBITDA margin to 10.4 percent from 12.7 percent.",
+    "S6": "The operating profit decline was largely anchored to maintained fixed cost levels designed to fund future capacity and DKK 2.5 million in extraordinary expenses triggered by a ransomware attack that disrupted IT infrastructure in mid-2025.",
+    "S7": "Earnings before tax fell to DKK 2.9 million, translating into a post-tax profit of merely DKK 0.9 million, with the disproportionately high tax charge stemming from unrealized tax loss carryforwards.",
+    "S8": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0.",
+    "S9": "Market dynamics during the reporting period featured stabilizing interest rates that revitalized non-residential construction activity, particularly in the second half of the year, while residential demand stayed subdued.",
+    "S10": "Long-term tailwinds persist through strict energy-efficiency mandates across the European Union and North America.",
+    "S11": "For 2026, management guides for organic revenue growth between seven and fourteen percent, targeting DKK 290 million to DKK 310 million, with EBITDA forecast to reach DKK 45 million to DKK 55 million and margins normalized to eight to ten percent.",
+    "S12": "The company plans to hold its fixed cost and investment base steady to capture operating leverage, sustain cash conversion, and progressively deleverage its balance sheet in line with expectations."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_25.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_25.json",
+    "key_information_hash": "df925e7e4daa63dd",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 12,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 12
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 7,
+      "incorrect": 0,
+      "total": 7
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Revenue amounted to DKK 269m in 2025 (2024: DKK 294m) equivalent to a decrease of 8% primarily explained by a slow start of 2025 and less sale to a key customer (Nordic)'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The contraction was primarily driven by a sluggish first quarter and reduced sales volume to a major Nordic customer, compounded by slower growth in North America.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'The revenue was somewhat lower than the original budget for the year – with DKK 21-41m. The deviation comes mainly from less sales in Climatic (Nordic) and less growth in North America.'",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The contraction was primarily driven by a sluggish first quarter and reduced sales volume to a major Nordic customer, compounded by slower growth in North America."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Despite the top-line decrease, the company delivered a gross profit of DKK 131.1 million, successfully expanding its gross margin to 48.8 percent from 46.9 percent in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Gross profit amounted to DKK 131.1m in 2025 (2024: DKK 137.9m) equivalent to a gross margin of 48.8% (2024: 46.9%)'",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the top-line decrease, the company delivered a gross profit of DKK 131.1 million, successfully expanding its gross margin to 48.8 percent from 46.9 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "This margin expansion reflects a deliberate business mix shift away from lower-margin key accounts toward higher-yield direct project revenues, aligning with the adopted Accelerate Core strategy.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'The increase of the gross margin is related to the business mix with less revenue from key accounts and more direct project revenue enabling to keep the margin ratio. This is fully linked to the “Accelerate Core” strategy.'",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This margin expansion reflects a deliberate business mix shift away from lower-margin key accounts toward higher-yield direct project revenues, aligning with the adopted Accelerate Core strategy."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating profit measured as EBITDA settled at DKK 28.0 million, down from DKK 37.3 million in 2024, compressing the EBITDA margin to 10.4 percent from 12.7 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Operating profit (EBITDA) amounted to DKK 28.0m in 2025 (2024: DKK 37.3 m) equivalent to an EBITDA margin of 10.4% (2024: 12.7%)'",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating profit measured as EBITDA settled at DKK 28.0 million, down from DKK 37.3 million in 2024, compressing the EBITDA margin to 10.4 percent from 12.7 percent."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The operating profit decline was largely anchored to maintained fixed cost levels designed to fund future capacity and DKK 2.5 million in extraordinary expenses triggered by a ransomware attack that disrupted IT infrastructure in mid-2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'While Gross Profit margin increased in 2025 the EBITDA margin decreased linked to maintained fixed cost levels – to support future growth. Fixed cost was affected negatively with oneoff costs of DKK 2.5m linked to a ransomware attack in May-June.'",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The operating profit decline was largely anchored to maintained fixed cost levels designed to fund future capacity and DKK 2.5 million in extraordinary expenses triggered by a ransomware attack that disrupted IT infrastructure in mid-2025."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Earnings before tax fell to DKK 2.9 million, translating into a post-tax profit of merely DKK 0.9 million, with the disproportionately high tax charge stemming from unrealized tax loss carryforwards.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Earnings before tax (EBT) amounted to DKK 2.9m in 2025 (2024: DKK 12.2m)... Profit after tax amounted to DKK 0.9m in 2025 (2024: DKK 10.6m). The high tax on profit comes from not utilization of tax assets (tax loss carryforward).'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Earnings before tax fell to DKK 2.9 million, translating into a post-tax profit of merely DKK 0.9 million, with the disproportionately high tax charge stemming from unrealized tax loss carryforwards."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Cash flow from operating activities amounted to DKK 28.5m (2024: DKK 29.4m)... Net interest-bearing debt at the end of 2025 amounted to DKK 38.7m (End of 2024: DKK 36.7m)... Financial gearing calculated as NIBD/EBITDA amounted to 1.7 at the end of 2025. (End of 2024: 1.2). The target is to be below 2.0.'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Market dynamics during the reporting period featured stabilizing interest rates that revitalized non-residential construction activity, particularly in the second half of the year, while residential demand stayed subdued.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'As interest rates stabilized during 2025, market activity improved, particularly in the second half of the year... Within the non-residential segment, project execution accelerated... demand in the residential market remained more subdued.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Market dynamics during the reporting period featured stabilizing interest rates that revitalized non-residential construction activity, particularly in the second half of the year, while residential demand stayed subdued."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Long-term tailwinds persist through strict energy-efficiency mandates across the European Union and North America.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management's Review: 'Underlying demand continues to be driven by investments in energy-efficient solutions and environmental regulation in both the EU and the United States. In the EU, demand is supported by the Green Deal and the REPowerEU plan...'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Long-term tailwinds persist through strict energy-efficiency mandates across the European Union and North America."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "For 2026, management guides for organic revenue growth between seven and fourteen percent, targeting DKK 290 million to DKK 310 million, with EBITDA forecast to reach DKK 45 million to DKK 55 million and margins normalized to eight to ten percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook for 2026: 'In 2026, revenue is expected to grow organically in range from 7% to 14% to DKK 290-310m, while EBITDA is expected to increase to DKK 45-55m, equivalent to an EBITDA-margin of around 8-10%.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "For 2026, management guides for organic revenue growth between seven and fourteen percent, targeting DKK 290 million to DKK 310 million, with EBITDA forecast to reach DKK 45 million to DKK 55 million and margins normalized to eight to ten percent."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The company plans to hold its fixed cost and investment base steady to capture operating leverage, sustain cash conversion, and progressively deleverage its balance sheet in line with expectations.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook for 2026: 'The fixed cost and investment base is expected to be kept unchanged, which is expected to lead to improved lead generation, opportunities, and revenue. Increased profitability and high cash conversion will further reduce the financial gearing... NIBD/EBITDA is expected to continue to be below the target of maximum 2.0 by the end of 2026.'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The company plans to hold its fixed cost and investment base steady to capture operating leverage, sustain cash conversion, and progressively deleverage its balance sheet in line with expectations."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024",
+        "candidate_value": "DKK 268.6 million (2025), DKK 294.5 million (2024), -8%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 268,588,654 (2025), DKK 294,481,472 (2024)",
+        "source_evidence": "Consolidated Income Statement: Revenue 2025 DKK 268,588,654; 2024 DKK 294,481,472. Management's Review confirms 8% decrease.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Gross profit of DKK 131.1 million, expanding gross margin to 48.8 percent from 46.9 percent",
+        "candidate_value": "DKK 131.1 million, 48.8% (2025) vs 46.9% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 131,055,764 (2025), DKK 137,949,145 (2024)",
+        "source_evidence": "Management's Review: 'Gross profit amounted to DKK 131.1m in 2025 (2024: DKK 137.9m) equivalent to a gross margin of 48.8% (2024: 46.9%)'.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the top-line decrease, the company delivered a gross profit of DKK 131.1 million, successfully expanding its gross margin to 48.8 percent from 46.9 percent in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating profit (EBITDA) of DKK 28.0 million (10.4%) vs DKK 37.3 million (12.7%) in 2024",
+        "candidate_value": "DKK 28.0 million, 10.4% (2025) vs DKK 37.3 million, 12.7% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 28,255,050 (2025), DKK 37,305,000 (2024)",
+        "source_evidence": "Management's Review: 'Operating profit (EBITDA) amounted to DKK 28.0m in 2025 (2024: DKK 37.3 m) equivalent to an EBITDA margin of 10.4% (2024: 12.7%)'.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating profit measured as EBITDA settled at DKK 28.0 million, down from DKK 37.3 million in 2024, compressing the EBITDA margin to 10.4 percent from 12.7 percent."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "DKK 2.5 million in extraordinary expenses from ransomware attack",
+        "candidate_value": "DKK 2.5 million",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 2.5 million",
+        "source_evidence": "Management's Review: 'Fixed cost was affected negatively with oneoff costs of DKK 2.5m linked to a ransomware attack in May-June.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The operating profit decline was largely anchored to maintained fixed cost levels designed to fund future capacity and DKK 2.5 million in extraordinary expenses triggered by a ransomware attack that disrupted IT infrastructure in mid-2025."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Earnings before tax DKK 2.9 million, post-tax profit DKK 0.9 million",
+        "candidate_value": "DKK 2.9 million (EBT), DKK 0.9 million (PAT)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 2,907,507 (EBT), DKK 869,196 (PAT)",
+        "source_evidence": "Management's Review: 'Earnings before tax (EBT) amounted to DKK 2.9m in 2025... Profit after tax amounted to DKK 0.9m in 2025.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Earnings before tax fell to DKK 2.9 million, translating into a post-tax profit of merely DKK 0.9 million, with the disproportionately high tax charge stemming from unrealized tax loss carryforwards."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Operating cash flow DKK 28.5 million; net interest-bearing debt/EBITDA 1.7x (vs 1.2x); target <2.0x",
+        "candidate_value": "DKK 28.5 million, 1.7x (2025) vs 1.2x (2024), target <2.0x",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 28,460,663 (operating cash flow), NIBD/EBITDA 1.7 (2025) vs 1.2 (2024)",
+        "source_evidence": "Management's Review: 'Cash flow from operating activities amounted to DKK 28.5m (2024: DKK 29.4m)... Net interest-bearing debt at the end of 2025 amounted to DKK 38.7m... Financial gearing calculated as NIBD/EBITDA amounted to 1.7 at the end of 2025. (End of 2024: 1.2). The target is to be below 2.0.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "2026 revenue guidance DKK 290-310 million (+7-14%), EBITDA DKK 45-55 million (8-10% margin)",
+        "candidate_value": "DKK 290-310 million (+7-14%), DKK 45-55 million EBITDA (8-10% margin)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 290-310 million revenue growth (+7-14%), DKK 45-55 million EBITDA (8-10% margin)",
+        "source_evidence": "Outlook for 2026: 'In 2026, revenue is expected to grow organically in range from 7% to 14% to DKK 290-310m, while EBITDA is expected to increase to DKK 45-55m, equivalent to an EBITDA-margin of around 8-10%.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "For 2026, management guides for organic revenue growth between seven and fourteen percent, targeting DKK 290 million to DKK 310 million, with EBITDA forecast to reach DKK 45 million to DKK 55 million and margins normalized to eight to ten percent."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Revenue decreased by 8% to DKK 269m in 2025 from DKK 294m in 2024, primarily due to a slow start to the year and reduced sales to a Nordic key customer.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 11: 'Revenue amounted to DKK 269m in 2025 (2024: DKK 294m) equivalent to a decrease of 8% primarily explained by a slow start of 2025 and less sale to a key customer (Nordic)'",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "WindowMaster International A/S reported a full-year 2025 revenue of DKK 268.6 million, representing an eight percent decline compared to DKK 294.5 million in 2024."
+          },
+          {
+            "id": "S2",
+            "text": "The contraction was primarily driven by a sluggish first quarter and reduced sales volume to a major Nordic customer, compounded by slower growth in North America."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "EBITDA declined to DKK 28m (10.4% margin) from DKK 37m (12.7% margin) in 2024, driven by maintained higher fixed costs to support future growth and DKK 2.5m one-off costs from a ransomware attack.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 11: 'Operating profit (EBITDA) amounted to DKK 28.0m in 2025 (2024: DKK 37.3m) equivalent to an EBITDA margin of 10.4% (2024: 12.7%). While Gross Profit margin increased in 2025 the EBITDA margin decreased linked to maintained fixed cost levels – to support future growth. Fixed cost was affected negatively with oneoff costs of DKK 2.5m linked to a ransomware attack in May-June.'",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating profit measured as EBITDA settled at DKK 28.0 million, down from DKK 37.3 million in 2024, compressing the EBITDA margin to 10.4 percent from 12.7 percent."
+          },
+          {
+            "id": "S6",
+            "text": "The operating profit decline was largely anchored to maintained fixed cost levels designed to fund future capacity and DKK 2.5 million in extraordinary expenses triggered by a ransomware attack that disrupted IT infrastructure in mid-2025."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Profit after tax fell to DKK 0.9m from DKK 10.6m in 2024, adversely impacted by non-utilisation of tax assets resulting in a higher effective tax rate.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management's Review page 11: 'Profit after tax amounted to DKK 0.9m in 2025 (2024: DKK 10.6m). The high tax on profit comes from not utilization of tax assets (tax loss carryforward).' Note 9 shows effective tax rate of 70% (2025) vs 13% (2024).",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Earnings before tax fell to DKK 2.9 million, translating into a post-tax profit of merely DKK 0.9 million, with the disproportionately high tax charge stemming from unrealized tax loss carryforwards."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Cash flow from operating activities remained strong at DKK 28.5m (2024: DKK 29.4m), with improvements in net working capital offsetting lower revenue.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 12: 'Cash flow from operating activities amounted to DKK 28.5m (2024: DKK 29.4m). The decrease is primarily attributable to the decrease in activity/revenue however it has been possible to improve the net working capital – mainly on inventories and Work in Progress.'",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "2026 outlook targets organic revenue growth of 7-14% to DKK 290-310m and EBITDA of DKK 45-55m (8-10% margin), reflecting continued focus on profitability.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 12: 'In 2026, revenue is expected to grow organically in range from 7% to 14% to DKK 290-310m, while EBITDA is expected to increase to DKK 45-55m, equivalent to an EBITDA-margin of around 8-10%.'",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "For 2026, management guides for organic revenue growth between seven and fourteen percent, targeting DKK 290 million to DKK 310 million, with EBITDA forecast to reach DKK 45 million to DKK 55 million and margins normalized to eight to ten percent."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Market activity improved in H2 2025 as interest rates stabilized, boosting non-residential project execution, while residential demand remained subdued due to low consumer confidence.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management's Review page 10: 'As interest rates stabilized during 2025, market activity improved, particularly in the second half of the year. Within the non-residential segment, project execution accelerated... demand in the residential market remained more subdued, reflecting continued low consumer confidence.'",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Market dynamics during the reporting period featured stabilizing interest rates that revitalized non-residential construction activity, particularly in the second half of the year, while residential demand stayed subdued."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "North America market remains attractive for green technology despite import tariff uncertainties; WindowMaster's local presence and unique niche position mitigate competitive pressures.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management's Review page 10: 'In North America, the market for green technology remains attractive... The big uncertainty due to import toll has not altered the Company’s outlook for the region... we are currently the only manufacturer of window automation within the intelligent natural ventilation niche with a local presence in the United States.'",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Liquidity position shows net interest-bearing debt of DKK 38.7m (up from DKK 36.7m in 2024) and equity ratio at 23.5% (below target of >25%), with strong banking relationships maintaining capital access.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 12: 'Net interest-bearing debt at the end of 2025 amounted to DKK 38.7m (End of 2024: DKK 36.7m)... At the end of 2025, equity amounted to DKK 32.5m... equivalent to an equity ratio of 23.5% (net cash). The target is to be above 25%.'",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Operational cash generation remained resilient at DKK 28.5 million, supported by efficient working capital management, while net interest-bearing debt relative to EBITDA climbed to 1.7 from 1.2, staying comfortably below the internal target threshold of 2.0."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Strategic initiative 'Accelerate Core' focuses on scaling production, streamlining products, and leveraging natural, mixed-mode, and heat/smoke ventilation solutions to drive growth and profitability.",
+        "importance": "HIGH",
+        "source_evidence": "Management's Review page 9: 'In 2024, WindowMaster adopted a new strategy “Accelerate Core”... The Company has established a scalable production platform in Herford (Germany), a streamlined and focused product offering... Our business strategy will lift growth and profitability by accelerating our core business and by focusing on three strategic offerings based on our natural, mixed mode, and heat and smoke ventilation solutions.'",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This margin expansion reflects a deliberate business mix shift away from lower-margin key accounts toward higher-yield direct project revenues, aligning with the adopted Accelerate Core strategy."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All HIGH importance criteria (K1, K2, K4, K5, K8, K9) are fully present. The MEDIUM importance criteria K3 and K6 are also present. Only K7 (North America market attractiveness discussion) is missing, but this is of MEDIUM importance and does not change the overall understanding of the report. The summary captures the core material meaning of all other key information units without material omissions.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected: revenue decline explanations (S1-S2) lead into margin expansion rationale (S3-S4), followed by operating profit details (S5-S6), earnings impact (S7), cash flow and debt context (S8), market conditions (S9-S10), and forward guidance (S11-S12). No contradictions exist between statements, and the narrative flows sequentially from performance review to outlook. The summary avoids unnecessary repetition and maintains clear organizational structure with each sentence building upon prior context."
+  },
+  "usage": {
+    "input_tokens_total": 40585,
+    "output_tokens_total_including_reasoning": 5559,
+    "total_tokens": 46144,
+    "latency_seconds_total": 28.88
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 75916,
+    "output_tokens_total_including_reasoning": 66885,
+    "total_tokens": 142801,
+    "latency_seconds_total": 169.93
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_25.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_25_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_25.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_25.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_25_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_25_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_25_zero_shot_qwen36.json"
+    }
+  }
+}

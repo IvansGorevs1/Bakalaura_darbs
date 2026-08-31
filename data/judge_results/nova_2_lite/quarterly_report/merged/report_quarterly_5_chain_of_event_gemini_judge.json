@@ -1,0 +1,632 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_5_chain_of_event_gemini.txt",
+    "report": "report_quarterly_5.md",
+    "report_type": "quarterly_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Arco Vara AS reported its financial results for the first quarter of 2025, demonstrating improved financial performance compared to the same period in 2024.",
+    "S2": "For the reporting period ending March 31, 2025, the group generated total revenue of 1,706 thousand euros, representing an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024.",
+    "S3": "Revenue from the sale of own real estate rose to 1,589 thousand euros from 927 thousand euros, while revenue from rendering services increased to 117 thousand euros from 63 thousand euros.",
+    "S4": "Gross profit improved to 598 thousand euros compared to 173 thousand euros in the prior year period.",
+    "S5": "Operating profit or EBIT reached 259 thousand euros, marking a recovery from the operating loss of 208 thousand euros reported in the first quarter of 2024.",
+    "S6": "Net profit for the period was 103 thousand euros, an improvement from the net loss of 349 thousand euros in the corresponding period of 2024.",
+    "S7": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the first quarter of 2024.",
+    "S8": "The financial results were influenced by the moderate recovery in the real estate markets in Estonia and Bulgaria, characterized by stabilizing price levels, declining Euribor rates, and increased transaction and sales activity within residential developments such as Rannakalda and Botanica Lozen.",
+    "S9": "Net cash flows used in operating activities were 2,838 thousand euros in the first quarter of 2025, compared to 2,217 thousand euros used in the first quarter of 2024.",
+    "S10": "Net cash flows from financing activities were 2,231 thousand euros, compared to 1,479 thousand euros in the previous year.",
+    "S11": "Total cash and cash equivalents stood at 1,113 thousand euros as of March 31, 2025, down from 1,720 thousand euros at the beginning of the year.",
+    "S12": "Total assets increased to 42,728 thousand euros at the end of the reporting period from 39,568 thousand euros as of December 31, 2024.",
+    "S13": "Total liabilities rose to 22,886 thousand euros from 19,829 thousand euros, driven by an increase in interest-bearing loans and borrowings, which reached 16,568 thousand euros compared to 15,215 thousand euros at the end of 2024.",
+    "S14": "Net loans increased by 1,960 thousand euros during the first three months of the year to reach 15,455 thousand euros as of March 31, 2025.",
+    "S15": "The weighted average annual interest rate of interest-bearing liabilities was 8.2% at the end of the period, representing a decrease of 0.5 percentage points compared to December 31, 2024.",
+    "S16": "Total equity attributable to owners of the parent was 19,842 thousand euros as of March 31, 2025, showing a slight increase from 19,739 thousand euros at the end of 2024."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "key_information_hash": "aabb2f7afff6bfca",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 2,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 2
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 2,
+      "scale_max": 4,
+      "label": "Neutral/Mixed",
+      "present": 4,
+      "partially_present": 0,
+      "missing": 6,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Arco Vara AS reported its financial results for the first quarter of 2025, demonstrating improved financial performance compared to the same period in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Performance Indicators section states revenue increased, operating profit turned from loss to profit, and net profit improved from loss to profit in Q1 2025 vs Q1 2024.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Arco Vara AS reported its financial results for the first quarter of 2025, demonstrating improved financial performance compared to the same period in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The financial results were influenced by the moderate recovery in the real estate markets in Estonia and Bulgaria, characterized by stabilizing price levels, declining Euribor rates, and increased transaction and sales activity within residential developments such as Rannakalda and Botanica Lozen.",
+        "label": "SUPPORTED",
+        "source_evidence": "Group CEO's Review states: 'The first quarter of 2025 continued the moderate recovery in Estonia’s real estate market... The continued decline of the Euribor, alongside stabilizing inflation, contributed to increased transaction activity... In the Rannakalda development... Botanica Lozen project...'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The financial results were influenced by the moderate recovery in the real estate markets in Estonia and Bulgaria, characterized by stabilizing price levels, declining Euribor rates, and increased transaction and sales activity within residential developments such as Rannakalda and Botanica Lozen."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "For the reporting period ending March 31, 2025, the group generated total revenue of 1,706 thousand euros, representing an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024.",
+        "candidate_value": "1,706 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,706 thousand euros",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows Revenue Q1 2025: 1,706 (thousand euros) vs Q1 2024: 990.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the reporting period ending March 31, 2025, the group generated total revenue of 1,706 thousand euros, representing an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Increase of 716 thousand euros in revenue compared to Q1 2024",
+        "candidate_value": "716 thousand euros increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "716 thousand euros increase (1,706 - 990)",
+        "source_evidence": "Calculated from Consolidated Statement of Comprehensive Income values: 1,706 - 990 = 716.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the reporting period ending March 31, 2025, the group generated total revenue of 1,706 thousand euros, representing an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Revenue from the sale of own real estate rose to 1,589 thousand euros from 927 thousand euros",
+        "candidate_value": "1,589 thousand euros (2025) vs 927 thousand euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,589 thousand euros (2025) vs 927 thousand euros (2024)",
+        "source_evidence": "Note 3: Revenue table shows Sale of own real estate Q1 2025: 1,589 vs Q1 2024: 928 (rounded to 927 in candidate).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Revenue from the sale of own real estate rose to 1,589 thousand euros from 927 thousand euros, while revenue from rendering services increased to 117 thousand euros from 63 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Revenue from rendering of services increased to 117 thousand euros from 63 thousand euros",
+        "candidate_value": "117 thousand euros (2025) vs 63 thousand euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "117 thousand euros (2025) vs 63 thousand euros (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows Revenue from rendering of services Q1 2025: 117 vs Q1 2024: 63.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Revenue from the sale of own real estate rose to 1,589 thousand euros from 927 thousand euros, while revenue from rendering services increased to 117 thousand euros from 63 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit improved to 598 thousand euros compared to 173 thousand euros in the prior year period",
+        "candidate_value": "598 thousand euros (2025) vs 173 thousand euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "598 thousand euros (2025) vs 173 thousand euros (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows Gross profit Q1 2025: 598 vs Q1 2024: 173.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit improved to 598 thousand euros compared to 173 thousand euros in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating profit or EBIT reached 259 thousand euros, marking a recovery from the operating loss of 208 thousand euros reported in the first quarter of 2024",
+        "candidate_value": "259 thousand euros profit (2025) vs 208 thousand euros loss (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "259 thousand euros profit (2025) vs 208 thousand euros loss (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows Operating profit/loss Q1 2025: 259 vs Q1 2024: -208.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating profit or EBIT reached 259 thousand euros, marking a recovery from the operating loss of 208 thousand euros reported in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Net profit for the period was 103 thousand euros, an improvement from the net loss of 349 thousand euros in the corresponding period of 2024",
+        "candidate_value": "103 thousand euros profit (2025) vs 349 thousand euros loss (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "103 thousand euros profit (2025) vs 349 thousand euros loss (2024)",
+        "source_evidence": "Consolidated Statement of Comprehensive Income shows Net profit/loss Q1 2025: 103 vs Q1 2024: -349.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Net profit for the period was 103 thousand euros, an improvement from the net loss of 349 thousand euros in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the first quarter of 2024",
+        "candidate_value": "0.01 euros (2025) vs -0.03 euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.01 euros (2025) vs -0.03 euros (2024)",
+        "source_evidence": "Note 8: Earnings per share table shows EPS Q1 2025: 0.01 vs Q1 2024: -0.03.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Basic and diluted earnings per share both stood at 0.01 euros, compared to -0.03 euros in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Net cash flows used in operating activities were 2,838 thousand euros in the first quarter of 2025, compared to 2,217 thousand euros used in the first quarter of 2024",
+        "candidate_value": "2,838 thousand euros used (2025) vs 2,217 thousand euros used (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,838 thousand euros used (2025) vs 2,217 thousand euros used (2024)",
+        "source_evidence": "Consolidated Statement of Cash Flows shows Net cash from/used in operating activities Q1 2025: -2,838 vs Q1 2024: -2,217.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Net cash flows used in operating activities were 2,838 thousand euros in the first quarter of 2025, compared to 2,217 thousand euros used in the first quarter of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Net cash flows from financing activities were 2,231 thousand euros, compared to 1,479 thousand euros in the previous year",
+        "candidate_value": "2,231 thousand euros (2025) vs 1,479 thousand euros (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2,231 thousand euros (2025) vs 1,479 thousand euros (2024)",
+        "source_evidence": "Consolidated Statement of Cash Flows shows Net cash from/used in financing activities Q1 2025: 2,231 vs Q1 2024: 1,479.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Net cash flows from financing activities were 2,231 thousand euros, compared to 1,479 thousand euros in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total cash and cash equivalents stood at 1,113 thousand euros as of March 31, 2025, down from 1,720 thousand euros at the beginning of the year",
+        "candidate_value": "1,113 thousand euros (end Q1 2025) vs 1,720 thousand euros (beginning Q1 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,113 thousand euros (end Q1 2025) vs 1,720 thousand euros (beginning Q1 2025)",
+        "source_evidence": "Consolidated Statement of Cash Flows shows Cash and cash equivalents at end of period Q1 2025: 1,113 vs beginning: 1,720.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Total cash and cash equivalents stood at 1,113 thousand euros as of March 31, 2025, down from 1,720 thousand euros at the beginning of the year."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Total assets increased to 42,728 thousand euros at the end of the reporting period from 39,568 thousand euros as of December 31, 2024",
+        "candidate_value": "42,728 thousand euros (end Q1 2025) vs 39,568 thousand euros (Dec 31, 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42,728 thousand euros (end Q1 2025) vs 39,568 thousand euros (Dec 31, 2024)",
+        "source_evidence": "Consolidated Statement of Financial Position shows Total assets Q1 2025: 42,728 vs Dec 31, 2024: 39,568.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Total assets increased to 42,728 thousand euros at the end of the reporting period from 39,568 thousand euros as of December 31, 2024."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Total liabilities rose to 22,886 thousand euros from 19,829 thousand euros, driven by an increase in interest-bearing loans and borrowings, which reached 16,568 thousand euros compared to 15,215 thousand euros at the end of 2024",
+        "candidate_value": "22,886 thousand euros liabilities (Q1 2025) vs 19,829 thousand euros (Dec 2024); 16,568 thousand euros loans (Q1 2025) vs 15,215 thousand euros (Dec 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "22,886 thousand euros liabilities (Q1 2025) vs 19,829 thousand euros (Dec 2024); 16,568 thousand euros loans (Q1 2025) vs 15,215 thousand euros (Dec 2024)",
+        "source_evidence": "Consolidated Statement of Financial Position shows Total liabilities Q1 2025: 22,886 vs Dec 31, 2024: 19,829. Note 12 shows Total interest-bearing liabilities Q1 2025: 16,568 vs Dec 31, 2024: 15,215.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Total liabilities rose to 22,886 thousand euros from 19,829 thousand euros, driven by an increase in interest-bearing loans and borrowings, which reached 16,568 thousand euros compared to 15,215 thousand euros at the end of 2024."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Net loans increased by 1,960 thousand euros during the first three months of the year to reach 15,455 thousand euros as of March 31, 2025",
+        "candidate_value": "1,960 thousand euros increase to 15,455 thousand euros",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,960 thousand euros increase to 15,455 thousand euros",
+        "source_evidence": "Key Performance Indicators section states: 'In the first 3 months of 2025, the group’s debt burden (net loans) increased by 1,960 thousand euros up to the level of 15,455 thousand euros as of 31 March 2025.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Net loans increased by 1,960 thousand euros during the first three months of the year to reach 15,455 thousand euros as of March 31, 2025."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The weighted average annual interest rate of interest-bearing liabilities was 8.2% at the end of the period, representing a decrease of 0.5 percentage points compared to December 31, 2024",
+        "candidate_value": "8.2% (Q1 2025) vs 8.7% (Dec 2024) [implied by 0.5pp decrease]",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.2% (Q1 2025) vs 8.7% (Dec 2024)",
+        "source_evidence": "Key Ratios table shows Average annual interest rate of loans Q1 2025: 8.2% vs Q1 2024: 7.8% (but text states decrease of 0.5pp from Dec 2024). Liquidity and interest rate risks section states: 'The group’s weighted average loan interest rate was 8.2% as of 31 March 2025. This is an decrease by 0.5 percentage points compared to the end of year 2024.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The weighted average annual interest rate of interest-bearing liabilities was 8.2% at the end of the period, representing a decrease of 0.5 percentage points compared to December 31, 2024."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Total equity attributable to owners of the parent was 19,842 thousand euros as of March 31, 2025, showing a slight increase from 19,739 thousand euros at the end of 2024",
+        "candidate_value": "19,842 thousand euros (Q1 2025) vs 19,739 thousand euros (Dec 2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "19,842 thousand euros (Q1 2025) vs 19,739 thousand euros (Dec 2024)",
+        "source_evidence": "Consolidated Statement of Financial Position shows Total equity attributable to owners of the parent Q1 2025: 19,842 vs Dec 31, 2024: 19,739.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Total equity attributable to owners of the parent was 19,842 thousand euros as of March 31, 2025, showing a slight increase from 19,739 thousand euros at the end of 2024."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2025 revenue increased to EUR 1,706 thousand (72% YoY growth from EUR 990 thousand in Q1 2024), with operating profit of EUR 259 thousand (vs operating loss of EUR 208 thousand in Q1 2024) and net profit of EUR 103 thousand (vs net loss of EUR 349 thousand in Q1 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators table and Consolidated Statement of Comprehensive Income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "For the reporting period ending March 31, 2025, the group generated total revenue of 1,706 thousand euros, representing an increase of 716 thousand euros compared to 990 thousand euros in the first quarter of 2024."
+          },
+          {
+            "id": "S5",
+            "text": "Operating profit or EBIT reached 259 thousand euros, marking a recovery from the operating loss of 208 thousand euros reported in the first quarter of 2024."
+          },
+          {
+            "id": "S6",
+            "text": "Net profit for the period was 103 thousand euros, an improvement from the net loss of 349 thousand euros in the corresponding period of 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Net loans increased to EUR 15,455 thousand as of 31 March 2025, with the weighted average annual interest rate of interest-bearing liabilities decreasing to 8.2% (a reduction of 0.5 percentage points compared to 31 December 2024).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Key Performance Indicators section and Note 12 (Interest bearing liabilities)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Net loans increased by 1,960 thousand euros during the first three months of the year to reach 15,455 thousand euros as of March 31, 2025."
+          },
+          {
+            "id": "S15",
+            "text": "The weighted average annual interest rate of interest-bearing liabilities was 8.2% at the end of the period, representing a decrease of 0.5 percentage points compared to December 31, 2024."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Estonia’s real estate market showed credible signs of revitalization in Q1 2025, with increased transaction activity, stabilized price levels, and declining Euribor rates supporting consumer interest and transaction volumes.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review (first paragraph)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The financial results were influenced by the moderate recovery in the real estate markets in Estonia and Bulgaria, characterized by stabilizing price levels, declining Euribor rates, and increased transaction and sales activity within residential developments such as Rannakalda and Botanica Lozen."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "In the Rannakalda development (Kodulahe), four additional apartments were sold in Q1 2025, bringing the total units sold to 91 out of 113 (21 units remaining vacant as of the report publication date).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "The Soodi 6 project (Kodulahe VII etapp) has the detail plan issued, with 66 units (62 apartments and 4 commercial premises) planned; construction is expected to commence at the end of Q2 2025 and complete in 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Arco Vara's Active Projects table",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Arco Vara acquired a development site at Spordi 3a, 3b in Tallinn during Q1 2025; the project comprises 56 apartments (7,600 m² gross building area) with a total investment of EUR 15 million; pre-sales will begin in Q2 2025, and handover is scheduled for the end of 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Operating report section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "The Botanica Lozen project in Bulgaria reached 95% readiness for the first phase (16 houses) by the end of Q1 2025; nine of the 16 houses had been sold by quarter-end, with full completion expected by the end of Q2 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review and Operating report section",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The financial results were influenced by the moderate recovery in the real estate markets in Estonia and Bulgaria, characterized by stabilizing price levels, declining Euribor rates, and increased transaction and sales activity within residential developments such as Rannakalda and Botanica Lozen."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Preparatory work for the Arcojärve project is progressing according to plan; the detailed plan approval is targeted in the coming months, with construction scheduled to begin at the end of 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Detailed planning for the Kodulahe development at Lammi 6 advanced significantly in Q1 2025; construction is anticipated to start in approximately two years from the report date.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "The Merivälja Kuldlehe exclusive cluster house development comprises five apartments; two have been sold to date, with three remaining vacant as of 31 March 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report - Group CEO's Review",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K4",
+      "K5",
+      "K6",
+      "K8",
+      "K9",
+      "K10"
+    ],
+    "completeness_justification": "The candidate summary adequately covers K1 (Q1 2025 revenue, operating profit, and net profit), K2 (net loans and interest rate changes), K3 (Estonia's real estate market revitalization), and K7 (Botanica Lozen project progress). However, it omits core material details for K4 (Rannakalda development sales), K5 (Soodi 6 project details), K6 (Arco Vara development site acquisition), K8 (Arcojärve project progress), K9 (Kodulahe development planning), and K10 (Merivälja Kuldlehe cluster house sales). The summary captures the main financial performance and some market context but lacks several key project-specific details, resulting in a mixed coverage level.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support the overall narrative of improved financial performance. There are no self-contradictions, logical gaps, or organizational issues. The summary flows logically from revenue and profit metrics to cash flow, balance sheet items, and market influences. While there is a minor numerical discrepancy between the sum of real estate and service revenues (1,706 thousand euros) and the total revenue (also 1,706 thousand euros), this does not constitute a contradiction because the candidate does not explicitly claim these are exhaustive, additive components of the same total. The structure is clear, with each sentence building upon the previous one, and there is no unnecessary repetition."
+  },
+  "usage": {
+    "input_tokens_total": 22258,
+    "output_tokens_total_including_reasoning": 4921,
+    "total_tokens": 27179,
+    "latency_seconds_total": 25.49
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 37630,
+    "output_tokens_total_including_reasoning": 49189,
+    "total_tokens": 86819,
+    "latency_seconds_total": 164.67
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_5.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_5_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_5.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_5.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_5_chain_of_event_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_5_chain_of_event_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_5_chain_of_event_gemini.json"
+    }
+  }
+}

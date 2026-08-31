@@ -1,0 +1,629 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_25_zero_shot_qwen36.txt",
+    "report": "report_quarterly_25.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the first quarter of 2026, VILVI Group reported consolidated revenue of 86,970 thousand euros, representing a 22.4 percent year-on-year increase from 71,072 thousand euros in Q1 2025.",
+    "S2": "Despite strong top-line growth, near-term profitability metrics showed mixed results.",
+    "S3": "EBITDA declined by 50.2 percent to 3,003 thousand euros, resulting in an EBITDA margin of 3.5 percent, down from 8.5 percent in the prior year period.",
+    "S4": "This EBITDA figure excludes a preliminary negative goodwill charge of 5,500 thousand euros linked to a recent acquisition.",
+    "S5": "Conversely, net profit increased by 25.7 percent to 5,085 thousand euros, reflecting a profit margin of 5.8 percent and earnings per share of 0.43 euros.",
+    "S6": "The company also significantly expanded its raw material procurement, purchasing 155,954 tons of basic indicators milk, a 54.2 percent rise compared to Q1 2025.",
+    "S7": "Revenue growth was primarily driven by segment and regional expansions.",
+    "S8": "The newly consolidated canned milk segment contributed 11,923 thousand euros, representing 14 percent of total sales.",
+    "S9": "Dry milk product sales surged by 126.9 percent to 24,659 thousand euros, while fresh milk product sales grew by 73.4 percent to 12,748 thousand euros.",
+    "S10": "Sales in cheese, cheese products, and other categories decreased by 28.8 percent to 37,641 thousand euros.",
+    "S11": "Geographically, Lithuanian domestic sales jumped 72.9 percent to 14,633 thousand euros, and exports to non-European Union markets rose 46.6 percent to 29,818 thousand euros.",
+    "S12": "Sales within the European Union remained largely stable, increasing by just 0.6 percent to 42,518 thousand euros.",
+    "S13": "Operational developments substantially shaped the quarter.",
+    "S14": "On January 16, 2026, the group acquired 100 percent of Marijampolės pieno konservai UAB, a producer of canned milk products and milk powders.",
+    "S15": "Management plans to integrate the subsidiary to capture operational synergies and expand regional whey processing capacity.",
+    "S16": "Additionally, commercial cheese production officially commenced at the new Baltic Dairy Board SIA factory in Bauska, Latvia, which is designed to produce 18,000 tons annually for export to more than forty countries.",
+    "S17": "The facility recently secured an honorable third place in the Latvian Construction Awards 2025 competition.",
+    "S18": "These strategic investments and expanded purchasing volumes drove substantial revenue growth across multiple segments, although higher cost of sales compressed gross profit and operating margins during the reporting period."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_25.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_25.json",
+    "key_information_hash": "b009eaa3953c4f07",
+    "key_information_units_total": 9
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 7,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 7
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 7,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 9
+    },
+    "coherence": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Near-term profitability metrics showed mixed results despite strong top-line growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue increased by 22.4% to MEUR 86.97, EBITDA decreased by 50.2% to MEUR 3.00, and net profit increased by 25.7% to MEUR 5.09.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Despite strong top-line growth, near-term profitability metrics showed mixed results."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Revenue growth was primarily driven by segment and regional expansions.",
+        "label": "SUPPORTED",
+        "source_evidence": "Segment data shows growth in Dry milk products (+126.9%), Fresh milk products (+73.4%), and Other countries (+46.6%), while EU sales remained stable (+0.6%).",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue growth was primarily driven by segment and regional expansions."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Operational developments substantially shaped the quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key events include the acquisition of Marijampolės pieno konservai UAB on 16 January 2026 and commencement of commercial cheese production at Baltic Dairy Board SIA in Bauska, Latvia.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Operational developments substantially shaped the quarter."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Management plans to integrate the subsidiary to capture operational synergies and expand regional whey processing capacity.",
+        "label": "SUPPORTED",
+        "source_evidence": "Following the acquisition, the company will systematically integrate Marijampolės pieno konservai UAB to utilize group-wide economies of scale and operational synergies, with plans to increase capacity of the largest whey processing line in the Baltic region.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Management plans to integrate the subsidiary to capture operational synergies and expand regional whey processing capacity."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Commercial cheese production officially commenced at the new Baltic Dairy Board SIA factory in Bauska, Latvia, which is designed to produce 18,000 tons annually for export to more than forty countries.",
+        "label": "SUPPORTED",
+        "source_evidence": "Cheese production has officially commenced at the new VILVI Group cheese factory, Baltic Dairy Board SIA, in Bauska, Latvia... planned cheese production volumes will reach 18 thousand tons per year. These products will be exported to more than 40 countries worldwide.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Additionally, commercial cheese production officially commenced at the new Baltic Dairy Board SIA factory in Bauska, Latvia, which is designed to produce 18,000 tons annually for export to more than forty countries."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The facility recently secured an honorable third place in the Latvian Construction Awards 2025 competition.",
+        "label": "SUPPORTED",
+        "source_evidence": "The factory won an honorable 3rd place in the category 'Production Facility / Industrial Building' in the Latvian Construction Awards 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The facility recently secured an honorable third place in the Latvian Construction Awards 2025 competition."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "These strategic investments and expanded purchasing volumes drove substantial revenue growth across multiple segments, although higher cost of sales compressed gross profit and operating margins during the reporting period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue increased by 22.4% to MEUR 86.97. However, Gross profit decreased from MEUR 7.46 (Q1 2025) to MEUR 5.42 (Q1 2026), and EBITDA margin decreased from 8.5% to 3.5%.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "These strategic investments and expanded purchasing volumes drove substantial revenue growth across multiple segments, although higher cost of sales compressed gross profit and operating margins during the reporting period."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "VILVI Group reported consolidated revenue of 86,970 thousand euros in Q1 2026, representing a 22.4 percent year-on-year increase from 71,072 thousand euros in Q1 2025.",
+        "candidate_value": "86,970 thousand EUR (22.4% increase from 71,072 thousand EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "86,970 thousand EUR (22.4% increase from 71,072 thousand EUR)",
+        "source_evidence": "Table in 'Main financial indicators' shows Revenue Q1 2026: 86,970 thousand EUR, Change 2026/2025: 22.4%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first quarter of 2026, VILVI Group reported consolidated revenue of 86,970 thousand euros, representing a 22.4 percent year-on-year increase from 71,072 thousand euros in Q1 2025."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "EBITDA declined by 50.2 percent to 3,003 thousand euros, resulting in an EBITDA margin of 3.5 percent, down from 8.5 percent in the prior year period.",
+        "candidate_value": "3,003 thousand EUR (50.2% decrease, margin 3.5% vs 8.5%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3,003 thousand EUR (50.2% decrease, margin 3.5% vs 8.5%)",
+        "source_evidence": "Table in 'Main financial indicators' shows EBITDA Q1 2026: 3,003 thousand EUR, Change 2026/2025: -50.2%, EBITDA margin: 3.5% (vs 8.5% in Q1 2025).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "EBITDA declined by 50.2 percent to 3,003 thousand euros, resulting in an EBITDA margin of 3.5 percent, down from 8.5 percent in the prior year period."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "This EBITDA figure excludes a preliminary negative goodwill charge of 5,500 thousand euros linked to a recent acquisition.",
+        "candidate_value": "5,500 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5.5 MEUR (5,500 thousand EUR)",
+        "source_evidence": "Text states: 'In Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5 related to the acquisition of Marijampolės pieno konservai UAB.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This EBITDA figure excludes a preliminary negative goodwill charge of 5,500 thousand euros linked to a recent acquisition."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net profit increased by 25.7 percent to 5,085 thousand euros, reflecting a profit margin of 5.8 percent and earnings per share of 0.43 euros.",
+        "candidate_value": "5,085 thousand EUR (25.7% increase, margin 5.8%, EPS 0.43 EUR)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5,085 thousand EUR (25.7% increase, margin 5.8%, EPS 0.43 EUR)",
+        "source_evidence": "Table in 'Main financial indicators' shows Net profit Q1 2026: 5,085 thousand EUR, Change 2026/2025: 25.7%, Profit margin: 5.8%, Profit per share: 0.43 EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Conversely, net profit increased by 25.7 percent to 5,085 thousand euros, reflecting a profit margin of 5.8 percent and earnings per share of 0.43 euros."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The company purchased 155,954 tons of basic indicators milk, a 54.2 percent rise compared to Q1 2025.",
+        "candidate_value": "155,954 tons (54.2% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "155,954 tons (54.2% increase)",
+        "source_evidence": "Table in 'Main financial indicators' shows Purchased basic indicators milk Q1 2026: 155,954 tons, Change 2026/2025: 54.2%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company also significantly expanded its raw material procurement, purchasing 155,954 tons of basic indicators milk, a 54.2 percent rise compared to Q1 2025."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The newly consolidated canned milk segment contributed 11,923 thousand euros, representing 14 percent of total sales.",
+        "candidate_value": "11,923 thousand EUR (14% of total sales)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "11,923 thousand EUR (14% of total sales)",
+        "source_evidence": "Table in 'Sales revenue by operating segments' shows Canned milk Q1 2026: 11,923 thousand EUR. Picture text states 'Canned milk 14%' for Q1 2026. Total revenue was 86,970 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The newly consolidated canned milk segment contributed 11,923 thousand euros, representing 14 percent of total sales."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Dry milk product sales surged by 126.9 percent to 24,659 thousand euros, while fresh milk product sales grew by 73.4 percent to 12,748 thousand euros.",
+        "candidate_value": "24,659 thousand EUR (126.9% increase), 12,748 thousand EUR (73.4% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "24,659 thousand EUR (126.9% increase), 12,748 thousand EUR (73.4% increase)",
+        "source_evidence": "Table in 'Sales revenue by operating segments' shows Dry milk products Q1 2026: 24,659 thousand EUR, Change 2026/2025: 126.9%; Fresh milk products Q1 2026: 12,748 thousand EUR, Change 2026/2025: 73.4%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Dry milk product sales surged by 126.9 percent to 24,659 thousand euros, while fresh milk product sales grew by 73.4 percent to 12,748 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Sales in cheese, cheese products, and other categories decreased by 28.8 percent to 37,641 thousand euros.",
+        "candidate_value": "37,641 thousand EUR (28.8% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "37,641 thousand EUR (28.8% decrease)",
+        "source_evidence": "Table in 'Sales revenue by operating segments' shows Cheese, cheese products and other Q1 2026: 37,641 thousand EUR, Change 2026/2025: -28.8%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Sales in cheese, cheese products, and other categories decreased by 28.8 percent to 37,641 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Lithuanian domestic sales jumped 72.9 percent to 14,633 thousand euros, and exports to non-European Union markets rose 46.6 percent to 29,818 thousand euros.",
+        "candidate_value": "14,633 thousand EUR (72.9% increase), 29,818 thousand EUR (46.6% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14,633 thousand EUR (72.9% increase), 29,818 thousand EUR (46.6% increase)",
+        "source_evidence": "Table in 'Sales revenue by markets' shows Lithuania Q1 2026: 14,633 thousand EUR, Change 2026/2025: 72.9%; Other countries Q1 2026: 29,818 thousand EUR, Change 2026/2025: 46.6%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Geographically, Lithuanian domestic sales jumped 72.9 percent to 14,633 thousand euros, and exports to non-European Union markets rose 46.6 percent to 29,818 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Sales within the European Union remained largely stable, increasing by just 0.6 percent to 42,518 thousand euros.",
+        "candidate_value": "42,518 thousand EUR (0.6% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "42,518 thousand EUR (0.6% increase)",
+        "source_evidence": "Table in 'Sales revenue by markets' shows European Union Q1 2026: 42,518 thousand EUR, Change 2026/2025: 0.6%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Sales within the European Union remained largely stable, increasing by just 0.6 percent to 42,518 thousand euros."
+          }
+        ]
+      },
+      {
+        "claim": "acquired 100 percent of Marijampolės pieno konservai UAB",
+        "candidate_value": "100 percent",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "100%",
+        "source_evidence": "On 16 January 2026, Vilkyškių pieninė AB completed the transaction for the acquisition of shares of Marijampolės pieno konservai UAB. 100% of the company’s shares were acquired.",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "id": "N11",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "On January 16, 2026, the group acquired 100 percent of Marijampolės pieno konservai UAB, a producer of canned milk products and milk powders."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Q1 2026 consolidated revenue increased 22.4% to MEUR 87.0, with net profit rising 25.7% to MEUR 5.1.",
+        "importance": "HIGH",
+        "source_evidence": "Section 2 'Main financial indicators' table and text: Revenue Q1 2026 MEUR 86,970 (+22.4% YoY), Net profit Q1 2026 MEUR 5,085 (+25.7% YoY).",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the first quarter of 2026, VILVI Group reported consolidated revenue of 86,970 thousand euros, representing a 22.4 percent year-on-year increase from 71,072 thousand euros in Q1 2025."
+          },
+          {
+            "id": "S5",
+            "text": "Conversely, net profit increased by 25.7 percent to 5,085 thousand euros, reflecting a profit margin of 5.8 percent and earnings per share of 0.43 euros."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Q1 2026 EBITDA fell 50.2% to MEUR 3.0, excluding MEUR 5.5 preliminary negative goodwill from the Marijampolės acquisition.",
+        "importance": "HIGH",
+        "source_evidence": "Section 2 text: 'During Q1 2026 EBITDA reached MEUR 3.0 (a decrease of 50.2% compared to the same period last year). In Q1 2026 EBITDA excludes preliminary negative goodwill of MEUR 5.5...'",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S3",
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "EBITDA declined by 50.2 percent to 3,003 thousand euros, resulting in an EBITDA margin of 3.5 percent, down from 8.5 percent in the prior year period."
+          },
+          {
+            "id": "S4",
+            "text": "This EBITDA figure excludes a preliminary negative goodwill charge of 5,500 thousand euros linked to a recent acquisition."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Acquisition of Marijampolės pieno konservai UAB completed on 16 January 2026, adding canned milk and milk powder production capabilities.",
+        "importance": "HIGH",
+        "source_evidence": "Section 1 'Main events': 'On 16 January 2026, Vilkyškių pieninė AB completed the transaction for the acquisition of shares of Marijampolės pieno konservai UAB. 100% of the company’s shares were acquired.'",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "On January 16, 2026, the group acquired 100 percent of Marijampolės pieno konservai UAB, a producer of canned milk products and milk powders."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Commercial cheese production commenced at the new Baltic Dairy Board SIA factory in Bauska, Latvia, targeting 18 thousand tons annually for export to over 40 countries.",
+        "importance": "HIGH",
+        "source_evidence": "Section 1 and Structure section: 'VILVI Group has started commercial cheese production in Latvia... planned cheese production volumes will reach 18 thousand tons per year. These products will be exported to more than 40 countries worldwide.'",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Additionally, commercial cheese production officially commenced at the new Baltic Dairy Board SIA factory in Bauska, Latvia, which is designed to produce 18,000 tons annually for export to more than forty countries."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Q1 2026 revenue segment mix shifted to 43% cheese/dairy products, 28% dry milk products, 15% fresh milk products, and 14% canned milk (new segment from acquisition).",
+        "importance": "HIGH",
+        "source_evidence": "Section 4 'Sales revenue by operating segments' table and picture text: Q1 2026 segments shown with canned milk at 14% (consolidated from 2026-01-01).",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The newly consolidated canned milk segment contributed 11,923 thousand euros, representing 14 percent of total sales."
+          },
+          {
+            "id": "S9",
+            "text": "Dry milk product sales surged by 126.9 percent to 24,659 thousand euros, while fresh milk product sales grew by 73.4 percent to 12,748 thousand euros."
+          },
+          {
+            "id": "S10",
+            "text": "Sales in cheese, cheese products, and other categories decreased by 28.8 percent to 37,641 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Q1 2026 sales geography shifted to 49% EU, 17% Lithuania, and 34% other countries, compared to 53% EU, 12% Lithuania, and 34% other countries in Q1 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Section 3 'Sales revenue by markets' table and picture text: EU 49% (42,518/86,970), Lithuania 17% (14,633/86,970), Other countries 34% (29,818/86,970) in Q1 2026; EU 53% (42,273/71,072), Lithuania 12% (8,462/71,072), Other countries 34% (20,337/71,072) in Q1 2025.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Geographically, Lithuanian domestic sales jumped 72.9 percent to 14,633 thousand euros, and exports to non-European Union markets rose 46.6 percent to 29,818 thousand euros."
+          },
+          {
+            "id": "S12",
+            "text": "Sales within the European Union remained largely stable, increasing by just 0.6 percent to 42,518 thousand euros."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Net financial debt surged 89.7% to MEUR 83.4 in Q1 2026 from MEUR 44.0 in Q1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Section 2 table: 'Net financial debt, thousands EUR' Q1 2026 83,427 (+89.7% vs Q1 2025).",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K8",
+        "information": "Operating cash flow was negative MEUR 9.6 million in Q1 2026, funded by financing activities (MEUR 15.8 million) and partially offset by investing outflows (MEUR 8.0 million).",
+        "importance": "MEDIUM",
+        "source_evidence": "Section 7 'Consolidated statement of cash flows': Net cash flows from operating activities -(9,633), investing -(8,037), financing +15,836 (all in thousands EUR).",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Purchased milk equivalents increased 54.2% to 155,954 tons in Q1 2026, compared to 101,118 tons in Q1 2025.",
+        "importance": "MEDIUM",
+        "source_evidence": "Section 2 table: 'Purchased basic indicators milk, in tons' Q1 2026 155,954 (+54.2% YoY).",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The company also significantly expanded its raw material procurement, purchasing 155,954 tons of basic indicators milk, a 54.2 percent rise compared to Q1 2025."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K7",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K5, K6, and K9 are all PRESENT with supporting sentences identified. K7 (net financial debt surge) and K8 (operating cash flow details) are MISSING entirely from the candidate summary. The summary captures most HIGH importance items but misses two HIGH/MEDIUM importance items related to financial position and cash flow, justifying a 'Generally yes' score (3) as the main picture is captured but with notable omissions.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is generally coherent with no material internal contradictions or logical gaps. The narrative flows logically from consolidated financial performance to segment and geographic breakdowns, then to operational developments. While profitability metrics show mixed results (EBITDA decline vs. net profit increase), this is explicitly acknowledged in S2 and explained through exclusions (S4) and cost pressures (S18). All statements are internally consistent and build upon each other without contradictions. The structure is clear and organized, moving from financial highlights to drivers and operational context. There is no unnecessary repetition that materially reduces clarity."
+  },
+  "usage": {
+    "input_tokens_total": 17929,
+    "output_tokens_total_including_reasoning": 5730,
+    "total_tokens": 23659,
+    "latency_seconds_total": 31.06
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 15851,
+    "output_tokens_total_including_reasoning": 68623,
+    "total_tokens": 84474,
+    "latency_seconds_total": 246.11
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_25.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_25_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_25.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_25.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_25_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_25_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_25_zero_shot_qwen36.json"
+    }
+  }
+}

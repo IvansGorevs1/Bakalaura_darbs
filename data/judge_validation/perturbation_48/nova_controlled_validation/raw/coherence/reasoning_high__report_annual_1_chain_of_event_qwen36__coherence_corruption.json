@@ -1,0 +1,185 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-28T21:55:52.477161",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "reasoning_high",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_validation\\perturbation_48\\modified_answers\\reasoning_high__report_annual_1_chain_of_event_qwen36__coherence_corruption.txt",
+    "evaluation_type": "coherence",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "880e67c840666ce9",
+    "candidate_hash": "acdda2d00c4ba07a",
+    "sentence_map_hash": "20a2742235a7debd",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": null,
+    "key_information_file": null
+  },
+  "candidate_sentence_map": {
+    "S1": "AAC Clyde Space reported net sales of SEK 295 million for 2025, representing a 16 percent decline from SEK 352 million in 2024.",
+    "S2": "AAC Clyde Space reported net sales of SEK 295 million for 2025, representing a 16 percent decline from SEK 352 million in 2024.",
+    "S3": "EBITDA decreased to SEK 17 million from SEK 47 million, while the operating result after depreciation and impairment, after it, amounted to minus SEK 40 million compared to minus SEK 4 million previously.",
+    "S4": "Earnings per share stood at minus SEK 7.63, down from minus SEK 1.00.",
+    "S5": "Operating cash flow turned significantly negative at minus SEK 73 million, reversing a positive SEK 57 million result in 2024, reversing it, the positive result.",
+    "S6": "Cash and cash equivalents fell to SEK 30 million from SEK 50 million, though the equity ratio improved to 80 percent from 71 percent following two targeted capital raises that generated approximately SEK 115 million before transaction costs.",
+    "S7": "Order backlog declined to SEK 352 million at year end from SEK 641 million.",
+    "S8": "Order backlog declined to SEK 352 million at year end from SEK 641 million, although a major contract received shortly after year end worth EUR 76.3 million is expected to substantially increase the pipeline in early 2026.",
+    "S9": "The company merged its former divisional structures into two reporting segments to strengthen hardware development coordination and improve operational efficiency.",
+    "S10": "Data and Services performed strongly, with net sales growing 80 percent to SEK 80 million and EBITDA rising to SEK 28 million from SEK 21 million, driven by expanded maritime data services and the operational status of the Sedna constellation.",
+    "S11": "Conversely, Products and Missions saw net sales drop to SEK 245 million from SEK 346 million and EBITDA fall to SEK 17 million from SEK 52 million, primarily due to reduced hardware deliveries and milestone timing variations across customer projects.",
+    "S12": "Management explicitly links the weaker full-year financial outcome to specific programme-related delays that materially impacted revenue recognition, cash flow, and order intake, which the weaker outcome, the links, the delays materially.",
+    "S13": "One customer project delay shifted approximately SEK 32 million in recognized revenue into 2026, while political and procurement developments postponed the initiation of the EPS-Sterna weather satellite programme.",
+    "S14": "Extended commissioning periods for the Sedna satellites and rescheduled orbital launches for the VIREON Earth observation constellation further constrained 2025 results.",
+    "S15": "Despite these operational setbacks, despite them, the company completed successful capital increases that secured necessary funding, funding for ongoing constellation expansion and reinforced its institutional shareholder base.",
+    "S16": "These transactions improved liquidity and positioned the Group to continue investing in recurring data services and satellite manufacturing capabilities aligned with sustained market demand.",
+    "S17": "These transactions improved liquidity and positioned the Group to continue investing in recurring data services and satellite manufacturing capabilities aligned with sustained market demand."
+  },
+  "usage": {
+    "input_tokens": 1240,
+    "output_tokens_including_reasoning": 488,
+    "total_tokens": 1728
+  },
+  "latency_seconds": 3.0,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "coherence: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "factual_label_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "trace_id_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"score\": 2,\n  \"label\": \"Neutral/Mixed\",\n  \"issues\": [\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S1\", \"S2\"],\n      \"description\": \"Sentences S1 and S2 are identical, providing no new information and reducing clarity.\"\n    },\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S7\", \"S8\"],\n      \"description\": \"Sentences S7 and S8 both discuss the same order backlog decline, with S8 adding context about a new contract. Repeating the base figure reduces conciseness.\"\n    },\n    {\n      \"type\": \"REPETITION\",\n      \"candidate_sentence_ids\": [\"S16\", \"S17\"],\n      \"description\": \"Sentences S16 and S17 are identical, restating the impact of capital transactions without adding new insight.\"\n    },\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S3\"],\n      \"description\": \"Sentence S3 contains a confusing phrasing ('after it, the operating result after depreciation and impairment') that obscures the relationship between EBITDA and the operating result. The structure creates ambiguity about whether 'after it' refers to EBITDA or another element.\"\n    },\n    {\n      \"type\": \"LOGICAL_GAP\",\n      \"candidate_sentence_ids\": [\"S12\"],\n      \"description\": \"Sentence S12 contains a fragmented and repetitive structure ('the weaker outcome, the links, the delays materially') that disrupts the logical connection between programme delays and financial impacts.\"\n    }\n  ],\n  \"justification\": \"The summary exhibits several coherence issues primarily related to repetition (S1/S2, S7/S8, S16/S17) which reduce conciseness and clarity. Sentence S3 contains awkward phrasing that creates ambiguity in explaining the relationship between EBITDA and operating result. Sentence S12 suffers from fragmented structure that weakens the logical connection between causes and effects. While the summary generally maintains internal consistency in its financial trends and explanations, these structural and repetitive issues prevent it from achieving full coherence. There are no self-contradictions, and related information is largely organized by topic (financial results, segment performance, strategic actions), but the identified problems collectively place the summary in the 'Neutral/Mixed' category.\"\n}\n```",
+  "evaluation": {
+    "score": 2,
+    "label": "Neutral/Mixed",
+    "issues": [
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ],
+        "description": "Sentences S1 and S2 are identical, providing no new information and reducing clarity."
+      },
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S7",
+          "S8"
+        ],
+        "description": "Sentences S7 and S8 both discuss the same order backlog decline, with S8 adding context about a new contract. Repeating the base figure reduces conciseness."
+      },
+      {
+        "type": "REPETITION",
+        "candidate_sentence_ids": [
+          "S16",
+          "S17"
+        ],
+        "description": "Sentences S16 and S17 are identical, restating the impact of capital transactions without adding new insight."
+      },
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "description": "Sentence S3 contains a confusing phrasing ('after it, the operating result after depreciation and impairment') that obscures the relationship between EBITDA and the operating result. The structure creates ambiguity about whether 'after it' refers to EBITDA or another element."
+      },
+      {
+        "type": "LOGICAL_GAP",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "description": "Sentence S12 contains a fragmented and repetitive structure ('the weaker outcome, the links, the delays materially') that disrupts the logical connection between programme delays and financial impacts."
+      }
+    ],
+    "justification": "The summary exhibits several coherence issues primarily related to repetition (S1/S2, S7/S8, S16/S17) which reduce conciseness and clarity. Sentence S3 contains awkward phrasing that creates ambiguity in explaining the relationship between EBITDA and operating result. Sentence S12 suffers from fragmented structure that weakens the logical connection between causes and effects. While the summary generally maintains internal consistency in its financial trends and explanations, these structural and repetitive issues prevent it from achieving full coherence. There are no self-contradictions, and related information is largely organized by topic (financial results, segment performance, strategic actions), but the identified problems collectively place the summary in the 'Neutral/Mixed' category."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "factual_label_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "trace_id_repair": {
+    "performed": false,
+    "unresolved_claim_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

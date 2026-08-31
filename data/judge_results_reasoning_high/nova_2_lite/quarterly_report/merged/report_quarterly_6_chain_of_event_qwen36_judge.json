@@ -1,0 +1,592 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_6_chain_of_event_qwen36.txt",
+    "report": "report_quarterly_6.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "chain_of_event",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Despite modest revenue contraction driven by reduced energy wholesale sales and higher operational costs, the group delivered substantial profitability expansion in the first half of 2026.",
+    "S2": "Consolidated revenue remained broadly unchanged at 945.9 million euros compared to 951.9 million euros in the prior year period, while second-quarter revenue declined to 440.9 million euros.",
+    "S3": "Nevertheless, earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros.",
+    "S4": "Second-quarter EBITDA reached 64.2 million euros against 57.4 million euros a year earlier.",
+    "S5": "The marked improvement in profitability occurred despite headwinds including an 8.4 million euro year-on-year rise in fuel costs for the maritime segment and increased European Union emissions trading system compliance burdens.",
+    "S6": "Management attributes the positive financial shift primarily to a stronger performance in the energy segment, a substantial turnaround in supporting businesses where operations moved from a 4.4 million euro loss to a 5.6 million euro profit following the closure of unprofitable units and the integration of new agricultural activities, and the recent completion of the Halinga biomethane plant.",
+    "S7": "Revenue decreases were largely concentrated in the energy division, where gas and electricity sales volumes fell 34% due to reduced wholesale activity, although market pricing stabilized after spring peaks driven by regional geopolitical conflicts.",
+    "S8": "Strategic developments during the period include the successful continuation of a major construction contract for the Rail Baltica mainline, progressive work on several real estate and logistics projects, and the acquisition of additional Tallink Grupp shares to raise ownership to 68.76%.",
+    "S9": "The company also initiated a share repurchase program and secured shareholder approval for a dividend distribution.",
+    "S10": "Financial resilience was reinforced by a strengthened balance sheet, with total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros.",
+    "S11": "Cash balances expanded to 253 million euros, reflecting effective liquidity management and maintained investment capacity amid volatile macroeconomic and geopolitical conditions that continue to influence energy commodity markets and operational expenditures."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_6.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_6.json",
+    "key_information_hash": "9de3896c87548d91",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 11,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 11
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 9,
+      "incorrect": 0,
+      "total": 9
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Despite modest revenue contraction driven by reduced energy wholesale sales and higher operational costs, the group delivered substantial profitability expansion in the first half of 2026.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows 6-month revenue decreased slightly from 951,869 to 945,917 (thousands EUR). Management Report (I6) states EBITDA increased by 31% and EBIT by 94% in the first half of 2026. Note 2 (I22) confirms reduced energy wholesale sales volumes.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Despite modest revenue contraction driven by reduced energy wholesale sales and higher operational costs, the group delivered substantial profitability expansion in the first half of 2026."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue remained broadly unchanged at 945.9 million euros compared to 951.9 million euros in the prior year period, while second-quarter revenue declined to 440.9 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows 6-month revenue: 945,917 (2026) vs 951,869 (2025) thousand EUR. Q2 revenue: 440,921 (2026) vs 504,512 (2025) thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue remained broadly unchanged at 945.9 million euros compared to 951.9 million euros in the prior year period, while second-quarter revenue declined to 440.9 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Nevertheless, earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows EBITDA: 111,228 (2026) vs 85,051 (2025) thousand EUR (+31%). Operating profit (EBIT): 51,068 (2026) vs 26,383 (2025) thousand EUR (+94%).",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Nevertheless, earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Second-quarter EBITDA reached 64.2 million euros against 57.4 million euros a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows Q2 EBITDA: 64,158 (2026) vs 57,390 (2025) thousand EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Second-quarter EBITDA reached 64.2 million euros against 57.4 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The marked improvement in profitability occurred despite headwinds including an 8.4 million euro year-on-year rise in fuel costs for the maritime segment and increased European Union emissions trading system compliance burdens.",
+        "label": "SUPPORTED",
+        "source_evidence": "Events in Q2 2026 (I7) states: 'Higher fuel prices increased fuel costs by EUR 8.4 million compared to the same period last year' and 'The share of emissions to be surrendered under the EU ETS increased to 100% of the emitted CO2 equivalent in 2026 (70% in 2025)'.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The marked improvement in profitability occurred despite headwinds including an 8.4 million euro year-on-year rise in fuel costs for the maritime segment and increased European Union emissions trading system compliance burdens."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Management attributes the positive financial shift primarily to a stronger performance in the energy segment, a substantial turnaround in supporting businesses where operations moved from a 4.4 million euro loss to a 5.6 million euro profit following the closure of unprofitable units and the integration of new agricultural activities, and the recent completion of the Halinga biomethane plant.",
+        "label": "SUPPORTED",
+        "source_evidence": "Letter from the CEO (I6) states: 'EBITDA improved from a loss of €4.4 million to a profit of €5.6 million' in supporting businesses. Also mentions 'The completion of the Halinga biomethane plant... Investments like these strengthen Estonia's energy...'. Energy segment performance noted in Note 2 (I22).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Management attributes the positive financial shift primarily to a stronger performance in the energy segment, a substantial turnaround in supporting businesses where operations moved from a 4.4 million euro loss to a 5.6 million euro profit following the closure of unprofitable units and the integration of new agricultural activities, and the recent completion of the Halinga biomethane plant."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Revenue decreases were largely concentrated in the energy division, where gas and electricity sales volumes fell 34% due to reduced wholesale activity, although market pricing stabilized after spring peaks driven by regional geopolitical conflicts.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 2 (I22) states: 'Elenger Group’s gas and electricity sales volumes in the second quarter decreased by 34%, compared to a year earlier, totalling 3.3 TWh (compared to 4.9 TWh in Q2 2025). The decline was primarily driven by a reduction in wholesale sales.' Events in Q2 (I8) notes price stabilization after March peaks due to geopolitical factors.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue decreases were largely concentrated in the energy division, where gas and electricity sales volumes fell 34% due to reduced wholesale activity, although market pricing stabilized after spring peaks driven by regional geopolitical conflicts."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Strategic developments during the period include the successful continuation of a major construction contract for the Rail Baltica mainline, progressive work on several real estate and logistics projects, and the acquisition of additional Tallink Grupp shares to raise ownership to 68.76%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Events in Q2 2026 (I8) states: 'INF Infra... continued the construction of Rail Baltica’s mainline on the Kangru-Saku section' and 'In Q2 2026, Infortar acquired additional shares in Tallink Grupp, as a result of which its ownership in Tallink Group increased to 68.76%'. Real estate projects mentioned in Events section.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategic developments during the period include the successful continuation of a major construction contract for the Rail Baltica mainline, progressive work on several real estate and logistics projects, and the acquisition of additional Tallink Grupp shares to raise ownership to 68.76%."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The company also initiated a share repurchase program and secured shareholder approval for a dividend distribution.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 8 (I33) states: 'In October 2025, Infortar announced that it would begin a share buyback programme'... and 'At the Annual General Meeting in June, shareholders approved this year’s dividend.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The company also initiated a share repurchase program and secured shareholder approval for a dividend distribution."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Financial resilience was reinforced by a strengthened balance sheet, with total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows total equity: 1,200,533 (thousands EUR = €1.201B) and net debt: 829,904 (thousands EUR = €830M) as at 30.06.26.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial resilience was reinforced by a strengthened balance sheet, with total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Cash balances expanded to 253 million euros, reflecting effective liquidity management and maintained investment capacity amid volatile macroeconomic and geopolitical conditions that continue to influence energy commodity markets and operational expenditures.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Figures table (I12) shows cash and cash equivalents: 253,187 thousand EUR (€253.2M) as at 30.06.26. Management Report (I6) notes 'The improvement in the Group’s liquidity reflects cash flow management and the maintenance of a liquidity buffer to finance new investments.'",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Cash balances expanded to 253 million euros, reflecting effective liquidity management and maintained investment capacity amid volatile macroeconomic and geopolitical conditions that continue to influence energy commodity markets and operational expenditures."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Consolidated revenue remained broadly unchanged at 945.9 million euros compared to 951.9 million euros in the prior year period, while second-quarter revenue declined to 440.9 million euros.",
+        "candidate_value": "945.9 million EUR (H1 2026) vs 951.9 million EUR (H1 2025); 440.9 million EUR (Q2 2026)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "945,917 thousand EUR (H1 2026) vs 951,869 thousand EUR (H1 2025); 440,921 thousand EUR (Q2 2026)",
+        "source_evidence": "Key Figures table (I12) provides exact figures in thousands of EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Consolidated revenue remained broadly unchanged at 945.9 million euros compared to 951.9 million euros in the prior year period, while second-quarter revenue declined to 440.9 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros.",
+        "candidate_value": "111.2 million EUR EBITDA (H1 2026); 51.1 million EUR operating profit (H1 2026)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "111,228 thousand EUR EBITDA (H1 2026); 51,068 thousand EUR operating profit (H1 2026)",
+        "source_evidence": "Key Figures table (I12) provides exact figures in thousands of EUR. Rounding differences account for minor variance.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Nevertheless, earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Second-quarter EBITDA reached 64.2 million euros against 57.4 million euros a year earlier.",
+        "candidate_value": "64.2 million EUR EBITDA (Q2 2026) vs 57.4 million EUR (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "64,158 thousand EUR EBITDA (Q2 2026) vs 57,390 thousand EUR (Q2 2025)",
+        "source_evidence": "Key Figures table (I12) provides exact figures in thousands of EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Second-quarter EBITDA reached 64.2 million euros against 57.4 million euros a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "An 8.4 million euro year-on-year rise in fuel costs for the maritime segment",
+        "candidate_value": "8.4 million EUR increase in fuel costs",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8.4 million EUR",
+        "source_evidence": "Events in Q2 2026 (I7) explicitly states: 'Higher fuel prices increased fuel costs by EUR 8.4 million compared to the same period last year.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The marked improvement in profitability occurred despite headwinds including an 8.4 million euro year-on-year rise in fuel costs for the maritime segment and increased European Union emissions trading system compliance burdens."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros",
+        "candidate_value": "1.201 billion EUR equity; 830 million EUR net debt",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,200,533 thousand EUR equity; 829,904 thousand EUR net debt",
+        "source_evidence": "Key Figures table (I12) provides exact figures in thousands of EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial resilience was reinforced by a strengthened balance sheet, with total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Cash balances expanded to 253 million euros",
+        "candidate_value": "253 million EUR cash balances",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "253,187 thousand EUR",
+        "source_evidence": "Key Figures table (I12) shows cash and cash equivalents of 253,187 thousand EUR as at 30.06.26.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Cash balances expanded to 253 million euros, reflecting effective liquidity management and maintained investment capacity amid volatile macroeconomic and geopolitical conditions that continue to influence energy commodity markets and operational expenditures."
+          }
+        ]
+      },
+      {
+        "claim": "supporting businesses moved from a 4.4 million euro loss to a 5.6 million euro profit",
+        "candidate_value": "4.4 million EUR loss to 5.6 million EUR profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA improved from a loss of €4.4 million to a profit of €5.6 million",
+        "source_evidence": "Letter from the CEO (I6): 'The most significant turnaround came from our supporting businesses, where EBITDA improved from a loss of €4.4 million to a profit of €5.6 million.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "id": "N7",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Management attributes the positive financial shift primarily to a stronger performance in the energy segment, a substantial turnaround in supporting businesses where operations moved from a 4.4 million euro loss to a 5.6 million euro profit following the closure of unprofitable units and the integration of new agricultural activities, and the recent completion of the Halinga biomethane plant."
+          }
+        ]
+      },
+      {
+        "claim": "gas and electricity sales volumes fell 34%",
+        "candidate_value": "34% decrease",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "decreased by 34%",
+        "source_evidence": "Events in Q2 2026 - Energy business segment (I7): 'Elenger Group’s gas and electricity sales volumes in the second quarter decreased by 34%, compared to a year earlier.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "id": "N8",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue decreases were largely concentrated in the energy division, where gas and electricity sales volumes fell 34% due to reduced wholesale activity, although market pricing stabilized after spring peaks driven by regional geopolitical conflicts."
+          }
+        ]
+      },
+      {
+        "claim": "ownership in Tallink Grupp increased to 68.76%",
+        "candidate_value": "68.76%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "68.76%",
+        "source_evidence": "Events in Q2 2026 - Changes in Infortar's Business Segments (I8): 'In Q2 2026, Infortar acquired additional shares in Tallink Grupp, as a result of which its ownership in Tallink Group increased to 68.76%.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "id": "N9",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategic developments during the period include the successful continuation of a major construction contract for the Rail Baltica mainline, progressive work on several real estate and logistics projects, and the acquisition of additional Tallink Grupp shares to raise ownership to 68.76%."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "In H1 2026, consolidated EBIT increased by 94% to EUR 51.1 million (from EUR 26.4 million in H1 2025) and EBITDA rose by 31% to EUR 111.2 million (from EUR 85.1 million). Revenue remained broadly unchanged at EUR 946 million (vs EUR 952 million in H1 2025), while net profit turned positive at EUR 7.2 million (compared to a loss of EUR 14.4 million in H1 2025). The group invested approximately EUR 50 million during H1 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Management Report (I6)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Despite modest revenue contraction driven by reduced energy wholesale sales and higher operational costs, the group delivered substantial profitability expansion in the first half of 2026."
+          },
+          {
+            "id": "S3",
+            "text": "Nevertheless, earnings before interest, taxes, depreciation, and amortization increased significantly by 31% to 111.2 million euros, and operating profit rose 94% to 51.1 million euros."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "H1 2026 segment EBITDA was EUR 39.3 million for maritime transport (vs EUR 33.3 million in H1 2025), EUR 59.9 million for energy (vs EUR 51.7 million), and EUR 6.5 million for real estate (vs EUR 4.4 million). Supporting segments contributed EBITDA of EUR 5.6 million, improving from a loss of EUR -4.4 million in H1 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Note 2: Segment Reporting (I23-I24)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Management attributes the positive financial shift primarily to a stronger performance in the energy segment, a substantial turnaround in supporting businesses where operations moved from a 4.4 million euro loss to a 5.6 million euro profit following the closure of unprofitable units and the integration of new agricultural activities, and the recent completion of the Halinga biomethane plant."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "In Q2 2026, Tallink Grupp carried 1,454,725 passengers (-2.2% YoY), 68,986 cargo units (+2.9%), and 199,025 passenger vehicles (-6.5%). The segment reported a net loss of EUR 2.5 million (unchanged YoY), impacted by higher fuel costs (up EUR 8.4 million vs Q2 2025), full EU ETS emissions surrender (100% of CO2 equivalent vs 70% in 2025), and the 36-month charter of the Superfast IX vessel from May 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Maritime transport business segment (I7)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K4",
+        "information": "Elenger Grupp's Q2 2026 gas and electricity sales volumes decreased by 34% to 3.3 TWh (from 4.9 TWh in Q2 2025), primarily due to reduced wholesale sales. The segment held a 29% market share in the Finnish-Baltic gas market. During Q2, Elenger continued developing battery energy storage systems, with a 4.5 MW facility in Liepāja, Latvia entering commercial operation at the start of Q3 2026. Polish subsidiaries secured a EUR 60 million loan agreement to expand the Polish gas business.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Energy business segment (I7-I8)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue decreases were largely concentrated in the energy division, where gas and electricity sales volumes fell 34% due to reduced wholesale activity, although market pricing stabilized after spring peaks driven by regional geopolitical conflicts."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "INF Infra continued construction of Rail Baltica's mainline on the Kangru-Saku section (contract value EUR 67.2 million, scheduled to continue until March 2028). Construction of the Depo DIY store adjacent to the Tallink Tennis Centre progressed, with completion planned for autumn 2026. Renovation of 166 rooms at Tallink Express Hotel was completed in May 2026 following closure for renovations since November 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Events in Q2 2026: Real Estate Development and Construction Projects (I8)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Strategic developments during the period include the successful continuation of a major construction contract for the Rail Baltica mainline, progressive work on several real estate and logistics projects, and the acquisition of additional Tallink Grupp shares to raise ownership to 68.76%."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Cash and cash equivalents increased to EUR 253.2 million as at 30 June 2026 (from EUR 146.4 million at 31 December 2025). Operating cash flow for H1 2026 was EUR 99.5 million, reflecting cash flow management and the maintenance of a liquidity buffer to finance new investments.",
+        "importance": "MEDIUM",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Consolidated Cash Flow Statement (I19)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Cash balances expanded to 253 million euros, reflecting effective liquidity management and maintained investment capacity amid volatile macroeconomic and geopolitical conditions that continue to influence energy commodity markets and operational expenditures."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Total loan and lease liabilities stood at EUR 1,083.1 million as at 30 June 2026, with net debt at EUR 829.9 million (down from EUR 851.6 million at 31 December 2025). The net debt/EBITDA ratio improved to 3.3x (from 3.7x at the end of 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Key Figures for Q2 2026 (I12), Note 7: Financial Liabilities (I33)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Financial resilience was reinforced by a strengthened balance sheet, with total equity growing to 1.201 billion euros and net debt decreasing to 830 million euros."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K3"
+    ],
+    "completeness_justification": "K1, K2, K4, K5, K6, and K7 are all adequately represented in the candidate summary with core material meaning covered. K3 is missing entirely—no mention of Q2 2026 passenger/cargo statistics, net loss, or specific cost drivers for the maritime segment. The overall coverage is strong but the absence of one HIGH-priority criterion prevents a 'Yes' rating, resulting in a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. It presents a consistent narrative: revenue is flat overall but down in specific segments (energy), while profitability metrics (EBITDA, operating profit) show significant improvement. The summary explains this apparent contradiction through specific operational improvements (supporting businesses turnaround, new biomethane plant) and strategic actions. All statements logically support each other without contradictions. The organization flows logically from overall performance to segment details to strategic actions and balance sheet strength. There is no unnecessary repetition, and all relationships between statements are clear and logically connected."
+  },
+  "usage": {
+    "input_tokens_total": 52851,
+    "output_tokens_total_including_reasoning": 5308,
+    "total_tokens": 58159,
+    "latency_seconds_total": 31.31
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 51018,
+    "output_tokens_total_including_reasoning": 61396,
+    "total_tokens": 112414,
+    "latency_seconds_total": 203.19
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_6.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_6_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_6.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_6.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_6_chain_of_event_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_6_chain_of_event_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_6_chain_of_event_qwen36.json"
+    }
+  }
+}

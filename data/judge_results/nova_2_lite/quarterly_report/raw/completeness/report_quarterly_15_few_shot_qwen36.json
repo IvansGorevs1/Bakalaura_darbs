@@ -1,0 +1,129 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:40:44.452460",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_15_few_shot_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "af45d3b378f673af",
+    "sentence_map_hash": "81c5b08bd0975107",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "a4793d435397641f",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_15.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "Nordecon AS reported a decline in financial performance for the twelve months of 2025, with revenue decreasing by 7% to €208.3 million compared to €223.9 million in the prior year.",
+    "S2": "This contraction was driven primarily by a 10% drop in the Buildings segment, which accounted for 81% of total revenue, partially offset by a 10% growth in the Infrastructure segment.",
+    "S3": "The overall gross margin narrowed to 6.5% from 7.5% in 2024, reflecting pressure on profitability despite stable operational costs in certain areas.",
+    "S4": "Operating profit fell to €5.7 million from €8.1 million, resulting in an operating margin of 2.7%, down from 3.6%.",
+    "S5": "EBITDA also declined to €8.3 million, with an EBITDA margin of 4.0%.",
+    "S6": "Net profit for the period was €2.5 million, significantly lower than the €5.2 million reported in 2024.",
+    "S7": "This reduction was heavily impacted by foreign exchange losses of €750,000 arising from the weakening of the Ukrainian hryvnia against the euro, which affected the translation of loans provided to Ukrainian subsidiaries.",
+    "S8": "Administrative expenses decreased by approximately 14% to €6.8 million, primarily due to lower staff costs linked to reduced performance-based pay liabilities.",
+    "S9": "However, credit losses increased sharply to €354,000 from €20,000 in the previous year.",
+    "S10": "Despite the revenue decline, the company’s order book grew substantially by 30% to €273.1 million at the end of the period, up from €209.5 million in 2024.",
+    "S11": "This expansion was driven by a nearly threefold increase in the Infrastructure segment’s order book, fueled by major contracts including Rail Baltica and national road construction projects.",
+    "S12": "Approximately 69% of the current order book is scheduled for completion in 2026, providing visibility for future revenue growth.",
+    "S13": "The strategic shift toward infrastructure is evident in the order book composition, where Infrastructure now represents 42% compared to 18% at the end of 2024.",
+    "S14": "Liquidity remained tight, with the current ratio standing at 0.93.",
+    "S15": "Cash and cash equivalents decreased to €5.3 million from €8.2 million, largely due to cash placed in long-term deposits to secure guarantee limits and increased lease payments.",
+    "S16": "No dividends were paid in 2025, whereas €1.3 million was distributed in 2024.",
+    "S17": "The construction market in Estonia stabilized with modest economic growth of 1%, although rising material prices contributed to a 1.5% increase in the construction price index.",
+    "S18": "Management anticipates improved business volumes in 2026, supported by the strengthened order book and optimistic economic forecasts, while maintaining a focus on cost control and risk management in a competitive environment."
+  },
+  "usage": {
+    "input_tokens": 1829,
+    "output_tokens_including_reasoning": 355,
+    "total_tokens": 2184
+  },
+  "latency_seconds": 2.75,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S3\", \"S4\", \"S6\", \"S7\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S10\", \"S11\", \"S12\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\", \"S15\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S8\"]\n    }\n  ],\n  \"score\": 3,\n  \"label\": \"Generally yes\",\n  \"missing_or_partial_key_information\": [\"K4\"],\n  \"justification\": \"K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING because the candidate does not include any information about cash flows from operating, investing, or financing activities, or the net cash outflow for the year. The overall score is 3 (Generally yes) because most material information is represented, but the omission of the complete cash flow statement (K4) is a notable gap, especially as it is classified as MEDIUM importance.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3",
+          "S4",
+          "S6",
+          "S7"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11",
+          "S12"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ]
+      }
+    ],
+    "score": 3,
+    "label": "Generally yes",
+    "missing_or_partial_key_information": [
+      "K4"
+    ],
+    "justification": "K1, K2, K3, K5, and K6 are all PRESENT with supporting sentences identified. K4 is MISSING because the candidate does not include any information about cash flows from operating, investing, or financing activities, or the net cash outflow for the year. The overall score is 3 (Generally yes) because most material information is represented, but the omission of the complete cash flow statement (K4) is a notable gap, especially as it is classified as MEDIUM importance."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

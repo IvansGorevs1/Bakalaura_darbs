@@ -1,0 +1,156 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T20:24:45.767369",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_14_chain_of_event_qwen36.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "c2ea46341bb2e6ab",
+    "sentence_map_hash": "828046974dc800be",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "7951e205fbec217a",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_14.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Merko Ehitus reported a significant decline in profitability for the first half of 2026, with net profit attributable to shareholders dropping to EUR 12.8 million, a substantial decrease from EUR 21.7 million in the same period of 2025.",
+    "S2": "The pre-tax profit margin contracted to 7.2 percent from 14.0 percent in the prior year.",
+    "S3": "This deterioration in financial performance was driven by a 10.7 percent reduction in total revenue, which fell to EUR 149.9 million from EUR 167.9 million.",
+    "S4": "The revenue decline was primarily attributable to the real estate development segment, where revenue plummeted by 33.9 percent to EUR 31.6 million due to a sharp drop in apartment sales volume to 120 units compared to 222 units in the previous year.",
+    "S5": "Consequently, the operating profit for this segment fell by 40.8 percent to EUR 7.0 million.",
+    "S6": "In contrast, the construction services segment showed resilience, with revenue remaining relatively stable at EUR 118.3 million, although operating profit margin compressed to 2.6 percent from 7.3 percent due to the expiration of high-margin contracts and a return to typical competitive margins.",
+    "S7": "Despite the lower current period profitability, the company’s future outlook appears robust, evidenced by a secured order book that reached an all-time high of EUR 835.7 million as of June 30, 2026.",
+    "S8": "This represents an 88 percent increase from EUR 443.8 million at the end of June 2025.",
+    "S9": "The growth in the order book was fueled by new contracts worth EUR 486.4 million signed in the first half of the year, a significant rise from EUR 223.1 million in the prior period.",
+    "S10": "Major drivers included public sector projects, such as Rail Baltica infrastructure and defense-related facilities, which accounted for a growing share of the order book.",
+    "S11": "The management noted that while the construction sector remains heavily dependent on public funding due to cautious private sector investment, the volume of orders provides a strong foundation for future revenue generation.",
+    "S12": "The company’s financial position remained solid, with equity increasing to EUR 251.1 million and cash and cash equivalents rising to EUR 39.6 million.",
+    "S13": "However, net debt increased to EUR 29.6 million from a net cash position in the previous year, reflecting increased borrowing to support development activities.",
+    "S14": "Operating cash flow was negative at EUR 31.6 million, largely due to increases in inventories related to the construction of new apartments and changes in receivables.",
+    "S15": "The group maintained a moderate debt ratio of 15.8 percent.",
+    "S16": "In response to the financial results, the company paid dividends of EUR 22.1 million, equivalent to EUR 1.25 per share, representing a 55 percent payout ratio of the 2025 net profit.",
+    "S17": "The management highlighted that rising input prices, driven by geopolitical tensions and energy costs, continue to pressure margins, although the strong order book suggests continued activity levels in the coming quarters."
+  },
+  "usage": {
+    "input_tokens": 2072,
+    "output_tokens_including_reasoning": 510,
+    "total_tokens": 2582
+  },
+  "latency_seconds": 2.89,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S3\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S7\", \"S8\"]\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\", \"S5\", \"S6\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"PARTIALLY_PRESENT\",\n      \"candidate_sentence_ids\": [\"S9\", \"S10\"]\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S4\"]\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S17\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S1\", \"S2\"]\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S12\"]\n    },\n    {\n      \"id\": \"K9\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S16\"]\n    },\n    {\n      \"id\": \"K10\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 4,\n  \"label\": \"Yes\",\n  \"missing_or_partial_key_information\": [\"K4\", \"K10\"],\n  \"justification\": \"K1, K2, K3, K5, K6, K7, K8, and K9 are all PRESENT with clear coverage in the candidate summary. K4 is PARTIALLY_PRESENT because while new contracts and public sector projects are mentioned, specific project names and amounts (Rūdninkai defence force campus, Krulli quarter infrastructure and buildings in Tallinn) are not explicitly stated. K10 is MISSING as there is no mention of the Lahekalda VII development project commencement after 30 June 2026. The overall coverage is strong with only one partially covered and one missing item, resulting in a 'Yes' score.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7",
+          "S8"
+        ]
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ]
+      },
+      {
+        "id": "K5",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ]
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "id": "K8",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ]
+      },
+      {
+        "id": "K9",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ]
+      },
+      {
+        "id": "K10",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 4,
+    "label": "Yes",
+    "missing_or_partial_key_information": [
+      "K4",
+      "K10"
+    ],
+    "justification": "K1, K2, K3, K5, K6, K7, K8, and K9 are all PRESENT with clear coverage in the candidate summary. K4 is PARTIALLY_PRESENT because while new contracts and public sector projects are mentioned, specific project names and amounts (Rūdninkai defence force campus, Krulli quarter infrastructure and buildings in Tallinn) are not explicitly stated. K10 is MISSING as there is no mention of the Lahekalda VII development project commencement after 30 June 2026. The overall coverage is strong with only one partially covered and one missing item, resulting in a 'Yes' score."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

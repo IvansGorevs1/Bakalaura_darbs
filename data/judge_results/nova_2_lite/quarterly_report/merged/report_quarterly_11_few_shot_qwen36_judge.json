@@ -1,0 +1,865 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\quarterly_report\\report_quarterly_11_few_shot_qwen36.txt",
+    "report": "report_quarterly_11.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Kvika banki hf. reported a decline in profitability for the second quarter of 2026, with pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million.",
+    "S2": "This reduction was primarily driven by a significant drop in net fee and commission income, which fell by 26.8% to ISK 1,416 million due to subdued capital market activity and lower transaction volumes.",
+    "S3": "Additionally, the effective income tax rate increased to 34.8% from 24.4% in the previous year, largely reflecting higher special taxes on financial activities.",
+    "S4": "Despite these headwinds, net interest income remained resilient, increasing by 1.7% to ISK 3,013 million, supported by strong loan book growth and a solid funding base.",
+    "S5": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million, although this figure included a one-off restructuring charge of ISK 112 million related to efficiency measures.",
+    "S6": "The bank’s balance sheet expanded significantly, with total assets rising by 9.5% to ISK 375.7 billion compared to year-end 2025.",
+    "S7": "Loans to customers grew by 7.6% to ISK 223.3 billion, driven by broad-based growth in domestic corporate banking and vehicle lending.",
+    "S8": "The loan-to-value profile remained strong, with 65.0% of the portfolio below a 70% loan-to-value ratio.",
+    "S9": "Credit quality remained stable, with impairment levels holding steady at 1.2% of the gross loan book.",
+    "S10": "On the liability side, deposits surged by 16.5% to ISK 201.2 billion, surpassing the ISK 200 billion milestone for the first time and reinforcing the bank’s primary funding source.",
+    "S11": "Market funding also increased, with debt issuance reaching ISK 86.1 billion following recent senior unsecured and Additional Tier 1 bond issuances.",
+    "S12": "Strategic initiatives undertaken during the quarter were designed to dampen near-term earnings in favor of long-term value creation.",
+    "S13": "These included a large dividend payment, which lowered interest income but is expected to increase return on tangible equity by reducing equity tied up.",
+    "S14": "The issuance of senior preferred and AT1 bonds temporarily compressed the net interest margin to 4.0% but is anticipated to widen margins in the future as higher-cost legacy debt is refinanced.",
+    "S15": "Furthermore, the bank is proceeding with the sale of its payment intermediary, Straumur greiðlun hf., expected to close before year-end, which will simplify the business structure.",
+    "S16": "Looking ahead, Kvika expects continued loan book growth and improved net interest margins as funding costs decrease.",
+    "S17": "The efficiency measures announced in June are projected to yield annualized cost savings of ISK 300–400 million.",
+    "S18": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%.",
+    "S19": "Leadership changes are also underway, with CEO Ármann Þorvaldsson announcing his intention to step down by the end of 2026, while the board recruits his successor.",
+    "S20": "Overall, the period was characterized by a strategic shift toward a leaner, more focused business model with improved long-term profitability prospects despite short-term earnings pressure."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_11.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_11.json",
+    "key_information_hash": "8a5023d112718fa1",
+    "key_information_units_total": 7
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 20,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 20
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 15,
+      "incorrect": 0,
+      "total": 15
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 7
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Kvika banki hf. reported a decline in profitability for the second quarter of 2026, with pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Pre-tax profit ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m. from previous year, or 23.7%",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Kvika banki hf. reported a decline in profitability for the second quarter of 2026, with pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "This reduction was primarily driven by a significant drop in net fee and commission income, which fell by 26.8% to ISK 1,416 million due to subdued capital market activity and lower transaction volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net fee and commission income ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%. Activity in capital markets remained subdued during the quarter, with lower transaction volumes and softer client activity weighing on fee generation across all business lines",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This reduction was primarily driven by a significant drop in net fee and commission income, which fell by 26.8% to ISK 1,416 million due to subdued capital market activity and lower transaction volumes."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Additionally, the effective income tax rate increased to 34.8% from 24.4% in the previous year, largely reflecting higher special taxes on financial activities.",
+        "label": "SUPPORTED",
+        "source_evidence": "The effective income tax rate increased to 34.8% in Q2 2026 from 24.4% in Q2 2025, mainly reflecting higher special tax on financial activities related to the closure of funding derivatives",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Additionally, the effective income tax rate increased to 34.8% from 24.4% in the previous year, largely reflecting higher special taxes on financial activities."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Despite these headwinds, net interest income remained resilient, increasing by 1.7% to ISK 3,013 million, supported by strong loan book growth and a solid funding base.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net interest income ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%. Net interest income increased by 1.7% from Q2 2025 to Q2 2026, as higher interest income from customer lending more than offset the impact of a smaller liquidity portfolio and higher funding costs",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite these headwinds, net interest income remained resilient, increasing by 1.7% to ISK 3,013 million, supported by strong loan book growth and a solid funding base."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million, although this figure included a one-off restructuring charge of ISK 112 million related to efficiency measures.",
+        "label": "SUPPORTED",
+        "source_evidence": "Administrative expenses ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1%. Administrative expenses amounted to ISK 2,947 m. in Q2 2026, decreasing by 1.1% YoY despite a one-off restructuring charge of ISK 112 m. recognised in June",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million, although this figure included a one-off restructuring charge of ISK 112 million related to efficiency measures."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The bank’s balance sheet expanded significantly, with total assets rising by 9.5% to ISK 375.7 billion compared to year-end 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Total assets amounted to ISK 375.7 bn. at the end of Q2 2026, increasing by 9.5% from year-end 2025",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The bank’s balance sheet expanded significantly, with total assets rising by 9.5% to ISK 375.7 billion compared to year-end 2025."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Loans to customers grew by 7.6% to ISK 223.3 billion, driven by broad-based growth in domestic corporate banking and vehicle lending.",
+        "label": "SUPPORTED",
+        "source_evidence": "Loans to customers amounted to ISK 223.3 bn. at the end of Q2 2026, increasing by ISK 15.8 bn., or 7.6%, from year-end 2025. Growth was broad-based across all lending categories, led by domestic corporate banking and vehicle and equipment lending",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Loans to customers grew by 7.6% to ISK 223.3 billion, driven by broad-based growth in domestic corporate banking and vehicle lending."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The loan-to-value profile remained strong, with 65.0% of the portfolio below a 70% loan-to-value ratio.",
+        "label": "SUPPORTED",
+        "source_evidence": "The LTV profile remains strong, with 65.0% of the portfolio below 70% LTV, supporting a resilient risk profile and strong collateral coverage",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The loan-to-value profile remained strong, with 65.0% of the portfolio below a 70% loan-to-value ratio."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Credit quality remained stable, with impairment levels holding steady at 1.2% of the gross loan book.",
+        "label": "SUPPORTED",
+        "source_evidence": "Overall impairment levels remain low and stable at 1.2% of the gross loan book",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Credit quality remained stable, with impairment levels holding steady at 1.2% of the gross loan book."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "On the liability side, deposits surged by 16.5% to ISK 201.2 billion, surpassing the ISK 200 billion milestone for the first time and reinforcing the bank’s primary funding source.",
+        "label": "SUPPORTED",
+        "source_evidence": "Deposits amounted to ISK 201.2 bn. at the end of Q2 2026, increasing by 16.5% from year-end 2025",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "On the liability side, deposits surged by 16.5% to ISK 201.2 billion, surpassing the ISK 200 billion milestone for the first time and reinforcing the bank’s primary funding source."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Market funding also increased, with debt issuance reaching ISK 86.1 billion following recent senior unsecured and Additional Tier 1 bond issuances.",
+        "label": "SUPPORTED",
+        "source_evidence": "Debt issuance increased to ISK 86.1 bn. following senior unsecured and AT1 issuances completed during H1 2026",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Market funding also increased, with debt issuance reaching ISK 86.1 billion following recent senior unsecured and Additional Tier 1 bond issuances."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Strategic initiatives undertaken during the quarter were designed to dampen near-term earnings in favor of long-term value creation.",
+        "label": "SUPPORTED",
+        "source_evidence": "Various measures taken in the quarter dampen reported earnings but materially improve returns going forward",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Strategic initiatives undertaken during the quarter were designed to dampen near-term earnings in favor of long-term value creation."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "These included a large dividend payment, which lowered interest income but is expected to increase return on tangible equity by reducing equity tied up.",
+        "label": "SUPPORTED",
+        "source_evidence": "Large dividend: Lowers interest income | Reduces equity tied up and increases ROTE",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "These included a large dividend payment, which lowered interest income but is expected to increase return on tangible equity by reducing equity tied up."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The issuance of senior preferred and AT1 bonds temporarily compressed the net interest margin to 4.0% but is anticipated to widen margins in the future as higher-cost legacy debt is refinanced.",
+        "label": "SUPPORTED",
+        "source_evidence": "Net interest margin was 4.0% in the quarter... The decline was primarily driven by... the impact of the ISK 10.2 bn. dividend payment in June and recent senior preferred and AT1 bond issuances... The ongoing optimisation of the funding structure... is expected to support both net interest income and net interest margin going forward",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The issuance of senior preferred and AT1 bonds temporarily compressed the net interest margin to 4.0% but is anticipated to widen margins in the future as higher-cost legacy debt is refinanced."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Furthermore, the bank is proceeding with the sale of its payment intermediary, Straumur greiðlun hf., expected to close before year-end, which will simplify the business structure.",
+        "label": "SUPPORTED",
+        "source_evidence": "Divestment of Straumur expected to close before end of year",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Furthermore, the bank is proceeding with the sale of its payment intermediary, Straumur greiðlun hf., expected to close before year-end, which will simplify the business structure."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Looking ahead, Kvika expects continued loan book growth and improved net interest margins as funding costs decrease.",
+        "label": "SUPPORTED",
+        "source_evidence": "The ongoing optimisation of the funding structure... is expected to support both net interest income and net interest margin going forward",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Looking ahead, Kvika expects continued loan book growth and improved net interest margins as funding costs decrease."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The efficiency measures announced in June are projected to yield annualized cost savings of ISK 300–400 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Efficiency measures: ISK 112 m. expensed | Lowers the annual cost base by ISK 300-400 m.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The efficiency measures announced in June are projected to yield annualized cost savings of ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%.",
+        "label": "SUPPORTED",
+        "source_evidence": "CAR of 23.0% at 30 June 2026... The liquidity coverage ratio (LCR) remains strong at 276%, well above the 100% regulatory requirement",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Leadership changes are also underway, with CEO Ármann Þorvaldsson announcing his intention to step down by the end of 2026, while the board recruits his successor.",
+        "label": "SUPPORTED",
+        "source_evidence": "CEO Ármann Þorvaldsson to step down by year-end 2026. Ármann has requested to step down from his position after nearly ten years with the Group. He will continue to serve as CEO while the Board recruits his successor",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Leadership changes are also underway, with CEO Ármann Þorvaldsson announcing his intention to step down by the end of 2026, while the board recruits his successor."
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Overall, the period was characterized by a strategic shift toward a leaner, more focused business model with improved long-term profitability prospects despite short-term earnings pressure.",
+        "label": "SUPPORTED",
+        "source_evidence": "Near-Term Earnings Impact, Long-Term Value Creation... Various measures taken in the quarter dampen reported earnings but materially improve returns going forward... Progressing Strategic Initiatives to Drive Shareholder Value",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Overall, the period was characterized by a strategic shift toward a leaner, more focused business model with improved long-term profitability prospects despite short-term earnings pressure."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million",
+        "candidate_value": "1,545 million ISK (23.7% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m., or 23.7%",
+        "source_evidence": "Profit before tax ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m. from previous year, or 23.7%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Kvika banki hf. reported a decline in profitability for the second quarter of 2026, with pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "net fee and commission income fell by 26.8% to ISK 1,416 million",
+        "candidate_value": "1,416 million ISK (26.8% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%",
+        "source_evidence": "Net fee and commission income ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "This reduction was primarily driven by a significant drop in net fee and commission income, which fell by 26.8% to ISK 1,416 million due to subdued capital market activity and lower transaction volumes."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "net interest income remained resilient, increasing by 1.7% to ISK 3,013 million",
+        "candidate_value": "3,013 million ISK (1.7% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%",
+        "source_evidence": "Net interest income ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite these headwinds, net interest income remained resilient, increasing by 1.7% to ISK 3,013 million, supported by strong loan book growth and a solid funding base."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million",
+        "candidate_value": "2,947 million ISK (1.1% decrease)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1%",
+        "source_evidence": "Administrative expenses ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million, although this figure included a one-off restructuring charge of ISK 112 million related to efficiency measures."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "total assets rising by 9.5% to ISK 375.7 billion",
+        "candidate_value": "375.7 billion ISK (9.5% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Total assets amounted to ISK 375.7 bn. at the end of Q2 2026, increasing by 9.5% from year-end 2025",
+        "source_evidence": "Total assets amounted to ISK 375.7 bn. at the end of Q2 2026, increasing by 9.5% from year-end 2025",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The bank’s balance sheet expanded significantly, with total assets rising by 9.5% to ISK 375.7 billion compared to year-end 2025."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Loans to customers grew by 7.6% to ISK 223.3 billion",
+        "candidate_value": "223.3 billion ISK (7.6% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Loans to customers amounted to ISK 223.3 bn. at the end of Q2 2026, increasing by ISK 15.8 bn., or 7.6%, from year-end 2025",
+        "source_evidence": "Loans to customers amounted to ISK 223.3 bn. at the end of Q2 2026, increasing by ISK 15.8 bn., or 7.6%, from year-end 2025",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Loans to customers grew by 7.6% to ISK 223.3 billion, driven by broad-based growth in domestic corporate banking and vehicle lending."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "65.0% of the portfolio below a 70% loan-to-value ratio",
+        "candidate_value": "65.0% below 70% LTV",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "65.0% of the portfolio below 70% LTV",
+        "source_evidence": "The LTV profile remains strong, with 65.0% of the portfolio below 70% LTV, supporting a resilient risk profile and strong collateral coverage",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The loan-to-value profile remained strong, with 65.0% of the portfolio below a 70% loan-to-value ratio."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "impairment levels holding steady at 1.2% of the gross loan book",
+        "candidate_value": "1.2% of gross loan book",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Overall impairment levels remain low and stable at 1.2% of the gross loan book",
+        "source_evidence": "Overall impairment levels remain low and stable at 1.2% of the gross loan book",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Credit quality remained stable, with impairment levels holding steady at 1.2% of the gross loan book."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "deposits surged by 16.5% to ISK 201.2 billion",
+        "candidate_value": "201.2 billion ISK (16.5% increase)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Deposits amounted to ISK 201.2 bn. at the end of Q2 2026, increasing by 16.5% from year-end 2025",
+        "source_evidence": "Deposits amounted to ISK 201.2 bn. at the end of Q2 2026, increasing by 16.5% from year-end 2025",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "On the liability side, deposits surged by 16.5% to ISK 201.2 billion, surpassing the ISK 200 billion milestone for the first time and reinforcing the bank’s primary funding source."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "debt issuance reaching ISK 86.1 billion",
+        "candidate_value": "86.1 billion ISK",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Debt issuance increased to ISK 86.1 bn.",
+        "source_evidence": "Debt issuance increased to ISK 86.1 bn. following senior unsecured and AT1 issuances completed during H1 2026",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Market funding also increased, with debt issuance reaching ISK 86.1 billion following recent senior unsecured and Additional Tier 1 bond issuances."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "large dividend payment... expected to increase return on tangible equity by reducing equity tied up",
+        "candidate_value": "Large dividend payment referenced",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Large dividend: Lowers interest income | Reduces equity tied up and increases ROTE",
+        "source_evidence": "Large dividend | Lowers interest income | Reduces equity tied up and increases ROTE",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "These included a large dividend payment, which lowered interest income but is expected to increase return on tangible equity by reducing equity tied up."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "net interest margin to 4.0%",
+        "candidate_value": "4.0%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Net interest margin was 4.0% in the quarter",
+        "source_evidence": "Net interest margin was 4.0% in the quarter, compared with 4.5% in Q1 2026",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The issuance of senior preferred and AT1 bonds temporarily compressed the net interest margin to 4.0% but is anticipated to widen margins in the future as higher-cost legacy debt is refinanced."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "efficiency measures... annualized cost savings of ISK 300–400 million",
+        "candidate_value": "ISK 300-400 million annualized savings",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Efficiency measures: ISK 112 m. expensed | Lowers the annual cost base by ISK 300-400 m.",
+        "source_evidence": "Efficiency measures | ISK 112 m. expensed | Lowers the annual cost base by ISK 300-400 m.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The efficiency measures announced in June are projected to yield annualized cost savings of ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Capital Adequacy Ratio of 23.0% and... liquidity coverage ratio of 276%",
+        "candidate_value": "CAR 23.0%, LCR 276%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "CAR of 23.0%... liquidity coverage ratio (LCR) remains strong at 276%",
+        "source_evidence": "CAR of 23.0% at 30 June 2026... The liquidity coverage ratio (LCR) remains strong at 276%, well above the 100% regulatory requirement",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%."
+          }
+        ]
+      },
+      {
+        "claim": "Effective income tax rate increased to 34.8% from 24.4% in the previous year",
+        "candidate_value": "34.8% from 24.4%",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "34.8% in Q2 2026 from 24.4% in Q2 2025",
+        "source_evidence": "The effective income tax rate increased to 34.8% in Q2 2026 from 24.4% in Q2 2025, mainly reflecting higher special tax on financial activities related to the closure of funding derivatives",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "id": "N15",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Additionally, the effective income tax rate increased to 34.8% from 24.4% in the previous year, largely reflecting higher special taxes on financial activities."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Profit before tax decreased to ISK 1,545 million in Q2 2026 from ISK 2,025 million in Q2 2025, a decline of ISK 480 million or 23.7%, primarily due to a 26.8% drop in net fee income to ISK 1,416 million and a ISK 112 million one-off cost from efficiency measures announced in June; these measures are expected to lower the annual cost base by ISK 300-400 million, partially offset by resilient net interest income growth of 1.7%.",
+        "importance": "HIGH",
+        "source_evidence": "Profit before tax ISK 1,545 m. compared to ISK 2,025 m. in Q2 2025 Decreasing by ISK 480 m. from previous year, or 23.7%. Net interest income ISK 3,013 m. compared to ISK 2,962 m. in Q2 2025 Increasing by ISK 51 m. from previous year or 1.7%. Net fee and commission income ISK 1,416 m. compared to ISK 1,935 m. in Q2 2025 Decreasing by ISK 519 m. from previous year or 26.8%. Administrative expenses ISK 2,947 m. compared to ISK 2,981 m. in Q2 2025 Decreasing by ISK 34 m. from previous year or 1.1% despite ISK 112 m. one-off restructuring charge. Efficiency measures... ISK 112 m. expensed... lowers the annual cost base by ISK 300-400 m.",
+        "origin_draft_ids": [
+          "D1",
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S5",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Kvika banki hf. reported a decline in profitability for the second quarter of 2026, with pre-tax profit decreasing by 23.7% year-over-year to ISK 1,545 million."
+          },
+          {
+            "id": "S2",
+            "text": "This reduction was primarily driven by a significant drop in net fee and commission income, which fell by 26.8% to ISK 1,416 million due to subdued capital market activity and lower transaction volumes."
+          },
+          {
+            "id": "S5",
+            "text": "Administrative expenses decreased slightly by 1.1% to ISK 2,947 million, although this figure included a one-off restructuring charge of ISK 112 million related to efficiency measures."
+          },
+          {
+            "id": "S17",
+            "text": "The efficiency measures announced in June are projected to yield annualized cost savings of ISK 300–400 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Deposits surpassed ISK 200 billion for the first time, reaching ISK 201.2 billion at quarter-end, up 16.5% from year-end 2025, driven by retail deposits and public entities, while loans to customers grew to ISK 223.3 billion, up 7.6% from year-end 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Deposits amounted to ISK 201.2 bn. at the end of Q2 2026, increasing by 16.5% from year-end 2025. Loans to customers amounted to ISK 223.3 bn. at the end of Q2 2026, increasing by ISK 15.8 bn., or 7.6%, from year-end 2025.",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S7",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Loans to customers grew by 7.6% to ISK 223.3 billion, driven by broad-based growth in domestic corporate banking and vehicle lending."
+          },
+          {
+            "id": "S10",
+            "text": "On the liability side, deposits surged by 16.5% to ISK 201.2 billion, surpassing the ISK 200 billion milestone for the first time and reinforcing the bank’s primary funding source."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Capital adequacy ratio (CAR) stood at 23.0% at 30 June 2026, down from 26.8% at year-end 2025 primarily due to the ISK 10.2 billion special dividend payment in June, while maintaining a strong management buffer above regulatory requirements.",
+        "importance": "HIGH",
+        "source_evidence": "CAR of 23.0% at 30 June 2026, decreasing as special dividend was distributed in June. The bank continues to target a management buffer of 2% to 4% over current and anticipated CAR requirements.",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Liquidity position remains strong with LCR at 276% (well above 100% requirement) and NSFR at 137%, supported by high-quality liquid assets of ISK 76.4 billion (81% Level 1 assets).",
+        "importance": "HIGH",
+        "source_evidence": "The liquidity coverage ratio (LCR) remains strong at 276%, well above the 100% regulatory requirement. NSFR stood at 137%. High-quality liquid assets (HQLA) amounted to ISK 76.4 bn., of which 81% were classified as Level 1 assets.",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The bank maintains a strong capital position with a Capital Adequacy Ratio of 23.0% and a robust liquidity coverage ratio of 276%."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "CEO Ármann Þorvaldsson requested to step down by year-end 2026, and the divestment of Straumur greiðslumiðlun hf. is ongoing.",
+        "importance": "HIGH",
+        "source_evidence": "CEO Ármann Þorvaldsson to step down by year-end 2026. Sale of Straumur greiðslumiðlun hf. in progress.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Furthermore, the bank is proceeding with the sale of its payment intermediary, Straumur greiðlun hf., expected to close before year-end, which will simplify the business structure."
+          },
+          {
+            "id": "S19",
+            "text": "Leadership changes are also underway, with CEO Ármann Þorvaldsson announcing his intention to step down by the end of 2026, while the board recruits his successor."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Segment performance highlights strong loan growth in Commercial Banking (+ISK 6 bn QoQ) and Investment Banking (+nearly 4% QoQ), while UK operations show record loan book levels and advancing asset sales.",
+        "importance": "MEDIUM",
+        "source_evidence": "Commercial Banking: deposits increasing by ISK 12 bn. during Q2 (+8% QoQ), loans increasing in total by ISK 6 bn. during the quarter (+3%). Investment Banking: loan book grew by nearly 4% quarter-on-quarter. UK: loan book reaching an all-time high, Harpa completing additional PE deal, UK largest PE asset sale process expected to close before year-end.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Six-month 2026 results show pre-tax profit from continuing operations increased by 23.0% YoY to ISK 3,354 million, driven by 6.8% YoY growth in net interest income and disciplined cost management.",
+        "importance": "HIGH",
+        "source_evidence": "Pre-tax profit from continuing operations increasing by 23.0% YoY to ISK 3,354 million in 6M 2026. Net interest income increased by 6.8% YoY. Administrative expenses amounted to ISK 5,961 m., a 1.8% decrease YoY.",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K7"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, and K5 are all PRESENT with supporting sentences identified. K6 is MISSING as there is no mention of segment performance highlights for Commercial Banking, Investment Banking, or UK operations. K7 is MISSING as there is no mention of six-month 2026 results for pre-tax profit from continuing operations or the drivers of net interest income growth. The overall score is 3 (Generally yes) because most HIGH-importance criteria are covered, but two key criteria (K6 and K7) are missing, preventing a higher score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected and support the overall narrative of strategic restructuring and short-term earnings pressure for long-term gains. There are no self-contradictions, logical gaps, or organizational issues. The summary flows logically from profitability decline to specific drivers, balance sheet changes, strategic initiatives, and forward-looking statements. While there is a mention of a one-off charge in S5 and margin compression in S14, these are properly contextualized as temporary measures with expected future benefits. The summary maintains consistent terminology and clear cause-effect relationships throughout."
+  },
+  "usage": {
+    "input_tokens_total": 27320,
+    "output_tokens_total_including_reasoning": 6691,
+    "total_tokens": 34011,
+    "latency_seconds_total": 33.07
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 25927,
+    "output_tokens_total_including_reasoning": 73586,
+    "total_tokens": 99513,
+    "latency_seconds_total": 274.72
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_11.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_11_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_11.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_11.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_11_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_11_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_11_few_shot_qwen36.json"
+    }
+  }
+}

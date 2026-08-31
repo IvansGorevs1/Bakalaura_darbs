@@ -1,0 +1,737 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_8_few_shot_qwen36.txt",
+    "report": "report_annual_8.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "A/S SAF Tehnika reported a decline in consolidated net turnover for the fiscal year ending June 30, 2025, compared to the previous period.",
+    "S2": "The Group’s net turnover decreased by 4%, or 1.1 million EUR, to reach 25.99 million EUR.",
+    "S3": "The parent company’s net turnover saw a sharper decline of 6%, amounting to 21.92 million EUR.",
+    "S4": "This reduction in revenue was primarily driven by a significant 14% drop in the Americas region, where turnover fell by 2.3 million EUR to 14.17 million EUR.",
+    "S5": "The decrease in the Americas was attributed to client caution regarding investment decisions and tariff changes, as well as the deferral of large-volume project realizations to future periods.",
+    "S6": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR.",
+    "S7": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR.",
+    "S8": "Despite the top-line contraction, the Group’s gross profit improved significantly.",
+    "S9": "Consolidated gross profit rose to 9.50 million EUR from 7.53 million EUR in the prior year, reflecting better cost management and lower cost of sales.",
+    "S10": "However, the company reported a net loss of 643 thousand EUR for the period, a substantial improvement from the net loss of 2.37 million EUR recorded in the previous year.",
+    "S11": "The parent company also posted a reduced net loss of 552 thousand EUR, compared to 1.34 million EUR previously.",
+    "S12": "The narrowing of losses was supported by higher gross margins, although operating expenses, including sales, marketing, and administrative costs, remained elevated relative to the lower revenue base.",
+    "S13": "Financial liquidity strengthened considerably during the reporting period.",
+    "S14": "Cash and cash equivalents increased by 2.6 million EUR to 4.81 million EUR at the end of the fiscal year.",
+    "S15": "The parent company maintained a credit line facility with Luminor Bank AS totaling 4.95 million EUR, which remained entirely unused at the reporting date.",
+    "S16": "The Group’s current ratio stood at 2.05, indicating sufficient short-term liquidity to meet obligations.",
+    "S17": "Inventory levels decreased by 1.24 million EUR, partly due to the release of provisions for slow-moving stock accumulated during previous supply chain disruptions.",
+    "S18": "Management noted that while supply chain stability has improved, the company continues to hold strategic reserves to mitigate potential future risks.",
+    "S19": "Business developments included the establishment of a new branch in Canada to mitigate risks associated with cross-border trade uncertainties and tariffs.",
+    "S20": "The Group continued its focus on product innovation, particularly in the Internet of Things (IoT) segment with its Aranet brand, and received 570 thousand EUR in co-financing for research and development projects.",
+    "S21": "Geopolitical tensions and trade relations between the US and China did not have a material negative impact on sales volumes during the period.",
+    "S22": "Management views the current net loss as temporary and expressed a cautious but positive outlook for future periods, citing stabilization in market activity and ongoing product diversification efforts."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_8.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_8.json",
+    "key_information_hash": "bb6f9312caee2f06",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 0.916667,
+      "supported": 11,
+      "contradicted": 0,
+      "not_found": 1,
+      "total": 12
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 13,
+      "incorrect": 0,
+      "total": 13
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "A/S SAF Tehnika reported a decline in consolidated net turnover for the fiscal year ending June 30, 2025, compared to the previous period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Grupas neto apgrozījums 2024./2025. finanšu gadā bija 25.99 miljoni EUR, kas ir par 1.1 miljonu EUR jeb par 4% zemāks kā iepriekšējā 2023./2024.finanšu gadā.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "A/S SAF Tehnika reported a decline in consolidated net turnover for the fiscal year ending June 30, 2025, compared to the previous period."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "The decrease in the Americas was attributed to client caution regarding investment decisions and tariff changes, as well as the deferral of large-volume project realizations to future periods.",
+        "label": "SUPPORTED",
+        "source_evidence": "Apgrozījuma samazinājumu lielā mērā ietekmēja liela apjoma projektu realizācija nākamajos periodos. Jauno pasūtījumu apjomus īslaicīgi ietekmēja klientu piesardzība, kas bija saistīta ar investīciju lēmumu pārvērtēšanu un tarifu izmaiņu paziņojumiem.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "The decrease in the Americas was attributed to client caution regarding investment decisions and tariff changes, as well as the deferral of large-volume project realizations to future periods."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR.",
+        "label": "SUPPORTED",
+        "source_evidence": "Eiropas reģiona apgrozījums, ieskaitot Latviju, pieauga par 1,4 miljoniem EUR jeb 17%, sasniedzot 10,0 miljonus EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR.",
+        "label": "SUPPORTED",
+        "source_evidence": "Āzijas, Tuvo Austrumu un Āfrikas reģionu ieņēmumi samazinājās par 90 tūkstošiem EUR jeb 5%, veidojot 1,8 miljonus EUR.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Despite the top-line contraction, the Group’s gross profit improved significantly.",
+        "label": "SUPPORTED",
+        "source_evidence": "Bruto peļņa Grupas konsolidētajā peļņas vai zaudējumu un pārējo visaptverošo ienākumu pārskatā 2025. gadā bija 9 502 444 EUR, salīdzinot ar 7 532 656 EUR 2024. gadā.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Despite the top-line contraction, the Group’s gross profit improved significantly."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The narrowing of losses was supported by higher gross margins, although operating expenses, including sales, marketing, and administrative costs, remained elevated relative to the lower revenue base.",
+        "label": "NOT_FOUND",
+        "source_evidence": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The narrowing of losses was supported by higher gross margins, although operating expenses, including sales, marketing, and administrative costs, remained elevated relative to the lower revenue base."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Financial liquidity strengthened considerably during the reporting period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Grupas naudas līdzekļu atlikums uz gada beigām bija 4.81 miljons (Mātes sabiedrības - attiecīgi 2.84 miljoni) EUR, kas ir par 2.6 miljoniem EUR (Mātes sabiedrībai – 1.35 miljoniem EUR) vairāk kā iepriekšējā pārskata gada beigās.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Financial liquidity strengthened considerably during the reporting period."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Management noted that while supply chain stability has improved, the company continues to hold strategic reserves to mitigate potential future risks.",
+        "label": "SUPPORTED",
+        "source_evidence": "Lai gan tirgus situācija ar materiālu pieejamību un piegādes termiņiem ir stabilizējusies, Grupas krājumos joprojām saglabājas iepriekšējos gados palielinātā apjomā iepirktie materiāli.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Management noted that while supply chain stability has improved, the company continues to hold strategic reserves to mitigate potential future risks."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Business developments included the establishment of a new branch in Canada to mitigate risks associated with cross-border trade uncertainties and tariffs.",
+        "label": "SUPPORTED",
+        "source_evidence": "Lai mazinātu iespējamos ar piegādes ķēdēm un muitas izmaksām saistītos riskus, pārskata gadā tika dibināta Grupas filiāle Kanādā.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Business developments included the establishment of a new branch in Canada to mitigate risks associated with cross-border trade uncertainties and tariffs."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The Group continued its focus on product innovation, particularly in the Internet of Things (IoT) segment with its Aranet brand, and received 570 thousand EUR in co-financing for research and development projects.",
+        "label": "SUPPORTED",
+        "source_evidence": "Pārskata periodā Grupas produktu izstrādes projektiem tika saņemts līdzfinansējums no kompetences centra “LEO Pētījumu centrs” SIA 570 tūkstošu EUR apjomā.",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Group continued its focus on product innovation, particularly in the Internet of Things (IoT) segment with its Aranet brand, and received 570 thousand EUR in co-financing for research and development projects."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Geopolitical tensions and trade relations between the US and China did not have a material negative impact on sales volumes during the period.",
+        "label": "SUPPORTED",
+        "source_evidence": "Pasaules elektronikas pakalpojumu tirgu joprojām ietekmē ASV un Ķīnas tirdzniecības attiecību saspīlējums, taču šobrīd tas neizraisa būtisku negatīvu ietekmi uz Grupas pārdošanas apjomiem.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Geopolitical tensions and trade relations between the US and China did not have a material negative impact on sales volumes during the period."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "Management views the current net loss as temporary and expressed a cautious but positive outlook for future periods, citing stabilization in market activity and ongoing product diversification efforts.",
+        "label": "SUPPORTED",
+        "source_evidence": "Grupa pozitīvi raugās uz prognozi nākamajiem darībām periodiem, tomēr saglabā piesardzību... Grupa turpina aktīvi pētīt tirgu un identificēt problemātiskos jautājumus, lai piedāvātu nepieciešamās produktu modifikācijas un radītu prototipus nākamās paaudzes tehnoloģijām.",
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "Management views the current net loss as temporary and expressed a cautious but positive outlook for future periods, citing stabilization in market activity and ongoing product diversification efforts."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The Group’s net turnover decreased by 4%, or 1.1 million EUR, to reach 25.99 million EUR.",
+        "candidate_value": "25.99 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25.99 miljoni EUR",
+        "source_evidence": "Grupas neto apgrozījums 2024./2025. finanšu gadā bija 25.99 miljoni EUR, kas ir par 1.1 miljonu EUR jeb par 4% zemāks kā iepriekšējā 2023./2024.finanšu gadā.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The Group’s net turnover decreased by 4%, or 1.1 million EUR, to reach 25.99 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "The parent company’s net turnover saw a sharper decline of 6%, amounting to 21.92 million EUR.",
+        "candidate_value": "21.92 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "21.92 miljoni EUR",
+        "source_evidence": "Mātes sabiedrības neto apgrozījums 2024./2025. finanšu gadā bija 21.92 miljoni EUR, kas ir par 1.33 miljoniem EUR jeb par 6% zemāks nekā iepriekšējā 2023./2024. finanšu gadā.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "The parent company’s net turnover saw a sharper decline of 6%, amounting to 21.92 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "This reduction in revenue was primarily driven by a significant 14% drop in the Americas region, where turnover fell by 2.3 million EUR to 14.17 million EUR.",
+        "candidate_value": "14.17 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14.17 miljoni EUR",
+        "source_evidence": "Amerikas reģiona... apgrozījums 2024./2025. finanšu gadā bija 14.17 miljoni EUR... samazinājās par 2.3 miljoniem EUR jeb 14%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This reduction in revenue was primarily driven by a significant 14% drop in the Americas region, where turnover fell by 2.3 million EUR to 14.17 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR.",
+        "candidate_value": "10.0 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10,0 miljonus EUR",
+        "source_evidence": "Eiropas reģiona apgrozījums... pieauga par 1,4 miljoniem EUR jeb 17%, sasniedzot 10,0 miljonus EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR.",
+        "candidate_value": "1.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,8 miljonus EUR",
+        "source_evidence": "Āzijas, Tuvo Austrumu un Āfrikas reģionu ieņēmumi samazinājās par 90 tūkstošiem EUR jeb 5%, veidojot 1,8 miljonus EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Consolidated gross profit rose to 9.50 million EUR from 7.53 million EUR in the prior year...",
+        "candidate_value": "9.50 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "9 502 444 EUR",
+        "source_evidence": "Bruto peļņa Grupas konsolidētajā peļņas vai zaudējumu un pārējo visaptverošo ienākumu pārskatā 2025. gadā bija 9 502 444 EUR, salīdzinot ar 7 532 656 EUR 2024. gadā.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Consolidated gross profit rose to 9.50 million EUR from 7.53 million EUR in the prior year, reflecting better cost management and lower cost of sales."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "...net loss of 643 thousand EUR for the period, a substantial improvement from the net loss of 2.37 million EUR recorded in the previous year.",
+        "candidate_value": "643 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "643 tūkstoši EUR",
+        "source_evidence": "Grupa noslēdza 2024./2025. finanšu gadu ar zaudējumiem 643 tūkstoši... EUR apmērā. Iepriekšējā finanšu gada Grupas darbības rezultāts bija zaudējumi 2.37 miljoni EUR...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "However, the company reported a net loss of 643 thousand EUR for the period, a substantial improvement from the net loss of 2.37 million EUR recorded in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The parent company also posted a reduced net loss of 552 thousand EUR, compared to 1.34 million EUR previously.",
+        "candidate_value": "552 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "552 tūkstošiem EUR",
+        "source_evidence": "Mātes sabiedrība... zaudējumiem 552 tūkstošiem EUR apmērā... Iepriekšējā finanšu gada... zaudējumi 1.34 miljoni EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The parent company also posted a reduced net loss of 552 thousand EUR, compared to 1.34 million EUR previously."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Cash and cash equivalents increased by 2.6 million EUR to 4.81 million EUR at the end of the fiscal year.",
+        "candidate_value": "4.81 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.81 miljons EUR",
+        "source_evidence": "Grupas naudas līdzekļu atlikums uz gada beigām bija 4.81 miljons... EUR, kas ir par 2.6 miljoniem EUR... vairāk kā iepriekšējā pārskata gada beigās.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Cash and cash equivalents increased by 2.6 million EUR to 4.81 million EUR at the end of the fiscal year."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "The parent company maintained a credit line facility with Luminor Bank AS totaling 4.95 million EUR, which remained entirely unused at the reporting date.",
+        "candidate_value": "4.95 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.95 miljoni EUR",
+        "source_evidence": "Mātes sabiedrība turpināja kredītlīnijas līgumu ar Luminor Bank AS par kopējo summu EUR 4.95 miljoni EUR... pārskata perioda beigās kredītlīnijas nebija izmantota.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "The parent company maintained a credit line facility with Luminor Bank AS totaling 4.95 million EUR, which remained entirely unused at the reporting date."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "The Group’s current ratio stood at 2.05...",
+        "candidate_value": "2.05",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.05",
+        "source_evidence": "Grupas likviditātes rādītājs (apgrozāmie līdzekļi pret saistību kopsummu) 30.06.2025. ir 2.05...",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "The Group’s current ratio stood at 2.05, indicating sufficient short-term liquidity to meet obligations."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Inventory levels decreased by 1.24 million EUR...",
+        "candidate_value": "1.24 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "1,24 miljoniem EUR",
+        "source_evidence": "Lēnas aprites krājumu kopējais apjoms... samazinājies par 1,24 miljoniem EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Inventory levels decreased by 1.24 million EUR, partly due to the release of provisions for slow-moving stock accumulated during previous supply chain disruptions."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "...received 570 thousand EUR in co-financing for research and development projects.",
+        "candidate_value": "570 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "570 tūkstošu EUR",
+        "source_evidence": "Grupas produktu izstrādes projektiem tika saņemts līdzfinansējums... 570 tūkstošu EUR apjomā.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Group continued its focus on product innovation, particularly in the Internet of Things (IoT) segment with its Aranet brand, and received 570 thousand EUR in co-financing for research and development projects."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance: Group net turnover decreased 4% to EUR 25.99 million with a loss of EUR 643,000 (compared to EUR 2.37 million loss prior year). Parent company net turnover decreased 6% to EUR 21.92 million with a loss of EUR 552,000 (compared to EUR 1.34 million loss prior year).",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (neto apgrozījums un zaudējumi)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S3",
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The Group’s net turnover decreased by 4%, or 1.1 million EUR, to reach 25.99 million EUR."
+          },
+          {
+            "id": "S3",
+            "text": "The parent company’s net turnover saw a sharper decline of 6%, amounting to 21.92 million EUR."
+          },
+          {
+            "id": "S10",
+            "text": "However, the company reported a net loss of 643 thousand EUR for the period, a substantial improvement from the net loss of 2.37 million EUR recorded in the previous year."
+          },
+          {
+            "id": "S11",
+            "text": "The parent company also posted a reduced net loss of 552 thousand EUR, compared to 1.34 million EUR previously."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Regional revenue changes: Americas region turnover decreased 14% to EUR 14.17 million (55% of group turnover), Europe region turnover increased 17% to EUR 10.0 million, Asia/TMiddle East/Africa region turnover decreased 5% to EUR 1.8 million.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (reģionu apgrozījums)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "This reduction in revenue was primarily driven by a significant 14% drop in the Americas region, where turnover fell by 2.3 million EUR to 14.17 million EUR."
+          },
+          {
+            "id": "S6",
+            "text": "Conversely, the European region, including Latvia, demonstrated strong growth, with turnover increasing by 17% to 10.0 million EUR."
+          },
+          {
+            "id": "S7",
+            "text": "Revenue in the Asia, Middle East, and Africa regions decreased slightly by 5% to 1.8 million EUR."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Impact of geopolitical factors: Ongoing US-China trade tensions affect global electronics markets but currently have no significant negative impact on group sales; import duties remain unchanged for microwave equipment imported to the US from the EU, while Aranet products face a 15% duty; Canada branch established to mitigate supply chain and customs cost risks.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (ģeopolitiskie riski un muitas nodokļi)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S19",
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Business developments included the establishment of a new branch in Canada to mitigate risks associated with cross-border trade uncertainties and tariffs."
+          },
+          {
+            "id": "S21",
+            "text": "Geopolitical tensions and trade relations between the US and China did not have a material negative impact on sales volumes during the period."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Product development and strategic focus: Continued investment in new product development (micro-wave data transmission, IoT solutions like Aranet), initiation of faster-to-implement product development initiatives, and market research to identify problem areas for product modifications and next-generation technology prototypes.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (izpēte un attīstība, nākotnes perspektīvas)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The Group continued its focus on product innovation, particularly in the Internet of Things (IoT) segment with its Aranet brand, and received 570 thousand EUR in co-financing for research and development projects."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Liquidity and cash flow position: Group cash balance increased to EUR 4.81 million (up EUR 2.6 million); parent company cash balance increased to EUR 2.84 million (up EUR 1.35 million); unused EUR 4.95 million credit line with Luminor Bank; both group and parent company reported positive operating cash flow.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (naudas līdzekļu atlikums), Naudas plūsmu pārskats",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14",
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Cash and cash equivalents increased by 2.6 million EUR to 4.81 million EUR at the end of the fiscal year."
+          },
+          {
+            "id": "S15",
+            "text": "The parent company maintained a credit line facility with Luminor Bank AS totaling 4.95 million EUR, which remained entirely unused at the reporting date."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Segment and geographic revenue distribution: Business divided into two segments - SAF products (CFIP, Integra, Spectrum Compact, Aranet) dominating revenue, and other products (antennas, cables, OEM); exports account for 97% of group turnover (EUR 25.24 million) and 96% of parent turnover (EUR 21.06 million), with products sold in 87 countries.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (eksports), 17. piezīme (segmenti un ģeogrāfiskā sadalījuma informācija)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Loss explanation and outlook: Management characterizes the reporting year's loss as temporary and not impacting long-term stability; focuses on strategic market niches for wireless data transmission products and specialized solutions.",
+        "importance": "HIGH",
+        "source_evidence": "Vadības ziņojums (zaudējumu situācijas vērtējums un nākotnes plāni)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "Management views the current net loss as temporary and expressed a cautious but positive outlook for future periods, citing stabilization in market activity and ongoing product diversification efforts."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Proposal to cover loss: Board of Directors proposes to cover the reporting year's loss from retained earnings of previous years.",
+        "importance": "HIGH",
+        "source_evidence": "Valdes priekšlikums peļņas izlietojumam",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6",
+      "K8"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, K5, and K7 are PRESENT with supporting sentences identified. K6 (segment and geographic revenue distribution) is MISSING - no information about business segments (SAF products vs other products) or export percentages is present. K8 (proposal to cover loss) is MISSING - there is no mention of using retained earnings to cover the loss. The summary captures most core financial and strategic elements, but the absence of K6 and K8 information results in a 'Generally yes' rating (score 3).",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected and support each other without contradictions. The narrative flows from revenue performance to profitability, liquidity, and strategic initiatives. Explanations for regional performance variations are consistent, and the relationship between revenue decline and improved gross profit is clearly explained. There is no unnecessary repetition, and the structure progresses logically from financial results to operational context and outlook. The summary forms a coherent whole with no material internal contradictions or logical gaps."
+  },
+  "usage": {
+    "input_tokens_total": 73695,
+    "output_tokens_total_including_reasoning": 7521,
+    "total_tokens": 81216,
+    "latency_seconds_total": 54.11
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 140858,
+    "output_tokens_total_including_reasoning": 61574,
+    "total_tokens": 202432,
+    "latency_seconds_total": 228.31
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_8.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_8_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_8.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_8.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_8_few_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_8_few_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_8_few_shot_qwen36.json"
+    }
+  }
+}

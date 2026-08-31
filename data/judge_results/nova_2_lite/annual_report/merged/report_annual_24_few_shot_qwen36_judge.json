@@ -1,0 +1,831 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_24_few_shot_qwen36.txt",
+    "report": "report_annual_24.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "few_shot",
+    "generation_mode": "normal"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "Trophy Games reported a landmark fiscal year in 2025, characterized by accelerated growth and successful strategic execution.",
+    "S2": "The company achieved total revenue of DKK 126.5 million, representing a 40% increase from DKK 90.1 million in the previous year.",
+    "S3": "This top-line expansion was primarily driven by the scaling of the Transport Series, particularly the new flagship titles Truck Manager and Farm Manager, alongside continued strength from the legacy title Airline Manager.",
+    "S4": "These three core titles, referred to as the \"Big 3,\" collectively contributed DKK 85 million, or 67% of total revenue, marking a significant shift from 2024 when they accounted for only 35% of revenue.",
+    "S5": "Profitability metrics also improved substantially.",
+    "S6": "EBITDA rose by 26% to DKK 31.1 million, while EBIT increased by 109% to DKK 19.0 million.",
+    "S7": "The EBITDA margin stood at 25%, compared to 27% in 2024, reflecting a deliberate increase in marketing spend to capture market share.",
+    "S8": "The EBT margin improved to 15%, up from 10% in the prior year.",
+    "S9": "Management noted that the 2024 EBT margin was depressed by non-recurring impairment costs of DKK 4.9 million; adjusted for these items, the underlying profitability remained stable across both periods.",
+    "S10": "A key operational development was the strategic optimization of in-app advertising (IAA) revenue.",
+    "S11": "Total IAA revenue doubled to DKK 18.5 million, accounting for 14.6% of total revenue.",
+    "S12": "This shift improved direct cost efficiency, as IAA revenue is not subject to the platform fees that typically apply to in-app purchases.",
+    "S13": "Consequently, direct costs increased by 34% to DKK 30.5 million, largely due to higher volume and platform fees on IAP, while marketing expenses surged by 76% to DKK 40.5 million to support user acquisition for the new titles.",
+    "S14": "The company’s financial position remained robust, with a solvency ratio of 78% and no interest-bearing external debt.",
+    "S15": "Total assets grew by 24% to DKK 84.6 million, driven by increased receivables.",
+    "S16": "Cash at bank decreased by 9% to DKK 23.0 million due to record marketing investments, a DKK 4.7 million repayment of previously received tax credits, and a share buyback program totaling DKK 4.9 million.",
+    "S17": "However, the cash position improved significantly to DKK 36.4 million by the end of January 2026 following year-end receivable collections.",
+    "S18": "Looking ahead, the company provided guidance for 2026 projecting revenue between DKK 130 million and DKK 153 million, representing 3% to 21% growth.",
+    "S19": "EBITDA is expected to range from DKK 28 million to DKK 36 million, and EBT from DKK 18 million to DKK 24 million.",
+    "S20": "This outlook assumes a marketing budget of DKK 45–50 million and ad revenue growth to DKK 22–27 million.",
+    "S21": "The pipeline includes the pre-production of Train Manager 2 and Space Manager, aiming to further diversify the portfolio and sustain long-term growth."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_24.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_24.json",
+    "key_information_hash": "496c97a069cf978d",
+    "key_information_units_total": 6
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 16,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 16
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 17,
+      "incorrect": 0,
+      "total": 17
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 1,
+      "total_units": 6
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Trophy Games reported a landmark fiscal year in 2025, characterized by accelerated growth and successful strategic execution.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Review section: '2025: Year of Accelerated Performance' details 40% revenue growth and strategic execution of scaling the Transport Series.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "Trophy Games reported a landmark fiscal year in 2025, characterized by accelerated growth and successful strategic execution."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "This top-line expansion was primarily driven by the scaling of the Transport Series, particularly the new flagship titles Truck Manager and Farm Manager, alongside continued strength from the legacy title Airline Manager.",
+        "label": "SUPPORTED",
+        "source_evidence": "Progress & Results section: 'The year showed solid revenue growth of 40% driven by the continued development of existing titles, combined with the successful launch of Farm Manager mid-year and targeted improvements made to Truck Manager.'",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "This top-line expansion was primarily driven by the scaling of the Transport Series, particularly the new flagship titles Truck Manager and Farm Manager, alongside continued strength from the legacy title Airline Manager."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "These three core titles, referred to as the 'Big 3,' collectively contributed DKK 85 million, or 67% of total revenue, marking a significant shift from 2024 when they accounted for only 35% of revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Progress & Results: 'In 2025, these three games generated 67% of our 2025 revenue, corresponding to DKK 85m (2024: DKK 31m)... This stands in contrast to 2024 where these titles generated only 35% of our total revenue.'",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "These three core titles, referred to as the \"Big 3,\" collectively contributed DKK 85 million, or 67% of total revenue, marking a significant shift from 2024 when they accounted for only 35% of revenue."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Profitability metrics also improved substantially.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance section: Details 26% EBITDA growth and 109% EBIT increase, with explicit statements about improved profitability.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Profitability metrics also improved substantially."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The EBITDA margin stood at 25%, compared to 27% in 2024, reflecting a deliberate increase in marketing spend to capture market share.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'The EBITDA-margin for the year was 25% (2024: 27%). While absolute EBITDA grew significantly, the margin reflects a targeted increase in marketing spend to capture market share...'",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The EBITDA margin stood at 25%, compared to 27% in 2024, reflecting a deliberate increase in marketing spend to capture market share."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The EBT margin improved to 15%, up from 10% in the prior year.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'Profit before tax (EBT) reached DKK 19,013k (2024: DKK 9,068k), a 109% increase, resulting in an improved EBT-margin of 15% (2024: 10%).'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The EBT margin improved to 15%, up from 10% in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Management noted that the 2024 EBT margin was depressed by non-recurring impairment costs of DKK 4.9 million; adjusted for these items, the underlying profitability remained stable across both periods.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'The expansion in margin is primarily explained by the impact of significant non-recurring impairment costs recognised in 2024, which totaled DKK 4,918k. Adjusting for these non-recurring impairments, the adjusted EBT for 2024 was DKK 13,986k, representing an adjusted EBT-margin of 15%.'",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Management noted that the 2024 EBT margin was depressed by non-recurring impairment costs of DKK 4.9 million; adjusted for these items, the underlying profitability remained stable across both periods."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "A key operational development was the strategic optimization of in-app advertising (IAA) revenue.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue Mix Expansion: 'In late September 2025, we initiated a strategic program to focus on and optimise in-app advertising (IAA) opportunities across our portfolio... Initial results have significantly exceeded our estimates...'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "A key operational development was the strategic optimization of in-app advertising (IAA) revenue."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "This shift improved direct cost efficiency, as IAA revenue is not subject to the platform fees that typically apply to in-app purchases.",
+        "label": "SUPPORTED",
+        "source_evidence": "Revenue Mix Expansion: 'From a margin perspective, it is critical to highlight that revenue derived from IAA is subject to 0% platform fees, whereas traditional IAP sales remain subject to commission rates of up to 30% from providers such as Google and Apple.'",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "This shift improved direct cost efficiency, as IAA revenue is not subject to the platform fees that typically apply to in-app purchases."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The company’s financial position remained robust, with a solvency ratio of 78% and no interest-bearing external debt.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'Trophy Games maintains a robust financial position at the close of 2025, characterised by a continued strong solvency ratio of 78% (2024: 86%). Notably, our capital structure is very solid, as we do not carry any interest-bearing external debt.'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company’s financial position remained robust, with a solvency ratio of 78% and no interest-bearing external debt."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Total assets grew by 24% to DKK 84.6 million, driven by increased receivables.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'Total assets grew to DKK 84,597k (2024: DKK 68,188k), a 24% increase, driven by the successful scaling of operations and the associated increase in receivables.'",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total assets grew by 24% to DKK 84.6 million, driven by increased receivables."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "However, the cash position improved significantly to DKK 36.4 million by the end of January 2026 following year-end receivable collections.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial Performance: 'Following the year-end collection of receivables and the cash flow from strong December revenue, our cash position improved significantly to DKK 36.4m by 31 January 2026.'",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "However, the cash position improved significantly to DKK 36.4 million by the end of January 2026 following year-end receivable collections."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Looking ahead, the company provided guidance for 2026 projecting revenue between DKK 130 million and DKK 153 million, representing 3% to 21% growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook 2026: 'In 2026, we expect revenue in the level of DKK 130m-153m, corresponding to an increase of 3%-21% driven by enhanced monetisation, disciplined user acquisition, and increasing advertising contribution.'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Looking ahead, the company provided guidance for 2026 projecting revenue between DKK 130 million and DKK 153 million, representing 3% to 21% growth."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "EBITDA is expected to range from DKK 28 million to DKK 36 million, and EBT from DKK 18 million to DKK 24 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook 2026: 'EBITDA is expected in the level of DKK 28m-36m and EBT in the level of DKK 18m-24m.'",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "EBITDA is expected to range from DKK 28 million to DKK 36 million, and EBT from DKK 18 million to DKK 24 million."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "This outlook assumes a marketing budget of DKK 45–50 million and ad revenue growth to DKK 22–27 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook 2026: Key Performance Drivers & Assumptions section lists '| Marketing Power: DKK 45m-50m... | Ad Revenue Growth: DKK 22m-27m...'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "This outlook assumes a marketing budget of DKK 45–50 million and ad revenue growth to DKK 22–27 million."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "The pipeline includes the pre-production of Train Manager 2 and Space Manager, aiming to further diversify the portfolio and sustain long-term growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook 2026: 'Currently in pre-production for Train Manager 2... Furthermore, the premium PC title, The Ranchers, is progressing well... Space Manager is the latest addition to the Transport Series, with development officially beginning in December 2025.'",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "The pipeline includes the pre-production of Train Manager 2 and Space Manager, aiming to further diversify the portfolio and sustain long-term growth."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Total revenue of DKK 126.5 million, representing a 40% increase from DKK 90.1 million in the previous year",
+        "candidate_value": "DKK 126.5m (2025) vs DKK 90.1m (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 126,523k (2025) vs DKK 90,070k (2024)",
+        "source_evidence": "Financial Highlights & Key Ratios table and Financial Performance section: 'Total revenue reached DKK 126,523k (2024: DKK 90,070k), a 40% increase.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company achieved total revenue of DKK 126.5 million, representing a 40% increase from DKK 90.1 million in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "'Big 3' titles collectively contributed DKK 85 million, or 67% of total revenue",
+        "candidate_value": "DKK 85m (67% of revenue)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 85m (67% of 2025 revenue)",
+        "source_evidence": "Progress & Results: 'these three games generated 67% of our 2025 revenue, corresponding to DKK 85m (2024: DKK 31m)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "These three core titles, referred to as the \"Big 3,\" collectively contributed DKK 85 million, or 67% of total revenue, marking a significant shift from 2024 when they accounted for only 35% of revenue."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBITDA rose by 26% to DKK 31.1 million, while EBIT increased by 109% to DKK 19.0 million",
+        "candidate_value": "EBITDA: DKK 31.1m (+26%); EBIT: DKK 19.0m (+109%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA: DKK 31,117k (+26%); EBT: DKK 19,013k (+109%)",
+        "source_evidence": "Financial Highlights & Key Ratios table and Financial Performance: 'EBITDA increased by 26% to DKK 31,117k... EBT reached DKK 19,013k, a 109% increase.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "EBITDA rose by 26% to DKK 31.1 million, while EBIT increased by 109% to DKK 19.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "EBITDA margin stood at 25%, compared to 27% in 2024",
+        "candidate_value": "25% (2025) vs 27% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "25% (2025) vs 27% (2024)",
+        "source_evidence": "Key Ratios table: 'EBITDA-Margin 25% (2025), 27% (2024)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The EBITDA margin stood at 25%, compared to 27% in 2024, reflecting a deliberate increase in marketing spend to capture market share."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "EBT margin improved to 15%, up from 10% in the prior year",
+        "candidate_value": "15% (2025) vs 10% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "15% (2025) vs 10% (2024)",
+        "source_evidence": "Key Ratios table: 'EBT-Margin 15% (2025), 10% (2024)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The EBT margin improved to 15%, up from 10% in the prior year."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "2024 EBT margin was depressed by non-recurring impairment costs of DKK 4.9 million",
+        "candidate_value": "DKK 4.9m impairment costs (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 4,918k impairment costs (2024)",
+        "source_evidence": "Financial Performance: 'impairment costs recognised in 2024, which totaled DKK 4,918k'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Management noted that the 2024 EBT margin was depressed by non-recurring impairment costs of DKK 4.9 million; adjusted for these items, the underlying profitability remained stable across both periods."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Total IAA revenue doubled to DKK 18.5 million, accounting for 14.6% of total revenue",
+        "candidate_value": "DKK 18.5m (14.6% of revenue)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 18,476k (14.6% of 2025 revenue)",
+        "source_evidence": "Revenue Mix Expansion: 'IAA revenue surged to DKK 18,476k... accounting for 14.6% in 2025'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Total IAA revenue doubled to DKK 18.5 million, accounting for 14.6% of total revenue."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "IAA revenue is not subject to platform fees",
+        "candidate_value": "0% platform fees on IAA",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0% platform fees on IAA",
+        "source_evidence": "Revenue Mix Expansion: 'revenue derived from IAA is subject to 0% platform fees'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "This shift improved direct cost efficiency, as IAA revenue is not subject to the platform fees that typically apply to in-app purchases."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Direct costs increased by 34% to DKK 30.5 million, while marketing expenses surged by 76% to DKK 40.5 million",
+        "candidate_value": "Direct costs: DKK 30.5m (+34%); Marketing: DKK 40.5m (+76%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Direct costs: DKK 30,460k (+34%); Marketing: DKK 40,486k (+76%)",
+        "source_evidence": "Financial Performance: 'Direct costs rose to DKK 30,460k... marketing budget was expanded to DKK 40,486k'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Consequently, direct costs increased by 34% to DKK 30.5 million, largely due to higher volume and platform fees on IAP, while marketing expenses surged by 76% to DKK 40.5 million to support user acquisition for the new titles."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Solvency ratio of 78% with no interest-bearing external debt",
+        "candidate_value": "78% solvency ratio, no interest-bearing debt",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "78% solvency ratio, no interest-bearing external debt",
+        "source_evidence": "Financial Performance: 'solvency ratio of 78%... we do not carry any interest-bearing external debt'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company’s financial position remained robust, with a solvency ratio of 78% and no interest-bearing external debt."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Total assets grew by 24% to DKK 84.6 million",
+        "candidate_value": "DKK 84.6m (+24%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 84,597k (+24% from 2024)",
+        "source_evidence": "Balance Sheet: 'Total assets grew to DKK 84,597k (2024: DKK 68,188k), a 24% increase'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Total assets grew by 24% to DKK 84.6 million, driven by increased receivables."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Cash at bank decreased by 9% to DKK 23.0 million due to marketing investments, tax credit repayment, and share buyback",
+        "candidate_value": "DKK 23.0m (-9%)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 23,049k (-9% from 2024)",
+        "source_evidence": "Liquidity and Working Capital: 'Cash at bank and in hand ended the year at DKK 23,049k (2024: DKK 25,429k), a 9% decrease'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Cash at bank decreased by 9% to DKK 23.0 million due to record marketing investments, a DKK 4.7 million repayment of previously received tax credits, and a share buyback program totaling DKK 4.9 million."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Cash position improved to DKK 36.4 million by end of January 2026",
+        "candidate_value": "DKK 36.4m (as of Jan 31, 2026)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 36.4m (as of Jan 31, 2026)",
+        "source_evidence": "Liquidity and Working Capital: 'our cash position improved significantly to DKK 36.4m by 31 January 2026'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "However, the cash position improved significantly to DKK 36.4 million by the end of January 2026 following year-end receivable collections."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "2026 revenue guidance between DKK 130 million and DKK 153 million (3%-21% growth)",
+        "candidate_value": "DKK 130m-153m (3%-21% growth)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "DKK 130m-153m (3%-21% growth)",
+        "source_evidence": "Outlook 2026: 'revenue in the level of DKK 130m-153m, corresponding to an increase of 3%-21%'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Looking ahead, the company provided guidance for 2026 projecting revenue between DKK 130 million and DKK 153 million, representing 3% to 21% growth."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "EBITDA guidance DKK 28-36 million, EBT DKK 18-24 million",
+        "candidate_value": "EBITDA: DKK 28m-36m; EBT: DKK 18m-24m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "EBITDA: DKK 28m-36m; EBT: DKK 18m-24m",
+        "source_evidence": "Outlook 2026: 'EBITDA is expected in the level of DKK 28m-36m and EBT in the level of DKK 18m-24m'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "EBITDA is expected to range from DKK 28 million to DKK 36 million, and EBT from DKK 18 million to DKK 24 million."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Assumes marketing budget DKK 45-50 million and ad revenue growth to DKK 22-27 million",
+        "candidate_value": "Marketing: DKK 45m-50m; Ad revenue: DKK 22m-27m",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Marketing: DKK 45m-50m; Ad revenue: DKK 22m-27m",
+        "source_evidence": "Outlook 2026: 'marketing budget of DKK 45m-50m... ad income of DKK 22m-27m'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "This outlook assumes a marketing budget of DKK 45–50 million and ad revenue growth to DKK 22–27 million."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Pipeline includes pre-production of Train Manager 2 and Space Manager",
+        "candidate_value": "Train Manager 2 and Space Manager in pre-production",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "Train Manager 2 and Space Manager in pre-production",
+        "source_evidence": "Outlook 2026: 'Production of Train Manager 2 and Space Manager represent a strategic expansion... Train Manager 2 is positioned as a flagship release... Space Manager remains a long-term scalability initiative with foundational investments in 2026'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "The pipeline includes the pre-production of Train Manager 2 and Space Manager, aiming to further diversify the portfolio and sustain long-term growth."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance: Revenue increased 40% to DKK 126.5m (2024: DKK 90.1m), EBITDA grew 26% to DKK 31.1m (2024: DKK 24.7m), and Profit Before Tax (EBT) surged 109% to DKK 19.0m (2024: DKK 9.1m), driven by scaling of core titles and ad revenue optimization.",
+        "importance": "HIGH",
+        "source_evidence": "Financial Highlights & Key Ratios table (page 24); Financial Performance section (pages 24-27)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The company achieved total revenue of DKK 126.5 million, representing a 40% increase from DKK 90.1 million in the previous year."
+          },
+          {
+            "id": "S6",
+            "text": "EBITDA rose by 26% to DKK 31.1 million, while EBIT increased by 109% to DKK 19.0 million."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The 'Big 3' titles—Airline Manager, Truck Manager, and Farm Manager—collectively generated 67% of 2025 revenue (DKK 85m) and 65% of EBITDA, driven by Truck Manager's foundational scaling (revenue growth from DKK 1.2m in 2024 to DKK 25.2m in 2025) and Farm Manager's successful July 2025 launch with 5 million pre-registrations.",
+        "importance": "HIGH",
+        "source_evidence": "Progress & Results section (pages 13-20); Game Breakdown table (page 13); Truck Manager section (page 17); Farm Manager section (page 18)",
+        "origin_draft_ids": [
+          "D2",
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "These three core titles, referred to as the \"Big 3,\" collectively contributed DKK 85 million, or 67% of total revenue, marking a significant shift from 2024 when they accounted for only 35% of revenue."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Strategic ad revenue optimization initiated in late September 2025 boosted In-App Ads (IAA) revenue by 100% to DKK 18.5m, improving monetization efficiency by eliminating platform fees and increasing IAA's share of total revenue to 14.6% (2024: 10.2%).",
+        "importance": "HIGH",
+        "source_evidence": "Strategic Ad Revenue Optimisation section (pages 21-22); Financial Performance section (page 26)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11",
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "A key operational development was the strategic optimization of in-app advertising (IAA) revenue."
+          },
+          {
+            "id": "S11",
+            "text": "Total IAA revenue doubled to DKK 18.5 million, accounting for 14.6% of total revenue."
+          },
+          {
+            "id": "S12",
+            "text": "This shift improved direct cost efficiency, as IAA revenue is not subject to the platform fees that typically apply to in-app purchases."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "2026 financial guidance targets revenue of DKK 130-153m (+3% to +21%) and EBITDA of DKK 28-36m, with strategic focus on optimizing the existing portfolio, disciplined investment in Train Manager 2 and Space Manager, and maintaining margin discipline amid regulatory uncertainty.",
+        "importance": "HIGH",
+        "source_evidence": "Outlook 2026 section (page 11); Financial Outlook 2026 table (page 11)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18",
+          "S19",
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Looking ahead, the company provided guidance for 2026 projecting revenue between DKK 130 million and DKK 153 million, representing 3% to 21% growth."
+          },
+          {
+            "id": "S19",
+            "text": "EBITDA is expected to range from DKK 28 million to DKK 36 million, and EBT from DKK 18 million to DKK 24 million."
+          },
+          {
+            "id": "S21",
+            "text": "The pipeline includes the pre-production of Train Manager 2 and Space Manager, aiming to further diversify the portfolio and sustain long-term growth."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strong liquidity position with a 78% solvency ratio (2024: 86%), total equity of DKK 66.1m, and completion of a DKK 5m share buy-back program, reflecting a robust capital structure with no interest-bearing debt.",
+        "importance": "HIGH",
+        "source_evidence": "Financial Review section (page 27); Balance Sheet (page 47)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The company’s financial position remained robust, with a solvency ratio of 78% and no interest-bearing external debt."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Framework-driven development strategy enables cost-efficient title launches, portfolio-wide upgrades, and a competitive moat, as evidenced by reusable codebases and retrofitting features like staff management and stock markets across titles.",
+        "importance": "HIGH",
+        "source_evidence": "Our Strategy section (pages 9-10); Competitive Advantages (page 9)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K6"
+    ],
+    "completeness_justification": "K1, K2, K3, K4, and K5 are all PRESENT with clear evidence in the candidate summary. K6 is MISSING because there is no mention of the framework-driven development strategy, reusable codebases, or retrofitting features across titles, which is the core requirement of this criterion. The overall coverage is strong for financial performance, guidance, and liquidity, but the absence of K6—a HIGH importance item about development strategy—prevents the summary from achieving a 'Yes' rating. Therefore, the score is 3 (Generally yes).",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements logically follow one another without contradictions. The narrative progresses from revenue growth through profitability metrics to operational developments and future guidance. Key relationships (e.g., revenue drivers, margin changes due to strategic decisions) are clearly explained. The structure follows a logical sequence from performance highlights to financial metrics, operational changes, and future outlook. There is no unnecessary repetition, and all numerical relationships are presented consistently without implying arithmetic contradictions. The summary forms a clear, self-contained narrative."
+  },
+  "usage": {
+    "input_tokens_total": 70908,
+    "output_tokens_total_including_reasoning": 8723,
+    "total_tokens": 79631,
+    "latency_seconds_total": 46.15
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 67935,
+    "output_tokens_total_including_reasoning": 59942,
+    "total_tokens": 127877,
+    "latency_seconds_total": 207.93
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_24.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_24_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_24.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_24.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_24_few_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_24_few_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_24_few_shot_qwen36.json"
+    }
+  }
+}

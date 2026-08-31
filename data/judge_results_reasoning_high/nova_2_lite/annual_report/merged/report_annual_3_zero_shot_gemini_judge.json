@@ -1,0 +1,802 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_3_zero_shot_gemini.txt",
+    "report": "report_annual_3.md",
+    "report_type": "annual_report",
+    "generator_key": "gemini",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "During the financial year ended December 31, 2025, Coop Pank AS experienced continued business volume growth alongside a decrease in net profit, driven primarily by a lower-interest economic environment.",
+    "S2": "The group reported a net profit of 28.7 million euros for 2025, representing an 11 percent decrease compared to 32.2 million euros in 2024.",
+    "S3": "Total net operating income decreased from 81.9 million euros in 2024 to 79.4 million euros in 2025.",
+    "S4": "Net interest income declined from 77.6 million euros to 73.3 million euros, while net fee and commission income increased slightly from 4.3 million euros to 4.5 million euros.",
+    "S5": "Operating expenses rose from 40.6 million euros to 41.5 million euros, resulting in a cost-to-income ratio of 52.3 percent compared to 49.6 percent in the previous year.",
+    "S6": "Credit loss allowances improved to 3.3 million euros from 4.6 million euros in 2024, reflecting low-risk credit portfolio quality.",
+    "S7": "Return on equity stood at 12.9 percent, down from 16.2 percent in 2024.",
+    "S8": "Despite the decline in profitability, Coop Pank achieved robust growth in key business volumes.",
+    "S9": "The net loan portfolio grew by 19 percent year-on-year, exceeding 2 billion euros for the first time in the bank's history to reach 2.11 billion euros at year-end, up from 1.77 billion euros.",
+    "S10": "Business loans experienced the fastest growth, increasing by 27 percent, while the home loan portfolio expanded by 17 percent.",
+    "S11": "Customer deposits increased by 9 percent, reaching 2.05 billion euros compared to 1.88 billion euros at the end of 2024, with demand deposits growing by 11 percent and term deposits by 8 percent.",
+    "S12": "The customer base expanded by 19,000 clients, or 9 percent, reaching a total of 227,000 customers by the end of 2025.",
+    "S13": "The broader macroeconomic environment was characterized by modest economic growth, receding inflation, and declining central bank interest rates.",
+    "S14": "The European Central Bank lowered deposit facility rates, causing money market rates such as the Euribor to decrease, which subsequently affected the bank's net interest margins and net interest income.",
+    "S15": "To optimize funding and capital, Coop Pank executed several strategic transactions in 2025.",
+    "S16": "In the first quarter, the bank issued 250 million euros of covered bonds on the Irish stock exchange.",
+    "S17": "Additionally, the bank entered into a synthetic securitization transaction with the European Investment Bank Group to provide capital relief and signed a 5 million euro subordinated loan agreement with the European Energy Efficiency Fund.",
+    "S18": "In accordance with its dividend policy, Coop Pank distributed 7.2 million euros in dividends in May 2025, representing 0.07 euros per share from 2024 earnings.",
+    "S19": "For the 2025 financial year, the management board has proposed a dividend distribution of 0.065 euros per share, totaling 6.7 million euros in net dividends.",
+    "S20": "Shareholders' equity increased from 211.6 million euros at the end of 2024 to 234.5 million euros as of December 31, 2025.",
+    "S21": "Total assets grew from 2.19 billion euros to 2.70 billion euros, and the bank maintained compliance with all regulatory capital requirements, with a total capital adequacy ratio of 18.54 percent."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_3.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_3.json",
+    "key_information_hash": "f5e8439eae22c0f8",
+    "key_information_units_total": 12
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 9,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 9
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 4,
+      "total_units": 12
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Coop Pank AS experienced continued business volume growth alongside a decrease in net profit, driven primarily by a lower-interest economic environment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report states loan portfolio grew by €340 million (+19%) in 2025, and net profit decreased by 11% year-on-year. Operating environment section describes declining interest rates affecting bank performance.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "During the financial year ended December 31, 2025, Coop Pank AS experienced continued business volume growth alongside a decrease in net profit, driven primarily by a lower-interest economic environment."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Coop Pank achieved robust growth in key business volumes.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report: 'The bank’s loan portfolio grew by €340 million (+19%) in 2025... customer base expanded by 19,000 (+9%)... deposits increased by 9% over the year'",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Despite the decline in profitability, Coop Pank achieved robust growth in key business volumes."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The broader macroeconomic environment was characterized by modest economic growth, receding inflation, and declining central bank interest rates.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating environment section: 'In 2025, the keywords for the economic environment were very modest economic growth in developed countries, receding inflation, declining interest rates... ECB lowered deposit facility rate eight times from 4.0% to 2.0%'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The broader macroeconomic environment was characterized by modest economic growth, receding inflation, and declining central bank interest rates."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The European Central Bank lowered deposit facility rates, causing money market rates such as the Euribor to decrease, which subsequently affected the bank's net interest margins and net interest income.",
+        "label": "SUPPORTED",
+        "source_evidence": "Operating environment: 'Since June 2024, the ECB has lowered the deposit facility rate eight times from 4.0% to 2.0%. For example, the 6-month Euribor... fell to 2.1% by the end of 2025.' Management report attributes net profit decline to 'lower-interest economic environment'",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The European Central Bank lowered deposit facility rates, causing money market rates such as the Euribor to decrease, which subsequently affected the bank's net interest margins and net interest income."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "To optimize funding and capital, Coop Pank executed several strategic transactions in 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management report details: covered bond issuance, synthetic securitization with EIB Group, and EEEF loan agreement as capital optimization measures",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "To optimize funding and capital, Coop Pank executed several strategic transactions in 2025."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "In accordance with its dividend policy, Coop Pank distributed 7.2 million euros in dividends in May 2025, representing 0.07 euros per share from 2024 earnings.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 20: 'On May 6, 2025, Coop Pank paid a dividend of €0.07 per share... total net amount of €7,209 thousand euros'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "In accordance with its dividend policy, Coop Pank distributed 7.2 million euros in dividends in May 2025, representing 0.07 euros per share from 2024 earnings."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "For the 2025 financial year, the management board has proposed a dividend distribution of 0.065 euros per share, totaling 6.7 million euros in net dividends.",
+        "label": "SUPPORTED",
+        "source_evidence": "Proposal for profit allocation: 'pay dividends 0.065 euro per share in the total net amount of 6,738 thousand euros'",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "For the 2025 financial year, the management board has proposed a dividend distribution of 0.065 euros per share, totaling 6.7 million euros in net dividends."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "Shareholders' equity increased from 211.6 million euros at the end of 2024 to 234.5 million euros as of December 31, 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Financial results table shows shareholders' equity of €235 million (2025) vs €212 million (2024). Management report states 'Shareholders' equity increased from 212 million euros at the end of 2024 to 235 million euros as of December 31, 2025'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Shareholders' equity increased from 211.6 million euros at the end of 2024 to 234.5 million euros as of December 31, 2025."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Total assets grew from 2.19 billion euros to 2.70 billion euros, and the bank maintained compliance with all regulatory capital requirements, with a total capital adequacy ratio of 18.54 percent.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated statement of financial position shows total assets of €2,702,994 thousand (2.703B) vs €2,188,614 thousand (2.189B). Capitalisation table shows total capital adequacy ratio of 18.54% as at 31.12.2025",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Total assets grew from 2.19 billion euros to 2.70 billion euros, and the bank maintained compliance with all regulatory capital requirements, with a total capital adequacy ratio of 18.54 percent."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The group reported a net profit of 28.7 million euros for 2025, representing an 11 percent decrease compared to 32.2 million euros in 2024.",
+        "candidate_value": "28.7 million EUR (2025), 32.2 million EUR (2024), 11% decrease",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "28.7 million EUR (2025), 32.2 million EUR (2024)",
+        "source_evidence": "Financial results table: Net profit 2025 = 28.7, 2024 = 32.2. Calculated decrease: (32.2-28.7)/32.2 = 11.0%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group reported a net profit of 28.7 million euros for 2025, representing an 11 percent decrease compared to 32.2 million euros in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Total net operating income decreased from 81.9 million euros in 2024 to 79.4 million euros in 2025.",
+        "candidate_value": "79.4 million EUR (2025), 81.9 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "79.4 million EUR (2025), 81.9 million EUR (2024)",
+        "source_evidence": "Financial results table: Total net operating income 2025 = 79.4, 2024 = 81.9",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Total net operating income decreased from 81.9 million euros in 2024 to 79.4 million euros in 2025."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Net interest income declined from 77.6 million euros to 73.3 million euros, while net fee and commission income increased slightly from 4.3 million euros to 4.5 million euros.",
+        "candidate_value": "73.3 million EUR (2025), 77.6 million EUR (2024); 4.5 million EUR (2025), 4.3 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "73.3 million EUR (2025), 77.6 million EUR (2024); 4.5 million EUR (2025), 4.3 million EUR (2024)",
+        "source_evidence": "Financial results table: Net interest income 2025=73.3, 2024=77.6; Net fee and commission income 2025=4.5, 2024=4.3",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Net interest income declined from 77.6 million euros to 73.3 million euros, while net fee and commission income increased slightly from 4.3 million euros to 4.5 million euros."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Operating expenses rose from 40.6 million euros to 41.5 million euros, resulting in a cost-to-income ratio of 52.3 percent compared to 49.6 percent in the previous year.",
+        "candidate_value": "41.5 million EUR (2025), 40.6 million EUR (2024); 52.3% (2025), 49.6% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "41.5 million EUR (2025), 40.6 million EUR (2024); 52.3% (2025), 49.6% (2024)",
+        "source_evidence": "Financial results table: Operating expenses 2025=-41.5, 2024=-40.6; Cost to income ratio 2025=52.3%, 2024=49.6%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Operating expenses rose from 40.6 million euros to 41.5 million euros, resulting in a cost-to-income ratio of 52.3 percent compared to 49.6 percent in the previous year."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Credit loss allowances improved to 3.3 million euros from 4.6 million euros in 2024, reflecting low-risk credit portfolio quality.",
+        "candidate_value": "3.3 million EUR (2025), 4.6 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3.3 million EUR (2025), 4.6 million EUR (2024)",
+        "source_evidence": "Financial results table: Credit loss allowance 2025=-3.3, 2024=-4.6",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Credit loss allowances improved to 3.3 million euros from 4.6 million euros in 2024, reflecting low-risk credit portfolio quality."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Return on equity stood at 12.9 percent, down from 16.2 percent in 2024.",
+        "candidate_value": "12.9% (2025), 16.2% (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12.9% (2025), 16.2% (2024)",
+        "source_evidence": "Ratios table: ROE 2025=12.9%, 2024=16.2%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Return on equity stood at 12.9 percent, down from 16.2 percent in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "The net loan portfolio grew by 19 percent year-on-year, exceeding 2 billion euros for the first time in the bank's history to reach 2.11 billion euros at year-end, up from 1.77 billion euros.",
+        "candidate_value": "2.11 billion EUR (2025), 1.77 billion EUR (2024), 19% growth",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.114 billion EUR (2025), 1.774 billion EUR (2024)",
+        "source_evidence": "Financial results table: Net loan portfolio 2025=2,114, 2024=1,774; calculated growth: (2114-1774)/1774 = 19.3% ≈ 19%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The net loan portfolio grew by 19 percent year-on-year, exceeding 2 billion euros for the first time in the bank's history to reach 2.11 billion euros at year-end, up from 1.77 billion euros."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Business loans experienced the fastest growth, increasing by 27 percent, while the home loan portfolio expanded by 17 percent.",
+        "candidate_value": "27% growth (business loans), 17% growth (home loans)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "27% growth (business loans), 17% growth (home loans)",
+        "source_evidence": "Management report: 'The business loan portfolio grew the fastest, increasing by €207 million (+27%). This was followed by growth in the home loan portfolio by €125 million (+17%)'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Business loans experienced the fastest growth, increasing by 27 percent, while the home loan portfolio expanded by 17 percent."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Customer deposits increased by 9 percent, reaching 2.05 billion euros compared to 1.88 billion euros at the end of 2024, with demand deposits growing by 11 percent and term deposits by 8 percent.",
+        "candidate_value": "2.05 billion EUR (2025), 1.88 billion EUR (2024), 9% growth; 11% growth (demand), 8% growth (term)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.047 billion EUR (2025), 1.878 billion EUR (2024), 9% growth; 11% growth (demand), 8% growth (term)",
+        "source_evidence": "Note 15: Customer deposits 2025=2,047.459, 2024=1,877.865; management report states 'deposits increased by 9%... demand deposits increased by 11%... term deposits increased by 8%'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Customer deposits increased by 9 percent, reaching 2.05 billion euros compared to 1.88 billion euros at the end of 2024, with demand deposits growing by 11 percent and term deposits by 8 percent."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "The customer base expanded by 19,000 clients, or 9 percent, reaching a total of 227,000 customers by the end of 2025.",
+        "candidate_value": "227,000 customers (2025), 19,000 growth, 9% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "227,000 customers (2025), 9% growth",
+        "source_evidence": "Management report: 'The number of Coop Pank customers grew by 19,000 (+9%) in 2025, reaching 227,000 by the end of the year'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The customer base expanded by 19,000 clients, or 9 percent, reaching a total of 227,000 customers by the end of 2025."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "In the first quarter, the bank issued 250 million euros of covered bonds on the Irish stock exchange.",
+        "candidate_value": "250 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "250 million EUR",
+        "source_evidence": "Note 17: 'On 13 March 2025, Coop Pank issued covered bonds with a total nominal value of EUR 250 million'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In the first quarter, the bank issued 250 million euros of covered bonds on the Irish stock exchange."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The bank entered into a synthetic securitization transaction with the European Investment Bank Group to provide capital relief and signed a 5 million euro subordinated loan agreement with the European Energy Efficiency Fund.",
+        "candidate_value": "5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5 million EUR",
+        "source_evidence": "Management report: 'Additionally, Coop Pank signed a loan agreement... with the European Energy Efficiency Fund (EEEF), under which the bank will take an unsecured subordinated loan of €5 million'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Additionally, the bank entered into a synthetic securitization transaction with the European Investment Bank Group to provide capital relief and signed a 5 million euro subordinated loan agreement with the European Energy Efficiency Fund."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Total assets grew from 2.19 billion euros to 2.70 billion euros...",
+        "candidate_value": "2.70 billion EUR (2025), 2.19 billion EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2.703 billion EUR (2025), 2.189 billion EUR (2024)",
+        "source_evidence": "Consolidated statement of financial position: Total assets 2025=2,702,994; 2024=2,188,614",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Total assets grew from 2.19 billion euros to 2.70 billion euros, and the bank maintained compliance with all regulatory capital requirements, with a total capital adequacy ratio of 18.54 percent."
+          }
+        ]
+      },
+      {
+        "claim": "Dividend distribution of 7.2 million EUR in May 2025 representing 0.07 EUR per share from 2024 earnings",
+        "candidate_value": "7.2 million EUR / 0.07 EUR per share",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "7,209 thousand EUR (7.209 million EUR) / 0.07 EUR per share",
+        "source_evidence": "Page 24: 'On May 6, 2025, Coop Pank paid a dividend of 0.07 euros (net) per share from the profit earned in 2024, in the total net amount of 7,209 thousand euros.'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "id": "N14",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "In accordance with its dividend policy, Coop Pank distributed 7.2 million euros in dividends in May 2025, representing 0.07 euros per share from 2024 earnings."
+          }
+        ]
+      },
+      {
+        "claim": "Proposed dividend distribution of 0.065 EUR per share totaling 6.7 million EUR in net dividends for 2025",
+        "candidate_value": "0.065 EUR per share / 6.7 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "0.065 EUR per share / 6,738 thousand EUR (6.738 million EUR)",
+        "source_evidence": "Page 134: 'pay dividends 0.065 euro per share in the total net amount of 6,738 thousand euros'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "id": "N15",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "For the 2025 financial year, the management board has proposed a dividend distribution of 0.065 euros per share, totaling 6.7 million euros in net dividends."
+          }
+        ]
+      },
+      {
+        "claim": "Shareholders' equity increased from 211.6 million EUR at end of 2024 to 234.5 million EUR as of December 31, 2025",
+        "candidate_value": "211.6 million EUR → 234.5 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "211,637 thousand EUR (211.637 million EUR) → 234,543 thousand EUR (234.543 million EUR)",
+        "source_evidence": "Page 48: 'Total shareholder’s equity as at 31.12.2024: 211,637 thousand EUR' and 'Total shareholder’s equity as at 31.12.2025: 234,543 thousand EUR'",
+        "error_explanation": null,
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "id": "N16",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "Shareholders' equity increased from 211.6 million euros at the end of 2024 to 234.5 million euros as of December 31, 2025."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Net profit decreased by 11% to €28.7 million; return on equity (ROE) declined to 12.9%; cost-to-income ratio increased to 52.3%.",
+        "importance": "HIGH",
+        "source_evidence": "Financial results table (page 16) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S5",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The group reported a net profit of 28.7 million euros for 2025, representing an 11 percent decrease compared to 32.2 million euros in 2024."
+          },
+          {
+            "id": "S5",
+            "text": "Operating expenses rose from 40.6 million euros to 41.5 million euros, resulting in a cost-to-income ratio of 52.3 percent compared to 49.6 percent in the previous year."
+          },
+          {
+            "id": "S7",
+            "text": "Return on equity stood at 12.9 percent, down from 16.2 percent in 2024."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Loan portfolio grew by 19% to €2.11 billion, driven by a 27% increase in business loans and a 17% increase in home loans.",
+        "importance": "HIGH",
+        "source_evidence": "Managing Director's Statement (page 10) and Financial results table (page 16)",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S10"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "The net loan portfolio grew by 19 percent year-on-year, exceeding 2 billion euros for the first time in the bank's history to reach 2.11 billion euros at year-end, up from 1.77 billion euros."
+          },
+          {
+            "id": "S10",
+            "text": "Business loans experienced the fastest growth, increasing by 27 percent, while the home loan portfolio expanded by 17 percent."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Customer deposits increased by 9% to €2.05 billion, with demand deposits rising by 11% and term deposits by 8%.",
+        "importance": "HIGH",
+        "source_evidence": "Financial results table (page 16) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Customer deposits increased by 9 percent, reaching 2.05 billion euros compared to 1.88 billion euros at the end of 2024, with demand deposits growing by 11 percent and term deposits by 8 percent."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Total customer base grew by 9% to 227,000 clients (including 19,000 new customers) over the year.",
+        "importance": "MEDIUM",
+        "source_evidence": "Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "The customer base expanded by 19,000 clients, or 9 percent, reaching a total of 227,000 customers by the end of 2025."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Strategic targets include increasing loan market share to 10% by 2030, doubling net profit to at least €60 million by 2030, achieving ROE of at least 15%, and maintaining a cost-to-income ratio below 45%.",
+        "importance": "HIGH",
+        "source_evidence": "Targets section (page 7) and Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K6",
+        "information": "Secured €250 million in covered bonds and a €249 million European Investment Bank Group guarantee for new loans, while reducing reliance on more expensive term and foreign deposits.",
+        "importance": "HIGH",
+        "source_evidence": "Managing Director's Statement (page 10) and Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "In the first quarter, the bank issued 250 million euros of covered bonds on the Irish stock exchange."
+          },
+          {
+            "id": "S17",
+            "text": "Additionally, the bank entered into a synthetic securitization transaction with the European Investment Bank Group to provide capital relief and signed a 5 million euro subordinated loan agreement with the European Energy Efficiency Fund."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Common Equity Tier 1 (CET1) ratio stands at 14.15%, Tier 1 capital ratio at 16.11%, and total capital ratio at 18.54%, meeting all regulatory requirements; designated as systemically important with an additional buffer requirement.",
+        "importance": "HIGH",
+        "source_evidence": "Capitalisation and risk positions (page 17)",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Total assets grew from 2.19 billion euros to 2.70 billion euros, and the bank maintained compliance with all regulatory capital requirements, with a total capital adequacy ratio of 18.54 percent."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Implemented LEED Platinum-certified headquarters, paperless operations, IT equipment recycling, and financing of solar/wind parks (81.3 MW); secured European Investment Bank funding for gender equality and climate action projects.",
+        "importance": "MEDIUM",
+        "source_evidence": "Sustainability Report (pages 34-38)",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K9",
+        "information": "Launched virtual card services, expanded branch network (including Valga and Viljandi), introduced a cashback program, and rolled out new loan products for small businesses and specific professions (e.g., Teacher's Home Loan, Home Defender Home Loan).",
+        "importance": "MEDIUM",
+        "source_evidence": "Managing Director's Statement (page 10)",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "Distributed €7.2 million in dividends (25% of 2024 pre-tax profit) at €0.07 per share; proposed €6.7 million in dividends (0.065€ per share) from 2025 profit, taxed at 22/78 rate.",
+        "importance": "MEDIUM",
+        "source_evidence": "Dividend policy (page 24) and Proposal for profit allocation (page 134)",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "In accordance with its dividend policy, Coop Pank distributed 7.2 million euros in dividends in May 2025, representing 0.07 euros per share from 2024 earnings."
+          },
+          {
+            "id": "S19",
+            "text": "For the 2025 financial year, the management board has proposed a dividend distribution of 0.065 euros per share, totaling 6.7 million euros in net dividends."
+          }
+        ]
+      },
+      {
+        "id": "K11",
+        "information": "In February 2026, drew a €5 million subordinated loan from the European Energy Efficiency Fund (EEEF), classified as Tier 2 capital, to finance energy efficiency and renewable energy projects.",
+        "importance": "HIGH",
+        "source_evidence": "Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D11"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Additionally, the bank entered into a synthetic securitization transaction with the European Investment Bank Group to provide capital relief and signed a 5 million euro subordinated loan agreement with the European Energy Efficiency Fund."
+          }
+        ]
+      },
+      {
+        "id": "K12",
+        "information": "On 21 January 2026, Alvar Pihlapuu was appointed as a new Member of the Management Board.",
+        "importance": "MEDIUM",
+        "source_evidence": "Note 26 (page 120)",
+        "origin_draft_ids": [
+          "D11"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K5",
+      "K8",
+      "K9",
+      "K12"
+    ],
+    "completeness_justification": "The candidate summary adequately covers the core material meaning of K1 (net profit, ROE, cost-to-income), K2 (loan portfolio growth), K3 (customer deposits), K4 (customer base growth), K6 (covered bonds and EIB guarantee), K7 (capital ratios), K10 (dividends), and K11 (subordinated loan from EEEF). However, it omits the strategic targets outlined in K5, sustainability initiatives described in K8, product/service expansions listed in K9, and the management board appointment in K12. While several important elements are missing, the main financial performance picture is captured, justifying a 'Generally yes' score.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support each other without contradictions. The summary follows a clear structure: starting with overall performance, then detailing income and expenses, followed by business volume growth, strategic actions, and ending with capital and shareholder information. There are no self-contradictions, logical gaps, or significant organizational issues. While there is a minor repetition in the mention of growth in S8 and S9, it does not materially reduce clarity. The arithmetic differences between segment figures and consolidated totals are not contradictions because the candidate does not claim they are exhaustive additive components of the same total."
+  },
+  "usage": {
+    "input_tokens_total": 205816,
+    "output_tokens_total_including_reasoning": 8009,
+    "total_tokens": 213825,
+    "latency_seconds_total": 51.17
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 203003,
+    "output_tokens_total_including_reasoning": 68888,
+    "total_tokens": 271891,
+    "latency_seconds_total": 232.98
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_3.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_3_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_3.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_3.json",
+    "raw_results": {
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_3_zero_shot_gemini.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_3_zero_shot_gemini.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_3_zero_shot_gemini.json"
+    }
+  }
+}

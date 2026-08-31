@@ -1,0 +1,167 @@
+{
+  "status": "success",
+  "metadata": {
+    "timestamp": "2026-08-27T22:20:27.050429",
+    "judge_model": "Amazon Nova 2 Lite",
+    "judge_model_id": "us.amazon.nova-2-lite-v1:0",
+    "requested_service_tier": "flex",
+    "resolved_service_tier": {
+      "type": "flex"
+    },
+    "judge_reasoning_enabled": false,
+    "judge_reasoning_effort": "off",
+    "candidate_generation_mode": "normal",
+    "generator_model": "Gemini 3.5 Flash-Lite",
+    "candidate_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs\\annual_report\\report_annual_22_few_shot_gemini.txt",
+    "evaluation_type": "completeness",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "prompt_hash": "72a3a40480f00ce6",
+    "candidate_hash": "f46f86452db59518",
+    "sentence_map_hash": "b79c5e260429194b",
+    "source_file": null,
+    "source_hash": null,
+    "key_information_hash": "1cf7f33b6316149e",
+    "key_information_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_22.json"
+  },
+  "candidate_sentence_map": {
+    "S1": "The company delivered strong financial performance during the 2025 reporting period, supported by revenue growth, strategic investments, and efficiency improvements.",
+    "S2": "Group sales reached €72.48 million, representing an increase of 11.4% or €7.40 million compared to the previous year.",
+    "S3": "Revenue from water services rose by 6.9% to €62.31 million, driven primarily by higher private customer sales within the main service area following tariff changes and increased consumption.",
+    "S4": "Construction services revenue experienced significant growth, increasing by 62.0% to €8.46 million due to higher turnover from pipe and external road construction services.",
+    "S5": "Profitability improved across all major indicators during the period.",
+    "S6": "Gross profit increased by 10.5% to €29.52 million, while operating profit before depreciation and amortisation, or EBITDA, grew by 12.5% to €30.95 million.",
+    "S7": "Operating profit rose by 11.8% to €21.22 million.",
+    "S8": "Profit before taxes increased by 18.0% to €17.43 million, benefiting from lower Euribor rates that reduced net financial expenses to €3.78 million.",
+    "S9": "Net profit for the period grew by 7.2% to €14.24 million, reflecting a moderate impact from an increased income tax rate on dividend payments.",
+    "S10": "Earnings per share rose to €0.71 compared with €0.66 in the prior year.",
+    "S11": "The group's financial results and operational continuity were significantly supported by ongoing strategic developments and capital investments.",
+    "S12": "During 2025, the company invested €55.74 million in fixed assets, exceeding the previous year's level, to ensure sustainable infrastructure and service continuity.",
+    "S13": "A key operational milestone was the full capacity commissioning of a combined heat and power plant at the wastewater treatment plant, which produced all required heat and over half of the facility's electricity needs, successfully reducing purchased electricity costs and overall energy consumption.",
+    "S14": "Total debt to assets stood at 66.02% at the end of the year, with total outstanding loans reaching €160 million following additional drawdowns under existing and new financing agreements.",
+    "S15": "Overall, the reporting period was characterized by robust financial growth, enhanced operational efficiency through renewable energy utilization, and continued strategic infrastructure development."
+  },
+  "usage": {
+    "input_tokens": 1834,
+    "output_tokens_including_reasoning": 473,
+    "total_tokens": 2307
+  },
+  "latency_seconds": 2.73,
+  "logical_requests": 1,
+  "full_evaluation_requests": 1,
+  "targeted_repair_requests": 0,
+  "json_format_repair_requests": 0,
+  "json_format_recovery": {
+    "full_response": {
+      "performed": false,
+      "context": "completeness: full Judge response",
+      "original_parse_error": null
+    },
+    "targeted_repair": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "numerical_only_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    }
+  },
+  "numerical_recovery_strategy": null,
+  "stop_reason": "end_turn",
+  "reasoning": {
+    "returned": false,
+    "content": []
+  },
+  "model_output_text": "```json\n{\n  \"coverage_results\": [\n    {\n      \"id\": \"K1\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S2\", \"S7\", \"S9\", \"S12\"]\n    },\n    {\n      \"id\": \"K2\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K3\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S13\"]\n    },\n    {\n      \"id\": \"K4\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K5\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K6\",\n      \"coverage\": \"PRESENT\",\n      \"candidate_sentence_ids\": [\"S14\"]\n    },\n    {\n      \"id\": \"K7\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    },\n    {\n      \"id\": \"K8\",\n      \"coverage\": \"MISSING\",\n      \"candidate_sentence_ids\": []\n    }\n  ],\n  \"score\": 1,\n  \"label\": \"Not generally\",\n  \"missing_or_partial_key_information\": [\"K2\", \"K4\", \"K5\", \"K7\", \"K8\"],\n  \"justification\": \"K1 is PRESENT as the candidate covers revenue growth (11.4% to €72.48M), operating profit increase (11.8% to €21.22M), net profit growth (7.2% to €14.24M), and €55.74M fixed asset investment. K3 is PRESENT with mention of the combined heat and power plant reducing electricity costs. K6 is PRESENT showing €160M loans. However, K2 (customer revenue mix shift), K4 (infrastructure modernization details), K5 (drinking water quality compliance, environmental initiatives, and climate targets), K7 (dividend policy details), and K8 (2026 strategic priorities) are all MISSING from the candidate summary. With only 3 out of 8 key information units adequately covered and several HIGH importance items missing, the overall coverage is insufficient.\"\n}\n```",
+  "evaluation": {
+    "coverage_results": [
+      {
+        "id": "K1",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S2",
+          "S7",
+          "S9",
+          "S12"
+        ]
+      },
+      {
+        "id": "K2",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K3",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S13"
+        ]
+      },
+      {
+        "id": "K4",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K5",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K6",
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ]
+      },
+      {
+        "id": "K7",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      },
+      {
+        "id": "K8",
+        "coverage": "MISSING",
+        "candidate_sentence_ids": []
+      }
+    ],
+    "score": 1,
+    "label": "Not generally",
+    "missing_or_partial_key_information": [
+      "K2",
+      "K4",
+      "K5",
+      "K7",
+      "K8"
+    ],
+    "justification": "K1 is PRESENT as the candidate covers revenue growth (11.4% to €72.48M), operating profit increase (11.8% to €21.22M), net profit growth (7.2% to €14.24M), and €55.74M fixed asset investment. K3 is PRESENT with mention of the combined heat and power plant reducing electricity costs. K6 is PRESENT showing €160M loans. However, K2 (customer revenue mix shift), K4 (infrastructure modernization details), K5 (drinking water quality compliance, environmental initiatives, and climate targets), K7 (dividend policy details), and K8 (2026 strategic priorities) are all MISSING from the candidate summary. With only 3 out of 8 key information units adequately covered and several HIGH importance items missing, the overall coverage is insufficient."
+  },
+  "numerical_coverage": null,
+  "targeted_repair": {
+    "performed": false,
+    "accepted_non_numerical_sentence_ids": [],
+    "unresolved_sentence_ids": [],
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "numerical_only_recovery": {
+    "performed": false,
+    "model_output_text": null,
+    "evaluation": null,
+    "json_format_recovery": {
+      "performed": false,
+      "context": null,
+      "original_parse_error": null
+    },
+    "usage": null
+  },
+  "validation_errors": [],
+  "parse_error": null
+}

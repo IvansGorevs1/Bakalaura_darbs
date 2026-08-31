@@ -1,0 +1,759 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\annual_report\\report_annual_15_zero_shot_qwen36.txt",
+    "report": "report_annual_15.md",
+    "report_type": "annual_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Merko Ehitus Group recorded consolidated revenue of EUR 310.9 million for the financial year 2025, a 42.3% decline from EUR 539.0 million in 2024.",
+    "S2": "The reduction stemmed mainly from the successful completion of multiple large construction contracts, particularly in defence and renewable energy, which caused construction services revenue to fall by 49.9% to EUR 237.6 million.",
+    "S3": "In contrast, real estate development revenue rose by 13.8% to EUR 73.4 million, driven by higher apartment handovers and steady residential demand, especially in Lithuania.",
+    "S4": "Despite the contracted top line, operational efficiency remained strong, yielding an operating profit of EUR 34.3 million and a net profit of EUR 39.9 million.",
+    "S5": "Profitability ratios improved relative to turnover, with net margin expanding to 12.8% from 12.0% and operating margin settling at 11.0%.",
+    "S6": "EBITDA decreased to EUR 37.5 million, while return on equity stood at 15.6%.",
+    "S7": "The group’s balance sheet reinforced its financial resilience, with total assets moderating to EUR 415.1 million and equity growing to EUR 260.6 million.",
+    "S8": "This strengthened the equity ratio to 62.8% from 56.9% and maintained a conservative debt ratio of 8.0%.",
+    "S9": "Cash and cash equivalents declined to EUR 41.4 million, reflecting increased working capital tied to real estate inventories and shareholder returns.",
+    "S10": "The Management Board proposes a dividend of EUR 22.1 million for 2025.",
+    "S11": "Market conditions during the period were marked by prolonged economic uncertainty, elevated borrowing costs, and cautious consumer sentiment across Estonia and Latvia, although Lithuania exhibited greater resilience.",
+    "S12": "Public sector procurement, heavily focused on national defence and critical infrastructure, partially offset subdued private investment.",
+    "S13": "Strategically, the group maintained a selective tendering policy, prioritizing projects with optimal risk-return profiles rather than pursuing volume growth.",
+    "S14": "Contract signings picked up notably in the second half of 2025, bolstering the secured order book to EUR 466.9 million from EUR 340.6 million.",
+    "S15": "Key forthcoming projects include multi-phase defence facilities in Lithuania, which will phase into revenue streams from 2026 onward.",
+    "S16": "Additionally, equity income from joint ventures, particularly network operator Connecto, accounted for approximately one quarter of consolidated net profit.",
+    "S17": "Looking forward, industry forecasts indicate single-digit construction market growth in the Baltics for 2026, supported by residential development, continued defence infrastructure spending, and progressing Rail Baltica sections.",
+    "S18": "The combination of a robust order backlog, prudent capital management, and adaptive segmental strategies positions the group to navigate near-term volatility while capturing emerging public-sector opportunities."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_15.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_15.json",
+    "key_information_hash": "d4cb05a0edb8290f",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 18,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 18
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 11,
+      "incorrect": 0,
+      "total": 11
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 5,
+      "partially_present": 0,
+      "missing": 3,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Merko Ehitus Group recorded consolidated revenue of EUR 310.9 million for the financial year 2025, a 42.3% decline from EUR 539.0 million in 2024.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Income Statement shows revenue of 310,941 thousand EUR (310.9 million) in 2025 vs 539,049 thousand EUR (539.0 million) in 2024. The calculated decline is (539,049 - 310,941)/539,049 = 42.3%.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus Group recorded consolidated revenue of EUR 310.9 million for the financial year 2025, a 42.3% decline from EUR 539.0 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "The reduction stemmed mainly from the successful completion of multiple large construction contracts, particularly in defence and renewable energy, which caused construction services revenue to fall by 49.9% to EUR 237.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states construction services revenue was EUR 237,568 thousand (237.6 million) in 2025 vs EUR 474,557 thousand (474.6 million) in 2024. The decline is (474,557 - 237,568)/474,557 = 49.9%. The report attributes this to completion of major contracts in defence/renewables.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The reduction stemmed mainly from the successful completion of multiple large construction contracts, particularly in defence and renewable energy, which caused construction services revenue to fall by 49.9% to EUR 237.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "In contrast, real estate development revenue rose by 13.8% to EUR 73.4 million, driven by higher apartment handovers and steady residential demand, especially in Lithuania.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report shows real estate development revenue of EUR 73,373 thousand (73.4 million) in 2025 vs EUR 64,492 thousand (64.5 million) in 2024. The increase is (73,373 - 64,492)/64,492 = 13.8%. The report cites higher apartment handovers and Lithuanian market resilience.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, real estate development revenue rose by 13.8% to EUR 73.4 million, driven by higher apartment handovers and steady residential demand, especially in Lithuania."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Despite the contracted top line, operational efficiency remained strong, yielding an operating profit of EUR 34.3 million and a net profit of EUR 39.9 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Income Statement shows operating profit of EUR 34,343 thousand (34.3 million) and net profit of EUR 39,918 thousand (39.9 million) in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the contracted top line, operational efficiency remained strong, yielding an operating profit of EUR 34.3 million and a net profit of EUR 39.9 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Profitability ratios improved relative to turnover, with net margin expanding to 12.8% from 12.0% and operating margin settling at 11.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Indicators table shows net margin of 12.8% in 2025 vs 12.0% in 2024 and operating margin of 11.0% in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Profitability ratios improved relative to turnover, with net margin expanding to 12.8% from 12.0% and operating margin settling at 11.0%."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBITDA decreased to EUR 37.5 million, while return on equity stood at 15.6%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Indicators table shows EBITDA of EUR 37.5 million and ROE of 15.6% for 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "EBITDA decreased to EUR 37.5 million, while return on equity stood at 15.6%."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "The group’s balance sheet reinforced its financial resilience, with total assets moderating to EUR 415.1 million and equity growing to EUR 260.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Consolidated Statement of Financial Position shows total assets of EUR 415,036 thousand (415.1 million) and equity of EUR 260,566 thousand (260.6 million) as at 31.12.2025.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The group’s balance sheet reinforced its financial resilience, with total assets moderating to EUR 415.1 million and equity growing to EUR 260.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "This strengthened the equity ratio to 62.8% from 56.9% and maintained a conservative debt ratio of 8.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "Key Indicators table shows equity ratio of 62.8% in 2025 vs 56.9% in 2024 and debt ratio of 8.0% in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "This strengthened the equity ratio to 62.8% from 56.9% and maintained a conservative debt ratio of 8.0%."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Cash and cash equivalents declined to EUR 41.4 million, reflecting increased working capital tied to real estate inventories and shareholder returns.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 14 shows cash and cash equivalents of EUR 41,424 thousand (41.4 million) as at 31.12.2025. The Management Report attributes the decline to increased working capital and dividends.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Cash and cash equivalents declined to EUR 41.4 million, reflecting increased working capital tied to real estate inventories and shareholder returns."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The Management Board proposes a dividend of EUR 22.1 million for 2025.",
+        "label": "SUPPORTED",
+        "source_evidence": "Profit Allocation Proposal shows proposed dividends of EUR 22,125 thousand (22.1 million) for 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The Management Board proposes a dividend of EUR 22.1 million for 2025."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Market conditions during the period were marked by prolonged economic uncertainty, elevated borrowing costs, and cautious consumer sentiment across Estonia and Latvia, although Lithuania exhibited greater resilience.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report's 'Economic Environment' section describes prolonged uncertainty, high borrowing costs, and cautious consumers in Estonia/Latvia, with Lithuania showing greater resilience.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Market conditions during the period were marked by prolonged economic uncertainty, elevated borrowing costs, and cautious consumer sentiment across Estonia and Latvia, although Lithuania exhibited greater resilience."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Public sector procurement, heavily focused on national defence and critical infrastructure, partially offset subdued private investment.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states public sector procurement focused on defence/infrastructure offset subdued private investment.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Public sector procurement, heavily focused on national defence and critical infrastructure, partially offset subdued private investment."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "Strategically, the group maintained a selective tendering policy, prioritizing projects with optimal risk-return profiles rather than pursuing volume growth.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states the group remained selective in tendering, focusing on appropriate risk-return ratios.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "Strategically, the group maintained a selective tendering policy, prioritizing projects with optimal risk-return profiles rather than pursuing volume growth."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Contract signings picked up notably in the second half of 2025, bolstering the secured order book to EUR 466.9 million from EUR 340.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "Note 3 states secured order book was EUR 466,867 thousand (466.9 million) at 31.12.2025 vs EUR 340,589 thousand (340.6 million) at 31.12.2024.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Contract signings picked up notably in the second half of 2025, bolstering the secured order book to EUR 466.9 million from EUR 340.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "Key forthcoming projects include multi-phase defence facilities in Lithuania, which will phase into revenue streams from 2026 onward.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report mentions Rūdninkai defence campus contracts in Lithuania will start contributing to revenue gradually from 2026 onwards.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Key forthcoming projects include multi-phase defence facilities in Lithuania, which will phase into revenue streams from 2026 onward."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Additionally, equity income from joint ventures, particularly network operator Connecto, accounted for approximately one quarter of consolidated net profit.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report states investment in joint venture Connecto accounted for one quarter of consolidated net profit in 2025.",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Additionally, equity income from joint ventures, particularly network operator Connecto, accounted for approximately one quarter of consolidated net profit."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "Looking forward, industry forecasts indicate single-digit construction market growth in the Baltics for 2026, supported by residential development, continued defence infrastructure spending, and progressing Rail Baltica sections.",
+        "label": "SUPPORTED",
+        "source_evidence": "Outlook section predicts single-digit growth in Baltic construction markets for 2026, driven by residential development, defence spending, and Rail Baltica progress.",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "Looking forward, industry forecasts indicate single-digit construction market growth in the Baltics for 2026, supported by residential development, continued defence infrastructure spending, and progressing Rail Baltica sections."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "The combination of a robust order backlog, prudent capital management, and adaptive segmental strategies positions the group to navigate near-term volatility while capturing emerging public-sector opportunities.",
+        "label": "SUPPORTED",
+        "source_evidence": "Management Report concludes that the group's strong order book, financial position, and strategic approach position it to navigate volatility and capture public-sector opportunities.",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "The combination of a robust order backlog, prudent capital management, and adaptive segmental strategies positions the group to navigate near-term volatility while capturing emerging public-sector opportunities."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "Consolidated revenue of EUR 310.9 million in 2025 represents a 42.3% decline from EUR 539.0 million in 2024.",
+        "candidate_value": "310.9 million EUR (2025), 539.0 million EUR (2024), 42.3% decline",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "310,941 thousand EUR (2025), 539,049 thousand EUR (2024)",
+        "source_evidence": "Consolidated Income Statement: Revenue 2025 = 310,941 thousand EUR, 2024 = 539,049 thousand EUR. Calculated decline = (539,049 - 310,941)/539,049 = 42.3%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus Group recorded consolidated revenue of EUR 310.9 million for the financial year 2025, a 42.3% decline from EUR 539.0 million in 2024."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Construction services revenue fell by 49.9% to EUR 237.6 million.",
+        "candidate_value": "237.6 million EUR, 49.9% decline",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "237,568 thousand EUR (2025), 474,557 thousand EUR (2024)",
+        "source_evidence": "Management Report: Construction service revenue 2025 = 237,568 thousand EUR, 2024 = 474,557 thousand EUR. Decline = (474,557 - 237,568)/474,557 = 49.9%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "The reduction stemmed mainly from the successful completion of multiple large construction contracts, particularly in defence and renewable energy, which caused construction services revenue to fall by 49.9% to EUR 237.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Real estate development revenue rose by 13.8% to EUR 73.4 million.",
+        "candidate_value": "73.4 million EUR, 13.8% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "73,373 thousand EUR (2025), 64,492 thousand EUR (2024)",
+        "source_evidence": "Management Report: Real estate development revenue 2025 = 73,373 thousand EUR, 2024 = 64,492 thousand EUR. Increase = (73,373 - 64,492)/64,492 = 13.8%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "In contrast, real estate development revenue rose by 13.8% to EUR 73.4 million, driven by higher apartment handovers and steady residential demand, especially in Lithuania."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Operating profit was EUR 34.3 million and net profit was EUR 39.9 million in 2025.",
+        "candidate_value": "34.3 million EUR operating profit, 39.9 million EUR net profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "34,343 thousand EUR operating profit, 39,918 thousand EUR net profit",
+        "source_evidence": "Consolidated Income Statement: Operating profit 2025 = 34,343 thousand EUR, Net profit 2025 = 39,918 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Despite the contracted top line, operational efficiency remained strong, yielding an operating profit of EUR 34.3 million and a net profit of EUR 39.9 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Net margin expanded to 12.8% from 12.0% and operating margin settled at 11.0%.",
+        "candidate_value": "12.8% net margin (2025 vs 12.0% in 2024), 11.0% operating margin (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12.8% net margin 2025, 12.0% net margin 2024, 11.0% operating margin 2025",
+        "source_evidence": "Key Indicators table: Net margin 2025 = 12.8%, Net margin 2024 = 12.0%, Operating margin 2025 = 11.0%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "Profitability ratios improved relative to turnover, with net margin expanding to 12.8% from 12.0% and operating margin settling at 11.0%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "EBITDA decreased to EUR 37.5 million, while return on equity stood at 15.6%.",
+        "candidate_value": "37.5 million EUR EBITDA, 15.6% ROE",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "37.5 million EUR EBITDA, 15.6% ROE",
+        "source_evidence": "Key Indicators table: EBITDA 2025 = 37.5 million EUR, ROE 2025 = 15.6%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "EBITDA decreased to EUR 37.5 million, while return on equity stood at 15.6%."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Total assets moderated to EUR 415.1 million and equity grew to EUR 260.6 million.",
+        "candidate_value": "415.1 million EUR total assets, 260.6 million EUR equity",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "415,036 thousand EUR total assets, 260,566 thousand EUR equity",
+        "source_evidence": "Consolidated Statement of Financial Position: Total assets 31.12.2025 = 415,036 thousand EUR, Equity 31.12.2025 = 260,566 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "The group’s balance sheet reinforced its financial resilience, with total assets moderating to EUR 415.1 million and equity growing to EUR 260.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Equity ratio strengthened to 62.8% from 56.9% and debt ratio remained at 8.0%.",
+        "candidate_value": "62.8% equity ratio (2025 vs 56.9% in 2024), 8.0% debt ratio (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "62.8% equity ratio 2025, 56.9% equity ratio 2024, 8.0% debt ratio 2025",
+        "source_evidence": "Key Indicators table: Equity ratio 2025 = 62.8%, Equity ratio 2024 = 56.9%, Debt ratio 2025 = 8.0%.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "This strengthened the equity ratio to 62.8% from 56.9% and maintained a conservative debt ratio of 8.0%."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Cash and cash equivalents declined to EUR 41.4 million.",
+        "candidate_value": "41.4 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "41,424 thousand EUR",
+        "source_evidence": "Note 14: Cash and cash equivalents 31.12.2025 = 41,424 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Cash and cash equivalents declined to EUR 41.4 million, reflecting increased working capital tied to real estate inventories and shareholder returns."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Proposed dividend for 2025 is EUR 22.1 million.",
+        "candidate_value": "22.1 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "22,125 thousand EUR",
+        "source_evidence": "Profit Allocation Proposal: Proposed dividends = EUR 22,125 thousand (22.1 million).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The Management Board proposes a dividend of EUR 22.1 million for 2025."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "Secured order book increased to EUR 466.9 million from EUR 340.6 million.",
+        "candidate_value": "466.9 million EUR (2025), 340.6 million EUR (2024)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "466,867 thousand EUR (2025), 340,589 thousand EUR (2024)",
+        "source_evidence": "Note 3: Secured order book 31.12.2025 = 466,867 thousand EUR, 31.12.2024 = 340,589 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Contract signings picked up notably in the second half of 2025, bolstering the secured order book to EUR 466.9 million from EUR 340.6 million."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Group revenue and profitability declined significantly in 2025 compared to 2024, with revenue falling 42.3% to EUR 310.9 million, gross profit decreasing to EUR 55.9 million (18.0% margin) from EUR 95.9 million (17.8% margin), operating profit dropping to EUR 34.3 million (11.0% margin) from EUR 72.5 million (13.4% margin), and net profit attributable to equity holders falling to EUR 39.9 million from EUR 64.7 million.",
+        "importance": "HIGH",
+        "source_evidence": "KEY INDICATORS table showing Revenue (million EUR) 310.9 (2025) vs 539.0 (2024); Gross profit 55.9 (2025) vs 95.9 (2024); Operating profit 34.3 (2025) vs 72.5 (2024); Net profit 39.9 (2025) vs 64.7 (2024). Calculated margins align with reported figures.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus Group recorded consolidated revenue of EUR 310.9 million for the financial year 2025, a 42.3% decline from EUR 539.0 million in 2024."
+          },
+          {
+            "id": "S4",
+            "text": "Despite the contracted top line, operational efficiency remained strong, yielding an operating profit of EUR 34.3 million and a net profit of EUR 39.9 million."
+          },
+          {
+            "id": "S5",
+            "text": "Profitability ratios improved relative to turnover, with net margin expanding to 12.8% from 12.0% and operating margin settling at 11.0%."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "The 2025 revenue decline was driven by the completion of major projects initiated in prior years during 2025, combined with a slower pace of new contract signing in 2024 and the first half of 2025; this project cycle effect compressed profitability despite eventual improvement in contract signing activity later in 2025.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of the Chairman of the Management Board: 'In 2024, we were engaged in several large projects that had been started in earlier years, and these were completed as planned during 2025. The pace of signing new contracts was slower in 2024 and in the first half of 2025.'",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K3",
+        "information": "A major improvement in contract signing during the second half of 2025 resulted in the execution of Merko's largest-ever contracts for the Rūdninkai defence campus in Lithuania, which will contribute gradually to revenue starting in 2026 and provide stable workload for years ahead.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of the Chairman of the Management Board: 'the second half of 2025 showed a clear improvement, and preparatory efforts resulted in new major contracts... signing of the largest contracts in Merko’s history for the construction of two phases of the Rūdninkai defence campus... will begin to contribute to revenue gradually in 2026 and onwards.'",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "Key forthcoming projects include multi-phase defence facilities in Lithuania, which will phase into revenue streams from 2026 onward."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "The company expanded its public-private partnership (PPP) business through new real estate development agreements signed in 2025 for the Krulli quarter (Tallinn) and Uus-Karlowa quarter (Tartu), alongside continued success in the Noblessner area, enhancing long-term workload stability and diversification.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of the Chairman of the Management Board: 'Alongside the successful real estate development partnership in the Noblessner area of Tallinn, we signed two similar cooperation agreements in 2025 for the development of the Krulli quarter in Tallinn and the Uus-Karlowa quarter in Tartu. The Rūdninkai project marks a significant expansion of our PPP business Lithuania.'",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K5",
+        "information": "Strategic investment in network companies operating under the Connecto brand delivered exceptional returns, accounting for one quarter (25%) of Merko's consolidated net profit in 2025 and substantially expanding operations in Latvia and Lithuania.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of the Chairman of the Management Board: 'A strategic decision made several years ago to invest in network companies operating under the Connecto brand has also clearly proven its value... in 2025 this investment in the joint venture accounted for as much as one quarter of Merko’s consolidated net profit.'",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Additionally, equity income from joint ventures, particularly network operator Connecto, accounted for approximately one quarter of consolidated net profit."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Residential construction activity surged due to improved consumer confidence across the Baltic region, with apartment construction starts exceeding three times the 2024 level, leading to 358 apartments sold (EUR 67.8 million) compared to 323 apartments (EUR 58.9 million) in 2024 and inventory buildup to 1,169 units.",
+        "importance": "HIGH",
+        "source_evidence": "Statement of the Chairman of the Management Board: 'in 2025 we were able to start construction of more than three times as many new apartments as in 2024.' Operating result section: 'A total of 358 apartments (incl. 11 apartments in a joint venture) were sold in 2025 at the total value of EUR 67.8 million... compared to 323 apartments... and EUR 58.9 million in 2024.' Consolidated Statement of Financial Position: Inventory section shows apartment inventory of 1,169 units as at 31.12.2025.",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K7",
+        "information": "Liquidity decreased with cash and cash equivalents falling to EUR 41.4 million (from EUR 91.9 million), while the equity ratio strengthened to 62.8% (from 56.9%) and debt ratio remained moderate at 8.0%; dividend payments of EUR 33.6 million impacted financing cash flows.",
+        "importance": "HIGH",
+        "source_evidence": "CONSOLIDATED STATEMENT OF FINANCIAL POSITION: Cash and cash equivalents 41,424 (2025) vs 91,879 (2024); Equity ratio 62.8% (2025) vs 56.9% (2024); Debt ratio 8.0% (2025) vs 7.5% (2024). PROFIT ALLOCATION PROPOSAL: Dividends paid (EUR 1.90 per share) totalled EUR 33,630 thousand. CASH FLOW STATEMENT: Financing activities included dividend paid of EUR 33,630 thousand.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8",
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "This strengthened the equity ratio to 62.8% from 56.9% and maintained a conservative debt ratio of 8.0%."
+          },
+          {
+            "id": "S9",
+            "text": "Cash and cash equivalents declined to EUR 41.4 million, reflecting increased working capital tied to real estate inventories and shareholder returns."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "The secured order book increased substantially to EUR 466.9 million from EUR 340.6 million as at end-2024, indicating a robust future revenue pipeline despite 2025's revenue challenges.",
+        "importance": "HIGH",
+        "source_evidence": "KEY INDICATORS table: Order book (million EUR) 466.9 (2025) vs 340.6 (2024).",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "Contract signings picked up notably in the second half of 2025, bolstering the secured order book to EUR 466.9 million from EUR 340.6 million."
+          }
+        ]
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K4",
+      "K6"
+    ],
+    "completeness_justification": "K1, K3, K5, K7, and K8 are fully represented with supporting sentences. K2 and K4 are missing entirely, as the candidate does not explain the project cycle effect driving the revenue decline or detail the specific public-private partnership expansions. K6 is also missing, as there is no mention of residential construction activity surge, apartment sales figures, or inventory buildup. The overall coverage captures most of the high-importance financial and strategic elements, but the absence of three key criteria (especially K2 which explains the core reason for the decline) prevents the summary from achieving a 'Yes' rating. The main picture is captured, but important contextual and operational details are omitted.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected and support each other without contradiction. The narrative flows from revenue performance to profitability, balance sheet strength, market conditions, strategic approach, and future outlook. Explanations for changes (e.g., contract completions reducing construction revenue, real estate growth, efficiency driving profits) are clear and consistent. No material logical gaps, contradictions, or organizational problems are present. The summary forms a unified whole with appropriate transitions between topics."
+  },
+  "usage": {
+    "input_tokens_total": 145093,
+    "output_tokens_total_including_reasoning": 5353,
+    "total_tokens": 150446,
+    "latency_seconds_total": 34.49
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 284448,
+    "output_tokens_total_including_reasoning": 57858,
+    "total_tokens": 342306,
+    "latency_seconds_total": 205.15
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\annual_report\\report_annual_15.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\annual_report_reference\\reference_annual_15_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_draft\\report_annual_15.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\annual_report\\key_information_verified\\report_annual_15.json",
+    "raw_results": {
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\coherence\\report_annual_15_zero_shot_qwen36.json",
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\factual_numerical\\report_annual_15_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\annual_report\\raw\\completeness\\report_annual_15_zero_shot_qwen36.json"
+    }
+  }
+}

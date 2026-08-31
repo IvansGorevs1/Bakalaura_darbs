@@ -1,0 +1,984 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_14_zero_shot_openai.txt",
+    "report": "report_quarterly_14.md",
+    "report_type": "quarterly_report",
+    "generator_key": "openai",
+    "generator_model": "GPT-5.6 Luna",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier.",
+    "S2": "Second-quarter revenue increased to EUR 92.7 million from EUR 82.6 million, as activity increased in both construction services and real estate development and several large projects entered more active construction phases.",
+    "S3": "Profitability declined substantially in the first half.",
+    "S4": "Gross profit was EUR 17.4 million, compared with EUR 29.1 million in the comparable period, while operating profit fell to EUR 8.4 million from EUR 18.6 million.",
+    "S5": "EBITDA decreased to EUR 10.3 million from EUR 20.1 million.",
+    "S6": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%.",
+    "S7": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%.",
+    "S8": "Second-quarter net profit was EUR 8.5 million, down from EUR 11.2 million.",
+    "S9": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%.",
+    "S10": "The report attributes the weaker profitability to the expiration of successful contracts from earlier periods, a return to more typical margins in a highly competitive environment and first-quarter seasonality.",
+    "S11": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million.",
+    "S12": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter.",
+    "S13": "The main positive development was the construction pipeline.",
+    "S14": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million.",
+    "S15": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter.",
+    "S16": "Major projects included Rail Baltica, defence facilities, wind-farm infrastructure and the Krulli Quarter developments in Tallinn.",
+    "S17": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million.",
+    "S18": "Market conditions remained competitive, with private-sector clients cautious and customers price-sensitive.",
+    "S19": "Construction input prices increased during the second quarter, with continued inflationary and geopolitical pressures expected.",
+    "S20": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects.",
+    "S21": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million.",
+    "S22": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_14.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_14.json",
+    "key_information_hash": "7951e205fbec217a",
+    "key_information_units_total": 10
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 22,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 22
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 16,
+      "incorrect": 0,
+      "total": 16
+    },
+    "completeness": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes",
+      "present": 8,
+      "partially_present": 0,
+      "missing": 2,
+      "total_units": 10
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows revenue for 6M 2026: 149,893 thousand EUR (≈149.9 million) vs 167,882 thousand EUR (≈167.9 million) in 6M 2025. MANAGEMENT REPORT states: '6 months' revenue decreased by 10.7% compared to same period last year.'",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Second-quarter revenue increased to EUR 92.7 million from EUR 82.6 million, as activity increased in both construction services and real estate development and several large projects entered more active construction phases.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows Q2 2026 revenue: 92,670 thousand EUR (≈92.7 million) vs Q2 2025: 82,646 thousand EUR (≈82.6 million). MANAGEMENT REPORT: 'Merko Ehitus generated revenue of EUR 93 million in the second quarter of 2026... Several large-scale projects secured last year entered a more active construction phase.'",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Second-quarter revenue increased to EUR 92.7 million from EUR 82.6 million, as activity increased in both construction services and real estate development and several large projects entered more active construction phases."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Profitability declined substantially in the first half.",
+        "label": "SUPPORTED",
+        "source_evidence": "RATIOS table shows operating profit margin fell from 7.3% (6M 2025) to 2.6% (6M 2026); net profit margin fell from 12.9% to 8.6%. MANAGEMENT REPORT attributes this to 'expiration of successful contracts... return to sector's more typical margins.'",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Profitability declined substantially in the first half."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit was EUR 17.4 million, compared with EUR 29.1 million in the comparable period, while operating profit fell to EUR 8.4 million from EUR 18.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows gross profit: 17,385 thousand EUR (≈17.4 million) in 6M 2026 vs 29,071 thousand EUR (≈29.1 million) in 6M 2025. Operating profit: 8,359 thousand EUR (≈8.4 million) vs 18,610 thousand EUR (≈18.6 million).",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit was EUR 17.4 million, compared with EUR 29.1 million in the comparable period, while operating profit fell to EUR 8.4 million from EUR 18.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA decreased to EUR 10.3 million from EUR 20.1 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "RATIOS table shows EBITDA: 10.3 million EUR (6M 2026) vs 20.1 million EUR (6M 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA decreased to EUR 10.3 million from EUR 20.1 million."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows pre-tax profit: 10,787 thousand EUR (≈10.8 million) vs 23,511 thousand EUR (≈23.5 million). RATIOS table confirms pre-tax margin: 7.2% (6M 2026) vs 14.0% (6M 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows net profit attributable to shareholders: 12,843 thousand EUR (≈12.8 million) vs 21,676 thousand EUR (≈21.7 million). RATIOS table confirms net profit margin: 8.6% (6M 2026) vs 12.9% (6M 2025).",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Second-quarter net profit was EUR 8.5 million, down from EUR 11.2 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME shows Q2 2026 net profit: 8,500 thousand EUR (≈8.5 million) vs Q2 2025: 11,216 thousand EUR (≈11.2 million).",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Second-quarter net profit was EUR 8.5 million, down from EUR 11.2 million."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%.",
+        "label": "SUPPORTED",
+        "source_evidence": "SEGMENT REPORT table shows construction service revenue: 118,315 thousand EUR (≈118.3 million) in 6M 2026 vs 120,094 thousand EUR (≈120.1 million) in 6M 2025. Operating profit: 3,042 thousand EUR (≈3.0 million) vs 8,808 thousand EUR (≈8.8 million). Margin fell from 7.3% to 2.6% as stated.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "The report attributes the weaker profitability to the expiration of successful contracts from earlier periods, a return to more typical margins in a highly competitive environment and first-quarter seasonality.",
+        "label": "SUPPORTED",
+        "source_evidence": "SEGMENT REPORT: 'The operating profit margin was mainly impacted by the expiration of successful contracts highlighted in previous periods and a return to sector's more typical margins in a highly competitive environment, in half-year totals still affected by Q1 seasonality.'",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "The report attributes the weaker profitability to the expiration of successful contracts from earlier periods, a return to more typical margins in a highly competitive environment and first-quarter seasonality."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "SEGMENT REPORT table shows real estate development revenue: 31,578 thousand EUR (≈31.6 million) in 6M 2026 vs 47,788 thousand EUR (≈47.8 million) in 6M 2025 (33.9% decrease). Operating profit: 7,021 thousand EUR (≈7.0 million) vs 11,862 thousand EUR (≈11.9 million) (40.8% decrease).",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT: 'In 6 months 2026, the group sold a total of 120 apartments... in 6 months 2025, the group sold 222 apartments.' REAL ESTATE DEVELOPMENT section states Q2 2026 apartment revenue: EUR 20.6 million vs Q2 2025: EUR 20.2 million.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "The main positive development was the construction pipeline.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT emphasizes record secured order book and new contracts: 'As of the end of the first half of the year, the company’s secured order-book reached an all-time high of EUR 836 million.'",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "The main positive development was the construction pipeline."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "CASH FLOWS section: 'As of 30 June 2026, the group’s secured order book was EUR 835.7 million (30 June 2025: EUR 443.8 million).' CALCULATION: (835.7-443.8)/443.8 ≈ 88% increase.",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter.",
+        "label": "SUPPORTED",
+        "source_evidence": "SECURED ORDER BOOK section: 'In 6 months 2026, EUR 486.4 million worth of new contracts were signed... In Q2 2026, new contracts were signed in the amount of EUR 79.6 million.' EUR 79.6 million rounds to EUR 80 million.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter."
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "candidate_sentence_ids": [
+          "S16"
+        ],
+        "claim": "Major projects included Rail Baltica, defence facilities, wind-farm infrastructure and the Krulli Quarter developments in Tallinn.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT lists these projects explicitly: 'In Estonia, the group’s larger construction projects... included... Rail Baltica Ülemiste passenger terminal... Krulli quarter... In Lithuania... Rūdninkai Defence Force Campus... wind farm infrastructure... In Latvia... defence campus... wind farm infrastructure.'",
+        "candidate_sentences": [
+          {
+            "id": "S16",
+            "text": "Major projects included Rail Baltica, defence facilities, wind-farm infrastructure and the Krulli Quarter developments in Tallinn."
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT: 'In early July, completed all preparatory stages... The construction cost of the two phases exceeds 370 million euros in total... construction activities have now commenced in full scale.' (July 2026 follows 30 June reporting date).",
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million."
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "candidate_sentence_ids": [
+          "S18"
+        ],
+        "claim": "Market conditions remained competitive, with private-sector clients cautious and customers price-sensitive.",
+        "label": "SUPPORTED",
+        "source_evidence": "OUTLOOK SECTION: 'Private sector clients still remain cautious, assessing profitability conservatively and viewing risks as high... customers remain highly price-sensitive.'",
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Market conditions remained competitive, with private-sector clients cautious and customers price-sensitive."
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "candidate_sentence_ids": [
+          "S19"
+        ],
+        "claim": "Construction input prices increased during the second quarter, with continued inflationary and geopolitical pressures expected.",
+        "label": "SUPPORTED",
+        "source_evidence": "MANAGEMENT REPORT: 'The increase in construction input prices that anticipated in the first quarter has materialised... no developments... that would suggest any easing of price pressures... war with Iran... will keep energy prices above their 2025 levels.' OUTLOOK confirms ongoing inflationary pressures.",
+        "candidate_sentences": [
+          {
+            "id": "S19",
+            "text": "Construction input prices increased during the second quarter, with continued inflationary and geopolitical pressures expected."
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects.",
+        "label": "SUPPORTED",
+        "source_evidence": "REAL ESTATE DEVELOPMENT section: 'In 6 months of 2026, the group sold a total of 120 apartments and five commercial units... launched the construction of a total of 204 new apartments... invested a total of EUR 42.6 million in the ongoing development projects.'",
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects."
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "CASH FLOW STATEMENT: 'Total cash flows from operating activities: (31,602) thousand EUR' (≈-EUR 31.6 million). MANAGEMENT REPORT attributes this to 'changes in inventories of EUR 24.1 million.' CASH AND CASH EQUIVALENTS note shows balance: EUR 39,593 thousand (≈39.6 million) as of 30 June 2026.",
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million."
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets.",
+        "label": "SUPPORTED",
+        "source_evidence": "CASH POSITION section: 'As of 30 June 2026, the group’s net debt was EUR 29.6 million... equity of EUR 251.1 million (57.4% of total assets).' BALANCE SHEET confirms equity: EUR 251,141 thousand (≈251.1 million) and total assets: EUR 437,854 thousand (≈437.9 million).",
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier.",
+        "candidate_value": "149.9 million EUR (2026 6M) vs 167.9 million EUR (2025 6M)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "149,893 thousand EUR (2026 6M) vs 167,882 thousand EUR (2025 6M)",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME: Revenue 6M 2026 = 149,893 thousand EUR; 6M 2025 = 167,882 thousand EUR. MANAGEMENT REPORT confirms 10.7% decrease.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Second-quarter revenue increased to EUR 92.7 million from EUR 82.6 million.",
+        "candidate_value": "92.7 million EUR (Q2 2026) vs 82.6 million EUR (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "92,670 thousand EUR (Q2 2026) vs 82,646 thousand EUR (Q2 2025)",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME: Revenue Q2 2026 = 92,670 thousand EUR; Q2 2025 = 82,646 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Second-quarter revenue increased to EUR 92.7 million from EUR 82.6 million, as activity increased in both construction services and real estate development and several large projects entered more active construction phases."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Gross profit was EUR 17.4 million, compared with EUR 29.1 million in the comparable period, while operating profit fell to EUR 8.4 million from EUR 18.6 million.",
+        "candidate_value": "17.4 million EUR (2026 6M) vs 29.1 million EUR (2025 6M) gross profit; 8.4 million EUR (2026 6M) vs 18.6 million EUR (2025 6M) operating profit",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17,385 thousand EUR (2026 6M) vs 29,071 thousand EUR (2025 6M) gross profit; 8,359 thousand EUR (2026 6M) vs 18,610 thousand EUR (2025 6M) operating profit",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME provides these figures directly.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Gross profit was EUR 17.4 million, compared with EUR 29.1 million in the comparable period, while operating profit fell to EUR 8.4 million from EUR 18.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "EBITDA decreased to EUR 10.3 million from EUR 20.1 million.",
+        "candidate_value": "10.3 million EUR (2026 6M) vs 20.1 million EUR (2025 6M)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10,300 thousand EUR (2026 6M) vs 20,100 thousand EUR (2025 6M)",
+        "source_evidence": "RATIOS table: EBITDA 6M 2026 = 10.3 million EUR; 6M 2025 = 20.1 million EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "EBITDA decreased to EUR 10.3 million from EUR 20.1 million."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%.",
+        "candidate_value": "10.8 million EUR (2026 6M) vs 23.5 million EUR (2025 6M); 7.2% vs 14.0% margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10,787 thousand EUR (2026 6M) vs 23,511 thousand EUR (2025 6M); 7.2% vs 14.0% margin",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME: Pre-tax profit 6M 2026 = 10,787 thousand EUR; 6M 2025 = 23,511 thousand EUR. RATIOS table confirms margin figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%.",
+        "candidate_value": "12.8 million EUR (2026 6M) vs 21.7 million EUR (2025 6M); 8.6% vs 12.9% margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "12,843 thousand EUR (2026 6M) vs 21,676 thousand EUR (2025 6M); 8.6% vs 12.9% margin",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME: Net profit attributable to shareholders 6M 2026 = 12,843 thousand EUR; 6M 2025 = 21,676 thousand EUR. RATIOS table confirms margin figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "Second-quarter net profit was EUR 8.5 million, down from EUR 11.2 million.",
+        "candidate_value": "8.5 million EUR (Q2 2026) vs 11.2 million EUR (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8,500 thousand EUR (Q2 2026) vs 11,216 thousand EUR (Q2 2025)",
+        "source_evidence": "CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME: Net profit Q2 2026 = 8,500 thousand EUR; Q2 2025 = 11,216 thousand EUR.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "Second-quarter net profit was EUR 8.5 million, down from EUR 11.2 million."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%.",
+        "candidate_value": "118.3 million EUR (2026 6M) vs prior year; 3.0 million EUR (2026 6M) vs prior year; 2.6% vs 7.3% margin",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "118,315 thousand EUR (2026 6M) vs 120,094 thousand EUR (2025 6M) revenue; 3,042 thousand EUR (2026 6M) vs 8,808 thousand EUR (2025 6M) operating profit; 2.6% vs 7.3% margin",
+        "source_evidence": "SEGMENT REPORT table provides exact figures. Margin calculation matches MANAGEMENT REPORT explanation.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million.",
+        "candidate_value": "31.6 million EUR (2026 6M) vs prior year; 7.0 million EUR (2026 6M) vs prior year",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "31,578 thousand EUR (2026 6M) vs 47,788 thousand EUR (2025 6M) revenue; 7,021 thousand EUR (2026 6M) vs 11,862 thousand EUR (2025 6M) operating profit",
+        "source_evidence": "SEGMENT REPORT table provides exact figures. Percentages align with MANAGEMENT REPORT description.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter.",
+        "candidate_value": "120 apartments (2026 6M) vs 222 apartments (2025 6M); 20.6 million EUR (Q2 2026) vs 20.2 million EUR (Q2 2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "120 apartments (2026 6M) vs 222 apartments (2025 6M); 20,600 thousand EUR (Q2 2026) vs 20,200 thousand EUR (Q2 2025)",
+        "source_evidence": "REAL ESTATE DEVELOPMENT section states apartment sales figures. MANAGEMENT REPORT states Q2 apartment revenue figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million.",
+        "candidate_value": "835.7 million EUR (2026) vs 443.8 million EUR (2025)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "835,700 thousand EUR (2026) vs 443,800 thousand EUR (2025)",
+        "source_evidence": "CASH FLOWS section: 'As of 30 June 2026, the group’s secured order book was EUR 835.7 million (30 June 2025: EUR 443.8 million).'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter.",
+        "candidate_value": "486.4 million EUR (2026 6M) ; 80 million EUR (Q2 2026)",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "486,400 thousand EUR (2026 6M) ; 79,600 thousand EUR (Q2 2026)",
+        "source_evidence": "SECURED ORDER BOOK section: 'In 6 months 2026, EUR 486.4 million worth of new contracts were signed... In Q2 2026, new contracts were signed in the amount of EUR 79.6 million.' 79.6 million rounds to 80 million.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S17"
+        ],
+        "claim": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million.",
+        "candidate_value": "370 million EUR total construction cost",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "370 million EUR",
+        "source_evidence": "MANAGEMENT REPORT: 'The construction cost of the two phases exceeds 370 million euros in total.' Contract entered full force in early July 2026 (after 30 June reporting date).",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S17",
+            "text": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S20"
+        ],
+        "claim": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects.",
+        "candidate_value": "120 apartments; 5 commercial units; 204 apartments launched; 42.6 million EUR investment",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "120 apartments; 5 commercial units; 204 apartments; 42,600 thousand EUR",
+        "source_evidence": "REAL ESTATE DEVELOPMENT section: 'In 6 months of 2026, the group sold a total of 120 apartments and five commercial units... launched the construction of a total of 204 new apartments... invested a total of EUR 42.6 million in the ongoing development projects.'",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S20",
+            "text": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S21"
+        ],
+        "claim": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million.",
+        "candidate_value": "-31.6 million EUR operating cash flow; 39.6 million EUR cash and cash equivalents",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "-31,602 thousand EUR operating cash flow; 39,593 thousand EUR cash and cash equivalents",
+        "source_evidence": "CASH FLOW STATEMENT: 'Total cash flows from operating activities: (31,602) thousand EUR.' CASH AND CASH EQUIVALENTS note: 'Total cash and cash equivalents: 39,593 thousand EUR as of 30 June 2026.' MANAGEMENT REPORT attributes operating cash flow to inventory changes.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S22"
+        ],
+        "claim": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets.",
+        "candidate_value": "29.6 million EUR net debt; 251.1 million EUR equity; 57.4% equity ratio",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "29,600 thousand EUR net debt; 251,141 thousand EUR equity; 57.4% equity ratio",
+        "source_evidence": "CASH POSITION section: 'As of 30 June 2026, the group’s net debt was EUR 29.6 million... equity of EUR 251.1 million (57.4% of total assets).' BALANCE SHEET confirms equity and total assets figures.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S22",
+            "text": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "Headline financial performance: H1 2026 revenue decreased 10.7% YoY to EUR 150 million (Q2: EUR 92.7 million), net profit decreased to EUR 12.8 million (8.6% margin) in H1 2026 from EUR 21.7 million (12.9%) in H1 2025 (Q2: EUR 8.5 million).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Overview of II Quarter and 6 Months Results; Consolidated Statement of Comprehensive Income",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "AS Merko Ehitus reported revenue of EUR 149.9 million for the first six months of 2026, down 10.7% from EUR 167.9 million a year earlier."
+          },
+          {
+            "id": "S7",
+            "text": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Secured order book reached an all-time high of EUR 836 million as of 30 June 2026 (up 88% YoY from EUR 444 million as of 30 June 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Secured Order Book section",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The secured order book reached a record EUR 835.7 million at 30 June 2026, approximately 88% above the prior-year level of EUR 443.8 million."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Segment performance: Construction services revenue EUR 118.3 million (78.9% of total) with operating profit EUR 3.0 million (2.6% margin); real estate development revenue EUR 31.6 million with operating profit EUR 7.0 million (22.2% margin) in H1 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Business Activities tables, Notes 2 and Reconciliation of Pre-tax Profit",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Construction services generated EUR 118.3 million of six-month revenue, broadly level with the prior year, but operating profit declined 65.5% to EUR 3.0 million and the margin fell to 2.6% from 7.3%."
+          },
+          {
+            "id": "S11",
+            "text": "Real estate development revenue decreased 33.9% to EUR 31.6 million, while operating profit fell 40.8% to EUR 7.0 million."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "Major project developments: Full-scale construction commenced for the EUR 370 million Rūdninkai defence force campus; EUR 80 million in new contracts signed in Q2 2026 including Krulli quarter infrastructure and buildings in Tallinn.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Commentary from Management and Secured Order Book section",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S15",
+          "S16",
+          "S17"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "New contracts signed during the first half totaled EUR 486.4 million, including approximately EUR 80 million in the second quarter."
+          },
+          {
+            "id": "S16",
+            "text": "Major projects included Rail Baltica, defence facilities, wind-farm infrastructure and the Krulli Quarter developments in Tallinn."
+          },
+          {
+            "id": "S17",
+            "text": "The Rūdninkai defence campus contract also entered full force after the reporting date, with total construction costs exceeding EUR 370 million."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Real estate development activity: 120 apartments delivered in H1 2026 (vs. 222 in H1 2025); 204 apartments launched; 1,253 apartments under construction/completed with ~40% presold.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Real Estate Development section",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S20"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Apartment sales declined to 120 from 222, although second-quarter apartment revenue was EUR 20.6 million, slightly above the prior-year quarter."
+          },
+          {
+            "id": "S20",
+            "text": "The group sold 120 apartments and five commercial units, launched 204 apartments and invested EUR 42.6 million in development projects."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Market outlook: Construction input price pressures persisted; Vilnius apartment market moderated, Riga saw increased activity in lower-priced segments, Tallinn remained stable with high price sensitivity.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Outlook of Construction and Real Estate Market section",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S18",
+          "S19"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S18",
+            "text": "Market conditions remained competitive, with private-sector clients cautious and customers price-sensitive."
+          },
+          {
+            "id": "S19",
+            "text": "Construction input prices increased during the second quarter, with continued inflationary and geopolitical pressures expected."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "Profitability metrics: Pre-tax profit margin fell to 7.2% in H1 2026 (from 14.0% in H1 2025); net profit margin 8.6% (vs. 12.9%); EPS EUR 0.73 in H1 2026 (vs. EUR 1.22 in H1 2025).",
+        "importance": "HIGH",
+        "source_evidence": "Ratios table, Management Report Overview, Note 4",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6",
+          "S7"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "Pre-tax profit was EUR 10.8 million, versus EUR 23.5 million, and the pre-tax margin declined to 7.2% from 14.0%."
+          },
+          {
+            "id": "S7",
+            "text": "Net profit attributable to shareholders was EUR 12.8 million, compared with EUR 21.7 million, reducing the net profit margin to 8.6% from 12.9%."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Liquidity position: Cash and cash equivalents increased to EUR 39.6 million (from EUR 25.9 million); equity EUR 251.1 million (57.4% of assets); net debt EUR 29.6 million as of 30 June 2026.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report, Cash Position section; Consolidated Statement of Financial Position",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S21",
+          "S22"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S21",
+            "text": "Operating cash flow was negative at EUR 31.6 million, mainly reflecting increased inventories, while cash and cash equivalents stood at EUR 39.6 million."
+          },
+          {
+            "id": "S22",
+            "text": "Net debt increased to EUR 29.6 million, but equity remained strong at EUR 251.1 million, representing 57.4% of total assets."
+          }
+        ]
+      },
+      {
+        "id": "K9",
+        "information": "Dividend payment: EUR 22.1 million (EUR 1.25 per share) approved for 2025 net profit, representing a 55% payout rate.",
+        "importance": "MEDIUM",
+        "source_evidence": "Dividends and Dividend Policy section, Note 4",
+        "origin_draft_ids": [
+          "D9"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      },
+      {
+        "id": "K10",
+        "information": "Post-reporting-period event: Construction commenced for 50 apartments in the Lahekalda VII development project in Tallinn after 30 June 2026.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report, Real Estate Development section",
+        "origin_draft_ids": [
+          "D10"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [],
+    "completeness_justification": "All HIGH importance criteria (K1-K4, K7-K8) are fully represented with core material meaning covered. MEDIUM importance criteria K5 and K6 are also PRESENT. K9 (Dividend payment) and K10 (Post-reporting-period event) are MISSING but are of MEDIUM importance and do not change the overall understanding of the report. The candidate summary captures the main picture with no material omissions affecting overall understanding.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is internally coherent. All statements are logically connected and support each other without contradictions. Revenue trends, profitability changes, and segment performances are consistently presented. The summary flows logically from overall performance to specific segments and concludes with market conditions and financial position. There are no self-contradictions, logical gaps, organizational issues, or unnecessary repetition. All figures and explanations align with each other within the text."
+  },
+  "usage": {
+    "input_tokens_total": 33752,
+    "output_tokens_total_including_reasoning": 8671,
+    "total_tokens": 42423,
+    "latency_seconds_total": 46.71
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 61274,
+    "output_tokens_total_including_reasoning": 56177,
+    "total_tokens": 117451,
+    "latency_seconds_total": 173.3
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_14.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_14_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_14.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_14.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_14_zero_shot_openai.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_14_zero_shot_openai.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_14_zero_shot_openai.json"
+    }
+  }
+}

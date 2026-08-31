@@ -1,0 +1,886 @@
+{
+  "status": "success",
+  "candidate": {
+    "file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\outputs_reasoning_high\\quarterly_report\\report_quarterly_20_zero_shot_qwen36.txt",
+    "report": "report_quarterly_20.md",
+    "report_type": "quarterly_report",
+    "generator_key": "qwen36",
+    "generator_model": "Qwen3.6-35B-A3B",
+    "prompt_type": "zero_shot",
+    "generation_mode": "reasoning_high"
+  },
+  "judge": {
+    "model": "Amazon Nova 2 Lite",
+    "model_id": "us.amazon.nova-2-lite-v1:0",
+    "reasoning_enabled": true,
+    "reasoning_effort": "mixed_by_metric",
+    "prompt_version": "v5_2_production_targeted_repair",
+    "service_tier": "flex",
+    "reasoning_by_metric": {
+      "factual_numerical": "low",
+      "completeness": "off",
+      "coherence": "off",
+      "key_information_extract": "high",
+      "key_information_verify": "high"
+    }
+  },
+  "evaluation_design": {
+    "pointwise_candidate_evaluation": true,
+    "traceability_method": "python_generated_sentence_ids",
+    "faithfulness_numerical_uses_source": true,
+    "completeness_uses_source": false,
+    "completeness_uses_reference": false,
+    "completeness_uses_verified_fixed_criteria": true,
+    "coherence_uses_source": false,
+    "coherence_uses_reference": false
+  },
+  "candidate_sentence_map": {
+    "S1": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year.",
+    "S2": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year.",
+    "S3": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously.",
+    "S4": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction.",
+    "S5": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly.",
+    "S6": "The reduction in quarterly sales was primarily attributed to project-based revenue recognition patterns, where dispatch and accounting often shifted to subsequent periods due to production timelines and procurement lead times.",
+    "S7": "Operational costs remained within budget, but salary and related expenses increased by eight percent annually.",
+    "S8": "The company continues to invest heavily in product development, particularly in its microwave radio systems, Spectrum Compact analyzers, and Aranet wireless sensor network solutions, alongside expanding sales efforts across existing and emerging markets.",
+    "S9": "Macroeconomic conditions influenced results, notably a persistent global shortage of electronic components that required the accumulation of material reserves to maintain delivery schedules, although fulfillment times have recently improved.",
+    "S10": "Market dynamics in the microwave radio sector remained stable, with no immediate expectations for rapid industry shifts.",
+    "S11": "The management team acknowledged broader geopolitical uncertainties and potential tariff adjustments but confirmed no direct operational disruption from conflicts in Eastern Europe.",
+    "S12": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million.",
+    "S13": "An unutilized EUR 4.95 million credit facility remains available for liquidity support.",
+    "S14": "The workforce expanded to 273 employees from 265 a year earlier.",
+    "S15": "While profitability pressure persists due to higher labor costs and revenue volatility, the board maintains a cautious outlook, emphasizing cost discipline and product diversification as strategies to stabilize turnover and return to sustained profitability over the long term."
+  },
+  "completeness_method": {
+    "criteria_generated_once_per_report": true,
+    "criteria_verified_against_source": true,
+    "criteria_cross_unit_redundancy_checked": true,
+    "draft_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_20.json",
+    "verified_file": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_20.json",
+    "key_information_hash": "e156e32345d52b22",
+    "key_information_units_total": 8
+  },
+  "scores": {
+    "faithfulness": {
+      "score": 1.0,
+      "supported": 15,
+      "contradicted": 0,
+      "not_found": 0,
+      "total": 15
+    },
+    "numerical_accuracy": {
+      "score": 1.0,
+      "correct": 19,
+      "incorrect": 0,
+      "total": 19
+    },
+    "completeness": {
+      "score": 3,
+      "scale_max": 4,
+      "label": "Generally yes",
+      "present": 6,
+      "partially_present": 1,
+      "missing": 1,
+      "total_units": 8
+    },
+    "coherence": {
+      "score": 4,
+      "scale_max": 4,
+      "label": "Yes"
+    }
+  },
+  "details": {
+    "factual_claims": [
+      {
+        "id": "F1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year.",
+        "label": "SUPPORTED",
+        "source_evidence": "For the 12 months of the 2024/2025 financial year, the Group’s unaudited consolidated turnover was EUR 26.11 million, a 4% decline from the previous financial year’s revenue.",
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year."
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s unaudited consolidated net turnover for the fourth quarter (Q4) of the 2024/2025 financial year (FY) was EUR 5.18 million, representing a 13% decrease compared to the same period in FY 2023/2024.",
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year."
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously.",
+        "label": "SUPPORTED",
+        "source_evidence": "The consolidated unaudited result for the twelve months of the 2024/2025 financial year is a loss of EUR 820 thousand. The Group reported a loss of EUR 2.37 million for the 2023/2024 financial year. The Group closed the fourth quarter of the 2024/2025 financial year with a loss of EUR 913 thousand. In Q4 of the previous year, the Group recorded a loss of EUR 498 thousand.",
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction.",
+        "label": "SUPPORTED",
+        "source_evidence": "Over a 12-month period, revenues in North and Latin Americas represented 55% of the total turnover of the Group and amounted to EUR 14.28 million, thus showing a 14% decrease compared to the result of the twelve months of the previous financial year.",
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction."
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly.",
+        "label": "SUPPORTED",
+        "source_evidence": "38% of the total turnover comes from revenues generated in European countries, which increased by 17% against 12 months of the previous year, and amount to EUR 10.04 million. Revenue from the Asia, Africa and the Middle East region declined by 5%...",
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly."
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "claim": "The reduction in quarterly sales was primarily attributed to project-based revenue recognition patterns, where dispatch and accounting often shifted to subsequent periods due to production timelines and procurement lead times.",
+        "label": "SUPPORTED",
+        "source_evidence": "Fluctuations in quarterly turnover are influenced by the completion of individual projects. Projects can vary in scope and complexity, and their execution is influenced by both the duration of the production process and the lead times for material procurement. As a result, the dispatch of goods and the recognition of revenue often take place only in subsequent quarters.",
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The reduction in quarterly sales was primarily attributed to project-based revenue recognition patterns, where dispatch and accounting often shifted to subsequent periods due to production timelines and procurement lead times."
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "Operational costs remained within budget, but salary and related expenses increased by eight percent annually.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s expenses did not exceed the amounts planned in the budget. Compared to the twelve months of the previous 2023/2024 financial year, the amount of wages and related social costs has increased by 8%.",
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operational costs remained within budget, but salary and related expenses increased by eight percent annually."
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "claim": "The company continues to invest heavily in product development, particularly in its microwave radio systems, Spectrum Compact analyzers, and Aranet wireless sensor network solutions, alongside expanding sales efforts across existing and emerging markets.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group continues to invest in new product development and product enhancements, as well as in sales promotion across both existing and new market segments. [Products listed in Key data and Note 8]",
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The company continues to invest heavily in product development, particularly in its microwave radio systems, Spectrum Compact analyzers, and Aranet wireless sensor network solutions, alongside expanding sales efforts across existing and emerging markets."
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "claim": "Macroeconomic conditions influenced results, notably a persistent global shortage of electronic components that required the accumulation of material reserves to maintain delivery schedules, although fulfillment times have recently improved.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s operations were affected by the global shortage of various electronic components. During the previous period, the company accumulated material reserves to be able to fulfill the majority of orders, ensuring short, or customer-expected, delivery times. Delivery times have continued to improve recently.",
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Macroeconomic conditions influenced results, notably a persistent global shortage of electronic components that required the accumulation of material reserves to maintain delivery schedules, although fulfillment times have recently improved."
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "candidate_sentence_ids": [
+          "S10"
+        ],
+        "claim": "Market dynamics in the microwave radio sector remained stable, with no immediate expectations for rapid industry shifts.",
+        "label": "SUPPORTED",
+        "source_evidence": "During the quarter, there were no major changes in the microwave radio market. We believe that significant and rapid changes in the microwave radio market are not expected in the near future.",
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Market dynamics in the microwave radio sector remained stable, with no immediate expectations for rapid industry shifts."
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "candidate_sentence_ids": [
+          "S11"
+        ],
+        "claim": "The management team acknowledged broader geopolitical uncertainties and potential tariff adjustments but confirmed no direct operational disruption from conflicts in Eastern Europe.",
+        "label": "SUPPORTED",
+        "source_evidence": "Although the hostilities in Ukraine do not directly impact the Group’s operations... The Group has no clients or suppliers in the region affected by armed conflict (Russia, Ukraine, or Belarus); therefore, no impact on order volumes has been observed.",
+        "candidate_sentences": [
+          {
+            "id": "S11",
+            "text": "The management team acknowledged broader geopolitical uncertainties and potential tariff adjustments but confirmed no direct operational disruption from conflicts in Eastern Europe."
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million.",
+        "label": "SUPPORTED",
+        "source_evidence": "The Group’s net cash flow for the 12 months of the financial year is EUR 2.6 million. The Group’s cash balance in the balance sheet at the end of the period was EUR 4.8 million. Advances received from customers for goods totaled EUR 3.9 million.",
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million."
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "An unutilized EUR 4.95 million credit facility remains available for liquidity support.",
+        "label": "SUPPORTED",
+        "source_evidence": "To ensure liquidity, the Parent Company has a Credit Line Agreement with Luminor Bank AS for a total amount of EUR 4.95 million, which had not been utilised at the end of the reporting period.",
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "An unutilized EUR 4.95 million credit facility remains available for liquidity support."
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "The workforce expanded to 273 employees from 265 a year earlier.",
+        "label": "SUPPORTED",
+        "source_evidence": "As of June 30, 2025, the Group had 273 employees (265 employees as of June 30, 2024)",
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The workforce expanded to 273 employees from 265 a year earlier."
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "candidate_sentence_ids": [
+          "S15"
+        ],
+        "claim": "While profitability pressure persists due to higher labor costs and revenue volatility, the board maintains a cautious outlook, emphasizing cost discipline and product diversification as strategies to stabilize turnover and return to sustained profitability over the long term.",
+        "label": "SUPPORTED",
+        "source_evidence": "The company’s goal is to stabilize turnover to ensure a positive net result in the long term. The Board of SAF Tehnika remains cautious and refrains from providing specific sales and performance forecasts.",
+        "candidate_sentences": [
+          {
+            "id": "S15",
+            "text": "While profitability pressure persists due to higher labor costs and revenue volatility, the board maintains a cautious outlook, emphasizing cost discipline and product diversification as strategies to stabilize turnover and return to sustained profitability over the long term."
+          }
+        ]
+      }
+    ],
+    "numerical_claims": [
+      {
+        "id": "N1",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline",
+        "candidate_value": "26.11 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "26 109 370 EUR",
+        "source_evidence": "Net sales for 12 months of 2024/2025: 26 109 370 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year."
+          }
+        ]
+      },
+      {
+        "id": "N2",
+        "candidate_sentence_ids": [
+          "S1"
+        ],
+        "claim": "four percent decline compared to prior financial year",
+        "candidate_value": "4% decline",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4% decline",
+        "source_evidence": "For the 12 months of the 2024/2025 financial year, the Group’s unaudited consolidated turnover was EUR 26.11 million, a 4% decline from the previous financial year’s revenue.",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year."
+          }
+        ]
+      },
+      {
+        "id": "N3",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year",
+        "candidate_value": "5.18 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5 184 188 EUR",
+        "source_evidence": "Net sales Q4 2024/25: 5 184 188 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year."
+          }
+        ]
+      },
+      {
+        "id": "N4",
+        "candidate_sentence_ids": [
+          "S2"
+        ],
+        "claim": "thirteen percent drop year-over-year",
+        "candidate_value": "13% drop",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "13% decrease",
+        "source_evidence": "representing a 13% decrease compared to the same period in FY 2023/2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S2",
+            "text": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year."
+          }
+        ]
+      },
+      {
+        "id": "N5",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "narrower annual loss of EUR 820 thousand",
+        "candidate_value": "820 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "820 219 EUR",
+        "source_evidence": "Proft after taxes: (820 219) EUR for 2024/2025",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "N6",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "EUR 2.37 million deficit in previous period",
+        "candidate_value": "2.37 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2 369 364 EUR",
+        "source_evidence": "Proft after taxes: (2 369 364) EUR for 2023/2024",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "N7",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "fourth quarter losses widened to EUR 913 thousand",
+        "candidate_value": "913 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "913 464 EUR",
+        "source_evidence": "Proft after taxes Q4 2024/25: (913 464) EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "N8",
+        "candidate_sentence_ids": [
+          "S3"
+        ],
+        "claim": "EUR 498 thousand previously",
+        "candidate_value": "498 thousand EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "498 107 EUR",
+        "source_evidence": "Proft after taxes Q4 2023/24: (498 107) EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "N9",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million",
+        "candidate_value": "14.28 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14 282 812 EUR",
+        "source_evidence": "Americas Net Sales 2024/25: 14 282 812 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction."
+          }
+        ]
+      },
+      {
+        "id": "N10",
+        "candidate_sentence_ids": [
+          "S4"
+        ],
+        "claim": "fourteen percent contraction",
+        "candidate_value": "14% decrease",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "14% decrease",
+        "source_evidence": "showing a 14% decrease compared to the result of the twelve months of the previous financial year",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction."
+          }
+        ]
+      },
+      {
+        "id": "N11",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "European revenue grew by seventeen percent to EUR 10.04 million",
+        "candidate_value": "10.04 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "10 043 799 EUR",
+        "source_evidence": "Europe, CIS Net Sales 2024/25: 10 043 799 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly."
+          }
+        ]
+      },
+      {
+        "id": "N12",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "seventeen percent growth",
+        "candidate_value": "17% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "17% increase",
+        "source_evidence": "increased by 17% against 12 months of the previous year",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly."
+          }
+        ]
+      },
+      {
+        "id": "N13",
+        "candidate_sentence_ids": [
+          "S5"
+        ],
+        "claim": "Revenue from Asia, Africa, and the Middle East declined slightly",
+        "candidate_value": "5% decline",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "5% decline",
+        "source_evidence": "Revenue from the Asia, Africa and the Middle East region declined by 5%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S5",
+            "text": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly."
+          }
+        ]
+      },
+      {
+        "id": "N14",
+        "candidate_sentence_ids": [
+          "S7"
+        ],
+        "claim": "salary and related expenses increased by eight percent annually",
+        "candidate_value": "8% increase",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "8% increase",
+        "source_evidence": "the amount of wages and related social costs has increased by 8%",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S7",
+            "text": "Operational costs remained within budget, but salary and related expenses increased by eight percent annually."
+          }
+        ]
+      },
+      {
+        "id": "N15",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "positive net cash flow of EUR 2.6 million for the year",
+        "candidate_value": "2.6 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "2 131 529 EUR",
+        "source_evidence": "CASH GENERATED FROM OPERATIONS: 2 131 529 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million."
+          }
+        ]
+      },
+      {
+        "id": "N16",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "cash balance of EUR 4.8 million",
+        "candidate_value": "4.8 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4 812 202 EUR",
+        "source_evidence": "Cash and cash equivalents as at the end of period: 4 812 202 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million."
+          }
+        ]
+      },
+      {
+        "id": "N17",
+        "candidate_sentence_ids": [
+          "S12"
+        ],
+        "claim": "customer advances totaling EUR 3.9 million",
+        "candidate_value": "3.9 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "3 916 211 EUR",
+        "source_evidence": "Customer prepayments for goods and services: 3 916 211 EUR",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million."
+          }
+        ]
+      },
+      {
+        "id": "N18",
+        "candidate_sentence_ids": [
+          "S13"
+        ],
+        "claim": "unutilized EUR 4.95 million credit facility",
+        "candidate_value": "4.95 million EUR",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "4.95 million EUR",
+        "source_evidence": "Credit Line Agreement for a total amount of EUR 4.95 million, which had not been utilised",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S13",
+            "text": "An unutilized EUR 4.95 million credit facility remains available for liquidity support."
+          }
+        ]
+      },
+      {
+        "id": "N19",
+        "candidate_sentence_ids": [
+          "S14"
+        ],
+        "claim": "workforce expanded to 273 employees from 265",
+        "candidate_value": "273 employees",
+        "label": "CORRECT",
+        "error_type": null,
+        "source_value": "273 employees",
+        "source_evidence": "As of June 30, 2025, the Group had 273 employees (265 employees as of June 30, 2024)",
+        "error_explanation": null,
+        "candidate_sentences": [
+          {
+            "id": "S14",
+            "text": "The workforce expanded to 273 employees from 265 a year earlier."
+          }
+        ]
+      }
+    ],
+    "verified_key_information_units": [
+      {
+        "id": "K1",
+        "information": "The Group's unaudited consolidated net turnover for Q4 2024/2025 was EUR 5.18 million, representing a 13% decrease compared to Q4 2023/2024, with a Q4 loss of EUR 913 thousand. For the full 2024/2025 financial year, consolidated turnover declined 4% to EUR 26.11 million with a loss of EUR 820 thousand (vs EUR 2.37 million loss in prior year).",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 7: 'The Group's unaudited consolidated net turnover for the fourth quarter (Q4) of the 2024/2025 financial year (FY) was EUR 5.18 million, representing a 13% decrease compared to the same period in FY 2023/2024.' and 'The Group closed the fourth quarter of the 2024/2025 financial year with a loss of EUR 913 thousand (unaudited).' Also page 7: 'The consolidated unaudited result for the twelve months of the 2024/2025 financial year is a loss of EUR 820 thousand. The Group reported a loss of EUR 2.37 million for the 2023/2024 financial year.' KEY indicators page 10 shows net profit/(loss) data.",
+        "origin_draft_ids": [
+          "D1"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S1",
+            "text": "SAF Tehnika Group reported a consolidated net turnover of EUR 26.11 million for the twelve months ended June 30, 2025, reflecting a four percent decline compared to the prior financial year."
+          },
+          {
+            "id": "S2",
+            "text": "Fourth quarter turnover stood at EUR 5.18 million, a thirteen percent drop year-over-year."
+          },
+          {
+            "id": "S3",
+            "text": "Despite the revenue decrease, the group posted a narrower annual loss of EUR 820 thousand, an improvement from the EUR 2.37 million deficit recorded in the previous period, though fourth quarter losses widened to EUR 913 thousand against EUR 498 thousand previously."
+          }
+        ]
+      },
+      {
+        "id": "K2",
+        "information": "Regional turnover performance showed significant divergence: North America/Latin America (47% of Q4 revenue at EUR 2.5 million) decreased 40% YoY; Europe (36% at EUR 1.9 million) increased 24% YoY; Asia/Africa/Middle East (16% at EUR 846k) doubled compared to prior year Q4.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 7: 'The turnover of the North America and Latin America region amounted to 47% or EUR 2.5 million. Compared to the same quarter of the previous financial year, the turnover has decreased by 40%.' and 'The European region accounted for 36% of turnover, amounting to EUR 1.9 million, an increase of 24% compared with the fourth quarter of the previous financial year.' and 'Turnover in the Asia, Africa and Middle East region doubled compared with the corresponding quarter of the previous financial year, representing 16% of the total quarterly turnover (or EUR 846 thousand).'",
+        "origin_draft_ids": [
+          "D2"
+        ],
+        "coverage": "PARTIALLY_PRESENT",
+        "candidate_sentence_ids": [
+          "S4",
+          "S5"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S4",
+            "text": "Regionally, North and Latin American sales accounted for 55 percent of annual revenue at EUR 14.28 million, representing a fourteen percent contraction."
+          },
+          {
+            "id": "S5",
+            "text": "European revenue grew by seventeen percent to EUR 10.04 million, while turnover in Asia, Africa, and the Middle East declined slightly."
+          }
+        ]
+      },
+      {
+        "id": "K3",
+        "information": "Quarterly turnover fluctuations are driven by project completion timing, with dispatch and revenue recognition often occurring in subsequent quarters due to production durations and material lead times.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 7: 'As noted in previous reports, fluctuations in quarterly turnover are influenced by the completion of individual projects. Projects can vary in scope and complexity, and their execution is influenced by both the duration of the production process and the lead times for material procurement. As a result, the dispatch of goods and the recognition of revenue often take place only in subsequent quarters.'",
+        "origin_draft_ids": [
+          "D3"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S6"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S6",
+            "text": "The reduction in quarterly sales was primarily attributed to project-based revenue recognition patterns, where dispatch and accounting often shifted to subsequent periods due to production timelines and procurement lead times."
+          }
+        ]
+      },
+      {
+        "id": "K4",
+        "information": "The Group maintained liquidity with EUR 4.8 million cash balance and EUR 3.9 million in customer advances, supported by an unused EUR 4.95 million credit line with Luminor Bank. Net cash flow for the year was EUR 2.6 million.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 7: 'The Group's cash balance in the balance sheet at the end of the period was EUR 4.8 million. Advances received from customers for goods totaled EUR 3.9 million.' and 'To ensure liquidity, the Parent Company has a Credit Line Agreement with Luminor Bank AS for a total amount of EUR 4.95 million, which had not been utilised at the end of the reporting period.' Cash flow statement page 15: 'Net cash flow for the 12 months of the financial year is EUR 2.6 million.'",
+        "origin_draft_ids": [
+          "D4"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S12",
+          "S13"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S12",
+            "text": "Financially, the group generated a positive net cash flow of EUR 2.6 million for the year, ending with a cash balance of EUR 4.8 million and customer advances totaling EUR 3.9 million."
+          },
+          {
+            "id": "S13",
+            "text": "An unutilized EUR 4.95 million credit facility remains available for liquidity support."
+          }
+        ]
+      },
+      {
+        "id": "K5",
+        "information": "Operations were affected by global electronic components shortage, though delivery times have recently improved. The Group continues investing in new product development and sales promotion across existing and new market segments.",
+        "importance": "HIGH",
+        "source_evidence": "Management Report page 7: 'The Group's operations were affected by the global shortage of various electronic components. During the previous period, the company accumulated material reserves to be able to fulfill the majority of orders, ensuring short, or customer-expected, delivery times. Delivery times have continued to improve recently.' and 'The Group continues to invest in new product development and product enhancements, as well as in sales promotion across both existing and new market segments.'",
+        "origin_draft_ids": [
+          "D5"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S9"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S9",
+            "text": "Macroeconomic conditions influenced results, notably a persistent global shortage of electronic components that required the accumulation of material reserves to maintain delivery schedules, although fulfillment times have recently improved."
+          }
+        ]
+      },
+      {
+        "id": "K6",
+        "information": "Products were sold in 75 countries during Q4, with no direct impact from armed conflict regions (Russia, Ukraine, Belarus), though general business environment uncertainty persists. The microwave radio market showed no major changes during the quarter.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report page 7: 'In the reporting quarter, the Group’s products were sold in 75 countries.' Market Overview page 8: 'During the quarter, there were no major changes in the microwave radio market.' and 'The Group has no clients or suppliers in the region affected by armed conflict (Russia, Ukraine, or Belarus); therefore, no impact on order volumes has been observed.' Guidelines page 9: 'Although the hostilities in Ukraine do not directly impact the Group’s operations, overall uncertainty in the business environment persists.'",
+        "origin_draft_ids": [
+          "D6"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S10",
+          "S11"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S10",
+            "text": "Market dynamics in the microwave radio sector remained stable, with no immediate expectations for rapid industry shifts."
+          },
+          {
+            "id": "S11",
+            "text": "The management team acknowledged broader geopolitical uncertainties and potential tariff adjustments but confirmed no direct operational disruption from conflicts in Eastern Europe."
+          }
+        ]
+      },
+      {
+        "id": "K7",
+        "information": "The Group consists of three product categories: digital microwave radio equipment, microwave spectrum analyzers/signal generators, and wireless sensor network solutions for environmental monitoring, sold globally to public and private sectors.",
+        "importance": "MEDIUM",
+        "source_evidence": "Key data page 1: 'SAF Tehnika (hereinafter – the Group) is a manufacturer of wireless data transmission equipment. The company’s activities can be divided into three categories: § Digital microwave radio equipment for voice and data transmission. § Microwave spectrum analyzers and signal generators. § Wireless sensor network solutions for environmental monitoring.' Also states products are used by both the public and private sectors in areas such as mobile communications, internet service providing, industrial production, finance, horticulture, media and many others.",
+        "origin_draft_ids": [
+          "D7"
+        ],
+        "coverage": "PRESENT",
+        "candidate_sentence_ids": [
+          "S8"
+        ],
+        "candidate_sentences": [
+          {
+            "id": "S8",
+            "text": "The company continues to invest heavily in product development, particularly in its microwave radio systems, Spectrum Compact analyzers, and Aranet wireless sensor network solutions, alongside expanding sales efforts across existing and emerging markets."
+          }
+        ]
+      },
+      {
+        "id": "K8",
+        "information": "Q4 fixed asset investments totaled EUR 239 thousand primarily for production/testing processes and office equipment acquisition.",
+        "importance": "MEDIUM",
+        "source_evidence": "Management Report page 7: 'In Q4 of the 2024/2025 financial year, EUR 239 thousand were invested in the purchase of fixed assets – primarily to support production and testing processes, as well as for the acquisition of office equipment.'",
+        "origin_draft_ids": [
+          "D8"
+        ],
+        "coverage": "MISSING",
+        "candidate_sentence_ids": [],
+        "candidate_sentences": []
+      }
+    ],
+    "completeness_missing_or_partial": [
+      "K2",
+      "K8"
+    ],
+    "completeness_justification": "K1, K3, K4, K5, K6, and K7 are PRESENT with supporting sentences identified. K2 is PARTIALLY_PRESENT because the candidate covers regional performance trends (North America/Latin America decline, Europe growth) but omits specific revenue figures and percentages for each region as stated in the core requirement. K8 is MISSING because there is no mention of fixed asset investments or their allocation. The overall coverage is strong with only one HIGH criterion partially covered and one MEDIUM criterion missing, resulting in a 'Generally yes' assessment.",
+    "coherence_issues": [],
+    "coherence_justification": "The candidate summary is fully coherent internally. All statements are logically connected without contradictions. The narrative flows from consolidated results to regional breakdowns, then to operational factors, investments, market conditions, financial position, and outlook. Explanations (e.g., S6 on revenue timing) logically support earlier statements about declines. There is no unnecessary repetition, and related topics are grouped together (e.g., regional sales in S4-S5, financials in S12-S13). The summary forms a clear, self-contained narrative with consistent terminology and logical progression from performance to causes to outlook."
+  },
+  "usage": {
+    "input_tokens_total": 15269,
+    "output_tokens_total_including_reasoning": 5932,
+    "total_tokens": 21201,
+    "latency_seconds_total": 27.8
+  },
+  "shared_setup_usage": {
+    "input_tokens_total": 25515,
+    "output_tokens_total_including_reasoning": 63547,
+    "total_tokens": 89062,
+    "latency_seconds_total": 197.41
+  },
+  "files": {
+    "source_report": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\reports\\quarterly_report\\report_quarterly_20.md",
+    "reference_summary": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\references_txt\\quarterly_report_reference\\reference_quarterly_20_original.txt",
+    "key_information_draft": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_draft\\report_quarterly_20.json",
+    "key_information_verified": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_shared\\nova_2_lite\\quarterly_report\\key_information_verified\\report_quarterly_20.json",
+    "raw_results": {
+      "factual_numerical": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\factual_numerical\\report_quarterly_20_zero_shot_qwen36.json",
+      "completeness": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\completeness\\report_quarterly_20_zero_shot_qwen36.json",
+      "coherence": "C:\\Users\\Ivan\\Bakalaura_darbs\\data\\judge_results_reasoning_high\\nova_2_lite\\quarterly_report\\raw\\coherence\\report_quarterly_20_zero_shot_qwen36.json"
+    }
+  }
+}
